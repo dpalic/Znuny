@@ -1,4 +1,5 @@
 # 7.1.7 2025-xx-xx
+ - 2025-02-25 Fixed Core.UI.js bug - Added missing allowed file types text to FilenameTypeNotAllowed check. Currently, only the fact that a file does not correspond to the permitted FileType is displayed. It is not displayed which FileTypes are permitted.
  - 2025-02-25 Fixed AjaxAttachment.pm bug - Use of uninitialized value in concatenation (.) or string.
  - 2025-02-25 Fixed small bug - uninitialized value in concatenation. SkinSelected must also be set in the SetRichTextParameters function.
  - 2025-02-21 Fixed Core.UI.js bugs - AttachmentExist is only generated for one upload field. However, it should be generated for all of them. In addition, the UploadField is not selected correctly.

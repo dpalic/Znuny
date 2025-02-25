@@ -533,10 +533,10 @@ Core.UI = (function (TargetNS) {
                 FileTypes = $FileuploadFieldObj.data('file-types'),
                 Upload,
                 XHRObj,
-                FileTypeNotAllowed = [],
-                FileTypeNotAllowedText,
-                FilesTooBig = [],
-                FilesTooBigText,
+                FilenameTypeNotAllowed = [],
+                FilenameTypeNotAllowedText,
+                FilenamesTooBig = [],
+                FilenamesTooBigText,
                 FilenamesTooLong = [],
                 FilenamesTooLongText,
                 AttemptedToUploadAgain = [],
@@ -584,7 +584,10 @@ Core.UI = (function (TargetNS) {
             }
 
             if (MaxFiles && $FileuploadFieldObj.closest('.Field').find('.AttachmentList tbody tr').length >= MaxFiles) {
-                alert(Core.Language.Translate("Sorry, you can only upload %s files.", [ MaxFiles ]));
+                Core.UI.Dialog.ShowAlert(
+                    Core.Language.Translate('An Error Occurred'),
+                    Core.Language.Translate("Sorry, you can only upload %s files.", [ MaxFiles ])
+                );
                 return false;
             }
 
@@ -633,13 +636,13 @@ Core.UI = (function (TargetNS) {
 
                 // check for allowed file types
                 if (typeof FileTypes === 'object' && FileTypes.indexOf(FileExtension) < 0) {
-                    FileTypeNotAllowed.push(File.name);
+                    FilenameTypeNotAllowed.push(File.name);
                     return true;
                 }
 
                 // check for max file size per file
                 if (MaxSizePerFile && File.size > MaxSizePerFile) {
-                    FilesTooBig.push(File.name);
+                    FilenamesTooBig.push(File.name);
                     return true;
                 }
 
@@ -762,33 +765,37 @@ Core.UI = (function (TargetNS) {
                 });
             });
 
-            if (FileTypeNotAllowed.length || FilesTooBig.length || FilenamesTooLong.length || NoSpaceLeft.length || AttemptedToUploadAgain.length) {
+            if (FilenameTypeNotAllowed.length || FilenamesTooBig.length || FilenamesTooLong.length || NoSpaceLeft.length || AttemptedToUploadAgain.length) {
 
                 // we need to empty the relevant file upload field because it would otherwise
                 // transfer the selected files again (only on click select, not on drag & drop)
                 $DropObj.prev('input[type=file]').val('');
                 $DropObj.removeClass('Uploading');
 
-                FileTypeNotAllowedText     = '';
-                FilesTooBigText            = '';
+                FilenameTypeNotAllowedText = '';
+                FilenamesTooBigText        = '';
                 FilenamesTooLongText       = '';
                 AttemptedToUploadAgainText = '';
                 NoSpaceLeftText            = '';
 
-                if (FileTypeNotAllowed.length) {
-                    FileTypeNotAllowedText =
+                if (FilenameTypeNotAllowed.length) {
+                    FilenameTypeNotAllowedText =
                         Core.Language.Translate(
                             'The following files are not allowed to be uploaded: %s',
-                            '<br>' + FileTypeNotAllowed.join(',<br>') + '<br><br>'
+                            '<br>' + FilenameTypeNotAllowed.join(',<br>') + '<br><br>'
+                        )
+                        + Core.Language.Translate(
+                            'The following files types are allowed: %s',
+                            '<br>' + FileTypes.join(', ') + '<br><br>'
                         );
                 }
 
-                if (FilesTooBig.length) {
-                    FilesTooBigText =
+                if (FilenamesTooBig.length) {
+                    FilenamesTooBigText =
                         Core.Language.Translate(
                             'The following files exceed the maximum allowed size per file of %s and were not uploaded: %s',
                             MaxSizePerFileHR,
-                            '<br>' + FilesTooBig.join(',<br>') + '<br><br>'
+                            '<br>' + FilenamesTooBig.join(',<br>') + '<br><br>'
                         );
                 }
 
@@ -822,7 +829,7 @@ Core.UI = (function (TargetNS) {
                             Core.App.HumanReadableDataSize(WebMaxFileUpload)
                         );
                 }
-                Core.UI.Dialog.ShowAlert(Core.Language.Translate('Upload information'), FileTypeNotAllowedText + FilesTooBigText + FilenamesTooLongText + AttemptedToUploadAgainText + NoSpaceLeftText);
+                Core.UI.Dialog.ShowAlert(Core.Language.Translate('Upload information'), FilenameTypeNotAllowedText + FilenamesTooBigText + FilenamesTooLongText + AttemptedToUploadAgainText + NoSpaceLeftText);
             }
         }
 

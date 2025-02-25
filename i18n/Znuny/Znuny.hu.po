@@ -24352,3 +24352,7 @@ msgstr ""
 msgid "A list of all possible match and set criteria is found in the ACL Reference Guide %sdocumentation%s."
 msgstr ""
 
+#. JS File: var/httpd/htdocs/js/Core.UI.js
+msgid "The following files types are allowed: %s"
+msgstr ""
+

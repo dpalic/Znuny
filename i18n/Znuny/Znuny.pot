@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2025-02-19 09:52+0000\n"
+"POT-Creation-Date: 2025-02-25 11:39+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21536,6 +21536,10 @@ msgstr ""
 
 #. JS File: var/httpd/htdocs/js/Core.UI.js
 msgid "The following files are not allowed to be uploaded: %s"
+msgstr ""
+
+#. JS File: var/httpd/htdocs/js/Core.UI.js
+msgid "The following files types are allowed: %s"
 msgstr ""
 
 #. JS File: var/httpd/htdocs/js/Core.UI.js

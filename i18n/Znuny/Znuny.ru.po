@@ -24358,3 +24358,7 @@ msgstr ""
 msgid "Check the official %sdocumentation%s."
 msgstr "Проверьте в официальной %документации%s."
 
+#. JS File: var/httpd/htdocs/js/Core.UI.js
+msgid "The following files types are allowed: %s"
+msgstr ""
+
