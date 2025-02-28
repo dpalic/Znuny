@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '';
     $Self->{DateInputFormat}     = '';
     $Self->{DateInputFormatLong} = '';
-    $Self->{Completeness}        = 0.868269389099292;
+    $Self->{Completeness}        = 0.867840684660961;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -6181,6 +6181,7 @@ sub Data {
         'Defines internal communication channel.' => '내부 통신 채널을 정의합니다.',
         'Defines phone communication channel.' => '전화 통신 채널을 정의합니다.',
         'Defines chat communication channel.' => '채팅 통신 채널을 정의합니다.',
+        'Defines web communication channel.' => '',
         'Defines groups for preferences items.' => '기본 설정 항목에 대한 그룹을 정의합니다.',
         'Defines how many deployments the system should keep.' => '시스템이 유지해야하는 배포 수를 정의합니다.',
         'Defines the search parameters for the AgentCustomerUserAddressBook screen. With the setting \'CustomerTicketTextField\' the values for the recipient field can be specified.' =>
@@ -9110,7 +9111,9 @@ Thanks for your help!
             '우리는 예정된 유지 보수를 수행하고 있습니다. 일시적으로 로그인 할 수 없습니다.',
         'We are performing scheduled maintenance. We should be back online shortly.' =>
             '우리는 예정된 유지보수를 수행하고 있습니다. 우리는 곧 온라인으로 돌아와야 합니다.',
+        'Web' => '',
         'Web Services' => '웹서비스',
+        'Web communication channel.' => '',
         'Web service (Dropdown)' => '',
         'Web service (Multiselect)' => '',
         'Web service dynamic field AJAX interface' => '',
