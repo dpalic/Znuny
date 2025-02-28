@@ -48,6 +48,10 @@ sub Run {
             Message => 'Increase size of columns of database table search_profile',
             Module  => 'SearchProfile',
         },
+        {
+            Message => 'Create new CommunicationChannel Web.',
+            Module  => 'CreateCommunicationChannelWeb',
+        },
     );
 
     return 1   if !@Tasks;

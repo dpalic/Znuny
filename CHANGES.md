@@ -1,3 +1,6 @@
+# 7.2.1 2025-xx-xx
+ - 2025-02-27 Added new CommunicationChannel Web.
+
 # 7.1.7 2025-xx-xx
  - 2025-02-27 Fixed obsolete parameter in overview URL. After jumping to AgentTicketZoom from an overview like AgentTicketStatus and return to that overview the URL parameter TicketID stays persistent to the URL. This action is repetitive and works with multiple TicketIDs, but the TicketID is not needed in anyway.
  - 2025-02-25 Added missing DynamicFieldScreens configuration for `LinkObject::ComplexTable###Ticket`.
