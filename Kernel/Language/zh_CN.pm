@@ -33,7 +33,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y.%M.%D';
     $Self->{DateInputFormat}     = '%Y.%M.%D';
     $Self->{DateInputFormatLong} = '%Y.%M.%D - %T';
-    $Self->{Completeness}        = 0.896148782093483;
+    $Self->{Completeness}        = 0.896591470442944;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -6188,7 +6188,6 @@ sub Data {
         'Defines internal communication channel.' => '定义内部通信渠道。',
         'Defines phone communication channel.' => '定义电话通信渠道。',
         'Defines chat communication channel.' => '定义聊天通信渠道。',
-        'Defines web communication channel.' => '',
         'Defines groups for preferences items.' => '为偏好设置项定义分组。',
         'Defines how many deployments the system should keep.' => '定义系统应保留多少个部署。',
         'Defines the search parameters for the AgentCustomerUserAddressBook screen. With the setting \'CustomerTicketTextField\' the values for the recipient field can be specified.' =>
@@ -9117,9 +9116,7 @@ Thanks for your help!
             '我们正在执行系统维护，暂时无法登录。',
         'We are performing scheduled maintenance. We should be back online shortly.' =>
             '我们正在执行系统维护，很快就恢复正常使用。',
-        'Web' => '',
         'Web Services' => 'Web服务',
-        'Web communication channel.' => '',
         'Web service (Dropdown)' => '',
         'Web service (Multiselect)' => '',
         'Web service dynamic field AJAX interface' => '',

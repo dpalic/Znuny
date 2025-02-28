@@ -8579,18 +8579,6 @@ via the Preferences button after logging in.
             </Hash>
         </Value>
     </Setting>
-    <Setting Name="CommunicationChannel###Web" Required="0" Valid="1">
-        <Description Translatable="1">Defines web communication channel.</Description>
-        <Navigation>Core::CommunicationChannel</Navigation>
-        <Value>
-            <Hash>
-                <Item Key="Name" Translatable="1">Web</Item>
-                <Item Key="Icon">fa-window-maximize</Item>
-                <Item Key="Description" Translatable="1">Web communication channel.</Item>
-                <Item Key="Module">Kernel::System::CommunicationChannel::Web</Item>
-            </Hash>
-        </Value>
-    </Setting>
     <Setting Name="AgentPreferencesGroups" Required="1" Valid="1">
         <Description Translatable="1">Defines groups for preferences items.</Description>
         <Navigation>Frontend::Agent::View::Preferences</Navigation>

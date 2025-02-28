@@ -19298,7 +19298,7 @@ msgstr "Modul zum filtern und bearbeiten von eingehenden Nachrichten. Blockiere/
 
 #. XML Definition: Kernel/Config/Files/XML/Ticket.xml
 msgid "Module to filter and manipulate incoming messages. Get a 4 digit number to ticket free text, use regex in Match e. g. From =&gt; '(.+?)@.+?', and use () as [***] in Set =&gt;."
-msgstr "Modul zum Filtern und Manipulieren eingehender Nachrichten. Schreibt eine 4-stellige Zahl in ein FreeText-Feld, verwenden Sie einen Regex im Match z.B. From => \\\\'(.+?)@.+?\\\\', und verwenden Sie () als [***] im Set =>."
+msgstr "Modul zum Filtern und Manipulieren eingehender Nachrichten. Schreibt eine 4-stellige Zahl in ein FreeText-Feld, verwenden Sie einen Regex im Match z.B. From =&gt; '(.+?)@.+?', und verwenden Sie () als [***] in Set =&gt;."
 
 #. XML Definition: Kernel/Config/Files/XML/Ticket.xml
 msgid "Blocks all the incoming emails that do not have a valid ticket number in subject with From: @example.com address."

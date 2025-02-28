@@ -29,7 +29,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y.%M.%D';
     $Self->{DateInputFormat}     = '%Y.%M.%D';
     $Self->{DateInputFormatLong} = '%Y.%M.%D - %T';
-    $Self->{Completeness}        = 0.308591178406847;
+    $Self->{Completeness}        = 0.308743619298534;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -6185,7 +6185,6 @@ sub Data {
         'Defines internal communication channel.' => '',
         'Defines phone communication channel.' => '',
         'Defines chat communication channel.' => '',
-        'Defines web communication channel.' => '',
         'Defines groups for preferences items.' => '',
         'Defines how many deployments the system should keep.' => '',
         'Defines the search parameters for the AgentCustomerUserAddressBook screen. With the setting \'CustomerTicketTextField\' the values for the recipient field can be specified.' =>
@@ -9105,9 +9104,7 @@ Thanks for your help!
             '',
         'We are performing scheduled maintenance. We should be back online shortly.' =>
             '',
-        'Web' => '',
         'Web Services' => 'Web服務',
-        'Web communication channel.' => '',
         'Web service (Dropdown)' => '',
         'Web service (Multiselect)' => '',
         'Web service dynamic field AJAX interface' => '',

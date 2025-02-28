@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2025-02-28 10:56+0000\n"
+"POT-Creation-Date: 2025-02-28 11:08+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16671,10 +16671,6 @@ msgid "Defines chat communication channel."
 msgstr ""
 
 #. XML Definition: Kernel/Config/Files/XML/Framework.xml
-msgid "Defines web communication channel."
-msgstr ""
-
-#. XML Definition: Kernel/Config/Files/XML/Framework.xml
 msgid "Defines groups for preferences items."
 msgstr ""
 
@@ -24186,15 +24182,7 @@ msgid "We are performing scheduled maintenance. We should be back online shortly
 msgstr ""
 
 #. SysConfig
-msgid "Web"
-msgstr ""
-
-#. SysConfig
 msgid "Web Services"
-msgstr ""
-
-#. SysConfig
-msgid "Web communication channel."
 msgstr ""
 
 #. SysConfig

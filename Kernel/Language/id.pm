@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D/%M/%Y';
     $Self->{DateInputFormat}     = '%D/%M/%Y';
     $Self->{DateInputFormatLong} = '%D/%M/%Y - %T';
-    $Self->{Completeness}        = 0.605990783410138;
+    $Self->{Completeness}        = 0.606290136670509;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -6183,7 +6183,6 @@ bin/znuny.Daemon.pl status\').',
         'Defines internal communication channel.' => '',
         'Defines phone communication channel.' => '',
         'Defines chat communication channel.' => '',
-        'Defines web communication channel.' => '',
         'Defines groups for preferences items.' => '',
         'Defines how many deployments the system should keep.' => '',
         'Defines the search parameters for the AgentCustomerUserAddressBook screen. With the setting \'CustomerTicketTextField\' the values for the recipient field can be specified.' =>
@@ -9114,9 +9113,7 @@ Helpdesk Team Anda
             'Kami sedang melakukan pemeliharaan yang telah terjadwal. Untuk sementara ini Login tidak tersedia.',
         'We are performing scheduled maintenance. We should be back online shortly.' =>
             'Kami sedang melakukan pemeliharaan yang telah terjadwal. Kami akan kembali Online sesaat lagi.',
-        'Web' => '',
         'Web Services' => 'Web servis',
-        'Web communication channel.' => '',
         'Web service (Dropdown)' => '',
         'Web service (Multiselect)' => '',
         'Web service dynamic field AJAX interface' => '',

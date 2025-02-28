@@ -27,7 +27,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.999341672152732;
+    $Self->{Completeness}        = 0.999835336736374;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -6182,7 +6182,6 @@ sub Data {
         'Defines internal communication channel.' => 'Legt den internen Kommunikationskanal fest.',
         'Defines phone communication channel.' => 'Legt den Telefon-Kommunikationskanal fest.',
         'Defines chat communication channel.' => 'Legt den Chat-Kommunikationskanal fest.',
-        'Defines web communication channel.' => '',
         'Defines groups for preferences items.' => 'Legt die Gruppen für die persönlichen Einstellungen fest.',
         'Defines how many deployments the system should keep.' => 'Legt fest, wieviele Versionen von Inbetriebnahmen im System behalten werden sollen.',
         'Defines the search parameters for the AgentCustomerUserAddressBook screen. With the setting \'CustomerTicketTextField\' the values for the recipient field can be specified.' =>
@@ -7460,7 +7459,7 @@ sub Data {
         'Module to filter and manipulate incoming messages. Block/ignore all spam email with From: noreply@ address.' =>
             'Modul zum filtern und bearbeiten von eingehenden Nachrichten. Blockiere/Ignoriere alle Nachrichten mit einer noreply@ Absender-Adresse.',
         'Module to filter and manipulate incoming messages. Get a 4 digit number to ticket free text, use regex in Match e. g. From =&gt; \'(.+?)@.+?\', and use () as [***] in Set =&gt;.' =>
-            'Modul zum Filtern und Manipulieren eingehender Nachrichten. Schreibt eine 4-stellige Zahl in ein FreeText-Feld, verwenden Sie einen Regex im Match z.B. From => \\'(.+?)@.+?\\', und verwenden Sie () als [***] im Set =>.',
+            'Modul zum Filtern und Manipulieren eingehender Nachrichten. Schreibt eine 4-stellige Zahl in ein FreeText-Feld, verwenden Sie einen Regex im Match z.B. From =&gt; \'(.+?)@.+?\', und verwenden Sie () als [***] in Set =&gt;.',
         'Blocks all the incoming emails that do not have a valid ticket number in subject with From: @example.com address.' =>
             'Blockiert alle eingehenden E-Mails, die keine gültige Ticketnummer im Betreff mit Absenderadresse: @ example.com besitzen.',
         'Defines the sender for rejected emails.' => 'Definiert die Absendeadresse für abgelehnte E-Mails.',
@@ -9111,9 +9110,7 @@ Ihr Helpdesk-Team
             'Wir führen eine geplante Wartung durch. Das Einloggen ist im Moment nicht möglich.',
         'We are performing scheduled maintenance. We should be back online shortly.' =>
             'Wir führen eine geplante Wartung durch. Wir werden bald wieder online sein.',
-        'Web' => '',
         'Web Services' => 'Webservices',
-        'Web communication channel.' => '',
         'Web service (Dropdown)' => 'Webservice (Einfachauswahl)',
         'Web service (Multiselect)' => 'Webservice (Mehrfachauswahl)',
         'Web service dynamic field AJAX interface' => 'AJAX-Schnittstelle für dynamische Webservice-Felder',

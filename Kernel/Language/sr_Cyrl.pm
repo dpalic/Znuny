@@ -27,7 +27,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.892692560895326;
+    $Self->{Completeness}        = 0.893133541906801;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -6182,7 +6182,6 @@ sub Data {
         'Defines internal communication channel.' => 'Дефинише интерни комуникациони канал.',
         'Defines phone communication channel.' => 'Дефинише комуникациони канал телефона.',
         'Defines chat communication channel.' => 'Дефинише комуникациони канал ћаскања.',
-        'Defines web communication channel.' => '',
         'Defines groups for preferences items.' => 'Дефинише категорије за лична подешавања.',
         'Defines how many deployments the system should keep.' => 'Дефинише колико распореда ће систем чувати.',
         'Defines the search parameters for the AgentCustomerUserAddressBook screen. With the setting \'CustomerTicketTextField\' the values for the recipient field can be specified.' =>
@@ -9112,9 +9111,7 @@ Thanks for your help!
             'Извршавамо планирано одржавање. Пријава привремено није могућа.',
         'We are performing scheduled maintenance. We should be back online shortly.' =>
             'Извршавамо планирано одржавање. ускоро ћемо бити поново активни.',
-        'Web' => '',
         'Web Services' => 'Веб сервиси',
-        'Web communication channel.' => '',
         'Web service (Dropdown)' => '',
         'Web service (Multiselect)' => '',
         'Web service dynamic field AJAX interface' => '',
