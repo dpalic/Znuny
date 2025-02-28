@@ -24356,3 +24356,4 @@ msgstr "Eine Liste aller möglichen Match- und Set-Kriterien finden Sie im ACL-R
 #. JS File: var/httpd/htdocs/js/Core.UI.js
 msgid "The following files types are allowed: %s"
 msgstr "Die folgenden Dateitypen sind zulässig: %s"
+
