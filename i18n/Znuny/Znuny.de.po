@@ -24356,16 +24356,3 @@ msgstr "Eine Liste aller möglichen Match- und Set-Kriterien finden Sie im ACL-R
 #. JS File: var/httpd/htdocs/js/Core.UI.js
 msgid "The following files types are allowed: %s"
 msgstr "Die folgenden Dateitypen sind zulässig: %s"
-
-#. XML Definition: Kernel/Config/Files/XML/Framework.xml
-msgid "Defines web communication channel."
-msgstr ""
-
-#. SysConfig
-msgid "Web"
-msgstr ""
-
-#. SysConfig
-msgid "Web communication channel."
-msgstr ""
-
