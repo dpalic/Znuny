@@ -9045,7 +9045,7 @@ Tu Equipo de Soporte
             '',
         'This is the default orange - black skin.' => '',
         'This key is not certified with a trusted signature!' => '¡Esta llave no está certificada con una firma de confianza!',
-        'This module is part of the admin area of OTRS.' => '',
+        'This module is part of the admin area of Znuny.' => '',
         'Ticket Close.' => 'Cerrar Ticket.',
         'Ticket Compose Bounce Email.' => 'Componer Rebote de Correo Electrónico de Ticket.',
         'Ticket Compose email Answer.' => 'Componer Respuesta de Correo Electrónico de Ticket.',

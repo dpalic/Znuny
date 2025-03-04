@@ -23750,8 +23750,8 @@ msgid "This key is not certified with a trusted signature!"
 msgstr "Dieser Schlüssel ist nicht mit einer vertrauenswürdigen Signatur zertifiziert!"
 
 #. SysConfig
-msgid "This module is part of the admin area of OTRS."
-msgstr ""
+msgid "This module is part of the admin area of Znuny."
+msgstr "Dieses Modul ist Teil des Adminbereichs von Znuny."
 
 #. SysConfig
 msgid "Ticket Close."

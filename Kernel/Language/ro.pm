@@ -9033,7 +9033,7 @@ Thanks for your help!
             '',
         'This is the default orange - black skin.' => '',
         'This key is not certified with a trusted signature!' => 'Această cheie nu este certificată cu o semnătură de încredere!',
-        'This module is part of the admin area of OTRS.' => '',
+        'This module is part of the admin area of Znuny.' => '',
         'Ticket Close.' => 'Tichet Inchis.',
         'Ticket Compose Bounce Email.' => '',
         'Ticket Compose email Answer.' => '',

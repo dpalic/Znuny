@@ -9057,7 +9057,7 @@ Il tuo helpdesk.
             'Questa è la skin arancione - nera predefinita per l\'interfaccia clienti.',
         'This is the default orange - black skin.' => 'Questo è il tema arancione - nero predefinito.',
         'This key is not certified with a trusted signature!' => 'Questa chiave non è certificata con una firma attendibile!',
-        'This module is part of the admin area of OTRS.' => '',
+        'This module is part of the admin area of Znuny.' => '',
         'Ticket Close.' => 'Chiusura del ticket.',
         'Ticket Compose Bounce Email.' => 'Email di rimbalzo per la composizione dei ticket.',
         'Ticket Compose email Answer.' => 'Ticket Componi risposta via email.',

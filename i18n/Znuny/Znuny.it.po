@@ -23746,7 +23746,7 @@ msgid "This key is not certified with a trusted signature!"
 msgstr "Questa chiave non è certificata con una firma attendibile!"
 
 #. SysConfig
-msgid "This module is part of the admin area of OTRS."
+msgid "This module is part of the admin area of Znuny."
 msgstr ""
 
 #. SysConfig
