@@ -8611,10 +8611,6 @@ msgstr "新的工單"
 msgid "Service level agreement"
 msgstr ""
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/CustomerTicketMessage.tt
-msgid "Dymanic Info"
-msgstr ""
-
 #. TT Template: Kernel/Output/HTML/Templates/Standard/CustomerTicketOverview.tt
 msgid "Welcome!"
 msgstr "歡迎！"

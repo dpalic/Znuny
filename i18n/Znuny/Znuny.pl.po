@@ -8649,10 +8649,6 @@ msgstr "Nowe zgłoszenie"
 msgid "Service level agreement"
 msgstr "Gwarantowany poziom świadczenia usług (SLA)"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/CustomerTicketMessage.tt
-msgid "Dymanic Info"
-msgstr "Pola dynamiczne"
-
 #. TT Template: Kernel/Output/HTML/Templates/Standard/CustomerTicketOverview.tt
 msgid "Welcome!"
 msgstr "Witaj!"

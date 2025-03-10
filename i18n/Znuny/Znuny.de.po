@@ -8632,10 +8632,6 @@ msgstr "Neues Ticket"
 msgid "Service level agreement"
 msgstr "Service-Level-Vereinbarung"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/CustomerTicketMessage.tt
-msgid "Dymanic Info"
-msgstr "Dynamische Felder"
-
 #. TT Template: Kernel/Output/HTML/Templates/Standard/CustomerTicketOverview.tt
 msgid "Welcome!"
 msgstr "Willkommen!"
