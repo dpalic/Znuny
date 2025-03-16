@@ -30,7 +30,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%M-%D';
     $Self->{DateInputFormat}     = '%Y-%M-%D';
     $Self->{DateInputFormatLong} = '%Y-%M-%D - %T';
-    $Self->{Completeness}        = 0.660629013667051;
+    $Self->{Completeness}        = 0.660958340194303;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -8585,7 +8585,7 @@ Twój Zespół Helpdesk.
         'Configure which screen should be shown after marking a ticket or article as unseen.' =>
             '',
         'Create New process ticket.' => 'Utwórz nowe zgłoszenie procesowe.',
-        'Create Process Ticket' => 'Utwórz zgłoszenie procesowe',
+        'Create Process Ticket' => 'Utwórz Zgłoszenie Procesowe',
         'Create Ticket' => 'Utwórz Zgłoszenie',
         'Create a new calendar appointment linked to this ticket' => 'Utwórz nowy kalendarz wydarzeń połączony z tym zgłoszeniem',
         'Create a unit test file' => '',
@@ -8616,7 +8616,7 @@ Twój Zespół Helpdesk.
         'Create new email ticket.' => 'Utwórz nowy zgłoszenie Email.',
         'Create new phone ticket (inbound).' => 'Utwórz nowe zgłoszenie telefoniczne (wewnętrzne).',
         'Create new phone ticket.' => 'Utwórz nowe zgłoszenie telefoniczne.',
-        'Create new process ticket.' => '',
+        'Create new process ticket.' => 'Utwórz nowe zgłoszenie procesowe.',
         'Create tickets.' => 'Utwórz zgłoszenia.',
         'Created ticket [%s] in "%s" with priority "%s" and state "%s".' =>
             '',
@@ -8632,7 +8632,7 @@ Twój Zespół Helpdesk.
         'Customer Information Center.' => 'Centrum Informacji o Kliencie',
         'Customer Ticket Print Module.' => '',
         'Customer User Administration' => 'Zarządzanie użytkownikami klientów',
-        'Customer User Information' => '',
+        'Customer User Information' => 'Informacje o Użytkowniku klienta',
         'Customer User Information Center Search.' => 'Wyszukiwanie w Centrum Informacji o użytkowniku klienta.',
         'Customer User Information Center search.' => 'Wyszukiwanie w Centrum Informacji o użytkowniku klienta.',
         'Customer User Information Center.' => 'Centrum Informacji o użytkowniku klienta.',
