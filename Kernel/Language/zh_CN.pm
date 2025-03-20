@@ -29,7 +29,7 @@ sub Data {
     $Self->{Charset} = ['utf-8', ];
     # date formats (%A=WeekDay;%B=LongMonth;%T=Time;%D=Day;%M=Month;%Y=Year;)
     $Self->{DateFormat}          = '%Y.%M.%D %T';
-    $Self->{DateFormatLong}      = ' %A %Y/%M/%D %T';
+    $Self->{DateFormatLong}      = '%A %Y/%M/%D %T';
     $Self->{DateFormatShort}     = '%Y.%M.%D';
     $Self->{DateInputFormat}     = '%Y.%M.%D';
     $Self->{DateInputFormatLong} = '%Y.%M.%D - %T';

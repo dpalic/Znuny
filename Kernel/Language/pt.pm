@@ -22,7 +22,7 @@ sub Data {
 
     # $$START$$
     # possible charsets
-    $Self->{Charset} = [];
+    $Self->{Charset} = ['utf-8', ];
     # date formats (%A=WeekDay;%B=LongMonth;%T=Time;%D=Day;%M=Month;%Y=Year;)
     $Self->{DateFormat}          = '%D/%M/%Y %T';
     $Self->{DateFormatLong}      = '%A %D %B %T %Y';
