@@ -1,4 +1,5 @@
 # 7.1.7 2025-xx-xx
+ - 2025-03-24 Fixed bug - GenericAgent no possibility to search in archive. Changed Blockname from SearchInArchive to TicketArchive. SearchInArchive is already used in /Kernel/Output/HTML/Templates/Standard/HeaderToolbar.tt.
  - 2025-03-17 Fixed bug - Ticket::Frontend::Article::Actions###??? no possibility to add a new entry.
  - 2025-03-10 Fixed AgentTicketBulk - TicketWatchSubscribe and TicketWatchUnsubscribe is not working.
  - 2025-03-07 Fixed GroupSelection in AdminAppointmentCalendarManage for admin group member. A user can only create AppointmentCalendars for their own groups, even though they are a member of the Admin group.
