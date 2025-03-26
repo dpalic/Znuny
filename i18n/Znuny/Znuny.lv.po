@@ -9887,7 +9887,7 @@ msgid "Edit the system configuration settings."
 msgstr "Rediģēt sistēmas konfigurācijas iestatījumus."
 
 #. Perl Module: Kernel/Config/Defaults.pm
-msgid "Update and extend your system with software packages."
+msgid "Manage add-ons."
 msgstr ""
 
 #. Perl Module: Kernel/Modules/AdminACL.pm

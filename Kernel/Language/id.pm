@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D/%M/%Y';
     $Self->{DateInputFormat}     = '%D/%M/%Y';
     $Self->{DateInputFormatLong} = '%D/%M/%Y - %T';
-    $Self->{Completeness}        = 0.606190319394139;
+    $Self->{Completeness}        = 0.606025683240039;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -3435,7 +3435,7 @@ bin/znuny.Daemon.pl status\').',
         'Mrs.' => 'Nyonya.',
         'View system log messages.' => 'Melihat pesan log sistem.',
         'Edit the system configuration settings.' => 'Ubah pengaturan konfigurasi sistem.',
-        'Update and extend your system with software packages.' => 'Memperbarui dan memperluas sistem Anda dengan paket perangkat lunak.',
+        'Manage add-ons.' => '',
 
         # Perl Module: Kernel/Modules/AdminACL.pm
         'ACL information from database is not in sync with the system configuration, please deploy all ACLs.' =>

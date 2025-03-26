@@ -3439,7 +3439,7 @@ sub Data {
         'Mrs.' => '',
         'View system log messages.' => '',
         'Edit the system configuration settings.' => '',
-        'Update and extend your system with software packages.' => '',
+        'Manage add-ons.' => '',
 
         # Perl Module: Kernel/Modules/AdminACL.pm
         'ACL information from database is not in sync with the system configuration, please deploy all ACLs.' =>

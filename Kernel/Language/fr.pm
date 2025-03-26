@@ -35,7 +35,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.383108330589397;
+    $Self->{Completeness}        = 0.382943694435298;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -3442,7 +3442,7 @@ sub Data {
         'Mrs.' => 'Mme',
         'View system log messages.' => 'Voir les messages du journal système.',
         'Edit the system configuration settings.' => 'Modifier la configuration du système.',
-        'Update and extend your system with software packages.' => 'Mettre à jour et améliorer Znuny via des paquets.',
+        'Manage add-ons.' => '',
 
         # Perl Module: Kernel/Modules/AdminACL.pm
         'ACL information from database is not in sync with the system configuration, please deploy all ACLs.' =>

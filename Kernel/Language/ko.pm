@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%M-%D';
     $Self->{DateInputFormat}     = '%Y-%M-%D';
     $Self->{DateInputFormatLong} = '%Y-%M-%D %T';
-    $Self->{Completeness}        = 0.868126440566348;
+    $Self->{Completeness}        = 0.867961804412249;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -3433,7 +3433,7 @@ sub Data {
         'Mrs.' => 'Mrs.',
         'View system log messages.' => '시스템 로그 메시지를 봅니다.',
         'Edit the system configuration settings.' => '시스템 구성 설정을 편집 하십시오.',
-        'Update and extend your system with software packages.' => '소프트웨어 패키지로 시스템을 업데이트하고 확장하십시오.',
+        'Manage add-ons.' => '',
 
         # Perl Module: Kernel/Modules/AdminACL.pm
         'ACL information from database is not in sync with the system configuration, please deploy all ACLs.' =>

@@ -27,7 +27,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.165788607178136;
+    $Self->{Completeness}        = 0.165623971024037;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -3434,7 +3434,7 @@ sub Data {
         'Mrs.' => 'Pr.',
         'View system log messages.' => 'Süsteemilogi teadete vaatamine.',
         'Edit the system configuration settings.' => 'Süsteemi konfiguratsiooniseadete muutmine.',
-        'Update and extend your system with software packages.' => 'Süsteemi uuendamine ja laiendamine tarkvarapakettide abil.',
+        'Manage add-ons.' => '',
 
         # Perl Module: Kernel/Modules/AdminACL.pm
         'ACL information from database is not in sync with the system configuration, please deploy all ACLs.' =>

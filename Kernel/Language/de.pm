@@ -3434,7 +3434,7 @@ sub Data {
         'Mrs.' => 'Frau',
         'View system log messages.' => 'Systemprotokoll-Nachrichten ansehen.',
         'Edit the system configuration settings.' => 'Systemeinstellungen bearbeiten.',
-        'Update and extend your system with software packages.' => 'System mit Softwarepaketen aktualisieren und erweitern.',
+        'Manage add-ons.' => 'Add-ons verwalten.',
 
         # Perl Module: Kernel/Modules/AdminACL.pm
         'ACL information from database is not in sync with the system configuration, please deploy all ACLs.' =>

@@ -3433,7 +3433,7 @@ sub Data {
         'Mrs.' => 'Bà',
         'View system log messages.' => '',
         'Edit the system configuration settings.' => 'Chỉnh sửa các thiết lập cấu hình hệ thống',
-        'Update and extend your system with software packages.' => '',
+        'Manage add-ons.' => '',
 
         # Perl Module: Kernel/Modules/AdminACL.pm
         'ACL information from database is not in sync with the system configuration, please deploy all ACLs.' =>
