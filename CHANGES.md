@@ -1,4 +1,5 @@
 # 7.1.7 2025-xx-xx
+ - 2025-04-02 Fixed bug - In AdminRoles comment display for roles is too short. Changed Truncation to 80.
  - 2025-03-28 Fixed 'ticket-locked' message and position. Change button size for 'Undo & close'.
  - 2025-03-28 Fixed memoverflow in CalendarEvents (TicketZoom).Thanks to @DonMarlowne. [PR#652](https://github.com/znuny/Znuny/pull/652)
  - 2025-03-27 Added option ToAddressRegExp to postmaster filter ExternalTicketNumberRecognition.
