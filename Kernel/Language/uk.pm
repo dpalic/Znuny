@@ -27,7 +27,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%M/%D/%Y';
     $Self->{DateInputFormat}     = '%M/%D/%Y';
     $Self->{DateInputFormatLong} = '%M/%D/%Y - %T';
-    $Self->{Completeness}        = 0.436285808363517;
+    $Self->{Completeness}        = 0.436213991769547;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -4148,6 +4148,8 @@ sub Data {
         'Export: Need StatID!' => 'Експорт: потрібний StatID!',
         'Delete: Get no StatID!' => 'Вилучення: не можу отримати StatID!',
         'Need StatID!' => 'Потрібний StatID!',
+        'This stat does not exist, or you don\'t have permissions to access it.' =>
+            '',
         'Could not load stat.' => 'Не вдалося завантажити статистику.',
         'Add New Statistic' => 'Додати Нову Статистику',
         'Could not create statistic.' => 'Не можу створити статистику.',

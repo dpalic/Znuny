@@ -30,7 +30,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y/%M/%D';
     $Self->{DateInputFormat}     = '%Y/%M/%D';
     $Self->{DateInputFormatLong} = '%Y/%M/%D - %T';
-    $Self->{Completeness}        = 0.683733947974975;
+    $Self->{Completeness}        = 0.683621399176955;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -4154,6 +4154,8 @@ sub Data {
         'Export: Need StatID!' => 'エクスポート: StatIDが必要です！',
         'Delete: Get no StatID!' => '削除: StatIDが存在しません！',
         'Need StatID!' => 'StatIDが必要です！',
+        'This stat does not exist, or you don\'t have permissions to access it.' =>
+            '',
         'Could not load stat.' => '統計を読み込めませんでした。',
         'Add New Statistic' => '新しいレポートを追加',
         'Could not create statistic.' => 'レポートを作成できませんでした。',

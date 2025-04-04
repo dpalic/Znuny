@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D/%M/%Y';
     $Self->{DateInputFormat}     = '%D/%M/%Y';
     $Self->{DateInputFormatLong} = '%D/%M/%Y - %T';
-    $Self->{Completeness}        = 0.606025683240039;
+    $Self->{Completeness}        = 0.605925925925926;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -4149,6 +4149,8 @@ bin/znuny.Daemon.pl status\').',
         'Export: Need StatID!' => 'Ekspor: Membutuhkan StatID!',
         'Delete: Get no StatID!' => 'Hapus: Tidak ada StatID!',
         'Need StatID!' => 'Membutuhkan StatID!',
+        'This stat does not exist, or you don\'t have permissions to access it.' =>
+            '',
         'Could not load stat.' => 'Tidak dapat memuat stat.',
         'Add New Statistic' => 'Tambahkan statistik baru',
         'Could not create statistic.' => 'Tidak dapat membuat statistik.',

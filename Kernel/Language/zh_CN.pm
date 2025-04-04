@@ -33,7 +33,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y.%M.%D';
     $Self->{DateInputFormat}     = '%Y.%M.%D';
     $Self->{DateInputFormatLong} = '%Y.%M.%D - %T';
-    $Self->{Completeness}        = 0.896279222917353;
+    $Self->{Completeness}        = 0.896131687242798;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -4154,6 +4154,8 @@ sub Data {
         'Export: Need StatID!' => '导出：需要StatID（统计ID）！',
         'Delete: Get no StatID!' => '删除：没有StatID（统计ID）！',
         'Need StatID!' => '需要StatID（统计ID）！',
+        'This stat does not exist, or you don\'t have permissions to access it.' =>
+            '',
         'Could not load stat.' => '不能载入统计。',
         'Add New Statistic' => '添加新的统计',
         'Could not create statistic.' => '不能创建统计。',

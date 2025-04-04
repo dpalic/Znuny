@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%M-%D';
     $Self->{DateInputFormat}     = '%Y-%M-%D';
     $Self->{DateInputFormatLong} = '%Y-%M-%D %T';
-    $Self->{Completeness}        = 0.867961804412249;
+    $Self->{Completeness}        = 0.867818930041152;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -4147,6 +4147,8 @@ sub Data {
         'Export: Need StatID!' => '내보내기 : StatID가 필요합니다!',
         'Delete: Get no StatID!' => '삭제 : StatID를 가져 오지 마십시오!',
         'Need StatID!' => 'StatID가 필요합니다!',
+        'This stat does not exist, or you don\'t have permissions to access it.' =>
+            '',
         'Could not load stat.' => '통계를 로드 할 수 없습니다.',
         'Add New Statistic' => '새 통계 추가',
         'Could not create statistic.' => '통계를 만들 수 없습니다.',

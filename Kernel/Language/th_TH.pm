@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D/%M/%Y';
     $Self->{DateInputFormat}     = '%D/%M/%Y';
     $Self->{DateInputFormatLong} = '%D/%M/%Y - %T';
-    $Self->{Completeness}        = 0.523378333882121;
+    $Self->{Completeness}        = 0.523292181069959;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -4150,6 +4150,8 @@ sub Data {
         'Export: Need StatID!' => 'ส่งออก: ต้องการ StatID!',
         'Delete: Get no StatID!' => 'ลบ: ไม่ได้รับ StatID!',
         'Need StatID!' => 'ต้องการ StatID!',
+        'This stat does not exist, or you don\'t have permissions to access it.' =>
+            '',
         'Could not load stat.' => 'ไม่สามารถโหลดสถิติ',
         'Add New Statistic' => 'เพิ่มสถิติใหม่',
         'Could not create statistic.' => 'ไม่สามารถสร้างสถิติ',

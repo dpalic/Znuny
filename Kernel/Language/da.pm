@@ -29,7 +29,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.348699374382614;
+    $Self->{Completeness}        = 0.348641975308642;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -4150,6 +4150,8 @@ sub Data {
         'Export: Need StatID!' => '',
         'Delete: Get no StatID!' => '',
         'Need StatID!' => '',
+        'This stat does not exist, or you don\'t have permissions to access it.' =>
+            '',
         'Could not load stat.' => '',
         'Add New Statistic' => 'Tilføj ny rapport',
         'Could not create statistic.' => 'Kunne ikke oprette rapport.',

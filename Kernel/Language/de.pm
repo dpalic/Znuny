@@ -4148,6 +4148,8 @@ sub Data {
         'Export: Need StatID!' => 'Export: Benötige StatID!',
         'Delete: Get no StatID!' => 'Löschen: Keine StatID empfangen!',
         'Need StatID!' => 'Benötige StatID!',
+        'This stat does not exist, or you don\'t have permissions to access it.' =>
+            'Diese Statistik existiert nicht, oder Sie haben keine Zugriffsberechtigung.',
         'Could not load stat.' => 'Konnte Statistik nicht laden.',
         'Add New Statistic' => 'Neue Statistik hinzufügen',
         'Could not create statistic.' => 'Konnte Statistik nicht erstellen.',

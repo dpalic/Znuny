@@ -33,7 +33,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D/%M/%Y';
     $Self->{DateInputFormat}     = '%D/%M/%Y';
     $Self->{DateInputFormatLong} = '%D/%M/%Y - %T';
-    $Self->{Completeness}        = 0.595159697069476;
+    $Self->{Completeness}        = 0.595061728395062;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -4154,6 +4154,8 @@ sub Data {
         'Export: Need StatID!' => 'Exportar: se necesita ID de Estadística!',
         'Delete: Get no StatID!' => 'Borrar: No se pudo obtener ID de Estadística!',
         'Need StatID!' => 'Se necesita ID de Estadística!',
+        'This stat does not exist, or you don\'t have permissions to access it.' =>
+            '',
         'Could not load stat.' => 'No se pudo cargar la estadística.',
         'Add New Statistic' => 'Agregar Nueva Estadística',
         'Could not create statistic.' => 'No se pudo crear la estadística.',
