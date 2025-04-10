@@ -1,4 +1,5 @@
 # 7.1.7 2025-xx-xx
+ - 2025-04-10 Fixed bug - Color inversion in inline attachment with dark mode activated is not working.
  - 2025-04-04 Fixed bug - Incomplete error message in Stats.
  - 2025-04-02 Fixed bug - In AdminRoles comment display for roles is too short. Changed Truncation to 80.
  - 2025-03-28 Fixed 'ticket-locked' message and position. Change button size for 'Undo & close'.
