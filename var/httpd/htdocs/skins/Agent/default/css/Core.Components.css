@@ -1983,11 +1983,6 @@ handheld {
     }
 
     @media only screen and (max-width: 1024px) {
-
-        .WidgetSimple span.Pagination {
-            display: none;
-        }
-
         .WidgetSimple span.Pagination.AsBlock {
             display: flex;
         }
