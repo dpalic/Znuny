@@ -851,7 +851,6 @@ did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.
 
     .BreadCrumb li:last-child {
         overflow-y: visible;
-        overflow-x: hidden;
         text-overflow: ellipsis;
     }
 
