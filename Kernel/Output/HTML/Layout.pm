@@ -3879,6 +3879,9 @@ sub BuildDateSelection {
         %Param,
     );
 
+    # Do not initialise Datepicker if Disabled is set.
+    return $Output if $Param{Disabled};
+
     # prepare datepicker for specific calendar
     my $VacationDays = '';
     if ( $Param{Calendar} ) {
