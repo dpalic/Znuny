@@ -803,6 +803,10 @@ did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.
         padding-bottom: var(--padding-xs);
     }
 
+    #SearchInsert .Field input {
+        flex: 1;
+    }
+
 
     /*.moveTickets .Footer .CallForAction:first-child{
         margin-left: auto;
