@@ -6201,10 +6201,10 @@ Do this _just_ if the line, that should be wrapped, contains space characters at
 If you need more info to understand what it does, take a look at the UnitTest WrapPlainText.t to see
 use cases there.
 
-my $WrappedPlainText = $LayoutObject->WrapPlainText(
-    PlainText     => "Some Plain text that is longer than the amount stored in MaxCharacters",
-    MaxCharacters => 80,
-);
+    my $WrappedPlainText = $LayoutObject->WrapPlainText(
+        PlainText     => "Some Plain text that is longer than the amount stored in MaxCharacters",
+        MaxCharacters => 80,
+    );
 
 =cut
 
@@ -6252,9 +6252,9 @@ sub WrapPlainText {
 
 set properties for rich text editor and send them to JS via AddJSData()
 
-$LayoutObject->SetRichTextParameters(
-    Data => \%Param,
-);
+    $LayoutObject->SetRichTextParameters(
+        Data => \%Param,
+    );
 
 =cut
 
@@ -6417,9 +6417,9 @@ sub SetRichTextParameters {
 
 set properties for customer rich text editor and send them to JS via AddJSData()
 
-$LayoutObject->CustomerSetRichTextParameters(
-    Data => \%Param,
-);
+    $LayoutObject->CustomerSetRichTextParameters(
+        Data => \%Param,
+    );
 
 =cut
 

@@ -654,23 +654,6 @@ sub Attributes {
 
 generate response
 
-AutoResponse
-    TicketID
-        Owner
-        Responsible
-        CUSTOMER_DATA
-    ArticleID
-        CUSTOMER_SUBJECT
-        CUSTOMER_EMAIL
-    UserID
-
-    To
-    Cc
-    Bcc
-    Subject
-    Body
-    ContentType
-
     my %AutoResponse = $TemplateGeneratorObject->AutoResponse(
         TicketID         => 123,
         OrigHeader       => {},

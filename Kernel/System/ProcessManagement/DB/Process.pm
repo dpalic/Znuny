@@ -1218,6 +1218,7 @@ Returns:
     );
 
 Returns:
+
     $ProcessDump = '/opt/znuny/var/myfile.txt';      # or undef if can't write the file
 
 =cut

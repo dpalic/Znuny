@@ -64,15 +64,16 @@ sub new {
 
 return a hash of all possible types
 
-Return
-    %PossibleTypesList = (
-        'Normal'      => 1,
-        'ParentChild' => 1,
-    );
-
     my %PossibleTypesList = $LinkObject->PossibleTypesList(
         Object1 => 'Ticket',
         Object2 => 'FAQ',
+    );
+
+Return:
+
+    %PossibleTypesList = (
+        'Normal'      => 1,
+        'ParentChild' => 1,
     );
 
 =cut
@@ -143,14 +144,15 @@ sub PossibleTypesList {
 
 return a hash of all possible objects
 
-Return
+    my %PossibleObjectsList = $LinkObject->PossibleObjectsList(
+        Object => 'Ticket',
+    );
+
+Return:
+
     %PossibleObjectsList = (
         'Ticket' => 1,
         'FAQ'    => 1,
-    );
-
-    my %PossibleObjectsList = $LinkObject->PossibleObjectsList(
-        Object => 'Ticket',
     );
 
 =cut
@@ -199,7 +201,10 @@ sub PossibleObjectsList {
 
 return a 2 dimensional hash list of all possible links
 
-Return
+    my %PossibleLinkList = $LinkObject->PossibleLinkList();
+
+Return:
+
     %PossibleLinkList = (
         001 => {
             Object1 => 'Ticket',
@@ -213,7 +218,6 @@ Return
         },
     );
 
-    my %PossibleLinkList = $LinkObject->PossibleLinkList();
 
 =cut
 
@@ -975,7 +979,18 @@ sub LinkDeleteAll {
 
 get all existing links for a given object
 
-Return
+    my $LinkList = $LinkObject->LinkList(
+        Object    => 'Ticket',
+        Key       => '321',
+        Object2   => 'FAQ',         # (optional)
+        State     => 'Valid',
+        Type      => 'ParentChild', # (optional)
+        Direction => 'Target',      # (optional) default Both (Source|Target|Both)
+        UserID    => 1,
+    );
+
+Return:
+
     $LinkList = {
         Ticket => {
             Normal => {
@@ -1005,16 +1020,6 @@ Return
             },
         },
     };
-
-    my $LinkList = $LinkObject->LinkList(
-        Object    => 'Ticket',
-        Key       => '321',
-        Object2   => 'FAQ',         # (optional)
-        State     => 'Valid',
-        Type      => 'ParentChild', # (optional)
-        Direction => 'Target',      # (optional) default Both (Source|Target|Both)
-        UserID    => 1,
-    );
 
 =cut
 
@@ -1158,7 +1163,23 @@ sub LinkList {
 
 get all existing links for a given object with data of the other objects
 
-Return
+    my $LinkList = $LinkObject->LinkListWithData(
+        Object           => 'Ticket',
+        Key              => '321',
+        Object2          => 'FAQ',         # (optional)
+        State            => 'Valid',
+        Type             => 'ParentChild', # (optional)
+        Direction        => 'Target',      # (optional) default Both (Source|Target|Both)
+        UserID           => 1,
+        ObjectParameters => {              # (optional) backend specific flags
+            Ticket => {
+                IgnoreLinkedTicketStateTypes => 0|1,
+            },
+        },
+    );
+
+Return:
+
     $LinkList = {
         Ticket => {
             Normal => {
@@ -1188,21 +1209,6 @@ Return
             },
         },
     };
-
-    my $LinkList = $LinkObject->LinkListWithData(
-        Object           => 'Ticket',
-        Key              => '321',
-        Object2          => 'FAQ',         # (optional)
-        State            => 'Valid',
-        Type             => 'ParentChild', # (optional)
-        Direction        => 'Target',      # (optional) default Both (Source|Target|Both)
-        UserID           => 1,
-        ObjectParameters => {              # (optional) backend specific flags
-            Ticket => {
-                IgnoreLinkedTicketStateTypes => 0|1,
-            },
-        },
-    );
 
 =cut
 
@@ -1302,15 +1308,6 @@ sub LinkListWithData {
 
 return a hash with all existing links of a given object
 
-Return
-    %LinkKeyList = (
-        5   => 1,
-        9   => 1,
-        12  => 1,
-        212 => 1,
-        332 => 1,
-    );
-
     my %LinkKeyList = $LinkObject->LinkKeyList(
         Object1   => 'Ticket',
         Key1      => '321',
@@ -1319,6 +1316,16 @@ Return
         Type      => 'ParentChild', # (optional)
         Direction => 'Target',      # (optional) default Both (Source|Target|Both)
         UserID    => 1,
+    );
+
+Return
+
+    %LinkKeyList = (
+        5   => 1,
+        9   => 1,
+        12  => 1,
+        212 => 1,
+        332 => 1,
     );
 
 =cut
@@ -1375,15 +1382,6 @@ sub LinkKeyList {
 
 return a hash with all existing links of a given object
 
-Return
-    %LinkKeyList = (
-        5   => $DataOfItem5,
-        9   => $DataOfItem9,
-        12  => $DataOfItem12,
-        212 => $DataOfItem212,
-        332 => $DataOfItem332,
-    );
-
     my %LinkKeyList = $LinkObject->LinkKeyListWithData(
         Object1   => 'Ticket',
         Key1      => '321',
@@ -1392,6 +1390,17 @@ Return
         Type      => 'ParentChild', # (optional)
         Direction => 'Target',      # (optional) default Both (Source|Target|Both)
         UserID    => 1,
+    );
+
+
+Return:
+
+    %LinkKeyList = (
+        5   => $DataOfItem5,
+        9   => $DataOfItem9,
+        12  => $DataOfItem12,
+        212 => $DataOfItem212,
+        332 => $DataOfItem332,
     );
 
 =cut
@@ -1759,7 +1768,12 @@ sub TypeLookup {
 
 get a link type
 
-Return
+    %TypeData = $LinkObject->TypeGet(
+        TypeID => 444,
+    );
+
+Return:
+
     $TypeData{TypeID}
     $TypeData{Name}
     $TypeData{SourceName}
@@ -1770,9 +1784,7 @@ Return
     $TypeData{ChangeTime}
     $TypeData{ChangeBy}
 
-    %TypeData = $LinkObject->TypeGet(
-        TypeID => 444,
-    );
+
 
 =cut
 
@@ -1878,7 +1890,10 @@ sub TypeGet {
 
 return a 2 dimensional hash list of all valid link types
 
-Return
+    my %TypeList = $LinkObject->TypeList();
+
+Return:
+
     $TypeList{
         Normal => {
             SourceName => 'Normal',
@@ -1889,8 +1904,6 @@ Return
             TargetName => 'Child',
         },
     }
-
-    my %TypeList = $LinkObject->TypeList();
 
 =cut
 
@@ -1938,7 +1951,10 @@ sub TypeList {
 
 return a 2 dimensional hash list of all type groups
 
-Return
+    my %TypeGroupList = $LinkObject->TypeGroupList();
+
+Return:
+
     %TypeGroupList = (
         001 => [
             'Normal',
@@ -1953,8 +1969,6 @@ Return
             'RelevantTo',
         ],
     );
-
-    my %TypeGroupList = $LinkObject->TypeGroupList();
 
 =cut
 
@@ -2204,15 +2218,16 @@ sub StateLookup {
 
 return a hash list of all valid link states
 
-Return
+    my %StateList = $LinkObject->StateList(
+        Valid => 0,   # (optional) default 1 (0|1)
+    );
+
+Return:
+
     $StateList{
         4 => 'Valid',
         8 => 'Temporary',
     }
-
-    my %StateList = $LinkObject->StateList(
-        Valid => 0,   # (optional) default 1 (0|1)
-    );
 
 =cut
 
@@ -2292,16 +2307,17 @@ sub ObjectPermission {
 
 return a hash of object descriptions
 
-Return
-    %Description = (
-        Normal => '',
-        Long   => '',
-    );
-
     %Description = $LinkObject->ObjectDescriptionGet(
         Object => 'Ticket',
         Key    => 123,
         UserID => 1,
+    );
+
+Return:
+
+    %Description = (
+        Normal => '',
+        Long   => '',
     );
 
 =cut
@@ -2337,6 +2353,13 @@ sub ObjectDescriptionGet {
 
 return a hash reference of the search results.
 
+    $ObjectList = $LinkObject->ObjectSearch(
+        Object       => 'ITSMConfigItem',
+        SubObject    => 'Computer',        # (optional)
+        SearchParams => $HashRef,          # (optional)
+        UserID       => 1,
+    );
+
 Returns:
 
     $ObjectList = {
@@ -2350,13 +2373,6 @@ Returns:
             },
         },
     };
-
-    $ObjectList = $LinkObject->ObjectSearch(
-        Object       => 'ITSMConfigItem',
-        SubObject    => 'Computer',        # (optional)
-        SearchParams => $HashRef,          # (optional)
-        UserID       => 1,
-    );
 
 =cut
 
