@@ -1,4 +1,5 @@
 # 7.1.7 2025-xx-xx
+ - 2025-04-24 Fixed bug - Setting the password does not reset preferences UserLoginFailed and UserLastPwChangeTime.
  - 2025-04-16 Updated Net::IMAP::Simple to latest version from GitHub. Thanks to @dandanpena. [PR#155](https://github.com/znuny/Znuny/pull/155)
  - 2025-04-16 Fixed bug - $LayoutObject->BuildDateSelection() does not deactivate the DatePicker and DatePickerIcon if Disabled is 1. Thanks for reporting to @BuilderNSV. [#649](https://github.com/znuny/Znuny/issues/649)
  - 2025-04-16 Fixed bug - Page selector not available in mobile view. Thanks for reporting to @MIPMHannes. [#617](https://github.com/znuny/Znuny/issues/617)
