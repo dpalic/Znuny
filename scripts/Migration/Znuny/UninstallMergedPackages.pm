@@ -51,6 +51,8 @@ sub Run {
         'Znuny4OTRS-MarkTicketSeenUnseen',
         'Znuny-CustomPriorityColor',
         'Znuny4OTRS-CustomPriorityColor',
+        'Znuny-AdminValidFilter',
+        'Znuny4OTRS-AdminValidFilter',
     );
 
     PACKAGENAME:
