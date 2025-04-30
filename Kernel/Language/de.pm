@@ -8378,7 +8378,7 @@ sub Data {
         'Sorry, you can only upload one file here.' => 'Sie können hier nur eine Datei hochladen.',
         'Sorry, you can only upload %s files.' => 'Sie können nur %s Datei(en) hochladen.',
         'Please only select at most %s files for upload.' => 'Bitte wählen Sie höchstens %s Datei(en) zum Hochladen aus.',
-        'The following files are not allowed to be uploaded: %s' => 'Die folgenden Dateien dürfen nicht geändert werden: %s',
+        'The following files are not allowed to be uploaded: %s' => 'Die folgenden Dateien dürfen nicht hochgeladen werden: %s',
         'The following files types are allowed: %s' => 'Die folgenden Dateitypen sind zulässig: %s',
         'The following files exceed the maximum allowed size per file of %s and were not uploaded: %s' =>
             'Folgende Dateien überschreiten die Maximalgröße pro Datei (%s) und wurden nicht aktualisiert: %s',
