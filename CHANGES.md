@@ -1,4 +1,4 @@
-# 7.1.7 2025-xx-xx
+# 7.1.7 2025-04-30
  - 2025-04-24 Fixed bug - Setting the password does not reset preferences UserLoginFailed and UserLastPwChangeTime.
  - 2025-04-16 Updated Net::IMAP::Simple to latest version from GitHub. Thanks to @dandanpena. [PR#155](https://github.com/znuny/Znuny/pull/155)
  - 2025-04-16 Fixed bug - $LayoutObject->BuildDateSelection() does not deactivate the DatePicker and DatePickerIcon if Disabled is 1. Thanks for reporting to @BuilderNSV. [#649](https://github.com/znuny/Znuny/issues/649)
@@ -17,6 +17,7 @@
  - 2025-03-17 Fixed bug - Ticket::Frontend::Article::Actions###??? no possibility to add a new entry.
  - 2025-03-10 Fixed AgentTicketBulk - TicketWatchSubscribe and TicketWatchUnsubscribe is not working.
  - 2025-03-07 Fixed GroupSelection in AdminAppointmentCalendarManage for admin group member. A user can only create AppointmentCalendars for their own groups, even though they are a member of the Admin group.
+ - 2025-03-05 CVE-2025-43926: AgentPreferences now only supports configured user preference keys (in AgentPreferences::AJAXUpdate::AllowedKeys) to be updated via AJAX request. Thanks to Tim Püttmanns (maxence) for reporting the issue.
  - 2025-03-03 Improved performance in Kernel::System::LinkObject by fixing the cache key.
  - 2025-02-28 Fixed missing notification in process management activity dialog edit screen.
  - 2025-02-28 Fixed doubled notification in process management transition edit screen.
@@ -389,6 +390,35 @@
  - 2022-08-22 Core.UI.InputFields.js - Changed the behaviour of the Core.UI.InputFields.js. Now no fields are automatically enlarged or reduced.
  - 2022-08-08 Admin - Added counter of AdminSettingPages per widget and additional focus by filter.
  - 2022-07-15 Frontend::ToolBarModule - Refactored the Toolbar registration, position and view.
+
+# 6.5.15 2025-04-30
+ - 2025-04-24 Fixed bug - Setting the password does not reset preferences UserLoginFailed and UserLastPwChangeTime.
+ - 2025-04-16 Updated Net::IMAP::Simple to latest version from GitHub. Thanks to @dandanpena. [PR#155](https://github.com/znuny/Znuny/pull/155)
+ - 2025-04-16 Fixed bug - $LayoutObject->BuildDateSelection() does not deactivate the DatePicker and DatePickerIcon if Disabled is 1. Thanks for reporting to @BuilderNSV. [#649](https://github.com/znuny/Znuny/issues/649)
+ - 2025-04-11 Added option CcAddressRegExp to postmaster filter ExternalTicketNumberRecognition.
+ - 2025-03-27 Added option ToAddressRegExp to postmaster filter ExternalTicketNumberRecognition.
+ - 2025-03-26 Added German message for ticket event notification "ticket email delivery failure".
+ - 2025-03-25 Fixed bug - In AdminRoles comment display for roles is too short. Changed Truncation to 80.
+ - 2025-03-20 Article data now also contains communication channel name instead of only the ID.
+ - 2025-03-19 AdminSystemConfiguration: Addon name is no longer translated.
+ - 2025-03-12 Fixed bug - Ticket::Frontend::Article::Actions###??? no possibility to add a new entry.
+ - 2025-03-07 Fixed GroupSelection in AdminAppointmentCalendarManage for admin group member. A user can only create AppointmentCalendars for their own groups, even though they are a member of the Admin group.
+ - 2025-03-05 CVE-2025-43926: AgentPreferences now only supports configured user preference keys (in AgentPreferences::AJAXUpdate::AllowedKeys) to be updated via AJAX request. Thanks to Tim Püttmanns (maxence) for reporting the issue.
+ - 2025-03-03 Improved performance in Kernel::System::LinkObject by fixing the cache key.
+ - 2025-02-28 Fixed missing notification in process management activity dialog edit screen.
+ - 2025-02-28 Fixed doubled notification in process management transition edit screen.
+ - 2025-02-27 Fixed obsolete parameter in overview URL. After jumping to AgentTicketZoom from an overview like AgentTicketStatus and return to that overview the URL parameter TicketID stays persistent to the URL. This action is repetitive and works with multiple TicketIDs, but the TicketID is not needed in anyway.
+ - 2025-02-26 Added option to generic interface operations TicketCreate and TicketUpdate to control if a signature will be appended to the sent article's body.
+ - 2025-02-25 Added missing DynamicFieldScreens configuration for `LinkObject::ComplexTable###Ticket`.
+ - 2025-02-25 Improved DynamicFieldUpdate function - InternalField can now be changed. InternalField is never set via the GUI (e.g. AdminDynamicFieldText.pm). If it is set via the "Backend" for example PackageSetup it should also be possible to change the 'InternalField' again.
+ - 2025-02-25 Fixed AjaxAttachment.pm bug - Use of uninitialized value in concatenation (.) or string.
+ - 2025-02-21 Fixed broken documentation link in ACL Edit Screen and changed text of hint.
+ - 2025-02-14 Added configurable limit to number of watched tickets per user.
+ - 2025-02-12 CVE-2025-26847 Fixed masking of passwords in support bundle generator for modified settings YAML file.
+
+# 6.5.14 2025-02-19
+ - 2025-02-14 Fixed content security policy HTTP header to allow externally linked images.
+ - 2025-02-13 Fixed ticket filter for new mentions.
 
 # 6.5.13 2025-02-13
  - 2025-02-13 Fixed content security policy HTTP header. Thanks for reporting to @nixahnung. [#641](https://github.com/znuny/Znuny/issues/641)

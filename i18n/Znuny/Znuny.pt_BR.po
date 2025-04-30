@@ -24360,3 +24360,7 @@ msgstr ""
 msgid "This stat does not exist, or you don't have permissions to access it."
 msgstr ""
 
+#. XML Definition: Kernel/Config/Files/XML/Znuny.xml
+msgid "List of user preferences (keys) that are allowed to be updated by UpdateAJAX subaction of frontend module AgentPreferences. These are regular expressions."
+msgstr ""
+
