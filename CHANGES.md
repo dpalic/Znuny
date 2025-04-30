@@ -30,7 +30,7 @@
  - 2025-02-21 Fixed Core.UI.js bugs - AttachmentExist is only generated for one upload field. However, it should be generated for all of them. In addition, the UploadField is not selected correctly.
  - 2025-02-21 Fixed broken documentation link in ACL Edit Screen and changed text of hint.
  - 2025-02-14 Added configurable limit to number of watched tickets per user.
- - 2025-02-12 Fixed masking of passwords in support bundle generator for modified settings YAML file.
+ - 2025-02-12 CVE-2025-26847: Fixed masking of passwords in support bundle generator for modified settings YAML file.
 
 # 7.1.6 2025-02-19
  - 2025-02-14 Fixed content security policy HTTP header to allow externally linked images.
