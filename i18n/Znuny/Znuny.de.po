@@ -2,15 +2,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2023-03-23 09:27+0000\n"
-"PO-Revision-Date: 2025-02-28 10:54+0000\n"
-"Last-Translator: Denny Korsukéwitz <dennykorsukewitz@gmail.com>\n"
-"Language-Team: German <https://translations.znuny.org/projects/znuny/znuny/de/>\n"
+"PO-Revision-Date: 2025-04-30 10:50+0000\n"
+"Last-Translator: Hog Duske <hog.duske@dusketech.de>\n"
+"Language-Team: German <https://translations.znuny.org/projects/znuny/znuny/"
+"de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.9.2\n"
+"X-Generator: Weblate 5.11\n"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminACL.tt
 msgid "Actions"
@@ -21398,7 +21399,7 @@ msgstr "Bitte wählen Sie höchstens %s Datei(en) zum Hochladen aus."
 
 #. JS File: var/httpd/htdocs/js/Core.UI.js
 msgid "The following files are not allowed to be uploaded: %s"
-msgstr "Die folgenden Dateien dürfen nicht geändert werden: %s"
+msgstr "Die folgenden Dateien dürfen nicht hochgeladen werden: %s"
 
 #. JS File: var/httpd/htdocs/js/Core.UI.js
 msgid "The following files exceed the maximum allowed size per file of %s and were not uploaded: %s"
