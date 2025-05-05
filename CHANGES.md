@@ -1,3 +1,6 @@
+# 7.2.1 2025-xx-xx
+ - 2025-05-05 Added SysConfigLink to AdminPackageManager - Redirect to System Configuration from Package Manager.
+
 # 7.1.7 2025-04-30
  - 2025-04-24 Fixed bug - Setting the password does not reset preferences UserLoginFailed and UserLastPwChangeTime.
  - 2025-04-16 Updated Net::IMAP::Simple to latest version from GitHub. Thanks to @dandanpena. [PR#155](https://github.com/znuny/Znuny/pull/155)
