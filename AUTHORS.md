@@ -46,6 +46,7 @@ The following persons contributed to Znuny:
 * Gerald Young <gerald.young@noynim.com>
 * Henning Oschwald <henning.oschwald@otrs.com>
 * Henrik Vetter <hv@znuny.com>
+* Hog Duske <hog.duske@dusketech.de>
 * IB Development Team <dev@ib.pl>
 * Igor Djuric <igor.djuric@otrs.com>
 * itweserems <153607410+itweserems@users.noreply.github.com>
