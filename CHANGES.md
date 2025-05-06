@@ -1,4 +1,6 @@
+
 # 7.2.1 2025-xx-xx
+ - 2025-05-06 The console command Dev::TranslationUpdate can now remove unused strings from PO files.
  - 2025-05-06 Added DefaultPageShown setting to every DashboardBackend SysConfig that uses the module `Kernel::Output::HTML::Dashboard::TicketGeneric`. This allows the number of items shown per page to be defined and extended for each dashboard widget.
  - 2025-05-05 Added SysConfigLink to AdminPackageManager - Redirect to System Configuration from Package Manager.
 
