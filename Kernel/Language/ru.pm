@@ -1655,7 +1655,7 @@ sub Data {
         'Changes to the Processes here only affect the behavior of the system, if you synchronize the Process data. By synchronizing the Processes, the newly made changes will be written to the Configuration.' =>
             'Изменения в Процессах сделанные здесь будут актуальны после синхронизации данных Процесса. При синхронизации, все вновь внесенные изменения будут записаны в конигурационные файлы системы.',
         'Access Control Lists (ACL)' => 'Списки управления доступом (ACL)',
-        'Generic Agent' => 'Планировщие задач',
+        'Generic Agent' => 'Планировщик задач',
         'Manage Process Widget Groups' => '',
         'Processes' => 'Процессы',
         'Process name' => 'Имя Процесса',
@@ -2518,7 +2518,7 @@ sub Data {
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentPreferencesOverview.tt
         'Choose from the groups on the left to find the settings you\'d wish to change.' =>
             'Выберите группу слева, чтобы найти настройки, которые желаете изменить.',
-        'Did you know?' => 'Знаете ли Dы?',
+        'Did you know?' => 'Знаете ли Вы?',
         'You can change your avatar by registering with your email address %s on %s' =>
             'Вы можете изменить свое изображение аватара поменяв адрес электронной почты с %sна %s',
 
@@ -2629,7 +2629,7 @@ sub Data {
         'Unlock tickets' => 'Разблокировать заявки',
         'Watch tickets' => 'Наблюдать за заявками',
         'Mark tickets as seen' => 'Пометить заявки как прочитанные',
-        'Mark tickets as unseen' => 'Пометить заявки как непрочитанные',
+        'Mark tickets as unseen' => 'Отметить заявки как непрочитанные',
         'Execute Bulk Action' => 'Выполнить Массовое действие',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
@@ -2931,7 +2931,7 @@ sub Data {
         'Log In' => 'Войти',
         'Request New Password' => 'Запросить новый пароль',
         'Your User Name' => 'Логин',
-        'A new password will be sent to your email address.' => 'Новый пароль будет отправлен на Ваш адрес электронной почты.',
+        'A new password will be sent to your email address.' => 'Новый пароль будет отправлен на адрес Вашей электронной почты.',
         'Back to login' => 'Вернуться к странице входа в систему',
         'Create Account' => 'Создать учетную запись',
         'Please fill out this form to receive login credentials.' => 'Пожалуйста, заполните эту форму, чтобы получить учетные данные для входа',
@@ -4536,7 +4536,7 @@ sub Data {
 
         # Perl Module: Kernel/Output/HTML/ArticleAction/MarkArticleSeenUnseen.pm
         'Mark article as unseen' => 'Отметить сообщение как непрочитанное',
-        'Mark as unseen' => 'Пометить как непрочитанное',
+        'Mark as unseen' => 'Отметить как непрочитанное',
 
         # Perl Module: Kernel/Output/HTML/ArticleAction/MarkAsImportant.pm
         'Mark' => 'Пометить',
@@ -5941,7 +5941,7 @@ sub Data {
         'Defines the module that shows the currently logged in customers in the customer interface.' =>
             'Задает модуль который показывает всех подключившихся клиентов в интерфейсе клиента.',
         'Defines the module to display a notification in the customer interface, if the customer is logged in while having system maintenance active.' =>
-            'Задает модуль, который показывает уведомление в интерфейсе клиента, если клиента зашел в систему, когда она в состоянии Профилактика/Обслуживание системы',
+            'Задает модуль, который показывает уведомление в интерфейсе клиента, если клиент зашел в систему, когда она в состоянии Профилактика/Обслуживание системы',
         'Defines the module to display a notification in the customer interface, if the customer user has not yet selected a time zone.' =>
             'Задает модуль для отображения уведомлений в интерфейсе клиента, если клиент все еще не выбрал временную зону.',
         'Defines an alternate login URL for the customer panel..' => 'Задает альтернативную URL, для входа  клиента.',
@@ -6140,7 +6140,7 @@ sub Data {
         'Specifies the order in which the firstname and the lastname of agents will be displayed.' =>
             'Задает порядок в котором отображаются Фамилия и Имя агентов.',
         'Default skin for the agent interface.' => 'Стандартная тема оформления для интерфейса агента.',
-        'Dark skin for the agent interface.' => 'Темный окрас в интерфейса агента.',
+        'Dark skin for the agent interface.' => 'Темная тема оформления интерфейса агента.',
         'The agent skin\'s InternalName which should be used in the agent interface. Please check the available skins in Frontend::Agent::Skins.' =>
             'Внутреннее имя окраса (skin) экрана для интерфейса агента. Доступные варианты заданы в Frontend::Agent::Skins.',
         'It is possible to configure different skins, for example to distinguish between diferent agents, to be used on a per-domain basis within the application. Using a regular expression (regex), you can configure a Key/Content pair to match a domain. The value in "Key" should match the domain, and the value in "Content" should be a valid skin on your system. Please see the example entries for the proper form of the regex.' =>
@@ -7995,13 +7995,13 @@ sub Data {
         'customer' => 'клиент',
         'Ticket create notification' => 'Уведомление о создании заявки',
         'You will receive a notification each time a new ticket is created in one of your "My Queues" or "My Services".' =>
-            'Вы будете получать уведомление всякий раз при создании новой заявки в Вашей очереди из "Мои очереди" или "Мои Сервисы".',
+            'Вы будете получать уведомление всякий раз при создании новой заявки либо в "Мои очереди", либо в "Мои Сервисы".',
         'Ticket follow-up notification (unlocked)' => 'Уведомление об ответе по заявке (для разблокированных)',
         'You will receive a notification if a customer sends a follow-up to an unlocked ticket which is in your "My Queues" or "My Services".' =>
-            'Вы будете получать уведомление всякий раз когда клиент посылает дополнение к разблокированной заявке в "Моих очередях" или "Моих Сервисах".',
+            'Вы будете получать уведомление всякий раз, когда клиент посылает дополнение к разблокированной заявке в "Моих очередях" или "Моих Сервисах".',
         'Ticket follow-up notification (locked)' => 'Уведомление об ответе по заявке (для заблокированных)',
         'You will receive a notification if a customer sends a follow-up to a locked ticket of which you are the ticket owner or responsible.' =>
-            'Вы будете получать уведомление, когда клиент посылает дополнение к заблокированной заявке, для которой вы являетесь Владельцем или Ответственным.',
+            'Вы будете получать уведомление всякий раз, когда клиент посылает дополнение к заблокированной заявке, для которой Вы являетесь Владельцем или Ответственным.',
         'Ticket lock timeout notification' => 'Уведомление об истечении срока блокировки заявки системой',
         'You will receive a notification as soon as a ticket owned by you is automatically unlocked.' =>
             'Вы будете получать уведомление как только заявка, владельцем которой вы являетесь - будет автоматически разблокирована.',
@@ -8516,7 +8516,7 @@ Thanks for your help!
         'All CustomerIDs of a customer user.' => 'Все компании клиента.',
         'All customer users of a CustomerID' => 'Все клиенты компании',
         'All escalated tickets' => 'Все эскалированные заявки',
-        'All new tickets, these tickets have not been worked on yet' => 'Все новые заявки; с этими заявками еще никто не работал',
+        'All new tickets, these tickets have not been worked on yet' => 'Все новые заявки, с этими заявками еще никто не работал',
         'All open tickets, these tickets have already been worked on.' =>
             'Все открытые заявки, это заявки работа с которыми начата.',
         'All tickets with a reminder set where the reminder date has been reached' =>
@@ -8857,7 +8857,7 @@ Thanks for your help!
         'Mark as seen' => '',
         'Mark this ticket as junk!' => 'Пометить эту заявку как мусор!',
         'Mark ticket as seen' => 'Пометить заявку как прочитанную',
-        'Mark ticket as unseen' => 'Пометить заявку как непрочитанную',
+        'Mark ticket as unseen' => 'Отметить заявку как непрочитанную',
         'Mattermost Username' => '',
         'Max. number of articles per page in TicketZoom' => 'Максимальное число сообщений на странице при просмотре заявки',
         'Medium' => 'Средний',
@@ -9066,7 +9066,7 @@ Thanks for your help!
         'Theme' => 'Тема',
         'This is a Description for Comment on Framework.' => 'Это Описание Комментария к Фреймворку',
         'This is a Description for DynamicField on Framework.' => 'Это Описание Динамических Полей Фреймворка',
-        'This is the dark skin for the agent interface.' => 'Это темный окрас интерфейса агента.',
+        'This is the dark skin for the agent interface.' => 'Это темная тема оформления интерфейса агента.',
         'This is the dark skin for the customer interface.' => 'Это темный окрас интерфейса клиента.',
         'This is the default orange - black skin for the customer interface.' =>
             'Это стандартная оранжево-черная тема для интерфейса клиента.',
