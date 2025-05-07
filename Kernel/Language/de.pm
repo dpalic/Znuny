@@ -1329,6 +1329,8 @@ sub Data {
         'System Log' => 'Systemprotokoll',
         'Recent Log Entries' => 'Aktuelle Einträge im Systemprotokoll',
         'Facility' => 'Einrichtung',
+        'Source' => 'Quelle',
+        'Line' => 'Zeile',
         'Message' => 'Nachricht',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminMailAccount.tt

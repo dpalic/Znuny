@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.183179723502304;
+    $Self->{Completeness}        = 0.183119447186575;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -1328,6 +1328,8 @@ sub Data {
         'System Log' => '',
         'Recent Log Entries' => '',
         'Facility' => 'Príslušenstvo',
+        'Source' => '',
+        'Line' => '',
         'Message' => 'správa',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminMailAccount.tt

@@ -32,7 +32,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%M-%D';
     $Self->{DateInputFormat}     = '%Y-%M-%D';
     $Self->{DateInputFormatLong} = '%Y-%M-%D - %T';
-    $Self->{Completeness}        = 0.895984200131666;
+    $Self->{Completeness}        = 0.895689371503784;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -1334,6 +1334,8 @@ sub Data {
         'System Log' => 'Rendszernapló',
         'Recent Log Entries' => 'Legutóbbi naplóbejegyzések',
         'Facility' => 'Összetevő',
+        'Source' => '',
+        'Line' => '',
         'Message' => 'Üzenet',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminMailAccount.tt

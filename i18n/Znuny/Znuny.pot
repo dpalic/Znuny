@@ -3983,6 +3983,14 @@ msgid "Facility"
 msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminLog.tt
+msgid "Source"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminLog.tt
+msgid "Line"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminLog.tt
 msgid "Message"
 msgstr ""
 
