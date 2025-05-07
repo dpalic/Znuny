@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.276406712734452;
+    $Self->{Completeness}        = 0.276270350271337;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -477,31 +477,38 @@ sub Data {
         'Object' => 'Објект',
         'Delete this field' => 'Избриши ова поле',
 
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldCheckbox.tt
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldAutoConfig.tt
         'Go back to overview' => 'Вратете се на преглед',
+        'Add %s field' => '',
+        'Change %s field' => '',
         'Dynamic Fields' => 'Динамички Полиња ',
         'General' => 'Генерално',
         'This field is required, and the value should be alphabetic and numeric characters only.' =>
             'Ова поле е задолжително, и неговата вредност треба да е само со алфабетски и нумерички карактери.',
         'Must be unique and only accept alphabetic and numeric characters.' =>
             'Мора да е уникатно и само прифаќа алфанумерички карактери.',
-        'Changing this value will require manual changes in the system.' =>
-            'Променување на оваа вредност бара менуални промени во системот.',
+        'Changing this value will require manual changes to the system.' =>
+            '',
         'This is the name to be shown on the screens where the field is active.' =>
             'Ова е името на приказ на екраните кога полето е активно.',
         'Field order' => 'Редослед на полето',
         'This field is required and must be numeric.' => 'Оваа поле е задолжително и мора да е нумеричко.',
         'This is the order in which this field will be shown on the screens where is active.' =>
             'Ова е распоредот по кој оваа поле ќе биде прикажано на екраните каде е активно.',
-        'Is not possible to invalidate this entry, all config settings have to be changed beforehand.' =>
-            '',
         'Field type' => 'Тип на објект',
         'Object type' => 'Тип на објект',
         'Internal field' => 'Внатрешно поле',
         'This field is protected and can\'t be deleted.' => 'Ова поле е заштитено и не можат да се избрише.',
+        'Field Settings' => 'Подесувања за Поле',
+        'There is no configuration available for this dynamic field.' => '',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldCheckbox.tt
+        'Changing this value will require manual changes in the system.' =>
+            'Променување на оваа вредност бара менуални промени во системот.',
+        'Is not possible to invalidate this entry, all config settings have to be changed beforehand.' =>
+            '',
         'This dynamic field is used in the following config settings:' =>
             '',
-        'Field Settings' => 'Подесувања за Поле',
         'Default value' => 'Стандардна вредност',
         'This is the default value for this field.' => 'Ова е стандардната вредност за оваа поле.',
 
@@ -3580,10 +3587,12 @@ sub Data {
         'Could not reset Dynamic Field order properly, please check the error log for more details.' =>
             '',
 
+        # Perl Module: Kernel/Modules/AdminDynamicFieldAutoConfig.pm
+        'Currently' => '',
+
         # Perl Module: Kernel/Modules/AdminDynamicFieldCheckbox.pm
         'Undefined subaction.' => '',
         'Need %s' => '',
-        'Add %s field' => '',
         'The field does not contain only ASCII letters and numbers.' => '',
         'There is another field with the same name.' => '',
         'The field must be numeric.' => '',
@@ -3591,10 +3600,8 @@ sub Data {
         'Could not create the new field' => '',
         'Need ID' => '',
         'Could not get data for dynamic field %s' => '',
-        'Change %s field' => '',
         'The name for this field should not change.' => '',
         'Could not update the field %s' => '',
-        'Currently' => '',
         'Unchecked' => '',
         'Checked' => '',
 
@@ -8666,6 +8673,7 @@ Thanks for your help!
         'Dynamic Fields Multiselect Backend GUI' => '',
         'Dynamic Fields Overview Limit' => '',
         'Dynamic Fields Text Backend GUI' => '',
+        'Dynamic fields administration' => '',
         'Dynamic fields groups for process widget. The key is the name of the group, the value contains the fields to be shown. Example: \'Key => My Group\', \'Content: Name_X, NameY\'.' =>
             '',
         'Dynamic fields limit per page for Dynamic Fields Overview.' => '',

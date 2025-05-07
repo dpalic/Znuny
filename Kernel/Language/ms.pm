@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.537018756169793;
+    $Self->{Completeness}        = 0.536753823384312;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -477,31 +477,38 @@ sub Data {
         'Object' => 'Objek',
         'Delete this field' => 'Padam bidang ini',
 
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldCheckbox.tt
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldAutoConfig.tt
         'Go back to overview' => 'Pergi kembali ke gambaran keseluruhan',
+        'Add %s field' => '',
+        'Change %s field' => '',
         'Dynamic Fields' => 'Perlengkapan dinamik',
         'General' => 'Umum',
         'This field is required, and the value should be alphabetic and numeric characters only.' =>
             'Bidang ini diperlukan, dan nilai harus aksara abjad dan nombor sahaja.',
         'Must be unique and only accept alphabetic and numeric characters.' =>
             'Mestilah unik dan hanya menerima aksara abjad dan nombor.',
-        'Changing this value will require manual changes in the system.' =>
-            'Menukar nilai ini akan memerlukan perubahan manual dalam sistem.',
+        'Changing this value will require manual changes to the system.' =>
+            '',
         'This is the name to be shown on the screens where the field is active.' =>
             'Ini adalah nama yang ditunjukkan pada skrin di mana bidang aktif.',
         'Field order' => 'Turutan bidang',
         'This field is required and must be numeric.' => 'Bidang ini diperlukan dan mesti terdiri daripada angka.',
         'This is the order in which this field will be shown on the screens where is active.' =>
             'Ini adalah perintah di mana bidang ini akan ditunjukkan pada skrin di mana aktif.',
-        'Is not possible to invalidate this entry, all config settings have to be changed beforehand.' =>
-            '',
         'Field type' => 'Jenis bidang',
         'Object type' => 'Jenis objek',
         'Internal field' => 'Medan dalaman',
         'This field is protected and can\'t be deleted.' => 'Medan ini adalah dilindungi dan tidak boleh dihapuskan.',
+        'Field Settings' => 'Aturan bidang',
+        'There is no configuration available for this dynamic field.' => '',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldCheckbox.tt
+        'Changing this value will require manual changes in the system.' =>
+            'Menukar nilai ini akan memerlukan perubahan manual dalam sistem.',
+        'Is not possible to invalidate this entry, all config settings have to be changed beforehand.' =>
+            '',
         'This dynamic field is used in the following config settings:' =>
             '',
-        'Field Settings' => 'Aturan bidang',
         'Default value' => 'Nilai sedia ada',
         'This is the default value for this field.' => 'Ini adalah nilai lalai untuk bidang ini',
 
@@ -3580,10 +3587,12 @@ sub Data {
         'Could not reset Dynamic Field order properly, please check the error log for more details.' =>
             'Tidak boleh membetulkan semula susunan Bidang Dinamik dengan elok, sila semak log kesalahan untuk maklumat lanjut.',
 
+        # Perl Module: Kernel/Modules/AdminDynamicFieldAutoConfig.pm
+        'Currently' => 'Buat masa sekarang',
+
         # Perl Module: Kernel/Modules/AdminDynamicFieldCheckbox.pm
         'Undefined subaction.' => 'Tindakan bawah tidak tertakrif',
         'Need %s' => 'Perlukan %s',
-        'Add %s field' => '',
         'The field does not contain only ASCII letters and numbers.' => '',
         'There is another field with the same name.' => 'Terdapat ruang yang lain dengan nama yang sama.',
         'The field must be numeric.' => 'Ruang tersebut perlu jadi numerik',
@@ -3591,10 +3600,8 @@ sub Data {
         'Could not create the new field' => 'Tidak boleh cipta ruang baru',
         'Need ID' => 'Perlukan ID',
         'Could not get data for dynamic field %s' => 'Tidak boleh mendapatkan data untuk ruang dinamik %s',
-        'Change %s field' => '',
         'The name for this field should not change.' => 'Nama untuk ruang tidak patut ditukar.',
         'Could not update the field %s' => 'Tidak dapat mengemaskini ruang tersebut %s',
-        'Currently' => 'Buat masa sekarang',
         'Unchecked' => 'Tidak disemak',
         'Checked' => 'Disemak',
 
@@ -8680,6 +8687,7 @@ Kumpulan MejaBantuan Anda
         'Dynamic Fields Multiselect Backend GUI' => 'GUI Backend Multiselect Medan Dinamik',
         'Dynamic Fields Overview Limit' => 'Had Overview Medan Dinamik',
         'Dynamic Fields Text Backend GUI' => 'GUI Backend Teks Medan Dinamik',
+        'Dynamic fields administration' => '',
         'Dynamic fields groups for process widget. The key is the name of the group, the value contains the fields to be shown. Example: \'Key => My Group\', \'Content: Name_X, NameY\'.' =>
             'Medan kumpulan dinamik untuk proses widget. Kuncinya adalah nama kumpulan, nilai mengandungi medan untuk ditunjukkan. Contoh: \'Kunci => Kumpulan Saya\', \'Kandungan: Nama_X, NamaY\'.',
         'Dynamic fields limit per page for Dynamic Fields Overview.' => '',

@@ -27,7 +27,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%M/%D/%Y';
     $Self->{DateInputFormat}     = '%M/%D/%Y';
     $Self->{DateInputFormatLong} = '%M/%D/%Y - %T';
-    $Self->{Completeness}        = 0.435998683777558;
+    $Self->{Completeness}        = 0.435783588225621;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -478,31 +478,38 @@ sub Data {
         'Object' => 'Об\'єкт',
         'Delete this field' => 'Видалити це поле',
 
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldCheckbox.tt
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldAutoConfig.tt
         'Go back to overview' => 'Повернутись до перегляду',
+        'Add %s field' => '',
+        'Change %s field' => '',
         'Dynamic Fields' => 'Динамічні поля',
         'General' => 'Загалом',
         'This field is required, and the value should be alphabetic and numeric characters only.' =>
             'Це поле є обовязкове, значення повинні бути лише літери чи цифри',
         'Must be unique and only accept alphabetic and numeric characters.' =>
             'Повинне бути ункальним, значення повинні бути лише літери чи цифри',
-        'Changing this value will require manual changes in the system.' =>
-            'Зміна цього значення вимагає ручних змін в системі',
+        'Changing this value will require manual changes to the system.' =>
+            '',
         'This is the name to be shown on the screens where the field is active.' =>
             'Імя, що буде відображатись на екрані, коли поле активне',
         'Field order' => 'Порядок поля',
         'This field is required and must be numeric.' => 'Це поле є обовязковим і повинне складатись з цифр',
         'This is the order in which this field will be shown on the screens where is active.' =>
             'Порядок в якому поля будуть відображатись на екрані коли активні',
-        'Is not possible to invalidate this entry, all config settings have to be changed beforehand.' =>
-            '',
         'Field type' => 'Тип поля',
         'Object type' => 'Тип обєкту',
         'Internal field' => 'Внутрішнє поле',
         'This field is protected and can\'t be deleted.' => 'Це поле захищене та не може бути вилучене.',
+        'Field Settings' => 'Налаштування поля',
+        'There is no configuration available for this dynamic field.' => '',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldCheckbox.tt
+        'Changing this value will require manual changes in the system.' =>
+            'Зміна цього значення вимагає ручних змін в системі',
+        'Is not possible to invalidate this entry, all config settings have to be changed beforehand.' =>
+            '',
         'This dynamic field is used in the following config settings:' =>
             '',
-        'Field Settings' => 'Налаштування поля',
         'Default value' => 'Значення за замовчуванням',
         'This is the default value for this field.' => 'Це значення за замовчуванням для цього поля',
 
@@ -3581,10 +3588,12 @@ sub Data {
         'Could not reset Dynamic Field order properly, please check the error log for more details.' =>
             'Не можу правильно скинути  порядок Динамічного Поля, будь ласка перевірте журнал помилок для отримання більш докладної інформації.',
 
+        # Perl Module: Kernel/Modules/AdminDynamicFieldAutoConfig.pm
+        'Currently' => 'Наразі',
+
         # Perl Module: Kernel/Modules/AdminDynamicFieldCheckbox.pm
         'Undefined subaction.' => 'Невизначена субдія.',
         'Need %s' => 'Потрібний %s',
-        'Add %s field' => '',
         'The field does not contain only ASCII letters and numbers.' => 'Поле не містить жодної ASCII літери або числа.',
         'There is another field with the same name.' => 'Тут вже є інше поле з таким самим ім\'ям.',
         'The field must be numeric.' => 'Поле має бути числовим.',
@@ -3592,10 +3601,8 @@ sub Data {
         'Could not create the new field' => 'Не вдалося створити нове поле',
         'Need ID' => 'Потрібний ID',
         'Could not get data for dynamic field %s' => 'Не можу отримати дані для динамічного поля %s',
-        'Change %s field' => '',
         'The name for this field should not change.' => 'ім\'я цього поля не повинно змінюватися.',
         'Could not update the field %s' => 'Не можу оновити поле %s',
-        'Currently' => 'Наразі',
         'Unchecked' => 'Непозначено',
         'Checked' => 'Позначено',
 
@@ -8667,6 +8674,7 @@ Thanks for your help!
         'Dynamic Fields Multiselect Backend GUI' => '',
         'Dynamic Fields Overview Limit' => '',
         'Dynamic Fields Text Backend GUI' => '',
+        'Dynamic fields administration' => '',
         'Dynamic fields groups for process widget. The key is the name of the group, the value contains the fields to be shown. Example: \'Key => My Group\', \'Content: Name_X, NameY\'.' =>
             '',
         'Dynamic fields limit per page for Dynamic Fields Overview.' => '',

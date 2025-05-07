@@ -32,7 +32,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D-%M-%Y';
     $Self->{DateInputFormat}     = '%D-%M-%Y';
     $Self->{DateInputFormatLong} = '%D-%M-%Y - %T';
-    $Self->{Completeness}        = 0.496544916090819;
+    $Self->{Completeness}        = 0.496299950666009;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -483,31 +483,38 @@ sub Data {
         'Object' => 'Object',
         'Delete this field' => 'Verwijder dit veld',
 
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldCheckbox.tt
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldAutoConfig.tt
         'Go back to overview' => 'Terug naar het overzicht',
+        'Add %s field' => '',
+        'Change %s field' => '',
         'Dynamic Fields' => 'Dynamische velden',
         'General' => 'Algemeen',
         'This field is required, and the value should be alphabetic and numeric characters only.' =>
             'Dit veld is verplicht. Het kan aleen alfanumerieke tekens bevatten.',
         'Must be unique and only accept alphabetic and numeric characters.' =>
             'Moet uniek zijn en kan alleen alfanumerieke tekens bevatten.',
-        'Changing this value will require manual changes in the system.' =>
-            'Na aanpassen van deze waarde zijn handmatige aanpassingen in het systeem nodig.',
+        'Changing this value will require manual changes to the system.' =>
+            '',
         'This is the name to be shown on the screens where the field is active.' =>
             'Deze naam wordt getoond in de schermen waar dit veld actief is.',
         'Field order' => 'Veldvolgorde',
         'This field is required and must be numeric.' => 'Dit veld is verplicht en moet numeriek zijn.',
         'This is the order in which this field will be shown on the screens where is active.' =>
             'Dit is de volgorde waarin de velden worden weergegeven op de schermen waar ze geactiveerd zijn.',
-        'Is not possible to invalidate this entry, all config settings have to be changed beforehand.' =>
-            '',
         'Field type' => 'Veldtype',
         'Object type' => 'Objecttype',
         'Internal field' => 'Intern veld',
         'This field is protected and can\'t be deleted.' => 'Dit veld is beschermd en kan niet worden verwijderd.',
+        'Field Settings' => 'Veld-instellingen',
+        'There is no configuration available for this dynamic field.' => '',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldCheckbox.tt
+        'Changing this value will require manual changes in the system.' =>
+            'Na aanpassen van deze waarde zijn handmatige aanpassingen in het systeem nodig.',
+        'Is not possible to invalidate this entry, all config settings have to be changed beforehand.' =>
+            '',
         'This dynamic field is used in the following config settings:' =>
             'Dit dynamische veld wordt gebruikt in de volgende configuratie-instellingen:',
-        'Field Settings' => 'Veld-instellingen',
         'Default value' => 'Standaard waarde',
         'This is the default value for this field.' => 'Dit is de standaard-waarde voor dit veld.',
 
@@ -3586,10 +3593,12 @@ sub Data {
         'Could not reset Dynamic Field order properly, please check the error log for more details.' =>
             'Kon dynamische velden niet herstellen, kijk in het logbestand voor details.',
 
+        # Perl Module: Kernel/Modules/AdminDynamicFieldAutoConfig.pm
+        'Currently' => 'Huidige',
+
         # Perl Module: Kernel/Modules/AdminDynamicFieldCheckbox.pm
         'Undefined subaction.' => 'Ongedefinieerde subactie.',
         'Need %s' => 'Heb %s nodig',
-        'Add %s field' => '',
         'The field does not contain only ASCII letters and numbers.' => 'Het veld bevat niet alleen maar ASCII letters en cijfers.',
         'There is another field with the same name.' => 'Er is een ander veld met dezelfde naam.',
         'The field must be numeric.' => 'Het veld moet numeriek zijn.',
@@ -3597,10 +3606,8 @@ sub Data {
         'Could not create the new field' => 'Het nieuwe veld kon niet worden aangemaakt',
         'Need ID' => 'Heb ID nodig',
         'Could not get data for dynamic field %s' => 'Kon de gegevens voor dynamisch veld %s niet ophalen',
-        'Change %s field' => '',
         'The name for this field should not change.' => 'De naam van dit veld zou niet moeten veranderen.',
         'Could not update the field %s' => 'Het veld %s kon niet bijgewerkt worden.',
-        'Currently' => 'Huidige',
         'Unchecked' => '',
         'Checked' => '',
 
@@ -8683,6 +8690,7 @@ Het Helpdesk Team
         'Dynamic Fields Multiselect Backend GUI' => '',
         'Dynamic Fields Overview Limit' => '',
         'Dynamic Fields Text Backend GUI' => '',
+        'Dynamic fields administration' => '',
         'Dynamic fields groups for process widget. The key is the name of the group, the value contains the fields to be shown. Example: \'Key => My Group\', \'Content: Name_X, NameY\'.' =>
             '',
         'Dynamic fields limit per page for Dynamic Fields Overview.' => '',

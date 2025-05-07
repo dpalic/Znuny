@@ -33,7 +33,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y.%M.%D';
     $Self->{DateInputFormat}     = '%Y.%M.%D';
     $Self->{DateInputFormatLong} = '%Y.%M.%D - %T';
-    $Self->{Completeness}        = 0.895689371503784;
+    $Self->{Completeness}        = 0.895247492188785;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -484,31 +484,38 @@ sub Data {
         'Object' => '对象',
         'Delete this field' => '删除这个字段',
 
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldCheckbox.tt
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldAutoConfig.tt
         'Go back to overview' => '返回概览',
+        'Add %s field' => '添加%s字段',
+        'Change %s field' => '修改%s字段',
         'Dynamic Fields' => '动态字段',
         'General' => '一般',
         'This field is required, and the value should be alphabetic and numeric characters only.' =>
             '这个字段是必需的，且它的值只能是字母和数字。',
         'Must be unique and only accept alphabetic and numeric characters.' =>
             '必须是唯一的且只接受字母和数字字符。',
-        'Changing this value will require manual changes in the system.' =>
-            '更改此值需要在系统中进行手动更改。',
+        'Changing this value will require manual changes to the system.' =>
+            '',
         'This is the name to be shown on the screens where the field is active.' =>
             '这是在激活了该字段的屏幕上显示的名称。',
         'Field order' => '字段顺序',
         'This field is required and must be numeric.' => '这个字段是必需的且必须是数字。',
         'This is the order in which this field will be shown on the screens where is active.' =>
             '这是在激活了该字段的屏幕上显示的顺序。',
-        'Is not possible to invalidate this entry, all config settings have to be changed beforehand.' =>
-            '不可能使此条目无效，所有配置设置都必须事先更改。',
         'Field type' => '字段类型',
         'Object type' => '对象类型',
         'Internal field' => '内置字段',
         'This field is protected and can\'t be deleted.' => '这是内置字段，不能删除它。',
+        'Field Settings' => '字段设置',
+        'There is no configuration available for this dynamic field.' => '',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldCheckbox.tt
+        'Changing this value will require manual changes in the system.' =>
+            '更改此值需要在系统中进行手动更改。',
+        'Is not possible to invalidate this entry, all config settings have to be changed beforehand.' =>
+            '不可能使此条目无效，所有配置设置都必须事先更改。',
         'This dynamic field is used in the following config settings:' =>
             '这个动态字段已用于以下配置设置中：',
-        'Field Settings' => '字段设置',
         'Default value' => '默认值',
         'This is the default value for this field.' => '这是该字段的默认值。',
 
@@ -3587,10 +3594,12 @@ sub Data {
         'Could not reset Dynamic Field order properly, please check the error log for more details.' =>
             '不能正确地重置动态字段顺序，请检查错误日志以获得更多详细信息。',
 
+        # Perl Module: Kernel/Modules/AdminDynamicFieldAutoConfig.pm
+        'Currently' => '当前',
+
         # Perl Module: Kernel/Modules/AdminDynamicFieldCheckbox.pm
         'Undefined subaction.' => '没有定义的子动作。',
         'Need %s' => '需要%s',
-        'Add %s field' => '添加%s字段',
         'The field does not contain only ASCII letters and numbers.' => '这个字段不是仅包含ASCII字符和数字。',
         'There is another field with the same name.' => '存在同名的另一字段。',
         'The field must be numeric.' => '这个字段必须是数字。',
@@ -3598,10 +3607,8 @@ sub Data {
         'Could not create the new field' => '不能创建这个新字段',
         'Need ID' => '需要ID',
         'Could not get data for dynamic field %s' => '不能获得动态字段%s 的数据',
-        'Change %s field' => '修改%s字段',
         'The name for this field should not change.' => '不能更改这个字段的名称。',
         'Could not update the field %s' => '不能更新字段 %s',
-        'Currently' => '当前',
         'Unchecked' => '未检查',
         'Checked' => '已检查',
 
@@ -8683,6 +8690,7 @@ Thanks for your help!
         'Dynamic Fields Multiselect Backend GUI' => '动态字段多选框后端GUI',
         'Dynamic Fields Overview Limit' => '动态字段概览限制',
         'Dynamic Fields Text Backend GUI' => '动态字段文本框后端图形界面',
+        'Dynamic fields administration' => '',
         'Dynamic fields groups for process widget. The key is the name of the group, the value contains the fields to be shown. Example: \'Key => My Group\', \'Content: Name_X, NameY\'.' =>
             '流程小部件的动态字段组。键是组名，值是要显示的动态字段。例如：\'键 => My Group\'，\'值: Name_X, NameY\'。',
         'Dynamic fields limit per page for Dynamic Fields Overview.' => '动态字段概览视图的每页动态字段数限制。',

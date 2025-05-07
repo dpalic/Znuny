@@ -49,6 +49,8 @@ sub Run {
     my @PackageNames = (
         'Znuny-MarkTicketSeenUnseen',
         'Znuny4OTRS-MarkTicketSeenUnseen',
+        'Znuny-DynamicFieldAdminAutoConfig',
+        'Znuny4OTRS-DynamicFieldAdminAutoConfig',
         'Znuny-CustomPriorityColor',
         'Znuny4OTRS-CustomPriorityColor',
         'Znuny-AdminValidFilter',

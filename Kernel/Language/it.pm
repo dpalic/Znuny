@@ -35,7 +35,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D/%M/%Y';
     $Self->{DateInputFormat}     = '%D/%M/%Y';
     $Self->{DateInputFormatLong} = '%D/%M/%Y - %T';
-    $Self->{Completeness}        = 0.601513655807832;
+    $Self->{Completeness}        = 0.60121690511429;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -486,31 +486,38 @@ sub Data {
         'Object' => 'Oggetto',
         'Delete this field' => 'Elimina questo campo',
 
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldCheckbox.tt
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldAutoConfig.tt
         'Go back to overview' => 'Torna alla vista globale',
+        'Add %s field' => 'Aggiungi %s campo',
+        'Change %s field' => 'Cambio %s campo',
         'Dynamic Fields' => 'Campi dinamici',
         'General' => 'Generale',
         'This field is required, and the value should be alphabetic and numeric characters only.' =>
             'Campo obbligatorio. Il valore può contenere solo lettere e numeri.',
         'Must be unique and only accept alphabetic and numeric characters.' =>
             'Deve essere univoco e contenere solo lettere e numeri.',
-        'Changing this value will require manual changes in the system.' =>
-            'La modifica di questo valore richiede modifiche manuali al sistema.',
+        'Changing this value will require manual changes to the system.' =>
+            '',
         'This is the name to be shown on the screens where the field is active.' =>
             'Questo è il nome mostrato sulle pagine quando il campo è attivo.',
         'Field order' => 'Ordine del campo',
         'This field is required and must be numeric.' => 'Campo obbligatorio. Può contenere solo numeri.',
         'This is the order in which this field will be shown on the screens where is active.' =>
             'Questo è l\'ordine con cui il campo sarà mostrato sulle pagine quando è attivo.',
-        'Is not possible to invalidate this entry, all config settings have to be changed beforehand.' =>
-            'Non è possibile invalidare questa voce, tutte le impostazioni di configurazione devono essere modificate in anticipo.',
         'Field type' => 'Tipo di campo',
         'Object type' => 'Tipo di oggetto',
         'Internal field' => 'Campo interno',
         'This field is protected and can\'t be deleted.' => 'Questo campo è protetto e non può essere eliminato.',
+        'Field Settings' => 'Impostazioni del campo',
+        'There is no configuration available for this dynamic field.' => '',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldCheckbox.tt
+        'Changing this value will require manual changes in the system.' =>
+            'La modifica di questo valore richiede modifiche manuali al sistema.',
+        'Is not possible to invalidate this entry, all config settings have to be changed beforehand.' =>
+            'Non è possibile invalidare questa voce, tutte le impostazioni di configurazione devono essere modificate in anticipo.',
         'This dynamic field is used in the following config settings:' =>
             'Questo campo dinamico viene utilizzato nelle seguenti impostazioni di configurazione:',
-        'Field Settings' => 'Impostazioni del campo',
         'Default value' => 'Valore predefinito',
         'This is the default value for this field.' => 'Questo è il valore predefinito per il campo.',
 
@@ -3589,10 +3596,12 @@ sub Data {
         'Could not reset Dynamic Field order properly, please check the error log for more details.' =>
             'Impossibile ripristinare correttamente l\'ordine del Campo dinamico, controllare il registro errori per ulteriori dettagli.',
 
+        # Perl Module: Kernel/Modules/AdminDynamicFieldAutoConfig.pm
+        'Currently' => 'Attualmente',
+
         # Perl Module: Kernel/Modules/AdminDynamicFieldCheckbox.pm
         'Undefined subaction.' => 'Sottrazione indefinita.',
         'Need %s' => '%s richiesto',
-        'Add %s field' => 'Aggiungi %s campo',
         'The field does not contain only ASCII letters and numbers.' => 'Il campo non contiene solo lettere e numeri ASCII.',
         'There is another field with the same name.' => 'C\'è un altro campo con lo stesso nome.',
         'The field must be numeric.' => 'Il campo deve essere numerico.',
@@ -3600,10 +3609,8 @@ sub Data {
         'Could not create the new field' => 'Impossibile creare il nuovo campo',
         'Need ID' => 'ID richiesto',
         'Could not get data for dynamic field %s' => 'Impossibile ottenere i dati per il campo dinamico %s',
-        'Change %s field' => 'Cambio %s campo',
         'The name for this field should not change.' => 'Il nome per questo campo non dovrebbe cambiare.',
         'Could not update the field %s' => 'Impossibile aggiornare il campo %s',
-        'Currently' => 'Attualmente',
         'Unchecked' => 'Non verificato',
         'Checked' => 'Verificato',
 
@@ -8690,6 +8697,7 @@ Il tuo helpdesk.
         'Dynamic Fields Multiselect Backend GUI' => '',
         'Dynamic Fields Overview Limit' => '',
         'Dynamic Fields Text Backend GUI' => '',
+        'Dynamic fields administration' => '',
         'Dynamic fields groups for process widget. The key is the name of the group, the value contains the fields to be shown. Example: \'Key => My Group\', \'Content: Name_X, NameY\'.' =>
             '',
         'Dynamic fields limit per page for Dynamic Fields Overview.' => '',

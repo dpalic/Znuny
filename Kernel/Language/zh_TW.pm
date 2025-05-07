@@ -29,7 +29,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y.%M.%D';
     $Self->{DateInputFormat}     = '%Y.%M.%D';
     $Self->{DateInputFormatLong} = '%Y.%M.%D - %T';
-    $Self->{Completeness}        = 0.308325106943073;
+    $Self->{Completeness}        = 0.308172997862194;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -480,31 +480,38 @@ sub Data {
         'Object' => '對象',
         'Delete this field' => '刪除這個字段',
 
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldCheckbox.tt
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldAutoConfig.tt
         'Go back to overview' => '返回概況',
+        'Add %s field' => '',
+        'Change %s field' => '',
         'Dynamic Fields' => '動態字段',
         'General' => '常規',
         'This field is required, and the value should be alphabetic and numeric characters only.' =>
             '這個字段是必需的，且它的值只能是字母和數字。',
         'Must be unique and only accept alphabetic and numeric characters.' =>
             '必須是唯一的且只有接受字母和數字字符',
-        'Changing this value will require manual changes in the system.' =>
-            '只能對數據庫中直接操作才能修改這個值',
+        'Changing this value will require manual changes to the system.' =>
+            '',
         'This is the name to be shown on the screens where the field is active.' =>
             '標記值作為字段名稱顯示在屏幕上',
         'Field order' => '字段順序',
         'This field is required and must be numeric.' => '這個字段是必需的且必須是數字',
         'This is the order in which this field will be shown on the screens where is active.' =>
             '決定動態字段在屏幕上的顯示順序',
-        'Is not possible to invalidate this entry, all config settings have to be changed beforehand.' =>
-            '',
         'Field type' => '字段類型',
         'Object type' => '對象類型',
         'Internal field' => '内置字段',
         'This field is protected and can\'t be deleted.' => '這是内置字段，不能刪除它。',
+        'Field Settings' => '字段設置',
+        'There is no configuration available for this dynamic field.' => '',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldCheckbox.tt
+        'Changing this value will require manual changes in the system.' =>
+            '只能對數據庫中直接操作才能修改這個值',
+        'Is not possible to invalidate this entry, all config settings have to be changed beforehand.' =>
+            '',
         'This dynamic field is used in the following config settings:' =>
             '',
-        'Field Settings' => '字段設置',
         'Default value' => '默認值',
         'This is the default value for this field.' => '此值是字段的默認值',
 
@@ -3584,10 +3591,12 @@ sub Data {
         'Could not reset Dynamic Field order properly, please check the error log for more details.' =>
             '',
 
+        # Perl Module: Kernel/Modules/AdminDynamicFieldAutoConfig.pm
+        'Currently' => '現時',
+
         # Perl Module: Kernel/Modules/AdminDynamicFieldCheckbox.pm
         'Undefined subaction.' => '',
         'Need %s' => '',
-        'Add %s field' => '',
         'The field does not contain only ASCII letters and numbers.' => '',
         'There is another field with the same name.' => '',
         'The field must be numeric.' => '',
@@ -3595,10 +3604,8 @@ sub Data {
         'Could not create the new field' => '',
         'Need ID' => '',
         'Could not get data for dynamic field %s' => '',
-        'Change %s field' => '',
         'The name for this field should not change.' => '',
         'Could not update the field %s' => '',
-        'Currently' => '現時',
         'Unchecked' => '',
         'Checked' => '',
 
@@ -8671,6 +8678,7 @@ Thanks for your help!
         'Dynamic Fields Multiselect Backend GUI' => '',
         'Dynamic Fields Overview Limit' => '動態字段概覽限制',
         'Dynamic Fields Text Backend GUI' => '',
+        'Dynamic fields administration' => '',
         'Dynamic fields groups for process widget. The key is the name of the group, the value contains the fields to be shown. Example: \'Key => My Group\', \'Content: Name_X, NameY\'.' =>
             '',
         'Dynamic fields limit per page for Dynamic Fields Overview.' => '',

@@ -32,7 +32,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%M-%D';
     $Self->{DateInputFormat}     = '%Y-%M-%D';
     $Self->{DateInputFormatLong} = '%Y-%M-%D - %T';
-    $Self->{Completeness}        = 0.895689371503784;
+    $Self->{Completeness}        = 0.895247492188785;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -483,31 +483,38 @@ sub Data {
         'Object' => 'Objektum',
         'Delete this field' => 'Mező törlése',
 
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldCheckbox.tt
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldAutoConfig.tt
         'Go back to overview' => 'Vissza az áttekintőhöz',
+        'Add %s field' => '%s mező hozzáadása',
+        'Change %s field' => '%s mező megváltoztatása',
         'Dynamic Fields' => 'Dinamikus mezők',
         'General' => 'Általános',
         'This field is required, and the value should be alphabetic and numeric characters only.' =>
             'Ez a mező kötelező, és az értéke csak betű és szám karakter lehet.',
         'Must be unique and only accept alphabetic and numeric characters.' =>
             'Egyedinek kell lennie, és csak betű és szám karaktereket fogad el.',
-        'Changing this value will require manual changes in the system.' =>
-            'Az érték megváltoztatása kézi módosításokat fog igényelni a rendszeren.',
+        'Changing this value will require manual changes to the system.' =>
+            '',
         'This is the name to be shown on the screens where the field is active.' =>
             'Ez azokon a képernyőkön megjelenítendő név, ahol a mező aktív.',
         'Field order' => 'Mezősorrend',
         'This field is required and must be numeric.' => 'Ez a mező kötelező, és csak számot tartalmazhat.',
         'This is the order in which this field will be shown on the screens where is active.' =>
             'Ez az a sorrend, amelyben ez a mező meg fog jelenni a képernyőkön, ahol aktív.',
-        'Is not possible to invalidate this entry, all config settings have to be changed beforehand.' =>
-            'Nem lehetséges érvényteleníteni ezt a bejegyzést, az összes konfigurációs beállítást meg kell változtatni előtte.',
         'Field type' => 'Mezőtípus',
         'Object type' => 'Objektumtípus',
         'Internal field' => 'Belső mező',
         'This field is protected and can\'t be deleted.' => 'Ez a mező védett, és nem lehet törölni.',
+        'Field Settings' => 'mezőbeállítások',
+        'There is no configuration available for this dynamic field.' => '',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldCheckbox.tt
+        'Changing this value will require manual changes in the system.' =>
+            'Az érték megváltoztatása kézi módosításokat fog igényelni a rendszeren.',
+        'Is not possible to invalidate this entry, all config settings have to be changed beforehand.' =>
+            'Nem lehetséges érvényteleníteni ezt a bejegyzést, az összes konfigurációs beállítást meg kell változtatni előtte.',
         'This dynamic field is used in the following config settings:' =>
             'Ez a dinamikus mező a következő konfigurációs beállításokban van használva:',
-        'Field Settings' => 'mezőbeállítások',
         'Default value' => 'Alapértelmezett érték',
         'This is the default value for this field.' => 'Ez az alapértelmezett érték ehhez a mezőhöz.',
 
@@ -3586,10 +3593,12 @@ sub Data {
         'Could not reset Dynamic Field order properly, please check the error log for more details.' =>
             'Nem sikerült megfelelően visszaállítani a dinamikus mező sorrendjét. További részletekért nézze meg a hibanaplót.',
 
+        # Perl Module: Kernel/Modules/AdminDynamicFieldAutoConfig.pm
+        'Currently' => 'Jelenleg',
+
         # Perl Module: Kernel/Modules/AdminDynamicFieldCheckbox.pm
         'Undefined subaction.' => 'Meghatározatlan alművelet.',
         'Need %s' => '%s szükséges',
-        'Add %s field' => '%s mező hozzáadása',
         'The field does not contain only ASCII letters and numbers.' => 'Ez a mező nem csak ASCII betűket és számokat tartalmaz.',
         'There is another field with the same name.' => 'Már létezik egy ugyanilyen nevű mező.',
         'The field must be numeric.' => 'Ez a mező csak számot tartalmazhat.',
@@ -3597,10 +3606,8 @@ sub Data {
         'Could not create the new field' => 'Nem sikerült létrehozni az új mezőt',
         'Need ID' => 'Azonosító szükséges',
         'Could not get data for dynamic field %s' => 'Nem sikerült lekérni az adatokat a dinamikus mezőhöz: %s',
-        'Change %s field' => '%s mező megváltoztatása',
         'The name for this field should not change.' => 'Ennek a mezőnek a nevét nem szabad megváltoztatni.',
         'Could not update the field %s' => 'Nem sikerült frissíteni a következő mezőt: %s',
-        'Currently' => 'Jelenleg',
         'Unchecked' => 'Nincs bejelölve',
         'Checked' => 'Bejelölve',
 
@@ -8683,6 +8690,7 @@ Az Ön segélyszolgálat csapata
         'Dynamic Fields Multiselect Backend GUI' => 'Dinamikus mezők többválasztós háttérprogram grafikus felület',
         'Dynamic Fields Overview Limit' => 'Dinamikus mezők áttekintő korlát',
         'Dynamic Fields Text Backend GUI' => 'Dinamikus mezők szöveg háttérprogram grafikus felület',
+        'Dynamic fields administration' => '',
         'Dynamic fields groups for process widget. The key is the name of the group, the value contains the fields to be shown. Example: \'Key => My Group\', \'Content: Name_X, NameY\'.' =>
             'Dinamikus mezők csoportjai a folyamat felületi elemhez. A kulcs a csoport neve, az érték a megjelenítendő mezőket tartalmazza. Példa: „Kulcs => Saját csoport”, „Tartalom: Név_X, Név_Y”.',
         'Dynamic fields limit per page for Dynamic Fields Overview.' => 'Oldalankénti dinamikus mező korlát a dinamikus mezők áttekintőnél.',

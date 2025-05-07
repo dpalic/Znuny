@@ -29,7 +29,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%M/%D/%Y';
     $Self->{DateInputFormat}     = '%M/%D/%Y';
     $Self->{DateInputFormatLong} = '%M/%D/%Y - %T';
-    $Self->{Completeness}        = 0.435998683777558;
+    $Self->{Completeness}        = 0.435783588225621;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -480,31 +480,38 @@ sub Data {
         'Object' => 'Kipengele',
         'Delete this field' => 'Futa uga huu',
 
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldCheckbox.tt
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldAutoConfig.tt
         'Go back to overview' => 'Rudi nyuma kwenye mapitio',
+        'Add %s field' => '',
+        'Change %s field' => '',
         'Dynamic Fields' => 'Sehemu zinazobadilika',
         'General' => 'Ujumla',
         'This field is required, and the value should be alphabetic and numeric characters only.' =>
             'Uga huu unahitajika, na thamani iwe herufu na namba tu.',
         'Must be unique and only accept alphabetic and numeric characters.' =>
             'Lazima iwe ya kipekee na ikubali herufi na namba tu.',
-        'Changing this value will require manual changes in the system.' =>
-            'Kubadilisha thamani hii itahitaji mabadiliko ya mkono katika mfumo.',
+        'Changing this value will require manual changes to the system.' =>
+            '',
         'This is the name to be shown on the screens where the field is active.' =>
             'Hili ni jina litakaloonyeshwa kwenye skrini uga ukiwa amilifu.',
         'Field order' => 'Kitafuta uga',
         'This field is required and must be numeric.' => 'Uga huu unatakiwa na lazima iwe namba.',
         'This is the order in which this field will be shown on the screens where is active.' =>
             'Huu ndio mpangilio ambao uga huu utaonyeshwa katika skrini ikiwa amilifu',
-        'Is not possible to invalidate this entry, all config settings have to be changed beforehand.' =>
-            '',
         'Field type' => 'Aina ya uga',
         'Object type' => 'Aina ya kipengele',
         'Internal field' => 'Uga wa ndani',
         'This field is protected and can\'t be deleted.' => 'Uga huu unalindwa na hauwezi kufutwa.',
+        'Field Settings' => 'Mipangilio ya uga',
+        'There is no configuration available for this dynamic field.' => '',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldCheckbox.tt
+        'Changing this value will require manual changes in the system.' =>
+            'Kubadilisha thamani hii itahitaji mabadiliko ya mkono katika mfumo.',
+        'Is not possible to invalidate this entry, all config settings have to be changed beforehand.' =>
+            '',
         'This dynamic field is used in the following config settings:' =>
             '',
-        'Field Settings' => 'Mipangilio ya uga',
         'Default value' => 'Thamani chaguo-msingi',
         'This is the default value for this field.' => 'Hii ndio thamani chaguo-msingi kwa uga huu.',
 
@@ -3583,10 +3590,12 @@ sub Data {
         'Could not reset Dynamic Field order properly, please check the error log for more details.' =>
             '',
 
+        # Perl Module: Kernel/Modules/AdminDynamicFieldAutoConfig.pm
+        'Currently' => '',
+
         # Perl Module: Kernel/Modules/AdminDynamicFieldCheckbox.pm
         'Undefined subaction.' => '',
         'Need %s' => '',
-        'Add %s field' => '',
         'The field does not contain only ASCII letters and numbers.' => '',
         'There is another field with the same name.' => '',
         'The field must be numeric.' => '',
@@ -3594,10 +3603,8 @@ sub Data {
         'Could not create the new field' => '',
         'Need ID' => '',
         'Could not get data for dynamic field %s' => '',
-        'Change %s field' => '',
         'The name for this field should not change.' => '',
         'Could not update the field %s' => '',
-        'Currently' => '',
         'Unchecked' => '',
         'Checked' => '',
 
@@ -8672,6 +8679,7 @@ Thanks for your help!
         'Dynamic Fields Multiselect Backend GUI' => 'GUI ya mazingira ya nyuma ya uchaguzi mbalimbali wa uga zenye nguvu',
         'Dynamic Fields Overview Limit' => 'Kikomo cha mapitio ya uga zenye nguvu',
         'Dynamic Fields Text Backend GUI' => 'GUI ya mzingira ya nyuma ya matini ya uga zenye nguvu',
+        'Dynamic fields administration' => '',
         'Dynamic fields groups for process widget. The key is the name of the group, the value contains the fields to be shown. Example: \'Key => My Group\', \'Content: Name_X, NameY\'.' =>
             'Vikundi vya uga zenye nguvu kwa ajili ya mchakato wa kifaa. Ufunguo ndio jina la kikundi, thamani ina uga unatakaoonyeshwa. Mfano \'Funguo => Kikundi Changu\', \'Maudhui: Jina_X, Jina Y\'.',
         'Dynamic fields limit per page for Dynamic Fields Overview.' => '',

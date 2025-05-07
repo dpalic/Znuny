@@ -38,7 +38,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.871339256334321;
+    $Self->{Completeness}        = 0.870909389902977;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -489,31 +489,38 @@ sub Data {
         'Object' => 'Объект',
         'Delete this field' => 'Удалить это поле',
 
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldCheckbox.tt
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldAutoConfig.tt
         'Go back to overview' => 'Вернуться к обзору',
+        'Add %s field' => 'Добавить %s поле',
+        'Change %s field' => 'Изменить поле %s',
         'Dynamic Fields' => 'Динамические поля',
         'General' => 'Общие',
         'This field is required, and the value should be alphabetic and numeric characters only.' =>
             'Данное поле обязательно, и может состоять только из букв и цифр.',
         'Must be unique and only accept alphabetic and numeric characters.' =>
             'Должно быть уникальным, и может состоять только из букв и цифр.',
-        'Changing this value will require manual changes in the system.' =>
-            'Изменение этого значения потребует ручных изменений в системе.',
+        'Changing this value will require manual changes to the system.' =>
+            '',
         'This is the name to be shown on the screens where the field is active.' =>
             'Это имя, под которым поле будет показано на тех экранах, на которых оно активно.',
         'Field order' => 'Порядок поля',
         'This field is required and must be numeric.' => 'Это поле обязательно, и должно быть числовым.',
         'This is the order in which this field will be shown on the screens where is active.' =>
             'Это порядок, в котором поле будет показываться среди других полей на тех экранах, где оно активно.',
-        'Is not possible to invalidate this entry, all config settings have to be changed beforehand.' =>
-            'Невозможно аннулировать эту запись, все настройки конфигурации должны быть изменены заранее.',
         'Field type' => 'Тип поля',
         'Object type' => 'Тип объекта',
         'Internal field' => 'Внутреннее поле',
         'This field is protected and can\'t be deleted.' => 'Это поле защищено и не может быть удалено.',
+        'Field Settings' => 'Настройки поля',
+        'There is no configuration available for this dynamic field.' => '',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldCheckbox.tt
+        'Changing this value will require manual changes in the system.' =>
+            'Изменение этого значения потребует ручных изменений в системе.',
+        'Is not possible to invalidate this entry, all config settings have to be changed beforehand.' =>
+            'Невозможно аннулировать эту запись, все настройки конфигурации должны быть изменены заранее.',
         'This dynamic field is used in the following config settings:' =>
             'Это динамическое поле используется в следующих параметрах конфигурации:',
-        'Field Settings' => 'Настройки поля',
         'Default value' => 'Значение по умолчанию',
         'This is the default value for this field.' => 'Это значение по умолчанию для данного поля.',
 
@@ -3592,10 +3599,12 @@ sub Data {
         'Could not reset Dynamic Field order properly, please check the error log for more details.' =>
             'Невозможно правильно сбросить очередность Динамического Поля, подробности в логе ошибок.',
 
+        # Perl Module: Kernel/Modules/AdminDynamicFieldAutoConfig.pm
+        'Currently' => 'В настоящий момент',
+
         # Perl Module: Kernel/Modules/AdminDynamicFieldCheckbox.pm
         'Undefined subaction.' => 'Неопределенный subaction.',
         'Need %s' => 'Требуется  %s',
-        'Add %s field' => 'Добавить %s поле',
         'The field does not contain only ASCII letters and numbers.' => 'Поле содержит не только буквы и цифры таблицы ASCII.',
         'There is another field with the same name.' => 'Существует другое поле с таким же именем.',
         'The field must be numeric.' => 'Это поле должно быть числовым',
@@ -3603,10 +3612,8 @@ sub Data {
         'Could not create the new field' => 'Не удалось создать новое поле',
         'Need ID' => 'Требуется ID',
         'Could not get data for dynamic field %s' => 'Невозможно получить данные для динамического поля  %s',
-        'Change %s field' => 'Изменить поле %s',
         'The name for this field should not change.' => 'Наименование этого поля не должно меняться',
         'Could not update the field %s' => 'Не удалось обновить поле %s',
-        'Currently' => 'В настоящий момент',
         'Unchecked' => 'Не отмечено',
         'Checked' => 'Отмечено',
 
@@ -8689,6 +8696,7 @@ Thanks for your help!
         'Dynamic Fields Multiselect Backend GUI' => 'Редактор динамических полей типа Multiselect',
         'Dynamic Fields Overview Limit' => 'Количество строк списка динамических полей на странице.',
         'Dynamic Fields Text Backend GUI' => 'Редактор динамических полей типа Text',
+        'Dynamic fields administration' => '',
         'Dynamic fields groups for process widget. The key is the name of the group, the value contains the fields to be shown. Example: \'Key => My Group\', \'Content: Name_X, NameY\'.' =>
             'Группы динамических полей для процессного виджета. Ключ - имя группы, Значение - содержит имена показываемых полей. Например: Ключ - "My Group", Содержание: "Name_X, NameY".',
         'Dynamic fields limit per page for Dynamic Fields Overview.' => '',

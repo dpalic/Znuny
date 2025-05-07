@@ -30,7 +30,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y/%M/%D';
     $Self->{DateInputFormat}     = '%Y/%M/%D';
     $Self->{DateInputFormatLong} = '%Y/%M/%D - %T';
-    $Self->{Completeness}        = 0.683283974991774;
+    $Self->{Completeness}        = 0.682946883736228;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -481,31 +481,38 @@ sub Data {
         'Object' => '対象',
         'Delete this field' => 'この領域を削除',
 
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldCheckbox.tt
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldAutoConfig.tt
         'Go back to overview' => '一覧に戻る',
+        'Add %s field' => '',
+        'Change %s field' => '',
         'Dynamic Fields' => 'ダイナミック・フィールド',
         'General' => 'ジェネラル',
         'This field is required, and the value should be alphabetic and numeric characters only.' =>
             'この領域は必須であり、値はアルファベットと数値のみでなければなりません。',
         'Must be unique and only accept alphabetic and numeric characters.' =>
             '一意でなければならず、アルファベットと数値のみ受け付けます。',
-        'Changing this value will require manual changes in the system.' =>
-            'この値の変更はシステム内で手動で行う必要があります。',
+        'Changing this value will require manual changes to the system.' =>
+            '',
         'This is the name to be shown on the screens where the field is active.' =>
             'これは領域がアクティブである画面で表示される名前です。',
         'Field order' => '領域の順序',
         'This field is required and must be numeric.' => 'この領域は必須かつ数値でなければなりません。',
         'This is the order in which this field will be shown on the screens where is active.' =>
             'これはこの領域がアクティブである画面で表示される順序です。',
-        'Is not possible to invalidate this entry, all config settings have to be changed beforehand.' =>
-            '',
         'Field type' => '領域タイプ',
         'Object type' => 'オブジェクトタイプ',
         'Internal field' => '内部領域',
         'This field is protected and can\'t be deleted.' => 'この領域は保護されており、削除できません。',
+        'Field Settings' => '領域設定',
+        'There is no configuration available for this dynamic field.' => '',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldCheckbox.tt
+        'Changing this value will require manual changes in the system.' =>
+            'この値の変更はシステム内で手動で行う必要があります。',
+        'Is not possible to invalidate this entry, all config settings have to be changed beforehand.' =>
+            '',
         'This dynamic field is used in the following config settings:' =>
             'このダイナミック・フィールドは、次の設定で使用されます。',
-        'Field Settings' => '領域設定',
         'Default value' => 'デフォルト値',
         'This is the default value for this field.' => 'これはこの領域に対するデフォルト値です。',
 
@@ -3587,10 +3594,12 @@ sub Data {
         'Could not reset Dynamic Field order properly, please check the error log for more details.' =>
             'ダイナミック・フィールドのオーダー定義を初期化できませんでした。詳細はエラーログを参照願います。',
 
+        # Perl Module: Kernel/Modules/AdminDynamicFieldAutoConfig.pm
+        'Currently' => '現在の',
+
         # Perl Module: Kernel/Modules/AdminDynamicFieldCheckbox.pm
         'Undefined subaction.' => '未定義のサブアクションです。',
         'Need %s' => '%s の入力が必要です。',
-        'Add %s field' => '',
         'The field does not contain only ASCII letters and numbers.' => '',
         'There is another field with the same name.' => '',
         'The field must be numeric.' => '',
@@ -3598,10 +3607,8 @@ sub Data {
         'Could not create the new field' => '新しいフィールドを作成できませんでした。',
         'Need ID' => 'IDが必要',
         'Could not get data for dynamic field %s' => 'ダイナミック・フィールド %s の値を取得できませんでした',
-        'Change %s field' => '',
         'The name for this field should not change.' => '',
         'Could not update the field %s' => '',
-        'Currently' => '現在の',
         'Unchecked' => '未選択',
         'Checked' => '選択済み',
 
@@ -8691,6 +8698,7 @@ Thanks for your help!
         'Dynamic Fields Multiselect Backend GUI' => 'ダイナミック・フィールド複数選択バックエンドGUI',
         'Dynamic Fields Overview Limit' => 'ダイナミック・フィールド一覧の表示数',
         'Dynamic Fields Text Backend GUI' => 'ダイナミックフィールド・テキストバックエンドGUI',
+        'Dynamic fields administration' => '',
         'Dynamic fields groups for process widget. The key is the name of the group, the value contains the fields to be shown. Example: \'Key => My Group\', \'Content: Name_X, NameY\'.' =>
             '',
         'Dynamic fields limit per page for Dynamic Fields Overview.' => 'ダイナミック・フィールド一覧内のダイナミック・フィールド表示上限数',

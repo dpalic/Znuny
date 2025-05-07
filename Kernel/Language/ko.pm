@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%M-%D';
     $Self->{DateInputFormat}     = '%Y-%M-%D';
     $Self->{DateInputFormatLong} = '%Y-%M-%D %T';
-    $Self->{Completeness}        = 0.867390589009543;
+    $Self->{Completeness}        = 0.866962670613386;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -477,31 +477,38 @@ sub Data {
         'Object' => '목적',
         'Delete this field' => '이 입력란을 삭제하십시오.',
 
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldCheckbox.tt
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldAutoConfig.tt
         'Go back to overview' => '개요로 돌아가기',
+        'Add %s field' => '%s 필드 추가',
+        'Change %s field' => '동적 필드 %s에 대한 데이터가 없습니다.',
         'Dynamic Fields' => '동적 필드',
         'General' => '일반',
         'This field is required, and the value should be alphabetic and numeric characters only.' =>
             '이 필드는 필수이며 값은 영숫자여야 합니다.',
         'Must be unique and only accept alphabetic and numeric characters.' =>
             '고유해야하며 영문자의 숫자만 사용할 수 있습니다.',
-        'Changing this value will require manual changes in the system.' =>
-            '이 값을 변경하면 시스템에서 수동으로 변경해야 합니다.',
+        'Changing this value will require manual changes to the system.' =>
+            '',
         'This is the name to be shown on the screens where the field is active.' =>
             '필드가 활성화된 화면에 표시할 이름 입니다.',
         'Field order' => '필드 주문',
         'This field is required and must be numeric.' => '이 필드는 필수이며 숫자여야 합니다.',
         'This is the order in which this field will be shown on the screens where is active.' =>
             '이 필드가 활성화 된 화면에 표시되는 순서입니다.',
-        'Is not possible to invalidate this entry, all config settings have to be changed beforehand.' =>
-            '이 항목을 무효화 할 수 없으므로 모든 구성 설정을 미리 변경해야 합니다.',
         'Field type' => '필드 유형',
         'Object type' => '객체 유형',
         'Internal field' => '내부 필드',
         'This field is protected and can\'t be deleted.' => '이 필드는 보호되어 있으며 삭제할 수 없습니다.',
+        'Field Settings' => '필드 설정',
+        'There is no configuration available for this dynamic field.' => '',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldCheckbox.tt
+        'Changing this value will require manual changes in the system.' =>
+            '이 값을 변경하면 시스템에서 수동으로 변경해야 합니다.',
+        'Is not possible to invalidate this entry, all config settings have to be changed beforehand.' =>
+            '이 항목을 무효화 할 수 없으므로 모든 구성 설정을 미리 변경해야 합니다.',
         'This dynamic field is used in the following config settings:' =>
             '이 동적 필드는 다음 구성 설정에서 사용됩니다.',
-        'Field Settings' => '필드 설정',
         'Default value' => '기본값',
         'This is the default value for this field.' => '이 필드의 기본값입니다.',
 
@@ -3580,10 +3587,12 @@ sub Data {
         'Could not reset Dynamic Field order properly, please check the error log for more details.' =>
             '동적 필드 순서를 제대로 재설정 할 수 없습니다. 자세한 내용은 오류 로그를 확인하십시오.',
 
+        # Perl Module: Kernel/Modules/AdminDynamicFieldAutoConfig.pm
+        'Currently' => '현재',
+
         # Perl Module: Kernel/Modules/AdminDynamicFieldCheckbox.pm
         'Undefined subaction.' => '지정되지 않은 서브액션',
         'Need %s' => '%s 필요',
-        'Add %s field' => '%s 필드 추가',
         'The field does not contain only ASCII letters and numbers.' => '입력란에는 ASCII 문자와 숫자 만 포함되지 않습니다.',
         'There is another field with the same name.' => '같은 이름의 다른 필드가 있습니다.',
         'The field must be numeric.' => '이 필드는 숫자여야 합니다.',
@@ -3591,10 +3600,8 @@ sub Data {
         'Could not create the new field' => '새 필드를 만들지 못했습니다.',
         'Need ID' => '신분증이 필요함',
         'Could not get data for dynamic field %s' => '동적 필드 %s에 대한 데이터를 가져올 수 없습니다.',
-        'Change %s field' => '동적 필드 %s에 대한 데이터가 없습니다.',
         'The name for this field should not change.' => '이 입력란의 이름은 변경해서는 안됩니다.',
         'Could not update the field %s' => '%s 필드를 업데이트 할 수 없습니다.',
-        'Currently' => '현재',
         'Unchecked' => '선택하지 않았다.',
         'Checked' => '체크됨',
 
@@ -8677,6 +8684,7 @@ Thanks for your help!
         'Dynamic Fields Multiselect Backend GUI' => '동적 필드 다중 선택 백엔드 GUI',
         'Dynamic Fields Overview Limit' => '동적 필드 개요 제한',
         'Dynamic Fields Text Backend GUI' => '동적 필드 텍스트 백엔드 GUI',
+        'Dynamic fields administration' => '',
         'Dynamic fields groups for process widget. The key is the name of the group, the value contains the fields to be shown. Example: \'Key => My Group\', \'Content: Name_X, NameY\'.' =>
             '프로세스 위젯의 동적 필드 그룹. 키는 그룹의 이름이고, 값은 표시 할 필드를 포함합니다. 예 : \'Key => My Group\', \'Content : Name_X, NameY\'.',
         'Dynamic fields limit per page for Dynamic Fields Overview.' => '동적 필드 개요에 대한 페이지 당 동적 필드 제한',

@@ -1416,23 +1416,23 @@ msgstr "Objekt"
 msgid "Delete this field"
 msgstr "Dieses Feld löschen"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldCheckbox.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldAutoConfig.tt
 msgid "Go back to overview"
 msgstr "Zurück zur Übersicht gehen"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldCheckbox.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldAutoConfig.tt
 msgid "Dynamic Fields"
 msgstr "Dynamische Felder"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldCheckbox.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldAutoConfig.tt
 msgid "General"
 msgstr "Allgemein"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldCheckbox.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldAutoConfig.tt
 msgid "This field is required, and the value should be alphabetic and numeric characters only."
 msgstr "Dieses Feld wird benötigt, und der Wert darf nur Buchstaben und Zahlen enthalten."
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldCheckbox.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldAutoConfig.tt
 msgid "Must be unique and only accept alphabetic and numeric characters."
 msgstr "Muss eindeutig sein und darf nur aus Buchstaben und Zahlen bestehen."
 
@@ -1440,19 +1440,19 @@ msgstr "Muss eindeutig sein und darf nur aus Buchstaben und Zahlen bestehen."
 msgid "Changing this value will require manual changes in the system."
 msgstr "Eine Änderung dieses Wertes macht weitere manuelle Änderungen am System erforderlich."
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldCheckbox.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldAutoConfig.tt
 msgid "This is the name to be shown on the screens where the field is active."
 msgstr "Dieser Name wird auf den Bildschirmen angezeigt, auf denen dieses Feld aktiv ist."
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldCheckbox.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldAutoConfig.tt
 msgid "Field order"
 msgstr "Feldreihenfolge"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldCheckbox.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldAutoConfig.tt
 msgid "This field is required and must be numeric."
 msgstr "Dieses Feld wird benötigt und darf nur Zahlen enthalten."
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldCheckbox.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldAutoConfig.tt
 msgid "This is the order in which this field will be shown on the screens where is active."
 msgstr "Die Feldreihenfolge steuert die Ausgabe der Felder auf den Bildschirmen."
 
@@ -1460,19 +1460,19 @@ msgstr "Die Feldreihenfolge steuert die Ausgabe der Felder auf den Bildschirmen.
 msgid "Is not possible to invalidate this entry, all config settings have to be changed beforehand."
 msgstr "Es ist nicht möglich, diesen Eintrag auf ungültig zu setzen, bevor alle betroffenen Konfiguration entsprechend angepasst wurden."
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldCheckbox.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldAutoConfig.tt
 msgid "Field type"
 msgstr "Feldtyp"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldCheckbox.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldAutoConfig.tt
 msgid "Object type"
 msgstr "Objekttyp"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldCheckbox.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldAutoConfig.tt
 msgid "Internal field"
 msgstr "Internes Feld"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldCheckbox.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldAutoConfig.tt
 msgid "This field is protected and can't be deleted."
 msgstr "Dies ist ein geschütztes internes Feld und kann nicht gelöscht werden."
 
@@ -1480,7 +1480,7 @@ msgstr "Dies ist ein geschütztes internes Feld und kann nicht gelöscht werden.
 msgid "This dynamic field is used in the following config settings:"
 msgstr "Dieses Dynamische Feld wird in folgenden Konfigurationseinstellungen verwendet:"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldCheckbox.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldAutoConfig.tt
 msgid "Field Settings"
 msgstr "Feldeinstellungen"
 
@@ -10360,7 +10360,7 @@ msgstr "Unbestimmte Unteraktion."
 msgid "Need %s"
 msgstr "%s benötigt"
 
-#. Perl Module: Kernel/Modules/AdminDynamicFieldCheckbox.pm
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldAutoConfig.tt
 msgid "Add %s field"
 msgstr "%s Feld hinzufügen"
 
@@ -10392,7 +10392,7 @@ msgstr "ID benötigt"
 msgid "Could not get data for dynamic field %s"
 msgstr "Konnte keine Daten für das Dynamische Feld %s ermitteln"
 
-#. Perl Module: Kernel/Modules/AdminDynamicFieldCheckbox.pm
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldAutoConfig.tt
 msgid "Change %s field"
 msgstr "%s Feld ändern"
 
@@ -10404,7 +10404,7 @@ msgstr "Der Name dieses Feldes sollte sich nicht ändern."
 msgid "Could not update the field %s"
 msgstr "Das Feld %s konnte nicht aktualisiert werden"
 
-#. Perl Module: Kernel/Modules/AdminDynamicFieldCheckbox.pm
+#. Perl Module: Kernel/Modules/AdminDynamicFieldAutoConfig.pm
 msgid "Currently"
 msgstr "Aktuell"
 
@@ -24372,4 +24372,16 @@ msgstr "Diese Statistik existiert nicht, oder Sie haben keine Zugriffsberechtigu
 #. XML Definition: Kernel/Config/Files/XML/Znuny.xml
 msgid "List of user preferences (keys) that are allowed to be updated by UpdateAJAX subaction of frontend module AgentPreferences. These are regular expressions."
 msgstr "Liste von Benutzereinstellungen (Keys), für die ein Update per UpdateAJAX-Subaction über das Frontendmodul AgentPreferences erlaubt ist. Eingabe als reguläre Ausdrücke."
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldAutoConfig.tt
+msgid "Changing this value will require manual changes to the system."
+msgstr "Eine Änderung dieses Wertes macht weitere manuelle Änderungen am System erforderlich."
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldAutoConfig.tt
+msgid "There is no configuration available for this dynamic field."
+msgstr "Für dieses dynamische Feld gibt es keine Konfiguration."
+
+#. SysConfig
+msgid "Dynamic fields administration"
+msgstr "Verwaltung dynamischer Felder"
 

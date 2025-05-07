@@ -29,7 +29,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.616485686080948;
+    $Self->{Completeness}        = 0.616181549087321;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -483,31 +483,38 @@ sub Data {
         'Object' => 'مورد',
         'Delete this field' => 'حذف این قسمت',
 
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldCheckbox.tt
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldAutoConfig.tt
         'Go back to overview' => 'برگرد به نمایش مجموعه',
+        'Add %s field' => '',
+        'Change %s field' => '',
         'Dynamic Fields' => 'رشته های پویا',
         'General' => 'عمومی',
         'This field is required, and the value should be alphabetic and numeric characters only.' =>
             'این فیلد مورد نیاز است، و بها باید فقط حروف و عدد باشد.',
         'Must be unique and only accept alphabetic and numeric characters.' =>
             'باید منحصر به فرد باشد و تنها حروف و عددی را بپذیرید.',
-        'Changing this value will require manual changes in the system.' =>
-            'تغییر این مقدار خواهد تغییرات دستی در سیستم نیاز داشته باشد.',
+        'Changing this value will require manual changes to the system.' =>
+            '',
         'This is the name to be shown on the screens where the field is active.' =>
             'این نام به بر روی صفحه نمایش که در آن زمینه فعال است نشان داده شده است.',
         'Field order' => 'سفارش درست',
         'This field is required and must be numeric.' => 'این فیلد الزامی است و باید عدد باشد.',
         'This is the order in which this field will be shown on the screens where is active.' =>
             'این نظم که در آن این زمینه خواهد شد بر روی صفحه نمایش که در آن فعال است نشان داده شده است.',
-        'Is not possible to invalidate this entry, all config settings have to be changed beforehand.' =>
-            '',
         'Field type' => 'نوع رشته',
         'Object type' => 'نوع موضوع',
         'Internal field' => 'رشته داخلی',
         'This field is protected and can\'t be deleted.' => 'در این زمینه محافظت شده است و نمی تواند حذف شود.',
+        'Field Settings' => 'تنظیمات درست',
+        'There is no configuration available for this dynamic field.' => '',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminDynamicFieldCheckbox.tt
+        'Changing this value will require manual changes in the system.' =>
+            'تغییر این مقدار خواهد تغییرات دستی در سیستم نیاز داشته باشد.',
+        'Is not possible to invalidate this entry, all config settings have to be changed beforehand.' =>
+            '',
         'This dynamic field is used in the following config settings:' =>
             '',
-        'Field Settings' => 'تنظیمات درست',
         'Default value' => 'مقدار پیش‌فرض',
         'This is the default value for this field.' => 'این مقدار پیش فرض برای این رشته است.',
 
@@ -3586,10 +3593,12 @@ sub Data {
         'Could not reset Dynamic Field order properly, please check the error log for more details.' =>
             'می تواند پویا درست سفارش تنظیم مجدد نمی کند، لطفا ورود به سیستم خطا برای جزئیات بیشتر.',
 
+        # Perl Module: Kernel/Modules/AdminDynamicFieldAutoConfig.pm
+        'Currently' => 'در حال حاضر',
+
         # Perl Module: Kernel/Modules/AdminDynamicFieldCheckbox.pm
         'Undefined subaction.' => 'subaction تعریف نشده است.',
         'Need %s' => 'نیاز %s',
-        'Add %s field' => '',
         'The field does not contain only ASCII letters and numbers.' => 'میدان آیا فقط شامل حروف ASCII و اعداد نیست.',
         'There is another field with the same name.' => ' یکی دیگر از این زمینه با همین نام وجود دارد.',
         'The field must be numeric.' => 'زمینه باید عدد باشد.',
@@ -3597,10 +3606,8 @@ sub Data {
         'Could not create the new field' => 'نمی توانید زمینه جدید ایجاد کنید',
         'Need ID' => 'نیاز ID',
         'Could not get data for dynamic field %s' => ' توان داده هابرای زمینه پویا نیست %s',
-        'Change %s field' => '',
         'The name for this field should not change.' => 'نام این زمینه نباید تغییر کند.',
         'Could not update the field %s' => 'نمی توانید زمینه را به روز رسانی کنید %s',
-        'Currently' => 'در حال حاضر',
         'Unchecked' => 'بدون کنترل',
         'Checked' => 'بررسی',
 
@@ -8683,6 +8690,7 @@ Thanks for your help!
         'Dynamic Fields Multiselect Backend GUI' => 'رابط کاربری گرافیکی زمینه پویا چندین انتخاب بخش مدیریت',
         'Dynamic Fields Overview Limit' => 'زمینه پویا نمای کلی محدود',
         'Dynamic Fields Text Backend GUI' => ' زمینه های پویا متن بخش مدیریت رابط کاربری گرافیکی',
+        'Dynamic fields administration' => '',
         'Dynamic fields groups for process widget. The key is the name of the group, the value contains the fields to be shown. Example: \'Key => My Group\', \'Content: Name_X, NameY\'.' =>
             'زمینه گروه پویا برای ویجت روند. کلید نام این گروه است، ارزش شامل زمینه نشان داده شود. به عنوان مثال: \'کلید => من گروه\'، \'مطالب و محتوا: Name_X، NameY.',
         'Dynamic fields limit per page for Dynamic Fields Overview.' => '',
