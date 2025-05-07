@@ -2,15 +2,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2023-03-23 09:27+0000\n"
-"PO-Revision-Date: 2024-12-08 00:20+0000\n"
+"PO-Revision-Date: 2025-05-06 19:52+0000\n"
 "Last-Translator: BuilderNSV <nikitin.sergey.v@gmail.com>\n"
-"Language-Team: Russian <https://translations.znuny.org/projects/znuny/znuny/ru/>\n"
+"Language-Team: Russian <https://translations.znuny.org/projects/znuny/znuny/"
+"ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.8.4\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 5.11\n"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminACL.tt
 msgid "Actions"
@@ -4930,7 +4932,7 @@ msgstr "Списки управления доступом (ACL)"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminProcessManagement.tt
 msgid "Generic Agent"
-msgstr "Планировщие задач"
+msgstr "Планировщик задач"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminProcessManagement.tt
 msgid "Manage Process Widget Groups"
@@ -7398,7 +7400,7 @@ msgstr "Выберите группу слева, чтобы найти наст
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentPreferencesOverview.tt
 msgid "Did you know?"
-msgstr "Знаете ли Dы?"
+msgstr "Знаете ли Вы?"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentPreferencesOverview.tt
 msgid "You can change your avatar by registering with your email address %s on %s"
@@ -8578,7 +8580,7 @@ msgstr "Логин"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/CustomerLogin.tt
 msgid "A new password will be sent to your email address."
-msgstr "Новый пароль будет отправлен на Ваш адрес электронной почты."
+msgstr "Новый пароль будет отправлен на адрес Вашей электронной почты."
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/CustomerLogin.tt
 msgid "Back to login"
@@ -16006,7 +16008,10 @@ msgstr "Задает модуль который показывает всех �
 
 #. XML Definition: Kernel/Config/Files/XML/Framework.xml
 msgid "Defines the module to display a notification in the customer interface, if the customer is logged in while having system maintenance active."
-msgstr "Задает модуль, который показывает уведомление в интерфейсе клиента, если клиента зашел в систему, когда она в состоянии Профилактика/Обслуживание системы"
+msgstr ""
+"Задает модуль, который показывает уведомление в интерфейсе клиента, если "
+"клиент зашел в систему, когда она в состоянии Профилактика/Обслуживание "
+"системы"
 
 #. XML Definition: Kernel/Config/Files/XML/Framework.xml
 msgid "Defines the module to display a notification in the customer interface, if the customer user has not yet selected a time zone."
@@ -20482,7 +20487,9 @@ msgstr "Уведомление о создании заявки"
 
 #. XML Definition: scripts/database/initial_insert.xml
 msgid "You will receive a notification each time a new ticket is created in one of your \"My Queues\" or \"My Services\"."
-msgstr "Вы будете получать уведомление всякий раз при создании новой заявки в Вашей очереди из \"Мои очереди\" или \"Мои Сервисы\"."
+msgstr ""
+"Вы будете получать уведомление всякий раз при создании новой заявки либо в "
+"\"Мои очереди\", либо в \"Мои Сервисы\"."
 
 #. XML Definition: scripts/database/initial_insert.xml
 msgid "Ticket follow-up notification (unlocked)"
@@ -20490,7 +20497,9 @@ msgstr "Уведомление об ответе по заявке (для ра�
 
 #. XML Definition: scripts/database/initial_insert.xml
 msgid "You will receive a notification if a customer sends a follow-up to an unlocked ticket which is in your \"My Queues\" or \"My Services\"."
-msgstr "Вы будете получать уведомление всякий раз когда клиент посылает дополнение к разблокированной заявке в \"Моих очередях\" или \"Моих Сервисах\"."
+msgstr ""
+"Вы будете получать уведомление всякий раз, когда клиент посылает дополнение "
+"к разблокированной заявке в \"Моих очередях\" или \"Моих Сервисах\"."
 
 #. XML Definition: scripts/database/initial_insert.xml
 msgid "Ticket follow-up notification (locked)"
@@ -20498,7 +20507,10 @@ msgstr "Уведомление об ответе по заявке (для за�
 
 #. XML Definition: scripts/database/initial_insert.xml
 msgid "You will receive a notification if a customer sends a follow-up to a locked ticket of which you are the ticket owner or responsible."
-msgstr "Вы будете получать уведомление, когда клиент посылает дополнение к заблокированной заявке, для которой вы являетесь Владельцем или Ответственным."
+msgstr ""
+"Вы будете получать уведомление всякий раз, когда клиент посылает дополнение "
+"к заблокированной заявке, для которой Вы являетесь Владельцем или "
+"Ответственным."
 
 #. XML Definition: scripts/database/initial_insert.xml
 msgid "Ticket lock timeout notification"
@@ -21736,7 +21748,7 @@ msgstr "Все эскалированные заявки"
 
 #. SysConfig
 msgid "All new tickets, these tickets have not been worked on yet"
-msgstr "Все новые заявки; с этими заявками еще никто не работал"
+msgstr "Все новые заявки, с этими заявками еще никто не работал"
 
 #. SysConfig
 msgid "All open tickets, these tickets have already been worked on."
@@ -24172,7 +24184,7 @@ msgstr "Пометить заявки как прочитанные"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBulk.tt
 msgid "Mark tickets as unseen"
-msgstr "Пометить заявки как непрочитанные"
+msgstr "Отметить заявки как непрочитанные"
 
 #. Perl Module: Kernel/Output/HTML/ArticleAction/MarkArticleSeenUnseen.pm
 msgid "Mark article as unseen"
@@ -24180,7 +24192,7 @@ msgstr "Отметить сообщение как непрочитанное"
 
 #. Perl Module: Kernel/Output/HTML/ArticleAction/MarkArticleSeenUnseen.pm
 msgid "Mark as unseen"
-msgstr "Пометить как непрочитанное"
+msgstr "Отметить как непрочитанное"
 
 #. XML Definition: Kernel/Config/Files/XML/Znuny.xml
 msgid "Defines the config parameters available in the preferences view. The default redirect URL from SysConfig 'MarkTicketUnseenRedirectDefaultURL' is used if no selection is made by the agent."
@@ -24236,7 +24248,7 @@ msgstr "Пометить заявку как прочитанную"
 
 #. SysConfig
 msgid "Mark ticket as unseen"
-msgstr "Пометить заявку как непрочитанную"
+msgstr "Отметить заявку как непрочитанную"
 
 #. SysConfig
 msgid "Screen after marking as seen"
@@ -24292,7 +24304,7 @@ msgstr ""
 
 #. XML Definition: Kernel/Config/Files/XML/Framework.xml
 msgid "Dark skin for the agent interface."
-msgstr "Темный окрас в интерфейса агента."
+msgstr "Темная тема оформления интерфейса агента."
 
 #. XML Definition: Kernel/Config/Files/XML/Framework.xml
 msgid "Dark skin for the customer interface."
@@ -24304,7 +24316,7 @@ msgstr "Темный"
 
 #. SysConfig
 msgid "This is the dark skin for the agent interface."
-msgstr "Это темный окрас интерфейса агента."
+msgstr "Это темная тема оформления интерфейса агента."
 
 #. SysConfig
 msgid "This is the dark skin for the customer interface."
