@@ -1,4 +1,5 @@
 # 7.2.1 2025-xx-xx
+ - 2025-05-09 Fixed bug - Breadcrumb disappears in SystemConfiguration when SystemConfiguration/SettingsList is displayed via SettingNavigation.
  - 2025-05-09 Fixed bug - Incorrect path is used in apache conf files. Thanks for reporting to @BuilderNSV. [#664](https://github.com/znuny/Znuny/issues/664)
  - 2024-05-07 Integrated package Znuny-DynamicFieldAdminAutoConfig - Administration backend for dynamic fields without configuration.
  - 2025-05-07 Added source (subroutine) and line to AdminLog / Log Object.
