@@ -6,6 +6,7 @@
  - 2025-05-06 The console command Dev::TranslationUpdate can now remove unused strings from PO files.
  - 2025-05-06 Added DefaultPageShown setting to every DashboardBackend SysConfig that uses the module `Kernel::Output::HTML::Dashboard::TicketGeneric`. This allows the number of items shown per page to be defined and extended for each dashboard widget.
  - 2025-05-05 Added SysConfigLink to AdminPackageManager - Redirect to System Configuration from Package Manager.
+ - 2025-04-30 Fixed OTRS_CUSTOMER_REALNAME placeholder expansion in AgentTicketMerge.
 
 # 7.1.7 2025-04-30
  - 2025-04-24 Fixed bug - Setting the password does not reset preferences UserLoginFailed and UserLastPwChangeTime.
