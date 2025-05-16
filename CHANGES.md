@@ -1,4 +1,5 @@
 # 7.2.1 2025-xx-xx
+ - 2025-05-16 Process Management: Removed obsolete JS code in Core.Agent.TicketProcess.js and Core.Customer.TicketProcess.js.
  - 2025-05-12 Fixed bug - Dashboard widget filter 'all' not selected on click. [#665](https://github.com/znuny/Znuny/issues/665)
  - 2025-05-09 Fixed bug - Breadcrumb disappears in SystemConfiguration when SystemConfiguration/SettingsList is displayed via SettingNavigation.
  - 2025-05-09 Fixed bug - Incorrect path is used in apache conf files. Thanks for reporting to @BuilderNSV. [#664](https://github.com/znuny/Znuny/issues/664)
