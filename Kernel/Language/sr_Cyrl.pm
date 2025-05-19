@@ -27,7 +27,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.891794112810393;
+    $Self->{Completeness}        = 0.889162157730776;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2202,6 +2202,25 @@ sub Data {
         'If a value is colored red, it is missing from the possible values list of the dynamic field configuration.' =>
             '',
 
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminTranslation.tt
+        'Translation' => '',
+        'Translation Management' => '',
+        'Add Translation' => '',
+        'Edit Translation' => '',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminTranslation/Form.tt
+        'Update Translation' => '',
+        'Language' => 'Језик',
+        'An entry with this name already exists!' => '',
+        'Destination' => '',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminTranslation/Overview.tt
+        'Changed by' => 'Изменио',
+        'Deployment' => 'Распоред',
+        'Copy this object' => '',
+        'Do you really want to delete this object? All associated data will be lost!' =>
+            '',
+
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminType.tt
         'Add Type' => 'Додај Тип ',
         'Filter for Types' => 'Филтер за типове',
@@ -2547,7 +2566,6 @@ sub Data {
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentStatisticsView.tt
         'Statistics Information' => 'Информације о статистици',
         'Created by' => 'Креирао',
-        'Changed by' => 'Изменио',
         'Sum rows' => 'Збир редова',
         'Sum columns' => 'Збир колона',
         'Show as dashboard widget' => 'Прикажи као додатак контролне табле',
@@ -3347,7 +3365,6 @@ sub Data {
         # TT Template: Kernel/Output/HTML/Templates/Standard/SystemConfiguration/Sidebar/Actions.tt
         'Edit search' => 'Уреди претрагу',
         'Go back to admin: ' => 'Назад на admin:',
-        'Deployment' => 'Распоред',
         'My favourite settings' => 'Моја омиљена подешавања',
         'Invalid settings' => 'Неважећа подешавања',
 
@@ -4699,6 +4716,10 @@ sub Data {
         # Perl Module: Kernel/Output/HTML/Notification/SystemConfigurationOutOfSyncCheck.pm
         'The configuration is being updated, please be patient...' => 'Конфигурација се освежава, молимо сачекајте...',
         'There is an error updating the system configuration!' => 'Грешка приликом освежавања системске конфигурације!',
+
+        # Perl Module: Kernel/Output/HTML/Notification/TranslationCheck.pm
+        'The translations in the database are not synchronous. Please synchronize all translations.' =>
+            '',
 
         # Perl Module: Kernel/Output/HTML/Notification/UIDCheck.pm
         'Don\'t use the Superuser account to work with %s! Create new Agents and work with these accounts instead.' =>
@@ -7898,6 +7919,12 @@ sub Data {
             '',
         'List of user preferences (keys) that are allowed to be updated by UpdateAJAX subaction of frontend module AgentPreferences. These are regular expressions.' =>
             '',
+        'Defines a module to display a notification if translation deployment is needed.' =>
+            '',
+        'Defines the format of exported files when using the admin interface.' =>
+            '',
+        'Defines the separator for export csv files.' => '',
+        'Defines the quote for export csv files.' => '',
 
         # XML Definition: scripts/database/initial_insert.xml
         'invalid-temporarily' => 'неважећи-привремено',
@@ -8042,6 +8069,9 @@ sub Data {
         'There was an error deleting the attachment. Please check the logs for more information.' =>
             'Грешка приликом брисања прилога. Молимо проверите лог датотеку за више информација.',
         'Attachment was deleted successfully.' => 'Прилог је успешно обрисан.',
+
+        # JS File: var/httpd/htdocs/js/Core.Agent.Admin.DBCRUD.js
+        'Deleting the object and its data. This may take a while...' => '',
 
         # JS File: var/httpd/htdocs/js/Core.Agent.Admin.DynamicField.js
         'Do you really want to delete this dynamic field? ALL associated data will be LOST!' =>
@@ -8621,6 +8651,7 @@ Thanks for your help!
         'Create and manage ticket priorities.' => 'Креирање и управљање приоритетима тикета.',
         'Create and manage ticket states.' => 'Креирање и управљање статусима тикета.',
         'Create and manage ticket types.' => 'Креирање и управљање типовима тикета.',
+        'Create and manage translation.' => '',
         'Create and manage web services.' => 'Креирање и управљање веб сервисима.',
         'Create new Ticket.' => 'Креирање новог тикета.',
         'Create new appointment.' => 'Креира нови термин.',
@@ -8787,7 +8818,6 @@ Thanks for your help!
         'Italian' => 'Италијански',
         'Japanese' => 'Јапански',
         'Korean' => 'Корејски',
-        'Language' => 'Језик',
         'Large' => 'Велико',
         'Last Mentions' => '',
         'Last Screen Overview' => 'Преглед последњег екрана',
@@ -8841,6 +8871,7 @@ Thanks for your help!
         'Manage support data.' => 'Управљање подацима подршке.',
         'Manage system files.' => '',
         'Manage tasks triggered by event or time based execution.' => 'Управља задацима покренутим од догађаја или на основу временског извршавања.',
+        'Manage translation.' => '',
         'Management of ticket attribute relations.' => '',
         'Mark as Spam!' => 'Означи као Спам!',
         'Mark as seen' => '',
@@ -9132,6 +9163,7 @@ Thanks for your help!
         'Web service (Multiselect)' => '',
         'Web service dynamic field AJAX interface' => '',
         'Webservice' => '',
+        'YAML' => '',
         'Yes, but hide archived tickets' => 'Да, али склони архивиране тикете',
         'Your email with ticket number "<OTRS_TICKET>" is bounced to "<OTRS_BOUNCE_TO>". Contact this address for further information.' =>
             'Ваш имејл са бројем тикета "<OTRS_TICKET>" је преусмерен на тикет "<OTRS_BOUNCE_TO>"!',
@@ -9264,6 +9296,7 @@ Thanks for your help!
         'Deleting attachment...',
         'Deleting the field and its data. This may take a while...',
         'Deleting the mail account and its data. This may take a while...',
+        'Deleting the object and its data. This may take a while...',
         'Deleting the postmaster filter and its data. This may take a while...',
         'Deleting the template and its data. This may take a while...',
         'Deploy',

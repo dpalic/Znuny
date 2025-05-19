@@ -32,7 +32,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%M-%D';
     $Self->{DateInputFormat}     = '%Y-%M-%D';
     $Self->{DateInputFormatLong} = '%Y-%M-%D - %T';
-    $Self->{Completeness}        = 0.895247492188785;
+    $Self->{Completeness}        = 0.892605345138547;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2207,6 +2207,25 @@ sub Data {
         'If a value is colored red, it is missing from the possible values list of the dynamic field configuration.' =>
             '',
 
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminTranslation.tt
+        'Translation' => '',
+        'Translation Management' => '',
+        'Add Translation' => '',
+        'Edit Translation' => '',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminTranslation/Form.tt
+        'Update Translation' => '',
+        'Language' => 'Nyelv',
+        'An entry with this name already exists!' => '',
+        'Destination' => '',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminTranslation/Overview.tt
+        'Changed by' => 'Módosította',
+        'Deployment' => 'Üzembe állítás',
+        'Copy this object' => '',
+        'Do you really want to delete this object? All associated data will be lost!' =>
+            '',
+
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminType.tt
         'Add Type' => 'Típus hozzáadása',
         'Filter for Types' => 'Szűrő a típusokhoz',
@@ -2552,7 +2571,6 @@ sub Data {
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentStatisticsView.tt
         'Statistics Information' => 'Statisztikák információi',
         'Created by' => 'Létrehozta',
-        'Changed by' => 'Módosította',
         'Sum rows' => 'Sorok összegzése',
         'Sum columns' => 'Oszlopok összegzése',
         'Show as dashboard widget' => 'Megjelenítés vezérlőpult felületi elemként',
@@ -3352,7 +3370,6 @@ sub Data {
         # TT Template: Kernel/Output/HTML/Templates/Standard/SystemConfiguration/Sidebar/Actions.tt
         'Edit search' => 'Keresés szerkesztése',
         'Go back to admin: ' => 'Vissza az adminisztrációhoz: ',
-        'Deployment' => 'Üzembe állítás',
         'My favourite settings' => 'Kedvenc beállításaim',
         'Invalid settings' => 'Érvénytelen beállítások',
 
@@ -4704,6 +4721,10 @@ sub Data {
         # Perl Module: Kernel/Output/HTML/Notification/SystemConfigurationOutOfSyncCheck.pm
         'The configuration is being updated, please be patient...' => 'A beállítások frissítés alatt vannak, legyen türelemmel…',
         'There is an error updating the system configuration!' => 'Hiba történt a rendszerbeállítások frissítésekor!',
+
+        # Perl Module: Kernel/Output/HTML/Notification/TranslationCheck.pm
+        'The translations in the database are not synchronous. Please synchronize all translations.' =>
+            '',
 
         # Perl Module: Kernel/Output/HTML/Notification/UIDCheck.pm
         'Don\'t use the Superuser account to work with %s! Create new Agents and work with these accounts instead.' =>
@@ -7903,6 +7924,12 @@ sub Data {
             '',
         'List of user preferences (keys) that are allowed to be updated by UpdateAJAX subaction of frontend module AgentPreferences. These are regular expressions.' =>
             '',
+        'Defines a module to display a notification if translation deployment is needed.' =>
+            '',
+        'Defines the format of exported files when using the admin interface.' =>
+            '',
+        'Defines the separator for export csv files.' => '',
+        'Defines the quote for export csv files.' => '',
 
         # XML Definition: scripts/database/initial_insert.xml
         'invalid-temporarily' => 'átmenetileg érvénytelen',
@@ -8047,6 +8074,9 @@ sub Data {
         'There was an error deleting the attachment. Please check the logs for more information.' =>
             'Hiba történt a melléklet törlésekor. További információkért nézze meg a naplókat.',
         'Attachment was deleted successfully.' => 'A melléklet sikeresen törölve lett.',
+
+        # JS File: var/httpd/htdocs/js/Core.Agent.Admin.DBCRUD.js
+        'Deleting the object and its data. This may take a while...' => '',
 
         # JS File: var/httpd/htdocs/js/Core.Agent.Admin.DynamicField.js
         'Do you really want to delete this dynamic field? ALL associated data will be LOST!' =>
@@ -8626,6 +8656,7 @@ Az Ön segélyszolgálat csapata
         'Create and manage ticket priorities.' => 'Jegyprioritások létrehozása és kezelése.',
         'Create and manage ticket states.' => 'Jegyállapotok létrehozása és kezelése.',
         'Create and manage ticket types.' => 'Jegytípusok létrehozása és kezelése.',
+        'Create and manage translation.' => '',
         'Create and manage web services.' => 'Webszolgáltatások létrehozása és kezelése.',
         'Create new Ticket.' => 'Új jegy létrehozása.',
         'Create new appointment.' => 'Új időpont létrehozása.',
@@ -8792,7 +8823,6 @@ Az Ön segélyszolgálat csapata
         'Italian' => 'Olasz',
         'Japanese' => 'Japán',
         'Korean' => 'Koreai',
-        'Language' => 'Nyelv',
         'Large' => 'Nagy',
         'Last Mentions' => '',
         'Last Screen Overview' => 'Utolsó képernyő áttekintője',
@@ -8846,6 +8876,7 @@ Az Ön segélyszolgálat csapata
         'Manage support data.' => 'Támogatási adatok kezelése.',
         'Manage system files.' => '',
         'Manage tasks triggered by event or time based execution.' => 'Esemény vagy időalapú végrehajtás által aktivált feladatok kezelése.',
+        'Manage translation.' => '',
         'Management of ticket attribute relations.' => '',
         'Mark as Spam!' => 'Megjelölés szemétként!',
         'Mark as seen' => '',
@@ -9137,6 +9168,7 @@ Az Ön segélyszolgálat csapata
         'Web service (Multiselect)' => '',
         'Web service dynamic field AJAX interface' => '',
         'Webservice' => '',
+        'YAML' => '',
         'Yes, but hide archived tickets' => 'Igen, de az archivált jegyek elrejtése',
         'Your email with ticket number "<OTRS_TICKET>" is bounced to "<OTRS_BOUNCE_TO>". Contact this address for further information.' =>
             'Az Ön „<OTRS_TICKET>” számú jegyhez rendelt e-mailje átirányításra került a következő címre: „<OTRS_BOUNCE_TO>”. További információkért vegye fel ezzel a címmel a kapcsolatot.',
@@ -9269,6 +9301,7 @@ Az Ön segélyszolgálat csapata
         'Deleting attachment...',
         'Deleting the field and its data. This may take a while...',
         'Deleting the mail account and its data. This may take a while...',
+        'Deleting the object and its data. This may take a while...',
         'Deleting the postmaster filter and its data. This may take a while...',
         'Deleting the template and its data. This may take a while...',
         'Deploy',

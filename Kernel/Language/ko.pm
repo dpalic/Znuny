@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%M-%D';
     $Self->{DateInputFormat}     = '%Y-%M-%D';
     $Self->{DateInputFormatLong} = '%Y-%M-%D %T';
-    $Self->{Completeness}        = 0.866962670613386;
+    $Self->{Completeness}        = 0.864404000655845;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -2201,6 +2201,25 @@ sub Data {
         'If a value is colored red, it is missing from the possible values list of the dynamic field configuration.' =>
             '',
 
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminTranslation.tt
+        'Translation' => '',
+        'Translation Management' => '',
+        'Add Translation' => '',
+        'Edit Translation' => '',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminTranslation/Form.tt
+        'Update Translation' => '',
+        'Language' => '언어',
+        'An entry with this name already exists!' => '',
+        'Destination' => '',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminTranslation/Overview.tt
+        'Changed by' => '변경자 ',
+        'Deployment' => '전개',
+        'Copy this object' => '',
+        'Do you really want to delete this object? All associated data will be lost!' =>
+            '',
+
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminType.tt
         'Add Type' => '유형 추가',
         'Filter for Types' => '유형 필터',
@@ -2546,7 +2565,6 @@ sub Data {
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentStatisticsView.tt
         'Statistics Information' => '통계 정보',
         'Created by' => '작성자 : ',
-        'Changed by' => '변경자 ',
         'Sum rows' => '행 합계',
         'Sum columns' => '열 합계',
         'Show as dashboard widget' => '대시 보드 위젯으로 표시',
@@ -3346,7 +3364,6 @@ sub Data {
         # TT Template: Kernel/Output/HTML/Templates/Standard/SystemConfiguration/Sidebar/Actions.tt
         'Edit search' => '검색 수정',
         'Go back to admin: ' => '관리자에게 돌아가기 : ',
-        'Deployment' => '전개',
         'My favourite settings' => '내가 가장 좋아하는 설정',
         'Invalid settings' => '설정이 잘못되었습니다.',
 
@@ -4698,6 +4715,10 @@ sub Data {
         # Perl Module: Kernel/Output/HTML/Notification/SystemConfigurationOutOfSyncCheck.pm
         'The configuration is being updated, please be patient...' => '구성이 업데이트 되고 있습니다. 기다려주십시오...',
         'There is an error updating the system configuration!' => '시스템 구성을 업데이트 하는 중 오류가 발생했습니다!',
+
+        # Perl Module: Kernel/Output/HTML/Notification/TranslationCheck.pm
+        'The translations in the database are not synchronous. Please synchronize all translations.' =>
+            '',
 
         # Perl Module: Kernel/Output/HTML/Notification/UIDCheck.pm
         'Don\'t use the Superuser account to work with %s! Create new Agents and work with these accounts instead.' =>
@@ -7897,6 +7918,12 @@ sub Data {
             '',
         'List of user preferences (keys) that are allowed to be updated by UpdateAJAX subaction of frontend module AgentPreferences. These are regular expressions.' =>
             '',
+        'Defines a module to display a notification if translation deployment is needed.' =>
+            '',
+        'Defines the format of exported files when using the admin interface.' =>
+            '',
+        'Defines the separator for export csv files.' => '',
+        'Defines the quote for export csv files.' => '',
 
         # XML Definition: scripts/database/initial_insert.xml
         'invalid-temporarily' => '유효하지 않은 일시적',
@@ -8041,6 +8068,9 @@ sub Data {
         'There was an error deleting the attachment. Please check the logs for more information.' =>
             '첨부 파일을 삭제하는 중 오류가 발생했습니다. 자세한 내용은 로그를 확인하십시오.',
         'Attachment was deleted successfully.' => '첨부 파일을 삭제했습니다.',
+
+        # JS File: var/httpd/htdocs/js/Core.Agent.Admin.DBCRUD.js
+        'Deleting the object and its data. This may take a while...' => '',
 
         # JS File: var/httpd/htdocs/js/Core.Agent.Admin.DynamicField.js
         'Do you really want to delete this dynamic field? ALL associated data will be LOST!' =>
@@ -8620,6 +8650,7 @@ Thanks for your help!
         'Create and manage ticket priorities.' => '티켘ㅅ 우선 순위를 만들고 관리합니다.',
         'Create and manage ticket states.' => '티켓 상태를 생성하고 관리합니다.',
         'Create and manage ticket types.' => '티켓 유형을 생성하고 관리하십시오.',
+        'Create and manage translation.' => '',
         'Create and manage web services.' => '웹 서비스를 만들고 관리합니다.',
         'Create new Ticket.' => '새 티켓을 만듭니다.',
         'Create new appointment.' => '새 약속을 만듭니다.',
@@ -8786,7 +8817,6 @@ Thanks for your help!
         'Italian' => '이탈리아 사람',
         'Japanese' => '일본어',
         'Korean' => '',
-        'Language' => '언어',
         'Large' => '큰',
         'Last Mentions' => '',
         'Last Screen Overview' => '마지막 화면 개요',
@@ -8840,6 +8870,7 @@ Thanks for your help!
         'Manage support data.' => '지원 데이터를 관리합니다.',
         'Manage system files.' => '',
         'Manage tasks triggered by event or time based execution.' => '이벤트 또는 시간 기반 실행에 의해 트리거된 작업을 관리합니다.',
+        'Manage translation.' => '',
         'Management of ticket attribute relations.' => '',
         'Mark as Spam!' => '스팸으로 표시하십시오!',
         'Mark as seen' => '',
@@ -9131,6 +9162,7 @@ Thanks for your help!
         'Web service (Multiselect)' => '',
         'Web service dynamic field AJAX interface' => '',
         'Webservice' => '',
+        'YAML' => '',
         'Yes, but hide archived tickets' => '예, 보관된 티켓은 숨깁니다.',
         'Your email with ticket number "<OTRS_TICKET>" is bounced to "<OTRS_BOUNCE_TO>". Contact this address for further information.' =>
             '티켓 번호가 "1"인 이메일은 "2"로 반송됩니다. 자세한 내용은이 주소로 문의하십시오.',
@@ -9263,6 +9295,7 @@ Thanks for your help!
         'Deleting attachment...',
         'Deleting the field and its data. This may take a while...',
         'Deleting the mail account and its data. This may take a while...',
+        'Deleting the object and its data. This may take a while...',
         'Deleting the postmaster filter and its data. This may take a while...',
         'Deleting the template and its data. This may take a while...',
         'Deploy',

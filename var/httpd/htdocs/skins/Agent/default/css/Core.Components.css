@@ -282,8 +282,15 @@ handheld {
         border: 0;
         float: left;
         border-radius: var(--border-radius-xl);
+        background: var(--primary-color);
     }
 
+    .pill.Info,
+    .pill.Error,
+    .pill.Success,
+    .pill.Warning {
+        color: var(--main-font-color) !important;
+    }
 
     /* **************************************** Scrollbar **************************************** */
     ::-webkit-scrollbar,

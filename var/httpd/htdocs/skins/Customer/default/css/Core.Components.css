@@ -243,6 +243,14 @@ did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
         border: 0;
         float: left;
         border-radius: var(--border-radius-xl);
+        background: var(--primary-color);
+    }
+
+    .pill.Info,
+    .pill.Error,
+    .pill.Success,
+    .pill.Warning {
+        color: var(--main-font-color) !important;
     }
 
     /* **************************************** Buttons **************************************** */

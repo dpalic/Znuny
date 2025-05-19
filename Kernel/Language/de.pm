@@ -2202,6 +2202,25 @@ sub Data {
         'If a value is colored red, it is missing from the possible values list of the dynamic field configuration.' =>
             'Falls ein Wert rot ist, fehlt er in der Liste der möglichen Werte der Konfiguration des dynamischen Felds.',
 
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminTranslation.tt
+        'Translation' => 'Übersetzung',
+        'Translation Management' => 'Verwaltung von Übersetzungen',
+        'Add Translation' => 'Übersetzung hinzufügen',
+        'Edit Translation' => 'Übersetzung bearbeiten',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminTranslation/Form.tt
+        'Update Translation' => 'Übersetzung aktualisieren',
+        'Language' => 'Sprache',
+        'An entry with this name already exists!' => 'Ein Eintrag mit diesem Namen existiert bereits!',
+        'Destination' => 'Ziel',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminTranslation/Overview.tt
+        'Changed by' => 'Geändert von',
+        'Deployment' => 'Inbetriebnahme',
+        'Copy this object' => 'Kopiere dieses Objekt',
+        'Do you really want to delete this object? All associated data will be lost!' =>
+            'Wollen Sie dieses Objekt wirklich löschen? Alle zugehörigen Daten werden verloren gehen!',
+
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminType.tt
         'Add Type' => 'Typ hinzufügen',
         'Filter for Types' => 'Filter für Typen',
@@ -2547,7 +2566,6 @@ sub Data {
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentStatisticsView.tt
         'Statistics Information' => 'Statistik-Informationen',
         'Created by' => 'Erstellt von',
-        'Changed by' => 'Geändert von',
         'Sum rows' => 'Zeilensummierung',
         'Sum columns' => 'Spaltensummierung',
         'Show as dashboard widget' => 'Als Dashboard-Widget anzeigen',
@@ -3347,7 +3365,6 @@ sub Data {
         # TT Template: Kernel/Output/HTML/Templates/Standard/SystemConfiguration/Sidebar/Actions.tt
         'Edit search' => 'Suche bearbeiten',
         'Go back to admin: ' => 'Zurück zum Admin-Bereich: ',
-        'Deployment' => 'Inbetriebnahme',
         'My favourite settings' => 'Meine Favoriten',
         'Invalid settings' => 'Ungültige Einstellungen',
 
@@ -4699,6 +4716,10 @@ sub Data {
         # Perl Module: Kernel/Output/HTML/Notification/SystemConfigurationOutOfSyncCheck.pm
         'The configuration is being updated, please be patient...' => 'Die Systemkonfiguration wird aktualisiert. Bitte haben Sie etwas Geduld.',
         'There is an error updating the system configuration!' => 'Beim Aktualisieren der Systemkonfiguration ist ein Fehler aufgetreten!',
+
+        # Perl Module: Kernel/Output/HTML/Notification/TranslationCheck.pm
+        'The translations in the database are not synchronous. Please synchronize all translations.' =>
+            'Die Übersetzungen in der Datenbank sind nicht synchron. Bitte synchronisieren Sie alle Übersetzungen.',
 
         # Perl Module: Kernel/Output/HTML/Notification/UIDCheck.pm
         'Don\'t use the Superuser account to work with %s! Create new Agents and work with these accounts instead.' =>
@@ -7898,6 +7919,12 @@ sub Data {
             'Sobald das Limit der beobachteten Tickets pro Nutzer erreicht ist, werden die ältesten Einträge aus der Beobachtungsliste entfernt. Deaktivieren Sie diese Einstellung oder setzen Sie sie auf 0, um das Limit zu deaktivieren (Standard).',
         'List of user preferences (keys) that are allowed to be updated by UpdateAJAX subaction of frontend module AgentPreferences. These are regular expressions.' =>
             'Liste von Benutzereinstellungen (Keys), für die ein Update per UpdateAJAX-Subaction über das Frontendmodul AgentPreferences erlaubt ist. Eingabe als reguläre Ausdrücke.',
+        'Defines a module to display a notification if translation deployment is needed.' =>
+            'Definiert ein Modul, das eine Benachrichtigung anzeigt, wenn ein Übersetzungseinsatz erforderlich ist.',
+        'Defines the format of exported files when using the admin interface.' =>
+            'Legt das Format der exportierten Dateien bei Verwendung der Verwaltungsoberfläche fest.',
+        'Defines the separator for export csv files.' => 'Legt das Trennzeichen für csv-Exportdateien fest.',
+        'Defines the quote for export csv files.' => 'Legt das Zitat für den Export von csv-Dateien fest.',
 
         # XML Definition: scripts/database/initial_insert.xml
         'invalid-temporarily' => 'ungültig-temporär',
@@ -8042,6 +8069,9 @@ sub Data {
         'There was an error deleting the attachment. Please check the logs for more information.' =>
             'Es ist ein Fehler beim Entfernen des Anhangs aufgetreten. Bitte prüfen Sie die Protokolle für mehr Informationen.',
         'Attachment was deleted successfully.' => 'Anhang erfolgreich entfernt.',
+
+        # JS File: var/httpd/htdocs/js/Core.Agent.Admin.DBCRUD.js
+        'Deleting the object and its data. This may take a while...' => 'Löschen des Objekts und seiner Daten. Dies kann eine Weile dauern...',
 
         # JS File: var/httpd/htdocs/js/Core.Agent.Admin.DynamicField.js
         'Do you really want to delete this dynamic field? ALL associated data will be LOST!' =>
@@ -8620,6 +8650,7 @@ Ihr Helpdesk-Team
         'Create and manage ticket priorities.' => 'Ticket-Prioritäten erstellen und verwalten.',
         'Create and manage ticket states.' => 'Ticket-Status erstellen und verwalten.',
         'Create and manage ticket types.' => 'Ticket-Typen erstellen und verwalten.',
+        'Create and manage translation.' => 'Übersetzungen erstellen und verwalten.',
         'Create and manage web services.' => 'Webservices erstellen und verwalten.',
         'Create new Ticket.' => 'Neues Ticket erstellen.',
         'Create new appointment.' => 'Einen neuen Termin erstellen.',
@@ -8786,7 +8817,6 @@ Ihr Helpdesk-Team
         'Italian' => 'Italienisch',
         'Japanese' => 'Japanisch',
         'Korean' => 'Koreanisch',
-        'Language' => 'Sprache',
         'Large' => 'Groß',
         'Last Mentions' => 'Letzte Erwähnungen',
         'Last Screen Overview' => 'Letzte Masken-Übersicht',
@@ -8840,6 +8870,7 @@ Ihr Helpdesk-Team
         'Manage support data.' => 'Supportdaten verwalten.',
         'Manage system files.' => 'Systemdateien verwalten',
         'Manage tasks triggered by event or time based execution.' => 'Verwaltung von event- oder zeitbasierten Aufgaben.',
+        'Manage translation.' => 'Übersatzungen verwalten.',
         'Management of ticket attribute relations.' => 'Verwaltung von abhängigen Ticketattributen.',
         'Mark as Spam!' => 'Als Spam makieren!',
         'Mark as seen' => 'Als gelesen markieren',
@@ -9131,6 +9162,7 @@ Ihr Helpdesk-Team
         'Web service (Multiselect)' => 'Webservice (Mehrfachauswahl)',
         'Web service dynamic field AJAX interface' => 'AJAX-Schnittstelle für dynamische Webservice-Felder',
         'Webservice' => 'Webservice',
+        'YAML' => 'YAML',
         'Yes, but hide archived tickets' => 'Ja, aber archivierte Tickets verstecken',
         'Your email with ticket number "<OTRS_TICKET>" is bounced to "<OTRS_BOUNCE_TO>". Contact this address for further information.' =>
             'Ihre E-Mail mit Ticket-Nummer "<OTRS_TICKET>" wurde an "<OTRS_BOUNCE_TO>" umgeleitet. Kontaktieren Sie diese Adresse für weitere Informationen.',
@@ -9263,6 +9295,7 @@ Ihr Helpdesk-Team
         'Deleting attachment...',
         'Deleting the field and its data. This may take a while...',
         'Deleting the mail account and its data. This may take a while...',
+        'Deleting the object and its data. This may take a while...',
         'Deleting the postmaster filter and its data. This may take a while...',
         'Deleting the template and its data. This may take a while...',
         'Deploy',

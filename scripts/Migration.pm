@@ -250,6 +250,10 @@ sub _TasksGet {
             Module  => 'scripts::Migration::Znuny::IntegrateZnunyMarkTicketSeenUnseen',
         },
         {
+            Message => 'Integrate Znuny-Translations',
+            Module  => 'scripts::Migration::Znuny::IntegrateZnunyTranslations',
+        },
+        {
             Message => 'Migrate groups',
             Module  => 'scripts::Migration::Znuny::MigrateGroups',
         },

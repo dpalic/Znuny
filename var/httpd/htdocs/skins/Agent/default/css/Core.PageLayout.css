@@ -1021,7 +1021,6 @@ did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.
         justify-content: flex-start;
         align-items: center;
         gap: var(--gap-sm);
-        padding: var(--padding-lg) 0;
     }
 
     .ActionsSideBar.LayoutFixedSidebar .ContentWrapper {

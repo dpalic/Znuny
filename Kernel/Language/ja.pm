@@ -30,7 +30,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y/%M/%D';
     $Self->{DateInputFormat}     = '%Y/%M/%D';
     $Self->{DateInputFormatLong} = '%Y/%M/%D - %T';
-    $Self->{Completeness}        = 0.682946883736228;
+    $Self->{Completeness}        = 0.68093130021315;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2207,6 +2207,25 @@ sub Data {
         'If a value is colored red, it is missing from the possible values list of the dynamic field configuration.' =>
             '',
 
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminTranslation.tt
+        'Translation' => '',
+        'Translation Management' => '',
+        'Add Translation' => '',
+        'Edit Translation' => '',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminTranslation/Form.tt
+        'Update Translation' => '',
+        'Language' => '言語',
+        'An entry with this name already exists!' => '',
+        'Destination' => '',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminTranslation/Overview.tt
+        'Changed by' => '変更者',
+        'Deployment' => 'デプロイ',
+        'Copy this object' => '',
+        'Do you really want to delete this object? All associated data will be lost!' =>
+            '',
+
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminType.tt
         'Add Type' => 'タイプの追加',
         'Filter for Types' => 'タイプでフィルター',
@@ -2552,7 +2571,6 @@ sub Data {
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentStatisticsView.tt
         'Statistics Information' => 'レポート情報',
         'Created by' => '作成者',
-        'Changed by' => '変更者',
         'Sum rows' => '行の合計',
         'Sum columns' => '列の合計',
         'Show as dashboard widget' => 'ダッシュボードウィジェットとして表示',
@@ -3352,7 +3370,6 @@ sub Data {
         # TT Template: Kernel/Output/HTML/Templates/Standard/SystemConfiguration/Sidebar/Actions.tt
         'Edit search' => '検索を修正',
         'Go back to admin: ' => '管理に戻る：',
-        'Deployment' => 'デプロイ',
         'My favourite settings' => '私のお気に入りの設定',
         'Invalid settings' => '無効な設定',
 
@@ -4705,6 +4722,10 @@ sub Data {
         # Perl Module: Kernel/Output/HTML/Notification/SystemConfigurationOutOfSyncCheck.pm
         'The configuration is being updated, please be patient...' => '設定は更新されておりますので、ご安心ください。',
         'There is an error updating the system configuration!' => 'システム設定の更新時にエラーが発生しました。',
+
+        # Perl Module: Kernel/Output/HTML/Notification/TranslationCheck.pm
+        'The translations in the database are not synchronous. Please synchronize all translations.' =>
+            '',
 
         # Perl Module: Kernel/Output/HTML/Notification/UIDCheck.pm
         'Don\'t use the Superuser account to work with %s! Create new Agents and work with these accounts instead.' =>
@@ -7913,6 +7934,12 @@ Contentはダイナミック・フィールドの形式によって設定内容�
             '',
         'List of user preferences (keys) that are allowed to be updated by UpdateAJAX subaction of frontend module AgentPreferences. These are regular expressions.' =>
             '',
+        'Defines a module to display a notification if translation deployment is needed.' =>
+            '',
+        'Defines the format of exported files when using the admin interface.' =>
+            '',
+        'Defines the separator for export csv files.' => '',
+        'Defines the quote for export csv files.' => '',
 
         # XML Definition: scripts/database/initial_insert.xml
         'invalid-temporarily' => '無効-暫定',
@@ -8057,6 +8084,9 @@ Contentはダイナミック・フィールドの形式によって設定内容�
         'There was an error deleting the attachment. Please check the logs for more information.' =>
             '添付ファイル削除時にエラーが発生しました。詳細はログを確認してください。',
         'Attachment was deleted successfully.' => '添付ファイルが正常に削除されました。',
+
+        # JS File: var/httpd/htdocs/js/Core.Agent.Admin.DBCRUD.js
+        'Deleting the object and its data. This may take a while...' => '',
 
         # JS File: var/httpd/htdocs/js/Core.Agent.Admin.DynamicField.js
         'Do you really want to delete this dynamic field? ALL associated data will be LOST!' =>
@@ -8634,6 +8664,7 @@ Thanks for your help!
         'Create and manage ticket priorities.' => 'チケット優先度の作成と管理',
         'Create and manage ticket states.' => 'チケット状態の作成と管理',
         'Create and manage ticket types.' => 'チケットタイプの作成と管理',
+        'Create and manage translation.' => '',
         'Create and manage web services.' => 'Webサービスの作成と管理',
         'Create new Ticket.' => '新規チケットの作成',
         'Create new appointment.' => '予約を登録',
@@ -8800,7 +8831,6 @@ Thanks for your help!
         'Italian' => 'イタリア語',
         'Japanese' => '日本語',
         'Korean' => '',
-        'Language' => '言語',
         'Large' => '大',
         'Last Mentions' => '',
         'Last Screen Overview' => '',
@@ -8854,6 +8884,7 @@ Thanks for your help!
         'Manage support data.' => 'サポート情報の管理',
         'Manage system files.' => '',
         'Manage tasks triggered by event or time based execution.' => 'イベントトリガーまたは時間ベースで実行されるタスクの管理',
+        'Manage translation.' => '',
         'Management of ticket attribute relations.' => '',
         'Mark as Spam!' => '迷惑メールにする',
         'Mark as seen' => '',
@@ -9146,6 +9177,7 @@ Thanks for your help!
         'Web service (Multiselect)' => '',
         'Web service dynamic field AJAX interface' => '',
         'Webservice' => '',
+        'YAML' => '',
         'Yes, but hide archived tickets' => 'はい、アーカイブされたチケットを非表示にします。',
         'Your email with ticket number "<OTRS_TICKET>" is bounced to "<OTRS_BOUNCE_TO>". Contact this address for further information.' =>
             'チケット番号"<OTRS_TICKET>" のメールは、"<OTRS_BOUNCE_TO>"宛にバウンスされました。詳細は、このアドレスまでお問合せください。',
@@ -9278,6 +9310,7 @@ Thanks for your help!
         'Deleting attachment...',
         'Deleting the field and its data. This may take a while...',
         'Deleting the mail account and its data. This may take a while...',
+        'Deleting the object and its data. This may take a while...',
         'Deleting the postmaster filter and its data. This may take a while...',
         'Deleting the template and its data. This may take a while...',
         'Deploy',

@@ -7520,7 +7520,7 @@ msgstr "Statistik-Informationen"
 msgid "Created by"
 msgstr "Erstellt von"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentStatisticsView.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminTranslation/Overview.tt
 msgid "Changed by"
 msgstr "Geändert von"
 
@@ -9696,7 +9696,7 @@ msgstr "Suche bearbeiten"
 msgid "Go back to admin: "
 msgstr "Zurück zum Admin-Bereich: "
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/SystemConfiguration/Sidebar/Actions.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminTranslation/Overview.tt
 msgid "Deployment"
 msgstr "Inbetriebnahme"
 
@@ -22741,7 +22741,7 @@ msgstr "Japanisch"
 msgid "Korean"
 msgstr "Koreanisch"
 
-#. SysConfig
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminTranslation/Form.tt
 msgid "Language"
 msgstr "Sprache"
 
@@ -24384,4 +24384,84 @@ msgstr "Für dieses dynamische Feld gibt es keine Konfiguration."
 #. SysConfig
 msgid "Dynamic fields administration"
 msgstr "Verwaltung dynamischer Felder"
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminTranslation.tt
+msgid "Translation"
+msgstr "Übersetzung"
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminTranslation.tt
+msgid "Translation Management"
+msgstr "Verwaltung von Übersetzungen"
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminTranslation.tt
+msgid "Add Translation"
+msgstr "Übersetzung hinzufügen"
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminTranslation.tt
+msgid "Edit Translation"
+msgstr "Übersetzung bearbeiten"
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminTranslation/Form.tt
+msgid "Update Translation"
+msgstr "Übersetzung aktualisieren"
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminTranslation/Form.tt
+msgid "An entry with this name already exists!"
+msgstr "Ein Eintrag mit diesem Namen existiert bereits!"
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminTranslation/Form.tt
+msgid "Destination"
+msgstr "Ziel"
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminTranslation/Overview.tt
+msgid "Copy this object"
+msgstr "Kopiere dieses Objekt"
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminTranslation/Overview.tt
+msgid "Do you really want to delete this object? All associated data will be lost!"
+msgstr "Wollen Sie dieses Objekt wirklich löschen? Alle zugehörigen Daten werden verloren gehen!"
+
+#. Perl Module: Kernel/Output/HTML/Notification/TranslationCheck.pm
+msgid "The translations in the database are not synchronous. Please synchronize all translations."
+msgstr "Die Übersetzungen in der Datenbank sind nicht synchron. Bitte synchronisieren Sie alle Übersetzungen."
+
+#. XML Definition: Kernel/Config/Files/XML/Znuny.xml
+msgid "Frontend module registration for the agent admin interface."
+msgstr ""
+
+#. XML Definition: Kernel/Config/Files/XML/Znuny.xml
+msgid "This configuration defines the cache settings for the Znuny-DatabasBackend (default: 1 day)."
+msgstr ""
+
+#. XML Definition: Kernel/Config/Files/XML/Znuny.xml
+msgid "Defines a module to display a notification if translation deployment is needed."
+msgstr "Definiert ein Modul, das eine Benachrichtigung anzeigt, wenn ein Übersetzungseinsatz erforderlich ist."
+
+#. XML Definition: Kernel/Config/Files/XML/Znuny.xml
+msgid "Defines the format of exported files when using the admin interface."
+msgstr "Legt das Format der exportierten Dateien bei Verwendung der Verwaltungsoberfläche fest."
+
+#. XML Definition: Kernel/Config/Files/XML/Znuny.xml
+msgid "Defines the separator for export csv files."
+msgstr "Legt das Trennzeichen für csv-Exportdateien fest."
+
+#. XML Definition: Kernel/Config/Files/XML/Znuny.xml
+msgid "Defines the quote for export csv files."
+msgstr "Legt das Zitat für den Export von csv-Dateien fest."
+
+#. JS File: var/httpd/htdocs/js/Core.Agent.Admin.DBCRUD.js
+msgid "Deleting the object and its data. This may take a while..."
+msgstr "Löschen des Objekts und seiner Daten. Dies kann eine Weile dauern..."
+
+#. SysConfig
+msgid "Create and manage translation."
+msgstr "Übersetzungen erstellen und verwalten."
+
+#. SysConfig
+msgid "Manage translation."
+msgstr "Übersatzungen verwalten."
+
+#. SysConfig
+msgid "YAML"
+msgstr "YAML"
 

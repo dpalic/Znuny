@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D/%M/%Y';
     $Self->{DateInputFormat}     = '%D/%M/%Y';
     $Self->{DateInputFormatLong} = '%D/%M/%Y - %T';
-    $Self->{Completeness}        = 0.605328071040947;
+    $Self->{Completeness}        = 0.603541564190851;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -2202,6 +2202,25 @@ EMAILADDRESS:info@example.com dari, kepada atau Cc.',
         'If a value is colored red, it is missing from the possible values list of the dynamic field configuration.' =>
             '',
 
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminTranslation.tt
+        'Translation' => '',
+        'Translation Management' => '',
+        'Add Translation' => '',
+        'Edit Translation' => '',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminTranslation/Form.tt
+        'Update Translation' => '',
+        'Language' => 'Bahasa',
+        'An entry with this name already exists!' => '',
+        'Destination' => '',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminTranslation/Overview.tt
+        'Changed by' => 'Diubah oleh',
+        'Deployment' => '',
+        'Copy this object' => '',
+        'Do you really want to delete this object? All associated data will be lost!' =>
+            '',
+
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminType.tt
         'Add Type' => 'Tambahkan jenis',
         'Filter for Types' => '',
@@ -2548,7 +2567,6 @@ bin/znuny.Daemon.pl status\').',
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentStatisticsView.tt
         'Statistics Information' => '',
         'Created by' => 'Dibuat oleh',
-        'Changed by' => 'Diubah oleh',
         'Sum rows' => 'Jumlah baris',
         'Sum columns' => 'Jumlah kolom',
         'Show as dashboard widget' => 'Tampilkan sebagai dashboard widget',
@@ -3348,7 +3366,6 @@ bin/znuny.Daemon.pl status\').',
         # TT Template: Kernel/Output/HTML/Templates/Standard/SystemConfiguration/Sidebar/Actions.tt
         'Edit search' => '',
         'Go back to admin: ' => '',
-        'Deployment' => '',
         'My favourite settings' => '',
         'Invalid settings' => '',
 
@@ -4700,6 +4717,10 @@ bin/znuny.Daemon.pl status\').',
         # Perl Module: Kernel/Output/HTML/Notification/SystemConfigurationOutOfSyncCheck.pm
         'The configuration is being updated, please be patient...' => '',
         'There is an error updating the system configuration!' => '',
+
+        # Perl Module: Kernel/Output/HTML/Notification/TranslationCheck.pm
+        'The translations in the database are not synchronous. Please synchronize all translations.' =>
+            '',
 
         # Perl Module: Kernel/Output/HTML/Notification/UIDCheck.pm
         'Don\'t use the Superuser account to work with %s! Create new Agents and work with these accounts instead.' =>
@@ -7900,6 +7921,12 @@ bin/znuny.Daemon.pl status\').',
             '',
         'List of user preferences (keys) that are allowed to be updated by UpdateAJAX subaction of frontend module AgentPreferences. These are regular expressions.' =>
             '',
+        'Defines a module to display a notification if translation deployment is needed.' =>
+            '',
+        'Defines the format of exported files when using the admin interface.' =>
+            '',
+        'Defines the separator for export csv files.' => '',
+        'Defines the quote for export csv files.' => '',
 
         # XML Definition: scripts/database/initial_insert.xml
         'invalid-temporarily' => 'tidak valid sementara',
@@ -8044,6 +8071,9 @@ bin/znuny.Daemon.pl status\').',
         'There was an error deleting the attachment. Please check the logs for more information.' =>
             '',
         'Attachment was deleted successfully.' => '',
+
+        # JS File: var/httpd/htdocs/js/Core.Agent.Admin.DBCRUD.js
+        'Deleting the object and its data. This may take a while...' => '',
 
         # JS File: var/httpd/htdocs/js/Core.Agent.Admin.DynamicField.js
         'Do you really want to delete this dynamic field? ALL associated data will be LOST!' =>
@@ -8623,6 +8653,7 @@ Helpdesk Team Anda
         'Create and manage ticket priorities.' => 'Membuat dan mengelola prioritas tiket.',
         'Create and manage ticket states.' => 'Membuat dan mengelola state tiket',
         'Create and manage ticket types.' => 'Membuat dan mengelola jenis tiket.',
+        'Create and manage translation.' => '',
         'Create and manage web services.' => 'Membuat dan mengelola layanan web.',
         'Create new Ticket.' => 'Buat Tiket baru.',
         'Create new appointment.' => '',
@@ -8789,7 +8820,6 @@ Helpdesk Team Anda
         'Italian' => 'Italia',
         'Japanese' => 'Jepang',
         'Korean' => '',
-        'Language' => 'Bahasa',
         'Large' => 'Besar',
         'Last Mentions' => '',
         'Last Screen Overview' => '',
@@ -8843,6 +8873,7 @@ Helpdesk Team Anda
         'Manage support data.' => 'Mengelola data dukungan.',
         'Manage system files.' => '',
         'Manage tasks triggered by event or time based execution.' => 'Mengelola tugas dipicu oleh peristiwa atau waktu eksekusi berdasarkan.',
+        'Manage translation.' => '',
         'Management of ticket attribute relations.' => '',
         'Mark as Spam!' => 'Tandai sebagai Spam!',
         'Mark as seen' => '',
@@ -9134,6 +9165,7 @@ Helpdesk Team Anda
         'Web service (Multiselect)' => '',
         'Web service dynamic field AJAX interface' => '',
         'Webservice' => '',
+        'YAML' => '',
         'Yes, but hide archived tickets' => 'Ya, tapi sembunyikan tiket yang telah di arsipkan.',
         'Your email with ticket number "<OTRS_TICKET>" is bounced to "<OTRS_BOUNCE_TO>". Contact this address for further information.' =>
             'Email anda dengan nomor tiket "<OTRS_TICKET>" telah di gabung menjadi "<OTRS_BOUNCE_TO>". Hubungi alamat ini untuk informasi libel lanjut.',
@@ -9266,6 +9298,7 @@ Helpdesk Team Anda
         'Deleting attachment...',
         'Deleting the field and its data. This may take a while...',
         'Deleting the mail account and its data. This may take a while...',
+        'Deleting the object and its data. This may take a while...',
         'Deleting the postmaster filter and its data. This may take a while...',
         'Deleting the template and its data. This may take a while...',
         'Deploy',

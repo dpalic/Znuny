@@ -53,6 +53,8 @@ sub Run {
         'Znuny4OTRS-DynamicFieldAdminAutoConfig',
         'Znuny-CustomPriorityColor',
         'Znuny4OTRS-CustomPriorityColor',
+        'Znuny-Translations',
+        'Znuny4OTRS-Translations',
         'Znuny-AdminValidFilter',
         'Znuny4OTRS-AdminValidFilter',
     );

@@ -35,7 +35,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D/%M/%Y';
     $Self->{DateInputFormat}     = '%D/%M/%Y';
     $Self->{DateInputFormatLong} = '%D/%M/%Y - %T';
-    $Self->{Completeness}        = 0.60121690511429;
+    $Self->{Completeness}        = 0.599442531562551;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -2210,6 +2210,25 @@ sub Data {
         'If a value is colored red, it is missing from the possible values list of the dynamic field configuration.' =>
             '',
 
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminTranslation.tt
+        'Translation' => '',
+        'Translation Management' => '',
+        'Add Translation' => '',
+        'Edit Translation' => '',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminTranslation/Form.tt
+        'Update Translation' => '',
+        'Language' => 'Lingua',
+        'An entry with this name already exists!' => '',
+        'Destination' => '',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminTranslation/Overview.tt
+        'Changed by' => 'Modificato da',
+        'Deployment' => 'Attivazione',
+        'Copy this object' => '',
+        'Do you really want to delete this object? All associated data will be lost!' =>
+            '',
+
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminType.tt
         'Add Type' => 'Aggiungi tipo',
         'Filter for Types' => 'Filtro per Tipi',
@@ -2555,7 +2574,6 @@ sub Data {
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentStatisticsView.tt
         'Statistics Information' => 'Informazioni statistiche',
         'Created by' => 'Creato da',
-        'Changed by' => 'Modificato da',
         'Sum rows' => 'Somma le righe',
         'Sum columns' => 'somma le colonne',
         'Show as dashboard widget' => 'Mostrare come widget nel cruscotto',
@@ -3355,7 +3373,6 @@ sub Data {
         # TT Template: Kernel/Output/HTML/Templates/Standard/SystemConfiguration/Sidebar/Actions.tt
         'Edit search' => 'Modifica ricerca',
         'Go back to admin: ' => 'Torna all\'amministratore: ',
-        'Deployment' => 'Attivazione',
         'My favourite settings' => 'Le mie impostazioni preferite',
         'Invalid settings' => 'Impostazioni non valide',
 
@@ -4707,6 +4724,10 @@ sub Data {
         # Perl Module: Kernel/Output/HTML/Notification/SystemConfigurationOutOfSyncCheck.pm
         'The configuration is being updated, please be patient...' => '',
         'There is an error updating the system configuration!' => '',
+
+        # Perl Module: Kernel/Output/HTML/Notification/TranslationCheck.pm
+        'The translations in the database are not synchronous. Please synchronize all translations.' =>
+            '',
 
         # Perl Module: Kernel/Output/HTML/Notification/UIDCheck.pm
         'Don\'t use the Superuser account to work with %s! Create new Agents and work with these accounts instead.' =>
@@ -7910,6 +7931,12 @@ NOTA: i sistemi di terze parti richiedono una configurazione a se.',
             '',
         'List of user preferences (keys) that are allowed to be updated by UpdateAJAX subaction of frontend module AgentPreferences. These are regular expressions.' =>
             '',
+        'Defines a module to display a notification if translation deployment is needed.' =>
+            '',
+        'Defines the format of exported files when using the admin interface.' =>
+            '',
+        'Defines the separator for export csv files.' => '',
+        'Defines the quote for export csv files.' => '',
 
         # XML Definition: scripts/database/initial_insert.xml
         'invalid-temporarily' => 'non valido-temporaneamente',
@@ -8054,6 +8081,9 @@ NOTA: i sistemi di terze parti richiedono una configurazione a se.',
         'There was an error deleting the attachment. Please check the logs for more information.' =>
             '',
         'Attachment was deleted successfully.' => '',
+
+        # JS File: var/httpd/htdocs/js/Core.Agent.Admin.DBCRUD.js
+        'Deleting the object and its data. This may take a while...' => '',
 
         # JS File: var/httpd/htdocs/js/Core.Agent.Admin.DynamicField.js
         'Do you really want to delete this dynamic field? ALL associated data will be LOST!' =>
@@ -8633,6 +8663,7 @@ Il tuo helpdesk.
         'Create and manage ticket priorities.' => 'Crea e gestisce le priorità dei ticket.',
         'Create and manage ticket states.' => 'Crea e gestisce gli stati dei ticket.',
         'Create and manage ticket types.' => 'Crea e gestisce i tipi di ticket.',
+        'Create and manage translation.' => '',
         'Create and manage web services.' => 'Crea e gestisce i web service',
         'Create new Ticket.' => 'Crea nuovo ticket.',
         'Create new appointment.' => '',
@@ -8799,7 +8830,6 @@ Il tuo helpdesk.
         'Italian' => 'Italiano',
         'Japanese' => 'Giapponese',
         'Korean' => '',
-        'Language' => 'Lingua',
         'Large' => 'Large',
         'Last Mentions' => '',
         'Last Screen Overview' => '',
@@ -8853,6 +8883,7 @@ Il tuo helpdesk.
         'Manage support data.' => 'Gestisci i dati di supporto.',
         'Manage system files.' => '',
         'Manage tasks triggered by event or time based execution.' => '',
+        'Manage translation.' => '',
         'Management of ticket attribute relations.' => '',
         'Mark as Spam!' => 'Contrassegna come spam!',
         'Mark as seen' => '',
@@ -9144,6 +9175,7 @@ Il tuo helpdesk.
         'Web service (Multiselect)' => '',
         'Web service dynamic field AJAX interface' => '',
         'Webservice' => '',
+        'YAML' => '',
         'Yes, but hide archived tickets' => 'Sì, ma nascondi i ticket archiviati',
         'Your email with ticket number "<OTRS_TICKET>" is bounced to "<OTRS_BOUNCE_TO>". Contact this address for further information.' =>
             'La tua email con la richiesta numero "<OTRS_TICKET>" è stata reinviata a "<OTRS_BOUNCE_TO>". Contatta questo indirizzo per ulteriori informazioni.',
@@ -9276,6 +9308,7 @@ Il tuo helpdesk.
         'Deleting attachment...',
         'Deleting the field and its data. This may take a while...',
         'Deleting the mail account and its data. This may take a while...',
+        'Deleting the object and its data. This may take a while...',
         'Deleting the postmaster filter and its data. This may take a while...',
         'Deleting the template and its data. This may take a while...',
         'Deploy',
