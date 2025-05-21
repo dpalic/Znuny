@@ -1,5 +1,6 @@
 # 7.2.1 2025-xx-xx
- - 2025-05-23 Integrated package Znuny-ArticleColors: Admin module to edit article colors directly in Znuny.
+ - 2025-05-21 Sector Nord AG: Added missing Action for AgentTicketMarkSeenUnseen in Ticket::Frontend::MenuModule. Thanks to @LuBroering (Lukas Bröring Sector Nord AG). [PR#654](https://github.com/znuny/Znuny/pull/654)
+ - 2025-05-21 Integrated package Znuny-ArticleColors: Admin module to edit article colors directly in Znuny.
  - 2025-05-19 Integrated package Znuny-Translations: Admin module to edit translations directly in Znuny.
  - 2025-05-16 Process Management: Removed obsolete JS code in Core.Agent.TicketProcess.js and Core.Customer.TicketProcess.js.
  - 2025-05-12 Fixed bug - Dashboard widget filter 'all' not selected on click. [#665](https://github.com/znuny/Znuny/issues/665)
