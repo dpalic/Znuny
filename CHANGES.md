@@ -1,4 +1,5 @@
 # 7.2.1 2025-xx-xx
+ - 2025-05-21 Fixed bug - AdminACL: Wrong fallback for ACLKeysLevel3::Actions variable. Thanks for reporting to Stefan Härter (@stefanhaerter). [#629](https://github.com/znuny/Znuny/issues/629)
  - 2025-05-21 Sector Nord AG: Added missing Action for AgentTicketMarkSeenUnseen in Ticket::Frontend::MenuModule. Thanks to @LuBroering (Lukas Bröring Sector Nord AG). [PR#654](https://github.com/znuny/Znuny/pull/654)
  - 2025-05-21 Integrated package Znuny-ArticleColors: Admin module to edit article colors directly in Znuny.
  - 2025-05-19 Integrated package Znuny-Translations: Admin module to edit translations directly in Znuny.
