@@ -29,7 +29,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y.%M.%D';
     $Self->{DateInputFormat}     = '%Y.%M.%D';
     $Self->{DateInputFormatLong} = '%Y.%M.%D - %T';
-    $Self->{Completeness}        = 0.307263485817347;
+    $Self->{Completeness}        = 0.307011795543906;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -243,6 +243,19 @@ sub Data {
         'If signing key/certificate is missing' => '',
         'If encryption key/certificate is missing' => '',
 
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminArticleColor.tt
+        'Filter for Items' => '',
+        'Hint' => '提示',
+        'Here you can see all possible article combination that are theoretically available in your system.' =>
+            '',
+        'You can define a background color for each article combination. Click on the color code.' =>
+            '',
+        'Article Color Management' => '',
+        'Sender Type' => '發送人類型',
+        'Communication Channel' => '',
+        'Visible for customer' => '',
+        'Color' => '顏色',
+
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminAttachment.tt
         'Add Attachment' => '添加附件',
         'Filter for Attachments' => '過濾附件',
@@ -274,7 +287,6 @@ sub Data {
             '',
         'Filter for Communications' => '',
         'Filter for communications' => '',
-        'Hint' => '提示',
         'In this screen you can see an overview about incoming and outgoing communications.' =>
             '',
         'You can change the sort and order of the columns by clicking on the column header.' =>
@@ -798,7 +810,6 @@ sub Data {
         'New type' => '指定類型',
         'Archive selected tickets' => '歸檔選中的工單',
         'Add Note' => '添加備註',
-        'Visible for customer' => '',
         'Time units' => '時間',
         'Execute Ticket Commands' => '',
         'Send agent/customer notifications on changes' => '給服務人員/用戶發送通知',
@@ -1376,7 +1387,6 @@ sub Data {
             '',
         'Links' => '',
         'View the admin manual on Github' => '',
-        'Filter for Items' => '',
         'No Matches' => '',
         'Sorry, your search didn\'t match any items.' => '',
         'Set as favorite' => '',
@@ -1623,7 +1633,6 @@ sub Data {
         'Configure Priority Visibility and Defaults' => '',
         'Priority Management' => '優先級管理',
         'Edit Priority' => '編輯優先級',
-        'Color' => '顏色',
         'This priority is present in a SysConfig setting, confirmation for updating settings to point to the new priority is needed!' =>
             '',
         'This priority is used in the following config settings:' => '',
@@ -1699,7 +1708,6 @@ sub Data {
         'Filter available fields' => '過濾可選的字段',
         'Assigned Fields' => '指排的字段',
         'Filter assigned fields' => '',
-        'Communication Channel' => '',
         'Is visible for customer' => '',
         'Text Template' => '文本模板',
         'Auto fill' => '',
@@ -2805,7 +2813,6 @@ sub Data {
         'Archive Search' => '歸檔搜索',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom.tt
-        'Sender Type' => '發送人類型',
         'Save filter settings as default' => '將過濾器作為缺省設置並保存',
         'Event Type' => '',
         'Save as default' => '',
@@ -8553,6 +8560,7 @@ Thanks for your help!
         'Appointment list.' => '',
         'Appointment notifications' => '',
         'Arabic (Saudi Arabia)' => '',
+        'Article Color' => '',
         'ArticleTree' => '',
         'Attachment Name' => '',
         'Avatar' => '頭像',
@@ -8864,6 +8872,7 @@ Thanks for your help!
         'Manage support data.' => '',
         'Manage system files.' => '',
         'Manage tasks triggered by event or time based execution.' => '管理基於事件或時間觸發的任務',
+        'Manage ticket article color.' => '',
         'Manage translation.' => '',
         'Management of ticket attribute relations.' => '',
         'Mark as Spam!' => '標記為垃圾!',

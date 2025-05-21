@@ -30,7 +30,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y/%M/%D';
     $Self->{DateInputFormat}     = '%Y/%M/%D';
     $Self->{DateInputFormatLong} = '%Y/%M/%D - %T';
-    $Self->{Completeness}        = 0.68093130021315;
+    $Self->{Completeness}        = 0.680373525557012;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -244,6 +244,19 @@ sub Data {
         'If signing key/certificate is missing' => 'もし署名された鍵/証明書が存在しない場合',
         'If encryption key/certificate is missing' => 'もし暗号化された鍵/証明書が存在しない場合',
 
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminArticleColor.tt
+        'Filter for Items' => 'アイテムをフィルター',
+        'Hint' => 'ヒント',
+        'Here you can see all possible article combination that are theoretically available in your system.' =>
+            '',
+        'You can define a background color for each article combination. Click on the color code.' =>
+            '',
+        'Article Color Management' => '',
+        'Sender Type' => '送信者タイプ',
+        'Communication Channel' => 'コミュニケーション・チャネル',
+        'Visible for customer' => '顧客が閲覧可能な記事',
+        'Color' => '色',
+
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminAttachment.tt
         'Add Attachment' => '添付ファイルを追加',
         'Filter for Attachments' => '添付ファイルでフィルタ',
@@ -275,7 +288,6 @@ sub Data {
             '特定の時間範囲で作成された通信ログのみを表示します。',
         'Filter for Communications' => '',
         'Filter for communications' => 'コミュニケーションでフィルター',
-        'Hint' => 'ヒント',
         'In this screen you can see an overview about incoming and outgoing communications.' =>
             'この画面では、着信および発信コミュニケーションの概要を確認できます。',
         'You can change the sort and order of the columns by clicking on the column header.' =>
@@ -799,7 +811,6 @@ sub Data {
         'New type' => '新しいタイプ',
         'Archive selected tickets' => '選択されたアーカイブ・チケット',
         'Add Note' => 'メモを追加',
-        'Visible for customer' => '顧客が閲覧可能な記事',
         'Time units' => '時間の単位',
         'Execute Ticket Commands' => 'チケットコマンドを実行',
         'Send agent/customer notifications on changes' => '変更を担当者／顧客に通知する',
@@ -1379,7 +1390,6 @@ sub Data {
             '右側のアイテムにカーソルを合わせてスターアイコンをクリックすると、お気に入りを追加できます。',
         'Links' => 'リンク',
         'View the admin manual on Github' => 'Githubの管理マニュアルを表示',
-        'Filter for Items' => 'アイテムをフィルター',
         'No Matches' => 'マッチなし',
         'Sorry, your search didn\'t match any items.' => '申し訳ありませんが、あなたの検索はどのアイテムにも一致しませんでした。',
         'Set as favorite' => 'お気に入りに指定',
@@ -1626,7 +1636,6 @@ sub Data {
         'Configure Priority Visibility and Defaults' => '',
         'Priority Management' => '優先度管理',
         'Edit Priority' => '優先度を編集',
-        'Color' => '色',
         'This priority is present in a SysConfig setting, confirmation for updating settings to point to the new priority is needed!' =>
             '',
         'This priority is used in the following config settings:' => '',
@@ -1702,7 +1711,6 @@ sub Data {
         'Filter available fields' => '利用可能な領域をフィルタ',
         'Assigned Fields' => '割り当てられた領域',
         'Filter assigned fields' => '',
-        'Communication Channel' => 'コミュニケーション・チャネル',
         'Is visible for customer' => '顧客が閲覧可能',
         'Text Template' => '本文テンプレート',
         'Auto fill' => '',
@@ -2807,7 +2815,6 @@ sub Data {
         'Archive Search' => 'アーカイブ検索',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom.tt
-        'Sender Type' => '送信者タイプ',
         'Save filter settings as default' => 'デフォルトのフィルター設定を保存',
         'Event Type' => 'イベントタイプ',
         'Save as default' => 'ドラフトとして保存',
@@ -8573,6 +8580,7 @@ Thanks for your help!
         'Appointment list.' => '予約リスト',
         'Appointment notifications' => '予約通知',
         'Arabic (Saudi Arabia)' => '',
+        'Article Color' => '',
         'ArticleTree' => '',
         'Attachment Name' => '添付ファイル名',
         'Avatar' => 'アバター',
@@ -8884,6 +8892,7 @@ Thanks for your help!
         'Manage support data.' => 'サポート情報の管理',
         'Manage system files.' => '',
         'Manage tasks triggered by event or time based execution.' => 'イベントトリガーまたは時間ベースで実行されるタスクの管理',
+        'Manage ticket article color.' => '',
         'Manage translation.' => '',
         'Management of ticket attribute relations.' => '',
         'Mark as Spam!' => '迷惑メールにする',

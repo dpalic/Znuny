@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D/%M/%Y';
     $Self->{DateInputFormat}     = '%D/%M/%Y';
     $Self->{DateInputFormatLong} = '%D/%M/%Y - %T';
-    $Self->{Completeness}        = 0.521232989014593;
+    $Self->{Completeness}        = 0.520806028833552;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -240,6 +240,19 @@ sub Data {
         'If signing key/certificate is missing' => '',
         'If encryption key/certificate is missing' => '',
 
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminArticleColor.tt
+        'Filter for Items' => '',
+        'Hint' => 'คำแนะนำ',
+        'Here you can see all possible article combination that are theoretically available in your system.' =>
+            '',
+        'You can define a background color for each article combination. Click on the color code.' =>
+            '',
+        'Article Color Management' => '',
+        'Sender Type' => 'ประเภทผู้ส่ง',
+        'Communication Channel' => '',
+        'Visible for customer' => '',
+        'Color' => '',
+
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminAttachment.tt
         'Add Attachment' => 'เพิ่มเอกสารแนบ',
         'Filter for Attachments' => 'ตัวกรองสำหรับสิ่งที่แนบมา',
@@ -271,7 +284,6 @@ sub Data {
             '',
         'Filter for Communications' => '',
         'Filter for communications' => '',
-        'Hint' => 'คำแนะนำ',
         'In this screen you can see an overview about incoming and outgoing communications.' =>
             '',
         'You can change the sort and order of the columns by clicking on the column header.' =>
@@ -795,7 +807,6 @@ sub Data {
         'New type' => 'ประเภทใหม่',
         'Archive selected tickets' => 'การเก็บถาวรของตั๋วที่ถูกเลือก',
         'Add Note' => 'เพิ่มโน้ต',
-        'Visible for customer' => '',
         'Time units' => 'หน่วยเวลา',
         'Execute Ticket Commands' => 'คำสั่งดำเนินการตั๋ว',
         'Send agent/customer notifications on changes' => 'ส่งการแจ้งเตือนเกี่ยวกับการเปลี่ยนแปลงไปยัง เอเย่นต์/ ลูกค้า',
@@ -1373,7 +1384,6 @@ sub Data {
             '',
         'Links' => '',
         'View the admin manual on Github' => '',
-        'Filter for Items' => '',
         'No Matches' => '',
         'Sorry, your search didn\'t match any items.' => '',
         'Set as favorite' => '',
@@ -1621,7 +1631,6 @@ sub Data {
         'Configure Priority Visibility and Defaults' => '',
         'Priority Management' => 'การบริหารจัดการลำดับความสำคัญ',
         'Edit Priority' => 'แก้ไขลำดับความสำคัญ',
-        'Color' => '',
         'This priority is present in a SysConfig setting, confirmation for updating settings to point to the new priority is needed!' =>
             '',
         'This priority is used in the following config settings:' => '',
@@ -1698,7 +1707,6 @@ sub Data {
         'Filter available fields' => 'ตัวกรองฟิลด์ที่สามารถใช้ได้',
         'Assigned Fields' => 'ฟิลด์ที่ได้รับมอบหมาย',
         'Filter assigned fields' => '',
-        'Communication Channel' => '',
         'Is visible for customer' => '',
         'Text Template' => 'รูปแบบข้อความ',
         'Auto fill' => '',
@@ -2804,7 +2812,6 @@ sub Data {
         'Archive Search' => 'ค้นหาเอกสารเก่า',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom.tt
-        'Sender Type' => 'ประเภทผู้ส่ง',
         'Save filter settings as default' => 'บันทึกการตั้งค่าตัวกรองเป็นค่าเริ่มต้น',
         'Event Type' => 'ประเภทของกิจกรรม',
         'Save as default' => 'บันทึกเป็นค่าเริ่มต้น',
@@ -8565,6 +8572,7 @@ Thanks for your help!
         'Appointment list.' => '',
         'Appointment notifications' => '',
         'Arabic (Saudi Arabia)' => 'ภาษาอาหรับ (ซาอุดีอาระเบีย)',
+        'Article Color' => '',
         'ArticleTree' => 'ArticleTree',
         'Attachment Name' => 'ชื่อเอกสารที่แนบมา',
         'Avatar' => '',
@@ -8876,6 +8884,7 @@ Thanks for your help!
         'Manage support data.' => '',
         'Manage system files.' => '',
         'Manage tasks triggered by event or time based execution.' => '',
+        'Manage ticket article color.' => '',
         'Manage translation.' => '',
         'Management of ticket attribute relations.' => '',
         'Mark as Spam!' => 'มาร์คว่าเป็นสแปม!',

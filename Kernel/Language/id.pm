@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D/%M/%Y';
     $Self->{DateInputFormat}     = '%D/%M/%Y';
     $Self->{DateInputFormatLong} = '%D/%M/%Y - %T';
-    $Self->{Completeness}        = 0.603541564190851;
+    $Self->{Completeness}        = 0.603047182175623;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -240,6 +240,19 @@ sub Data {
         'If signing key/certificate is missing' => 'Jika kunci masuk/sertifikat telah hilang',
         'If encryption key/certificate is missing' => 'Jika kunci pengacak/sertifikat telah hilang',
 
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminArticleColor.tt
+        'Filter for Items' => '',
+        'Hint' => 'Petunjuk',
+        'Here you can see all possible article combination that are theoretically available in your system.' =>
+            '',
+        'You can define a background color for each article combination. Click on the color code.' =>
+            '',
+        'Article Color Management' => '',
+        'Sender Type' => 'Jenis pengirim',
+        'Communication Channel' => '',
+        'Visible for customer' => '',
+        'Color' => '',
+
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminAttachment.tt
         'Add Attachment' => 'Tambahkan lampira',
         'Filter for Attachments' => 'Filter untuk lampiran',
@@ -271,7 +284,6 @@ sub Data {
             '',
         'Filter for Communications' => '',
         'Filter for communications' => '',
-        'Hint' => 'Petunjuk',
         'In this screen you can see an overview about incoming and outgoing communications.' =>
             '',
         'You can change the sort and order of the columns by clicking on the column header.' =>
@@ -795,7 +807,6 @@ sub Data {
         'New type' => 'tipe baru',
         'Archive selected tickets' => 'Arsipkan tiket yang dipilih.',
         'Add Note' => 'Tambahkan catatan',
-        'Visible for customer' => '',
         'Time units' => 'Unit waktu',
         'Execute Ticket Commands' => 'Eksekusikan perintah tiket.',
         'Send agent/customer notifications on changes' => 'Kirim notifikasi agen/pelanggan saat pengubahan',
@@ -1373,7 +1384,6 @@ sub Data {
             '',
         'Links' => '',
         'View the admin manual on Github' => '',
-        'Filter for Items' => '',
         'No Matches' => '',
         'Sorry, your search didn\'t match any items.' => '',
         'Set as favorite' => '',
@@ -1621,7 +1631,6 @@ EMAILADDRESS:info@example.com dari, kepada atau Cc.',
         'Configure Priority Visibility and Defaults' => '',
         'Priority Management' => 'Prioritas manajemen',
         'Edit Priority' => 'Ubah prioritas',
-        'Color' => '',
         'This priority is present in a SysConfig setting, confirmation for updating settings to point to the new priority is needed!' =>
             '',
         'This priority is used in the following config settings:' => '',
@@ -1697,7 +1706,6 @@ EMAILADDRESS:info@example.com dari, kepada atau Cc.',
         'Filter available fields' => 'Penyaringan bidang tersedia',
         'Assigned Fields' => 'Fields ditugaskan',
         'Filter assigned fields' => '',
-        'Communication Channel' => '',
         'Is visible for customer' => '',
         'Text Template' => 'Template teks',
         'Auto fill' => '',
@@ -2803,7 +2811,6 @@ bin/znuny.Daemon.pl status\').',
         'Archive Search' => 'Pencarian arsip',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom.tt
-        'Sender Type' => 'Jenis pengirim',
         'Save filter settings as default' => 'Simpan aturan filter sebagai default',
         'Event Type' => 'Jenis event',
         'Save as default' => 'Simpan sebagai default',
@@ -8562,6 +8569,7 @@ Helpdesk Team Anda
         'Appointment list.' => '',
         'Appointment notifications' => '',
         'Arabic (Saudi Arabia)' => 'Arab (Saudi Arabia)',
+        'Article Color' => '',
         'ArticleTree' => 'ArticleTree',
         'Attachment Name' => 'Lampirkan nama',
         'Avatar' => '',
@@ -8873,6 +8881,7 @@ Helpdesk Team Anda
         'Manage support data.' => 'Mengelola data dukungan.',
         'Manage system files.' => '',
         'Manage tasks triggered by event or time based execution.' => 'Mengelola tugas dipicu oleh peristiwa atau waktu eksekusi berdasarkan.',
+        'Manage ticket article color.' => '',
         'Manage translation.' => '',
         'Management of ticket attribute relations.' => '',
         'Mark as Spam!' => 'Tandai sebagai Spam!',

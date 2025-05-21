@@ -625,6 +625,20 @@ CREATE TABLE translation (
     UNIQUE INDEX translation_uuid (dbcrud_uuid)
 );
 # ----------------------------------------------------------
+#  create table article_color
+# ----------------------------------------------------------
+CREATE TABLE article_color (
+    id SMALLINT NOT NULL AUTO_INCREMENT,
+    name VARCHAR (200) NOT NULL,
+    color VARCHAR (10) NOT NULL,
+    create_time DATETIME NOT NULL,
+    create_by INTEGER NOT NULL,
+    change_time DATETIME NOT NULL,
+    change_by INTEGER NOT NULL,
+    PRIMARY KEY(id),
+    UNIQUE INDEX article_color_name (name)
+);
+# ----------------------------------------------------------
 #  create table article_sender_type
 # ----------------------------------------------------------
 CREATE TABLE article_sender_type (

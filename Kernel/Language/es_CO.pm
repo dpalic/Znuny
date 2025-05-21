@@ -28,7 +28,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D/%M/%Y';
     $Self->{DateInputFormat}     = '%D/%M/%Y';
     $Self->{DateInputFormatLong} = '%D/%M/%Y - %T';
-    $Self->{Completeness}        = 0.32398753894081;
+    $Self->{Completeness}        = 0.323722149410223;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -242,6 +242,19 @@ sub Data {
         'If signing key/certificate is missing' => '',
         'If encryption key/certificate is missing' => '',
 
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminArticleColor.tt
+        'Filter for Items' => '',
+        'Hint' => 'Pista',
+        'Here you can see all possible article combination that are theoretically available in your system.' =>
+            '',
+        'You can define a background color for each article combination. Click on the color code.' =>
+            '',
+        'Article Color Management' => '',
+        'Sender Type' => '',
+        'Communication Channel' => '',
+        'Visible for customer' => '',
+        'Color' => 'Color',
+
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminAttachment.tt
         'Add Attachment' => 'Adjuntar Archivo',
         'Filter for Attachments' => 'Filtro para Archivos Adjuntos',
@@ -273,7 +286,6 @@ sub Data {
             '',
         'Filter for Communications' => '',
         'Filter for communications' => '',
-        'Hint' => 'Pista',
         'In this screen you can see an overview about incoming and outgoing communications.' =>
             '',
         'You can change the sort and order of the columns by clicking on the column header.' =>
@@ -797,7 +809,6 @@ sub Data {
         'New type' => 'Tipo nuevo',
         'Archive selected tickets' => 'Tickets seleccionados del archivo',
         'Add Note' => 'Añadir Nota',
-        'Visible for customer' => '',
         'Time units' => 'Unidades de tiempo',
         'Execute Ticket Commands' => '',
         'Send agent/customer notifications on changes' => 'Enviar notificación de cambios al agente/cliente',
@@ -1375,7 +1386,6 @@ sub Data {
             '',
         'Links' => '',
         'View the admin manual on Github' => '',
-        'Filter for Items' => '',
         'No Matches' => '',
         'Sorry, your search didn\'t match any items.' => '',
         'Set as favorite' => '',
@@ -1622,7 +1632,6 @@ sub Data {
         'Configure Priority Visibility and Defaults' => '',
         'Priority Management' => 'Administración de Prioridades',
         'Edit Priority' => 'Modificar Prioridad',
-        'Color' => 'Color',
         'This priority is present in a SysConfig setting, confirmation for updating settings to point to the new priority is needed!' =>
             '',
         'This priority is used in the following config settings:' => '',
@@ -1698,7 +1707,6 @@ sub Data {
         'Filter available fields' => '',
         'Assigned Fields' => '',
         'Filter assigned fields' => '',
-        'Communication Channel' => '',
         'Is visible for customer' => '',
         'Text Template' => '',
         'Auto fill' => '',
@@ -2803,7 +2811,6 @@ sub Data {
         'Archive Search' => 'Búsqueda de Archivo',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom.tt
-        'Sender Type' => '',
         'Save filter settings as default' => 'Grabar configuración de filtros como defecto',
         'Event Type' => '',
         'Save as default' => '',
@@ -8550,6 +8557,7 @@ Thanks for your help!
         'Appointment list.' => 'Lista de citas.',
         'Appointment notifications' => 'Notificaciones de citas',
         'Arabic (Saudi Arabia)' => '',
+        'Article Color' => '',
         'ArticleTree' => '',
         'Attachment Name' => '',
         'Avatar' => '',
@@ -8861,6 +8869,7 @@ Thanks for your help!
         'Manage support data.' => '',
         'Manage system files.' => '',
         'Manage tasks triggered by event or time based execution.' => '',
+        'Manage ticket article color.' => '',
         'Manage translation.' => '',
         'Management of ticket attribute relations.' => '',
         'Mark as Spam!' => 'Marcar como correo no deseado',

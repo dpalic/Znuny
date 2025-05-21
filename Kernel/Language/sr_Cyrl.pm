@@ -27,7 +27,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.889162157730776;
+    $Self->{Completeness}        = 0.88843381389253;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -241,6 +241,19 @@ sub Data {
         'If signing key/certificate is missing' => 'Ако потписивање кључа/сертификата недостаје',
         'If encryption key/certificate is missing' => 'Ако кључа/сертификат за шифрирање недостаје',
 
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminArticleColor.tt
+        'Filter for Items' => 'Филтер за ставке',
+        'Hint' => 'Савет',
+        'Here you can see all possible article combination that are theoretically available in your system.' =>
+            '',
+        'You can define a background color for each article combination. Click on the color code.' =>
+            '',
+        'Article Color Management' => '',
+        'Sender Type' => 'Тип пошиљаоца',
+        'Communication Channel' => 'Комуникациони канал',
+        'Visible for customer' => 'Видљиво клијенту',
+        'Color' => 'Боја',
+
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminAttachment.tt
         'Add Attachment' => 'Додај прилог',
         'Filter for Attachments' => 'Филтер за прилоге',
@@ -272,7 +285,6 @@ sub Data {
             'Прикажи само комуникационе логове креиране у одређеном временском периоду.',
         'Filter for Communications' => 'Филтер за комуникације',
         'Filter for communications' => 'Филтер за комуникације',
-        'Hint' => 'Савет',
         'In this screen you can see an overview about incoming and outgoing communications.' =>
             'У овом екрану можете прегледати све долазне и одлазне комуникације.',
         'You can change the sort and order of the columns by clicking on the column header.' =>
@@ -796,7 +808,6 @@ sub Data {
         'New type' => 'Нови тип',
         'Archive selected tickets' => 'Архивирај изабране тикете',
         'Add Note' => 'Додај напомену',
-        'Visible for customer' => 'Видљиво клијенту',
         'Time units' => 'Временске јединице',
         'Execute Ticket Commands' => 'Изврши команде тикета',
         'Send agent/customer notifications on changes' => 'Пошаљи обавештења оператеру/клијенту при променама',
@@ -1374,7 +1385,6 @@ sub Data {
             'Можете додати омиљене превлачењем курсора преко ставке са десне стране и кликом на иконицу звезде.',
         'Links' => 'Везе',
         'View the admin manual on Github' => 'Прегледајте упутство за администраторе на Github',
-        'Filter for Items' => 'Филтер за ставке',
         'No Matches' => 'Ништа није пронађено',
         'Sorry, your search didn\'t match any items.' => 'Жао нам је, ваша претрага није вратила резултате.',
         'Set as favorite' => 'Стави у омиљене',
@@ -1621,7 +1631,6 @@ sub Data {
         'Configure Priority Visibility and Defaults' => '',
         'Priority Management' => 'Управљање приоритетима',
         'Edit Priority' => 'Уреди Приоритет',
-        'Color' => 'Боја',
         'This priority is present in a SysConfig setting, confirmation for updating settings to point to the new priority is needed!' =>
             'Овај приоритет се користи у системској конфигурацији, неопходна је додатна потврда за промену подешавања на нову вредност!',
         'This priority is used in the following config settings:' => 'Овај приоритет се користи у следећим системским подешавањима:',
@@ -1697,7 +1706,6 @@ sub Data {
         'Filter available fields' => 'Филтрирај расположива поља',
         'Assigned Fields' => 'Додељена поља',
         'Filter assigned fields' => '',
-        'Communication Channel' => 'Комуникациони канал',
         'Is visible for customer' => 'Видљиво клијенту',
         'Text Template' => 'Шаблон текста',
         'Auto fill' => '',
@@ -2802,7 +2810,6 @@ sub Data {
         'Archive Search' => 'Претрага архива',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom.tt
-        'Sender Type' => 'Тип пошиљаоца',
         'Save filter settings as default' => 'Сачувај подешавања филтера као подразумевана',
         'Event Type' => 'Тип догађаја',
         'Save as default' => 'Сачувај као подразумевано',
@@ -8560,6 +8567,7 @@ Thanks for your help!
         'Appointment list.' => 'Листа термина.',
         'Appointment notifications' => 'Обавештења о термину',
         'Arabic (Saudi Arabia)' => 'Арапски (Саудијска арабија)',
+        'Article Color' => '',
         'ArticleTree' => 'Чланак у облику дрвета',
         'Attachment Name' => 'Назив прилога',
         'Avatar' => 'Аватар сличица',
@@ -8871,6 +8879,7 @@ Thanks for your help!
         'Manage support data.' => 'Управљање подацима подршке.',
         'Manage system files.' => '',
         'Manage tasks triggered by event or time based execution.' => 'Управља задацима покренутим од догађаја или на основу временског извршавања.',
+        'Manage ticket article color.' => '',
         'Manage translation.' => '',
         'Management of ticket attribute relations.' => '',
         'Mark as Spam!' => 'Означи као Спам!',

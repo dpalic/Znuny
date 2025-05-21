@@ -29,7 +29,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.614363010329562;
+    $Self->{Completeness}        = 0.613859764089122;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -246,6 +246,19 @@ sub Data {
         'If signing key/certificate is missing' => 'اگر امضای کلید / گواهی از دست رفته است',
         'If encryption key/certificate is missing' => 'اگر کلید رمزنگاری / گواهی از دست رفته است',
 
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminArticleColor.tt
+        'Filter for Items' => '',
+        'Hint' => 'تذکر',
+        'Here you can see all possible article combination that are theoretically available in your system.' =>
+            '',
+        'You can define a background color for each article combination. Click on the color code.' =>
+            '',
+        'Article Color Management' => '',
+        'Sender Type' => 'نوع فرستنده',
+        'Communication Channel' => '',
+        'Visible for customer' => '',
+        'Color' => '',
+
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminAttachment.tt
         'Add Attachment' => 'افزودن پیوست',
         'Filter for Attachments' => 'فیلتر برای پیوست‌ها',
@@ -277,7 +290,6 @@ sub Data {
             '',
         'Filter for Communications' => '',
         'Filter for communications' => '',
-        'Hint' => 'تذکر',
         'In this screen you can see an overview about incoming and outgoing communications.' =>
             '',
         'You can change the sort and order of the columns by clicking on the column header.' =>
@@ -801,7 +813,6 @@ sub Data {
         'New type' => 'نوع جدید',
         'Archive selected tickets' => 'آرشیو درخواست‌های انتخاب شده',
         'Add Note' => 'افزودن یادداشت',
-        'Visible for customer' => '',
         'Time units' => 'واحد زمان',
         'Execute Ticket Commands' => 'اجرای دستورات درخواست ',
         'Send agent/customer notifications on changes' => 'آگاه کردن کارشناس/مشتری به هنگام ایجاد تغییرات',
@@ -1379,7 +1390,6 @@ sub Data {
             '',
         'Links' => '',
         'View the admin manual on Github' => '',
-        'Filter for Items' => '',
         'No Matches' => '',
         'Sorry, your search didn\'t match any items.' => '',
         'Set as favorite' => '',
@@ -1626,7 +1636,6 @@ sub Data {
         'Configure Priority Visibility and Defaults' => '',
         'Priority Management' => 'مدیریت اولویت‌ها',
         'Edit Priority' => 'ویرایش الویت',
-        'Color' => '',
         'This priority is present in a SysConfig setting, confirmation for updating settings to point to the new priority is needed!' =>
             '',
         'This priority is used in the following config settings:' => '',
@@ -1702,7 +1711,6 @@ sub Data {
         'Filter available fields' => 'فیلتر زمینه های موجود',
         'Assigned Fields' => 'زمینه اختصاص داده',
         'Filter assigned fields' => '',
-        'Communication Channel' => '',
         'Is visible for customer' => '',
         'Text Template' => 'قالب متن',
         'Auto fill' => '',
@@ -2807,7 +2815,6 @@ sub Data {
         'Archive Search' => 'جستجوی آرشیو',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom.tt
-        'Sender Type' => 'نوع فرستنده',
         'Save filter settings as default' => 'ذخیره تنظیمات فیلتر به عنوان تنظیمات پیش فرض',
         'Event Type' => 'نوع رویداد',
         'Save as default' => 'ذخیره به عنوان پیش فرض',
@@ -8565,6 +8572,7 @@ Thanks for your help!
         'Appointment list.' => '',
         'Appointment notifications' => '',
         'Arabic (Saudi Arabia)' => 'عربی (عربستان سعودی)',
+        'Article Color' => '',
         'ArticleTree' => 'ArticleTree',
         'Attachment Name' => 'نام فایل پیوست',
         'Avatar' => '',
@@ -8876,6 +8884,7 @@ Thanks for your help!
         'Manage support data.' => 'مدیریت داده پشتیبانی می کند.',
         'Manage system files.' => '',
         'Manage tasks triggered by event or time based execution.' => 'مدیریت وظایف موجب شده توسط رویداد یا زمان اجرای .',
+        'Manage ticket article color.' => '',
         'Manage translation.' => '',
         'Management of ticket attribute relations.' => '',
         'Mark as Spam!' => 'به‌عنوان هرزنامه علامت بزن',

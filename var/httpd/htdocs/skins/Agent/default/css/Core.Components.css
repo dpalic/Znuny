@@ -292,6 +292,11 @@ handheld {
         color: var(--main-font-color) !important;
     }
 
+    .pill.contrast {
+        border: var(--border-width) solid var(--main-font-color);
+        color: var(--main-font-color) !important;
+    }
+
     /* **************************************** Scrollbar **************************************** */
     ::-webkit-scrollbar,
     body::-webkit-scrollbar,

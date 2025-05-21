@@ -29,7 +29,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y.%M.%D';
     $Self->{DateInputFormat}     = '%Y.%M.%D';
     $Self->{DateInputFormatLong} = '%Y.%M.%D - %T';
-    $Self->{Completeness}        = 0.32890637809477;
+    $Self->{Completeness}        = 0.328636959370904;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -243,6 +243,19 @@ sub Data {
         'If signing key/certificate is missing' => '',
         'If encryption key/certificate is missing' => '',
 
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminArticleColor.tt
+        'Filter for Items' => '',
+        'Hint' => 'Tips',
+        'Here you can see all possible article combination that are theoretically available in your system.' =>
+            '',
+        'You can define a background color for each article combination. Click on the color code.' =>
+            '',
+        'Article Color Management' => '',
+        'Sender Type' => 'Avsändartyp',
+        'Communication Channel' => '',
+        'Visible for customer' => '',
+        'Color' => 'Färg',
+
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminAttachment.tt
         'Add Attachment' => 'Lägg till bilaga',
         'Filter for Attachments' => 'Filter för bilagor',
@@ -274,7 +287,6 @@ sub Data {
             '',
         'Filter for Communications' => '',
         'Filter for communications' => '',
-        'Hint' => 'Tips',
         'In this screen you can see an overview about incoming and outgoing communications.' =>
             '',
         'You can change the sort and order of the columns by clicking on the column header.' =>
@@ -798,7 +810,6 @@ sub Data {
         'New type' => 'Ny typ',
         'Archive selected tickets' => 'Arkivera markerade ärenden',
         'Add Note' => 'Lägg till anteckning',
-        'Visible for customer' => '',
         'Time units' => 'Tidsenheter',
         'Execute Ticket Commands' => '',
         'Send agent/customer notifications on changes' => 'Meddela handläggare/kund när ändringar sker',
@@ -1376,7 +1387,6 @@ sub Data {
             '',
         'Links' => '',
         'View the admin manual on Github' => '',
-        'Filter for Items' => '',
         'No Matches' => '',
         'Sorry, your search didn\'t match any items.' => '',
         'Set as favorite' => '',
@@ -1623,7 +1633,6 @@ sub Data {
         'Configure Priority Visibility and Defaults' => '',
         'Priority Management' => 'Hantera prioriteter',
         'Edit Priority' => 'Redigera prioritet',
-        'Color' => 'Färg',
         'This priority is present in a SysConfig setting, confirmation for updating settings to point to the new priority is needed!' =>
             '',
         'This priority is used in the following config settings:' => '',
@@ -1699,7 +1708,6 @@ sub Data {
         'Filter available fields' => '',
         'Assigned Fields' => 'Tilldelade fält',
         'Filter assigned fields' => '',
-        'Communication Channel' => '',
         'Is visible for customer' => '',
         'Text Template' => 'Textmall',
         'Auto fill' => '',
@@ -2804,7 +2812,6 @@ sub Data {
         'Archive Search' => 'Arkivsökning',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom.tt
-        'Sender Type' => 'Avsändartyp',
         'Save filter settings as default' => 'Spara filterinställningar som standard',
         'Event Type' => 'Händelsetyp',
         'Save as default' => '',
@@ -8551,6 +8558,7 @@ Thanks for your help!
         'Appointment list.' => 'Kalenderhändelser.',
         'Appointment notifications' => 'Kalenderhändelsepåminnelser',
         'Arabic (Saudi Arabia)' => '',
+        'Article Color' => '',
         'ArticleTree' => '',
         'Attachment Name' => '',
         'Avatar' => '',
@@ -8862,6 +8870,7 @@ Thanks for your help!
         'Manage support data.' => 'Hantera supportdata.',
         'Manage system files.' => '',
         'Manage tasks triggered by event or time based execution.' => '',
+        'Manage ticket article color.' => '',
         'Manage translation.' => '',
         'Management of ticket attribute relations.' => '',
         'Mark as Spam!' => 'Markera som spam!',

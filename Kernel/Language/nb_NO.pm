@@ -35,7 +35,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.379078537465158;
+    $Self->{Completeness}        = 0.378768020969856;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -249,6 +249,19 @@ sub Data {
         'If signing key/certificate is missing' => '',
         'If encryption key/certificate is missing' => '',
 
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminArticleColor.tt
+        'Filter for Items' => '',
+        'Hint' => 'Hint',
+        'Here you can see all possible article combination that are theoretically available in your system.' =>
+            '',
+        'You can define a background color for each article combination. Click on the color code.' =>
+            '',
+        'Article Color Management' => '',
+        'Sender Type' => 'Sendertype',
+        'Communication Channel' => '',
+        'Visible for customer' => '',
+        'Color' => 'Farge',
+
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminAttachment.tt
         'Add Attachment' => 'Legg til vedlegg',
         'Filter for Attachments' => 'Filter for vedlegg',
@@ -280,7 +293,6 @@ sub Data {
             '',
         'Filter for Communications' => '',
         'Filter for communications' => '',
-        'Hint' => 'Hint',
         'In this screen you can see an overview about incoming and outgoing communications.' =>
             '',
         'You can change the sort and order of the columns by clicking on the column header.' =>
@@ -804,7 +816,6 @@ sub Data {
         'New type' => 'Ny type',
         'Archive selected tickets' => 'Arkiver valgte saker',
         'Add Note' => 'Legg til notis',
-        'Visible for customer' => '',
         'Time units' => 'Tidsenheter',
         'Execute Ticket Commands' => '',
         'Send agent/customer notifications on changes' => 'Send en saksbehandler-/kunde-varsling ved endringer',
@@ -1382,7 +1393,6 @@ sub Data {
             '',
         'Links' => '',
         'View the admin manual on Github' => '',
-        'Filter for Items' => '',
         'No Matches' => '',
         'Sorry, your search didn\'t match any items.' => '',
         'Set as favorite' => '',
@@ -1629,7 +1639,6 @@ sub Data {
         'Configure Priority Visibility and Defaults' => '',
         'Priority Management' => 'Administrasjon: Prioriteter',
         'Edit Priority' => 'Endre Prioritering',
-        'Color' => 'Farge',
         'This priority is present in a SysConfig setting, confirmation for updating settings to point to the new priority is needed!' =>
             '',
         'This priority is used in the following config settings:' => '',
@@ -1705,7 +1714,6 @@ sub Data {
         'Filter available fields' => 'Tiltrer på tilgjengelige felter',
         'Assigned Fields' => 'Tilordnede felter',
         'Filter assigned fields' => '',
-        'Communication Channel' => '',
         'Is visible for customer' => '',
         'Text Template' => 'Tekstmal',
         'Auto fill' => '',
@@ -2810,7 +2818,6 @@ sub Data {
         'Archive Search' => 'Arkivsøk',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom.tt
-        'Sender Type' => 'Sendertype',
         'Save filter settings as default' => 'Lagre filter som standard',
         'Event Type' => '',
         'Save as default' => 'Lagre som standard',
@@ -8557,6 +8564,7 @@ Thanks for your help!
         'Appointment list.' => 'Avtaleliste.',
         'Appointment notifications' => 'Varsler om avtale',
         'Arabic (Saudi Arabia)' => 'Arabisk (Saudi Arabia)',
+        'Article Color' => '',
         'ArticleTree' => '',
         'Attachment Name' => 'Vedleggsnavn',
         'Avatar' => '',
@@ -8868,6 +8876,7 @@ Thanks for your help!
         'Manage support data.' => '',
         'Manage system files.' => '',
         'Manage tasks triggered by event or time based execution.' => '',
+        'Manage ticket article color.' => '',
         'Manage translation.' => '',
         'Management of ticket attribute relations.' => '',
         'Mark as Spam!' => 'Marker som søppel',

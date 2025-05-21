@@ -32,7 +32,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%M-%D';
     $Self->{DateInputFormat}     = '%Y-%M-%D';
     $Self->{DateInputFormatLong} = '%Y-%M-%D - %T';
-    $Self->{Completeness}        = 0.892605345138547;
+    $Self->{Completeness}        = 0.891874180865007;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -246,6 +246,19 @@ sub Data {
         'If signing key/certificate is missing' => 'Ha az aláíró kulcs vagy tanúsítvány hiányzik',
         'If encryption key/certificate is missing' => 'Ha a titkosító kulcs vagy tanúsítvány hiányzik',
 
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminArticleColor.tt
+        'Filter for Items' => 'Szűrő az elemekhez',
+        'Hint' => 'Tipp',
+        'Here you can see all possible article combination that are theoretically available in your system.' =>
+            '',
+        'You can define a background color for each article combination. Click on the color code.' =>
+            '',
+        'Article Color Management' => '',
+        'Sender Type' => 'Küldőtípus',
+        'Communication Channel' => 'Kommunikációs csatorna',
+        'Visible for customer' => 'Látható az ügyfélnek',
+        'Color' => 'Szín',
+
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminAttachment.tt
         'Add Attachment' => 'Melléklet hozzáadása',
         'Filter for Attachments' => 'Szűrő a mellékletekhez',
@@ -277,7 +290,6 @@ sub Data {
             'Csak azon kommunikációs naplók megjelenítése, amelyek egy adott időtartományban jöttek létre.',
         'Filter for Communications' => 'Szűrő a kommunikációkhoz',
         'Filter for communications' => 'Szűrő a kommunikációkhoz',
-        'Hint' => 'Tipp',
         'In this screen you can see an overview about incoming and outgoing communications.' =>
             'Ezen a képernyőn egy áttekintőt láthat a bejövő és kimenő kommunikációkról.',
         'You can change the sort and order of the columns by clicking on the column header.' =>
@@ -801,7 +813,6 @@ sub Data {
         'New type' => 'Új típus',
         'Archive selected tickets' => 'Kijelölt jegyek archiválása',
         'Add Note' => 'Jegyzet hozzáadása',
-        'Visible for customer' => 'Látható az ügyfélnek',
         'Time units' => 'Időegységek',
         'Execute Ticket Commands' => 'Jegyparancsok végrehajtása',
         'Send agent/customer notifications on changes' => 'Ügyintéző/ügyfél értesítések küldése módosításkor',
@@ -1379,7 +1390,6 @@ sub Data {
             'Hozzáadhat kedvenceket, ha a kurzort a jobb oldalon lévő elemek fölé viszi, és a csillag ikonra kattint.',
         'Links' => 'Hivatkozások',
         'View the admin manual on Github' => 'Az adminisztrátori kézikönyv megtekintése a GitHubon',
-        'Filter for Items' => 'Szűrő az elemekhez',
         'No Matches' => 'Nincs találat',
         'Sorry, your search didn\'t match any items.' => 'Sajnáljuk, a keresése nem illeszkedik egyetlen elemre sem.',
         'Set as favorite' => 'Beállítás kedvencként',
@@ -1626,7 +1636,6 @@ sub Data {
         'Configure Priority Visibility and Defaults' => '',
         'Priority Management' => 'Prioritás-kezelés',
         'Edit Priority' => 'Prioritás szerkesztése',
-        'Color' => 'Szín',
         'This priority is present in a SysConfig setting, confirmation for updating settings to point to the new priority is needed!' =>
             'Ez a prioritás megtalálható egy rendszerbállításban, az új prioritásra mutató beállítások frissítésének megerősítése szükséges!',
         'This priority is used in the following config settings:' => 'Ez a prioritás a következő konfigurációs beállításokban van használva:',
@@ -1702,7 +1711,6 @@ sub Data {
         'Filter available fields' => 'Elérhető mezők szűrése',
         'Assigned Fields' => 'Hozzárendelt mezők',
         'Filter assigned fields' => '',
-        'Communication Channel' => 'Kommunikációs csatorna',
         'Is visible for customer' => 'Látható az ügyfélnek',
         'Text Template' => 'Szövegsablon',
         'Auto fill' => '',
@@ -2807,7 +2815,6 @@ sub Data {
         'Archive Search' => 'Archívum keresés',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom.tt
-        'Sender Type' => 'Küldőtípus',
         'Save filter settings as default' => 'Szűrőbeállítások mentése alapértelmezettként',
         'Event Type' => 'Eseménytípus',
         'Save as default' => 'Mentés alapértelmezettként',
@@ -8565,6 +8572,7 @@ Az Ön segélyszolgálat csapata
         'Appointment list.' => 'Időpontlista.',
         'Appointment notifications' => 'Időpont-értesítések',
         'Arabic (Saudi Arabia)' => 'Arab (Szaúd-Arábia)',
+        'Article Color' => '',
         'ArticleTree' => 'Bejegyzés fa',
         'Attachment Name' => 'Melléklet neve',
         'Avatar' => 'Profilkép',
@@ -8876,6 +8884,7 @@ Az Ön segélyszolgálat csapata
         'Manage support data.' => 'Támogatási adatok kezelése.',
         'Manage system files.' => '',
         'Manage tasks triggered by event or time based execution.' => 'Esemény vagy időalapú végrehajtás által aktivált feladatok kezelése.',
+        'Manage ticket article color.' => '',
         'Manage translation.' => '',
         'Management of ticket attribute relations.' => '',
         'Mark as Spam!' => 'Megjelölés szemétként!',

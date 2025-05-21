@@ -52,6 +52,10 @@ sub Run {
             Message => 'Create database table translation.',
             Module  => 'Translation',
         },
+        {
+            Message => 'Create database table article_color.',
+            Module  => 'ArticleColor',
+        },
     );
 
     return 1   if !@Tasks;

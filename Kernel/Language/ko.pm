@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%M-%D';
     $Self->{DateInputFormat}     = '%Y-%M-%D';
     $Self->{DateInputFormatLong} = '%Y-%M-%D %T';
-    $Self->{Completeness}        = 0.864404000655845;
+    $Self->{Completeness}        = 0.863695937090432;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -240,6 +240,19 @@ sub Data {
         'If signing key/certificate is missing' => '서명 키 / 인증서가 누락 된 경우',
         'If encryption key/certificate is missing' => '암호화 키 / 인증서가 누락 된 경우',
 
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminArticleColor.tt
+        'Filter for Items' => '항목 필터링',
+        'Hint' => '힌트',
+        'Here you can see all possible article combination that are theoretically available in your system.' =>
+            '',
+        'You can define a background color for each article combination. Click on the color code.' =>
+            '',
+        'Article Color Management' => '',
+        'Sender Type' => '발신자 유형',
+        'Communication Channel' => '통신 채널',
+        'Visible for customer' => '고객에게 공개',
+        'Color' => '색깔',
+
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminAttachment.tt
         'Add Attachment' => '첨부파일 추가',
         'Filter for Attachments' => '첨부파일 필터링',
@@ -271,7 +284,6 @@ sub Data {
             '특정 시간 범위에서 생성 된 통신 로그 만 표시합니다.',
         'Filter for Communications' => '',
         'Filter for communications' => '통신용 필터',
-        'Hint' => '힌트',
         'In this screen you can see an overview about incoming and outgoing communications.' =>
             '이 화면에서 들어오고 나가는 통신에 대한 개요를 볼 수 있습니다.',
         'You can change the sort and order of the columns by clicking on the column header.' =>
@@ -795,7 +807,6 @@ sub Data {
         'New type' => '새로운 유형',
         'Archive selected tickets' => '선택한 티켓 보관 처리',
         'Add Note' => '메모 추가',
-        'Visible for customer' => '고객에게 공개',
         'Time units' => '시간 단위',
         'Execute Ticket Commands' => '티켓 명령 실행',
         'Send agent/customer notifications on changes' => '변경 사항에 대한 상담원 / 고객 알림 보내기',
@@ -1373,7 +1384,6 @@ sub Data {
             '오른쪽에있는 항목 위로 커서를 이동하고 별 모양 아이콘을 클릭하여 즐겨 찾기를 추가 할 수 있습니다.',
         'Links' => '링크',
         'View the admin manual on Github' => 'Github에서 관리자 매뉴얼보기',
-        'Filter for Items' => '항목 필터링',
         'No Matches' => '일치하지 않는다.',
         'Sorry, your search didn\'t match any items.' => '죄송합니다. 검색 결과와 일치하지 않습니다.',
         'Set as favorite' => '즐겨찾기로 설정',
@@ -1620,7 +1630,6 @@ sub Data {
         'Configure Priority Visibility and Defaults' => '',
         'Priority Management' => '우선 순위 관리',
         'Edit Priority' => '우선 순위 편집',
-        'Color' => '색깔',
         'This priority is present in a SysConfig setting, confirmation for updating settings to point to the new priority is needed!' =>
             '이 우선 순위는 SysConfig 설정에 있으며 새로운 우선 순위를 가리 키도록 설정을 업데이트해야합니다!',
         'This priority is used in the following config settings:' => '이 우선 순위는 다음 구성 설정에서 사용됩니다.',
@@ -1696,7 +1705,6 @@ sub Data {
         'Filter available fields' => '사용 가능한 필드 필터링',
         'Assigned Fields' => '할당된 필드',
         'Filter assigned fields' => '',
-        'Communication Channel' => '통신 채널',
         'Is visible for customer' => '고객에게 표시됩니다.',
         'Text Template' => '텍스트 템플릿',
         'Auto fill' => '',
@@ -2801,7 +2809,6 @@ sub Data {
         'Archive Search' => '아카이브 검색',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom.tt
-        'Sender Type' => '발신자 유형',
         'Save filter settings as default' => '필터 설정을 기본값으로 저장',
         'Event Type' => '이벤트 유형',
         'Save as default' => '기본값으로 저장',
@@ -8559,6 +8566,7 @@ Thanks for your help!
         'Appointment list.' => '약속 목록',
         'Appointment notifications' => '약속 알림',
         'Arabic (Saudi Arabia)' => '아랍어 (사우디 아라비아)',
+        'Article Color' => '',
         'ArticleTree' => 'ArticleTree',
         'Attachment Name' => '첨부명',
         'Avatar' => '화신',
@@ -8870,6 +8878,7 @@ Thanks for your help!
         'Manage support data.' => '지원 데이터를 관리합니다.',
         'Manage system files.' => '',
         'Manage tasks triggered by event or time based execution.' => '이벤트 또는 시간 기반 실행에 의해 트리거된 작업을 관리합니다.',
+        'Manage ticket article color.' => '',
         'Manage translation.' => '',
         'Management of ticket attribute relations.' => '',
         'Mark as Spam!' => '스팸으로 표시하십시오!',

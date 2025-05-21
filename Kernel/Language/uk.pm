@@ -27,7 +27,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%M/%D/%Y';
     $Self->{DateInputFormat}     = '%M/%D/%Y';
     $Self->{DateInputFormatLong} = '%M/%D/%Y - %T';
-    $Self->{Completeness}        = 0.43449745859977;
+    $Self->{Completeness}        = 0.434141546526868;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -241,6 +241,19 @@ sub Data {
         'If signing key/certificate is missing' => 'Якщо ключ підпису або сертифікат відсутні',
         'If encryption key/certificate is missing' => 'Якщо ключ шифрування або сертифікат відсутні',
 
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminArticleColor.tt
+        'Filter for Items' => '',
+        'Hint' => 'Підказка',
+        'Here you can see all possible article combination that are theoretically available in your system.' =>
+            '',
+        'You can define a background color for each article combination. Click on the color code.' =>
+            '',
+        'Article Color Management' => '',
+        'Sender Type' => 'Тип відправника',
+        'Communication Channel' => '',
+        'Visible for customer' => '',
+        'Color' => 'Колір',
+
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminAttachment.tt
         'Add Attachment' => 'Додати вкладення',
         'Filter for Attachments' => 'Фільтр для Прикріплень',
@@ -272,7 +285,6 @@ sub Data {
             '',
         'Filter for Communications' => '',
         'Filter for communications' => '',
-        'Hint' => 'Підказка',
         'In this screen you can see an overview about incoming and outgoing communications.' =>
             '',
         'You can change the sort and order of the columns by clicking on the column header.' =>
@@ -796,7 +808,6 @@ sub Data {
         'New type' => 'Новий тип',
         'Archive selected tickets' => 'Заархівувати обрані заявки',
         'Add Note' => 'Додати замітку',
-        'Visible for customer' => '',
         'Time units' => 'Одиниці часу',
         'Execute Ticket Commands' => 'Виконати команди заявки',
         'Send agent/customer notifications on changes' => 'Відправляти повідомлення агентові при змінах',
@@ -1374,7 +1385,6 @@ sub Data {
             '',
         'Links' => '',
         'View the admin manual on Github' => '',
-        'Filter for Items' => '',
         'No Matches' => '',
         'Sorry, your search didn\'t match any items.' => '',
         'Set as favorite' => '',
@@ -1621,7 +1631,6 @@ sub Data {
         'Configure Priority Visibility and Defaults' => '',
         'Priority Management' => 'Керування пріоритетами',
         'Edit Priority' => 'Змінити пріоритет',
-        'Color' => 'Колір',
         'This priority is present in a SysConfig setting, confirmation for updating settings to point to the new priority is needed!' =>
             '',
         'This priority is used in the following config settings:' => '',
@@ -1697,7 +1706,6 @@ sub Data {
         'Filter available fields' => 'Фільтрувати доступні поля',
         'Assigned Fields' => 'Призначені поля',
         'Filter assigned fields' => '',
-        'Communication Channel' => '',
         'Is visible for customer' => '',
         'Text Template' => 'Шаблон тексту',
         'Auto fill' => '',
@@ -2802,7 +2810,6 @@ sub Data {
         'Archive Search' => 'Пошук в архіві',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom.tt
-        'Sender Type' => 'Тип відправника',
         'Save filter settings as default' => 'Зберегти умови фільтра для показу за замовчуванням',
         'Event Type' => 'Тип події',
         'Save as default' => 'Зберегти як типовий',
@@ -8549,6 +8556,7 @@ Thanks for your help!
         'Appointment list.' => 'Перелік подій',
         'Appointment notifications' => 'Повідомлення по події',
         'Arabic (Saudi Arabia)' => '',
+        'Article Color' => '',
         'ArticleTree' => '',
         'Attachment Name' => 'Назва Додатка',
         'Avatar' => '',
@@ -8860,6 +8868,7 @@ Thanks for your help!
         'Manage support data.' => '',
         'Manage system files.' => '',
         'Manage tasks triggered by event or time based execution.' => '',
+        'Manage ticket article color.' => '',
         'Manage translation.' => '',
         'Management of ticket attribute relations.' => '',
         'Mark as Spam!' => 'Позначити як спам!',

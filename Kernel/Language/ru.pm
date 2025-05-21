@@ -38,7 +38,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.868339071979013;
+    $Self->{Completeness}        = 0.867627785058978;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -252,6 +252,19 @@ sub Data {
         'If signing key/certificate is missing' => 'Если ключ/сертификат подписи отсутствует',
         'If encryption key/certificate is missing' => 'Если ключ/сертификат шифрования отсутствует',
 
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminArticleColor.tt
+        'Filter for Items' => 'Фильтр для элементов',
+        'Hint' => 'Подсказка',
+        'Here you can see all possible article combination that are theoretically available in your system.' =>
+            '',
+        'You can define a background color for each article combination. Click on the color code.' =>
+            '',
+        'Article Color Management' => '',
+        'Sender Type' => 'Тип отправителя',
+        'Communication Channel' => 'Канал связи',
+        'Visible for customer' => 'Видно клиенту',
+        'Color' => 'Цвет',
+
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminAttachment.tt
         'Add Attachment' => 'Добавить вложение',
         'Filter for Attachments' => 'Фильтр для вложений',
@@ -283,7 +296,6 @@ sub Data {
             'Показать записи журнала связи созданные в определенном промежутке времени.',
         'Filter for Communications' => 'Фильтр по сеансам связи',
         'Filter for communications' => 'Фильтр для сеансов',
-        'Hint' => 'Подсказка',
         'In this screen you can see an overview about incoming and outgoing communications.' =>
             'На этой странице Вы можете видеть обзор входящих и исходящих сеансов связи.',
         'You can change the sort and order of the columns by clicking on the column header.' =>
@@ -807,7 +819,6 @@ sub Data {
         'New type' => 'Новый тип',
         'Archive selected tickets' => 'Архивировать выбранные заявки',
         'Add Note' => 'Добавить заметку/сообщение',
-        'Visible for customer' => 'Видно клиенту',
         'Time units' => 'Затраченное время',
         'Execute Ticket Commands' => 'Выполнить действия над заявкой',
         'Send agent/customer notifications on changes' => 'Отправить уведомление агенту/клиенту при изменениях',
@@ -1385,7 +1396,6 @@ sub Data {
             'Можно добавить отдельные настройки в Избранные кликнув мышкой по "звездочке" справа в списке параметров.',
         'Links' => 'Ссылки',
         'View the admin manual on Github' => 'Смотрите руководство администратора на Github',
-        'Filter for Items' => 'Фильтр для элементов',
         'No Matches' => 'Совпадений не найдено',
         'Sorry, your search didn\'t match any items.' => 'К сожалению, поиск не дал результатов.',
         'Set as favorite' => 'Назначить избранным',
@@ -1632,7 +1642,6 @@ sub Data {
         'Configure Priority Visibility and Defaults' => '',
         'Priority Management' => 'Управление приоритетами',
         'Edit Priority' => 'Изменить приоритет',
-        'Color' => 'Цвет',
         'This priority is present in a SysConfig setting, confirmation for updating settings to point to the new priority is needed!' =>
             'Это значение приоритета указано в настройках SysConfig, требуется подтверждение для обновления настроек для его использования в системе!',
         'This priority is used in the following config settings:' => 'Этот приоритет используется в следующих параметрах конфигурации:',
@@ -1708,7 +1717,6 @@ sub Data {
         'Filter available fields' => 'Фильтр доступных полей',
         'Assigned Fields' => 'Назначенные поля',
         'Filter assigned fields' => 'Фильтр назначенных полей',
-        'Communication Channel' => 'Канал связи',
         'Is visible for customer' => 'Виден клиенту',
         'Text Template' => 'Текстовый шаблон',
         'Auto fill' => '',
@@ -2813,7 +2821,6 @@ sub Data {
         'Archive Search' => 'Поиск в архиве',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom.tt
-        'Sender Type' => 'Тип отправителя',
         'Save filter settings as default' => 'Сохранить условия фильтра для показа по умолчанию',
         'Event Type' => 'Тип события',
         'Save as default' => 'Сохранить, как значение по умолчанию',
@@ -8571,6 +8578,7 @@ Thanks for your help!
         'Appointment list.' => 'Список мероприятий.',
         'Appointment notifications' => 'Уведомления о мероприятиях',
         'Arabic (Saudi Arabia)' => 'Арабский (Саудовская Аравия)',
+        'Article Color' => '',
         'ArticleTree' => 'Дерево сообщений',
         'Attachment Name' => 'Имя вложения',
         'Avatar' => 'Аватар',
@@ -8882,6 +8890,7 @@ Thanks for your help!
         'Manage support data.' => 'Управление данными для поддержки.',
         'Manage system files.' => 'Управление системными файлами.',
         'Manage tasks triggered by event or time based execution.' => 'Управление заданиями, основанными на событиях или времени выполнения',
+        'Manage ticket article color.' => '',
         'Manage translation.' => '',
         'Management of ticket attribute relations.' => 'Управление связями свойств заявки.',
         'Mark as Spam!' => 'Пометить как спам!',

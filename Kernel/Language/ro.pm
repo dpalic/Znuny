@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.287260206591244;
+    $Self->{Completeness}        = 0.287024901703801;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -240,6 +240,19 @@ sub Data {
         'If signing key/certificate is missing' => 'Dacă cheia de semnare/certificatul lipsește',
         'If encryption key/certificate is missing' => 'Dacă cheia de criptare/certificatul lipsește',
 
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminArticleColor.tt
+        'Filter for Items' => '',
+        'Hint' => 'Sugestie',
+        'Here you can see all possible article combination that are theoretically available in your system.' =>
+            '',
+        'You can define a background color for each article combination. Click on the color code.' =>
+            '',
+        'Article Color Management' => '',
+        'Sender Type' => 'Tipul Expeditorului',
+        'Communication Channel' => '',
+        'Visible for customer' => '',
+        'Color' => 'Culoare',
+
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminAttachment.tt
         'Add Attachment' => 'Adăugare ataşare',
         'Filter for Attachments' => 'Filtru pentru atașamente',
@@ -271,7 +284,6 @@ sub Data {
             'Afișați doar jurnalele de comunicare create într-un interval de timp specific.',
         'Filter for Communications' => 'Filtru pentru comunicații',
         'Filter for communications' => 'Filtru pentru comunicații',
-        'Hint' => 'Sugestie',
         'In this screen you can see an overview about incoming and outgoing communications.' =>
             'În acest ecran puteți vedea o imagine de ansamblu despre comunicațiile de intrare și de ieșire.',
         'You can change the sort and order of the columns by clicking on the column header.' =>
@@ -795,7 +807,6 @@ sub Data {
         'New type' => 'Tip nou',
         'Archive selected tickets' => 'Arhivați tichetele selectate',
         'Add Note' => 'Adăugați o notă',
-        'Visible for customer' => '',
         'Time units' => 'Unități de timp',
         'Execute Ticket Commands' => 'Execută comenzile tichetului',
         'Send agent/customer notifications on changes' => 'Trimiteți notificări agentului/clientului despre modificări',
@@ -1373,7 +1384,6 @@ sub Data {
             '',
         'Links' => '',
         'View the admin manual on Github' => '',
-        'Filter for Items' => '',
         'No Matches' => '',
         'Sorry, your search didn\'t match any items.' => 'Ne pare rău, căutarea dvs. nu a corespuns niciunui articol.',
         'Set as favorite' => 'Setare ca favorit',
@@ -1620,7 +1630,6 @@ sub Data {
         'Configure Priority Visibility and Defaults' => '',
         'Priority Management' => 'Administrarea priorităților',
         'Edit Priority' => 'Editați prioritatea',
-        'Color' => 'Culoare',
         'This priority is present in a SysConfig setting, confirmation for updating settings to point to the new priority is needed!' =>
             '',
         'This priority is used in the following config settings:' => '',
@@ -1696,7 +1705,6 @@ sub Data {
         'Filter available fields' => 'Filtrați câmpurile disponibile',
         'Assigned Fields' => 'Câmpuri atribuite',
         'Filter assigned fields' => '',
-        'Communication Channel' => '',
         'Is visible for customer' => '',
         'Text Template' => 'Șablon text',
         'Auto fill' => '',
@@ -2801,7 +2809,6 @@ sub Data {
         'Archive Search' => 'Căutare în arhivă',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom.tt
-        'Sender Type' => 'Tipul Expeditorului',
         'Save filter settings as default' => 'Salvează configurația filtrului ca fiind implicită',
         'Event Type' => 'Tip Eveniment',
         'Save as default' => 'Salvează ca implicit',
@@ -8548,6 +8555,7 @@ Thanks for your help!
         'Appointment list.' => '',
         'Appointment notifications' => '',
         'Arabic (Saudi Arabia)' => '',
+        'Article Color' => '',
         'ArticleTree' => '',
         'Attachment Name' => 'Nume atașament',
         'Avatar' => '',
@@ -8859,6 +8867,7 @@ Thanks for your help!
         'Manage support data.' => '',
         'Manage system files.' => '',
         'Manage tasks triggered by event or time based execution.' => '',
+        'Manage ticket article color.' => '',
         'Manage translation.' => '',
         'Management of ticket attribute relations.' => '',
         'Mark as Spam!' => 'Marcheaza-l ca Spam!',

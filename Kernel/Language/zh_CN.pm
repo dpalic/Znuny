@@ -33,7 +33,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y.%M.%D';
     $Self->{DateInputFormat}     = '%Y.%M.%D';
     $Self->{DateInputFormatLong} = '%Y.%M.%D - %T';
-    $Self->{Completeness}        = 0.892605345138547;
+    $Self->{Completeness}        = 0.891874180865007;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -247,6 +247,19 @@ sub Data {
         'If signing key/certificate is missing' => '如果签名密钥/证书丢失了',
         'If encryption key/certificate is missing' => '如果加密密钥/证书丢失了',
 
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminArticleColor.tt
+        'Filter for Items' => '条目过滤器',
+        'Hint' => '提示',
+        'Here you can see all possible article combination that are theoretically available in your system.' =>
+            '',
+        'You can define a background color for each article combination. Click on the color code.' =>
+            '',
+        'Article Color Management' => '',
+        'Sender Type' => '发送人类型',
+        'Communication Channel' => '通信渠道',
+        'Visible for customer' => '对客户的可见性',
+        'Color' => '颜色',
+
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminAttachment.tt
         'Add Attachment' => '添加附件',
         'Filter for Attachments' => '附件过滤器',
@@ -278,7 +291,6 @@ sub Data {
             '仅显示指定时间范围内创建的通信日志。',
         'Filter for Communications' => '交互筛选',
         'Filter for communications' => '通信过滤器',
-        'Hint' => '提示',
         'In this screen you can see an overview about incoming and outgoing communications.' =>
             '在此屏幕中，你可以看到有关传入和外发通信的概览。',
         'You can change the sort and order of the columns by clicking on the column header.' =>
@@ -802,7 +814,6 @@ sub Data {
         'New type' => '指定类型',
         'Archive selected tickets' => '归档选中的工单',
         'Add Note' => '添加备注',
-        'Visible for customer' => '对客户的可见性',
         'Time units' => '时间单元',
         'Execute Ticket Commands' => '执行工单指令',
         'Send agent/customer notifications on changes' => '给服务人员/客户发送通知',
@@ -1380,7 +1391,6 @@ sub Data {
             '你可以移动鼠标到条目的右上角并点击星形图标来将条目添加到收藏夹。',
         'Links' => '链接',
         'View the admin manual on Github' => '查看Github上的管理手册',
-        'Filter for Items' => '条目过滤器',
         'No Matches' => '无匹配',
         'Sorry, your search didn\'t match any items.' => '对不起，你的搜索不匹配任何条目。',
         'Set as favorite' => '添加到收藏夹',
@@ -1627,7 +1637,6 @@ sub Data {
         'Configure Priority Visibility and Defaults' => '',
         'Priority Management' => '优先级管理',
         'Edit Priority' => '编辑优先级',
-        'Color' => '颜色',
         'This priority is present in a SysConfig setting, confirmation for updating settings to point to the new priority is needed!' =>
             '此优先级已存在于系统配置的一个设置中，需要更新设置以确认指向新的优先级！',
         'This priority is used in the following config settings:' => '这个优先级已用于以下的系统配置设置：',
@@ -1703,7 +1712,6 @@ sub Data {
         'Filter available fields' => '可用字段的过滤器',
         'Assigned Fields' => '分配的字段',
         'Filter assigned fields' => '',
-        'Communication Channel' => '通信渠道',
         'Is visible for customer' => '对客户可见',
         'Text Template' => '内容模板',
         'Auto fill' => '',
@@ -2808,7 +2816,6 @@ sub Data {
         'Archive Search' => '归档搜索',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom.tt
-        'Sender Type' => '发送人类型',
         'Save filter settings as default' => '将过滤器设置保存为默认过滤器',
         'Event Type' => '事件类型',
         'Save as default' => '保存为默认',
@@ -8565,6 +8572,7 @@ Thanks for your help!
         'Appointment list.' => '预约列表。',
         'Appointment notifications' => '预约通知',
         'Arabic (Saudi Arabia)' => '阿拉伯语（沙特阿拉伯）',
+        'Article Color' => '',
         'ArticleTree' => '信件树',
         'Attachment Name' => '附件名',
         'Avatar' => '头像',
@@ -8876,6 +8884,7 @@ Thanks for your help!
         'Manage support data.' => '管理支持数据。',
         'Manage system files.' => '',
         'Manage tasks triggered by event or time based execution.' => '管理事件触发或基于时间执行的任务。',
+        'Manage ticket article color.' => '',
         'Manage translation.' => '',
         'Management of ticket attribute relations.' => '',
         'Mark as Spam!' => '标记为垃圾!',

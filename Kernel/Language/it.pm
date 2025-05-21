@@ -35,7 +35,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D/%M/%Y';
     $Self->{DateInputFormat}     = '%D/%M/%Y';
     $Self->{DateInputFormatLong} = '%D/%M/%Y - %T';
-    $Self->{Completeness}        = 0.599442531562551;
+    $Self->{Completeness}        = 0.598951507208388;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -249,6 +249,19 @@ sub Data {
         'If signing key/certificate is missing' => 'Nel caso in cui il certificato di firma sia mancante',
         'If encryption key/certificate is missing' => 'Nel caso in cui la chiave di criptaggio sia mancante',
 
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminArticleColor.tt
+        'Filter for Items' => 'Filtro per articoli',
+        'Hint' => 'Suggerimento',
+        'Here you can see all possible article combination that are theoretically available in your system.' =>
+            '',
+        'You can define a background color for each article combination. Click on the color code.' =>
+            '',
+        'Article Color Management' => '',
+        'Sender Type' => 'Tipo mittente',
+        'Communication Channel' => 'Canale di comunicazione',
+        'Visible for customer' => 'Visibile per il cliente',
+        'Color' => 'Colore',
+
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminAttachment.tt
         'Add Attachment' => 'Aggiungi allegato',
         'Filter for Attachments' => 'Filtro per gli allegati',
@@ -280,7 +293,6 @@ sub Data {
             'Mostrare solo i registri di comunicazione creati in un intervallo di tempo specifico.',
         'Filter for Communications' => 'Filtra per Comunicazioni',
         'Filter for communications' => 'Filtro per le comunicazioni',
-        'Hint' => 'Suggerimento',
         'In this screen you can see an overview about incoming and outgoing communications.' =>
             'In questa schermata è possibile visualizzare una panoramica delle comunicazioni in entrata e in uscita.',
         'You can change the sort and order of the columns by clicking on the column header.' =>
@@ -804,7 +816,6 @@ sub Data {
         'New type' => 'Nuovo tipo',
         'Archive selected tickets' => 'Archivia i ticket selezionati',
         'Add Note' => 'Aggiungi nota',
-        'Visible for customer' => 'Visibile per il cliente',
         'Time units' => 'Tempo',
         'Execute Ticket Commands' => 'Esegui i comandi associati al ticket',
         'Send agent/customer notifications on changes' => 'Invia notifiche ad agente/cliente alla modifica',
@@ -1382,7 +1393,6 @@ sub Data {
             'Puoi aggiungere i preferiti spostando il cursore sugli elementi a destra e facendo clic sull\'icona a forma di stella.',
         'Links' => 'Collegamenti',
         'View the admin manual on Github' => 'Visualizza il manuale di amministrazione su Github',
-        'Filter for Items' => 'Filtro per articoli',
         'No Matches' => 'Nessuna corrispondenza',
         'Sorry, your search didn\'t match any items.' => 'Siamo spiacenti, la tua ricerca non ha prodotto risultati.',
         'Set as favorite' => 'Imposta come preferito',
@@ -1629,7 +1639,6 @@ sub Data {
         'Configure Priority Visibility and Defaults' => '',
         'Priority Management' => 'Gestione Priorità',
         'Edit Priority' => 'Modifica Priorità',
-        'Color' => 'Colore',
         'This priority is present in a SysConfig setting, confirmation for updating settings to point to the new priority is needed!' =>
             'Questa priorità è presente in un\'impostazione di SysConfig, è necessaria la conferma dell\'aggiornamento delle impostazioni per puntare alla nuova priorità!',
         'This priority is used in the following config settings:' => 'Questa priorità viene utilizzata nelle seguenti impostazioni di configurazione:',
@@ -1705,7 +1714,6 @@ sub Data {
         'Filter available fields' => 'Filtro sui campi disponibili',
         'Assigned Fields' => 'Campi assegnati',
         'Filter assigned fields' => '',
-        'Communication Channel' => 'Canale di comunicazione',
         'Is visible for customer' => 'È visibile per il cliente',
         'Text Template' => 'Modello di testo',
         'Auto fill' => '',
@@ -2810,7 +2818,6 @@ sub Data {
         'Archive Search' => 'Ricerca archivio',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom.tt
-        'Sender Type' => 'Tipo mittente',
         'Save filter settings as default' => 'Salva impostazioni filtri come predefinite',
         'Event Type' => 'Tipo evento',
         'Save as default' => 'Salva come predefinito',
@@ -8572,6 +8579,7 @@ Il tuo helpdesk.
         'Appointment list.' => '',
         'Appointment notifications' => '',
         'Arabic (Saudi Arabia)' => 'Arabo (Arabia Saudita)',
+        'Article Color' => '',
         'ArticleTree' => '',
         'Attachment Name' => 'Nome allegato',
         'Avatar' => '',
@@ -8883,6 +8891,7 @@ Il tuo helpdesk.
         'Manage support data.' => 'Gestisci i dati di supporto.',
         'Manage system files.' => '',
         'Manage tasks triggered by event or time based execution.' => '',
+        'Manage ticket article color.' => '',
         'Manage translation.' => '',
         'Management of ticket attribute relations.' => '',
         'Mark as Spam!' => 'Contrassegna come spam!',

@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.535169699950812;
+    $Self->{Completeness}        = 0.534731323722149;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -240,6 +240,19 @@ sub Data {
         'If signing key/certificate is missing' => 'Jika kunci penandatangan/sijil hilang',
         'If encryption key/certificate is missing' => 'Jika kunci penyulitan/sijil hilang',
 
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminArticleColor.tt
+        'Filter for Items' => '',
+        'Hint' => 'Petunjuk',
+        'Here you can see all possible article combination that are theoretically available in your system.' =>
+            '',
+        'You can define a background color for each article combination. Click on the color code.' =>
+            '',
+        'Article Color Management' => '',
+        'Sender Type' => 'Jenis penghantar',
+        'Communication Channel' => '',
+        'Visible for customer' => '',
+        'Color' => '',
+
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminAttachment.tt
         'Add Attachment' => 'Tambah lampiran',
         'Filter for Attachments' => 'Penapis lampiran',
@@ -271,7 +284,6 @@ sub Data {
             '',
         'Filter for Communications' => '',
         'Filter for communications' => '',
-        'Hint' => 'Petunjuk',
         'In this screen you can see an overview about incoming and outgoing communications.' =>
             '',
         'You can change the sort and order of the columns by clicking on the column header.' =>
@@ -795,7 +807,6 @@ sub Data {
         'New type' => 'jenis baru',
         'Archive selected tickets' => 'Arkib dipilih tiket',
         'Add Note' => 'Tambah Nota',
-        'Visible for customer' => '',
         'Time units' => 'masa unit',
         'Execute Ticket Commands' => 'Jalankan Arahan Tiket',
         'Send agent/customer notifications on changes' => 'Hantar ejen / pelanggan pemberitahuan mengenai perubahan',
@@ -1373,7 +1384,6 @@ sub Data {
             '',
         'Links' => '',
         'View the admin manual on Github' => '',
-        'Filter for Items' => '',
         'No Matches' => '',
         'Sorry, your search didn\'t match any items.' => '',
         'Set as favorite' => '',
@@ -1620,7 +1630,6 @@ sub Data {
         'Configure Priority Visibility and Defaults' => '',
         'Priority Management' => 'Pengurusan keutamaan',
         'Edit Priority' => 'Edit Keutamaan',
-        'Color' => '',
         'This priority is present in a SysConfig setting, confirmation for updating settings to point to the new priority is needed!' =>
             '',
         'This priority is used in the following config settings:' => '',
@@ -1696,7 +1705,6 @@ sub Data {
         'Filter available fields' => 'Tapis medan tersedia',
         'Assigned Fields' => 'Medan yang ditetapkan',
         'Filter assigned fields' => '',
-        'Communication Channel' => '',
         'Is visible for customer' => '',
         'Text Template' => 'Templat teks',
         'Auto fill' => '',
@@ -2801,7 +2809,6 @@ sub Data {
         'Archive Search' => 'Carian Arkib',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom.tt
-        'Sender Type' => 'Jenis penghantar',
         'Save filter settings as default' => 'Simpan tetapan penapis sebagai piawai.',
         'Event Type' => 'Jenis Acara',
         'Save as default' => 'Simpan sebagai lalai',
@@ -8562,6 +8569,7 @@ Kumpulan MejaBantuan Anda
         'Appointment list.' => '',
         'Appointment notifications' => '',
         'Arabic (Saudi Arabia)' => 'Arab (Arab Saudi)',
+        'Article Color' => '',
         'ArticleTree' => 'PokokArtikel',
         'Attachment Name' => 'Nama Lampiran',
         'Avatar' => '',
@@ -8873,6 +8881,7 @@ Kumpulan MejaBantuan Anda
         'Manage support data.' => 'Urus data sokongan.',
         'Manage system files.' => '',
         'Manage tasks triggered by event or time based execution.' => 'Uruskan tugas yang dicetuskan oleh acara atau pelaksanaan berdasarkan masa.',
+        'Manage ticket article color.' => '',
         'Manage translation.' => '',
         'Management of ticket attribute relations.' => '',
         'Mark as Spam!' => 'Tanda sebagai Spam!',

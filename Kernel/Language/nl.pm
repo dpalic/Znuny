@@ -32,7 +32,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D-%M-%Y';
     $Self->{DateInputFormat}     = '%D-%M-%Y';
     $Self->{DateInputFormatLong} = '%D-%M-%Y - %T';
-    $Self->{Completeness}        = 0.494835218888342;
+    $Self->{Completeness}        = 0.494429882044561;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -246,6 +246,19 @@ sub Data {
         'If signing key/certificate is missing' => 'Als signeer sleutel/certificaat ontbreekt',
         'If encryption key/certificate is missing' => 'Als encryptie sleutel/certificaat ontbreekt',
 
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminArticleColor.tt
+        'Filter for Items' => '',
+        'Hint' => 'Opmerking',
+        'Here you can see all possible article combination that are theoretically available in your system.' =>
+            '',
+        'You can define a background color for each article combination. Click on the color code.' =>
+            '',
+        'Article Color Management' => '',
+        'Sender Type' => 'Soort verzender',
+        'Communication Channel' => 'Communicatiekanaal',
+        'Visible for customer' => 'Zichtbaar voor klant',
+        'Color' => 'Kleur',
+
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminAttachment.tt
         'Add Attachment' => 'Nieuwe bijlage',
         'Filter for Attachments' => 'Filter op bijlagen',
@@ -277,7 +290,6 @@ sub Data {
             'Toon alleen communicatielogboeken gemaakt binnen een bepaald tijdbereik.',
         'Filter for Communications' => 'Filter op communicatie',
         'Filter for communications' => 'Filter op communicatie',
-        'Hint' => 'Opmerking',
         'In this screen you can see an overview about incoming and outgoing communications.' =>
             'Op dit scherm ziet u een overzicht van de binnenkomende en uitgaande communicatie.',
         'You can change the sort and order of the columns by clicking on the column header.' =>
@@ -801,7 +813,6 @@ sub Data {
         'New type' => 'Nieuw type',
         'Archive selected tickets' => 'Archiveer geselecteerde tickets',
         'Add Note' => 'Notitie toevoegen',
-        'Visible for customer' => 'Zichtbaar voor klant',
         'Time units' => 'Bestede tijd',
         'Execute Ticket Commands' => 'Ticketcommando\'s uitvoeren',
         'Send agent/customer notifications on changes' => 'Stuur behandelaars / klanten een melding bij wijzigingen',
@@ -1379,7 +1390,6 @@ sub Data {
             '',
         'Links' => 'Koppelingen',
         'View the admin manual on Github' => '',
-        'Filter for Items' => '',
         'No Matches' => 'Geen overeenkomsten',
         'Sorry, your search didn\'t match any items.' => '',
         'Set as favorite' => '',
@@ -1626,7 +1636,6 @@ sub Data {
         'Configure Priority Visibility and Defaults' => '',
         'Priority Management' => 'Prioriteitenbeheer',
         'Edit Priority' => 'Bewerk prioriteit',
-        'Color' => 'Kleur',
         'This priority is present in a SysConfig setting, confirmation for updating settings to point to the new priority is needed!' =>
             '',
         'This priority is used in the following config settings:' => 'Deze prioriteit wordt gebruikt in de volgende configuratieinstellingen:',
@@ -1702,7 +1711,6 @@ sub Data {
         'Filter available fields' => 'Filter beschikbare velden',
         'Assigned Fields' => 'Toegewezen velden',
         'Filter assigned fields' => '',
-        'Communication Channel' => 'Communicatiekanaal',
         'Is visible for customer' => 'Is zichtbaar voor de klant',
         'Text Template' => 'Tekstsjabloon',
         'Auto fill' => '',
@@ -2807,7 +2815,6 @@ sub Data {
         'Archive Search' => 'Zoek in archief',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom.tt
-        'Sender Type' => 'Soort verzender',
         'Save filter settings as default' => 'Sla filter op als standaard',
         'Event Type' => 'Gebeurtenis type',
         'Save as default' => 'Opslaan als standaard',
@@ -8565,6 +8572,7 @@ Het Helpdesk Team
         'Appointment list.' => '',
         'Appointment notifications' => '',
         'Arabic (Saudi Arabia)' => 'Arabisch (Saudi Arabië)',
+        'Article Color' => '',
         'ArticleTree' => 'Interactie-boom',
         'Attachment Name' => 'Bijlage naam',
         'Avatar' => '',
@@ -8876,6 +8884,7 @@ Het Helpdesk Team
         'Manage support data.' => 'Beheer support gegevens.',
         'Manage system files.' => '',
         'Manage tasks triggered by event or time based execution.' => 'Beheer van taken op basis van events of tijdschema\'s',
+        'Manage ticket article color.' => '',
         'Manage translation.' => '',
         'Management of ticket attribute relations.' => '',
         'Mark as Spam!' => 'Markeer als spam',

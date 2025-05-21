@@ -766,7 +766,7 @@ msgstr "Filtro para Comunicaciones"
 msgid "Filter for communications"
 msgstr "Filtro para comunicaciones"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminCommunicationLog.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminArticleColor.tt
 msgid "Hint"
 msgstr "Pista"
 
@@ -2398,7 +2398,7 @@ msgstr "Archivar tickets seleccionados"
 msgid "Add Note"
 msgstr "Agregar Nota"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminGenericAgent.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminArticleColor.tt
 msgid "Visible for customer"
 msgstr "Visible para el cliente"
 
@@ -4086,7 +4086,7 @@ msgstr "Vínculos"
 msgid "View the admin manual on Github"
 msgstr ""
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminNavigationBar.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminArticleColor.tt
 msgid "Filter for Items"
 msgstr "Filtro para elementos"
 
@@ -4862,7 +4862,7 @@ msgstr "Administración de Prioridades"
 msgid "Edit Priority"
 msgstr "Modificar Prioridad"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminPriority.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminArticleColor.tt
 msgid "Color"
 msgstr "Color"
 
@@ -5094,7 +5094,7 @@ msgstr "Campos Asignados"
 msgid "Filter assigned fields"
 msgstr ""
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminProcessManagementActivityDialog.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminArticleColor.tt
 msgid "Communication Channel"
 msgstr "Canal de Comunicacion"
 
@@ -8210,7 +8210,7 @@ msgstr "Hora en que fue Escalado el Ticket (entre)"
 msgid "Archive Search"
 msgstr "Búsqueda de Archivo"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminArticleColor.tt
 msgid "Sender Type"
 msgstr "Tipo de remitente"
 
@@ -24462,5 +24462,25 @@ msgstr ""
 
 #. SysConfig
 msgid "YAML"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminArticleColor.tt
+msgid "Here you can see all possible article combination that are theoretically available in your system."
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminArticleColor.tt
+msgid "You can define a background color for each article combination. Click on the color code."
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminArticleColor.tt
+msgid "Article Color Management"
+msgstr ""
+
+#. SysConfig
+msgid "Article Color"
+msgstr ""
+
+#. SysConfig
+msgid "Manage ticket article color."
 msgstr ""
 

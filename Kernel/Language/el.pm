@@ -28,7 +28,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.136415805869815;
+    $Self->{Completeness}        = 0.136304062909568;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -242,6 +242,19 @@ sub Data {
         'If signing key/certificate is missing' => '',
         'If encryption key/certificate is missing' => '',
 
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminArticleColor.tt
+        'Filter for Items' => '',
+        'Hint' => '',
+        'Here you can see all possible article combination that are theoretically available in your system.' =>
+            '',
+        'You can define a background color for each article combination. Click on the color code.' =>
+            '',
+        'Article Color Management' => '',
+        'Sender Type' => '',
+        'Communication Channel' => '',
+        'Visible for customer' => '',
+        'Color' => '',
+
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminAttachment.tt
         'Add Attachment' => 'Προσθηκη Αρχείου',
         'Filter for Attachments' => '',
@@ -273,7 +286,6 @@ sub Data {
             '',
         'Filter for Communications' => '',
         'Filter for communications' => '',
-        'Hint' => '',
         'In this screen you can see an overview about incoming and outgoing communications.' =>
             '',
         'You can change the sort and order of the columns by clicking on the column header.' =>
@@ -797,7 +809,6 @@ sub Data {
         'New type' => '',
         'Archive selected tickets' => '',
         'Add Note' => 'Προσθήκη Σημείωσης',
-        'Visible for customer' => '',
         'Time units' => 'Μονάδες Χρόνου',
         'Execute Ticket Commands' => '',
         'Send agent/customer notifications on changes' => '',
@@ -1376,7 +1387,6 @@ sub Data {
             '',
         'Links' => '',
         'View the admin manual on Github' => '',
-        'Filter for Items' => '',
         'No Matches' => '',
         'Sorry, your search didn\'t match any items.' => '',
         'Set as favorite' => '',
@@ -1624,7 +1634,6 @@ sub Data {
         'Configure Priority Visibility and Defaults' => '',
         'Priority Management' => '',
         'Edit Priority' => '',
-        'Color' => '',
         'This priority is present in a SysConfig setting, confirmation for updating settings to point to the new priority is needed!' =>
             '',
         'This priority is used in the following config settings:' => '',
@@ -1700,7 +1709,6 @@ sub Data {
         'Filter available fields' => '',
         'Assigned Fields' => '',
         'Filter assigned fields' => '',
-        'Communication Channel' => '',
         'Is visible for customer' => '',
         'Text Template' => '',
         'Auto fill' => '',
@@ -2807,7 +2815,6 @@ sub Data {
         'Archive Search' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom.tt
-        'Sender Type' => '',
         'Save filter settings as default' => '',
         'Event Type' => '',
         'Save as default' => '',
@@ -8554,6 +8561,7 @@ Thanks for your help!
         'Appointment list.' => '',
         'Appointment notifications' => '',
         'Arabic (Saudi Arabia)' => 'Αραβικά (Σαουδική Αραβία)',
+        'Article Color' => '',
         'ArticleTree' => '',
         'Attachment Name' => '',
         'Avatar' => '',
@@ -8865,6 +8873,7 @@ Thanks for your help!
         'Manage support data.' => '',
         'Manage system files.' => '',
         'Manage tasks triggered by event or time based execution.' => '',
+        'Manage ticket article color.' => '',
         'Manage translation.' => '',
         'Management of ticket attribute relations.' => '',
         'Mark as Spam!' => 'Χαρακτηρισμός ως ανεπυθήμητο!',

@@ -461,6 +461,14 @@ SET @FKExists := (SELECT COUNT(*) FROM information_schema.table_constraints WHER
 SET @FKSQLStatement := IF( @FKExists = 0, 'ALTER TABLE translation ADD CONSTRAINT FK_translation_valid_id_id FOREIGN KEY (valid_id) REFERENCES valid (id)', 'SELECT ''INFO: Foreign key constraint FK_translation_valid_id_id does already exist, skipping.''' );
 PREPARE FKStatement FROM @FKSQLStatement;
 EXECUTE FKStatement;
+SET @FKExists := (SELECT COUNT(*) FROM information_schema.table_constraints WHERE table_schema = DATABASE() AND table_name = 'article_color' AND constraint_name = 'FK_article_color_create_by_id');
+SET @FKSQLStatement := IF( @FKExists = 0, 'ALTER TABLE article_color ADD CONSTRAINT FK_article_color_create_by_id FOREIGN KEY (create_by) REFERENCES users (id)', 'SELECT ''INFO: Foreign key constraint FK_article_color_create_by_id does already exist, skipping.''' );
+PREPARE FKStatement FROM @FKSQLStatement;
+EXECUTE FKStatement;
+SET @FKExists := (SELECT COUNT(*) FROM information_schema.table_constraints WHERE table_schema = DATABASE() AND table_name = 'article_color' AND constraint_name = 'FK_article_color_change_by_id');
+SET @FKSQLStatement := IF( @FKExists = 0, 'ALTER TABLE article_color ADD CONSTRAINT FK_article_color_change_by_id FOREIGN KEY (change_by) REFERENCES users (id)', 'SELECT ''INFO: Foreign key constraint FK_article_color_change_by_id does already exist, skipping.''' );
+PREPARE FKStatement FROM @FKSQLStatement;
+EXECUTE FKStatement;
 SET @FKExists := (SELECT COUNT(*) FROM information_schema.table_constraints WHERE table_schema = DATABASE() AND table_name = 'article_sender_type' AND constraint_name = 'FK_article_sender_type_create_by_id');
 SET @FKSQLStatement := IF( @FKExists = 0, 'ALTER TABLE article_sender_type ADD CONSTRAINT FK_article_sender_type_create_by_id FOREIGN KEY (create_by) REFERENCES users (id)', 'SELECT ''INFO: Foreign key constraint FK_article_sender_type_create_by_id does already exist, skipping.''' );
 PREPARE FKStatement FROM @FKSQLStatement;

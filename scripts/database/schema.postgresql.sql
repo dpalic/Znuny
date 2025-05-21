@@ -1186,6 +1186,20 @@ CREATE TABLE translation (
     CONSTRAINT translation_uuid UNIQUE (dbcrud_uuid)
 );
 -- ----------------------------------------------------------
+--  create table article_color
+-- ----------------------------------------------------------
+CREATE TABLE article_color (
+    id serial NOT NULL,
+    name VARCHAR (200) NOT NULL,
+    color VARCHAR (10) NOT NULL,
+    create_time timestamp(0) NOT NULL,
+    create_by INTEGER NOT NULL,
+    change_time timestamp(0) NOT NULL,
+    change_by INTEGER NOT NULL,
+    PRIMARY KEY(id),
+    CONSTRAINT article_color_name UNIQUE (name)
+);
+-- ----------------------------------------------------------
 --  create table article_sender_type
 -- ----------------------------------------------------------
 CREATE TABLE article_sender_type (

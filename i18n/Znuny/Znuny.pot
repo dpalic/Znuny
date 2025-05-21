@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2025-05-19 10:27+0000\n"
+"POT-Creation-Date: 2025-05-20 08:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -670,6 +670,42 @@ msgstr ""
 msgid "If encryption key/certificate is missing"
 msgstr ""
 
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminArticleColor.tt
+msgid "Filter for Items"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminArticleColor.tt
+msgid "Hint"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminArticleColor.tt
+msgid "Here you can see all possible article combination that are theoretically available in your system."
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminArticleColor.tt
+msgid "You can define a background color for each article combination. Click on the color code."
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminArticleColor.tt
+msgid "Article Color Management"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminArticleColor.tt
+msgid "Sender Type"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminArticleColor.tt
+msgid "Communication Channel"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminArticleColor.tt
+msgid "Visible for customer"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminArticleColor.tt
+msgid "Color"
+msgstr ""
+
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminAttachment.tt
 msgid "Add Attachment"
 msgstr ""
@@ -768,10 +804,6 @@ msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminCommunicationLog.tt
 msgid "Filter for communications"
-msgstr ""
-
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminCommunicationLog.tt
-msgid "Hint"
 msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminCommunicationLog.tt
@@ -2416,10 +2448,6 @@ msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminGenericAgent.tt
 msgid "Add Note"
-msgstr ""
-
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminGenericAgent.tt
-msgid "Visible for customer"
 msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminGenericAgent.tt
@@ -4115,10 +4143,6 @@ msgid "View the admin manual on Github"
 msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminNavigationBar.tt
-msgid "Filter for Items"
-msgstr ""
-
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminNavigationBar.tt
 msgid "No Matches"
 msgstr ""
 
@@ -4891,10 +4915,6 @@ msgid "Edit Priority"
 msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminPriority.tt
-msgid "Color"
-msgstr ""
-
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminPriority.tt
 msgid "This priority is present in a SysConfig setting, confirmation for updating settings to point to the new priority is needed!"
 msgstr ""
 
@@ -5120,10 +5140,6 @@ msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminProcessManagementActivityDialog.tt
 msgid "Filter assigned fields"
-msgstr ""
-
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminProcessManagementActivityDialog.tt
-msgid "Communication Channel"
 msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminProcessManagementActivityDialog.tt
@@ -8300,10 +8316,6 @@ msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketSearch.tt
 msgid "Archive Search"
-msgstr ""
-
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom.tt
-msgid "Sender Type"
 msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom.tt
@@ -22038,6 +22050,10 @@ msgid "Arabic (Saudi Arabia)"
 msgstr ""
 
 #. SysConfig
+msgid "Article Color"
+msgstr ""
+
+#. SysConfig
 msgid "ArticleTree"
 msgstr ""
 
@@ -23195,6 +23211,10 @@ msgstr ""
 
 #. SysConfig
 msgid "Manage tasks triggered by event or time based execution."
+msgstr ""
+
+#. SysConfig
+msgid "Manage ticket article color."
 msgstr ""
 
 #. SysConfig

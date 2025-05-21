@@ -35,7 +35,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.381373995737006;
+    $Self->{Completeness}        = 0.381061598951507;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -249,6 +249,19 @@ sub Data {
         'If signing key/certificate is missing' => 'Si la clé/certificat de signature est manquant',
         'If encryption key/certificate is missing' => 'Si la clé/certificat de chiffrage est manquant',
 
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminArticleColor.tt
+        'Filter for Items' => 'Filtres pour les éléments',
+        'Hint' => 'Conseil',
+        'Here you can see all possible article combination that are theoretically available in your system.' =>
+            '',
+        'You can define a background color for each article combination. Click on the color code.' =>
+            '',
+        'Article Color Management' => '',
+        'Sender Type' => 'Type de l\'expéditeur',
+        'Communication Channel' => '',
+        'Visible for customer' => 'Visible par le client',
+        'Color' => 'Couleur',
+
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminAttachment.tt
         'Add Attachment' => 'Ajouter une pièce jointe',
         'Filter for Attachments' => 'Filtres pour les pièces jointes',
@@ -280,7 +293,6 @@ sub Data {
             'Afficher uniquement les logs de communication créés pendant un intervalle de temps spécifique.',
         'Filter for Communications' => '',
         'Filter for communications' => 'Filtre pour les communications',
-        'Hint' => 'Conseil',
         'In this screen you can see an overview about incoming and outgoing communications.' =>
             'Dans cet écran vous pouvez voir une synthèse des communications entrantes et sortantes.',
         'You can change the sort and order of the columns by clicking on the column header.' =>
@@ -804,7 +816,6 @@ sub Data {
         'New type' => 'Nouveau type',
         'Archive selected tickets' => 'Archiver tickets sélectionnés',
         'Add Note' => 'Ajouter une note',
-        'Visible for customer' => 'Visible par le client',
         'Time units' => 'Unités de temps',
         'Execute Ticket Commands' => '',
         'Send agent/customer notifications on changes' => 'Envoyer des notifications à l\'opérateur/au client sur les changements',
@@ -1382,7 +1393,6 @@ sub Data {
             'Vous pouvez ajouter des favoris en passant avec votre souris sur l\'élément à ajouter et en cliquant sur l\'icône en forme d\'étoile.',
         'Links' => '',
         'View the admin manual on Github' => 'Voir le manuel administrateur sur le site officiel',
-        'Filter for Items' => 'Filtres pour les éléments',
         'No Matches' => '',
         'Sorry, your search didn\'t match any items.' => '',
         'Set as favorite' => '',
@@ -1629,7 +1639,6 @@ sub Data {
         'Configure Priority Visibility and Defaults' => '',
         'Priority Management' => 'Gestion de la priorité',
         'Edit Priority' => 'Editer priorité',
-        'Color' => 'Couleur',
         'This priority is present in a SysConfig setting, confirmation for updating settings to point to the new priority is needed!' =>
             '',
         'This priority is used in the following config settings:' => '',
@@ -1705,7 +1714,6 @@ sub Data {
         'Filter available fields' => 'Filtrer les champs disponibles',
         'Assigned Fields' => 'Champs assignés',
         'Filter assigned fields' => '',
-        'Communication Channel' => '',
         'Is visible for customer' => 'Est visible par le client',
         'Text Template' => 'Modèle de texte',
         'Auto fill' => '',
@@ -2810,7 +2818,6 @@ sub Data {
         'Archive Search' => 'Recherche Archive',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom.tt
-        'Sender Type' => 'Type de l\'expéditeur',
         'Save filter settings as default' => 'Sauvegarder les paramètres de filtrage comme paramètres par défaut',
         'Event Type' => '',
         'Save as default' => '',
@@ -8557,6 +8564,7 @@ Thanks for your help!
         'Appointment list.' => '',
         'Appointment notifications' => 'Notifications des rendez-vous',
         'Arabic (Saudi Arabia)' => '',
+        'Article Color' => '',
         'ArticleTree' => '',
         'Attachment Name' => 'Nom de la Pièce Jointe',
         'Avatar' => '',
@@ -8868,6 +8876,7 @@ Thanks for your help!
         'Manage support data.' => 'Gestion des données de support.',
         'Manage system files.' => '',
         'Manage tasks triggered by event or time based execution.' => 'Gérer les tâches déchenchées par un événement ou une exécution temporelle.',
+        'Manage ticket article color.' => '',
         'Manage translation.' => '',
         'Management of ticket attribute relations.' => '',
         'Mark as Spam!' => 'Marquer comme Spam !',
