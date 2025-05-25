@@ -5,6 +5,7 @@
  - 2025-05-20 Fixed: Multiple spaces in templates not replaced correctly when using placeholders (e.g. OTRS_CUSTOMER_BODY).
  - 2025-05-19 Integrated package Znuny-Translations: Admin module to edit translations directly in Znuny.
  - 2025-05-16 Process Management: Removed obsolete JS code in Core.Agent.TicketProcess.js and Core.Customer.TicketProcess.js.
+ - 2025-05-14 Added convenience logging functions
  - 2025-05-12 Fixed: Dashboard widget filter 'all' not selected on click. [#665](https://github.com/znuny/Znuny/issues/665)
  - 2025-05-09 Fixed: Breadcrumb disappears in SystemConfiguration when SystemConfiguration/SettingsList is displayed via SettingNavigation.
  - 2025-05-09 Fixed: Incorrect path is used in apache conf files. Thanks for reporting to @BuilderNSV. [#664](https://github.com/znuny/Znuny/issues/664)
