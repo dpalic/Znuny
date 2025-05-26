@@ -1,4 +1,5 @@
 # 7.2.1 2025-xx-xx
+ - 2025-05-26 Added missing ProcessManagement::TransitionAction::DefaultParameters for TicketCreate, TicketArticleCreate, and ArticleSend.
  - 2025-05-26 Added AgentTicketMarkSeenUnseen to ACLKeysLevel3::Actions###100-Default.
  - 2025-05-21 Fixed: AdminACL: Wrong fallback for ACLKeysLevel3::Actions variable. Thanks for reporting to Stefan Härter (@stefanhaerter). [#629](https://github.com/znuny/Znuny/issues/629)
  - 2025-05-21 Sector Nord AG: Added missing Action for AgentTicketMarkSeenUnseen in Ticket::Frontend::MenuModule. Thanks to @LuBroering (Lukas Bröring Sector Nord AG). [PR#654](https://github.com/znuny/Znuny/pull/654)
