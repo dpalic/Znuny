@@ -1,4 +1,6 @@
 # 7.2.1 2025-xx-xx
+
+ - 2025-05-27 Added AgentTicketNoteToLinkedTicket to ACLKeysLevel3::Actions###100-Default.
  - 2025-05-26 Added missing ProcessManagement::TransitionAction::DefaultParameters for TicketCreate, TicketArticleCreate, and ArticleSend.
  - 2025-05-26 Added AgentTicketMarkSeenUnseen to ACLKeysLevel3::Actions###100-Default.
  - 2025-05-21 Fixed: AdminACL: Wrong fallback for ACLKeysLevel3::Actions variable. Thanks for reporting to Stefan Härter (@stefanhaerter). [#629](https://github.com/znuny/Znuny/issues/629)
