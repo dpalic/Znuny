@@ -223,8 +223,21 @@ sub Run {
             );
         }
 
-        my $ProcessData = $Self->_GetProcessData(
-            ID => $ProcessID
+        my $ProcessData = $ProcessObject->ProcessExport(
+            ID     => $ProcessID,
+            UserID => $Self->{UserID},
+        );
+
+        if ( !$ProcessData ) {
+            return $LayoutObject->ErrorScreen(
+                Message => $LayoutObject->{LanguageObject}->Translate( 'Unknown Process %s!', $ProcessID ),
+            );
+        }
+
+        my $EntityID = $ProcessData->{Process}->{Name};
+        my $Filename = $ProcessObject->ProcessExportFilenameGet(
+            Name   => $EntityID,
+            Format => 'YAML',
         );
 
         # convert the processdata hash to string
@@ -235,7 +248,7 @@ sub Run {
             ContentType => 'text/html; charset=' . $LayoutObject->{Charset},
             Content     => $ProcessDataYAML,
             Type        => 'attachment',
-            Filename    => 'Export_ProcessEntityID_' . $ProcessData->{Process}->{EntityID} . '.yml',
+            Filename    => $Filename,
             NoCache     => 1,
         );
     }
@@ -2058,70 +2071,17 @@ sub _PushSessionScreen {
     return 1;
 }
 
+# for backward compatibility
 sub _GetProcessData {
-
     my ( $Self, %Param ) = @_;
 
-    my %ProcessData;
-
-    # get needed objects
-    my $LayoutObject = $Kernel::OM->Get('Kernel::Output::HTML::Layout');
-
     # get process data
-    my $Process = $Kernel::OM->Get('Kernel::System::ProcessManagement::DB::Process')->ProcessGet(
+    my $ProcessData = $Kernel::OM->Get('Kernel::System::ProcessManagement::DB::Process')->ProcessExport(
         ID     => $Param{ID},
         UserID => $Self->{UserID},
     );
-    if ( !$Process ) {
-        return $LayoutObject->ErrorScreen(
-            Message => $LayoutObject->{LanguageObject}->Translate( 'Unknown Process %s!', $Param{ID} ),
-        );
-    }
-    $ProcessData{Process} = $Process;
 
-    # get all used activities
-    for my $ActivityEntityID ( @{ $Process->{Activities} } ) {
-
-        my $Activity = $Kernel::OM->Get('Kernel::System::ProcessManagement::DB::Activity')->ActivityGet(
-            EntityID => $ActivityEntityID,
-            UserID   => $Self->{UserID},
-        );
-        $ProcessData{Activities}->{$ActivityEntityID} = $Activity;
-
-        # get all used activity dialogs
-        for my $ActivityDialogEntityID ( @{ $Activity->{ActivityDialogs} } ) {
-
-            my $ActivityDialog
-                = $Kernel::OM->Get('Kernel::System::ProcessManagement::DB::ActivityDialog')->ActivityDialogGet(
-                EntityID => $ActivityDialogEntityID,
-                UserID   => $Self->{UserID},
-                );
-            $ProcessData{ActivityDialogs}->{$ActivityDialogEntityID} = $ActivityDialog;
-        }
-    }
-
-    # get all used transitions
-    for my $TransitionEntityID ( @{ $Process->{Transitions} } ) {
-
-        my $Transition = $Kernel::OM->Get('Kernel::System::ProcessManagement::DB::Transition')->TransitionGet(
-            EntityID => $TransitionEntityID,
-            UserID   => $Self->{UserID},
-        );
-        $ProcessData{Transitions}->{$TransitionEntityID} = $Transition;
-    }
-
-    # get all used transition actions
-    for my $TransitionActionEntityID ( @{ $Process->{TransitionActions} } ) {
-
-        my $TransitionAction
-            = $Kernel::OM->Get('Kernel::System::ProcessManagement::DB::TransitionAction')->TransitionActionGet(
-            EntityID => $TransitionActionEntityID,
-            UserID   => $Self->{UserID},
-            );
-        $ProcessData{TransitionActions}->{$TransitionActionEntityID} = $TransitionAction;
-    }
-
-    return \%ProcessData;
+    return $ProcessData;
 }
 
 1;

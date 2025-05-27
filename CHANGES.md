@@ -11,12 +11,13 @@
  - 2025-05-12 Fixed: Dashboard widget filter 'all' not selected on click. [#665](https://github.com/znuny/Znuny/issues/665)
  - 2025-05-09 Fixed: Breadcrumb disappears in SystemConfiguration when SystemConfiguration/SettingsList is displayed via SettingNavigation.
  - 2025-05-09 Fixed: Incorrect path is used in apache conf files. Thanks for reporting to @BuilderNSV. [#664](https://github.com/znuny/Znuny/issues/664)
- - 2024-05-07 Integrated package Znuny-DynamicFieldAdminAutoConfig - Administration backend for dynamic fields without configuration.
+ - 2025-05-07 Integrated package Znuny-DynamicFieldAdminAutoConfig - Administration backend for dynamic fields without configuration.
  - 2025-05-07 Added source (subroutine) and line to AdminLog / Log Object.
  - 2025-05-06 The console command Dev::TranslationUpdate can now remove unused strings from PO files.
  - 2025-05-06 Added DefaultPageShown setting to every DashboardBackend SysConfig that uses the module `Kernel::Output::HTML::Dashboard::TicketGeneric`. This allows the number of items shown per page to be defined and extended for each dashboard widget.
  - 2025-05-05 Added SysConfigLink to AdminPackageManager - Redirect to System Configuration from Package Manager.
  - 2025-04-30 Fixed: OTRS_CUSTOMER_REALNAME placeholder expansion in AgentTicketMerge.
+ - 2024-07-30 Auto responses, notifications, processes, salutations, signatures and standard templates can now all be deleted, copied, imported and exported.
 
 # 7.1.7 2025-04-30
  - 2025-04-24 Fixed bug - Setting the password does not reset preferences UserLoginFailed and UserLastPwChangeTime.

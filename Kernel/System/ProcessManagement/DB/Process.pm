@@ -31,6 +31,10 @@ our @ObjectDependencies = (
     'Kernel::System::Main',
     'Kernel::System::User',
     'Kernel::System::YAML',
+    'Kernel::System::ProcessManagement::DB::Activity',
+    'Kernel::System::ProcessManagement::DB::ActivityDialog',
+    'Kernel::System::ProcessManagement::DB::Transition',
+    'Kernel::System::ProcessManagement::DB::TransitionAction',
 );
 
 =head1 NAME
@@ -1461,6 +1465,162 @@ EOF
             return $FileLocation;
         }
     }
+}
+
+=head2 ProcessExport()
+
+export single process
+
+    my $ExportProcess = $ProcessObject->ProcessExport(
+        ID                       => $ProcessID, # required
+        UserID                   => 1,          # required
+    );
+
+Returns:
+
+    $ExportProcess = {
+        'Process' => {
+            'Name' => 'Application for leave',
+            'ChangeTime' => '2024-07-10 10:52:23',
+            'EntityID' => 'Process-9690ae9ae455d8614d570149b8ab1199',
+            'Config' => {
+                'StartActivityDialog' => 'ActivityDialog-99866d267c0dc899e88db99d14a11f23',
+                'Description' => 'Application for leave',
+                'Path' => {
+                ...
+            },
+            ...
+        },
+        'Transitions' => {
+            'Transition-cfef609c67c32c11e48c560536ba6b51' => {
+                'CreateTime' => '2024-06-20 09:21:34',
+                'ChangeTime' => '2024-06-20 09:21:34',
+                'Name' => 'RequestSubmitted',
+                ...
+            },
+            ...
+        },
+        'Activities' => {
+            'Activity-0e102c168616125a4582ed57039e8adc' => {
+                'CreateTime' => '2024-06-20 09:21:34',
+                'ChangeTime' => '2024-06-20 09:21:34',
+                'Name' => 'File Request',
+                ...
+            },
+            ...
+        },
+        'TransitionActions' => {
+            'TransitionAction-5fad14be3c31ae919bef7d19ee8f4a37' => {
+                'CreateTime' => '2024-06-20 09:21:34',
+                'ChangeTime' => '2024-06-20 09:21:34',
+                'Name' => 'Set state = pending reminder (+7d)',
+                ...
+            },
+            ...
+        },
+        'ActivityDialogs' => {
+            'ActivityDialog-99866d267c0dc899e88db99d14a11f23' => {
+                'CreateTime' => '2024-06-20 09:21:34',
+                'ChangeTime' => '2024-07-24 13:59:16',
+                'Name' => 'Recording the Application for leave',
+                ...
+            },
+            ...
+        },
+    };
+
+=cut
+
+sub ProcessExport {
+
+    my ( $Self, %Param ) = @_;
+
+    my $ActivityObject         = $Kernel::OM->Get('Kernel::System::ProcessManagement::DB::Activity');
+    my $ActivityDialogObject   = $Kernel::OM->Get('Kernel::System::ProcessManagement::DB::ActivityDialog');
+    my $TransitionObject       = $Kernel::OM->Get('Kernel::System::ProcessManagement::DB::Transition');
+    my $TransitionActionObject = $Kernel::OM->Get('Kernel::System::ProcessManagement::DB::TransitionAction');
+
+    # get process data
+    my $Process = $Self->ProcessGet(
+        ID     => $Param{ID},
+        UserID => $Param{UserID},
+    );
+
+    return if !$Process;
+
+    my %ProcessData = (
+        Process => $Process,
+    );
+
+    # get all used activities
+    for my $ActivityEntityID ( @{ $Process->{Activities} } ) {
+
+        my $Activity = $ActivityObject->ActivityGet(
+            EntityID => $ActivityEntityID,
+            UserID   => $Param{UserID},
+        );
+        $ProcessData{Activities}->{$ActivityEntityID} = $Activity;
+
+        # get all used activity dialogs
+        for my $ActivityDialogEntityID ( @{ $Activity->{ActivityDialogs} } ) {
+
+            my $ActivityDialog = $ActivityDialogObject->ActivityDialogGet(
+                EntityID => $ActivityDialogEntityID,
+                UserID   => $Param{UserID},
+            );
+            $ProcessData{ActivityDialogs}->{$ActivityDialogEntityID} = $ActivityDialog;
+        }
+    }
+
+    # get all used transitions
+    for my $TransitionEntityID ( @{ $Process->{Transitions} } ) {
+
+        my $Transition = $TransitionObject->TransitionGet(
+            EntityID => $TransitionEntityID,
+            UserID   => $Param{UserID},
+        );
+        $ProcessData{Transitions}->{$TransitionEntityID} = $Transition;
+    }
+
+    # get all used transition actions
+    for my $TransitionActionEntityID ( @{ $Process->{TransitionActions} } ) {
+
+        my $TransitionAction = $TransitionActionObject->TransitionActionGet(
+            EntityID => $TransitionActionEntityID,
+            UserID   => $Param{UserID},
+        );
+        $ProcessData{TransitionActions}->{$TransitionActionEntityID} = $TransitionAction;
+    }
+
+    return \%ProcessData;
+}
+
+=head2 ProcessExportFilenameGet()
+
+get export file name based on process entity name
+
+    my $Filename = $ProcessObject->ProcessExportFilenameGet(
+        Name => 'Process_1',
+        Format => 'YAML',
+    );
+
+=cut
+
+sub ProcessExportFilenameGet {
+    my ( $Self, %Param ) = @_;
+
+    my $Extension = '';
+    if ( $Param{Format} =~ /yml|yaml/i ) {
+        $Extension = '.yaml';
+    }
+    return "Export_Process$Extension" if !$Param{Name};
+
+    my $DisplayName = 'Export_Process_' . $Param{Name};
+    $DisplayName =~ s{[^a-zA-Z0-9-_]}{_}xmsg;
+    $DisplayName =~ s{_{2,}}{_}g;
+    $DisplayName =~ s{_$}{};
+
+    return "$DisplayName$Extension";
 }
 
 =head2 ProcessImport()

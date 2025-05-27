@@ -3444,6 +3444,109 @@
     </Setting>
 
     <!--
+        Object import/export
+    -->
+    <Setting Name="Admin::Object::Export::Command###ExportableObjects###001-Znuny" Required="1" Valid="1" ConfigLevel="200">
+        <Description Translatable="1">Defines which objects are supported for object export using command "Admin::Object::Export".</Description>
+        <Navigation>Core</Navigation>
+        <Value>
+            <Hash>
+                <Item Key="AutoResponse">
+                    <Hash>
+                        <Item Key="ExportModule">Kernel::System::AutoResponse</Item>
+                        <Item Key="ExportFunctionName">AutoResponseExport</Item>
+                        <Item Key="ModuleHandler">Base</Item>
+                    </Hash>
+                </Item>
+                <Item Key="StandardTemplate">
+                    <Hash>
+                        <Item Key="ExportModule">Kernel::System::StandardTemplate</Item>
+                        <Item Key="ExportFunctionName">StandardTemplateExport</Item>
+                        <Item Key="ModuleHandler">Base</Item>
+                    </Hash>
+                </Item>
+                <Item Key="Signature">
+                    <Hash>
+                        <Item Key="ExportModule">Kernel::System::Signature</Item>
+                        <Item Key="ExportFunctionName">SignatureExport</Item>
+                        <Item Key="ModuleHandler">Base</Item>
+                    </Hash>
+                </Item>
+                <Item Key="Salutation">
+                    <Hash>
+                        <Item Key="ExportModule">Kernel::System::Salutation</Item>
+                        <Item Key="ExportFunctionName">SalutationExport</Item>
+                        <Item Key="ModuleHandler">Base</Item>
+                    </Hash>
+                </Item>
+                <Item Key="NotificationEvent">
+                    <Hash>
+                        <Item Key="ModuleHandler">NotificationEvent</Item>
+                    </Hash>
+                </Item>
+                <Item Key="ProcessManagement">
+                    <Hash>
+                        <Item Key="ModuleHandler">ProcessManagement</Item>
+                    </Hash>
+                </Item>
+            </Hash>
+        </Value>
+    </Setting>
+    <Setting Name="Admin::Object::Import::Command###ImportableObjects###001-Znuny" Required="1" Valid="1" ConfigLevel="200">
+        <Description Translatable="1">Defines which objects are supported for object import using command "Admin::Object::Import".</Description>
+        <Navigation>Core</Navigation>
+        <Value>
+            <Hash>
+                <Item Key="AutoResponse">
+                    <Hash>
+                        <Item Key="ImportModule">Kernel::System::AutoResponse</Item>
+                        <Item Key="ImportFunctionName">AutoResponseImport</Item>
+                        <Item Key="ImportOverwriteParameter">OverwriteExistingAutoResponses</Item>
+                        <Item Key="ModuleHandler">Base</Item>
+                    </Hash>
+                </Item>
+                <Item Key="StandardTemplate">
+                    <Hash>
+                        <Item Key="ImportModule">Kernel::System::StandardTemplate</Item>
+                        <Item Key="ImportFunctionName">StandardTemplateImport</Item>
+                        <Item Key="ImportOverwriteParameter">OverwriteExistingTemplates</Item>
+                        <Item Key="ModuleHandler">Base</Item>
+                    </Hash>
+                </Item>
+                <Item Key="Signature">
+                    <Hash>
+                        <Item Key="ImportModule">Kernel::System::Signature</Item>
+                        <Item Key="ImportFunctionName">SignatureImport</Item>
+                        <Item Key="ImportOverwriteParameter">OverwriteExistingSignatures</Item>
+                        <Item Key="ModuleHandler">Base</Item>
+                    </Hash>
+                </Item>
+                <Item Key="Salutation">
+                    <Hash>
+                        <Item Key="ImportModule">Kernel::System::Salutation</Item>
+                        <Item Key="ImportFunctionName">SalutationImport</Item>
+                        <Item Key="ImportOverwriteParameter">OverwriteExistingSalutations</Item>
+                        <Item Key="ModuleHandler">Base</Item>
+                    </Hash>
+                </Item>
+                <Item Key="NotificationEvent">
+                    <Hash>
+                        <Item Key="ImportModule">Kernel::System::NotificationEvent</Item>
+                        <Item Key="ImportFunctionName">NotificationImport</Item>
+                        <Item Key="ImportOverwriteParameter">OverwriteExistingNotifications</Item>
+                        <Item Key="ModuleHandler">NotificationEvent</Item>
+                    </Hash>
+                </Item>
+                <Item Key="ProcessManagement">
+                    <Hash>
+                        <Item Key="ModuleHandler">ProcessManagement</Item>
+                    </Hash>
+                </Item>
+            </Hash>
+        </Value>
+    </Setting>
+
+    <!--
         User preferences
     -->
     <Setting Name="User::PreferencesModule" Required="1" Valid="1" ConfigLevel="200">
