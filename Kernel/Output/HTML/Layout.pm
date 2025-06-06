@@ -2813,7 +2813,7 @@ sub Attachment {
     }
 
     if ( $Param{Charset} ) {
-        $Output .= "Content-Type: $Param{ContentType}; charset=$Param{Charset};\n\n";
+        $Output .= "Content-Type: $Param{ContentType}; charset=$Param{Charset}\n\n";
     }
     else {
         $Output .= "Content-Type: $Param{ContentType}\n\n";
