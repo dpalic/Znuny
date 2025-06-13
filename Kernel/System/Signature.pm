@@ -430,8 +430,8 @@ Returns:
         Message           => 'The Message to show.',             # error message
         Added             => 'Signature1, Signature2',           # string of Signatures correctly added
         Updated           => 'Signature3, Signature4',           # string of Signatures correctly updated
-        NotUpdated         => 'Signature5, Signature6',         # string of Signatures not updated due to existing entity
-                                                                  # with the same name
+        NotUpdated        => 'Signature5, Signature6',           # string of Signatures not updated due to existing entity
+                                                                 # with the same name
         Errors            => 'Signature',                        # string of Signatures that could not be added or updated
         AdditionalErrors  => ['Some error occured!', 'Error2!'], # list of additional error not necessarily related to specified Signature
     };

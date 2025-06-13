@@ -349,8 +349,7 @@ export an auto response
 
 returns AutoResponse hashes in an array with data:
 
-    my $ExportData =
-    [
+    my $ExportData = [
         {
             'ContentType' => 'text/plain',
             'ChangeTime' => '2024-07-16 13:17:20',
@@ -375,8 +374,8 @@ Your Znuny Team
             'ChangeBy' => 1,
             'ID' => 587,
             'CreateTime' => '2024-07-16 13:15:50'
-           },
-           {
+        },
+        {
             'ContentType' => 'text/html',
             'ChangeTime' => '2024-07-16 13:16:27',
             'Address' => 'some-mail@outlook.com',
