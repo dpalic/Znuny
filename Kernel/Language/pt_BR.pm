@@ -30,7 +30,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D/%M/%Y';
     $Self->{DateInputFormat}     = '%D/%M/%Y';
     $Self->{DateInputFormatLong} = '%D/%M/%Y - %T';
-    $Self->{Completeness}        = 0.849959316517494;
+    $Self->{Completeness}        = 0.849544567338972;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -6294,6 +6294,7 @@ sub Data {
         'Defines internal communication channel.' => 'Define canal de comunicação interno.',
         'Defines phone communication channel.' => 'Define canal de comunicação de telefonema.',
         'Defines chat communication channel.' => 'Define o canal de comunicação de chat.',
+        'Defines web communication channel.' => '',
         'Defines groups for preferences items.' => 'Define grupos para itens preferenciais.',
         'Defines how many deployments the system should keep.' => 'Define quantas implantações devem ser mantidas pelo sistema.',
         'Defines the search parameters for the AgentCustomerUserAddressBook screen. With the setting \'CustomerTicketTextField\' the values for the recipient field can be specified.' =>
@@ -9244,7 +9245,9 @@ Obrigado pela ajuda!
             'Estamos realizando uma manutenção programada. O login está temporariamente indisponível.',
         'We are performing scheduled maintenance. We should be back online shortly.' =>
             'Estamos realizando uma manutenção programada. Estaremos de volta em breve.',
+        'Web' => '',
         'Web Services' => 'Web Services',
+        'Web communication channel.' => '',
         'Web service (Dropdown)' => '',
         'Web service (Multiselect)' => '',
         'Web service dynamic field AJAX interface' => '',

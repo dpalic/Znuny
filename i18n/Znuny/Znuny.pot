@@ -16903,6 +16903,10 @@ msgid "Defines chat communication channel."
 msgstr ""
 
 #. XML Definition: Kernel/Config/Files/XML/Framework.xml
+msgid "Defines web communication channel."
+msgstr ""
+
+#. XML Definition: Kernel/Config/Files/XML/Framework.xml
 msgid "Defines groups for preferences items."
 msgstr ""
 
@@ -24466,7 +24470,15 @@ msgid "We are performing scheduled maintenance. We should be back online shortly
 msgstr ""
 
 #. SysConfig
+msgid "Web"
+msgstr ""
+
+#. SysConfig
 msgid "Web Services"
+msgstr ""
+
+#. SysConfig
+msgid "Web communication channel."
 msgstr ""
 
 #. SysConfig

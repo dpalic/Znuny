@@ -27,7 +27,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.995606183889341;
+    $Self->{Completeness}        = 0.995608327911516;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -6291,6 +6291,7 @@ sub Data {
         'Defines internal communication channel.' => 'Legt den internen Kommunikationskanal fest.',
         'Defines phone communication channel.' => 'Legt den Telefon-Kommunikationskanal fest.',
         'Defines chat communication channel.' => 'Legt den Chat-Kommunikationskanal fest.',
+        'Defines web communication channel.' => 'Legt den Web-Kommunikationskanal fest.',
         'Defines groups for preferences items.' => 'Legt die Gruppen für die persönlichen Einstellungen fest.',
         'Defines how many deployments the system should keep.' => 'Legt fest, wieviele Versionen von Inbetriebnahmen im System behalten werden sollen.',
         'Defines the search parameters for the AgentCustomerUserAddressBook screen. With the setting \'CustomerTicketTextField\' the values for the recipient field can be specified.' =>
@@ -9240,7 +9241,9 @@ Ihr Helpdesk-Team
             'Wir führen eine geplante Wartung durch. Das Einloggen ist im Moment nicht möglich.',
         'We are performing scheduled maintenance. We should be back online shortly.' =>
             'Wir führen eine geplante Wartung durch. Wir werden bald wieder online sein.',
+        'Web' => 'Web',
         'Web Services' => 'Webservices',
+        'Web communication channel.' => 'Kommunikationskanal Web.',
         'Web service (Dropdown)' => 'Webservice (Einfachauswahl)',
         'Web service (Multiselect)' => 'Webservice (Mehrfachauswahl)',
         'Web service dynamic field AJAX interface' => 'AJAX-Schnittstelle für dynamische Webservice-Felder',

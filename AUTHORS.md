@@ -1,10 +1,10 @@
 The following persons contributed to Znuny:
 
 * 1soproni <csaba@sopron.hu>
+* AM Mike <monitoring@amlogisticsolutions.de>
 * Alex Kantchev <ak@otrs.com>
 * Alex Mazur <alex.mazur@otrs.com>
 * Alexandre D. Rogoski <alexandre@exatati.com.br>
-* AM Mike <monitoring@amlogisticsolutions.de>
 * André Brás <andre.bras@otrs.com>
 * Balazs Ur <balazs.ur@otrs.com>
 * Balázs Úr <balazs.ur@otrs.com>

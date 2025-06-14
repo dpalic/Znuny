@@ -24694,3 +24694,15 @@ msgstr ""
 msgid "Defines which objects are supported for object import using command \"Admin::Object::Import\"."
 msgstr ""
 
+#. XML Definition: Kernel/Config/Files/XML/Framework.xml
+msgid "Defines web communication channel."
+msgstr ""
+
+#. SysConfig
+msgid "Web"
+msgstr ""
+
+#. SysConfig
+msgid "Web communication channel."
+msgstr ""
+

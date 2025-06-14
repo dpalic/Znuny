@@ -903,7 +903,7 @@
                         <Item Key="AttachmentIDs">optional, 1,2,3</Item>
                         <Item Key="AttachmentsReuse">optional, 0|1</Item>
                         <Item Key="Body">(* required) Some text</Item>
-                        <Item Key="CommunicationChannel">(* required) Internal|Phone|Email</Item>
+                        <Item Key="CommunicationChannel">(* required) Internal|Phone|Email|Web</Item>
                         <Item Key="ContentType">(* required) text/html; charset=UTF-8</Item>
                         <Item Key="DynamicField_FieldName">Some Value</Item>
                         <Item Key="From">Some Agent email@example.com</Item>
@@ -924,7 +924,7 @@
                         <Item Key="AttachmentIDs">optional, 1,2,3</Item>
                         <Item Key="AttachmentsReuse">optional, 0|1</Item>
                         <Item Key="Body">(* required) Some text</Item>
-                        <Item Key="CommunicationChannel">Internal|Phone|Email|...</Item>
+                        <Item Key="CommunicationChannel">Internal|Phone|Email|Web|...</Item>
                         <Item Key="ContentType">(* required) text/html; charset=UTF-8</Item>
                         <Item Key="CustomerID">123</Item>
                         <Item Key="CustomerUser">somecustomeremail</Item>

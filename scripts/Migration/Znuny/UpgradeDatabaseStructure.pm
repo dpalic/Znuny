@@ -49,6 +49,10 @@ sub Run {
             Module  => 'SearchProfile',
         },
         {
+            Message => 'Create new communication channel Web.',
+            Module  => 'CreateCommunicationChannelWeb',
+        },
+        {
             Message => 'Create database table translation.',
             Module  => 'Translation',
         },

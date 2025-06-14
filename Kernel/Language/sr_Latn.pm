@@ -32,7 +32,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.880878763222132;
+    $Self->{Completeness}        = 0.880448926480156;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -6296,6 +6296,7 @@ sub Data {
         'Defines internal communication channel.' => 'Definiše interni komunikacioni kanal.',
         'Defines phone communication channel.' => 'Definiše komunikacioni kanal telefona.',
         'Defines chat communication channel.' => 'Definiše komunikacioni kanal ćaskanja.',
+        'Defines web communication channel.' => '',
         'Defines groups for preferences items.' => 'Definiše kategorije za lična podešavanja.',
         'Defines how many deployments the system should keep.' => 'Definiše koliko rasporeda će sistem čuvati.',
         'Defines the search parameters for the AgentCustomerUserAddressBook screen. With the setting \'CustomerTicketTextField\' the values for the recipient field can be specified.' =>
@@ -9246,7 +9247,9 @@ Vaša tehnička podrška
             'Izvršavamo planirano održavanje. Prijava privremeno nije moguća.',
         'We are performing scheduled maintenance. We should be back online shortly.' =>
             'Izvršavamo planirano održavanje. uskoro ćemo biti ponovo aktivni.',
+        'Web' => '',
         'Web Services' => 'Veb servisi',
+        'Web communication channel.' => '',
         'Web service (Dropdown)' => '',
         'Web service (Multiselect)' => '',
         'Web service dynamic field AJAX interface' => '',

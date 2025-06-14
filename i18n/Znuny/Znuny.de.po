@@ -24689,3 +24689,15 @@ msgstr "Definiert, welche Objekte für den Export via Kommando \"Admin::Object::
 msgid "Defines which objects are supported for object import using command \"Admin::Object::Import\"."
 msgstr "Definiert, welche Objekte für den Import via Kommando \"Admin::Object::Import\" zur Verfügung stehen."
 
+#. XML Definition: Kernel/Config/Files/XML/Framework.xml
+msgid "Defines web communication channel."
+msgstr "Legt den Web-Kommunikationskanal fest."
+
+#. SysConfig
+msgid "Web"
+msgstr "Web"
+
+#. SysConfig
+msgid "Web communication channel."
+msgstr "Kommunikationskanal Web."
+

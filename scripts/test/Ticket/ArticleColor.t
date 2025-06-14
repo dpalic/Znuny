@@ -107,6 +107,20 @@ $Self->IsDeeply(
         },
         {
             'Color'                => '#FFCCCC',
+            'CommunicationChannel' => 'Web',
+            'IsVisibleForCustomer' => 'NotVisibleForCustomer',
+            'Name'                 => 'agent::Web::NotVisibleForCustomer',
+            'SenderType'           => 'agent'
+        },
+        {
+            'Color'                => '#D1E8D1',
+            'CommunicationChannel' => 'Web',
+            'IsVisibleForCustomer' => 'VisibleForCustomer',
+            'Name'                 => 'agent::Web::VisibleForCustomer',
+            'SenderType'           => 'agent'
+        },
+        {
+            'Color'                => '#FFCCCC',
             'CommunicationChannel' => 'Chat',
             'IsVisibleForCustomer' => 'NotVisibleForCustomer',
             'Name'                 => 'system::Chat::NotVisibleForCustomer',
@@ -159,6 +173,20 @@ $Self->IsDeeply(
             'CommunicationChannel' => 'Phone',
             'IsVisibleForCustomer' => 'VisibleForCustomer',
             'Name'                 => 'system::Phone::VisibleForCustomer',
+            'SenderType'           => 'system'
+        },
+        {
+            'Color'                => '#FFCCCC',
+            'CommunicationChannel' => 'Web',
+            'IsVisibleForCustomer' => 'NotVisibleForCustomer',
+            'Name'                 => 'system::Web::NotVisibleForCustomer',
+            'SenderType'           => 'system'
+        },
+        {
+            'Color'                => '#FFF7BE',
+            'CommunicationChannel' => 'Web',
+            'IsVisibleForCustomer' => 'VisibleForCustomer',
+            'Name'                 => 'system::Web::VisibleForCustomer',
             'SenderType'           => 'system'
         },
         {
@@ -217,6 +245,20 @@ $Self->IsDeeply(
             'Name'                 => 'customer::Phone::VisibleForCustomer',
             'SenderType'           => 'customer'
         },
+        {
+            'Color'                => '#FFCCCC',
+            'CommunicationChannel' => 'Web',
+            'IsVisibleForCustomer' => 'NotVisibleForCustomer',
+            'Name'                 => 'customer::Web::NotVisibleForCustomer',
+            'SenderType'           => 'customer'
+        },
+        {
+            'Color'                => '#D4DEFC',
+            'CommunicationChannel' => 'Web',
+            'IsVisibleForCustomer' => 'VisibleForCustomer',
+            'Name'                 => 'customer::Web::VisibleForCustomer',
+            'SenderType'           => 'customer'
+        }
     ],
     "ArticleSenderTypeList()",
 );
