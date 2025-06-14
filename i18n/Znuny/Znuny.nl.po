@@ -12536,11 +12536,11 @@ msgstr "Toon één interactie"
 msgid "Show all articles"
 msgstr "Toon alle interacties"
 
-#. Perl Module: Kernel/Modules/AjaxAttachment.pm
+#. Perl Module: Kernel/Modules/AJAXAttachment.pm
 msgid "Got no FormID."
 msgstr ""
 
-#. Perl Module: Kernel/Modules/AjaxAttachment.pm
+#. Perl Module: Kernel/Modules/AJAXAttachment.pm
 msgid "Error: the file could not be deleted properly. Please contact your administrator (missing FileID)."
 msgstr ""
 

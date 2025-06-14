@@ -3479,6 +3479,11 @@ bin/znuny.Daemon.pl status\').',
         'Edit the system configuration settings.' => 'Ubah pengaturan konfigurasi sistem.',
         'Manage add-ons.' => '',
 
+        # Perl Module: Kernel/Modules/AJAXAttachment.pm
+        'Got no FormID.' => '',
+        'Error: the file could not be deleted properly. Please contact your administrator (missing FileID).' =>
+            '',
+
         # Perl Module: Kernel/Modules/AdminACL.pm
         'ACL information from database is not in sync with the system configuration, please deploy all ACLs.' =>
             'Informasi ACL dari database tidak sinkron dengan konfigurasi sistem, tolong sebarkan semua ACL.',
@@ -4464,11 +4469,6 @@ bin/znuny.Daemon.pl status\').',
             'Artikel tidak bisa dibuka! Mungkin artikel itu berada dihalaman lain',
         'Show one article' => 'Tampilkan satu artikel',
         'Show all articles' => 'Tampilkan semua artikel',
-
-        # Perl Module: Kernel/Modules/AjaxAttachment.pm
-        'Got no FormID.' => '',
-        'Error: the file could not be deleted properly. Please contact your administrator (missing FileID).' =>
-            '',
 
         # Perl Module: Kernel/Modules/CustomerTicketArticleContent.pm
         'ArticleID is needed!' => '',

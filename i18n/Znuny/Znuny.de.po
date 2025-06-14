@@ -12552,11 +12552,11 @@ msgstr "Einen Artikel anzeigen"
 msgid "Show all articles"
 msgstr "Alle Artikel anzeigen"
 
-#. Perl Module: Kernel/Modules/AjaxAttachment.pm
+#. Perl Module: Kernel/Modules/AJAXAttachment.pm
 msgid "Got no FormID."
 msgstr "FormID fehlt."
 
-#. Perl Module: Kernel/Modules/AjaxAttachment.pm
+#. Perl Module: Kernel/Modules/AJAXAttachment.pm
 msgid "Error: the file could not be deleted properly. Please contact your administrator (missing FileID)."
 msgstr "Fehler: die Datei konnte nicht korrekt gelöscht werden. Bitte kontaktieren Sie Ihren Administrator (fehlende FileID)."
 

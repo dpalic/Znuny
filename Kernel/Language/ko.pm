@@ -3477,6 +3477,11 @@ sub Data {
         'Edit the system configuration settings.' => '시스템 구성 설정을 편집 하십시오.',
         'Manage add-ons.' => '',
 
+        # Perl Module: Kernel/Modules/AJAXAttachment.pm
+        'Got no FormID.' => 'FormID 없음.',
+        'Error: the file could not be deleted properly. Please contact your administrator (missing FileID).' =>
+            '오류 : 파일을 제대로 삭제할 수 없습니다. 관리자에게 문의하십시오 (누락 된 FileID).',
+
         # Perl Module: Kernel/Modules/AdminACL.pm
         'ACL information from database is not in sync with the system configuration, please deploy all ACLs.' =>
             '데이터베이스의 ACL 정보가 시스템 구성과 일치하지 않습니다. 모든 ACL을 배포하십시오.',
@@ -4462,11 +4467,6 @@ sub Data {
             '기사를 열 수 없습니다! 아마 다른 기사 페이지에 있습니까?',
         'Show one article' => '기사 한 개 표시',
         'Show all articles' => '모든 기사 표시',
-
-        # Perl Module: Kernel/Modules/AjaxAttachment.pm
-        'Got no FormID.' => 'FormID 없음.',
-        'Error: the file could not be deleted properly. Please contact your administrator (missing FileID).' =>
-            '오류 : 파일을 제대로 삭제할 수 없습니다. 관리자에게 문의하십시오 (누락 된 FileID).',
 
         # Perl Module: Kernel/Modules/CustomerTicketArticleContent.pm
         'ArticleID is needed!' => 'ArticleID이 필요합니다!',

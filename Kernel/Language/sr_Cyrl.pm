@@ -3478,6 +3478,11 @@ sub Data {
         'Edit the system configuration settings.' => 'Уреди подешавања системске конфигурације.',
         'Manage add-ons.' => '',
 
+        # Perl Module: Kernel/Modules/AJAXAttachment.pm
+        'Got no FormID.' => 'Није дат FormID.',
+        'Error: the file could not be deleted properly. Please contact your administrator (missing FileID).' =>
+            'Грешка: датотека није могла бити обрисана. Молимо контактирајте вашег администратора (недостаје FileID).',
+
         # Perl Module: Kernel/Modules/AdminACL.pm
         'ACL information from database is not in sync with the system configuration, please deploy all ACLs.' =>
             'ACL информације из базе података нису синхронизоване са системском конфигурацијом, молимо вас да примените све ACL листе.',
@@ -4463,11 +4468,6 @@ sub Data {
             'Чланак се не може отворити! Могуће је да је на другој страници?',
         'Show one article' => 'Прикажи један чланак',
         'Show all articles' => 'Прикажи све чланке',
-
-        # Perl Module: Kernel/Modules/AjaxAttachment.pm
-        'Got no FormID.' => 'Није дат FormID.',
-        'Error: the file could not be deleted properly. Please contact your administrator (missing FileID).' =>
-            'Грешка: датотека није могла бити обрисана. Молимо контактирајте вашег администратора (недостаје FileID).',
 
         # Perl Module: Kernel/Modules/CustomerTicketArticleContent.pm
         'ArticleID is needed!' => 'Неопходан ArticleID!',

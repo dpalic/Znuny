@@ -3481,6 +3481,11 @@ sub Data {
         'Edit the system configuration settings.' => 'Alterar parâmetros de configuração do sistema.',
         'Manage add-ons.' => '',
 
+        # Perl Module: Kernel/Modules/AJAXAttachment.pm
+        'Got no FormID.' => 'Não contém ID de Formulário.',
+        'Error: the file could not be deleted properly. Please contact your administrator (missing FileID).' =>
+            'Erro: o arquivo não pôde ser excluído corretamente. Por favor entrar em contato com seu administrador (Falta ID de Campo)',
+
         # Perl Module: Kernel/Modules/AdminACL.pm
         'ACL information from database is not in sync with the system configuration, please deploy all ACLs.' =>
             'Informação da ACL no banco de dados não está sincronizada com a configuração do sistema, por favor implemente todas as ACLs.',
@@ -4466,11 +4471,6 @@ sub Data {
             'O artigo não pôde ser aberto! Talvez ele esteja em outra página de artigo?',
         'Show one article' => 'Exibir um Artigo',
         'Show all articles' => 'Exibir Todos os Artigos',
-
-        # Perl Module: Kernel/Modules/AjaxAttachment.pm
-        'Got no FormID.' => 'Não contém ID de Formulário.',
-        'Error: the file could not be deleted properly. Please contact your administrator (missing FileID).' =>
-            'Erro: o arquivo não pôde ser excluído corretamente. Por favor entrar em contato com seu administrador (Falta ID de Campo)',
 
         # Perl Module: Kernel/Modules/CustomerTicketArticleContent.pm
         'ArticleID is needed!' => 'O Id do Artigo é necessário!',

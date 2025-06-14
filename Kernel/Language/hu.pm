@@ -3483,6 +3483,11 @@ sub Data {
         'Edit the system configuration settings.' => 'A rendszer konfigurációs beállításainak szerkesztése.',
         'Manage add-ons.' => '',
 
+        # Perl Module: Kernel/Modules/AJAXAttachment.pm
+        'Got no FormID.' => 'Nem érkezett űrlap-azonosító.',
+        'Error: the file could not be deleted properly. Please contact your administrator (missing FileID).' =>
+            'Hiba: a fájlt nem sikerült megfelelően törölni. Vegye fel a kapcsolatot a rendszergazdával (hiányzó fájlazonosító).',
+
         # Perl Module: Kernel/Modules/AdminACL.pm
         'ACL information from database is not in sync with the system configuration, please deploy all ACLs.' =>
             'Az adatbázis ACL információi nincsenek szinkronizálva a rendszer beállításaival, állítson üzembe minden ACL-t.',
@@ -4468,11 +4473,6 @@ sub Data {
             'A bejegyzést nem sikerült megnyitni! Talán egy másik bejegyzés oldalon van?',
         'Show one article' => 'Egy bejegyzés megjelenítése',
         'Show all articles' => 'Összes bejegyzés megjelenítése',
-
-        # Perl Module: Kernel/Modules/AjaxAttachment.pm
-        'Got no FormID.' => 'Nem érkezett űrlap-azonosító.',
-        'Error: the file could not be deleted properly. Please contact your administrator (missing FileID).' =>
-            'Hiba: a fájlt nem sikerült megfelelően törölni. Vegye fel a kapcsolatot a rendszergazdával (hiányzó fájlazonosító).',
 
         # Perl Module: Kernel/Modules/CustomerTicketArticleContent.pm
         'ArticleID is needed!' => 'Bejegyzésazonosító szükséges!',

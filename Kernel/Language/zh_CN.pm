@@ -3484,6 +3484,11 @@ sub Data {
         'Edit the system configuration settings.' => '编辑系统配置。',
         'Manage add-ons.' => '',
 
+        # Perl Module: Kernel/Modules/AJAXAttachment.pm
+        'Got no FormID.' => '没有获取到表单ID。',
+        'Error: the file could not be deleted properly. Please contact your administrator (missing FileID).' =>
+            '错误：文件无法正确删除，请联系您的管理员（缺少文件ID）。',
+
         # Perl Module: Kernel/Modules/AdminACL.pm
         'ACL information from database is not in sync with the system configuration, please deploy all ACLs.' =>
             '数据库中的ACL信息与系统配置不一致，请部署所有ACL。',
@@ -4469,11 +4474,6 @@ sub Data {
             '不能打开信件！或许它在另外一个信件页面上打开了？',
         'Show one article' => '显示单一信件',
         'Show all articles' => '显示所有信件',
-
-        # Perl Module: Kernel/Modules/AjaxAttachment.pm
-        'Got no FormID.' => '没有获取到表单ID。',
-        'Error: the file could not be deleted properly. Please contact your administrator (missing FileID).' =>
-            '错误：文件无法正确删除，请联系您的管理员（缺少文件ID）。',
 
         # Perl Module: Kernel/Modules/CustomerTicketArticleContent.pm
         'ArticleID is needed!' => '需要信件ID！',

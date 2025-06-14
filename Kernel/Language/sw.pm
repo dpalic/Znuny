@@ -3480,6 +3480,11 @@ sub Data {
         'Edit the system configuration settings.' => 'Hakiki mipangilio ya usanidishaji wa mfumo. ',
         'Manage add-ons.' => '',
 
+        # Perl Module: Kernel/Modules/AJAXAttachment.pm
+        'Got no FormID.' => '',
+        'Error: the file could not be deleted properly. Please contact your administrator (missing FileID).' =>
+            '',
+
         # Perl Module: Kernel/Modules/AdminACL.pm
         'ACL information from database is not in sync with the system configuration, please deploy all ACLs.' =>
             'Taarifa za ACL kutoka kwenye kihifadhi data hazilandani na mfumo uliosanidishwa, tafadhali eneza kwneye ACL zote.',
@@ -4465,11 +4470,6 @@ sub Data {
             'Makala haiwezi kufunguliwa! Huenda ipo kwenye ukurasa mwingine wa makala.',
         'Show one article' => 'Onyesha makala moja',
         'Show all articles' => 'Onyesha makala zote',
-
-        # Perl Module: Kernel/Modules/AjaxAttachment.pm
-        'Got no FormID.' => '',
-        'Error: the file could not be deleted properly. Please contact your administrator (missing FileID).' =>
-            '',
 
         # Perl Module: Kernel/Modules/CustomerTicketArticleContent.pm
         'ArticleID is needed!' => '',

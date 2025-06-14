@@ -12542,11 +12542,11 @@ msgstr "Прикажи један чланак"
 msgid "Show all articles"
 msgstr "Прикажи све чланке"
 
-#. Perl Module: Kernel/Modules/AjaxAttachment.pm
+#. Perl Module: Kernel/Modules/AJAXAttachment.pm
 msgid "Got no FormID."
 msgstr "Није дат FormID."
 
-#. Perl Module: Kernel/Modules/AjaxAttachment.pm
+#. Perl Module: Kernel/Modules/AJAXAttachment.pm
 msgid "Error: the file could not be deleted properly. Please contact your administrator (missing FileID)."
 msgstr "Грешка: датотека није могла бити обрисана. Молимо контактирајте вашег администратора (недостаје FileID)."
 

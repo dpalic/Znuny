@@ -12518,11 +12518,11 @@ msgstr "Rodyti vieną straipsnį"
 msgid "Show all articles"
 msgstr "Rodyti visus straipsnius"
 
-#. Perl Module: Kernel/Modules/AjaxAttachment.pm
+#. Perl Module: Kernel/Modules/AJAXAttachment.pm
 msgid "Got no FormID."
 msgstr ""
 
-#. Perl Module: Kernel/Modules/AjaxAttachment.pm
+#. Perl Module: Kernel/Modules/AJAXAttachment.pm
 msgid "Error: the file could not be deleted properly. Please contact your administrator (missing FileID)."
 msgstr ""
 

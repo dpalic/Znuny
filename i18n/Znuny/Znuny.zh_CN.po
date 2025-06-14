@@ -12542,11 +12542,11 @@ msgstr "显示单一信件"
 msgid "Show all articles"
 msgstr "显示所有信件"
 
-#. Perl Module: Kernel/Modules/AjaxAttachment.pm
+#. Perl Module: Kernel/Modules/AJAXAttachment.pm
 msgid "Got no FormID."
 msgstr "没有获取到表单ID。"
 
-#. Perl Module: Kernel/Modules/AjaxAttachment.pm
+#. Perl Module: Kernel/Modules/AJAXAttachment.pm
 msgid "Error: the file could not be deleted properly. Please contact your administrator (missing FileID)."
 msgstr "错误：文件无法正确删除，请联系您的管理员（缺少文件ID）。"
 

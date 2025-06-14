@@ -3477,6 +3477,11 @@ sub Data {
         'Edit the system configuration settings.' => 'Уредување на систем за  конфигурирање на поставки.',
         'Manage add-ons.' => '',
 
+        # Perl Module: Kernel/Modules/AJAXAttachment.pm
+        'Got no FormID.' => '',
+        'Error: the file could not be deleted properly. Please contact your administrator (missing FileID).' =>
+            '',
+
         # Perl Module: Kernel/Modules/AdminACL.pm
         'ACL information from database is not in sync with the system configuration, please deploy all ACLs.' =>
             'ЛКП информации од базата на податоци не е во синхронизација со конфигурација на системот, Ве молиме распоредате ги  сите ЛКП.',
@@ -4462,11 +4467,6 @@ sub Data {
             'Натписот неможе да биде отворед! Можеби е на друга страница со натписи?',
         'Show one article' => 'Прикажи еден натпис',
         'Show all articles' => 'Сприкажи ги сите натписи',
-
-        # Perl Module: Kernel/Modules/AjaxAttachment.pm
-        'Got no FormID.' => '',
-        'Error: the file could not be deleted properly. Please contact your administrator (missing FileID).' =>
-            '',
 
         # Perl Module: Kernel/Modules/CustomerTicketArticleContent.pm
         'ArticleID is needed!' => '',

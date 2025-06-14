@@ -553,7 +553,7 @@ Core.UI = (function (TargetNS) {
                 return false;
             }
 
-            // If SessionUseCookie is disabled use Session cookie in AjaxAttachment. See bug#14432.
+            // If SessionUseCookie is disabled use Session cookie in AJAXAttachment. See bug#14432.
             if (Core.Config.Get('SessionUseCookie') === '0') {
                 if (CGIHandle.indexOf('index') > -1) {
                     SessionName =  Core.Config.Get('SessionName');
@@ -673,7 +673,7 @@ Core.UI = (function (TargetNS) {
                 Upload.append('Files', File);
 
                 $.ajax({
-                    url: Core.Config.Get('CGIHandle') + '?Action=AjaxAttachment;Subaction=Upload;FormID=' + FormID + ';ChallengeToken=' + ChallengeToken + SessionToken,
+                    url: Core.Config.Get('CGIHandle') + '?Action=AJAXAttachment;Subaction=Upload;FormID=' + FormID + ';ChallengeToken=' + ChallengeToken + SessionToken,
                     type: 'post',
                     data: Upload,
                     xhr: function() {
@@ -847,7 +847,7 @@ Core.UI = (function (TargetNS) {
                 $UploadFieldObj = $AttachmentListContainerObj.nextAll('.AjaxDnDUpload'),
                 FormID = $UploadFieldObj.data('form-id') ? $UploadFieldObj.data('form-id') : $(this).closest('form').find('input[name=FormID]').val(),
                 Data = {
-                    Action: $(this).data('delete-action') ? $(this).data('delete-action') : 'AjaxAttachment',
+                    Action: $(this).data('delete-action') ? $(this).data('delete-action') : 'AJAXAttachment',
                     Subaction: 'Delete',
                     FileID: $(this).data('file-id'),
                     FormID: FormID,

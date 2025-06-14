@@ -7,7 +7,7 @@
 # did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.
 # --
 
-package Kernel::Modules::AjaxAttachment;
+package Kernel::Modules::AJAXAttachment;
 
 use strict;
 use warnings;

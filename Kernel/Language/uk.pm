@@ -3478,6 +3478,11 @@ sub Data {
         'Edit the system configuration settings.' => 'Редагувати параметри налаштування системи.',
         'Manage add-ons.' => '',
 
+        # Perl Module: Kernel/Modules/AJAXAttachment.pm
+        'Got no FormID.' => '',
+        'Error: the file could not be deleted properly. Please contact your administrator (missing FileID).' =>
+            '',
+
         # Perl Module: Kernel/Modules/AdminACL.pm
         'ACL information from database is not in sync with the system configuration, please deploy all ACLs.' =>
             'ACL-інформація з бази даних не синхронізована з конфігурацією системи, будь ласка, розгорніть усі ACL.',
@@ -4463,11 +4468,6 @@ sub Data {
             'Статтю не можливо відкрити! Може вона на іншій сторінці статті?',
         'Show one article' => 'Відобразити одну заявку',
         'Show all articles' => 'Відобразити всі заявки',
-
-        # Perl Module: Kernel/Modules/AjaxAttachment.pm
-        'Got no FormID.' => '',
-        'Error: the file could not be deleted properly. Please contact your administrator (missing FileID).' =>
-            '',
 
         # Perl Module: Kernel/Modules/CustomerTicketArticleContent.pm
         'ArticleID is needed!' => '',

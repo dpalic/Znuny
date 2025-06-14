@@ -3480,6 +3480,11 @@ sub Data {
         'Edit the system configuration settings.' => 'แก้ไขการตั้งค่าการกำหนดค่าระบบ',
         'Manage add-ons.' => '',
 
+        # Perl Module: Kernel/Modules/AJAXAttachment.pm
+        'Got no FormID.' => '',
+        'Error: the file could not be deleted properly. Please contact your administrator (missing FileID).' =>
+            '',
+
         # Perl Module: Kernel/Modules/AdminACL.pm
         'ACL information from database is not in sync with the system configuration, please deploy all ACLs.' =>
             'ข้อมูลACL จากฐานข้อมูลไม่ได้ซิงค์กับการกำหนดค่าระบบกรุณาใช้งาน ACLs ทั้งหมด',
@@ -4465,11 +4470,6 @@ sub Data {
             'ไม่สามารถเปิดบทความ! บางทีมันอาจจะอยู่บนหน้าบทความอื่นได้หรือไม่?',
         'Show one article' => 'แสดงหนึ่งบทความ',
         'Show all articles' => 'แสดงบทความทั้งหมด',
-
-        # Perl Module: Kernel/Modules/AjaxAttachment.pm
-        'Got no FormID.' => '',
-        'Error: the file could not be deleted properly. Please contact your administrator (missing FileID).' =>
-            '',
 
         # Perl Module: Kernel/Modules/CustomerTicketArticleContent.pm
         'ArticleID is needed!' => '',
