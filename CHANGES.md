@@ -1,4 +1,4 @@
-# 7.2.1 2025-xx-xx
+# 7.2.1 2025-??-??
  - 2025-06-14 Added new communication channel Web.
  - 2025-06-13 Renamed the perl module Kernel::Modules::AjaxAttachment to Kernel::Modules::AJAXAttachment to follow the coding standards for naming modules.
  - 2025-06-05 Fixed: Added missing required parameter UserType in Kernel::System::AuthSession->() to Perldoc. Added optional parameter SessionSource to Perldoc.
@@ -21,6 +21,7 @@
  - 2025-05-06 Added DefaultPageShown setting to every DashboardBackend SysConfig that uses the module `Kernel::Output::HTML::Dashboard::TicketGeneric`. This allows the number of items shown per page to be defined and extended for each dashboard widget.
  - 2025-05-05 Added SysConfigLink to AdminPackageManager - Redirect to System Configuration from Package Manager.
  - 2025-04-30 Fixed: OTRS_CUSTOMER_REALNAME placeholder expansion in AgentTicketMerge.
+ - 2025-03-25 Generic interface operation TicketUpdate now checks detailed ticket permissions of customer user.
  - 2024-07-30 Auto responses, notifications, processes, salutations, signatures and standard templates can now all be deleted, copied, imported and exported.
 
 # 7.1.7 2025-04-30
