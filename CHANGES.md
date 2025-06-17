@@ -21,6 +21,7 @@
  - 2025-05-06 Added DefaultPageShown setting to every DashboardBackend SysConfig that uses the module `Kernel::Output::HTML::Dashboard::TicketGeneric`. This allows the number of items shown per page to be defined and extended for each dashboard widget.
  - 2025-05-05 Added SysConfigLink to AdminPackageManager - Redirect to System Configuration from Package Manager.
  - 2025-04-30 Fixed: OTRS_CUSTOMER_REALNAME placeholder expansion in AgentTicketMerge.
+ - 2025-03-26 Fixed tree view icon not showing up for dynamic field types Dropdown and Multiselect.
  - 2025-03-25 Generic interface operation TicketUpdate now checks detailed ticket permissions of customer user.
  - 2024-07-30 Auto responses, notifications, processes, salutations, signatures and standard templates can now all be deleted, copied, imported and exported.
 

@@ -1223,7 +1223,7 @@ Core.UI.InputFields = (function (TargetNS) {
                 $ShowTreeObj = $SelectObj.next('.ShowTreeSelection');
                 if ($SelectObj.data('tree') || $ShowTreeObj.length) {
                     if ($ShowTreeObj.length) {
-                        $ShowTreeObj.hide();
+                        $ShowTreeObj.show();
                     }
                     $SelectObj.data('tree', true);
                     TreeView = true;
@@ -1237,6 +1237,9 @@ Core.UI.InputFields = (function (TargetNS) {
                 // Container for input field
                 $InputContainerObj = $('<div />').appendTo($ContainerObj);
                 $InputContainerObj.addClass('InputField_InputContainer');
+
+                // Move tree view icon directly "behind" input element
+                $ShowTreeObj.insertAfter($InputContainerObj);
 
                 // Deduce ID of original field
                 SearchID = $SelectObj.attr('id');
