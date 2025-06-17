@@ -27,7 +27,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.16363044892648;
+    $Self->{Completeness}        = 0.163657068488694;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -2650,8 +2650,7 @@ sub Data {
         'Link to parent' => 'Seo ülemaga',
         'Unlock tickets' => 'Võta intsidendid lukust lahti',
         'Watch tickets' => '',
-        'Mark tickets as seen' => '',
-        'Mark tickets as unseen' => '',
+        'Mark tickets as' => '',
         'Execute Bulk Action' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt

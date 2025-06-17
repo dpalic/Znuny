@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D/%M/%Y';
     $Self->{DateInputFormat}     = '%D/%M/%Y';
     $Self->{DateInputFormatLong} = '%D/%M/%Y - %T';
-    $Self->{Completeness}        = 0.597267404033832;
+    $Self->{Completeness}        = 0.597364568081991;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -2651,8 +2651,7 @@ bin/znuny.Daemon.pl status\').',
         'Link to parent' => 'Menyambungkan ke parent',
         'Unlock tickets' => 'Membuka tiket',
         'Watch tickets' => '',
-        'Mark tickets as seen' => '',
-        'Mark tickets as unseen' => '',
+        'Mark tickets as' => '',
         'Execute Bulk Action' => 'Menghasilkan Dukungan Bundle',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt

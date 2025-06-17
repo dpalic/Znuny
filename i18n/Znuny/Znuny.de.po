@@ -24701,3 +24701,7 @@ msgstr "Web"
 msgid "Web communication channel."
 msgstr "Kommunikationskanal Web."
 
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBulk.tt
+msgid "Mark tickets as"
+msgstr "Tickets markieren als"
+
