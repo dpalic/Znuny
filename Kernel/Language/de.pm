@@ -2650,8 +2650,7 @@ sub Data {
         'Link to parent' => 'Mit Eltern verknüpfen',
         'Unlock tickets' => 'Tickets entsperren',
         'Watch tickets' => 'Tickets beobachten',
-        'Mark tickets as seen' => 'Tickets als gelesen markieren',
-        'Mark tickets as unseen' => 'Tickets als ungelesen markieren',
+        'Mark tickets as' => 'Tickets markieren als',
         'Execute Bulk Action' => 'Sammelaktion ausführen',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
