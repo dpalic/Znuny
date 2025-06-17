@@ -37,14 +37,6 @@ sub Run {
 
     my @Tasks = (
         {
-            Message => 'Increase size of columns of database table standard_template.',
-            Module  => 'StandardTemplate',
-        },
-        {
-            Message => 'Create missing primary keys for database tables.',
-            Module  => 'CreatePrimaryKeys',
-        },
-        {
             Message => 'Increase size of columns of database table search_profile.',
             Module  => 'SearchProfile',
         },
