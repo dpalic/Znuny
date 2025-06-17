@@ -1,4 +1,5 @@
 # 7.2.1 2025-??-??
+ - 2025-06-17 Fixed: Added missing parameter TwoFactorToken in Kernel::GenericInterface::Operation::Session::Common->CreateSessionID() to Perldoc.
  - 2025-06-17 Improve error message when exiting due to PackageIsDownloadable = 0. Thanks for reporting to Darko (@dpalic). [#684](https://github.com/znuny/Znuny/issues/684)
  - 2025-06-14 Added new communication channel Web.
  - 2025-06-13 Renamed the perl module Kernel::Modules::AjaxAttachment to Kernel::Modules::AJAXAttachment to follow the coding standards for naming modules.
