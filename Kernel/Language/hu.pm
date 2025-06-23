@@ -32,7 +32,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%M-%D';
     $Self->{DateInputFormat}     = '%Y-%M-%D';
     $Self->{DateInputFormatLong} = '%Y-%M-%D - %T';
-    $Self->{Completeness}        = 0.884008459411095;
+    $Self->{Completeness}        = 0.883720930232558;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -3484,6 +3484,9 @@ sub Data {
 
         # Perl Module: Kernel/Modules/AJAXAttachment.pm
         'Got no FormID.' => 'Nem érkezett űrlap-azonosító.',
+        '%s is missing. The file could not be downloaded properly.' => '',
+        'Please contact the administrator.' => 'Vegye fel a kapcsolatot a rendszergazdával.',
+        '%s is missing. The file could not be previewed properly.' => '',
         'Error: the file could not be deleted properly. Please contact your administrator (missing FileID).' =>
             'Hiba: a fájlt nem sikerült megfelelően törölni. Vegye fel a kapcsolatot a rendszergazdával (hiányzó fájlazonosító).',
 
@@ -3517,7 +3520,6 @@ sub Data {
 
         # Perl Module: Kernel/Modules/AdminAppointmentCalendarManage.pm
         'System was unable to create Calendar!' => 'A rendszer nem tudta létrehozni a naptárat!',
-        'Please contact the administrator.' => 'Vegye fel a kapcsolatot a rendszergazdával.',
         'No CalendarID!' => 'Nincs naptár-azonosító!',
         'You have no access to this calendar!' => 'Nincs hozzáférése ehhez a naptárhoz!',
         'Error updating the calendar!' => 'Hiba a naptár frissítésekor!',

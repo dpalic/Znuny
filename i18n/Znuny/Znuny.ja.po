@@ -10005,7 +10005,7 @@ msgstr "否定された正規表現（大文字と小文字を区別しない）
 msgid "System was unable to create Calendar!"
 msgstr "システムがカレンダーを作成できませんでした！"
 
-#. Perl Module: Kernel/Modules/AdminAppointmentCalendarManage.pm
+#. Perl Module: Kernel/Modules/AJAXAttachment.pm
 msgid "Please contact the administrator."
 msgstr "管理者に連絡してください。"
 
@@ -24714,5 +24714,13 @@ msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBulk.tt
 msgid "Mark tickets as"
+msgstr ""
+
+#. Perl Module: Kernel/Modules/AJAXAttachment.pm
+msgid "%s is missing. The file could not be downloaded properly."
+msgstr ""
+
+#. Perl Module: Kernel/Modules/AJAXAttachment.pm
+msgid "%s is missing. The file could not be previewed properly."
 msgstr ""
 

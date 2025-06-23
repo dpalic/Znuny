@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%M-%D';
     $Self->{DateInputFormat}     = '%Y-%M-%D';
     $Self->{DateInputFormatLong} = '%Y-%M-%D %T';
-    $Self->{Completeness}        = 0.856027330405076;
+    $Self->{Completeness}        = 0.85574890226053;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -3478,6 +3478,9 @@ sub Data {
 
         # Perl Module: Kernel/Modules/AJAXAttachment.pm
         'Got no FormID.' => 'FormID 없음.',
+        '%s is missing. The file could not be downloaded properly.' => '',
+        'Please contact the administrator.' => '관리자에게 문의하십시오.',
+        '%s is missing. The file could not be previewed properly.' => '',
         'Error: the file could not be deleted properly. Please contact your administrator (missing FileID).' =>
             '오류 : 파일을 제대로 삭제할 수 없습니다. 관리자에게 문의하십시오 (누락 된 FileID).',
 
@@ -3511,7 +3514,6 @@ sub Data {
 
         # Perl Module: Kernel/Modules/AdminAppointmentCalendarManage.pm
         'System was unable to create Calendar!' => '시스템에서 캘린더를 만들 수 없습니다!',
-        'Please contact the administrator.' => '관리자에게 문의하십시오.',
         'No CalendarID!' => 'CalendarID 없음!',
         'You have no access to this calendar!' => '이 캘린더에 액세스 할 수 없습니다.',
         'Error updating the calendar!' => '달력을 업데이트하는 중 오류가 발생했습니다!',

@@ -30,7 +30,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D/%M/%Y';
     $Self->{DateInputFormat}     = '%D/%M/%Y';
     $Self->{DateInputFormatLong} = '%D/%M/%Y - %T';
-    $Self->{Completeness}        = 0.849682772083943;
+    $Self->{Completeness}        = 0.849406407545942;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -3482,6 +3482,9 @@ sub Data {
 
         # Perl Module: Kernel/Modules/AJAXAttachment.pm
         'Got no FormID.' => 'Não contém ID de Formulário.',
+        '%s is missing. The file could not be downloaded properly.' => '',
+        'Please contact the administrator.' => 'Por favor, entre em contato com o administrador.',
+        '%s is missing. The file could not be previewed properly.' => '',
         'Error: the file could not be deleted properly. Please contact your administrator (missing FileID).' =>
             'Erro: o arquivo não pôde ser excluído corretamente. Por favor entrar em contato com seu administrador (Falta ID de Campo)',
 
@@ -3515,7 +3518,6 @@ sub Data {
 
         # Perl Module: Kernel/Modules/AdminAppointmentCalendarManage.pm
         'System was unable to create Calendar!' => 'Sistema não foi capaz de criar o Calendário!',
-        'Please contact the administrator.' => 'Por favor, entre em contato com o administrador.',
         'No CalendarID!' => 'Nenhum CalendarID!',
         'You have no access to this calendar!' => 'Você não tem acesso a este calendário!',
         'Error updating the calendar!' => 'Erro ao atualizar o calendário!',

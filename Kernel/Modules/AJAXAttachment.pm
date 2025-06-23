@@ -11,6 +11,7 @@ package Kernel::Modules::AJAXAttachment;
 
 use strict;
 use warnings;
+use MIME::Base64;
 
 use Kernel::Language qw(Translatable);
 
@@ -36,6 +37,7 @@ sub Run {
     my $ParamObject       = $Kernel::OM->Get('Kernel::System::Web::Request');
     my $UploadCacheObject = $Kernel::OM->Get('Kernel::System::Web::UploadCache');
     my $LayoutObject      = $Kernel::OM->Get('Kernel::Output::HTML::Layout');
+    my $JSONObject        = $Kernel::OM->Get('Kernel::System::JSON');
 
     # get form id
     $Self->{FormID} = $Kernel::OM->Get('Kernel::System::Web::Request')->GetParam( Param => 'FormID' );
@@ -45,6 +47,9 @@ sub Run {
             Message => Translatable('Got no FormID.'),
         );
     }
+
+    $GetParam{FileID} = $ParamObject->GetParam( Param => 'FileID' ) || '';
+    $GetParam{FormID} = $ParamObject->GetParam( Param => 'FormID' ) || '';
 
     # challenge token check for write action
     $LayoutObject->ChallengeTokenCheck();
@@ -84,11 +89,90 @@ sub Run {
 
         return $LayoutObject->Attachment(
             ContentType => 'application/json; charset=' . $LayoutObject->{Charset},
-            Content     => $Kernel::OM->Get('Kernel::System::JSON')->Encode(
+            Content     => $JSONObject->Encode(
                 Data => \@AttachmentData,
             ),
             Type    => 'inline',
             NoCache => 1,
+        );
+    }
+    elsif ( $Self->{Subaction} eq 'Download' ) {
+
+        my %Attachment;
+        NEEDED:
+        for my $Needed (qw(FileID FormID)) {
+            next NEEDED if defined $GetParam{$Needed};
+
+            return $LayoutObject->ErrorScreen(
+                Message => $LayoutObject->{LanguageObject}
+                    ->Translate( '%s is missing. The file could not be downloaded properly.', $Needed ),
+                Comment => Translatable('Please contact the administrator.'),
+            );
+        }
+
+        my @Attachments = $UploadCacheObject->FormIDGetAllFilesData(
+            FormID => $Self->{FormID},
+        );
+
+        ATTACHMENT:
+        for my $Attachment (@Attachments) {
+
+            next ATTACHMENT if $Attachment->{FileID} ne $GetParam{FileID};
+            %Attachment = %{$Attachment};
+            last ATTACHMENT;
+        }
+
+        return $LayoutObject->Attachment(
+            %Attachment,
+            ContentType => 'attachment',
+            Sandbox     => 1,
+        );
+
+    }
+    elsif ( $Self->{Subaction} eq 'Preview' ) {
+
+        my %Attachment;
+        NEEDED:
+        for my $Needed (qw(FileID FormID)) {
+            next NEEDED if defined $GetParam{$Needed};
+
+            return $LayoutObject->ErrorScreen(
+                Message => $LayoutObject->{LanguageObject}
+                    ->Translate( '%s is missing. The file could not be previewed properly.', $Needed ),
+                Comment => Translatable('Please contact the administrator.'),
+            );
+        }
+
+        my @Attachments = $UploadCacheObject->FormIDGetAllFilesData(
+            FormID => $Self->{FormID},
+        );
+
+        ATTACHMENT:
+        for my $Attachment (@Attachments) {
+
+            next ATTACHMENT if $Attachment->{FileID} ne $GetParam{FileID};
+            %Attachment = %{$Attachment};
+
+            if ( $Attachment->{ContentType} ) {
+                $Attachment{ContentBase64} = encode_base64( $Attachment->{Content} );
+                $Attachment{SourceData}    = "data:$Attachment->{ContentType};base64,";
+                $Attachment{Template}      = "Iframe";
+            }
+
+            last ATTACHMENT;
+        }
+
+        my $Content = $JSONObject->Encode(
+            Data => {
+                Message    => 'Success',
+                Attachment => \%Attachment,
+            }
+        );
+
+        return $LayoutObject->Attachment(
+            ContentType => 'application/json; charset=' . $LayoutObject->{Charset},
+            Content     => $Content,
+            Sandbox     => 1,
         );
     }
     elsif ( $Self->{Subaction} eq 'Delete' ) {
@@ -134,7 +218,7 @@ sub Run {
 
         return $LayoutObject->Attachment(
             ContentType => 'application/json; charset=' . $LayoutObject->{Charset},
-            Content     => $Kernel::OM->Get('Kernel::System::JSON')->Encode(
+            Content     => $JSONObject->Encode(
                 Data => $Return,
             ),
             Type    => 'inline',

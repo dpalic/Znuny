@@ -10010,7 +10010,7 @@ msgstr "부정적 정규 표현식 (대소 문자 무시)"
 msgid "System was unable to create Calendar!"
 msgstr "시스템에서 캘린더를 만들 수 없습니다!"
 
-#. Perl Module: Kernel/Modules/AdminAppointmentCalendarManage.pm
+#. Perl Module: Kernel/Modules/AJAXAttachment.pm
 msgid "Please contact the administrator."
 msgstr "관리자에게 문의하십시오."
 
@@ -24702,5 +24702,13 @@ msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBulk.tt
 msgid "Mark tickets as"
+msgstr ""
+
+#. Perl Module: Kernel/Modules/AJAXAttachment.pm
+msgid "%s is missing. The file could not be downloaded properly."
+msgstr ""
+
+#. Perl Module: Kernel/Modules/AJAXAttachment.pm
+msgid "%s is missing. The file could not be previewed properly."
 msgstr ""
 

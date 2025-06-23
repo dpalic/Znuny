@@ -27,7 +27,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%M/%D/%Y';
     $Self->{DateInputFormat}     = '%M/%D/%Y';
     $Self->{DateInputFormatLong} = '%M/%D/%Y - %T';
-    $Self->{Completeness}        = 0.429477794045876;
+    $Self->{Completeness}        = 0.429338103756708;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -3479,6 +3479,9 @@ sub Data {
 
         # Perl Module: Kernel/Modules/AJAXAttachment.pm
         'Got no FormID.' => '',
+        '%s is missing. The file could not be downloaded properly.' => '',
+        'Please contact the administrator.' => 'Будь ласка, зверніться до адміністратора.',
+        '%s is missing. The file could not be previewed properly.' => '',
         'Error: the file could not be deleted properly. Please contact your administrator (missing FileID).' =>
             '',
 
@@ -3512,7 +3515,6 @@ sub Data {
 
         # Perl Module: Kernel/Modules/AdminAppointmentCalendarManage.pm
         'System was unable to create Calendar!' => 'Система не може створити календар!',
-        'Please contact the administrator.' => 'Будь ласка, зверніться до адміністратора.',
         'No CalendarID!' => 'Немає CalendarID',
         'You have no access to this calendar!' => 'Ви не маєте доступу до цього календаря!',
         'Error updating the calendar!' => 'Помилка при оновлденні календаря',

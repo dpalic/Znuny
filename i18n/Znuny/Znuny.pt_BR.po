@@ -10010,7 +10010,7 @@ msgstr "Expressão Regular negada(ignora maiúsculas)"
 msgid "System was unable to create Calendar!"
 msgstr "Sistema não foi capaz de criar o Calendário!"
 
-#. Perl Module: Kernel/Modules/AdminAppointmentCalendarManage.pm
+#. Perl Module: Kernel/Modules/AJAXAttachment.pm
 msgid "Please contact the administrator."
 msgstr "Por favor, entre em contato com o administrador."
 
@@ -24702,5 +24702,13 @@ msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBulk.tt
 msgid "Mark tickets as"
+msgstr ""
+
+#. Perl Module: Kernel/Modules/AJAXAttachment.pm
+msgid "%s is missing. The file could not be downloaded properly."
+msgstr ""
+
+#. Perl Module: Kernel/Modules/AJAXAttachment.pm
+msgid "%s is missing. The file could not be previewed properly."
 msgstr ""
 
