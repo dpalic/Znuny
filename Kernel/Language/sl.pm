@@ -31,7 +31,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.209627581720605;
+    $Self->{Completeness}        = 0.209525357607282;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -3024,6 +3024,9 @@ sub Data {
         'Expand' => 'Razširi',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/FormElements/AttachmentList.tt
+        'Preview' => '',
+        'Click to preview this file.' => '',
+        'Click to download this file.' => '',
         'Click to delete this attachment.' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/FormElements/DraftButtons.tt

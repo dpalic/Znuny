@@ -1,4 +1,5 @@
 # 7.2.1 2025-xx-xx
+ - 2025-06-23 Added and updated FormElements templates.
  - 2025-06-23 Added Download and Preview function to Kernel/Modules/AJAXAttachment.pm.
  - 2025-06-23 Fixed: The agent toolbar does not remain expanded.
  - 2025-06-17 Fixed AgentTicketBulk MarkTicketsAs selection- MarkTicketsAsSeen and MarkTicketsAsUnseen can be set simultaneously. This makes handling complicated and unnecessarily confusing.
