@@ -390,6 +390,7 @@ sub LoadDefaults {
 #    $Self->{'SendmailModule'} = 'Kernel::System::Email::SMTP';
 #    $Self->{'SendmailModule::Host'} = 'mail.example.com';
 #    $Self->{'SendmailModule::Port'} = '25';
+#    $Self->{'SendmailModule::Timeout'} = '30';
 #    $Self->{'SendmailModule::AuthUser'} = '';
 #    $Self->{'SendmailModule::AuthPassword'} = '';
 
