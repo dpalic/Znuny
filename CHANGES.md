@@ -1,6 +1,7 @@
-# 7.2.1 2025-xx-xx
+# 7.2.1 2025-??-??
  - 2025-06-24 Fixed: Wrong otrs.Daemon.pl exit code after valid termination. Thanks to Paweł Bogusławski (@pboguslawski). [#401](https://github.com/znuny/Znuny/pull/401)
  - 2025-06-24 Updated DatePicker - Keep icon displayed but not clickable for disabled DatePicker. Thanks for reporting to @BuilderNSV. [#670](https://github.com/znuny/Znuny/issues/670)
+ - 2025-06-23 Added config option SendmailModule::Timeout to configure a timeout for mail server connections. Thanks to Paweł Bogusławski (@pboguslawski). [PR#677](https://github.com/znuny/Znuny/pull/677)
  - 2025-06-23 Sector Nord AG: Update entry for AgentPreferences::AJAXUpdate::AllowedKeys. Thanks to @LuBroering (Lukas Bröring Sector Nord AG). [PR#688](https://github.com/znuny/Znuny/pull/688)
  - 2025-06-23 Added and updated FormElements templates.
  - 2025-06-23 Added Download and Preview function to Kernel/Modules/AJAXAttachment.pm.

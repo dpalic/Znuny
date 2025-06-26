@@ -29,7 +29,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D/%M/%Y';
     $Self->{DateInputFormat}     = '%D/%M/%Y';
     $Self->{DateInputFormatLong} = '%D/%M/%Y - %T';
-    $Self->{Completeness}        = 0.253901170351105;
+    $Self->{Completeness}        = 0.253859905737039;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -5774,6 +5774,8 @@ sub Data {
             'यदि "एसएमटीपी" तंत्र को किसी भी SendmailModule के रूप में चुना गया,मेल मेजबान जो बाहर मेल भेजता है निर्दिष्ट किया जाना चाहिए।',
         'If any of the "SMTP" mechanisms was selected as SendmailModule, the port where your mailserver is listening for incoming connections must be specified.' =>
             'यदि "एसएमटीपी" तंत्र को किसी भी SendmailModule के रूप में चुना गया,पोर्ट जहाँ आपका मेल सर्वर आवक कनेक्शन के लिए सुन रहा है जरूर निर्दिष्ट करना चाहिए।',
+        'Maximum time, in seconds, to wait for a response from server. Only applies to modules that support timeouts.' =>
+            '',
         'If any of the "SMTP" mechanisms was selected as SendmailModule, and authentication to the mail server is needed, an username must be specified.' =>
             'यदि "एसएमटीपी" तंत्र को किसी भी SendmailModule के रूप में चुना गया,और मेल सर्वर के लिए प्रमाणीकरण की जरूरत है,एक उपयोगकर्ता नाम जरूर निर्दिष्ट करे।',
         'If any of the "SMTP" mechanisms was selected as SendmailModule, and authentication to the mail server is needed, a password must be specified.' =>

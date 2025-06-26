@@ -24714,3 +24714,7 @@ msgstr ""
 msgid "Click to download this file."
 msgstr ""
 
+#. XML Definition: Kernel/Config/Files/XML/Framework.xml
+msgid "Maximum time, in seconds, to wait for a response from server. Only applies to modules that support timeouts."
+msgstr ""
+

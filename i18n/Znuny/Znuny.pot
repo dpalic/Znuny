@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2025-06-23 09:14+0000\n"
+"POT-Creation-Date: 2025-06-26 13:31+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15728,6 +15728,10 @@ msgstr ""
 
 #. XML Definition: Kernel/Config/Files/XML/Framework.xml
 msgid "If any of the \"SMTP\" mechanisms was selected as SendmailModule, the port where your mailserver is listening for incoming connections must be specified."
+msgstr ""
+
+#. XML Definition: Kernel/Config/Files/XML/Framework.xml
+msgid "Maximum time, in seconds, to wait for a response from server. Only applies to modules that support timeouts."
 msgstr ""
 
 #. XML Definition: Kernel/Config/Files/XML/Framework.xml

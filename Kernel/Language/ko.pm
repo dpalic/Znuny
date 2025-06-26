@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%M-%D';
     $Self->{DateInputFormat}     = '%Y-%M-%D';
     $Self->{DateInputFormatLong} = '%Y-%M-%D %T';
-    $Self->{Completeness}        = 0.855331599479844;
+    $Self->{Completeness}        = 0.855192588980985;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -5771,6 +5771,8 @@ sub Data {
             '"SMTP"메커니즘 중 하나가 SendmailModule로 선택된 경우 메일을 보내는 메일 호스트를 지정해야합니다.',
         'If any of the "SMTP" mechanisms was selected as SendmailModule, the port where your mailserver is listening for incoming connections must be specified.' =>
             '"SMTP"메커니즘 중 하나가 SendmailModule로 선택된 경우 메일 서버가 들어오는 연결을 수신하는 포트를 지정해야합니다.',
+        'Maximum time, in seconds, to wait for a response from server. Only applies to modules that support timeouts.' =>
+            '',
         'If any of the "SMTP" mechanisms was selected as SendmailModule, and authentication to the mail server is needed, an username must be specified.' =>
             '"SMTP"메커니즘 중 하나가 SendmailModule로 선택되고 메일 서버에 대한 인증이 필요하면 사용자 이름을 지정해야합니다.',
         'If any of the "SMTP" mechanisms was selected as SendmailModule, and authentication to the mail server is needed, a password must be specified.' =>

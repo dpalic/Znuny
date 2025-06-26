@@ -33,7 +33,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y.%M.%D';
     $Self->{DateInputFormat}     = '%Y.%M.%D';
     $Self->{DateInputFormatLong} = '%Y.%M.%D - %T';
-    $Self->{Completeness}        = 0.883289986996099;
+    $Self->{Completeness}        = 0.883146432634487;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -5778,6 +5778,8 @@ sub Data {
             '如果发送邮件模块选用了“SMTP”，并且邮件服务器需要认证，必须指定发送邮件的服务器。',
         'If any of the "SMTP" mechanisms was selected as SendmailModule, the port where your mailserver is listening for incoming connections must be specified.' =>
             '如果发送邮件模块选用了“SMTP”，并且邮件服务器需要认证，必须指定邮件服务器监听的端口。',
+        'Maximum time, in seconds, to wait for a response from server. Only applies to modules that support timeouts.' =>
+            '',
         'If any of the "SMTP" mechanisms was selected as SendmailModule, and authentication to the mail server is needed, an username must be specified.' =>
             '如果发送邮件模块选用了“SMTP”，并且邮件服务器需要认证，必须指定一个用户名。',
         'If any of the "SMTP" mechanisms was selected as SendmailModule, and authentication to the mail server is needed, a password must be specified.' =>

@@ -27,7 +27,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D/%M/%Y';
     $Self->{DateInputFormat}     = '%D/%M/%Y';
     $Self->{DateInputFormatLong} = '%D/%M/%Y - %T';
-    $Self->{Completeness}        = 0.456111833550065;
+    $Self->{Completeness}        = 0.456037705184463;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -5772,6 +5772,8 @@ sub Data {
             'Se calquera dos mecanismos "SMTP" foi seleccionado coma EnviarcorreoModulo, o hostcorreo que envía os correos debe ser especificado.',
         'If any of the "SMTP" mechanisms was selected as SendmailModule, the port where your mailserver is listening for incoming connections must be specified.' =>
             'Se calquera dos mecanismos "SMTP" foi seleccionado coma EnviarcorreoModulo, o porto onde o seu servidorcorreo está a escoitar para conexións entrantes debe ser especificado.',
+        'Maximum time, in seconds, to wait for a response from server. Only applies to modules that support timeouts.' =>
+            '',
         'If any of the "SMTP" mechanisms was selected as SendmailModule, and authentication to the mail server is needed, an username must be specified.' =>
             'Se calquera dos mecanismos "SMTP" foi seleccionado coma EnviarcorreoModulo, e necesítase a autenticación ao servidor de correo, un nome de usuario debe ser especificado.',
         'If any of the "SMTP" mechanisms was selected as SendmailModule, and authentication to the mail server is needed, a password must be specified.' =>

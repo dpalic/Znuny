@@ -29,7 +29,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%M/%D/%Y';
     $Self->{DateInputFormat}     = '%M/%D/%Y';
     $Self->{DateInputFormatLong} = '%M/%D/%Y - %T';
-    $Self->{Completeness}        = 0.430591677503251;
+    $Self->{Completeness}        = 0.430521696733301;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -5774,6 +5774,8 @@ sub Data {
             'Kama moja ya taratibu za "SMTP" itachaguliwa kama Moduli ya Barua pepe ya kutuma, mwenyeji wa barua pepe ambaye anatuma lazima abainishwe.',
         'If any of the "SMTP" mechanisms was selected as SendmailModule, the port where your mailserver is listening for incoming connections must be specified.' =>
             'Kama moja ya taratibu za "SMTP" itachaguliwa kama Moduli ya Barua pepe ya kutuma, kituo tarishi ambacho seva yako ya barua pepe inasikiliza kwa ajili ya miunganisho inayoingia lazima ibainishwe.',
+        'Maximum time, in seconds, to wait for a response from server. Only applies to modules that support timeouts.' =>
+            '',
         'If any of the "SMTP" mechanisms was selected as SendmailModule, and authentication to the mail server is needed, an username must be specified.' =>
             'Kama moja ya taratibu za "SMTP" itachaguliwa kama Moduli ya Barua pepe ya kutuma, na uhalalishaji kwenye seva ya barua pepe unahitajika, jina la mtumiaji lazima libainishwe.',
         'If any of the "SMTP" mechanisms was selected as SendmailModule, and authentication to the mail server is needed, a password must be specified.' =>

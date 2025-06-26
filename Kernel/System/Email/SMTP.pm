@@ -72,7 +72,7 @@ sub Check {
     $Self->{MailHost} = $ConfigObject->Get('SendmailModule::Host')
         || die "No SendmailModule::Host found in Kernel/Config.pm";
     $Self->{SMTPPort}              = $ConfigObject->Get('SendmailModule::Port');
-    $Self->{SMTPTimeout}           = $ConfigObject->Get('SendmailModule::Timeout');
+    $Self->{Timeout}               = $ConfigObject->Get('SendmailModule::Timeout');
     $Self->{User}                  = $ConfigObject->Get('SendmailModule::AuthUser');
     $Self->{Password}              = $ConfigObject->Get('SendmailModule::AuthPassword');
     $Self->{AuthenticationType}    = $ConfigObject->Get('SendmailModule::AuthenticationType') // 'password';
@@ -108,11 +108,11 @@ sub Check {
         # connect to mail server
         eval {
             $SMTP = $Self->_Connect(
-                MailHost    => $Self->{MailHost},
-                FQDN        => $Self->{FQDN},
-                SMTPPort    => $Self->{SMTPPort},
-                SMTPTimeout => $Self->{SMTPTimeout},
-                SMTPDebug   => $Self->{SMTPDebug},
+                MailHost  => $Self->{MailHost},
+                FQDN      => $Self->{FQDN},
+                SMTPPort  => $Self->{SMTPPort},
+                Timeout   => $Self->{Timeout},
+                SMTPDebug => $Self->{SMTPDebug},
             );
             return 1;
         } || do {
@@ -472,7 +472,7 @@ sub _Connect {
 
     my $SMTPDefaultPort = $Self->_GetSMTPDefaultPort();
     my $SMTPPort        = $Param{SMTPPort} || $SMTPDefaultPort;
-    my $SMTPTimeout     = $Param{SMTPTimeout} || 30;
+    my $Timeout         = $Param{Timeout} || 30;
 
     # set up connection connection
     my $SMTP = Net::SMTP->new(
@@ -480,7 +480,7 @@ sub _Connect {
         Hello => $FQDN,
         Port  => $SMTPPort,
         %SSLOptions,
-        Timeout => $SMTPTimeout,
+        Timeout => $Timeout,
         Debug   => $Param{SMTPDebug},
     );
 

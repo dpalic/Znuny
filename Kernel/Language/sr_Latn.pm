@@ -32,7 +32,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.879876462938882;
+    $Self->{Completeness}        = 0.879733463351211;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -5777,6 +5777,8 @@ sub Data {
             'Ako je kao modul za slanje imejla izabran bilo koji od "SMTP" mehanizama, uređaj koji  šalje imejlove mora da bude naveden.',
         'If any of the "SMTP" mechanisms was selected as SendmailModule, the port where your mailserver is listening for incoming connections must be specified.' =>
             'Ako je kao modul za slanje imejla izabran bilo koji od "SMTP" mehanizama, port na kom vaš imej server sluša mora da bude naveden.',
+        'Maximum time, in seconds, to wait for a response from server. Only applies to modules that support timeouts.' =>
+            '',
         'If any of the "SMTP" mechanisms was selected as SendmailModule, and authentication to the mail server is needed, an username must be specified.' =>
             'Ako je kao modul za slanje imejla izabran bilo koji od "SMTP" mehanizama, a neophodna je autentifikacija na imejl server, korisničko ime mora da bude navedeno.',
         'If any of the "SMTP" mechanisms was selected as SendmailModule, and authentication to the mail server is needed, a password must be specified.' =>

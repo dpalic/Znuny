@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D/%M/%Y';
     $Self->{DateInputFormat}     = '%D/%M/%Y';
     $Self->{DateInputFormatLong} = '%D/%M/%Y - %T';
-    $Self->{Completeness}        = 0.596879063719116;
+    $Self->{Completeness}        = 0.596782057532911;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -5773,6 +5773,8 @@ bin/znuny.Daemon.pl status\').',
             'Jika salah satu "SMTP" mekanisme terpilih sebagai Sendmail Modul, yang mailhost yang mengirimkan kiriman harus ditentukan.',
         'If any of the "SMTP" mechanisms was selected as SendmailModule, the port where your mailserver is listening for incoming connections must be specified.' =>
             'Jika salah satu "SMTP" mekanisme terpilih sebagai Sendmail Modul, port mana mail server Anda mendengarkan koneksi masuk harus ditentukan.',
+        'Maximum time, in seconds, to wait for a response from server. Only applies to modules that support timeouts.' =>
+            '',
         'If any of the "SMTP" mechanisms was selected as SendmailModule, and authentication to the mail server is needed, an username must be specified.' =>
             'Jika salah satu "SMTP" mekanisme terpilih sebagai Sendmail Modul, dan otentikasi ke mail server yang dibutuhkan, username harus ditentukan.',
         'If any of the "SMTP" mechanisms was selected as SendmailModule, and authentication to the mail server is needed, a password must be specified.' =>
