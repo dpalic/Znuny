@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.145945067446774;
+    $Self->{Completeness}        = 0.148220380302292;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -242,7 +242,7 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminArticleColor.tt
         'Filter for Items' => '',
-        'Hint' => 'Gợi ',
+        'Hint' => 'Gợi ý',
         'Here you can see all possible article combination that are theoretically available in your system.' =>
             '',
         'You can define a background color for each article combination. Click on the color code.' =>
@@ -365,7 +365,7 @@ sub Data {
         'List (only %s shown - more available)' => '',
         'total' => '',
         'Please enter a search term to look for customers.' => 'Vui lòng nhập một thuật ngữ tìm kiếm để tìm kiếm khách hàng.',
-        'Customer ID' => '',
+        'Customer ID' => 'ID khách hàng',
         'Please note' => '',
         'This customer backend is read only!' => '',
 
@@ -756,7 +756,7 @@ sub Data {
         'Ticket created' => 'Thẻ đã tạo',
         'Ticket created between' => 'Thẻ đã tạo giữa',
         'and' => 'và',
-        'Last changed times' => 'Lần đã thay đổi cuối cùng ',
+        'Last changed times' => 'Lần thay đổi cuối cùng',
         'No last changed time settings.' => 'Không có cài đặt lần đã thay đổi cuối cùng ',
         'Ticket last changed' => 'Vé đã thay đổi lần cuối',
         'Ticket last changed between' => 'Vé đã thay đổi cuối cùng giữa',
@@ -803,7 +803,7 @@ sub Data {
         'Set new ticket lock' => 'Đặt vé khóa mới',
         'New customer user ID' => '',
         'New customer ID' => '',
-        'New title' => 'Danh hiệu mới',
+        'New title' => 'Tiêu đề mới',
         'New type' => 'Loại mới',
         'Archive selected tickets' => '',
         'Add Note' => 'Thêm lưu ý',
@@ -1784,7 +1784,7 @@ sub Data {
         'Condition linking' => '',
         'Transitions are not being used in this process.' => '',
         'Module name' => '',
-        'Configuration' => 'Cấu h',
+        'Configuration' => 'Cấu hình',
         'Transition actions are not being used in this process.' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminProcessManagementTransition.tt
@@ -2055,7 +2055,7 @@ sub Data {
             '',
         'Support Data' => '',
         'Error: Support data could not be collected (%s).' => '',
-        'Support Data Collector' => 'Thu thập dữ liệu hỗ tr',
+        'Support Data Collector' => 'Thu thập dữ liệu hỗ trợ',
         'Delete cache' => '',
         'Details' => '',
 
@@ -2230,7 +2230,7 @@ sub Data {
         'Destination' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminTranslation/Overview.tt
-        'Changed by' => 'Đã thay đổi bởi',
+        'Changed by' => 'Đã được thay đổi bởi',
         'Deployment' => '',
         'Copy this object' => '',
         'Delete this entry' => '',
@@ -2254,7 +2254,7 @@ sub Data {
         'Agents will be needed to handle tickets.' => '',
         'Don\'t forget to add a new agent to groups and/or roles!' => '',
         'Agent Management' => '',
-        'Edit Agent' => '',
+        'Edit Agent' => 'Chỉnh sửa điều hành viên',
         'Please enter a search term to look for agents.' => '',
         'Last login' => '',
         'Switch to agent' => '',
@@ -2394,7 +2394,7 @@ sub Data {
             '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentDashboard.tt
-        'Dashboard' => '',
+        'Dashboard' => 'Bảng điều khiển',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentDashboardAppointmentCalendar.tt
         'New Appointment' => '',
@@ -2547,7 +2547,7 @@ sub Data {
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentSplitSelection.tt
         'Target' => '',
         'Process' => '',
-        'Split' => 'Sự chia rẻ',
+        'Split' => 'Tách',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentStatisticsAdd.tt
         'Statistics Management' => '',
@@ -2690,7 +2690,7 @@ sub Data {
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
         'Resend Email for %s%s%s' => '',
         'All fields marked with an asterisk (*) are mandatory.' => '',
-        'Cancel & close' => '',
+        'Cancel & close' => 'Hủy và đóng',
         'Undo & close' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
@@ -2797,7 +2797,7 @@ sub Data {
         'Accessible to Customer User Login (exact match)' => '',
         'Created in Queue' => 'Đã tạo trong hàng đợi',
         'Lock state' => '',
-        'Watcher' => 'Người xem',
+        'Watcher' => 'Người theo dõi',
         'Article Create Time (before/after)' => '',
         'Article Create Time (between)' => '',
         'Please set this to value before end date.' => '',
@@ -3223,7 +3223,7 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/SmartTags/AdminAppointmentNotificationEvent.tt
         'To get the appointment attribute' => '',
-        'e. g.' => 'Thí dụ',
+        'e. g.' => 'Ví dụ',
         'To get the first 20 character of the appointment title.' => '',
         'To get the calendar attribute' => '',
         'Attributes of the recipient user for the notification' => '',
@@ -3424,10 +3424,10 @@ sub Data {
 
         # JS Template: Kernel/Output/JavaScript/Templates/Standard/Agent/TicketZoom/FormDraftDeleteDialog.html.tmpl
         'Do you really want to delete "%s"?' => '',
-        'Confirm' => '',
+        'Confirm' => 'Xác nhận',
 
         # JS Template: Kernel/Output/JavaScript/Templates/Standard/Agent/WidgetLoading.html.tmpl
-        'Loading, please wait...' => '',
+        'Loading, please wait...' => 'Đang tải, vui lòng chờ...',
 
         # JS Template: Kernel/Output/JavaScript/Templates/Standard/AjaxDnDUpload/UploadContainer.html.tmpl
         'Click to select a file for upload.' => '',
@@ -3471,7 +3471,7 @@ sub Data {
         'Street' => 'Đường ',
         'Zip' => 'Mã vùng',
         'City' => 'Thành phố',
-        'Country' => 'Nước',
+        'Country' => 'Quốc gia',
         'Valid' => 'Hợp lệ',
         'Mr.' => 'Ông',
         'Mrs.' => 'Bà',
@@ -4263,7 +4263,7 @@ sub Data {
         'Could not perform validation on field %s!' => '',
         'No subject' => '',
         'Could not delete draft!' => '',
-        'Previous Owner' => 'Phụ trách trước',
+        'Previous Owner' => 'P’hụ trách cũ',
         'wrote' => '₫ã viết',
         'Message from' => 'Thông điệp từ',
         'End message' => 'Thông báo kết thúc',
@@ -4332,7 +4332,7 @@ sub Data {
         'New Article' => 'Bài viết mới',
         'Pending' => 'Đang treo',
         'Reminder Reached' => 'Nhắc nhở đã đạt đến',
-        'My Locked Tickets' => 'Vé của tôi bị khóa',
+        'My Locked Tickets' => 'Các vé đã khóa của tôi',
 
         # Perl Module: Kernel/Modules/AgentTicketMentionView.pm
         'New mention' => '',
@@ -4447,7 +4447,7 @@ sub Data {
         'Status View' => '',
 
         # Perl Module: Kernel/Modules/AgentTicketWatchView.pm
-        'My Watched Tickets' => 'Vé theo dõi của tôi',
+        'My Watched Tickets' => 'Các vé đã theo dõi của tôi',
 
         # Perl Module: Kernel/Modules/AgentTicketWatcher.pm
         'Feature is not active' => '',
@@ -4502,7 +4502,7 @@ sub Data {
 
         # Perl Module: Kernel/Modules/CustomerTicketZoom.pm
         'Can\'t reopen ticket, not possible in this queue!' => '',
-        'Create a new ticket!' => '',
+        'Create a new ticket!' => 'Tạo vé mới!',
 
         # Perl Module: Kernel/Modules/Installer.pm
         'SecureMode active!' => '',
@@ -4695,7 +4695,7 @@ sub Data {
         'User is currently active.' => '',
         'User was inactive for a while.' => '',
         'User set their status to unavailable.' => '',
-        'Away' => '',
+        'Away' => 'Chờ',
 
         # Perl Module: Kernel/Output/HTML/Layout.pm
         'Standard' => 'Tiêu chuẩn',
@@ -4741,7 +4741,7 @@ sub Data {
         'Archive search' => '',
 
         # Perl Module: Kernel/Output/HTML/Notification/AgentOnline.pm
-        'Online Agent: %s' => 'điều hành viên đang online: %s',
+        'Online Agent: %s' => 'điều hành viên đang hoạt động: %s',
 
         # Perl Module: Kernel/Output/HTML/Notification/AgentTicketEscalation.pm
         'There are more escalated tickets!' => 'Có vé đã leo thang hơn nữa!',
@@ -4869,7 +4869,7 @@ sub Data {
 
         # Perl Module: Kernel/Output/HTML/TicketMenu/TicketWatcher.pm
         'Unwatch' => 'Không xem',
-        'Watch' => 'Xem',
+        'Watch' => 'Theo dõi',
         'Add to list of watched tickets' => 'Thêm vào danh sách theo dõi vé',
 
         # Perl Module: Kernel/Output/HTML/TicketOverviewMenu/Sort.pm
@@ -4879,7 +4879,7 @@ sub Data {
         'Ticket Information' => 'Tin tức về vé',
 
         # Perl Module: Kernel/Output/HTML/ToolBar/TicketLocked.pm
-        'Locked Tickets New' => 'Các Vé khóa mới',
+        'Locked Tickets New' => 'Các vé mới đã khóa',
         'Locked Tickets Reminder Reached' => 'Vé bị khóa Đã đạt Nhắc nhở',
         'Locked Tickets Total' => 'Tổng số Vé Khóa ',
 
@@ -4899,9 +4899,9 @@ sub Data {
         'Responsible Tickets Total' => 'Trách nhiệm Tổng số vé',
 
         # Perl Module: Kernel/Output/HTML/ToolBar/TicketWatcher.pm
-        'Watched Tickets New' => 'Vé mới đã xem ',
-        'Watched Tickets Reminder Reached' => 'Vé đã xem Đã đạt Nhắc nhở',
-        'Watched Tickets Total' => 'Tổng số Vé đã xem ',
+        'Watched Tickets New' => 'Vé mới đã theo dõi',
+        'Watched Tickets Reminder Reached' => 'Vé đã theo dõi Đã đạt Nhắc nhở',
+        'Watched Tickets Total' => 'Tổng số Vé đã theo dõi',
 
         # Perl Module: Kernel/Output/PDF/Ticket.pm
         'Ticket Dynamic Fields' => '',
@@ -8561,7 +8561,7 @@ Cảm ơn sự giúp đỡ của bạn!
         ' 2 minutes' => '2 phút',
         ' 5 minutes' => '5 phút',
         ' 7 minutes' => '7 phút',
-        '%s' => 'Lịch sử::Khác',
+        '%s' => '%s',
         '(UserLogin) Firstname Lastname' => '',
         '(UserLogin) Lastname Firstname' => '',
         '(UserLogin) Lastname, Firstname' => '',
@@ -8717,7 +8717,7 @@ Cảm ơn sự giúp đỡ của bạn!
             '',
         'Create New process ticket.' => '',
         'Create Process Ticket' => '',
-        'Create Ticket' => '',
+        'Create Ticket' => 'Tạo vé',
         'Create a new calendar appointment linked to this ticket' => '',
         'Create a unit test file' => '',
         'Create and manage Service Level Agreements (SLAs).' => '',
@@ -8780,7 +8780,7 @@ Cảm ơn sự giúp đỡ của bạn!
         'Czech' => '',
         'Danish' => '',
         'Dark' => '',
-        'Dashboard overview.' => '',
+        'Dashboard overview.' => 'Tổng quan bảng điều khiển',
         'Date / Time' => '',
         'Default agent name' => '',
         'Default value for NameX' => '',
@@ -8820,9 +8820,9 @@ Cảm ơn sự giúp đỡ của bạn!
         'Email Resend' => '',
         'Email communication channel.' => '',
         'Enabled filters.' => '',
-        'English (Canada)' => '',
-        'English (United Kingdom)' => '',
-        'English (United States)' => '',
+        'English (Canada)' => 'Tiếng Anh (Canada)',
+        'English (United Kingdom)' => 'Tiếng Anh (Anh)',
+        'English (United States)' => 'Tiếng Anh (Mỹ)',
         'Enroll process for this ticket' => '',
         'Enter your shared secret to enable two factor authentication. WARNING: Make sure that you add the shared secret to your generator application and the application works well. Otherwise you will be not able to login anymore without the two factor token.' =>
             '',
@@ -8937,7 +8937,7 @@ Cảm ơn sự giúp đỡ của bạn!
         'Link this ticket to other objects' => 'Liên kết vé này đến các đối tượng khác',
         'List view' => '',
         'Lithuanian' => '',
-        'Lock / unlock this ticket' => '',
+        'Lock / unlock this ticket' => 'Khóa/mở khóa vé này',
         'Locked Tickets' => 'Các thẻ đã khóa',
         'Locked Tickets.' => '',
         'Locked ticket.' => 'Lịch sử::Khóa',
@@ -9241,7 +9241,7 @@ Cảm ơn sự giúp đỡ của bạn!
         'Vietnam' => '',
         'View performance benchmark results.' => '',
         'Watch this ticket' => '',
-        'Watched Tickets' => 'Các thẻ đã xem',
+        'Watched Tickets' => 'Các thẻ đã theo dõi',
         'Watched Tickets.' => '',
         'We are performing scheduled maintenance.' => '',
         'We are performing scheduled maintenance. Login is temporarily not available.' =>
@@ -9260,14 +9260,14 @@ Cảm ơn sự giúp đỡ của bạn!
         'Your email with ticket number "<OTRS_TICKET>" is bounced to "<OTRS_BOUNCE_TO>". Contact this address for further information.' =>
             '',
         'Your email with ticket number "<OTRS_TICKET>" is merged to "<OTRS_MERGE_TO_TICKET>".' =>
-            'E-mail của bạn với số thẻ "<OTRS_TICKET>" được trộn thành "<OTRS_MERGE_TO_TICKET>"!',
+            'E-mail của bạn với số thẻ "<OTRS_TICKET>" đã được trộn thành "<OTRS_MERGE_TO_TICKET>"!',
         'Your queue selection of your preferred queues. You also get notified about those queues via email if enabled.' =>
             '',
         'Your service selection of your preferred services. You also get notified about those services via email if enabled.' =>
             '',
         'Your username in Mattermost without the leading @' => '',
         'Znuny.org - News' => '',
-        'Zoom' => 'Phóng đại',
+        'Zoom' => 'Phóng to',
         'all tickets' => '',
         'archived tickets' => '',
         'attachment' => '',
