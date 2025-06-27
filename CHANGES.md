@@ -11,6 +11,7 @@
  - 2025-06-17 Improve error message when exiting due to PackageIsDownloadable = 0. Thanks for reporting to Darko (@dpalic). [#684](https://github.com/znuny/Znuny/issues/684)
  - 2025-06-14 Added new communication channel Web.
  - 2025-06-13 Renamed the perl module Kernel::Modules::AjaxAttachment to Kernel::Modules::AJAXAttachment to follow the coding standards for naming modules.
+ - 2025-06-06 Fixed: TLD of email address in S/MIME certificates is limited in length to two to four characters. Thanks for reporting to @dsm-museum-it. [#674](https://github.com/znuny/Znuny/issues/674)
  - 2025-06-05 Fixed: Added missing required parameter UserType in Kernel::System::AuthSession->() to Perldoc. Added optional parameter SessionSource to Perldoc.
  - 2025-05-27 Added AgentTicketNoteToLinkedTicket to ACLKeysLevel3::Actions###100-Default.
  - 2025-05-26 Added missing ProcessManagement::TransitionAction::DefaultParameters for TicketCreate, TicketArticleCreate, and ArticleSend.
