@@ -16,6 +16,7 @@
  - 2025-05-27 Added AgentTicketNoteToLinkedTicket to ACLKeysLevel3::Actions###100-Default.
  - 2025-05-26 Added missing ProcessManagement::TransitionAction::DefaultParameters for TicketCreate, TicketArticleCreate, and ArticleSend.
  - 2025-05-26 Added AgentTicketMarkSeenUnseen to ACLKeysLevel3::Actions###100-Default.
+ - 2025-05-22 Fixed: Generic interface operation Session::SessionRemove requires a user login instead of just a valid session ID. [#638](https://github.com/znuny/Znuny/issues/638).
  - 2025-05-21 Fixed: AdminACL: Wrong fallback for ACLKeysLevel3::Actions variable. Thanks for reporting to Stefan Härter (@stefanhaerter). [#629](https://github.com/znuny/Znuny/issues/629)
  - 2025-05-21 Sector Nord AG: Added missing Action for AgentTicketMarkSeenUnseen in Ticket::Frontend::MenuModule. Thanks to @LuBroering (Lukas Bröring Sector Nord AG). [PR#654](https://github.com/znuny/Znuny/pull/654)
  - 2025-05-21 Integrated package Znuny-ArticleColors: Admin module to edit article colors directly in Znuny.
