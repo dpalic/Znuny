@@ -2526,6 +2526,17 @@ BEGIN
 IF NOT EXISTS (
     SELECT 1
     FROM pg_constraint
+    WHERE LOWER(conname) = LOWER('FK_pm_process_preferences_process_entity_id_entity_id')
+    ) THEN
+    ALTER TABLE pm_process_preferences ADD CONSTRAINT FK_pm_process_preferences_process_entity_id_entity_id FOREIGN KEY (process_entity_id) REFERENCES pm_process (entity_id);
+END IF;
+END$$;
+;
+DO $$
+BEGIN
+IF NOT EXISTS (
+    SELECT 1
+    FROM pg_constraint
     WHERE LOWER(conname) = LOWER('FK_pm_activity_create_by_id')
     ) THEN
     ALTER TABLE pm_activity ADD CONSTRAINT FK_pm_activity_create_by_id FOREIGN KEY (create_by) REFERENCES users (id);

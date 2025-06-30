@@ -35,7 +35,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D/%M/%Y';
     $Self->{DateInputFormat}     = '%D/%M/%Y';
     $Self->{DateInputFormatLong} = '%D/%M/%Y - %T';
-    $Self->{Completeness}        = 0.592556476515521;
+    $Self->{Completeness}        = 0.592267706302794;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -1760,6 +1760,7 @@ sub Data {
         'Edit Process Information' => 'Modifica le informazioni del Processo',
         'Process Name' => 'Nome del Processo',
         'The selected state does not exist.' => 'Lo stato selezionato non esiste.',
+        'Process Preferences' => '',
         'Add and Edit Activities, Activity Dialogs and Transitions' => 'Aggiungi e modifica le attività, le interazioni delle attività e le transizioni',
         'Show EntityIDs' => 'Mostra gli identificativi EntityID',
         'Extend the width of the Canvas' => 'Aumenta la larghezza del riquadro',
@@ -8025,6 +8026,7 @@ NOTA: i sistemi di terze parti richiedono una configurazione a se.',
             '',
         'Defines the separator for export csv files.' => '',
         'Defines the quote for export csv files.' => '',
+        'Define a process category.' => '',
 
         # XML Definition: scripts/database/initial_insert.xml
         'invalid-temporarily' => 'non valido-temporaneamente',
@@ -9232,6 +9234,7 @@ Il tuo helpdesk.
         'Ticket title' => 'Titolo del ticket',
         'Ticket zoom view.' => 'Visualizzazione zoom ticket.',
         'TicketNumber' => 'NumeroTicket',
+        'TicketProcessCategory: Define a process category.' => '',
         'Tickets.' => 'Ticket.',
         'To accept login information, such as an EULA or license.' => 'Per accettare le informazioni di accesso, come un EULA o una licenza.',
         'To download attachments.' => 'Per scaricare gli allegati.',

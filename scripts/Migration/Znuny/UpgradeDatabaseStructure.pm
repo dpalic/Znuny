@@ -52,6 +52,10 @@ sub Run {
             Message => 'Create database table article_color.',
             Module  => 'ArticleColor',
         },
+        {
+            Message => 'Create table for user process preferences support.',
+            Module  => 'ProcessPreferences',
+        },
     );
 
     return 1   if !@Tasks;

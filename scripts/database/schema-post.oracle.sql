@@ -3668,6 +3668,22 @@ END;
 --
 ;
 BEGIN
+    EXECUTE IMMEDIATE 'ALTER TABLE pm_process_preferences ADD CONSTRAINT FK_pm_process_preferences_pr19 FOREIGN KEY (process_entity_id) REFERENCES pm_process (entity_id)';
+EXCEPTION
+  WHEN OTHERS THEN NULL;
+END;
+/
+--
+;
+BEGIN
+    EXECUTE IMMEDIATE 'CREATE INDEX FK_pm_process_preferences_prdf ON pm_process_preferences (process_entity_id)';
+EXCEPTION
+  WHEN OTHERS THEN NULL;
+END;
+/
+--
+;
+BEGIN
     EXECUTE IMMEDIATE 'ALTER TABLE pm_activity ADD CONSTRAINT FK_pm_activity_create_by_id FOREIGN KEY (create_by) REFERENCES users (id)';
 EXCEPTION
   WHEN OTHERS THEN NULL;

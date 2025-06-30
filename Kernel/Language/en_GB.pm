@@ -29,7 +29,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D/%M/%Y';
     $Self->{DateInputFormat}     = '%D/%M/%Y';
     $Self->{DateInputFormatLong} = '%D/%M/%Y - %T';
-    $Self->{Completeness}        = 0.595156834064684;
+    $Self->{Completeness}        = 0.594866796621183;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -1754,6 +1754,7 @@ sub Data {
         'Edit Process Information' => 'Edit Process Information',
         'Process Name' => 'Process Name',
         'The selected state does not exist.' => 'The selected state does not exist.',
+        'Process Preferences' => '',
         'Add and Edit Activities, Activity Dialogs and Transitions' => 'Add and Edit Activities, Activity Dialogs and Transitions',
         'Show EntityIDs' => 'Show EntityIDs',
         'Extend the width of the Canvas' => 'Extend the width of the Canvas',
@@ -8015,6 +8016,7 @@ sub Data {
             '',
         'Defines the separator for export csv files.' => '',
         'Defines the quote for export csv files.' => '',
+        'Define a process category.' => '',
 
         # XML Definition: scripts/database/initial_insert.xml
         'invalid-temporarily' => 'invalid-temporarily',
@@ -9222,6 +9224,7 @@ Thanks for your help!
         'Ticket title' => 'Ticket title',
         'Ticket zoom view.' => 'Ticket zoom view.',
         'TicketNumber' => 'TicketNumber',
+        'TicketProcessCategory: Define a process category.' => '',
         'Tickets.' => 'Tickets.',
         'To accept login information, such as an EULA or license.' => 'To accept login information, such as an EULA or license.',
         'To download attachments.' => 'To download attachments.',

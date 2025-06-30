@@ -917,6 +917,10 @@ SET @FKExists := (SELECT COUNT(*) FROM information_schema.table_constraints WHER
 SET @FKSQLStatement := IF( @FKExists = 0, 'ALTER TABLE pm_process ADD CONSTRAINT FK_pm_process_change_by_id FOREIGN KEY (change_by) REFERENCES users (id)', 'SELECT ''INFO: Foreign key constraint FK_pm_process_change_by_id does already exist, skipping.''' );
 PREPARE FKStatement FROM @FKSQLStatement;
 EXECUTE FKStatement;
+SET @FKExists := (SELECT COUNT(*) FROM information_schema.table_constraints WHERE table_schema = DATABASE() AND table_name = 'pm_process_preferences' AND constraint_name = 'FK_pm_process_preferences_process_entity_id_entity_id');
+SET @FKSQLStatement := IF( @FKExists = 0, 'ALTER TABLE pm_process_preferences ADD CONSTRAINT FK_pm_process_preferences_process_entity_id_entity_id FOREIGN KEY (process_entity_id) REFERENCES pm_process (entity_id)', 'SELECT ''INFO: Foreign key constraint FK_pm_process_preferences_process_entity_id_entity_id does already exist, skipping.''' );
+PREPARE FKStatement FROM @FKSQLStatement;
+EXECUTE FKStatement;
 SET @FKExists := (SELECT COUNT(*) FROM information_schema.table_constraints WHERE table_schema = DATABASE() AND table_name = 'pm_activity' AND constraint_name = 'FK_pm_activity_create_by_id');
 SET @FKSQLStatement := IF( @FKExists = 0, 'ALTER TABLE pm_activity ADD CONSTRAINT FK_pm_activity_create_by_id FOREIGN KEY (create_by) REFERENCES users (id)', 'SELECT ''INFO: Foreign key constraint FK_pm_activity_create_by_id does already exist, skipping.''' );
 PREPARE FKStatement FROM @FKSQLStatement;

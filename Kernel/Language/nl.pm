@@ -32,7 +32,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D-%M-%Y';
     $Self->{DateInputFormat}     = '%D-%M-%Y';
     $Self->{DateInputFormatLong} = '%D-%M-%Y - %T';
-    $Self->{Completeness}        = 0.488867219242646;
+    $Self->{Completeness}        = 0.48862897985705;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -1757,6 +1757,7 @@ sub Data {
         'Edit Process Information' => 'Bewerk proces-informatie',
         'Process Name' => 'Naam',
         'The selected state does not exist.' => 'De geselecteerde status bestaat niet.',
+        'Process Preferences' => '',
         'Add and Edit Activities, Activity Dialogs and Transitions' => 'Beheren activiteiten, dialogen en transities',
         'Show EntityIDs' => 'Toon ID\'s',
         'Extend the width of the Canvas' => 'Vergroot de breedte van de canvas',
@@ -8018,6 +8019,7 @@ sub Data {
             '',
         'Defines the separator for export csv files.' => '',
         'Defines the quote for export csv files.' => '',
+        'Define a process category.' => '',
 
         # XML Definition: scripts/database/initial_insert.xml
         'invalid-temporarily' => 'tijdelijk ongeldig',
@@ -9225,6 +9227,7 @@ Het Helpdesk Team
         'Ticket title' => '',
         'Ticket zoom view.' => '',
         'TicketNumber' => '',
+        'TicketProcessCategory: Define a process category.' => '',
         'Tickets.' => '',
         'To accept login information, such as an EULA or license.' => '',
         'To download attachments.' => '',

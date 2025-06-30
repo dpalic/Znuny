@@ -38,7 +38,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.859418169998375;
+    $Self->{Completeness}        = 0.85899935022742;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -1763,6 +1763,7 @@ sub Data {
         'Edit Process Information' => 'Редактировать информацию о Процессе',
         'Process Name' => 'Имя Процесса',
         'The selected state does not exist.' => 'Выбранное состояние не существует.',
+        'Process Preferences' => '',
         'Add and Edit Activities, Activity Dialogs and Transitions' => 'Добавление и Редактирование Активностей, Диалогов Активности и Переходов',
         'Show EntityIDs' => 'Схема связей в Процессе',
         'Extend the width of the Canvas' => 'Увеличит ширину схемы',
@@ -8024,6 +8025,7 @@ sub Data {
             '',
         'Defines the separator for export csv files.' => '',
         'Defines the quote for export csv files.' => '',
+        'Define a process category.' => '',
 
         # XML Definition: scripts/database/initial_insert.xml
         'invalid-temporarily' => 'временно недействительный',
@@ -9231,6 +9233,7 @@ Thanks for your help!
         'Ticket title' => 'Заголовок заявки',
         'Ticket zoom view.' => 'Подробный просмотр заявки.',
         'TicketNumber' => 'Заявка №',
+        'TicketProcessCategory: Define a process category.' => '',
         'Tickets.' => 'Заявки.',
         'To accept login information, such as an EULA or license.' => 'Принять регистрационную информацию, такую как EULA или лицензию.',
         'To download attachments.' => 'Для загрузки вложение.',

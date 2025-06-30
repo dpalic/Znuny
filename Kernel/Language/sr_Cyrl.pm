@@ -27,7 +27,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.879733463351211;
+    $Self->{Completeness}        = 0.879304743339831;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -1752,6 +1752,7 @@ sub Data {
         'Edit Process Information' => 'Уреди информације о процесу',
         'Process Name' => 'Назив процеса',
         'The selected state does not exist.' => 'Одабрани статус не постоји.',
+        'Process Preferences' => '',
         'Add and Edit Activities, Activity Dialogs and Transitions' => 'Додај и уреди активости, дијалоге активности и транзиције',
         'Show EntityIDs' => 'Покажи ID ентитета',
         'Extend the width of the Canvas' => 'Прошири ширину простора',
@@ -8013,6 +8014,7 @@ sub Data {
             '',
         'Defines the separator for export csv files.' => '',
         'Defines the quote for export csv files.' => '',
+        'Define a process category.' => '',
 
         # XML Definition: scripts/database/initial_insert.xml
         'invalid-temporarily' => 'неважећи-привремено',
@@ -9220,6 +9222,7 @@ Thanks for your help!
         'Ticket title' => 'Наслов тикета',
         'Ticket zoom view.' => 'Детаљни преглед тикета.',
         'TicketNumber' => 'Број тикета',
+        'TicketProcessCategory: Define a process category.' => '',
         'Tickets.' => 'Тикети.',
         'To accept login information, such as an EULA or license.' => 'Прихватање информација приликом пријављивања, нпр. EULA изјава или лиценца.',
         'To download attachments.' => 'За преузимање прилога.',

@@ -27,7 +27,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.994799284901674;
+    $Self->{Completeness}        = 0.994314489928525;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -1752,6 +1752,7 @@ sub Data {
         'Edit Process Information' => 'Prozessinformationen bearbeiten',
         'Process Name' => 'Prozessname',
         'The selected state does not exist.' => 'Der ausgewählte Status existiert nicht.',
+        'Process Preferences' => '',
         'Add and Edit Activities, Activity Dialogs and Transitions' => 'Aktivitäten, Aktivitäts-Dialoge und Übergänge hinzufügen und bearbeiten',
         'Show EntityIDs' => 'EntityIDs einblenden',
         'Extend the width of the Canvas' => 'Die Breite des Zeichenbereichs vergrößern',
@@ -8013,6 +8014,7 @@ sub Data {
             'Legt das Format der exportierten Dateien bei Verwendung der Verwaltungsoberfläche fest.',
         'Defines the separator for export csv files.' => 'Legt das Trennzeichen für csv-Exportdateien fest.',
         'Defines the quote for export csv files.' => 'Legt das Zitat für den Export von csv-Dateien fest.',
+        'Define a process category.' => '',
 
         # XML Definition: scripts/database/initial_insert.xml
         'invalid-temporarily' => 'ungültig-temporär',
@@ -9219,6 +9221,7 @@ Ihr Helpdesk-Team
         'Ticket title' => 'Ticket-Titel',
         'Ticket zoom view.' => 'Ticket-Detailansicht.',
         'TicketNumber' => 'Ticketnummer',
+        'TicketProcessCategory: Define a process category.' => '',
         'Tickets.' => 'Tickets.',
         'To accept login information, such as an EULA or license.' => 'Um Login-Informationen zu akzeptieren, wie EULAs oder Lizenzen.',
         'To download attachments.' => 'Zum Herunterladen von Anhängen.',

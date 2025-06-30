@@ -29,7 +29,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%M/%D/%Y';
     $Self->{DateInputFormat}     = '%M/%D/%Y';
     $Self->{DateInputFormatLong} = '%M/%D/%Y - %T';
-    $Self->{Completeness}        = 0.430521696733301;
+    $Self->{Completeness}        = 0.430311890838207;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -1754,6 +1754,7 @@ sub Data {
         'Edit Process Information' => 'Hariri taarifa za mchakato',
         'Process Name' => 'Jina la mchakato',
         'The selected state does not exist.' => 'Hali iliyochaguliwa haipo.',
+        'Process Preferences' => '',
         'Add and Edit Activities, Activity Dialogs and Transitions' => 'Ongeza na hariri shuguli, mazungumzo ya shuguli na mipito',
         'Show EntityIDs' => 'Onyesha kitambulisho cha ingizo',
         'Extend the width of the Canvas' => 'Ongeza upana wa kanvasi.',
@@ -8018,6 +8019,7 @@ Mfano:
             '',
         'Defines the separator for export csv files.' => '',
         'Defines the quote for export csv files.' => '',
+        'Define a process category.' => '',
 
         # XML Definition: scripts/database/initial_insert.xml
         'invalid-temporarily' => 'isiyo halali kwa muda mfupi',
@@ -9214,6 +9216,7 @@ Thanks for your help!
         'Ticket title' => '',
         'Ticket zoom view.' => '',
         'TicketNumber' => 'Namba ya tiketi',
+        'TicketProcessCategory: Define a process category.' => '',
         'Tickets.' => '',
         'To accept login information, such as an EULA or license.' => '',
         'To download attachments.' => '',

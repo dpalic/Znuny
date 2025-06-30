@@ -32,7 +32,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%M-%D';
     $Self->{DateInputFormat}     = '%Y-%M-%D';
     $Self->{DateInputFormatLong} = '%Y-%M-%D - %T';
-    $Self->{Completeness}        = 0.883146432634487;
+    $Self->{Completeness}        = 0.882716049382716;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -1757,6 +1757,7 @@ sub Data {
         'Edit Process Information' => 'Folyamatinformációk szerkesztése',
         'Process Name' => 'Folyamat neve',
         'The selected state does not exist.' => 'A kijelölt állapot nem létezik.',
+        'Process Preferences' => '',
         'Add and Edit Activities, Activity Dialogs and Transitions' => 'Tevékenységek, tevékenység párbeszédek és átmenetek hozzáadása és szerkesztése',
         'Show EntityIDs' => 'Entitás-azonosítók megjelenítése',
         'Extend the width of the Canvas' => 'A vászon szélességének kibővítése',
@@ -8018,6 +8019,7 @@ sub Data {
             '',
         'Defines the separator for export csv files.' => '',
         'Defines the quote for export csv files.' => '',
+        'Define a process category.' => '',
 
         # XML Definition: scripts/database/initial_insert.xml
         'invalid-temporarily' => 'átmenetileg érvénytelen',
@@ -9225,6 +9227,7 @@ Az Ön segélyszolgálat csapata
         'Ticket title' => 'Jegycím',
         'Ticket zoom view.' => 'Jegynagyítás nézet.',
         'TicketNumber' => 'Jegyszám',
+        'TicketProcessCategory: Define a process category.' => '',
         'Tickets.' => 'Jegyek.',
         'To accept login information, such as an EULA or license.' => 'Bejelentkezési információk elfogadásához, mint például EULA vagy licenc.',
         'To download attachments.' => 'Mellékletek letöltéséhez.',

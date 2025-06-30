@@ -29,7 +29,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y.%M.%D';
     $Self->{DateInputFormat}     = '%Y.%M.%D';
     $Self->{DateInputFormatLong} = '%Y.%M.%D - %T';
-    $Self->{Completeness}        = 0.304241833252072;
+    $Self->{Completeness}        = 0.304093567251462;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -1754,6 +1754,7 @@ sub Data {
         'Edit Process Information' => '編輯流程信息',
         'Process Name' => '流程名稱',
         'The selected state does not exist.' => '選擇的狀態不存在',
+        'Process Preferences' => '',
         'Add and Edit Activities, Activity Dialogs and Transitions' => '添加並編輯環節、環節操作和轉向',
         'Show EntityIDs' => '顯示實體編號',
         'Extend the width of the Canvas' => '擴展畫布的寬度',
@@ -8016,6 +8017,7 @@ sub Data {
             '',
         'Defines the separator for export csv files.' => '',
         'Defines the quote for export csv files.' => '',
+        'Define a process category.' => '',
 
         # XML Definition: scripts/database/initial_insert.xml
         'invalid-temporarily' => '暫時無效',
@@ -9213,6 +9215,7 @@ Thanks for your help!
         'Ticket title' => '工單標題',
         'Ticket zoom view.' => '',
         'TicketNumber' => '工單編號',
+        'TicketProcessCategory: Define a process category.' => '',
         'Tickets.' => '工單',
         'To accept login information, such as an EULA or license.' => '',
         'To download attachments.' => '下載附件',

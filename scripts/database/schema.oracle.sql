@@ -5697,6 +5697,22 @@ END;
 --
 ;
 -- ----------------------------------------------------------
+--  create table pm_process_preferences
+-- ----------------------------------------------------------
+CREATE TABLE pm_process_preferences (
+    process_entity_id VARCHAR2 (50) NOT NULL,
+    preferences_key VARCHAR2 (150) NOT NULL,
+    preferences_value VARCHAR2 (3000) NULL
+);
+BEGIN
+    EXECUTE IMMEDIATE 'CREATE INDEX pm_process_preferences_proce85 ON pm_process_preferences (process_entity_id)';
+EXCEPTION
+  WHEN OTHERS THEN NULL;
+END;
+/
+--
+;
+-- ----------------------------------------------------------
 --  create table pm_activity
 -- ----------------------------------------------------------
 CREATE TABLE pm_activity (

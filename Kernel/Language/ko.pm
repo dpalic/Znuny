@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%M-%D';
     $Self->{DateInputFormat}     = '%Y-%M-%D';
     $Self->{DateInputFormatLong} = '%Y-%M-%D %T';
-    $Self->{Completeness}        = 0.855192588980985;
+    $Self->{Completeness}        = 0.854775828460039;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -1751,6 +1751,7 @@ sub Data {
         'Edit Process Information' => '프로세스 정보 편집',
         'Process Name' => '프로세스 이름',
         'The selected state does not exist.' => '선택한 상태가 존재하지 않습니다.',
+        'Process Preferences' => '',
         'Add and Edit Activities, Activity Dialogs and Transitions' => '활동, 활동 대화 상자 및 전환 추가 및 편집',
         'Show EntityIDs' => '엔티티 ID 표시',
         'Extend the width of the Canvas' => '캔버스 너비 늘리기',
@@ -8012,6 +8013,7 @@ sub Data {
             '',
         'Defines the separator for export csv files.' => '',
         'Defines the quote for export csv files.' => '',
+        'Define a process category.' => '',
 
         # XML Definition: scripts/database/initial_insert.xml
         'invalid-temporarily' => '유효하지 않은 일시적',
@@ -9219,6 +9221,7 @@ Thanks for your help!
         'Ticket title' => '티켓 제목',
         'Ticket zoom view.' => '티켓 줌뷰',
         'TicketNumber' => '티켓번호',
+        'TicketProcessCategory: Define a process category.' => '',
         'Tickets.' => '티켓',
         'To accept login information, such as an EULA or license.' => 'EULA 또는 라이센스와 같은 로그인 정보를 수락합니다.',
         'To download attachments.' => '첨부 파일을 다운로드 하려면.',

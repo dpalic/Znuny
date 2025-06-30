@@ -30,7 +30,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D/%M/%Y';
     $Self->{DateInputFormat}     = '%D/%M/%Y';
     $Self->{DateInputFormatLong} = '%D/%M/%Y - %T';
-    $Self->{Completeness}        = 0.8488542174549;
+    $Self->{Completeness}        = 0.848440545808967;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -1755,6 +1755,7 @@ sub Data {
         'Edit Process Information' => 'Editar Informação do Processo',
         'Process Name' => 'Nome do Processo',
         'The selected state does not exist.' => 'O estado selecionado não existe.',
+        'Process Preferences' => '',
         'Add and Edit Activities, Activity Dialogs and Transitions' => 'Adicionar e Editar Atividades, Janelas de Atividades e Transições',
         'Show EntityIDs' => 'Mostrar EntityIDs',
         'Extend the width of the Canvas' => 'Expandir Largura da Tela',
@@ -8016,6 +8017,7 @@ sub Data {
             '',
         'Defines the separator for export csv files.' => '',
         'Defines the quote for export csv files.' => '',
+        'Define a process category.' => '',
 
         # XML Definition: scripts/database/initial_insert.xml
         'invalid-temporarily' => 'inválido-temporariamente',
@@ -9223,6 +9225,7 @@ Obrigado pela ajuda!
         'Ticket title' => 'Título do chamado.',
         'Ticket zoom view.' => 'Detalhes do chamado.',
         'TicketNumber' => 'Número Chamado',
+        'TicketProcessCategory: Define a process category.' => '',
         'Tickets.' => 'Chamados.',
         'To accept login information, such as an EULA or license.' => 'Aceitar informações de login, como um EULA ou licença.',
         'To download attachments.' => 'Para baixar anexos.',

@@ -27,7 +27,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%M-%D';
     $Self->{DateInputFormat}     = '%Y-%M-%D';
     $Self->{DateInputFormatLong} = '%Y-%M-%D - %T';
-    $Self->{Completeness}        = 0.189338534048432;
+    $Self->{Completeness}        = 0.189246263807667;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -1752,6 +1752,7 @@ sub Data {
         'Edit Process Information' => '',
         'Process Name' => '',
         'The selected state does not exist.' => '',
+        'Process Preferences' => '',
         'Add and Edit Activities, Activity Dialogs and Transitions' => '',
         'Show EntityIDs' => '',
         'Extend the width of the Canvas' => '',
@@ -8013,6 +8014,7 @@ sub Data {
             '',
         'Defines the separator for export csv files.' => '',
         'Defines the quote for export csv files.' => '',
+        'Define a process category.' => '',
 
         # XML Definition: scripts/database/initial_insert.xml
         'invalid-temporarily' => 'laikinai negaliojantis',
@@ -9209,6 +9211,7 @@ Thanks for your help!
         'Ticket title' => '',
         'Ticket zoom view.' => '',
         'TicketNumber' => '',
+        'TicketProcessCategory: Define a process category.' => '',
         'Tickets.' => '',
         'To accept login information, such as an EULA or license.' => '',
         'To download attachments.' => '',

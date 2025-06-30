@@ -27,7 +27,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D/%M/%Y';
     $Self->{DateInputFormat}     = '%D/%M/%Y';
     $Self->{DateInputFormatLong} = '%D/%M/%Y - %T';
-    $Self->{Completeness}        = 0.720136518771331;
+    $Self->{Completeness}        = 0.719785575048733;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -1752,6 +1752,7 @@ sub Data {
         'Edit Process Information' => 'Editar Información del Proceso',
         'Process Name' => 'Nombre del Proceso',
         'The selected state does not exist.' => 'El estado seleccionado no existe.',
+        'Process Preferences' => '',
         'Add and Edit Activities, Activity Dialogs and Transitions' => 'Añada y Edite Actividades, Diálogos de Actividad y Transiciones.',
         'Show EntityIDs' => 'Mostrar EntityIDs',
         'Extend the width of the Canvas' => 'Amplíe la ancho del Lienzo',
@@ -8013,6 +8014,7 @@ sub Data {
             '',
         'Defines the separator for export csv files.' => '',
         'Defines the quote for export csv files.' => '',
+        'Define a process category.' => '',
 
         # XML Definition: scripts/database/initial_insert.xml
         'invalid-temporarily' => 'temporalmente-inválido',
@@ -9220,6 +9222,7 @@ Tu Equipo de Soporte
         'Ticket title' => 'Título del Ticket',
         'Ticket zoom view.' => '',
         'TicketNumber' => '',
+        'TicketProcessCategory: Define a process category.' => '',
         'Tickets.' => '',
         'To accept login information, such as an EULA or license.' => '',
         'To download attachments.' => '',

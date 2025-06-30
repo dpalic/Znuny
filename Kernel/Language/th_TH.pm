@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D/%M/%Y';
     $Self->{DateInputFormat}     = '%D/%M/%Y';
     $Self->{DateInputFormatLong} = '%D/%M/%Y - %T';
-    $Self->{Completeness}        = 0.515195839427921;
+    $Self->{Completeness}        = 0.514944769330734;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -1753,6 +1753,7 @@ sub Data {
         'Edit Process Information' => 'แก้ไขข้อมูลกระบวนการ',
         'Process Name' => 'ชื่อกระบวนการ',
         'The selected state does not exist.' => 'สถานภาพที่เลือกไม่มีอยู่',
+        'Process Preferences' => '',
         'Add and Edit Activities, Activity Dialogs and Transitions' => 'เพิ่มและแก้ไขกิจกรรม กิจกรรมไดอะล็อกและการเปลี่ยนผ่าน',
         'Show EntityIDs' => 'แสดง EntityIDs',
         'Extend the width of the Canvas' => 'ขยายความกว้างของผ้าใบ',
@@ -8018,6 +8019,7 @@ sub Data {
             '',
         'Defines the separator for export csv files.' => '',
         'Defines the quote for export csv files.' => '',
+        'Define a process category.' => '',
 
         # XML Definition: scripts/database/initial_insert.xml
         'invalid-temporarily' => 'ไม่ถูกต้องชั่วคราว',
@@ -9225,6 +9227,7 @@ Thanks for your help!
         'Ticket title' => '',
         'Ticket zoom view.' => '',
         'TicketNumber' => '',
+        'TicketProcessCategory: Define a process category.' => '',
         'Tickets.' => '',
         'To accept login information, such as an EULA or license.' => '',
         'To download attachments.' => '',

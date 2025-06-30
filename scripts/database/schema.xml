@@ -2229,6 +2229,18 @@
     </ForeignKey>
 </Table>
 
+<Table Name="pm_process_preferences">
+    <Column Name="process_entity_id" Required="true" Type="VARCHAR" Size="50"/>
+    <Column Name="preferences_key" Required="true" Size="150" Type="VARCHAR"/>
+    <Column Name="preferences_value" Required="false" Size="3000" Type="VARCHAR"/>
+    <Index Name="pm_process_preferences_process_entity_id">
+        <IndexColumn Name="process_entity_id"/>
+    </Index>
+    <ForeignKey ForeignTable="pm_process">
+        <Reference Local="process_entity_id" Foreign="entity_id"/>
+    </ForeignKey>
+</Table>
+
 <Table Name="pm_activity">
     <Column Name="id" Required="true" PrimaryKey="true" AutoIncrement="true" Type="INTEGER"/>
     <!-- entity_id is a unique identifier independent from id -->

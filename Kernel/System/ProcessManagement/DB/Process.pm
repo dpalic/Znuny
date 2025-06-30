@@ -12,6 +12,8 @@ package Kernel::System::ProcessManagement::DB::Process;
 use strict;
 use warnings;
 
+use MIME::Base64;
+
 use Kernel::System::ProcessManagement::DB::Entity;
 use Kernel::System::ProcessManagement::DB::Activity;
 use Kernel::System::ProcessManagement::DB::ActivityDialog;
@@ -30,11 +32,8 @@ our @ObjectDependencies = (
     'Kernel::System::Log',
     'Kernel::System::Main',
     'Kernel::System::User',
+    'Kernel::System::VirtualFS',
     'Kernel::System::YAML',
-    'Kernel::System::ProcessManagement::DB::Activity',
-    'Kernel::System::ProcessManagement::DB::ActivityDialog',
-    'Kernel::System::ProcessManagement::DB::Transition',
-    'Kernel::System::ProcessManagement::DB::TransitionAction',
 );
 
 =head1 NAME
@@ -77,6 +76,21 @@ sub new {
     if ( $Kernel::OM->Get('Kernel::System::DB')->GetDatabaseFunction('CaseSensitive') ) {
         $Self->{Lower} = 'LOWER';
     }
+
+    # preferences table data
+    $Self->{PreferencesTable}                = 'pm_process_preferences';
+    $Self->{PreferencesTableProcessEntityID} = 'process_entity_id';
+    $Self->{PreferencesTableKey}             = 'preferences_key';
+    $Self->{PreferencesTableValue}           = 'preferences_value';
+
+    # create cache prefix
+    $Self->{CachePrefix} = 'ProcessPreferences'
+        . $Self->{PreferencesTable}
+        . $Self->{PreferencesTableKey}
+        . $Self->{PreferencesTableValue}
+        . $Self->{PreferencesTableProcessEntityID};
+
+    $Self->{CacheType} = 'Process';
 
     return $Self;
 }
@@ -238,6 +252,10 @@ sub ProcessDelete {
     );
     return if !IsHashRefWithData($Process);
 
+    $Self->ProcessPreferencesDelete(
+        ProcessEntityID => $Process->{EntityID},
+    );
+
     # delete process
     return if !$Kernel::OM->Get('Kernel::System::DB')->Do(
         SQL  => 'DELETE FROM pm_process WHERE id = ?',
@@ -259,6 +277,7 @@ get Process attributes
     my $Process = $ProcessObject->ProcessGet(
         ID              => 123,          # ID or EntityID is needed
         EntityID        => 'P1',
+        Export          => 1,            # (optional) default 1 (0|1), if set to 1, the content of a file stored as preferences will be exported as Base64
         ActivityNames   => 1,            # default 0, 1 || 0, if 0 returns an Activities array
                                          #     with the activity entity IDs, if 1 returns an
                                          #     Activities hash with the activity entity IDs as
@@ -338,6 +357,8 @@ sub ProcessGet {
         );
         return;
     }
+
+    $Param{Preferences} = $Param{Preferences} || 1;
 
     my $ActivityNames = 0;
     if ( defined $Param{ActivityNames} && $Param{ActivityNames} == 1 ) {
@@ -553,6 +574,37 @@ sub ProcessGet {
         EntityID => $Data{StateEntityID},
         UserID   => 1,
     );
+
+    # get process preferences
+    if ( $Param{Preferences} ) {
+
+        my %PreferenceConfig = %{ $Kernel::OM->Get('Kernel::Config')->Get('ProcessPreferences') // {} };
+
+        # Create a new hash with the desired structure
+        my %NewPreferenceConfig;
+
+        # Iterate over the original hash
+        for my $Setting ( sort keys %PreferenceConfig ) {
+            my $PrefKey = $PreferenceConfig{$Setting}->{PrefKey};
+            $NewPreferenceConfig{$PrefKey} = {
+                'SettingName' => "ProcessPreferences###$Setting",
+                %{ $PreferenceConfig{$Setting} }
+            };
+        }
+
+        my %Preferences = $Self->ProcessPreferencesGet(
+            ProcessEntityID => $Data{EntityID},
+            Export          => $Param{Export},
+        );
+
+        # merge data
+        if (%Preferences) {
+            %Data = ( %Data, %Preferences );
+            for my $PreferenceKey ( sort keys %Preferences ) {
+                $Data{Config}->{Preferences}->{$PreferenceKey} = $NewPreferenceConfig{$PreferenceKey};
+            }
+        }
+    }
 
     # set cache
     $CacheObject->Set(
@@ -1535,15 +1587,13 @@ sub ProcessExport {
 
     my ( $Self, %Param ) = @_;
 
-    my $ActivityObject         = $Kernel::OM->Get('Kernel::System::ProcessManagement::DB::Activity');
-    my $ActivityDialogObject   = $Kernel::OM->Get('Kernel::System::ProcessManagement::DB::ActivityDialog');
-    my $TransitionObject       = $Kernel::OM->Get('Kernel::System::ProcessManagement::DB::Transition');
-    my $TransitionActionObject = $Kernel::OM->Get('Kernel::System::ProcessManagement::DB::TransitionAction');
+    my $ConfigObject = $Kernel::OM->Get('Kernel::Config');
 
     # get process data
     my $Process = $Self->ProcessGet(
         ID     => $Param{ID},
         UserID => $Param{UserID},
+        Export => 1,
     );
 
     return if !$Process;
@@ -1555,7 +1605,7 @@ sub ProcessExport {
     # get all used activities
     for my $ActivityEntityID ( @{ $Process->{Activities} } ) {
 
-        my $Activity = $ActivityObject->ActivityGet(
+        my $Activity = $Self->{ActivityObject}->ActivityGet(
             EntityID => $ActivityEntityID,
             UserID   => $Param{UserID},
         );
@@ -1564,7 +1614,7 @@ sub ProcessExport {
         # get all used activity dialogs
         for my $ActivityDialogEntityID ( @{ $Activity->{ActivityDialogs} } ) {
 
-            my $ActivityDialog = $ActivityDialogObject->ActivityDialogGet(
+            my $ActivityDialog = $Self->{ActivityDialogObject}->ActivityDialogGet(
                 EntityID => $ActivityDialogEntityID,
                 UserID   => $Param{UserID},
             );
@@ -1575,7 +1625,7 @@ sub ProcessExport {
     # get all used transitions
     for my $TransitionEntityID ( @{ $Process->{Transitions} } ) {
 
-        my $Transition = $TransitionObject->TransitionGet(
+        my $Transition = $Self->{TransitionObject}->TransitionGet(
             EntityID => $TransitionEntityID,
             UserID   => $Param{UserID},
         );
@@ -1585,7 +1635,7 @@ sub ProcessExport {
     # get all used transition actions
     for my $TransitionActionEntityID ( @{ $Process->{TransitionActions} } ) {
 
-        my $TransitionAction = $TransitionActionObject->TransitionActionGet(
+        my $TransitionAction = $Self->{TransitionActionObject}->TransitionActionGet(
             EntityID => $TransitionActionEntityID,
             UserID   => $Param{UserID},
         );
@@ -1600,7 +1650,7 @@ sub ProcessExport {
 get export file name based on process entity name
 
     my $Filename = $ProcessObject->ProcessExportFilenameGet(
-        Name => 'Process_1',
+        Name   => 'Process_1',
         Format => 'YAML',
     );
 
@@ -1646,6 +1696,8 @@ Returns:
 sub ProcessImport {
     my ( $Self, %Param ) = @_;
 
+    my $ConfigObject = $Kernel::OM->Get('Kernel::Config');
+
     for my $Needed (qw(Content UserID)) {
 
         # check needed stuff
@@ -1658,7 +1710,9 @@ sub ProcessImport {
         }
     }
 
-    my $ProcessData = $Kernel::OM->Get('Kernel::System::YAML')->Load( Data => $Param{Content} );
+    my $ProcessData       = $Kernel::OM->Get('Kernel::System::YAML')->Load( Data => $Param{Content} );
+    my $ImportProcessData = $ProcessData;
+
     if ( ref $ProcessData ne 'HASH' ) {
         return (
             Message =>
@@ -1946,6 +2000,9 @@ sub ProcessImport {
         }
     }
 
+    # Get Process Preferences keys (Process->Config->Preferences)
+    my $PreferencesConfig = $ConfigObject->Get('ProcessPreferences');
+
     # update all entities with real data
     # update process
     for my $ProcessEntityID ( sort keys %{ $EntityMapping{Process} } ) {
@@ -1958,6 +2015,72 @@ sub ProcessImport {
             ID     => $Process->{ID},
             UserID => $Param{UserID},
         );
+
+        # Add ProcessPreferences if they are defined in the config and exist in export.
+        if (
+            IsHashRefWithData($PreferencesConfig)
+            && IsHashRefWithData( $ImportProcessData->{Process}->{Config}->{Preferences} )
+            )
+        {
+            PREFERENCEKEY:
+            for my $PreferenceKey ( sort keys %{ $ImportProcessData->{Process}->{Config}->{Preferences} } ) {
+                my %PreferenceConfig = %{ $ImportProcessData->{Process}->{Config}->{Preferences}->{$PreferenceKey} };
+
+                next PREFERENCEKEY if !$ImportProcessData->{Process}->{$PreferenceKey};
+
+                if ( $Param{OverwriteExistingEntities} ) {
+
+                    # Delete preference
+                    $Self->ProcessPreferencesDelete(
+                        ProcessEntityID => $ImportProcessData->{Process}->{EntityID},
+                        Key             => $PreferenceKey,
+                    );
+                }
+
+                my @PreferenceValues;
+
+                # Check if the preference is a single value or an array
+                if ( IsStringWithData( $ImportProcessData->{Process}->{$PreferenceKey} ) ) {
+                    @PreferenceValues = $ImportProcessData->{Process}->{$PreferenceKey};
+                }
+                elsif ( IsArrayRefWithData( $ImportProcessData->{Process}->{$PreferenceKey} ) ) {
+                    @PreferenceValues = @{ $ImportProcessData->{Process}->{$PreferenceKey} };
+                }
+
+                for my $Value (@PreferenceValues) {
+                    if ( $PreferenceConfig{Block} eq 'File' ) {
+                        my %File;
+
+                        # Decode the file content
+                        $File{Content}     = decode_base64( $Value->{Content} );
+                        $File{Preferences} = $Value->{Preferences};
+
+                        # To store the file in the VirtualFS, we need to create a unique filename
+                        # $Filename = StorageID::ProcessEntityID::PrefKey::Filename;
+                        my $Filename = 'VirtualFS::'
+                            . $ProcessData->{Process}->{EntityID} . '::'
+                            . $PreferenceKey . '::'
+                            . $File{Preferences}->{Filename};
+
+                        $Kernel::OM->Get('Kernel::System::VirtualFS')->Write(
+                            Content     => \$File{Content},
+                            Filename    => $Filename,
+                            Mode        => 'binary',
+                            Preferences => $File{Preferences},
+                        );
+
+                        $Value = $Filename;
+                    }
+
+                    $Self->ProcessPreferencesSet(
+                        ProcessEntityID => $ProcessData->{Process}->{EntityID},
+                        Key             => $PreferenceKey,
+                        Value           => $Value,
+                    );
+                }
+            }
+        }
+
         if ( !$Success ) {
             return $Self->_ProcessImportRollBack(
                 AddedEntityIDs => \%AddedEntityIDs,
@@ -2003,6 +2126,260 @@ sub ProcessImport {
         ),
         Success => 1,
     );
+}
+
+=head2 ProcessPreferencesSet()
+
+Sets process preferences.
+
+    $ProcessObject->ProcessPreferencesSet(
+        ProcessEntityID => 123,
+        Key             => 'UserComment',
+        Value           => 'some comment',
+    );
+
+=cut
+
+sub ProcessPreferencesSet {
+    my ( $Self, %Param ) = @_;
+
+    my $CacheObject = $Kernel::OM->Get('Kernel::System::Cache');
+    my $DBObject    = $Kernel::OM->Get('Kernel::System::DB');
+    my $LogObject   = $Kernel::OM->Get('Kernel::System::Log');
+
+    NEEDED:
+    for my $Needed (qw(ProcessEntityID Key Value)) {
+        next NEEDED if defined $Param{$Needed};
+
+        $LogObject->Log(
+            Priority => 'error',
+            Message  => "Need $Needed!",
+        );
+        return;
+    }
+
+    my $ProcessList = $Self->ProcessList(
+        UseEntities => 1,
+        UserID      => 1,
+    );
+
+    if ( !$ProcessList->{ $Param{ProcessEntityID} } ) {
+        $LogObject->Log(
+            Priority => 'error',
+            Message  => "ProcessEntityID $Param{ProcessEntityID} not exists!",
+        );
+        return;
+    }
+
+    # insert new data
+    return if !$DBObject->Do(
+        SQL => "INSERT INTO $Self->{PreferencesTable} ($Self->{PreferencesTableProcessEntityID}, "
+            . " $Self->{PreferencesTableKey}, $Self->{PreferencesTableValue}) "
+            . " VALUES (?, ?, ?)",
+        Bind => [ \$Param{ProcessEntityID}, \$Param{Key}, \$Param{Value} ],
+    );
+
+    # delete cache
+    $CacheObject->Delete(
+        Type => $Self->{CacheType},
+        Key  => $Self->{CachePrefix} . $Param{ProcessEntityID},
+    );
+
+    return 1;
+}
+
+=head2 ProcessPreferencesGet()
+
+Gets process preferences.
+
+    my %Preferences = $ProcessObject->ProcessPreferencesGet(
+        ProcessEntityID => 123,
+        Export          => 1,       # (optional) default 1 (0|1), if set to 1, the content of a file stored as preferences will be exported as Base64
+    );
+
+Return:
+
+    my %Preferences = (
+        'UserComment' => 'some comment',
+    );
+
+=cut
+
+sub ProcessPreferencesGet {
+    my ( $Self, %Param ) = @_;
+
+    my $CacheObject     = $Kernel::OM->Get('Kernel::System::Cache');
+    my $ConfigObject    = $Kernel::OM->Get('Kernel::Config');
+    my $DBObject        = $Kernel::OM->Get('Kernel::System::DB');
+    my $LogObject       = $Kernel::OM->Get('Kernel::System::Log');
+    my $VirtualFSObject = $Kernel::OM->Get('Kernel::System::VirtualFS');
+
+    NEEDED:
+    for my $Needed (qw(ProcessEntityID)) {
+        next NEEDED if $Param{$Needed};
+
+        $LogObject->Log(
+            Priority => 'error',
+            Message  => "Need $Needed!",
+        );
+        return;
+    }
+
+    # check if process preferences are available
+    my $PreferencesConfig = $ConfigObject->Get('ProcessPreferences');
+    return if !$PreferencesConfig;
+
+    # return cache
+    my $Cache = $CacheObject->Get(
+        Type => $Self->{CacheType},
+        Key  => $Self->{CachePrefix} . $Param{ProcessEntityID},
+    );
+    return %{$Cache} if $Cache;
+
+    # get preferences
+    return if !$DBObject->Prepare(
+        SQL => "SELECT $Self->{PreferencesTableKey}, $Self->{PreferencesTableValue} "
+            . " FROM $Self->{PreferencesTable} WHERE $Self->{PreferencesTableProcessEntityID} = ?",
+        Bind => [ \$Param{ProcessEntityID} ],
+    );
+
+    my %Data;
+    while ( my @Row = $DBObject->FetchrowArray() ) {
+
+        if ( !$Data{ $Row[0] } ) {
+            $Data{ $Row[0] } = $Row[1];
+        }
+        else {
+
+            # create an array if we have more than one value for a preference
+            if ( !IsArrayRefWithData( $Data{ $Row[0] } ) ) {
+                my $Value = $Data{ $Row[0] };
+                delete $Data{ $Row[0] };
+                push @{ $Data{ $Row[0] } }, $Value;
+            }
+
+            push @{ $Data{ $Row[0] } }, $Row[1];
+        }
+    }
+
+    return %Data if !%Data;
+
+    if ( IsHashRefWithData($PreferencesConfig) ) {
+        PREFERENCE:
+        for my $Preference ( sort keys %{$PreferencesConfig} ) {
+
+            next PREFERENCE if $PreferencesConfig->{$Preference}->{Block} ne 'File';
+
+            my $PrefKey = $PreferencesConfig->{$Preference}->{PrefKey};
+
+            if ( !IsArrayRefWithData( $Data{$PrefKey} ) ) {
+                my $Value = $Data{$PrefKey};
+                next PREFERENCE if !$Value;
+                next PREFERENCE if !IsStringWithData($Value);
+
+                $Data{$PrefKey} = [$Value];
+            }
+
+            my %Files;
+            FILE:
+            for my $Filename ( @{ $Data{$PrefKey} } ) {
+
+                my %File = $VirtualFSObject->Read(
+                    Filename => $Filename,
+                    Mode     => 'binary',
+                );
+                next FILE if !IsHashRefWithData( $File{Preferences} );
+
+                # If set to 1, the content of a file stored as preferences will be exported as Base64
+                if ( $Param{Export} ) {
+                    $File{Content} = encode_base64( ${ $File{Content} } );
+                }
+
+                push @{ $Files{$PrefKey} }, \%File;
+            }
+
+            $Data{$PrefKey} = $Files{$PrefKey};
+        }
+    }
+
+    # set cache
+    $CacheObject->Set(
+        Type  => $Self->{CacheType},
+        TTL   => $Self->{CacheTTL},
+        Key   => $Self->{CachePrefix} . $Param{ProcessEntityID},
+        Value => \%Data,
+    );
+
+    return %Data;
+}
+
+=head2 ProcessPreferencesDelete()
+
+Deletes process preferences.
+
+    $ProcessObject->ProcessPreferencesDelete(
+        ProcessEntityID => 123,
+        Key             => 'UserComment',   # optional
+    );
+
+=cut
+
+sub ProcessPreferencesDelete {
+    my ( $Self, %Param ) = @_;
+
+    my $CacheObject = $Kernel::OM->Get('Kernel::System::Cache');
+    my $DBObject    = $Kernel::OM->Get('Kernel::System::DB');
+    my $LogObject   = $Kernel::OM->Get('Kernel::System::Log');
+
+    NEEDED:
+    for my $Needed (qw(ProcessEntityID)) {
+        next NEEDED if defined $Param{$Needed};
+
+        $LogObject->Log(
+            Priority => 'error',
+            Message  => "Need $Needed!",
+        );
+        return;
+    }
+
+    my $ProcessList = $Self->ProcessList(
+        UseEntities => 1,
+        UserID      => 1,
+    );
+
+    if ( !$ProcessList->{ $Param{ProcessEntityID} } ) {
+        $LogObject->Log(
+            Priority => 'error',
+            Message  => "ProcessEntityID $Param{ProcessEntityID} not exists!",
+        );
+        return;
+    }
+
+    if ( $Param{Key} ) {
+
+        # delete old data
+        return if !$DBObject->Do(
+            SQL => "DELETE FROM $Self->{PreferencesTable} WHERE "
+                . "$Self->{PreferencesTableProcessEntityID} = ? AND $Self->{PreferencesTableKey} = ?",
+            Bind => [ \$Param{ProcessEntityID}, \$Param{Key} ],
+        );
+    }
+    else {
+        # delete old data
+        return if !$DBObject->Do(
+            SQL => "DELETE FROM $Self->{PreferencesTable} WHERE "
+                . "$Self->{PreferencesTableProcessEntityID} = ?",
+            Bind => [ \$Param{ProcessEntityID} ],
+        );
+    }
+
+    # delete cache
+    $CacheObject->Delete(
+        Type => $Self->{CacheType},
+        Key  => $Self->{CachePrefix} . $Param{ProcessEntityID},
+    );
+
+    return 1;
 }
 
 sub _ProcessItemOutput {

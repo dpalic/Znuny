@@ -29,7 +29,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D/%M/%Y';
     $Self->{DateInputFormat}     = '%D/%M/%Y';
     $Self->{DateInputFormatLong} = '%D/%M/%Y - %T';
-    $Self->{Completeness}        = 0.305054444986186;
+    $Self->{Completeness}        = 0.304905782975958;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -1754,6 +1754,7 @@ sub Data {
         'Edit Process Information' => 'Editar informação do processo',
         'Process Name' => 'Nome do Processo',
         'The selected state does not exist.' => 'O estado selecionado não existe.',
+        'Process Preferences' => '',
         'Add and Edit Activities, Activity Dialogs and Transitions' => '',
         'Show EntityIDs' => '',
         'Extend the width of the Canvas' => '',
@@ -8015,6 +8016,7 @@ sub Data {
             '',
         'Defines the separator for export csv files.' => '',
         'Defines the quote for export csv files.' => '',
+        'Define a process category.' => '',
 
         # XML Definition: scripts/database/initial_insert.xml
         'invalid-temporarily' => 'inválido-temporariamente',
@@ -9222,6 +9224,7 @@ A sua equipa de Helpdesk
         'Ticket title' => 'Título do ticket',
         'Ticket zoom view.' => '',
         'TicketNumber' => 'Número do ticket',
+        'TicketProcessCategory: Define a process category.' => '',
         'Tickets.' => 'Tickets.',
         'To accept login information, such as an EULA or license.' => '',
         'To download attachments.' => 'Para descarregar anexos',

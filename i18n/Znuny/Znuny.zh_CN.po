@@ -24727,3 +24727,15 @@ msgstr ""
 msgid "Maximum time, in seconds, to wait for a response from server. Only applies to modules that support timeouts."
 msgstr ""
 
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminProcessManagementProcessEdit.tt
+msgid "Process Preferences"
+msgstr ""
+
+#. XML Definition: Kernel/Config/Files/XML/Znuny.xml
+msgid "Define a process category."
+msgstr ""
+
+#. SysConfig
+msgid "TicketProcessCategory: Define a process category."
+msgstr ""
+

@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.529660328295141;
+    $Self->{Completeness}        = 0.529402209226771;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -1751,6 +1751,7 @@ sub Data {
         'Edit Process Information' => 'Edit Maklumat Proses',
         'Process Name' => 'Nama Proses',
         'The selected state does not exist.' => 'Keadaan yang dipilih tidak wujud.',
+        'Process Preferences' => '',
         'Add and Edit Activities, Activity Dialogs and Transitions' => 'Tambah dan Edit Aktiviti, Dialog Kegiatan dan Peralihan',
         'Show EntityIDs' => 'Tunjuk EntityIDs',
         'Extend the width of the Canvas' => 'Memperluaskan lebar Kanvas',
@@ -8014,6 +8015,7 @@ Search_DynamicField_XTimeSlotStartMonth=01; Search_DynamicField_XTimeSlotStartDa
             '',
         'Defines the separator for export csv files.' => '',
         'Defines the quote for export csv files.' => '',
+        'Define a process category.' => '',
 
         # XML Definition: scripts/database/initial_insert.xml
         'invalid-temporarily' => 'tidak sah-sementara',
@@ -9222,6 +9224,7 @@ Kumpulan MejaBantuan Anda
         'Ticket title' => 'tajuk tiket',
         'Ticket zoom view.' => 'pandangan zum tiket',
         'TicketNumber' => 'NomborTiket',
+        'TicketProcessCategory: Define a process category.' => '',
         'Tickets.' => 'Tiket-tiket',
         'To accept login information, such as an EULA or license.' => '',
         'To download attachments.' => 'untuk memuat turun lampiran',

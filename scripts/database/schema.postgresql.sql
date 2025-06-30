@@ -2576,6 +2576,25 @@ CREATE TABLE pm_process (
     CONSTRAINT pm_process_entity_id UNIQUE (entity_id)
 );
 -- ----------------------------------------------------------
+--  create table pm_process_preferences
+-- ----------------------------------------------------------
+CREATE TABLE pm_process_preferences (
+    process_entity_id VARCHAR (50) NOT NULL,
+    preferences_key VARCHAR (150) NOT NULL,
+    preferences_value VARCHAR (3000) NULL
+);
+DO $$
+BEGIN
+IF NOT EXISTS (
+    SELECT 1
+    FROM pg_indexes
+    WHERE LOWER(indexname) = LOWER('pm_process_preferences_process_entity_id')
+    ) THEN
+    CREATE INDEX pm_process_preferences_process_entity_id ON pm_process_preferences (process_entity_id);
+END IF;
+END$$;
+;
+-- ----------------------------------------------------------
 --  create table pm_activity
 -- ----------------------------------------------------------
 CREATE TABLE pm_activity (

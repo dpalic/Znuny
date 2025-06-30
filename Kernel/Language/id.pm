@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D/%M/%Y';
     $Self->{DateInputFormat}     = '%D/%M/%Y';
     $Self->{DateInputFormatLong} = '%D/%M/%Y - %T';
-    $Self->{Completeness}        = 0.596782057532911;
+    $Self->{Completeness}        = 0.596491228070175;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -1752,6 +1752,7 @@ EMAILADDRESS:info@example.com dari, kepada atau Cc.',
         'Edit Process Information' => 'Mengubah proses informasi',
         'Process Name' => 'Nama proses',
         'The selected state does not exist.' => 'Pilihan yang ditetapkan tidak ada',
+        'Process Preferences' => '',
         'Add and Edit Activities, Activity Dialogs and Transitions' => 'Tambah dan ubah aktivitas, aktivitas dialog dan transisi',
         'Show EntityIDs' => 'Tampilkan EntityDs',
         'Extend the width of the Canvas' => 'Memperpanjang lebar kanvas',
@@ -8015,6 +8016,7 @@ bin/znuny.Daemon.pl status\').',
             '',
         'Defines the separator for export csv files.' => '',
         'Defines the quote for export csv files.' => '',
+        'Define a process category.' => '',
 
         # XML Definition: scripts/database/initial_insert.xml
         'invalid-temporarily' => 'tidak valid sementara',
@@ -9222,6 +9224,7 @@ Helpdesk Team Anda
         'Ticket title' => 'Judul tiket',
         'Ticket zoom view.' => 'Pandangan dekat tiket',
         'TicketNumber' => 'Nomor tiket',
+        'TicketProcessCategory: Define a process category.' => '',
         'Tickets.' => 'Tiket',
         'To accept login information, such as an EULA or license.' => 'Untuk menerima masuk nya informasi, seperti EULA atau surat izin.',
         'To download attachments.' => 'Untuk unduh lampiran',

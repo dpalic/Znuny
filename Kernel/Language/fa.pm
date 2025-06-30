@@ -29,7 +29,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.607508532423208;
+    $Self->{Completeness}        = 0.607212475633528;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -1757,6 +1757,7 @@ sub Data {
         'Edit Process Information' => 'ویرایش اطلاعات فرآیند',
         'Process Name' => 'نام پردازش',
         'The selected state does not exist.' => 'وضعیت انتخاب شده وجود ندارد.',
+        'Process Preferences' => '',
         'Add and Edit Activities, Activity Dialogs and Transitions' => 'اضافه کردن و ویرایش فعالیت، تبادل و انتقال فعالیت',
         'Show EntityIDs' => 'نمایش EntityIDs',
         'Extend the width of the Canvas' => 'گسترش عرض بوم',
@@ -8018,6 +8019,7 @@ sub Data {
             '',
         'Defines the separator for export csv files.' => '',
         'Defines the quote for export csv files.' => '',
+        'Define a process category.' => '',
 
         # XML Definition: scripts/database/initial_insert.xml
         'invalid-temporarily' => 'موقتا غیر معتبر',
@@ -9225,6 +9227,7 @@ Thanks for your help!
         'Ticket title' => 'عنوان درخواست',
         'Ticket zoom view.' => 'نمایش زوم درخواست',
         'TicketNumber' => 'شماره درخواست',
+        'TicketProcessCategory: Define a process category.' => '',
         'Tickets.' => 'درخواست',
         'To accept login information, such as an EULA or license.' => 'برای قبول اطلاعات ورود به سیستم، مانند EULA یا مجوز.',
         'To download attachments.' => 'برای دانلود فایل پیوست کنید.',

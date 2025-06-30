@@ -30,7 +30,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y/%M/%D';
     $Self->{DateInputFormat}     = '%Y/%M/%D';
     $Self->{DateInputFormatLong} = '%Y/%M/%D - %T';
-    $Self->{Completeness}        = 0.673817649926865;
+    $Self->{Completeness}        = 0.673489278752437;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -1757,6 +1757,7 @@ sub Data {
         'Edit Process Information' => 'プロセスの情報を編集',
         'Process Name' => 'プロセス名',
         'The selected state does not exist.' => '選択されたステータスは存在しません。',
+        'Process Preferences' => '',
         'Add and Edit Activities, Activity Dialogs and Transitions' => 'アクティビティ、アクティビティダイアログ、遷移を追加、編集',
         'Show EntityIDs' => 'エンティティIDを表示',
         'Extend the width of the Canvas' => 'キャンバスの幅を広げる',
@@ -8028,6 +8029,7 @@ Contentはダイナミック・フィールドの形式によって設定内容�
             '',
         'Defines the separator for export csv files.' => '',
         'Defines the quote for export csv files.' => '',
+        'Define a process category.' => '',
 
         # XML Definition: scripts/database/initial_insert.xml
         'invalid-temporarily' => '無効-暫定',
@@ -9234,6 +9236,7 @@ Thanks for your help!
         'Ticket title' => 'チケットタイトル',
         'Ticket zoom view.' => 'チケット・ズーム・ビュー',
         'TicketNumber' => 'チケット番号',
+        'TicketProcessCategory: Define a process category.' => '',
         'Tickets.' => 'チケット',
         'To accept login information, such as an EULA or license.' => '',
         'To download attachments.' => '添付ファイルをダウンロード',

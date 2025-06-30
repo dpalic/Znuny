@@ -1505,6 +1505,15 @@ CREATE TABLE pm_process (
     UNIQUE INDEX pm_process_entity_id (entity_id)
 );
 # ----------------------------------------------------------
+#  create table pm_process_preferences
+# ----------------------------------------------------------
+CREATE TABLE pm_process_preferences (
+    process_entity_id VARCHAR (50) NOT NULL,
+    preferences_key VARCHAR (150) NOT NULL,
+    preferences_value TEXT NULL,
+    INDEX pm_process_preferences_process_entity_id (process_entity_id)
+);
+# ----------------------------------------------------------
 #  create table pm_activity
 # ----------------------------------------------------------
 CREATE TABLE pm_activity (

@@ -32,7 +32,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.879733463351211;
+    $Self->{Completeness}        = 0.879304743339831;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -1757,6 +1757,7 @@ sub Data {
         'Edit Process Information' => 'Uredi informacije o procesu',
         'Process Name' => 'Naziv procesa',
         'The selected state does not exist.' => 'Odabrani status ne postoji.',
+        'Process Preferences' => '',
         'Add and Edit Activities, Activity Dialogs and Transitions' => 'Dodaj i uredi aktivosti, dijaloge aktivnosti i tranzicije',
         'Show EntityIDs' => 'Pokaži ID entiteta',
         'Extend the width of the Canvas' => 'Proširi širinu prostora',
@@ -8018,6 +8019,7 @@ sub Data {
             '',
         'Defines the separator for export csv files.' => '',
         'Defines the quote for export csv files.' => '',
+        'Define a process category.' => '',
 
         # XML Definition: scripts/database/initial_insert.xml
         'invalid-temporarily' => 'nevažeći-privremeno',
@@ -9225,6 +9227,7 @@ Vaša tehnička podrška
         'Ticket title' => 'Naslov tiketa',
         'Ticket zoom view.' => 'Detaljni pregled tiketa.',
         'TicketNumber' => 'Broj tiketa',
+        'TicketProcessCategory: Define a process category.' => '',
         'Tickets.' => 'Tiketi.',
         'To accept login information, such as an EULA or license.' => 'Prihvatanje informacija prilikom prijavljivanja, npr. EULA izjava ili licenca.',
         'To download attachments.' => 'Za preuzimanje priloga.',

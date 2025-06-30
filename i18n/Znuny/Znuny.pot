@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2025-06-26 13:31+0000\n"
+"POT-Creation-Date: 2025-06-26 21:02+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -5272,6 +5272,10 @@ msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminProcessManagementProcessEdit.tt
 msgid "The selected state does not exist."
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminProcessManagementProcessEdit.tt
+msgid "Process Preferences"
 msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminProcessManagementProcessEdit.tt
@@ -20622,6 +20626,10 @@ msgstr ""
 msgid "Defines the quote for export csv files."
 msgstr ""
 
+#. XML Definition: Kernel/Config/Files/XML/Znuny.xml
+msgid "Define a process category."
+msgstr ""
+
 #. XML Definition: scripts/database/initial_insert.xml
 msgid "invalid-temporarily"
 msgstr ""
@@ -24383,6 +24391,10 @@ msgstr ""
 
 #. SysConfig
 msgid "TicketNumber"
+msgstr ""
+
+#. SysConfig
+msgid "TicketProcessCategory: Define a process category."
 msgstr ""
 
 #. SysConfig
