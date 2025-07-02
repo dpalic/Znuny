@@ -1,4 +1,5 @@
 # 7.2.1 2025-??-??
+ - 2025-07-02 Added support for setting customer user preferences via AJAX request.
  - 2025-07-02 Fixed: CustomerProcessTicket is not fully styled.
  - 2025-06-30 Added support for process preferences.
  - 2025-06-24 Fixed: Wrong otrs.Daemon.pl exit code after valid termination. Thanks to Paweł Bogusławski (@pboguslawski). [#401](https://github.com/znuny/Znuny/pull/401)
