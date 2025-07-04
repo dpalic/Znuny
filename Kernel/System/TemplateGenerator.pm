@@ -119,7 +119,8 @@ sub Salutation {
     if ( $Self->{RichText} && $Salutation{ContentType} =~ /text\/plain/i ) {
         $Salutation{ContentType} = 'text/html';
         $Salutation{Text}        = $Kernel::OM->Get('Kernel::System::HTMLUtils')->ToHTML(
-            String => $Salutation{Text},
+            String                 => $Salutation{Text},
+            DoNotReplaceHardBreaks => 1,
         );
     }
 
@@ -229,7 +230,8 @@ sub Signature {
     if ( $Self->{RichText} && $Signature{ContentType} =~ /text\/plain/i ) {
         $Signature{ContentType} = 'text/html';
         $Signature{Text}        = $Kernel::OM->Get('Kernel::System::HTMLUtils')->ToHTML(
-            String => $Signature{Text},
+            String                 => $Signature{Text},
+            DoNotReplaceHardBreaks => 1,
         );
     }
 
@@ -405,7 +407,8 @@ sub Template {
     {
         $Template{ContentType} = 'text/html';
         $Template{Template}    = $Kernel::OM->Get('Kernel::System::HTMLUtils')->ToHTML(
-            String => $Template{Template},
+            String                 => $Template{Template},
+            DoNotReplaceHardBreaks => 1,
         );
     }
 
@@ -543,7 +546,8 @@ sub GenericAgentArticle {
     {
         $Template{ContentType} = 'text/html';
         $Template{Body}        = $Kernel::OM->Get('Kernel::System::HTMLUtils')->ToHTML(
-            String => $Template{Body},
+            String                 => $Template{Body},
+            DoNotReplaceHardBreaks => 1,
         );
     }
 
@@ -662,6 +666,7 @@ generate response
         OrigHeader       => {},
         AutoResponseType => 'auto reply',
         UserID           => 123,
+        UserType         => 'Agent', # optional
     );
 
 =cut
@@ -763,7 +768,8 @@ sub AutoResponse {
     if ( $Self->{RichText} && $AutoResponse{ContentType} =~ /text\/plain/i ) {
         $AutoResponse{ContentType} = 'text/html';
         $AutoResponse{Text}        = $Kernel::OM->Get('Kernel::System::HTMLUtils')->ToHTML(
-            String => $AutoResponse{Text},
+            String                 => $AutoResponse{Text},
+            DoNotReplaceHardBreaks => 1,
         );
     }
 
@@ -844,8 +850,9 @@ sub AutoResponse {
         );
 
         $AutoResponse{Text} = $Kernel::OM->Get('Kernel::System::HTMLUtils')->DocumentComplete(
-            Charset => 'utf-8',
-            String  => $AutoResponse{Text},
+            Charset  => 'utf-8',
+            String   => $AutoResponse{Text},
+            UserType => $Param{UserType} || 'Agent',
         );
     }
 
@@ -1081,7 +1088,8 @@ sub NotificationEvent {
     if ( $Self->{RichText} && $Notification{ContentType} =~ /text\/plain/i ) {
         $Notification{ContentType} = 'text/html';
         $Notification{Body}        = $Kernel::OM->Get('Kernel::System::HTMLUtils')->ToHTML(
-            String => $Notification{Body},
+            String                 => $Notification{Body},
+            DoNotReplaceHardBreaks => 1,
         );
     }
 
@@ -1167,6 +1175,8 @@ sub _Replace {
             return;
         }
     }
+
+    my $HTMLUtilsObject = $Kernel::OM->Get('Kernel::System::HTMLUtils');
 
     # check for mailto links
     # since the subject and body of those mailto links are
@@ -1430,8 +1440,9 @@ sub _Replace {
             ATTRIBUTE:
             for my $Attribute ( sort keys %Recipient ) {
                 next ATTRIBUTE if !$Recipient{$Attribute};
-                $Recipient{$Attribute} = $Kernel::OM->Get('Kernel::System::HTMLUtils')->ToHTML(
-                    String => $Recipient{$Attribute},
+                $Recipient{$Attribute} = $HTMLUtilsObject->ToHTML(
+                    String                 => $Recipient{$Attribute},
+                    DoNotReplaceHardBreaks => 1,
                 );
             }
         }
@@ -1461,8 +1472,9 @@ sub _Replace {
             ATTRIBUTE:
             for my $Attribute ( sort keys %Owner ) {
                 next ATTRIBUTE if !$Owner{$Attribute};
-                $Owner{$Attribute} = $Kernel::OM->Get('Kernel::System::HTMLUtils')->ToHTML(
-                    String => $Owner{$Attribute},
+                $Owner{$Attribute} = $HTMLUtilsObject->ToHTML(
+                    String                 => $Owner{$Attribute},
+                    DoNotReplaceHardBreaks => 1,
                 );
             }
         }
@@ -1492,8 +1504,9 @@ sub _Replace {
             ATTRIBUTE:
             for my $Attribute ( sort keys %Responsible ) {
                 next ATTRIBUTE if !$Responsible{$Attribute};
-                $Responsible{$Attribute} = $Kernel::OM->Get('Kernel::System::HTMLUtils')->ToHTML(
-                    String => $Responsible{$Attribute},
+                $Responsible{$Attribute} = $HTMLUtilsObject->ToHTML(
+                    String                 => $Responsible{$Attribute},
+                    DoNotReplaceHardBreaks => 1,
                 );
             }
         }
@@ -1518,8 +1531,9 @@ sub _Replace {
         ATTRIBUTE:
         for my $Attribute ( sort keys %CurrentUser ) {
             next ATTRIBUTE if !$CurrentUser{$Attribute};
-            $CurrentUser{$Attribute} = $Kernel::OM->Get('Kernel::System::HTMLUtils')->ToHTML(
-                String => $CurrentUser{$Attribute},
+            $CurrentUser{$Attribute} = $HTMLUtilsObject->ToHTML(
+                String                 => $CurrentUser{$Attribute},
+                DoNotReplaceHardBreaks => 1,
             );
         }
     }
@@ -1542,8 +1556,9 @@ sub _Replace {
         ATTRIBUTE:
         for my $Attribute ( sort keys %Ticket ) {
             next ATTRIBUTE if !$Ticket{$Attribute};
-            $Ticket{$Attribute} = $Kernel::OM->Get('Kernel::System::HTMLUtils')->ToHTML(
-                String => $Ticket{$Attribute},
+            $Ticket{$Attribute} = $HTMLUtilsObject->ToHTML(
+                String                 => $Ticket{$Attribute},
+                DoNotReplaceHardBreaks => 1,
             );
         }
     }
@@ -1774,8 +1789,9 @@ sub _Replace {
             for my $Attribute ( sort keys %Data ) {
                 next ATTRIBUTE if !$Data{$Attribute};
 
-                $Data{$Attribute} = $Kernel::OM->Get('Kernel::System::HTMLUtils')->ToHTML(
-                    String => $Data{$Attribute},
+                $Data{$Attribute} = $HTMLUtilsObject->ToHTML(
+                    String                 => $Data{$Attribute},
+                    DoNotReplaceHardBreaks => 1,
                 );
             }
         }
@@ -1835,9 +1851,16 @@ sub _Replace {
                         $NewOldBody =~ s/(<br\/>)\s{0,20}$//gs;
                     }
 
+                    # replace hard breaks with paragraphs before there will
+                    # be added any "HTML" content like blockquote that would
+                    # make it complex to replace hard breaks afterwards
+                    $NewOldBody = $HTMLUtilsObject->ToHTMLReplaceWithParagraphs(
+                        String => $NewOldBody,
+                    );
+
                     # add quote
                     $NewOldBody = "<blockquote type=\"cite\">$NewOldBody</blockquote>";
-                    $NewOldBody = $Kernel::OM->Get('Kernel::System::HTMLUtils')->DocumentCleanup(
+                    $NewOldBody = $HTMLUtilsObject->DocumentCleanup(
                         String => $NewOldBody,
                     );
                 }
@@ -1966,8 +1989,9 @@ sub _Replace {
             ATTRIBUTE:
             for my $Attribute ( sort keys %CustomerUser ) {
                 next ATTRIBUTE if !$CustomerUser{$Attribute};
-                $CustomerUser{$Attribute} = $Kernel::OM->Get('Kernel::System::HTMLUtils')->ToHTML(
-                    String => $CustomerUser{$Attribute},
+                $CustomerUser{$Attribute} = $HTMLUtilsObject->ToHTML(
+                    String                 => $CustomerUser{$Attribute},
+                    DoNotReplaceHardBreaks => 1,
                 );
             }
         }
@@ -1982,6 +2006,10 @@ sub _Replace {
     # cleanup all not needed <OTRS_AGENT_ tags
     $Tag = $Start . 'OTRS_AGENT_';
     $Param{Text} =~ s/$Tag.+?$End/-/gi;
+
+    $Param{Text} = $HTMLUtilsObject->ToHTMLReplaceWithParagraphs(
+        String => $Param{Text},
+    ) if ( $Param{RichText} );
 
     return $Param{Text};
 }

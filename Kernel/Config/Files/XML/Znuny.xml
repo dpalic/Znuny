@@ -2280,6 +2280,27 @@
     </Setting>
 
     <!--
+        RTE
+    -->
+    <Setting Name="Loader::Agent::CommonCSS###999-RichTextEditor" Required="1" Valid="1">
+        <Description Translatable="1">List of CSS files to always be loaded for the agent interface.</Description>
+        <Navigation>Frontend::Base::Loader</Navigation>
+        <Value>
+            <Array>
+                <Item>Znuny.RichTextEditor.css</Item>
+            </Array>
+        </Value>
+    </Setting>
+    <Setting Name="Loader::Customer::CommonCSS###999-RichTextEditor" Required="1" Valid="1">
+        <Description Translatable="1">List of CSS files to always be loaded for the customer interface.</Description>
+        <Navigation>Frontend::Base::Loader</Navigation>
+        <Value>
+            <Array>
+                <Item>Znuny.RichTextEditor.css</Item>
+            </Array>
+        </Value>
+    </Setting>
+    <!--
         RTE autocompletion
     -->
     <Setting Name="Frontend::Module###AJAXRichTextAutocompletion" Required="0" Valid="1">
@@ -2346,11 +2367,11 @@
         </Value>
     </Setting>
     <Setting Name="Frontend::RichText::Autocompletion::General" Required="0" Valid="1">
-        <Description Translatable="1">General settings for autocompletion in rich text editor.</Description>
+        <Description Translatable="1">General settings for autocompletion in rich text editor. By default "ItemTemplate" uses "li" html tag to show the option that is matching (list format). The value of the key is used to define html inside it.</Description>
         <Navigation>Core</Navigation>
         <Value>
             <Hash>
-                <Item Key="ItemTemplate">&lt;li data-id="{id}"&gt;{selection_list_title}&lt;/li&gt;</Item>
+                <Item Key="ItemTemplate">&lt;div class="AutocompletionItem" data-id="{id}"&gt;{selection_list_title}&lt;/div&gt;</Item>
                 <Item Key="OutputTemplate">{inserted_value}</Item>
                 <Item Key="MinSearchLength">3</Item>
                 <!-- <Item Key="PreviewLength">50</Item> -->
@@ -2380,6 +2401,15 @@
                     </Array>
                 </Item>
             </Hash>
+        </Value>
+    </Setting>
+    <Setting Name="Loader::Agent::CommonCSS###999-Autocompletion" Required="1" Valid="1">
+        <Description Translatable="1">List of CSS files to always be loaded for the agent interface.</Description>
+        <Navigation>Frontend::Base::Loader</Navigation>
+        <Value>
+            <Array>
+                <Item>Znuny.Agent.Autocompletion.css</Item>
+            </Array>
         </Value>
     </Setting>
 
@@ -2436,14 +2466,14 @@
             <Hash>
                 <Item Key="Users">
                     <Hash>
-                        <Item Key="ItemTemplate">&lt;li class="Mention" data-id="{id}"&gt;{fullname}&lt;/li&gt;</Item>
-                        <Item Key="OutputTemplate">&lt;a class="Mention" id="{username}" href="#"&gt;@{fullname}&lt;/a&gt; </Item>
+                        <Item Key="ItemTemplate">{fullname}</Item>
+                        <Item Key="OutputTemplate">{trigger}{fullname}</Item>
                     </Hash>
                 </Item>
                 <Item Key="Groups">
                     <Hash>
-                        <Item Key="ItemTemplate">&lt;li class="Mention" data-id="{id}"&gt;{name} ({mentionLabel})&lt;/li&gt;</Item>
-                        <Item Key="OutputTemplate">&lt;a class="GroupMention" href="#"&gt;{name}&lt;/a&gt; </Item>
+                        <Item Key="ItemTemplate">{name} ({mentionLabel})</Item>
+                        <Item Key="OutputTemplate">{trigger}{name}</Item>
                     </Hash>
                 </Item>
             </Hash>
@@ -2584,11 +2614,11 @@
         </Value>
     </Setting>
     <Setting Name="Loader::Agent::CommonCSS###999-Mentions" Required="1" Valid="1">
-        <Description Translatable="1">List of CSS files to always be loaded for the customer interface.</Description>
+        <Description Translatable="1">List of CSS files to always be loaded for the agent interface.</Description>
         <Navigation>Frontend::Base::Loader</Navigation>
         <Value>
             <Array>
-                <Item>Core.RichTextEditor.css</Item>
+                <Item>Znuny.Agent.Mentions.css</Item>
             </Array>
         </Value>
     </Setting>
@@ -3419,7 +3449,7 @@
         <Description Translatable="1">Defines the width for the rich text editor component for this screen. Enter number (pixels) or percent value (relative).</Description>
         <Navigation>Frontend::Agent::View::TicketNoteToLinkedTicket</Navigation>
         <Value>
-            <Item ValueType="String" ValueRegex="^\d+%?$">75%</Item>
+            <Item ValueType="String" ValueRegex="^\d+%?$">100%</Item>
         </Value>
     </Setting>
     <Setting Name="Ticket::Frontend::AgentTicketNoteToLinkedTicket###RichTextHeight" Required="0" Valid="1">
@@ -3783,7 +3813,6 @@
             </Hash>
         </Value>
     </Setting>
-
     <Setting Name="AutoAttributFieldIDMapping" Required="0" Valid="1">
         <Description Translatable="1">Adds the field mapping for AgentTicketActionCommon for an unknown action. Used by Znuny.Form.Input.</Description>
         <Navigation>Frontend::Base</Navigation>

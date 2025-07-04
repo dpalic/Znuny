@@ -27,7 +27,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D/%M/%Y';
     $Self->{DateInputFormat}     = '%D/%M/%Y';
     $Self->{DateInputFormatLong} = '%D/%M/%Y - %T';
-    $Self->{Completeness}        = 0.719668669806724;
+    $Self->{Completeness}        = 0.718805776407594;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -5699,7 +5699,12 @@ sub Data {
         'Uses richtext for viewing and editing: articles, salutations, signatures, standard templates, auto responses and notifications.' =>
             'Utiliza texto enriquecido para ver y editar: artículos, saludos, firmas, plantillas estándar, respuestas automáticas y notificaciones.',
         'Defines the URL rich text editor path.' => 'Define la URL de la ruta del editor de texto enriquecido.',
-        'Defines the default CSS used in rich text editors.' => 'Define valor por defecto para el CSS de los editores de texto enriquecidos.',
+        'Path to RichText content CSS file that will be used to apply internal style to articles. The style will be appended into articles body when using agent interface. Customer internal article styles should match the same or very simillar rules.' =>
+            '',
+        'Path to RichText content CSS file that will be used to apply internal style to articles. The styles will be appended into articles body when using customer interface. Agent internal article styles should match the same or very simillar rules.' =>
+            '',
+        'Defines the additional default CSS used in rich text editors content. The style will be appended into articles body.' =>
+            '',
         'Defines if the enhanced mode should be used (enables use of table, replace, subscript, superscript, paste from word, etc.).' =>
             'Define si se debe usar el modo mejorado (permite el uso de la tableta, reemplazar, subescribir, sobrescribir, pegar desde word, etc.).',
         'Defines if the enhanced mode should be used (enables use of table, replace, subscript, superscript, paste from word, etc.) in customer interface.' =>
@@ -5708,11 +5713,20 @@ sub Data {
             'Define la anchura del editor de texto enriquecido. Proporcione un número (pixeles) o un porcentaje (relativo).',
         'Defines the height for the rich text editor component. Enter number (pixels) or percent value (relative).' =>
             'Define la altura para el componente del editor de texto enriquecido. Ingrese el número (píxeles) o el valor de porcentaje (relativo).',
+        'Defines the minimum height for the rich text editor component. Enter number (pixels) or percent value (relative).' =>
+            '',
         'Defines the selectable font sizes in the rich text editor.' => '',
+        'Defines the selectable format tags in the rich text editor. Each option is an JSON equivalent of heading options used in CKEditor5, more info: https://ckeditor.com/docs/ckeditor5/latest/features/headings.html#configuring-heading-levels.' =>
+            '',
+        'Defines enabled plugins that are available from the CKEditor build.' =>
+            '',
+        'Defines additional plugins in the rich text editor.' => '',
+        'Defines plugins that will be excluded from usage in the rich text editor.' =>
+            '',
         'Defines the selectable fonts in the rich text editor.' => '',
-        'Defines the selectable format tags in the rich text editor.' => '',
-        'Defines additional plugins for use in the rich text editor.' => '',
-        'Defines extra content that is allowed for use in the rich text editor.' =>
+        'Defines content that is allowed for use in the rich text editor.' =>
+            '',
+        'Defines content that is disallowed for use in the rich text editor.' =>
             '',
         'Global settings for all popup profiles.' => '',
         'Disable autocomplete in the login screen.' => 'Deshabilitar el autocompletado en la pantalla de acceso.',
@@ -7901,7 +7915,8 @@ sub Data {
             '',
         'Maximum length of displayed attachment filenames in the article preview of ticket zoom view.' =>
             '',
-        'General settings for autocompletion in rich text editor.' => '',
+        'General settings for autocompletion in rich text editor. By default "ItemTemplate" uses "li" html tag to show the option that is matching (list format). The value of the key is used to define html inside it.' =>
+            '',
         'Rich text editor configuration for autocompletion module.' => '',
         'Rich text editor configuration for autocompletion module to support templates.' =>
             '',

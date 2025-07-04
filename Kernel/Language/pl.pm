@@ -30,7 +30,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%M-%D';
     $Self->{DateInputFormat}     = '%Y-%M-%D';
     $Self->{DateInputFormatLong} = '%Y-%M-%D - %T';
-    $Self->{Completeness}        = 0.650641546207569;
+    $Self->{Completeness}        = 0.649845854291741;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -5703,7 +5703,12 @@ sub Data {
         'Uses richtext for viewing and editing: articles, salutations, signatures, standard templates, auto responses and notifications.' =>
             '',
         'Defines the URL rich text editor path.' => 'Definiuję scieżkę dla edytora tekstu.',
-        'Defines the default CSS used in rich text editors.' => 'Definiuje domyślny CSS używany w edytorach tekstu.',
+        'Path to RichText content CSS file that will be used to apply internal style to articles. The style will be appended into articles body when using agent interface. Customer internal article styles should match the same or very simillar rules.' =>
+            '',
+        'Path to RichText content CSS file that will be used to apply internal style to articles. The styles will be appended into articles body when using customer interface. Agent internal article styles should match the same or very simillar rules.' =>
+            '',
+        'Defines the additional default CSS used in rich text editors content. The style will be appended into articles body.' =>
+            '',
         'Defines if the enhanced mode should be used (enables use of table, replace, subscript, superscript, paste from word, etc.).' =>
             '',
         'Defines if the enhanced mode should be used (enables use of table, replace, subscript, superscript, paste from word, etc.) in customer interface.' =>
@@ -5712,11 +5717,20 @@ sub Data {
             '',
         'Defines the height for the rich text editor component. Enter number (pixels) or percent value (relative).' =>
             '',
+        'Defines the minimum height for the rich text editor component. Enter number (pixels) or percent value (relative).' =>
+            '',
         'Defines the selectable font sizes in the rich text editor.' => '',
+        'Defines the selectable format tags in the rich text editor. Each option is an JSON equivalent of heading options used in CKEditor5, more info: https://ckeditor.com/docs/ckeditor5/latest/features/headings.html#configuring-heading-levels.' =>
+            '',
+        'Defines enabled plugins that are available from the CKEditor build.' =>
+            '',
+        'Defines additional plugins in the rich text editor.' => '',
+        'Defines plugins that will be excluded from usage in the rich text editor.' =>
+            '',
         'Defines the selectable fonts in the rich text editor.' => '',
-        'Defines the selectable format tags in the rich text editor.' => '',
-        'Defines additional plugins for use in the rich text editor.' => '',
-        'Defines extra content that is allowed for use in the rich text editor.' =>
+        'Defines content that is allowed for use in the rich text editor.' =>
+            '',
+        'Defines content that is disallowed for use in the rich text editor.' =>
             '',
         'Global settings for all popup profiles.' => '',
         'Disable autocomplete in the login screen.' => '',
@@ -7905,7 +7919,8 @@ sub Data {
             '',
         'Maximum length of displayed attachment filenames in the article preview of ticket zoom view.' =>
             '',
-        'General settings for autocompletion in rich text editor.' => '',
+        'General settings for autocompletion in rich text editor. By default "ItemTemplate" uses "li" html tag to show the option that is matching (list format). The value of the key is used to define html inside it.' =>
+            '',
         'Rich text editor configuration for autocompletion module.' => '',
         'Rich text editor configuration for autocompletion module to support templates.' =>
             '',

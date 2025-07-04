@@ -222,6 +222,10 @@ sub _TasksGet {
             Module  => 'scripts::Migration::Base::DatabaseDefaultStorageEngineCheck',
         },
         {
+            Message => 'Check if CKEditor migration related entities have been backed up',
+            Module  => 'scripts::Migration::Znuny::CKEditorEntitiesBackupCheck',
+        },
+        {
             Message => 'Upgrade database structure',
             Module  => 'scripts::Migration::Znuny::UpgradeDatabaseStructure',
         },
@@ -256,6 +260,14 @@ sub _TasksGet {
         {
             Message => 'Migrate SysConfig settings',
             Module  => 'scripts::Migration::Znuny::MigrateSysConfigSettings',
+        },
+        {
+            Message => 'Cleanup orphaned mentions',
+            Module  => 'scripts::Migration::Znuny::CleanupOrphanedMentions',
+        },
+        {
+            Message => 'Migrate CKEditor from version 4 to 5',
+            Module  => 'scripts::Migration::Znuny::MigrateCKEditorContent',
         },
 
         # NOTE: UninstallMergedPackages has to be called only after

@@ -393,7 +393,7 @@ sub Run {
 
         my $UploadCacheObject = $Kernel::OM->Get('Kernel::System::Web::UploadCache');
 
-        if ( !$GetParam{Body} || $GetParam{Body} eq '<br />' ) {
+        if ( !$GetParam{Body} || $GetParam{Body} eq '<p>&nbsp;</p>' ) {
             $Error{RichTextInvalid}    = 'ServerError';
             $GetParam{FollowUpVisible} = 'Visible';
         }

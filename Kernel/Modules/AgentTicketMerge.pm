@@ -462,9 +462,9 @@ sub Run {
                 String => $ConfigObject->Get('Ticket::Frontend::MergeText'),
             );
             $Article{Body} = $Salutation
-                . '<br/><br/>'
+                . '<p></p><p></p>'
                 . $Body
-                . '<br/><br/>'
+                . '<p></p><p></p>'
                 . $Signature;
         }
         else {
