@@ -32,7 +32,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.878143761155281;
+    $Self->{Completeness}        = 0.875444839857651;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2787,6 +2787,12 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketProcess.tt
         'Create New Process Ticket' => 'Napravi novi proces tiket',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketProcessCategory.tt
+        'Process Ticket Category' => '',
+        'Categories' => '',
+        'Favourites' => '',
+        'No process found.' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketProcessSmall.tt
         'Enroll Ticket into a Process' => 'Priključi tiket procesu',
@@ -8037,6 +8043,14 @@ sub Data {
         'Defines the separator for export csv files.' => '',
         'Defines the quote for export csv files.' => '',
         'Define a process category.' => '',
+        'Frontend module registration (disable ticket processes screen if no process available) for Agent.' =>
+            '',
+        'Defines the LinkTarget for AgentTicketProcessCategory.' => '',
+        'Defines the LinkTarget for CustomerTicketProcessCategory.' => '',
+        'Define a process link target.' => '',
+        'Define a process icon.' => '',
+        'Defines which ContentTypes are permitted for the attachment preview.' =>
+            '',
 
         # XML Definition: scripts/database/initial_insert.xml
         'invalid-temporarily' => 'nevažeći-privremeno',
@@ -8540,6 +8554,8 @@ sub Data {
         'No space left for the following files: %s' => 'Za sledeće datoteke nema više mesta: %s',
         'Available space %s of %s.' => 'Raspoloživ prostor %s od %s.',
         'Upload information' => 'Informacije o otpremanju',
+        'An unknown error occurred when preview the attachment. Please try again. If the error persists, please contact your system administrator.' =>
+            '',
         'An unknown error occurred when deleting the attachment. Please try again. If the error persists, please contact your system administrator.' =>
             'Dogodila se nepoznata greška prilikom brisanja priloga. Molimo pokušajte ponovo. Ako se greška ponovo, molimo kontaktirajte vašeg administratora.',
 
@@ -8674,6 +8690,7 @@ Vaša tehnička podrška
         'Arabic (Saudi Arabia)' => 'Arapski (Saudijska arabija)',
         'Article Color' => '',
         'ArticleTree' => 'Članak u obliku drveta',
+        'AsPopup' => '',
         'Attachment Name' => 'Naziv priloga',
         'Avatar' => 'Avatar sličica',
         'Based on global RichText setting' => 'Bazirano na globalnim RichText postavkama',
@@ -8772,6 +8789,7 @@ Vaša tehnička podrška
         'Create new email ticket.' => 'Kreiranje novog imejl tiketa.',
         'Create new phone ticket (inbound).' => 'Kreiraj novi tiket (dolaznog) poziva.',
         'Create new phone ticket.' => 'Kreiranje novog tiketa poziva.',
+        'Create new process ticket via category.' => '',
         'Create new process ticket.' => 'Kreiraj novi proces tiket.',
         'Create tickets.' => 'Kreiranje tiketa.',
         'Created ticket [%s] in "%s" with priority "%s" and state "%s".' =>
@@ -8911,6 +8929,7 @@ Vaša tehnička podrška
         'Hebrew' => 'Hebrejski',
         'Hindi' => 'Hindi',
         'Hungarian' => 'Mađarski',
+        'Icon' => '',
         'If enabled the daemon will use this directory to create its PID files. Note: Please stop the daemon before any change and use this setting only if <$OTRSHome>/var/run/ can not be used.' =>
             'Ukoliko je omogućeno, sistemski servis će koristiti ovaj direktorijum za snimanje procesnih (PID) datoteka. Napomena: molimo stopirajte sistemski servis pre izmene ovog podešavanja i koristite ga samo u slučaju kad je <$OTRSHome>/var/run/ nedostupan.',
         'If enabled, the different overviews (Dashboard, LockedView, QueueView) will automatically refresh after the specified time.' =>
@@ -8959,6 +8978,7 @@ Vaša tehnička podrška
         'Link templates to attachments.' => 'Povezivanje šablona sa prilozima.',
         'Link templates to queues.' => 'Poveži šablone sa redovima',
         'Link this ticket to other objects' => 'Uveži ovaj tiket sa drugim objektom',
+        'LinkTarget' => '',
         'List view' => 'Pregled liste',
         'Lithuanian' => 'Litvanski',
         'Lock / unlock this ticket' => 'Zaključaj / otključaj ovaj tiket',
@@ -9074,6 +9094,11 @@ Vaša tehnička podrška
         'Process Management Path GUI' => 'Grafički interfejs putanje u procesima',
         'Process Management Transition Action GUI' => 'Grafički interfejs tranzicione akcije u procesima',
         'Process Management Transition GUI' => 'Grafički interfejs tranzicije u procesima',
+        'Process Ticket Catalog' => '',
+        'Process Ticket Catalog.' => '',
+        'Process Ticket Category: Define a process category.' => '',
+        'Process Ticket Category: Define a process icon.' => '',
+        'Process Ticket Category: Define a process link target.' => '',
         'Process Ticket.' => 'Proces tiket.',
         'ProcessID' => 'ID procesa',
         'Processes & Automation' => 'Procesi & automatizacija',
@@ -9244,7 +9269,6 @@ Vaša tehnička podrška
         'Ticket title' => 'Naslov tiketa',
         'Ticket zoom view.' => 'Detaljni pregled tiketa.',
         'TicketNumber' => 'Broj tiketa',
-        'TicketProcessCategory: Define a process category.' => '',
         'Tickets.' => 'Tiketi.',
         'To accept login information, such as an EULA or license.' => 'Prihvatanje informacija prilikom prijavljivanja, npr. EULA izjava ili licenca.',
         'To download attachments.' => 'Za preuzimanje priloga.',
@@ -9347,6 +9371,7 @@ Vaša tehnička podrška
         'An item with this name is already present.',
         'An unconnected transition is already placed on the canvas. Please connect this transition first before placing another transition.',
         'An unknown error occurred when deleting the attachment. Please try again. If the error persists, please contact your system administrator.',
+        'An unknown error occurred when preview the attachment. Please try again. If the error persists, please contact your system administrator.',
         'An unknown error occurred. Please contact the administrator.',
         'Apply',
         'Appointment',
@@ -9453,6 +9478,7 @@ Vaša tehnička podrška
         'Error: Browser Check failed!',
         'Event Type Filter',
         'Expanded',
+        'Favourites',
         'Feb',
         'February',
         'Filters',
@@ -9542,6 +9568,7 @@ Vaša tehnička podrška
         'Please wait...',
         'Preparing to deploy, please wait...',
         'Press Ctrl+C (Cmd+C) to copy to clipboard',
+        'Preview',
         'Previous',
         'Process state',
         'Queues',

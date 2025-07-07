@@ -33,7 +33,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D/%M/%Y';
     $Self->{DateInputFormat}     = '%D/%M/%Y';
     $Self->{DateInputFormatLong} = '%D/%M/%Y - %T';
-    $Self->{Completeness}        = 0.584942398182703;
+    $Self->{Completeness}        = 0.583144613393724;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2788,6 +2788,12 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketProcess.tt
         'Create New Process Ticket' => 'Crear un nuevo ticket de proceso',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketProcessCategory.tt
+        'Process Ticket Category' => '',
+        'Categories' => '',
+        'Favourites' => '',
+        'No process found.' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketProcessSmall.tt
         'Enroll Ticket into a Process' => 'Registrar Ticket en un Proceso',
@@ -8045,6 +8051,14 @@ El control del acceso adicional para demostrar o no demostrar éste enlace puede
         'Defines the separator for export csv files.' => '',
         'Defines the quote for export csv files.' => '',
         'Define a process category.' => '',
+        'Frontend module registration (disable ticket processes screen if no process available) for Agent.' =>
+            '',
+        'Defines the LinkTarget for AgentTicketProcessCategory.' => '',
+        'Defines the LinkTarget for CustomerTicketProcessCategory.' => '',
+        'Define a process link target.' => '',
+        'Define a process icon.' => '',
+        'Defines which ContentTypes are permitted for the attachment preview.' =>
+            '',
 
         # XML Definition: scripts/database/initial_insert.xml
         'invalid-temporarily' => 'temporalmente-no-válido',
@@ -8548,6 +8562,8 @@ El control del acceso adicional para demostrar o no demostrar éste enlace puede
         'No space left for the following files: %s' => '',
         'Available space %s of %s.' => '',
         'Upload information' => '',
+        'An unknown error occurred when preview the attachment. Please try again. If the error persists, please contact your system administrator.' =>
+            '',
         'An unknown error occurred when deleting the attachment. Please try again. If the error persists, please contact your system administrator.' =>
             '',
 
@@ -8682,6 +8698,7 @@ Tu Equipo de Soporte
         'Arabic (Saudi Arabia)' => 'Árabe (Arabia Saudita)',
         'Article Color' => '',
         'ArticleTree' => 'Árbol de Artículos',
+        'AsPopup' => '',
         'Attachment Name' => 'Nombre del archivo adjunto',
         'Avatar' => '',
         'Based on global RichText setting' => 'Basada en ajustes de RichText global',
@@ -8780,6 +8797,7 @@ Tu Equipo de Soporte
         'Create new email ticket.' => 'Crear un nuevo ticket de correo electrónico.',
         'Create new phone ticket (inbound).' => 'Crea nuevo ticket telefónico (entrante).',
         'Create new phone ticket.' => 'Crea nuevo ticket telefónico.',
+        'Create new process ticket via category.' => '',
         'Create new process ticket.' => 'Crea nuevo ticket de proceso.',
         'Create tickets.' => 'Crear tickets.',
         'Created ticket [%s] in "%s" with priority "%s" and state "%s".' =>
@@ -8919,6 +8937,7 @@ Tu Equipo de Soporte
         'Hebrew' => 'Hebreo',
         'Hindi' => 'Hindi',
         'Hungarian' => 'Húngaro',
+        'Icon' => '',
         'If enabled the daemon will use this directory to create its PID files. Note: Please stop the daemon before any change and use this setting only if <$OTRSHome>/var/run/ can not be used.' =>
             '',
         'If enabled, the different overviews (Dashboard, LockedView, QueueView) will automatically refresh after the specified time.' =>
@@ -8967,6 +8986,7 @@ Tu Equipo de Soporte
         'Link templates to attachments.' => 'Relacionar plantillas con adjuntos',
         'Link templates to queues.' => 'Crea enlace de Plantillas a Colas.',
         'Link this ticket to other objects' => 'Enlazar este ticket a otros objetos',
+        'LinkTarget' => '',
         'List view' => '',
         'Lithuanian' => 'Lituano',
         'Lock / unlock this ticket' => 'Bloquear / Desbloquear este ticket',
@@ -9082,6 +9102,11 @@ Tu Equipo de Soporte
         'Process Management Path GUI' => '',
         'Process Management Transition Action GUI' => '',
         'Process Management Transition GUI' => '',
+        'Process Ticket Catalog' => '',
+        'Process Ticket Catalog.' => '',
+        'Process Ticket Category: Define a process category.' => '',
+        'Process Ticket Category: Define a process icon.' => '',
+        'Process Ticket Category: Define a process link target.' => '',
         'Process Ticket.' => '',
         'ProcessID' => 'ID de Proceso',
         'Processes & Automation' => '',
@@ -9252,7 +9277,6 @@ Tu Equipo de Soporte
         'Ticket title' => 'Título del Ticket ',
         'Ticket zoom view.' => '',
         'TicketNumber' => 'Número de Ticket',
-        'TicketProcessCategory: Define a process category.' => '',
         'Tickets.' => 'Tickets.',
         'To accept login information, such as an EULA or license.' => '',
         'To download attachments.' => 'Para descargar archivos adjuntos.',
@@ -9355,6 +9379,7 @@ Tu Equipo de Soporte
         'An item with this name is already present.',
         'An unconnected transition is already placed on the canvas. Please connect this transition first before placing another transition.',
         'An unknown error occurred when deleting the attachment. Please try again. If the error persists, please contact your system administrator.',
+        'An unknown error occurred when preview the attachment. Please try again. If the error persists, please contact your system administrator.',
         'An unknown error occurred. Please contact the administrator.',
         'Apply',
         'Appointment',
@@ -9461,6 +9486,7 @@ Tu Equipo de Soporte
         'Error: Browser Check failed!',
         'Event Type Filter',
         'Expanded',
+        'Favourites',
         'Feb',
         'February',
         'Filters',
@@ -9550,6 +9576,7 @@ Tu Equipo de Soporte
         'Please wait...',
         'Preparing to deploy, please wait...',
         'Press Ctrl+C (Cmd+C) to copy to clipboard',
+        'Preview',
         'Previous',
         'Process state',
         'Queues',

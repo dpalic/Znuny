@@ -32,7 +32,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%M-%D';
     $Self->{DateInputFormat}     = '%Y-%M-%D';
     $Self->{DateInputFormatLong} = '%Y-%M-%D - %T';
-    $Self->{Completeness}        = 0.881551192601006;
+    $Self->{Completeness}        = 0.878841798770624;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2787,6 +2787,12 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketProcess.tt
         'Create New Process Ticket' => 'Új folyamatjegy létrehozása',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketProcessCategory.tt
+        'Process Ticket Category' => '',
+        'Categories' => '',
+        'Favourites' => '',
+        'No process found.' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketProcessSmall.tt
         'Enroll Ticket into a Process' => 'Jegy besorolása egy folyamatba',
@@ -8037,6 +8043,14 @@ sub Data {
         'Defines the separator for export csv files.' => '',
         'Defines the quote for export csv files.' => '',
         'Define a process category.' => '',
+        'Frontend module registration (disable ticket processes screen if no process available) for Agent.' =>
+            '',
+        'Defines the LinkTarget for AgentTicketProcessCategory.' => '',
+        'Defines the LinkTarget for CustomerTicketProcessCategory.' => '',
+        'Define a process link target.' => '',
+        'Define a process icon.' => '',
+        'Defines which ContentTypes are permitted for the attachment preview.' =>
+            '',
 
         # XML Definition: scripts/database/initial_insert.xml
         'invalid-temporarily' => 'átmenetileg érvénytelen',
@@ -8540,6 +8554,8 @@ sub Data {
         'No space left for the following files: %s' => 'Nincs több hely a következő fájloknak: %s',
         'Available space %s of %s.' => 'Elérhető hely: %s/%s.',
         'Upload information' => 'Feltöltési információk',
+        'An unknown error occurred when preview the attachment. Please try again. If the error persists, please contact your system administrator.' =>
+            '',
         'An unknown error occurred when deleting the attachment. Please try again. If the error persists, please contact your system administrator.' =>
             'Ismeretlen hiba történt a melléklet törlése során. Kérjük, próbálja meg újra. Ha a hiba továbbra is fennáll, akkor vegye fel a kapcsolatot a rendszergazdával.',
 
@@ -8674,6 +8690,7 @@ Az Ön segélyszolgálat csapata
         'Arabic (Saudi Arabia)' => 'Arab (Szaúd-Arábia)',
         'Article Color' => '',
         'ArticleTree' => 'Bejegyzés fa',
+        'AsPopup' => '',
         'Attachment Name' => 'Melléklet neve',
         'Avatar' => 'Profilkép',
         'Based on global RichText setting' => 'Globális RichText beállítás alapján',
@@ -8772,6 +8789,7 @@ Az Ön segélyszolgálat csapata
         'Create new email ticket.' => 'Új e-mail jegy létrehozása.',
         'Create new phone ticket (inbound).' => 'Új telefonos jegy létrehozása (bejövő).',
         'Create new phone ticket.' => 'Új telefonos jegy létrehozása.',
+        'Create new process ticket via category.' => '',
         'Create new process ticket.' => 'Új folyamatjegy létrehozása.',
         'Create tickets.' => 'Jegyek létrehozása.',
         'Created ticket [%s] in "%s" with priority "%s" and state "%s".' =>
@@ -8911,6 +8929,7 @@ Az Ön segélyszolgálat csapata
         'Hebrew' => 'Héber',
         'Hindi' => 'Hindi',
         'Hungarian' => 'Magyar',
+        'Icon' => '',
         'If enabled the daemon will use this directory to create its PID files. Note: Please stop the daemon before any change and use this setting only if <$OTRSHome>/var/run/ can not be used.' =>
             'Ha engedélyezve van, akkor a démon ezt a könyvtárat fogja használni a PID-fájljai létrehozásához. Megjegyzés: állítsa le a démont, mielőtt bármit megváltoztatna, és csak akkor használja ezt a beállítást, ha az <$OTRSHome>/var/run/ nem használható.',
         'If enabled, the different overviews (Dashboard, LockedView, QueueView) will automatically refresh after the specified time.' =>
@@ -8959,6 +8978,7 @@ Az Ön segélyszolgálat csapata
         'Link templates to attachments.' => 'Sablonok összekapcsolása mellékletekkel.',
         'Link templates to queues.' => 'Sablonok összekapcsolása várólistákkal.',
         'Link this ticket to other objects' => 'Jegy összekapcsolása más objektumokkal',
+        'LinkTarget' => '',
         'List view' => 'Listanézet',
         'Lithuanian' => 'Litván',
         'Lock / unlock this ticket' => 'Jegy zárolása vagy feloldása',
@@ -9074,6 +9094,11 @@ Az Ön segélyszolgálat csapata
         'Process Management Path GUI' => 'Folyamatkezelés útvonal grafikus felület',
         'Process Management Transition Action GUI' => 'Folyamatkezelés átmeneti művelet grafikus felület',
         'Process Management Transition GUI' => 'Folyamatkezelés átmenet grafikus felület',
+        'Process Ticket Catalog' => '',
+        'Process Ticket Catalog.' => '',
+        'Process Ticket Category: Define a process category.' => '',
+        'Process Ticket Category: Define a process icon.' => '',
+        'Process Ticket Category: Define a process link target.' => '',
         'Process Ticket.' => 'Folyamatjegy.',
         'ProcessID' => 'Folyamatazonosító',
         'Processes & Automation' => 'Folyamatok és automatizálás',
@@ -9244,7 +9269,6 @@ Az Ön segélyszolgálat csapata
         'Ticket title' => 'Jegycím',
         'Ticket zoom view.' => 'Jegynagyítás nézet.',
         'TicketNumber' => 'Jegyszám',
-        'TicketProcessCategory: Define a process category.' => '',
         'Tickets.' => 'Jegyek.',
         'To accept login information, such as an EULA or license.' => 'Bejelentkezési információk elfogadásához, mint például EULA vagy licenc.',
         'To download attachments.' => 'Mellékletek letöltéséhez.',
@@ -9347,6 +9371,7 @@ Az Ön segélyszolgálat csapata
         'An item with this name is already present.',
         'An unconnected transition is already placed on the canvas. Please connect this transition first before placing another transition.',
         'An unknown error occurred when deleting the attachment. Please try again. If the error persists, please contact your system administrator.',
+        'An unknown error occurred when preview the attachment. Please try again. If the error persists, please contact your system administrator.',
         'An unknown error occurred. Please contact the administrator.',
         'Apply',
         'Appointment',
@@ -9453,6 +9478,7 @@ Az Ön segélyszolgálat csapata
         'Error: Browser Check failed!',
         'Event Type Filter',
         'Expanded',
+        'Favourites',
         'Feb',
         'February',
         'Filters',
@@ -9542,6 +9568,7 @@ Az Ön segélyszolgálat csapata
         'Please wait...',
         'Preparing to deploy, please wait...',
         'Press Ctrl+C (Cmd+C) to copy to clipboard',
+        'Preview',
         'Previous',
         'Process state',
         'Queues',

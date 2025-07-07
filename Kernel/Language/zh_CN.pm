@@ -33,7 +33,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y.%M.%D';
     $Self->{DateInputFormat}     = '%Y.%M.%D';
     $Self->{DateInputFormatLong} = '%Y.%M.%D - %T';
-    $Self->{Completeness}        = 0.881551192601006;
+    $Self->{Completeness}        = 0.878841798770624;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -2788,6 +2788,12 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketProcess.tt
         'Create New Process Ticket' => '创建流程工单',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketProcessCategory.tt
+        'Process Ticket Category' => '',
+        'Categories' => '',
+        'Favourites' => '',
+        'No process found.' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketProcessSmall.tt
         'Enroll Ticket into a Process' => '注册工单到一个流程',
@@ -8038,6 +8044,14 @@ sub Data {
         'Defines the separator for export csv files.' => '',
         'Defines the quote for export csv files.' => '',
         'Define a process category.' => '',
+        'Frontend module registration (disable ticket processes screen if no process available) for Agent.' =>
+            '',
+        'Defines the LinkTarget for AgentTicketProcessCategory.' => '',
+        'Defines the LinkTarget for CustomerTicketProcessCategory.' => '',
+        'Define a process link target.' => '',
+        'Define a process icon.' => '',
+        'Defines which ContentTypes are permitted for the attachment preview.' =>
+            '',
 
         # XML Definition: scripts/database/initial_insert.xml
         'invalid-temporarily' => '暂时无效',
@@ -8541,6 +8555,8 @@ sub Data {
         'No space left for the following files: %s' => '以下文件没有可用空间：%s',
         'Available space %s of %s.' => '可用空间%s，总共%s。',
         'Upload information' => '上传信息',
+        'An unknown error occurred when preview the attachment. Please try again. If the error persists, please contact your system administrator.' =>
+            '',
         'An unknown error occurred when deleting the attachment. Please try again. If the error persists, please contact your system administrator.' =>
             '删除附件时发生未知错误，请再试一次。 如果错误仍然存在，请与系统管理员联系。',
 
@@ -8674,6 +8690,7 @@ Thanks for your help!
         'Arabic (Saudi Arabia)' => '阿拉伯语（沙特阿拉伯）',
         'Article Color' => '',
         'ArticleTree' => '信件树',
+        'AsPopup' => '',
         'Attachment Name' => '附件名',
         'Avatar' => '头像',
         'Based on global RichText setting' => '基于全局富文本设置',
@@ -8772,6 +8789,7 @@ Thanks for your help!
         'Create new email ticket.' => '创建新的邮件工单。',
         'Create new phone ticket (inbound).' => '创建新的电话工单（来电）。',
         'Create new phone ticket.' => '创建新的电话工单。',
+        'Create new process ticket via category.' => '',
         'Create new process ticket.' => '创建新的流程工单。',
         'Create tickets.' => '创建工单。',
         'Created ticket [%s] in "%s" with priority "%s" and state "%s".' =>
@@ -8911,6 +8929,7 @@ Thanks for your help!
         'Hebrew' => '希伯来语',
         'Hindi' => '印度语',
         'Hungarian' => '匈牙利语',
+        'Icon' => '',
         'If enabled the daemon will use this directory to create its PID files. Note: Please stop the daemon before any change and use this setting only if <$OTRSHome>/var/run/ can not be used.' =>
             '如果启用，守护程序将使用此目录创建其PID文件。 注意：请在任何更改之前停止守护程序，并且只有在不使用<$OTRSHome>/var/run/时才使用此设置。',
         'If enabled, the different overviews (Dashboard, LockedView, QueueView) will automatically refresh after the specified time.' =>
@@ -8959,6 +8978,7 @@ Thanks for your help!
         'Link templates to attachments.' => '连接模板到附件。',
         'Link templates to queues.' => '链接模板到队列。',
         'Link this ticket to other objects' => '将工单链接到其它对象',
+        'LinkTarget' => '',
         'List view' => '列表视图',
         'Lithuanian' => '立陶宛语',
         'Lock / unlock this ticket' => '锁定/解锁这个工单',
@@ -9074,6 +9094,11 @@ Thanks for your help!
         'Process Management Path GUI' => '流程管理 路径的GUI',
         'Process Management Transition Action GUI' => '流程管理 转换动作的GUI',
         'Process Management Transition GUI' => '流程管理 转换的GUI',
+        'Process Ticket Catalog' => '',
+        'Process Ticket Catalog.' => '',
+        'Process Ticket Category: Define a process category.' => '',
+        'Process Ticket Category: Define a process icon.' => '',
+        'Process Ticket Category: Define a process link target.' => '',
         'Process Ticket.' => '流程工单。',
         'ProcessID' => '流程ID',
         'Processes & Automation' => '流程和自动化',
@@ -9244,7 +9269,6 @@ Thanks for your help!
         'Ticket title' => '工单标题',
         'Ticket zoom view.' => '工单详情视图。',
         'TicketNumber' => '工单编号',
-        'TicketProcessCategory: Define a process category.' => '',
         'Tickets.' => '工单。',
         'To accept login information, such as an EULA or license.' => '接受登录信息，如EULA（最终用户许可协议）或许可。',
         'To download attachments.' => '下载附件。',
@@ -9347,6 +9371,7 @@ Thanks for your help!
         'An item with this name is already present.',
         'An unconnected transition is already placed on the canvas. Please connect this transition first before placing another transition.',
         'An unknown error occurred when deleting the attachment. Please try again. If the error persists, please contact your system administrator.',
+        'An unknown error occurred when preview the attachment. Please try again. If the error persists, please contact your system administrator.',
         'An unknown error occurred. Please contact the administrator.',
         'Apply',
         'Appointment',
@@ -9453,6 +9478,7 @@ Thanks for your help!
         'Error: Browser Check failed!',
         'Event Type Filter',
         'Expanded',
+        'Favourites',
         'Feb',
         'February',
         'Filters',
@@ -9542,6 +9568,7 @@ Thanks for your help!
         'Please wait...',
         'Preparing to deploy, please wait...',
         'Press Ctrl+C (Cmd+C) to copy to clipboard',
+        'Preview',
         'Previous',
         'Process state',
         'Queues',

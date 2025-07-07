@@ -27,7 +27,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.992373843907188;
+    $Self->{Completeness}        = 0.993529602070527;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -1752,7 +1752,7 @@ sub Data {
         'Edit Process Information' => 'Prozessinformationen bearbeiten',
         'Process Name' => 'Prozessname',
         'The selected state does not exist.' => 'Der ausgewählte Status existiert nicht.',
-        'Process Preferences' => '',
+        'Process Preferences' => 'Prozess Einstellungen',
         'Add and Edit Activities, Activity Dialogs and Transitions' => 'Aktivitäten, Aktivitäts-Dialoge und Übergänge hinzufügen und bearbeiten',
         'Show EntityIDs' => 'EntityIDs einblenden',
         'Extend the width of the Canvas' => 'Die Breite des Zeichenbereichs vergrößern',
@@ -2783,6 +2783,12 @@ sub Data {
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketProcess.tt
         'Create New Process Ticket' => 'Neues Prozess-Ticket',
 
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketProcessCategory.tt
+        'Process Ticket Category' => 'Prozess Ticket Kategorie',
+        'Categories' => 'Kategorien',
+        'Favourites' => 'Favoriten',
+        'No process found.' => 'Kein Prozess gefunden.',
+
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketProcessSmall.tt
         'Enroll Ticket into a Process' => 'Ticket in einen Prozess überführen',
 
@@ -3021,9 +3027,9 @@ sub Data {
         'Expand' => 'Ausklappen',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/FormElements/AttachmentList.tt
-        'Preview' => '',
-        'Click to preview this file.' => '',
-        'Click to download this file.' => '',
+        'Preview' => 'Vorschau',
+        'Click to preview this file.' => 'Klicken Sie hier, um eine Vorschau dieser Datei anzuzeigen.',
+        'Click to download this file.' => 'Klicken Sie, um diese Datei herunterzuladen.',
         'Click to delete this attachment.' => 'Klicken Sie, um diesen Anhang zu löschen.',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/FormElements/DraftButtons.tt
@@ -3483,9 +3489,9 @@ sub Data {
 
         # Perl Module: Kernel/Modules/AJAXAttachment.pm
         'Got no FormID.' => 'FormID fehlt.',
-        '%s is missing. The file could not be downloaded properly.' => '',
+        '%s is missing. The file could not be downloaded properly.' => '%s fehlt. Die Datei konnte nicht ordnungsgemäß heruntergeladen werden.',
         'Please contact the administrator.' => 'Bitte kontaktieren Sie den Administrator.',
-        '%s is missing. The file could not be previewed properly.' => '',
+        '%s is missing. The file could not be previewed properly.' => '%s fehlt. Die Datei konnte nicht ordnungsgemäß in der Vorschau angezeigt werden.',
         'Error: the file could not be deleted properly. Please contact your administrator (missing FileID).' =>
             'Fehler: die Datei konnte nicht korrekt gelöscht werden. Bitte kontaktieren Sie Ihren Administrator (fehlende FileID).',
 
@@ -8024,14 +8030,22 @@ sub Data {
         'List of user preferences (keys) that are allowed to be updated by UpdateAJAX subaction of frontend module AgentPreferences. These are regular expressions.' =>
             'Liste von Benutzereinstellungen (Keys), für die ein Update per UpdateAJAX-Subaction über das Frontendmodul AgentPreferences erlaubt ist. Eingabe als reguläre Ausdrücke.',
         'List of user preferences (keys) that are allowed to be updated by UpdateAJAX subaction of frontend module CustomerPreferences. These are regular expressions.' =>
-            '',
+            'Liste von Benutzereinstellungen (Keys), für die ein Update per UpdateAJAX-Subaction über das Frontendmodul CustomerPreferences erlaubt ist. Eingabe als reguläre Ausdrücke.',
         'Defines a module to display a notification if translation deployment is needed.' =>
             'Definiert ein Modul, das eine Benachrichtigung anzeigt, wenn ein Übersetzungseinsatz erforderlich ist.',
         'Defines the format of exported files when using the admin interface.' =>
             'Legt das Format der exportierten Dateien bei Verwendung der Verwaltungsoberfläche fest.',
         'Defines the separator for export csv files.' => 'Legt das Trennzeichen für csv-Exportdateien fest.',
         'Defines the quote for export csv files.' => 'Legt das Zitat für den Export von csv-Dateien fest.',
-        'Define a process category.' => '',
+        'Define a process category.' => 'Definiere eine Prozesskategorie.',
+        'Frontend module registration (disable ticket processes screen if no process available) for Agent.' =>
+            'Frontend-Modul-Registrierung (Ansicht für Ticketprozesse deaktivieren, wenn kein Prozess verfügbar ist) für Agent.',
+        'Defines the LinkTarget for AgentTicketProcessCategory.' => 'Definiert das LinkTarget für AgentTicketProcessCategory.',
+        'Defines the LinkTarget for CustomerTicketProcessCategory.' => 'Definiert das LinkTarget für CustomerTicketProcessCategory.',
+        'Define a process link target.' => 'Definieren Sie ein Prozessverknüpfungsziel.',
+        'Define a process icon.' => 'Definieren Sie ein Prozess-Symbol.',
+        'Defines which ContentTypes are permitted for the attachment preview.' =>
+            'Legt fest, welche ContentTypes für die Anlagenvorschau zulässig sind.',
 
         # XML Definition: scripts/database/initial_insert.xml
         'invalid-temporarily' => 'ungültig-temporär',
@@ -8535,6 +8549,8 @@ sub Data {
         'No space left for the following files: %s' => 'Kein Speicherplatz verfügbar für folgende Dateien: %s',
         'Available space %s of %s.' => 'Verfügbarer Platz %s von %s.',
         'Upload information' => 'Upload-Information',
+        'An unknown error occurred when preview the attachment. Please try again. If the error persists, please contact your system administrator.' =>
+            '',
         'An unknown error occurred when deleting the attachment. Please try again. If the error persists, please contact your system administrator.' =>
             'Beim Löschen des Anhangs ist ein unbekannter Fehler aufgetreten. Bitte versuchen Sie es erneut. Wenn der Fehler weiterhin auftritt, kontaktieren Sie bitte Ihren Systemadministrator.',
 
@@ -8668,6 +8684,7 @@ Ihr Helpdesk-Team
         'Arabic (Saudi Arabia)' => 'Arabisch (Saudi-Arabien)',
         'Article Color' => 'Artikel Farbe',
         'ArticleTree' => 'Artikelbaum',
+        'AsPopup' => '',
         'Attachment Name' => 'Name des Anhangs',
         'Avatar' => 'Avatar',
         'Based on global RichText setting' => 'Basierend auf der globalen Richtext-Einstellung',
@@ -8766,6 +8783,7 @@ Ihr Helpdesk-Team
         'Create new email ticket.' => 'Neues E-Mail-Ticket erstellen.',
         'Create new phone ticket (inbound).' => 'Neues Telefon-Ticket erstellen (eingehend).',
         'Create new phone ticket.' => 'Neues Telefon-Ticket erstellen.',
+        'Create new process ticket via category.' => 'Erstellen Sie ein neues Prozessticket über die Kategorie.',
         'Create new process ticket.' => 'Neues Prozess-Ticket erstellen.',
         'Create tickets.' => 'Tickets erstellen.',
         'Created ticket [%s] in "%s" with priority "%s" and state "%s".' =>
@@ -8905,6 +8923,7 @@ Ihr Helpdesk-Team
         'Hebrew' => 'Hebräisch',
         'Hindi' => 'Hindi',
         'Hungarian' => 'Ungarisch',
+        'Icon' => 'Icon',
         'If enabled the daemon will use this directory to create its PID files. Note: Please stop the daemon before any change and use this setting only if <$OTRSHome>/var/run/ can not be used.' =>
             'Wenn aktiviert, verwendet der Daemon dieses Verzeichnis, um seine PID-Dateien zu erstellen. Hinweis: Bitte stoppen Sie den Daemon vor der Änderung und nutzen Sie diese Einstellung nur, wenn <$OTRSHome>/var/run/ nicht benutzt werden kann.',
         'If enabled, the different overviews (Dashboard, LockedView, QueueView) will automatically refresh after the specified time.' =>
@@ -8953,6 +8972,7 @@ Ihr Helpdesk-Team
         'Link templates to attachments.' => 'Vorlagen mit Anhängen verknüpfen.',
         'Link templates to queues.' => 'Vorlagen zu Queues zuordnen.',
         'Link this ticket to other objects' => 'Dieses Ticket mit anderen Objekten verknüpfen',
+        'LinkTarget' => 'Linkziel',
         'List view' => 'Listenansicht',
         'Lithuanian' => 'Litauisch',
         'Lock / unlock this ticket' => 'Dieses Ticket sperren / entsperren',
@@ -9068,6 +9088,11 @@ Ihr Helpdesk-Team
         'Process Management Path GUI' => 'Prozess-Management-Pfad Benutzeroberfläche',
         'Process Management Transition Action GUI' => 'Prozess-Management Übergangs-Aktionen Benutzeroberfläche',
         'Process Management Transition GUI' => 'Prozess-Management-Übergangs Benutzeroberfläche',
+        'Process Ticket Catalog' => 'Prozess-Ticket-Katalog',
+        'Process Ticket Catalog.' => 'Prozess-Ticket-Katalog.',
+        'Process Ticket Category: Define a process category.' => 'Ticketprozess-Kategorie: Definieren Sie eine Prozesskategorie.',
+        'Process Ticket Category: Define a process icon.' => 'Ticketprozess-Kategorie: Definieren Sie ein Prozess-Symbol.',
+        'Process Ticket Category: Define a process link target.' => 'Ticketprozess-Kategorie: Definieren Sie ein Prozessverknüpfungsziel.',
         'Process Ticket.' => 'Prozess-Ticket.',
         'ProcessID' => 'ProcessID',
         'Processes & Automation' => 'Prozesse & Automatisierung',
@@ -9238,7 +9263,6 @@ Ihr Helpdesk-Team
         'Ticket title' => 'Ticket-Titel',
         'Ticket zoom view.' => 'Ticket-Detailansicht.',
         'TicketNumber' => 'Ticketnummer',
-        'TicketProcessCategory: Define a process category.' => '',
         'Tickets.' => 'Tickets.',
         'To accept login information, such as an EULA or license.' => 'Um Login-Informationen zu akzeptieren, wie EULAs oder Lizenzen.',
         'To download attachments.' => 'Zum Herunterladen von Anhängen.',
@@ -9341,6 +9365,7 @@ Ihr Helpdesk-Team
         'An item with this name is already present.',
         'An unconnected transition is already placed on the canvas. Please connect this transition first before placing another transition.',
         'An unknown error occurred when deleting the attachment. Please try again. If the error persists, please contact your system administrator.',
+        'An unknown error occurred when preview the attachment. Please try again. If the error persists, please contact your system administrator.',
         'An unknown error occurred. Please contact the administrator.',
         'Apply',
         'Appointment',
@@ -9447,6 +9472,7 @@ Ihr Helpdesk-Team
         'Error: Browser Check failed!',
         'Event Type Filter',
         'Expanded',
+        'Favourites',
         'Feb',
         'February',
         'Filters',
@@ -9536,6 +9562,7 @@ Ihr Helpdesk-Team
         'Please wait...',
         'Preparing to deploy, please wait...',
         'Press Ctrl+C (Cmd+C) to copy to clipboard',
+        'Preview',
         'Previous',
         'Process state',
         'Queues',

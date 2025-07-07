@@ -24707,23 +24707,23 @@ msgstr "Tickets markieren als"
 
 #. Perl Module: Kernel/Modules/AJAXAttachment.pm
 msgid "%s is missing. The file could not be downloaded properly."
-msgstr ""
+msgstr "%s fehlt. Die Datei konnte nicht ordnungsgemäß heruntergeladen werden."
 
 #. Perl Module: Kernel/Modules/AJAXAttachment.pm
 msgid "%s is missing. The file could not be previewed properly."
-msgstr ""
+msgstr "%s fehlt. Die Datei konnte nicht ordnungsgemäß in der Vorschau angezeigt werden."
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/FormElements/AttachmentList.tt
 msgid "Preview"
-msgstr ""
+msgstr "Vorschau"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/FormElements/AttachmentList.tt
 msgid "Click to preview this file."
-msgstr ""
+msgstr "Klicken Sie hier, um eine Vorschau dieser Datei anzuzeigen."
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/FormElements/AttachmentList.tt
 msgid "Click to download this file."
-msgstr ""
+msgstr "Klicken Sie, um diese Datei herunterzuladen."
 
 #. XML Definition: Kernel/Config/Files/XML/Framework.xml
 msgid "Maximum time, in seconds, to wait for a response from server. Only applies to modules that support timeouts."
@@ -24731,19 +24731,19 @@ msgstr "Maximale Zeit in Sekunden, die auf Antwort des Servers gewartet wird. Be
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminProcessManagementProcessEdit.tt
 msgid "Process Preferences"
-msgstr ""
+msgstr "Prozess Einstellungen"
 
 #. XML Definition: Kernel/Config/Files/XML/Znuny.xml
 msgid "Define a process category."
-msgstr ""
+msgstr "Definiere eine Prozesskategorie."
 
 #. SysConfig
 msgid "TicketProcessCategory: Define a process category."
-msgstr ""
+msgstr "TicketProzessKategorie: Definieren Sie eine Prozesskategorie."
 
 #. XML Definition: Kernel/Config/Files/XML/Znuny.xml
 msgid "List of user preferences (keys) that are allowed to be updated by UpdateAJAX subaction of frontend module CustomerPreferences. These are regular expressions."
-msgstr ""
+msgstr "Liste von Benutzereinstellungen (Keys), für die ein Update per UpdateAJAX-Subaction über das Frontendmodul CustomerPreferences erlaubt ist. Eingabe als reguläre Ausdrücke."
 
 #. XML Definition: Kernel/Config/Files/XML/Framework.xml
 msgid "Path to RichText content CSS file that will be used to apply internal style to articles. The style will be appended into articles body when using agent interface. Customer internal article styles should match the same or very simillar rules."
@@ -24788,4 +24788,92 @@ msgstr ""
 #. XML Definition: Kernel/Config/Files/XML/Znuny.xml
 msgid "General settings for autocompletion in rich text editor. By default \"ItemTemplate\" uses \"li\" html tag to show the option that is matching (list format). The value of the key is used to define html inside it."
 msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketProcessCategory.tt
+msgid "Process Ticket Category"
+msgstr "Prozess Ticket Kategorie"
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketProcessCategory.tt
+msgid "Categories"
+msgstr "Kategorien"
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketProcessCategory.tt
+msgid "Favourites"
+msgstr "Favoriten"
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketProcessCategory.tt
+msgid "No process found."
+msgstr "Kein Prozess gefunden."
+
+#. XML Definition: Kernel/Config/Files/XML/Znuny.xml
+msgid "Frontend module registration (disable ticket processes screen if no process available) for Agent."
+msgstr "Frontend-Modul-Registrierung (Ansicht für Ticketprozesse deaktivieren, wenn kein Prozess verfügbar ist) für Agent."
+
+#. XML Definition: Kernel/Config/Files/XML/Znuny.xml
+msgid "Defines the LinkTarget for AgentTicketProcessCategory."
+msgstr "Definiert das LinkTarget für AgentTicketProcessCategory."
+
+#. XML Definition: Kernel/Config/Files/XML/Znuny.xml
+msgid "Defines the LinkTarget for CustomerTicketProcessCategory."
+msgstr "Definiert das LinkTarget für CustomerTicketProcessCategory."
+
+#. XML Definition: Kernel/Config/Files/XML/Znuny.xml
+msgid "Define a process link target."
+msgstr "Definieren Sie ein Prozessverknüpfungsziel."
+
+#. XML Definition: Kernel/Config/Files/XML/Znuny.xml
+msgid "Define a process icon."
+msgstr "Definieren Sie ein Prozess-Symbol."
+
+#. XML Definition: Kernel/Config/Files/XML/Znuny.xml
+msgid "Defines which ContentTypes are permitted for the attachment preview."
+msgstr "Legt fest, welche ContentTypes für die Anlagenvorschau zulässig sind."
+
+#. JS File: var/httpd/htdocs/js/Core.UI.js
+msgid "An unknown error occurred when preview the attachment. Please try again. If the error persists, please contact your system administrator."
+msgstr ""
+
+#. SysConfig
+msgid "AsPopup"
+msgstr ""
+
+#. SysConfig
+msgid "Create new process ticket via category."
+msgstr "Erstellen Sie ein neues Prozessticket über die Kategorie."
+
+#. SysConfig
+msgid "Icon"
+msgstr "Icon"
+
+#. SysConfig
+msgid "LinkTarget"
+msgstr "Linkziel"
+
+#. SysConfig
+msgid "Process Ticket Catalog"
+msgstr "Prozess-Ticket-Katalog"
+
+#. SysConfig
+msgid "Process Ticket Catalog."
+msgstr "Prozess-Ticket-Katalog."
+
+#. SysConfig
+msgid "TicketProcessCategory: Define a process icon."
+msgstr "TicketProzessKategorie: Definieren Sie ein Prozess-Symbol."
+
+#. SysConfig
+msgid "TicketProcessCategory: Define a process link target."
+msgstr "TicketProzessKategorie: Definieren Sie ein Prozessverknüpfungsziel."
+
+#. SysConfig
+msgid "Process Ticket Category: Define a process category."
+msgstr "Ticketprozess-Kategorie: Definieren Sie eine Prozesskategorie."
+
+#. SysConfig
+msgid "Process Ticket Category: Define a process icon."
+msgstr "Ticketprozess-Kategorie: Definieren Sie ein Prozess-Symbol."
+
+#. SysConfig
+msgid "Process Ticket Category: Define a process link target."
+msgstr "Ticketprozess-Kategorie: Definieren Sie ein Prozessverknüpfungsziel."
 

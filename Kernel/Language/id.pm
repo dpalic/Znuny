@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D/%M/%Y';
     $Self->{DateInputFormat}     = '%D/%M/%Y';
     $Self->{DateInputFormatLong} = '%D/%M/%Y - %T';
-    $Self->{Completeness}        = 0.595651468440694;
+    $Self->{Completeness}        = 0.593820769977354;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -2783,6 +2783,12 @@ bin/znuny.Daemon.pl status\').',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketProcess.tt
         'Create New Process Ticket' => 'Membuat proses tiket yang baru',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketProcessCategory.tt
+        'Process Ticket Category' => '',
+        'Categories' => '',
+        'Favourites' => '',
+        'No process found.' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketProcessSmall.tt
         'Enroll Ticket into a Process' => 'Daftarkan tiket ke sebuah proses',
@@ -8034,6 +8040,14 @@ bin/znuny.Daemon.pl status\').',
         'Defines the separator for export csv files.' => '',
         'Defines the quote for export csv files.' => '',
         'Define a process category.' => '',
+        'Frontend module registration (disable ticket processes screen if no process available) for Agent.' =>
+            '',
+        'Defines the LinkTarget for AgentTicketProcessCategory.' => '',
+        'Defines the LinkTarget for CustomerTicketProcessCategory.' => '',
+        'Define a process link target.' => '',
+        'Define a process icon.' => '',
+        'Defines which ContentTypes are permitted for the attachment preview.' =>
+            '',
 
         # XML Definition: scripts/database/initial_insert.xml
         'invalid-temporarily' => 'tidak valid sementara',
@@ -8537,6 +8551,8 @@ bin/znuny.Daemon.pl status\').',
         'No space left for the following files: %s' => '',
         'Available space %s of %s.' => '',
         'Upload information' => '',
+        'An unknown error occurred when preview the attachment. Please try again. If the error persists, please contact your system administrator.' =>
+            '',
         'An unknown error occurred when deleting the attachment. Please try again. If the error persists, please contact your system administrator.' =>
             '',
 
@@ -8671,6 +8687,7 @@ Helpdesk Team Anda
         'Arabic (Saudi Arabia)' => 'Arab (Saudi Arabia)',
         'Article Color' => '',
         'ArticleTree' => 'ArticleTree',
+        'AsPopup' => '',
         'Attachment Name' => 'Lampirkan nama',
         'Avatar' => '',
         'Based on global RichText setting' => 'Berdasarkan pengaturan global Rich Text ',
@@ -8769,6 +8786,7 @@ Helpdesk Team Anda
         'Create new email ticket.' => 'Membuat tiket email baru.',
         'Create new phone ticket (inbound).' => 'Membuat tiket ponsel baru (masuk).',
         'Create new phone ticket.' => 'Membuat tiket ponsel baru.',
+        'Create new process ticket via category.' => '',
         'Create new process ticket.' => 'Membuat tiket proses baru.',
         'Create tickets.' => 'Membuat tiket ',
         'Created ticket [%s] in "%s" with priority "%s" and state "%s".' =>
@@ -8908,6 +8926,7 @@ Helpdesk Team Anda
         'Hebrew' => 'Ibrani',
         'Hindi' => 'Hindi',
         'Hungarian' => 'Hongaria',
+        'Icon' => '',
         'If enabled the daemon will use this directory to create its PID files. Note: Please stop the daemon before any change and use this setting only if <$OTRSHome>/var/run/ can not be used.' =>
             '',
         'If enabled, the different overviews (Dashboard, LockedView, QueueView) will automatically refresh after the specified time.' =>
@@ -8956,6 +8975,7 @@ Helpdesk Team Anda
         'Link templates to attachments.' => '',
         'Link templates to queues.' => 'Link template untuk antrian.',
         'Link this ticket to other objects' => 'Hubungkan tiket ini dengan objek lain',
+        'LinkTarget' => '',
         'List view' => 'Daftar tampilan',
         'Lithuanian' => 'Lithuania',
         'Lock / unlock this ticket' => 'Mengunci / membuka tiket ini',
@@ -9071,6 +9091,11 @@ Helpdesk Team Anda
         'Process Management Path GUI' => 'Proses manajemen GUI',
         'Process Management Transition Action GUI' => 'Proses Manajemen aksi transisi GUI',
         'Process Management Transition GUI' => 'Proses manajemen transisi GUI',
+        'Process Ticket Catalog' => '',
+        'Process Ticket Catalog.' => '',
+        'Process Ticket Category: Define a process category.' => '',
+        'Process Ticket Category: Define a process icon.' => '',
+        'Process Ticket Category: Define a process link target.' => '',
         'Process Ticket.' => 'Proses tiket',
         'ProcessID' => 'ProcessID',
         'Processes & Automation' => '',
@@ -9241,7 +9266,6 @@ Helpdesk Team Anda
         'Ticket title' => 'Judul tiket',
         'Ticket zoom view.' => 'Pandangan dekat tiket',
         'TicketNumber' => 'Nomor tiket',
-        'TicketProcessCategory: Define a process category.' => '',
         'Tickets.' => 'Tiket',
         'To accept login information, such as an EULA or license.' => 'Untuk menerima masuk nya informasi, seperti EULA atau surat izin.',
         'To download attachments.' => 'Untuk unduh lampiran',
@@ -9344,6 +9368,7 @@ Helpdesk Team Anda
         'An item with this name is already present.',
         'An unconnected transition is already placed on the canvas. Please connect this transition first before placing another transition.',
         'An unknown error occurred when deleting the attachment. Please try again. If the error persists, please contact your system administrator.',
+        'An unknown error occurred when preview the attachment. Please try again. If the error persists, please contact your system administrator.',
         'An unknown error occurred. Please contact the administrator.',
         'Apply',
         'Appointment',
@@ -9450,6 +9475,7 @@ Helpdesk Team Anda
         'Error: Browser Check failed!',
         'Event Type Filter',
         'Expanded',
+        'Favourites',
         'Feb',
         'February',
         'Filters',
@@ -9539,6 +9565,7 @@ Helpdesk Team Anda
         'Please wait...',
         'Preparing to deploy, please wait...',
         'Press Ctrl+C (Cmd+C) to copy to clipboard',
+        'Preview',
         'Previous',
         'Process state',
         'Queues',

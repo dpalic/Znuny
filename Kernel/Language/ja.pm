@@ -30,7 +30,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y/%M/%D';
     $Self->{DateInputFormat}     = '%Y/%M/%D';
     $Self->{DateInputFormatLong} = '%Y/%M/%D - %T';
-    $Self->{Completeness}        = 0.672562063929904;
+    $Self->{Completeness}        = 0.670494985441605;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2787,6 +2787,12 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketProcess.tt
         'Create New Process Ticket' => '新しいプロセスチケットを作成',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketProcessCategory.tt
+        'Process Ticket Category' => '',
+        'Categories' => '',
+        'Favourites' => '',
+        'No process found.' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketProcessSmall.tt
         'Enroll Ticket into a Process' => 'チケットをプロセスに登録する',
@@ -8047,6 +8053,14 @@ Contentはダイナミック・フィールドの形式によって設定内容�
         'Defines the separator for export csv files.' => '',
         'Defines the quote for export csv files.' => '',
         'Define a process category.' => '',
+        'Frontend module registration (disable ticket processes screen if no process available) for Agent.' =>
+            '',
+        'Defines the LinkTarget for AgentTicketProcessCategory.' => '',
+        'Defines the LinkTarget for CustomerTicketProcessCategory.' => '',
+        'Define a process link target.' => '',
+        'Define a process icon.' => '',
+        'Defines which ContentTypes are permitted for the attachment preview.' =>
+            '',
 
         # XML Definition: scripts/database/initial_insert.xml
         'invalid-temporarily' => '無効-暫定',
@@ -8550,6 +8564,8 @@ Contentはダイナミック・フィールドの形式によって設定内容�
         'No space left for the following files: %s' => '',
         'Available space %s of %s.' => '',
         'Upload information' => '',
+        'An unknown error occurred when preview the attachment. Please try again. If the error persists, please contact your system administrator.' =>
+            '',
         'An unknown error occurred when deleting the attachment. Please try again. If the error persists, please contact your system administrator.' =>
             '',
 
@@ -8682,6 +8698,7 @@ Thanks for your help!
         'Arabic (Saudi Arabia)' => '',
         'Article Color' => '',
         'ArticleTree' => '',
+        'AsPopup' => '',
         'Attachment Name' => '添付ファイル名',
         'Avatar' => 'アバター',
         'Based on global RichText setting' => '',
@@ -8780,6 +8797,7 @@ Thanks for your help!
         'Create new email ticket.' => '新規電子メールチケットの作成',
         'Create new phone ticket (inbound).' => '新規電話チケット(着信)の作成',
         'Create new phone ticket.' => '新規電話チケットの作成',
+        'Create new process ticket via category.' => '',
         'Create new process ticket.' => 'プロセスチケットを作成',
         'Create tickets.' => 'チケットの作成',
         'Created ticket [%s] in "%s" with priority "%s" and state "%s".' =>
@@ -8919,6 +8937,7 @@ Thanks for your help!
         'Hebrew' => 'ヘブライ語',
         'Hindi' => 'ヒンディー語',
         'Hungarian' => 'ハンガリー語',
+        'Icon' => '',
         'If enabled the daemon will use this directory to create its PID files. Note: Please stop the daemon before any change and use this setting only if <$OTRSHome>/var/run/ can not be used.' =>
             '',
         'If enabled, the different overviews (Dashboard, LockedView, QueueView) will automatically refresh after the specified time.' =>
@@ -8967,6 +8986,7 @@ Thanks for your help!
         'Link templates to attachments.' => '',
         'Link templates to queues.' => 'テンプレートをキューへ連結',
         'Link this ticket to other objects' => 'このチケットを他のオブジェクトへリンク',
+        'LinkTarget' => '',
         'List view' => 'リストビュー',
         'Lithuanian' => 'リトアニア語',
         'Lock / unlock this ticket' => 'このチケットをロック/アンロックします',
@@ -9083,6 +9103,11 @@ Thanks for your help!
         'Process Management Path GUI' => 'プロセス管理パスGUI',
         'Process Management Transition Action GUI' => 'プロセス管理遷移動作GUI',
         'Process Management Transition GUI' => 'プロセス管理遷移GUI',
+        'Process Ticket Catalog' => '',
+        'Process Ticket Catalog.' => '',
+        'Process Ticket Category: Define a process category.' => '',
+        'Process Ticket Category: Define a process icon.' => '',
+        'Process Ticket Category: Define a process link target.' => '',
         'Process Ticket.' => 'プロセスチケット',
         'ProcessID' => 'プロセスID',
         'Processes & Automation' => 'プロセス & 自動化',
@@ -9253,7 +9278,6 @@ Thanks for your help!
         'Ticket title' => 'チケットタイトル',
         'Ticket zoom view.' => 'チケット・ズーム・ビュー',
         'TicketNumber' => 'チケット番号',
-        'TicketProcessCategory: Define a process category.' => '',
         'Tickets.' => 'チケット',
         'To accept login information, such as an EULA or license.' => '',
         'To download attachments.' => '添付ファイルをダウンロード',
@@ -9356,6 +9380,7 @@ Thanks for your help!
         'An item with this name is already present.',
         'An unconnected transition is already placed on the canvas. Please connect this transition first before placing another transition.',
         'An unknown error occurred when deleting the attachment. Please try again. If the error persists, please contact your system administrator.',
+        'An unknown error occurred when preview the attachment. Please try again. If the error persists, please contact your system administrator.',
         'An unknown error occurred. Please contact the administrator.',
         'Apply',
         'Appointment',
@@ -9462,6 +9487,7 @@ Thanks for your help!
         'Error: Browser Check failed!',
         'Event Type Filter',
         'Expanded',
+        'Favourites',
         'Feb',
         'February',
         'Filters',
@@ -9551,6 +9577,7 @@ Thanks for your help!
         'Please wait...',
         'Preparing to deploy, please wait...',
         'Press Ctrl+C (Cmd+C) to copy to clipboard',
+        'Preview',
         'Previous',
         'Process state',
         'Queues',

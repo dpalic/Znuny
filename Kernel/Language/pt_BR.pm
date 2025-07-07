@@ -30,7 +30,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D/%M/%Y';
     $Self->{DateInputFormat}     = '%D/%M/%Y';
     $Self->{DateInputFormatLong} = '%D/%M/%Y - %T';
-    $Self->{Completeness}        = 0.847314619503489;
+    $Self->{Completeness}        = 0.844710449692656;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2785,6 +2785,12 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketProcess.tt
         'Create New Process Ticket' => 'Criar Novo Chamado de Processo',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketProcessCategory.tt
+        'Process Ticket Category' => '',
+        'Categories' => '',
+        'Favourites' => '',
+        'No process found.' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketProcessSmall.tt
         'Enroll Ticket into a Process' => 'Registrar chamado em um Processo',
@@ -8035,6 +8041,14 @@ sub Data {
         'Defines the separator for export csv files.' => '',
         'Defines the quote for export csv files.' => '',
         'Define a process category.' => '',
+        'Frontend module registration (disable ticket processes screen if no process available) for Agent.' =>
+            '',
+        'Defines the LinkTarget for AgentTicketProcessCategory.' => '',
+        'Defines the LinkTarget for CustomerTicketProcessCategory.' => '',
+        'Define a process link target.' => '',
+        'Define a process icon.' => '',
+        'Defines which ContentTypes are permitted for the attachment preview.' =>
+            '',
 
         # XML Definition: scripts/database/initial_insert.xml
         'invalid-temporarily' => 'inválido-temporariamente',
@@ -8538,6 +8552,8 @@ sub Data {
         'No space left for the following files: %s' => 'Não sobrou espaço para os seguintes arquivos: %s',
         'Available space %s of %s.' => 'Espaço disponível %s de %s.',
         'Upload information' => 'Atualizar informação',
+        'An unknown error occurred when preview the attachment. Please try again. If the error persists, please contact your system administrator.' =>
+            '',
         'An unknown error occurred when deleting the attachment. Please try again. If the error persists, please contact your system administrator.' =>
             'Um erro desconhecido ocorreu ao excluir o anexo. Por favor, tente novamente. Se o erro persistir, favor contatar seu administrador do sistema.',
 
@@ -8672,6 +8688,7 @@ Obrigado pela ajuda!
         'Arabic (Saudi Arabia)' => 'Arábico (Arábia Saudita)',
         'Article Color' => '',
         'ArticleTree' => 'Árvore de Artigo',
+        'AsPopup' => '',
         'Attachment Name' => 'Nome do Anexo',
         'Avatar' => 'Avatar',
         'Based on global RichText setting' => 'Baseado na configuração global RichText',
@@ -8770,6 +8787,7 @@ Obrigado pela ajuda!
         'Create new email ticket.' => 'Criar novo ticket de e-mail.',
         'Create new phone ticket (inbound).' => 'Criar um novo ticket de telefonema (recebido).',
         'Create new phone ticket.' => 'Criar novo ticket de telefone.',
+        'Create new process ticket via category.' => '',
         'Create new process ticket.' => 'Criar novo ticket de processo.',
         'Create tickets.' => 'Criar tickets.',
         'Created ticket [%s] in "%s" with priority "%s" and state "%s".' =>
@@ -8909,6 +8927,7 @@ Obrigado pela ajuda!
         'Hebrew' => 'Hebreu',
         'Hindi' => 'Hindu',
         'Hungarian' => 'Húngaro',
+        'Icon' => '',
         'If enabled the daemon will use this directory to create its PID files. Note: Please stop the daemon before any change and use this setting only if <$OTRSHome>/var/run/ can not be used.' =>
             'Se ativado, o daemon irá utilizar este diretório para criar seus arquivos PID. Observação: Favor parar o daemon antes de realizar qualquer mudança e utilize esta definição apenas se não for possível utilizar <$OTRSHome>/var/run/.',
         'If enabled, the different overviews (Dashboard, LockedView, QueueView) will automatically refresh after the specified time.' =>
@@ -8957,6 +8976,7 @@ Obrigado pela ajuda!
         'Link templates to attachments.' => 'Associa modelos com anexos.',
         'Link templates to queues.' => 'Associar modelos a filas.',
         'Link this ticket to other objects' => 'Vincular este chamado a outros objetos',
+        'LinkTarget' => '',
         'List view' => 'Visão de lista',
         'Lithuanian' => 'Lituano',
         'Lock / unlock this ticket' => 'Bloquear / desbloquear este chamado',
@@ -9072,6 +9092,11 @@ Obrigado pela ajuda!
         'Process Management Path GUI' => 'Interface de Gerenciamento de Caminho de Processo',
         'Process Management Transition Action GUI' => 'Interface de Gerenciamento de Atividade de Transição de Processo',
         'Process Management Transition GUI' => 'Interface de Gerenciamento de Transição de Processo',
+        'Process Ticket Catalog' => '',
+        'Process Ticket Catalog.' => '',
+        'Process Ticket Category: Define a process category.' => '',
+        'Process Ticket Category: Define a process icon.' => '',
+        'Process Ticket Category: Define a process link target.' => '',
         'Process Ticket.' => '',
         'ProcessID' => 'ID de Processo',
         'Processes & Automation' => 'Processos e Automação',
@@ -9242,7 +9267,6 @@ Obrigado pela ajuda!
         'Ticket title' => 'Título do chamado.',
         'Ticket zoom view.' => 'Detalhes do chamado.',
         'TicketNumber' => 'Número Chamado',
-        'TicketProcessCategory: Define a process category.' => '',
         'Tickets.' => 'Chamados.',
         'To accept login information, such as an EULA or license.' => 'Aceitar informações de login, como um EULA ou licença.',
         'To download attachments.' => 'Para baixar anexos.',
@@ -9345,6 +9369,7 @@ Obrigado pela ajuda!
         'An item with this name is already present.',
         'An unconnected transition is already placed on the canvas. Please connect this transition first before placing another transition.',
         'An unknown error occurred when deleting the attachment. Please try again. If the error persists, please contact your system administrator.',
+        'An unknown error occurred when preview the attachment. Please try again. If the error persists, please contact your system administrator.',
         'An unknown error occurred. Please contact the administrator.',
         'Apply',
         'Appointment',
@@ -9451,6 +9476,7 @@ Obrigado pela ajuda!
         'Error: Browser Check failed!',
         'Event Type Filter',
         'Expanded',
+        'Favourites',
         'Feb',
         'February',
         'Filters',
@@ -9540,6 +9566,7 @@ Obrigado pela ajuda!
         'Please wait...',
         'Preparing to deploy, please wait...',
         'Press Ctrl+C (Cmd+C) to copy to clipboard',
+        'Preview',
         'Previous',
         'Process state',
         'Queues',

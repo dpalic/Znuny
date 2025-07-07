@@ -1,4 +1,5 @@
 # 7.2.1 2025-??-??
+ - 2025-07-07 Added new views ProcessShop (AgentTicketProcessCategory/CustomerTicketProcessCategory) - The possible processes are arranged in tiles and divided by categories. Category, LinkTarget and Icon can now be defined per process.
  - 2025-07-04 Upgraded CKEditor to version 5.0.
  - 2025-07-02 Added support for setting customer user preferences via AJAX request.
  - 2025-07-02 Fixed: CustomerProcessTicket is not fully styled.

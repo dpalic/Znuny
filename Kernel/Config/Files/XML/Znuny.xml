@@ -4090,7 +4090,7 @@
             <Hash>
                 <Item Key="Module">Kernel::Output::HTML::ProcessPreferences::Generic</Item>
                 <Item Key="Label" Translatable="1">Category</Item>
-                <Item Key="Desc" Translatable="1">TicketProcessCategory: Define a process category.</Item>
+                <Item Key="Desc" Translatable="1">Process Ticket Category: Define a process category.</Item>
                 <Item Key="PrefKey">Category</Item>
                 <Item Key="ClusterName" Translatable="1">Category</Item>
                 <Item Key="ClusterPriority">1</Item>
@@ -4111,4 +4111,300 @@
             </Hash>
         </Value>
     </Setting>
+
+    <!-- TicketProcessCategory -->
+    <!-- AgentTicketProcessCategory -->
+    <Setting Name="Frontend::Module###AgentTicketProcessCategory" Required="0" Valid="0">
+        <Description Translatable="1">Frontend module registration for the agent interface.</Description>
+        <Navigation>Frontend::Agent::ModuleRegistration</Navigation>
+        <Value>
+            <Item ValueType="FrontendRegistration">
+                <Hash>
+                    <Item Key="Group">
+                        <Array>
+                        </Array>
+                    </Item>
+                    <Item Key="GroupRo">
+                        <Array>
+                        </Array>
+                    </Item>
+                    <Item Key="Description" Translatable="1">Process Ticket Catalog.</Item>
+                    <Item Key="NavBarName">Ticket</Item>
+                    <Item Key="Title" Translatable="1">Process Ticket Catalog</Item>
+                </Hash>
+            </Item>
+        </Value>
+    </Setting>
+    <Setting Name="Frontend::Navigation###AgentTicketProcessCategory###001-ProcessManagement" Required="0" Valid="0">
+        <Description Translatable="1">Main menu item registration.</Description>
+        <Navigation>Frontend::Agent::ModuleRegistration::MainMenu</Navigation>
+        <Value>
+            <Array>
+                <DefaultItem ValueType="FrontendNavigation">
+                    <Hash>
+                    </Hash>
+                </DefaultItem>
+                <Item>
+                    <Hash>
+                        <Item Key="Group">
+                            <Array>
+                            </Array>
+                        </Item>
+                        <Item Key="GroupRo">
+                            <Array>
+                            </Array>
+                        </Item>
+                        <Item Key="Description" Translatable="1">Create new process ticket via category.</Item>
+                        <Item Key="Name" Translatable="1">Process Ticket Category</Item>
+                        <Item Key="Link">Action=AgentTicketProcessCategory</Item>
+                        <Item Key="LinkOption"></Item>
+                        <Item Key="NavBar">Ticket</Item>
+                        <Item Key="Type"></Item>
+                        <Item Key="Block"></Item>
+                        <Item Key="AccessKey">p</Item>
+                        <Item Key="Prio">225</Item>
+                    </Hash>
+                </Item>
+            </Array>
+        </Value>
+    </Setting>
+    <Setting Name="Frontend::NavBarModule###000-AgentTicketProcessCategory" Required="0" Valid="0">
+        <Description Translatable="1">Frontend module registration (disable ticket processes screen if no process available) for Agent.</Description>
+        <Navigation>Frontend::Agent::ModuleRegistration</Navigation>
+        <Value>
+            <Hash>
+                <Item Key="Module">Kernel::Output::HTML::NavBar::AgentTicketProcessCategory</Item>
+            </Hash>
+        </Value>
+    </Setting>
+    <Setting Name="Loader::Module::AgentTicketProcessCategory###001-ProcessManagement" Required="0" Valid="1">
+        <Description Translatable="1">Loader module registration for the agent interface.</Description>
+        <Navigation>Frontend::Agent::ModuleRegistration::Loader</Navigation>
+        <Value>
+            <Hash>
+                <Item Key="CSS">
+                    <Array>
+                        <Item>Core.Agent.TicketProcessCategory.css</Item>
+                    </Array>
+                </Item>
+                <Item Key="JavaScript">
+                    <Array>
+                        <Item>Core.Agent.TicketProcessCategory.js</Item>
+                        <Item>Core.UI.Table.js</Item>
+                    </Array>
+                </Item>
+            </Hash>
+        </Value>
+    </Setting>
+    <Setting Name="Ticket::Frontend::AgentTicketProcessCategory###LinkTarget" Required="1" Valid="1">
+        <Description Translatable="1">Defines the LinkTarget for AgentTicketProcessCategory.</Description>
+        <Navigation>Frontend::Agent::View::TicketProcess</Navigation>
+        <Value>
+            <Item ValueType="Select" SelectedID="_blank">
+                <Item ValueType="Option" Value="AsPopup" Translatable="1">AsPopup</Item>
+                <Item ValueType="Option" Value="_blank">Blank</Item>
+                <Item ValueType="Option" Value="_self">Self</Item>
+                <!--
+                    Can be used, but make little sense at this point.
+                    There is no frame and therefore no difference to `self`.
+                <Item ValueType="Option" Value="_parent">Parent</Item>
+                <Item ValueType="Option" Value="_top">Top</Item>
+                -->
+            </Item>
+        </Value>
+    </Setting>
+
+    <!-- CustomerTicketProcessCategory -->
+    <Setting Name="CustomerFrontend::Module###CustomerTicketProcessCategory" Required="0" Valid="1">
+        <Description Translatable="1">Frontend module registration for the customer interface.</Description>
+        <Navigation>Frontend::Customer::ModuleRegistration</Navigation>
+        <Value>
+            <Item ValueType="FrontendRegistration">
+                <Hash>
+                    <Item Key="Group">
+                        <Array>
+                        </Array>
+                    </Item>
+                    <Item Key="GroupRo">
+                        <Array>
+                        </Array>
+                    </Item>
+                    <Item Key="Description" Translatable="1">Process Ticket Catalog.</Item>
+                    <Item Key="NavBarName">Ticket</Item>
+                    <Item Key="Title" Translatable="1">Process Ticket Catalog</Item>
+                </Hash>
+            </Item>
+        </Value>
+    </Setting>
+    <Setting Name="CustomerFrontend::Navigation###CustomerTicketProcessCategory###001-ProcessManagement" Required="0" Valid="1">
+        <Description Translatable="1">Main menu item registration.</Description>
+        <Navigation>Frontend::Customer::ModuleRegistration::MainMenu</Navigation>
+        <Value>
+            <Array>
+                <DefaultItem ValueType="FrontendNavigation">
+                    <Hash>
+                    </Hash>
+                </DefaultItem>
+                <Item>
+                    <Hash>
+                        <Item Key="Group">
+                            <Array>
+                            </Array>
+                        </Item>
+                        <Item Key="GroupRo">
+                            <Array>
+                            </Array>
+                        </Item>
+                        <Item Key="Description" Translatable="1">Create new process ticket via category.</Item>
+                        <Item Key="Name" Translatable="1">Process Ticket Category</Item>
+                        <Item Key="Link">Action=CustomerTicketProcessCategory</Item>
+                        <Item Key="LinkOption"></Item>
+                        <Item Key="NavBar">Ticket</Item>
+                        <Item Key="Type">Menu</Item>
+                        <Item Key="Block"></Item>
+                        <Item Key="AccessKey">t</Item>
+                        <Item Key="Prio">0011</Item>
+                    </Hash>
+                </Item>
+            </Array>
+        </Value>
+    </Setting>
+    <Setting Name="CustomerFrontend::NavBarModule###000-CustomerTicketProcessCategory" Required="0" Valid="1">
+        <Description Translatable="1">Frontend module registration (disable ticket processes screen if no process available) for Customer.</Description>
+        <Navigation>Frontend::Customer::ModuleRegistration</Navigation>
+        <Value>
+            <Hash>
+                <Item Key="Module">Kernel::Output::HTML::NavBar::CustomerTicketProcessCategory</Item>
+            </Hash>
+        </Value>
+    </Setting>
+    <Setting Name="Loader::Module::CustomerTicketProcessCategory###001-ProcessManagement" Required="0" Valid="1">
+        <Description Translatable="1">Loader module registration for the customer interface.</Description>
+        <Navigation>Frontend::Customer::ModuleRegistration::Loader</Navigation>
+        <Value>
+            <Hash>
+                <Item Key="CSS">
+                    <Array>
+                        <Item>Core.Customer.TicketProcessCategory.css</Item>
+                    </Array>
+                </Item>
+                <Item Key="JavaScript">
+                    <Array>
+                        <Item>Core.Customer.TicketProcessCategory.js</Item>
+                        <Item>Core.UI.Table.js</Item>
+                    </Array>
+                </Item>
+            </Hash>
+        </Value>
+    </Setting>
+    <Setting Name="Ticket::Frontend::CustomerTicketProcessCategory###LinkTarget" Required="1" Valid="1">
+        <Description Translatable="1">Defines the LinkTarget for CustomerTicketProcessCategory.</Description>
+        <Navigation>Frontend::Customer::View::TicketProcess</Navigation>
+        <Value>
+            <Item ValueType="Select" SelectedID="_blank">
+                <Item ValueType="Option" Value="AsPopup" Translatable="1">AsPopup</Item>
+                <Item ValueType="Option" Value="_blank">Blank</Item>
+                <Item ValueType="Option" Value="_self">Self</Item>
+                <!--
+                    Can be used, but make little sense at this point.
+                    There is no frame and therefore no difference to `self`.
+                <Item ValueType="Option" Value="_parent">Parent</Item>
+                <Item ValueType="Option" Value="_top">Top</Item>
+                -->
+            </Item>
+        </Value>
+    </Setting>
+
+    <!-- TicketProcessCategory - ProcessPreferences -->
+    <Setting Name="ProcessPreferences###001-TicketProcessCategory-Category" Required="0" Valid="1">
+        <Description Translatable="1">Define a process category.</Description>
+        <Navigation>Core::ProcessManagement</Navigation>
+        <Value>
+            <Hash>
+                <Item Key="Module">Kernel::Output::HTML::ProcessPreferences::Generic</Item>
+                <Item Key="Label" Translatable="1">Category</Item>
+                <Item Key="Desc" Translatable="1">Process Ticket Category: Define a process category.</Item>
+                <Item Key="PrefKey">Category</Item>
+                <Item Key="ClusterName" Translatable="1">Category</Item>
+                <Item Key="ClusterPriority">1</Item>
+                <Item Key="Block">Option</Item>
+                <Item Key="TreeView">1</Item>
+                <Item Key="Multiple">1</Item>
+                <Item Key="PossibleNone">1</Item>
+                <Item Key="Data">
+                    <Hash>
+                        <Item Key="Category 1">Category 1</Item>
+                        <Item Key="Category 2">Category 2</Item>
+                        <Item Key="Category 3">Category 2::SecondCategory1</Item>
+                        <Item Key="Category 4">Category 2::SecondCategory1::ThirdCategory1</Item>
+                        <Item Key="Category 5">Category 2::SecondCategory2</Item>
+                        <Item Key="Category 6">Category 2::SecondCategory2::ThirdCategory2</Item>
+                    </Hash>
+                </Item>
+            </Hash>
+        </Value>
+    </Setting>
+    <!-- Optional - see Ticket::Frontend::CustomerTicketProcessCategory###LinkTarget -->
+    <Setting Name="ProcessPreferences###002-TicketProcessCategory-LinkTarget" Required="0" Valid="1">
+        <Description Translatable="1">Define a process link target.</Description>
+        <Navigation>Core::ProcessManagement</Navigation>
+        <Value>
+            <Hash>
+                <Item Key="Module">Kernel::Output::HTML::ProcessPreferences::Generic</Item>
+                <Item Key="Label" Translatable="1">LinkTarget</Item>
+                <Item Key="Desc" Translatable="1">Process Ticket Category: Define a process link target.</Item>
+                <Item Key="PrefKey" ValueRegex="^(?!.*\b(?:Activities|ChangeTime|Config|CreateTime|EntityID|ID|Layout|Name|State|StateEntityID|TransitionActions|Transitions(?!\w))\b).*">LinkTarget</Item>
+                <Item Key="ClusterName" Translatable="1">Category</Item>
+                <Item Key="ClusterPriority">2</Item>
+                <Item Key="Block">Option</Item>
+                <Item Key="Data">
+                    <Hash>
+                        <Item Key="AsPopup">AsPopup</Item>
+                        <Item Key="_blank">Blank</Item>
+                        <Item Key="_self">Self</Item>
+                    </Hash>
+                </Item>
+                <Item Key="SelectedID">_blank</Item>
+            </Hash>
+        </Value>
+    </Setting>
+    <Setting Name="ProcessPreferences###003-TicketProcessCategory-Icon" Required="0" Valid="1">
+        <Description Translatable="1">Define a process icon.</Description>
+        <Navigation>Core::ProcessManagement</Navigation>
+        <Value>
+            <Hash>
+                <Item Key="Module">Kernel::Output::HTML::ProcessPreferences::Generic</Item>
+                <Item Key="Label" Translatable="1">Icon</Item>
+                <Item Key="Desc" Translatable="1">Process Ticket Category: Define a process icon.</Item>
+                <Item Key="PrefKey" ValueRegex="^(?!.*\b(?:Activities|ChangeTime|Config|CreateTime|EntityID|ID|Layout|Name|State|StateEntityID|TransitionActions|Transitions(?!\w))\b).*">Icon</Item>
+                <Item Key="ClusterName" Translatable="1">Category</Item>
+                <Item Key="ClusterPriority">3</Item>
+                <Item Key="Block">File</Item>
+                <Item Key="MaxFiles">1</Item>
+                <Item Key="FileTypes">png,jpg,jpeg,gif</Item>
+            </Hash>
+        </Value>
+    </Setting>
+
+    <!-- Attachment Settings -->
+    <Setting Name="Attachment###PreviewContentTypes" Required="1" Valid="1">
+        <Description Translatable="1">Defines which ContentTypes are permitted for the attachment preview.</Description>
+        <Navigation>Frontend::Base</Navigation>
+        <Value>
+            <Hash>
+                <Item Key="application/pdf">pdf</Item>
+                <Item Key="application/json">json</Item>
+                <Item Key="text/markdown">markdown</Item>
+                <Item Key="text/html">html</Item>
+                <Item Key="text/xml">xml</Item>
+                <Item Key="text/plain">plain</Item>
+                <Item Key="text/x-sh">sh</Item>
+                <Item Key="image/svg+xml">svg</Item>
+                <Item Key="image/png">png</Item>
+                <Item Key="image/jpeg">jpeg</Item>
+                <Item Key="image/gif">gif</Item>
+            </Hash>
+        </Value>
+    </Setting>
+
 </otrs_config>

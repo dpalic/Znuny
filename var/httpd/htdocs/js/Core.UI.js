@@ -839,20 +839,70 @@ Core.UI = (function (TargetNS) {
             }
         });
 
-        // Attachment deletion
-        $('.AttachmentList').off('click').on('click', '.AttachmentDelete', function() {
-
+        // Attachment Preview
+        $('.AttachmentPreview').off('click').on('click', function() {
             var $TriggerObj = $(this),
                 $AttachmentListContainerObj = $TriggerObj.closest('.AttachmentListContainer'),
                 $UploadFieldObj = $AttachmentListContainerObj.nextAll('.AjaxDnDUpload'),
                 FormID = $UploadFieldObj.data('form-id') ? $UploadFieldObj.data('form-id') : $(this).closest('form').find('input[name=FormID]').val(),
                 Data = {
-                    Action: $(this).data('delete-action') ? $(this).data('delete-action') : 'AJAXAttachment',
+                    Action:    $(this).data('preview-action') ? $(this).data('preview-action') : 'AJAXAttachment',
+                    Subaction: 'Preview',
+                    FileID:    $(this).data('file-id'),
+                    FormID:    FormID,
+                    ObjectID:  $(this).data('object-id'),
+                    FieldID:   $(this).data('field-id')
+                };
+
+            $TriggerObj.closest('.AttachmentListContainer').find('.Busy').fadeIn();
+
+            Core.AJAX.FunctionCall(Core.Config.Get('CGIHandle'), Data, function (Response) {
+                var HTML;
+
+                $AttachmentListContainerObj.find('.Busy').fadeOut();
+
+                if (Response && Response.Message && Response.Message == 'Success') {
+                    HTML = Core.Template.Render('Attachment/Preview/' + Response.Attachment.Template, Response);
+
+                    Core.UI.Dialog.ShowDialog({
+                        Title:               Core.Language.Translate("Preview"),
+                        HTML:                HTML,
+                        Modal:               true,
+                        CloseOnClickOutside: true,
+                        CloseOnEscape:       true,
+                        AllowAutoGrow:       true,
+                        PositionTop:         '5%',
+                        PositionLeft:        'Center',
+                        ModalClass:          'modal-xl',
+                        Buttons:             []
+                    });
+
+                }
+                else {
+                    Core.UI.Dialog.ShowAlert(
+                        Core.Language.Translate('An Error Occurred'),
+                        Core.Language.Translate('An unknown error occurred when preview the attachment. Please try again. If the error persists, please contact your system administrator.')
+                    );
+                    $AttachmentListContainerObj.find('.Busy').hide();
+                }
+            });
+
+            return false;
+        });
+
+        // Attachment deletion
+        $('.AttachmentList').off('click').on('click', '.AttachmentDelete', function() {
+            var $TriggerObj = $(this),
+                $AttachmentListContainerObj = $TriggerObj.closest('.AttachmentListContainer'),
+                $UploadFieldObj = $AttachmentListContainerObj.nextAll('.AjaxDnDUpload'),
+                FormID = $UploadFieldObj.data('form-id') ? $UploadFieldObj.data('form-id') : $(this).closest('form').find('input[name=FormID]').val(),
+                Data = {
+                    Action:    $(this).data('delete-action') ? $(this).data('delete-action') : 'AJAXAttachment',
                     Subaction: 'Delete',
-                    FileID: $(this).data('file-id'),
-                    FormID: FormID,
-                    ObjectID: $(this).data('object-id'),
-                    FieldID: $(this).data('field-id'),
+                    FileID:    $(this).data('file-id'),
+                    FormID:    FormID,
+                    ObjectID:  $(this).data('object-id'),
+                    FieldID:   $(this).data('field-id')
                 };
 
             $TriggerObj.closest('.AttachmentListContainer').find('.Busy').fadeIn();

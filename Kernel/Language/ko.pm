@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%M-%D';
     $Self->{DateInputFormat}     = '%Y-%M-%D';
     $Self->{DateInputFormatLong} = '%Y-%M-%D %T';
-    $Self->{Completeness}        = 0.85364270647412;
+    $Self->{Completeness}        = 0.851019087673892;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -2781,6 +2781,12 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketProcess.tt
         'Create New Process Ticket' => '새 프로세스 티켓 만들기',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketProcessCategory.tt
+        'Process Ticket Category' => '',
+        'Categories' => '',
+        'Favourites' => '',
+        'No process found.' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketProcessSmall.tt
         'Enroll Ticket into a Process' => '티켓을 프로세스에 등록',
@@ -8031,6 +8037,14 @@ sub Data {
         'Defines the separator for export csv files.' => '',
         'Defines the quote for export csv files.' => '',
         'Define a process category.' => '',
+        'Frontend module registration (disable ticket processes screen if no process available) for Agent.' =>
+            '',
+        'Defines the LinkTarget for AgentTicketProcessCategory.' => '',
+        'Defines the LinkTarget for CustomerTicketProcessCategory.' => '',
+        'Define a process link target.' => '',
+        'Define a process icon.' => '',
+        'Defines which ContentTypes are permitted for the attachment preview.' =>
+            '',
 
         # XML Definition: scripts/database/initial_insert.xml
         'invalid-temporarily' => '유효하지 않은 일시적',
@@ -8534,6 +8548,8 @@ sub Data {
         'No space left for the following files: %s' => '다음 파일에 공간이 없습니다 : %s',
         'Available space %s of %s.' => '사용 가능한 공간 %s / %s',
         'Upload information' => '정보 업로드',
+        'An unknown error occurred when preview the attachment. Please try again. If the error persists, please contact your system administrator.' =>
+            '',
         'An unknown error occurred when deleting the attachment. Please try again. If the error persists, please contact your system administrator.' =>
             '첨부파일을 삭제할 때 알 수없는 오류가 발생했습니다. 다시 시도하십시오. 오류가 계속되면 시스템 관리자에게 문의하십시오.',
 
@@ -8668,6 +8684,7 @@ Thanks for your help!
         'Arabic (Saudi Arabia)' => '아랍어 (사우디 아라비아)',
         'Article Color' => '',
         'ArticleTree' => 'ArticleTree',
+        'AsPopup' => '',
         'Attachment Name' => '첨부명',
         'Avatar' => '화신',
         'Based on global RichText setting' => '전역 서식있는 텍스트 설정에 기반',
@@ -8766,6 +8783,7 @@ Thanks for your help!
         'Create new email ticket.' => '새 이메일 티켓을 만드십시오.',
         'Create new phone ticket (inbound).' => '새 전화 티켓 (인바운드)을 만듭니다.',
         'Create new phone ticket.' => '새 전화 티켓을 만듭니다.',
+        'Create new process ticket via category.' => '',
         'Create new process ticket.' => '새 프로세스 티켓을 작성 하십시오.',
         'Create tickets.' => '티켓을 만드십시오.',
         'Created ticket [%s] in "%s" with priority "%s" and state "%s".' =>
@@ -8905,6 +8923,7 @@ Thanks for your help!
         'Hebrew' => '헤브라이 사람',
         'Hindi' => '힌디 어',
         'Hungarian' => '헝가리 인',
+        'Icon' => '',
         'If enabled the daemon will use this directory to create its PID files. Note: Please stop the daemon before any change and use this setting only if <$OTRSHome>/var/run/ can not be used.' =>
             '이 설정을 사용하면 데몬은이 디렉토리를 사용하여 PID 파일을 만듭니다. 참고 : 변경하기 전에 데몬을 중지하고 <$ OTRSHome> / var / run /을 사용할 수없는 경우에만이 설정을 사용하십시오.',
         'If enabled, the different overviews (Dashboard, LockedView, QueueView) will automatically refresh after the specified time.' =>
@@ -8953,6 +8972,7 @@ Thanks for your help!
         'Link templates to attachments.' => '',
         'Link templates to queues.' => '템플리트를 대기열에 링크하십시오.',
         'Link this ticket to other objects' => '이 티켓을 다른 객체에 연결하십시오.',
+        'LinkTarget' => '',
         'List view' => '목록보기',
         'Lithuanian' => '리투아니아 사람',
         'Lock / unlock this ticket' => '이 티켓 잠금 / 잠금 해제',
@@ -9068,6 +9088,11 @@ Thanks for your help!
         'Process Management Path GUI' => '프로세스 관리 경로 GUI',
         'Process Management Transition Action GUI' => '프로세스 관리 전환 액션 GUI',
         'Process Management Transition GUI' => '프로세스 관리 전환 GUI',
+        'Process Ticket Catalog' => '',
+        'Process Ticket Catalog.' => '',
+        'Process Ticket Category: Define a process category.' => '',
+        'Process Ticket Category: Define a process icon.' => '',
+        'Process Ticket Category: Define a process link target.' => '',
         'Process Ticket.' => '프로세스 티켓.',
         'ProcessID' => 'ProcessID',
         'Processes & Automation' => '프로세스 및 자동화',
@@ -9238,7 +9263,6 @@ Thanks for your help!
         'Ticket title' => '티켓 제목',
         'Ticket zoom view.' => '티켓 줌뷰',
         'TicketNumber' => '티켓번호',
-        'TicketProcessCategory: Define a process category.' => '',
         'Tickets.' => '티켓',
         'To accept login information, such as an EULA or license.' => 'EULA 또는 라이센스와 같은 로그인 정보를 수락합니다.',
         'To download attachments.' => '첨부 파일을 다운로드 하려면.',
@@ -9341,6 +9365,7 @@ Thanks for your help!
         'An item with this name is already present.',
         'An unconnected transition is already placed on the canvas. Please connect this transition first before placing another transition.',
         'An unknown error occurred when deleting the attachment. Please try again. If the error persists, please contact your system administrator.',
+        'An unknown error occurred when preview the attachment. Please try again. If the error persists, please contact your system administrator.',
         'An unknown error occurred. Please contact the administrator.',
         'Apply',
         'Appointment',
@@ -9447,6 +9472,7 @@ Thanks for your help!
         'Error: Browser Check failed!',
         'Event Type Filter',
         'Expanded',
+        'Favourites',
         'Feb',
         'February',
         'Filters',
@@ -9536,6 +9562,7 @@ Thanks for your help!
         'Please wait...',
         'Preparing to deploy, please wait...',
         'Press Ctrl+C (Cmd+C) to copy to clipboard',
+        'Preview',
         'Previous',
         'Process state',
         'Queues',

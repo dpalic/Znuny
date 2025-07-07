@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2025-07-04 07:49+0000\n"
+"POT-Creation-Date: 2025-07-07 09:36+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -8212,6 +8212,22 @@ msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketProcess.tt
 msgid "Create New Process Ticket"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketProcessCategory.tt
+msgid "Process Ticket Category"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketProcessCategory.tt
+msgid "Categories"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketProcessCategory.tt
+msgid "Favourites"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketProcessCategory.tt
+msgid "No process found."
 msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketProcessSmall.tt
@@ -20658,6 +20674,30 @@ msgstr ""
 msgid "Define a process category."
 msgstr ""
 
+#. XML Definition: Kernel/Config/Files/XML/Znuny.xml
+msgid "Frontend module registration (disable ticket processes screen if no process available) for Agent."
+msgstr ""
+
+#. XML Definition: Kernel/Config/Files/XML/Znuny.xml
+msgid "Defines the LinkTarget for AgentTicketProcessCategory."
+msgstr ""
+
+#. XML Definition: Kernel/Config/Files/XML/Znuny.xml
+msgid "Defines the LinkTarget for CustomerTicketProcessCategory."
+msgstr ""
+
+#. XML Definition: Kernel/Config/Files/XML/Znuny.xml
+msgid "Define a process link target."
+msgstr ""
+
+#. XML Definition: Kernel/Config/Files/XML/Znuny.xml
+msgid "Define a process icon."
+msgstr ""
+
+#. XML Definition: Kernel/Config/Files/XML/Znuny.xml
+msgid "Defines which ContentTypes are permitted for the attachment preview."
+msgstr ""
+
 #. XML Definition: scripts/database/initial_insert.xml
 msgid "invalid-temporarily"
 msgstr ""
@@ -21895,6 +21935,10 @@ msgid "Upload information"
 msgstr ""
 
 #. JS File: var/httpd/htdocs/js/Core.UI.js
+msgid "An unknown error occurred when preview the attachment. Please try again. If the error persists, please contact your system administrator."
+msgstr ""
+
+#. JS File: var/httpd/htdocs/js/Core.UI.js
 msgid "An unknown error occurred when deleting the attachment. Please try again. If the error persists, please contact your system administrator."
 msgstr ""
 
@@ -22282,6 +22326,10 @@ msgid "ArticleTree"
 msgstr ""
 
 #. SysConfig
+msgid "AsPopup"
+msgstr ""
+
+#. SysConfig
 msgid "Attachment Name"
 msgstr ""
 
@@ -22647,6 +22695,10 @@ msgstr ""
 
 #. SysConfig
 msgid "Create new phone ticket."
+msgstr ""
+
+#. SysConfig
+msgid "Create new process ticket via category."
 msgstr ""
 
 #. SysConfig
@@ -23162,6 +23214,10 @@ msgid "Hungarian"
 msgstr ""
 
 #. SysConfig
+msgid "Icon"
+msgstr ""
+
+#. SysConfig
 msgid "If enabled the daemon will use this directory to create its PID files. Note: Please stop the daemon before any change and use this setting only if <$OTRSHome>/var/run/ can not be used."
 msgstr ""
 
@@ -23335,6 +23391,10 @@ msgstr ""
 
 #. SysConfig
 msgid "Link this ticket to other objects"
+msgstr ""
+
+#. SysConfig
+msgid "LinkTarget"
 msgstr ""
 
 #. SysConfig
@@ -23791,6 +23851,26 @@ msgstr ""
 
 #. SysConfig
 msgid "Process Management Transition GUI"
+msgstr ""
+
+#. SysConfig
+msgid "Process Ticket Catalog"
+msgstr ""
+
+#. SysConfig
+msgid "Process Ticket Catalog."
+msgstr ""
+
+#. SysConfig
+msgid "Process Ticket Category: Define a process category."
+msgstr ""
+
+#. SysConfig
+msgid "Process Ticket Category: Define a process icon."
+msgstr ""
+
+#. SysConfig
+msgid "Process Ticket Category: Define a process link target."
 msgstr ""
 
 #. SysConfig
@@ -24419,10 +24499,6 @@ msgstr ""
 
 #. SysConfig
 msgid "TicketNumber"
-msgstr ""
-
-#. SysConfig
-msgid "TicketProcessCategory: Define a process category."
 msgstr ""
 
 #. SysConfig
