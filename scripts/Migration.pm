@@ -262,10 +262,6 @@ sub _TasksGet {
             Module  => 'scripts::Migration::Znuny::MigrateSysConfigSettings',
         },
         {
-            Message => 'Cleanup orphaned mentions',
-            Module  => 'scripts::Migration::Znuny::CleanupOrphanedMentions',
-        },
-        {
             Message => 'Migrate CKEditor from version 4 to 5',
             Module  => 'scripts::Migration::Znuny::MigrateCKEditorContent',
         },
