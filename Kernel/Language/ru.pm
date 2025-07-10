@@ -38,7 +38,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.855224846328049;
+    $Self->{Completeness}        = 0.854948253557568;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -7885,6 +7885,10 @@ sub Data {
             'Тип авторизации для модуля отсылки почтовых сообщений. Если \'OAuth2 ключ (token)\' был выбран, SendmailModule::OAuth2TokenConfigName также должен быть настроен.',
         'Name of the OAuth2 token configuration to use for sending mails if \'OAuth2 token\' was configured in SendmailModule::AuthenticationType.' =>
             'Имя конфигурации OAuth2 ключа (token) для использования при отсылке почтовых сообщений, если \'OAuth2 ключ (token)\' был выбран в SendmailModule::AuthenticationType.',
+        'Limits the amount of emails which are sent within one batch. Disable this setting to have no limit.' =>
+            '',
+        'Applies the limit defined in \'SendmailModule::RateLimit\' per sender address.' =>
+            '',
         'Hosts that need a separate info about authentication method and token (instead of both in one line). Most commonly needed for Office 365 and Outlook.' =>
             '',
         'This option enables a dropdown which will be displayed instead of the time unit input field.' =>

@@ -18,6 +18,7 @@
  - 2025-06-13 Renamed the perl module Kernel::Modules::AjaxAttachment to Kernel::Modules::AJAXAttachment to follow the coding standards for naming modules.
  - 2025-06-06 Fixed: Some HTTP headers have a semicolon at the end of the value. Thanks to Paweł Bogusławski (@pboguslawski) for reporting. [#653](https://github.com/znuny/Znuny/issues/653)
  - 2025-06-06 Fixed: TLD of email address in S/MIME certificates is limited in length to two to four characters. Thanks for reporting to @dsm-museum-it. [#674](https://github.com/znuny/Znuny/issues/674)
+ - 2025-06-05 Integrated package Znuny-SMTPRateLimit. Adds configuration options 'SendmailModule::RateLimit' and 'SendmailModule::RateLimitPerSenderAddress' to limit amount of sent emails per batch.
  - 2025-06-05 Fixed: Added missing required parameter UserType in Kernel::System::AuthSession->() to Perldoc. Added optional parameter SessionSource to Perldoc.
  - 2025-05-27 Added AgentTicketNoteToLinkedTicket to ACLKeysLevel3::Actions###100-Default.
  - 2025-05-26 Added missing ProcessManagement::TransitionAction::DefaultParameters for TicketCreate, TicketArticleCreate, and ArticleSend.
