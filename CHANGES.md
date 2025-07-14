@@ -1,5 +1,5 @@
 # 7.2.1 2025-??-??
- - 2025-07-14 Fixed: The ticket menu is not available if only one ticket with activated bulk function has been selected in the small mode of the ticket view. Thanks for reporting to @BuilderNSV. [#670](https://github.com/znuny/Znuny/issues/670)
+ - 2025-07-14 Fixed: The ticket menu is not available if only one ticket with activated bulk function has been selected in the small mode of the ticket view. Thanks for reporting to @BuilderNSV. [#687](https://github.com/znuny/Znuny/issues/687)
  - 2025-07-14 Fixed: Avatar area in agent preferences should disappear if no Avatar Engine is in use.
  - 2025-07-07 Added new views ProcessShop (AgentTicketProcessCategory/CustomerTicketProcessCategory) - The possible processes are arranged in tiles and divided by categories. Category, LinkTarget and Icon can now be defined per process.
  - 2025-07-04 Upgraded CKEditor to version 5.0.
