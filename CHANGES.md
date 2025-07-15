@@ -1,4 +1,5 @@
 # 7.2.1 2025-??-??
+ - 2025-07-14 Fixed: ACLs of ticket attribute relations could lead to empty selection fields. Thanks for reporting to @lis975. [#675](https://github.com/znuny/Znuny/issues/675)
  - 2025-07-14 Sector Nord AG: Allow table row highlighting for even rows in all DataTables. Thanks to Ziggy Trotter (@ZTrotter). [PR#683](https://github.com/znuny/Znuny/pull/683)
  - 2025-07-14 Fixed: The ticket menu is not available if only one ticket with activated bulk function has been selected in the small mode of the ticket view. Thanks for reporting to @BuilderNSV. [#687](https://github.com/znuny/Znuny/issues/687)
  - 2025-07-14 Fixed: Avatar area in agent preferences should disappear if no Avatar Engine is in use.
