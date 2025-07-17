@@ -6,6 +6,7 @@
  - 2025-07-14 Fixed: Avatar area in agent preferences should disappear if no Avatar Engine is in use.
  - 2025-07-07 Added new views ProcessShop (AgentTicketProcessCategory/CustomerTicketProcessCategory) - The possible processes are arranged in tiles and divided by categories. Category, LinkTarget and Icon can now be defined per process.
  - 2025-07-04 Upgraded CKEditor to version 5.0.
+ - 2025-07-03 Fixed: Admin interface of generic agent loses some of the submitted form data if any errors occur.
  - 2025-07-02 Added support for setting customer user preferences via AJAX request.
  - 2025-07-02 Fixed: CustomerProcessTicket is not fully styled.
  - 2025-06-30 Added support for process preferences.
