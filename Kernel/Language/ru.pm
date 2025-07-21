@@ -38,7 +38,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.854948253557568;
+    $Self->{Completeness}        = 0.855109961190168;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -7935,7 +7935,7 @@ sub Data {
         'Do not verify the signer\'s certificate of a signed message.' =>
             '',
         'Maximum length of displayed attachment filenames in the article preview of ticket zoom view.' =>
-            '',
+            'Максимальная длина имени вложения, отображаемая при просмотре заметки на странице просмотра заявки.',
         'General settings for autocompletion in rich text editor. By default "ItemTemplate" uses "li" html tag to show the option that is matching (list format). The value of the key is used to define html inside it.' =>
             '',
         'Rich text editor configuration for autocompletion module.' => '',
