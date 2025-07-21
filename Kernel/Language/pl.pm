@@ -30,7 +30,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%M-%D';
     $Self->{DateInputFormat}     = '%Y-%M-%D';
     $Self->{DateInputFormatLong} = '%Y-%M-%D - %T';
-    $Self->{Completeness}        = 0.647639068564036;
+    $Self->{Completeness}        = 0.647429679922405;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -7949,6 +7949,10 @@ sub Data {
         'Agent interface notification module to show the number of mentions.' =>
             'Moduł powiadomienia interfejsu agenta pokazujący ilość wzmianek.',
         'Module to grant access to the mentioned agents of a ticket.' => 'Moduł nadający uprawnienia do zgłoszenia dla wzmiankowanych agentów.',
+        'Defines the default ticket attribute for ticket sorting in the mention ticket view of the agent interface.' =>
+            '',
+        'Defines the default ticket order in the ticket mention view of the agent interface. Up: oldest on top. Down: latest on top.' =>
+            '',
         'Assignment between event and type.' => '',
         'Defines the link type for each activity.' => '',
         'List of colors in hexadecimal RGB which will be available for selection. Make sure the colors are dark enough so white text can be overlayed on them.' =>
