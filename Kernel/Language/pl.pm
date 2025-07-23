@@ -30,7 +30,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%M-%D';
     $Self->{DateInputFormat}     = '%Y-%M-%D';
     $Self->{DateInputFormatLong} = '%Y-%M-%D - %T';
-    $Self->{Completeness}        = 0.647429679922405;
+    $Self->{Completeness}        = 0.646280458286268;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -1019,13 +1019,24 @@ sub Data {
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminGenericInterfaceMappingXSLT.tt
         'General Shortcuts' => '',
         'MacOS Shortcuts' => 'Skróty MacOS',
-        'Comment code' => '',
-        'Uncomment code' => '',
+        'Move line up' => '',
+        'Move line down' => '',
+        'Copy line upwards' => '',
+        'Copy line downwards' => '',
+        'Insert blank line' => '',
+        'Select line' => '',
+        'Delete line' => '',
+        'Copy (clipboard)' => '',
+        'Cut (clipboard)' => '',
+        'Insert (clipboard)' => '',
+        'Undo' => '',
+        'Toggle line comment' => '',
+        'Toggle block comment' => '',
         'Auto format code' => '',
-        'Expand/Collapse code block' => 'Zwiń/Rozwiń blok kodu',
         'Find' => 'Znajdź',
         'Find next' => 'Znajdź następny',
         'Find previous' => 'Znajdź poprzedni',
+        'Expand/Collapse code block' => 'Zwiń/Rozwiń blok kodu',
         'Find and replace' => 'Znajdź i zamień',
         'Find and replace all' => 'Znajdź i zamień wszystko',
         'XSLT Mapping' => 'Mapowanie XSLT',

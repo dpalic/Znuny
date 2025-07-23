@@ -32,7 +32,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%M-%D';
     $Self->{DateInputFormat}     = '%Y-%M-%D';
     $Self->{DateInputFormatLong} = '%Y-%M-%D - %T';
-    $Self->{Completeness}        = 0.87827352085354;
+    $Self->{Completeness}        = 0.876391802485073;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -1020,13 +1020,24 @@ sub Data {
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminGenericInterfaceMappingXSLT.tt
         'General Shortcuts' => 'Általános gyorsbillentyűk',
         'MacOS Shortcuts' => 'MacOS gyorsbillentyűk',
-        'Comment code' => 'Kód megjegyzésbe tétele',
-        'Uncomment code' => 'Kód megjegyzés eltávolítása',
+        'Move line up' => '',
+        'Move line down' => '',
+        'Copy line upwards' => '',
+        'Copy line downwards' => '',
+        'Insert blank line' => '',
+        'Select line' => '',
+        'Delete line' => '',
+        'Copy (clipboard)' => '',
+        'Cut (clipboard)' => '',
+        'Insert (clipboard)' => '',
+        'Undo' => '',
+        'Toggle line comment' => '',
+        'Toggle block comment' => '',
         'Auto format code' => 'Kód automatikus formázása',
-        'Expand/Collapse code block' => 'Kódblokk kinyitása vagy összecsukása',
         'Find' => 'Keresés',
         'Find next' => 'Következő keresése',
         'Find previous' => 'Előző keresése',
+        'Expand/Collapse code block' => 'Kódblokk kinyitása vagy összecsukása',
         'Find and replace' => 'Keresés és csere',
         'Find and replace all' => 'Keresés és összes cseréje',
         'XSLT Mapping' => 'XSLT leképezés',

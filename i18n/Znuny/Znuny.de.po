@@ -24893,3 +24893,55 @@ msgstr ""
 msgid "Defines the default ticket order in the ticket mention view of the agent interface. Up: oldest on top. Down: latest on top."
 msgstr ""
 
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminGenericInterfaceMappingXSLT.tt
+msgid "Move line up"
+msgstr "Zeile nach oben verschieben"
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminGenericInterfaceMappingXSLT.tt
+msgid "Move line down"
+msgstr "Zeile nach unten verschieben"
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminGenericInterfaceMappingXSLT.tt
+msgid "Copy line upwards"
+msgstr "Zeile nach oben kopieren"
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminGenericInterfaceMappingXSLT.tt
+msgid "Copy line downwards"
+msgstr "Zeile nach unten kopieren"
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminGenericInterfaceMappingXSLT.tt
+msgid "Insert blank line"
+msgstr "Leere Zeile einfügen"
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminGenericInterfaceMappingXSLT.tt
+msgid "Select line"
+msgstr "Zeile auswählen"
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminGenericInterfaceMappingXSLT.tt
+msgid "Delete line"
+msgstr "Zeile löschen"
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminGenericInterfaceMappingXSLT.tt
+msgid "Copy (clipboard)"
+msgstr "Kopieren (Clipboard)"
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminGenericInterfaceMappingXSLT.tt
+msgid "Cut (clipboard)"
+msgstr "Ausschneiden (Clipboard)"
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminGenericInterfaceMappingXSLT.tt
+msgid "Insert (clipboard)"
+msgstr "Einfügen (Clipboard)"
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminGenericInterfaceMappingXSLT.tt
+msgid "Undo"
+msgstr "Rückgängig"
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminGenericInterfaceMappingXSLT.tt
+msgid "Toggle line comment"
+msgstr "Zeilenkommentar ein/aus"
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminGenericInterfaceMappingXSLT.tt
+msgid "Toggle block comment"
+msgstr "Blockkomentar ein/aus"
+

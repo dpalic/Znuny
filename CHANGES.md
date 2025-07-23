@@ -1,4 +1,5 @@
 # 7.2.1 2025-??-??
+ - 2025-07-23 Added CodeMirror 6 as editor for XSLT mappings in web service configurations.
  - 2025-07-21 Added missing SysConfig settings `SortBy::Default` and `Order::Default`.
  - 2025-07-18 Fixed: An archived ticket is not shown in mentions list (AgentTicketMentionView). Added Parameter 'ArchiveFlags' to TicketSearch. Thanks for reporting to @Fainsy. [#620](https://github.com/znuny/Znuny/issues/620)
  - 2025-07-17 Fixed: The “btn-cancel-ghost” class is duplicated for the button in the ‘Article filter’ dialogue box. Thanks for reporting to @BuilderNSV. [#614](https://github.com/znuny/Znuny/issues/614)

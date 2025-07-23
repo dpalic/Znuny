@@ -27,7 +27,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.993210475266731;
+    $Self->{Completeness}        = 0.993222527029208;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -1015,13 +1015,24 @@ sub Data {
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminGenericInterfaceMappingXSLT.tt
         'General Shortcuts' => 'Allgemeine Tastaturkürzel',
         'MacOS Shortcuts' => 'MacOS-Tastaturkürzel',
-        'Comment code' => 'Code kommentieren',
-        'Uncomment code' => 'Code nicht kommentieren',
+        'Move line up' => 'Zeile nach oben verschieben',
+        'Move line down' => 'Zeile nach unten verschieben',
+        'Copy line upwards' => 'Zeile nach oben kopieren',
+        'Copy line downwards' => 'Zeile nach unten kopieren',
+        'Insert blank line' => 'Leere Zeile einfügen',
+        'Select line' => 'Zeile auswählen',
+        'Delete line' => 'Zeile löschen',
+        'Copy (clipboard)' => 'Kopieren (Clipboard)',
+        'Cut (clipboard)' => 'Ausschneiden (Clipboard)',
+        'Insert (clipboard)' => 'Einfügen (Clipboard)',
+        'Undo' => 'Rückgängig',
+        'Toggle line comment' => 'Zeilenkommentar ein/aus',
+        'Toggle block comment' => 'Blockkomentar ein/aus',
         'Auto format code' => 'Code automatisch formatieren',
-        'Expand/Collapse code block' => 'Code-Block aus-/einklappen',
         'Find' => 'Suchen',
         'Find next' => 'Nächste suchen',
         'Find previous' => 'Vorherige suchen',
+        'Expand/Collapse code block' => 'Code-Block aus-/einklappen',
         'Find and replace' => 'Suchen und ersetzen',
         'Find and replace all' => 'Suchen und alle ersetzen',
         'XSLT Mapping' => 'XSLT-Mapping',

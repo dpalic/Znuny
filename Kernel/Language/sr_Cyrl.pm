@@ -27,7 +27,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.874878758486906;
+    $Self->{Completeness}        = 0.873003065999677;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -1015,13 +1015,24 @@ sub Data {
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminGenericInterfaceMappingXSLT.tt
         'General Shortcuts' => 'Опште пречице',
         'MacOS Shortcuts' => 'MacOS пречице',
-        'Comment code' => 'Додај коментар кода',
-        'Uncomment code' => 'Уклони коментар кода',
+        'Move line up' => '',
+        'Move line down' => '',
+        'Copy line upwards' => '',
+        'Copy line downwards' => '',
+        'Insert blank line' => '',
+        'Select line' => '',
+        'Delete line' => '',
+        'Copy (clipboard)' => '',
+        'Cut (clipboard)' => '',
+        'Insert (clipboard)' => '',
+        'Undo' => '',
+        'Toggle line comment' => '',
+        'Toggle block comment' => '',
         'Auto format code' => 'Форматирај код аутоматски',
-        'Expand/Collapse code block' => 'Прошири/смањи блок кода',
         'Find' => 'Пронађи',
         'Find next' => 'Пронађи следеће',
         'Find previous' => 'Пронађи претходно',
+        'Expand/Collapse code block' => 'Прошири/смањи блок кода',
         'Find and replace' => 'Пронађи и замени',
         'Find and replace all' => 'Пронађи и замени све',
         'XSLT Mapping' => 'XSLT мапирање',
