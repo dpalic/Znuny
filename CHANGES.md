@@ -1,4 +1,5 @@
 # 7.2.1 2025-??-??
+ - 2025-07-23 Fixed: Installer testing the database connection with wrong credentials. Thanks to Pedro Buffon for reporting the issue. [#695](https://github.com/znuny/Znuny/issues/695)
  - 2025-07-23 Added CodeMirror 6 as editor for XSLT mappings in web service configurations.
  - 2025-07-21 Fixed: Users mentioned in quoted text will not be notified again.
  - 2025-07-21 Added missing SysConfig settings `SortBy::Default` and `Order::Default`.
