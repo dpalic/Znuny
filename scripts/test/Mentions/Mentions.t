@@ -245,7 +245,7 @@ my $MentionsTriggerConfig         = $MentionsRichtTextEditorConfig->{Triggers};
 
 # Single user
 my $HTMLString = 'A single user is <a class="mention" data-mention="'
-    . 'some user'
+    . 'some user"'
     . ' mention-type="Users"'
     . " id=\"$UserLoginByUserID{ $UserIDs[0] }\""
     . '" href="https://example.org" target="_blank">'
@@ -469,11 +469,21 @@ $HTMLString .= 'And another group is <a class="mention"'
     . $GroupByGroupID{ $GroupIDs[1] }
     . '</a>mentioned.';
 
+$MentionedUserIDs = $MentionObject->GetMentionedUserIDsFromString(
+    HTMLString => $HTMLString,
+);
+
+@ExpectedMentionedUserIDs = ( $UserIDs[0], $UserIDs[1], );
+
+$Self->IsDeeply(
+    $MentionedUserIDs,
+    \@ExpectedMentionedUserIDs,
+    'GetMentionedUserIDsFromString() must return expected mentioned user IDs.',
+);
+
 $MentionsConfig->{BlockedGroups} = [];
 
 # Single user with quoted text that contains mentions which must be ignored.
-# The plain text string is also given to make it possible to reliably recognize
-# mentions in quoted text which should be ignored.
 $HTMLString = 'A single user is <a class="mention" href="https://example.org" target="_blank"'
     . ' mention-type="Users"'
     . ' id="'
@@ -512,26 +522,8 @@ $HTMLString .= "\n"
     . $GroupByGroupID{ $GroupIDs[1] }
     . '</a><br />';
 
-my $PlainTextString = "A single user is [1]$MentionsTriggerConfig->{User}$UserFullNames[0] mentioned.";
-$PlainTextString .= "
->Dear John,
->
-> [2]$MentionsTriggerConfig->{User}$UserFullNames[1]
->
-> [3]$MentionsTriggerConfig->{Group}$GroupByGroupID{ $GroupIDs[0] }
->
-> Mentions in text and quote.
->
-> Thank you for your request.
-";
-
-$PlainTextString .= "
-Another user is [4]$MentionsTriggerConfig->{User}$UserFullNames[4] mentioned.
-[5]$MentionsTriggerConfig->{Group}$GroupByGroupID{ $GroupIDs[1] }";
-
 $MentionedUserIDs = $MentionObject->GetMentionedUserIDsFromString(
-    HTMLString      => $HTMLString,
-    PlainTextString => $PlainTextString,
+    HTMLString => $HTMLString,
 );
 
 @ExpectedMentionedUserIDs = ( $UserIDs[0], $UserIDs[4], $UserIDs[5], $UserIDs[6], );
@@ -544,9 +536,8 @@ $Self->IsDeeply(
 
 # Also test for optional limit
 $MentionedUserIDs = $MentionObject->GetMentionedUserIDsFromString(
-    HTMLString      => $HTMLString,
-    PlainTextString => $PlainTextString,
-    Limit           => 2,                  # outside of quote: both mentioned users
+    HTMLString => $HTMLString,
+    Limit      => 2,             # outside of quote: both mentioned users
 );
 
 @ExpectedMentionedUserIDs = ( $UserIDs[0], $UserIDs[4], );
@@ -558,9 +549,8 @@ $Self->IsDeeply(
 );
 
 $MentionedUserIDs = $MentionObject->GetMentionedUserIDsFromString(
-    HTMLString      => $HTMLString,
-    PlainTextString => $PlainTextString,
-    Limit           => 3,                  # outside of quote: both mentioned users + one from second group
+    HTMLString => $HTMLString,
+    Limit      => 3,             # outside of quote: both mentioned users + one from second group
 );
 
 my $ExpectedNumberOfMentionedUserIDs = 3;
