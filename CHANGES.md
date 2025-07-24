@@ -1,9 +1,9 @@
 # 7.2.1 2025-??-??
+ - 2025-07-24 Fixed: An archived ticket is shown in mentions list (AgentTicketMentionView). Archived tickets should not be counted in the mention icon, nor be visible in AgentTicketMentionView. Thanks for reporting to @Fainsy. [#620](https://github.com/znuny/Znuny/issues/620)
  - 2025-07-23 Fixed: Installer testing the database connection with wrong credentials. Thanks to Pedro Buffon for reporting the issue. [#695](https://github.com/znuny/Znuny/issues/695)
  - 2025-07-23 Added CodeMirror 6 as editor for XSLT mappings in web service configurations.
  - 2025-07-21 Fixed: Users mentioned in quoted text will not be notified again.
  - 2025-07-21 Added missing SysConfig settings `SortBy::Default` and `Order::Default`.
- - 2025-07-18 Fixed: An archived ticket is not shown in mentions list (AgentTicketMentionView). Added Parameter 'ArchiveFlags' to TicketSearch. Thanks for reporting to @Fainsy. [#620](https://github.com/znuny/Znuny/issues/620)
  - 2025-07-17 Fixed: The “btn-cancel-ghost” class is duplicated for the button in the ‘Article filter’ dialogue box. Thanks for reporting to @BuilderNSV. [#614](https://github.com/znuny/Znuny/issues/614)
  - 2025-07-14 Fixed: ACLs of ticket attribute relations could lead to empty selection fields. Thanks for reporting to @lis975. [#675](https://github.com/znuny/Znuny/issues/675)
  - 2025-07-14 Sector Nord AG: Allow table row highlighting for even rows in all DataTables. Thanks to Ziggy Trotter (@ZTrotter). [PR#683](https://github.com/znuny/Znuny/pull/683)
