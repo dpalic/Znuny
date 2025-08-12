@@ -1,4 +1,5 @@
 # 7.2.1 2025-??-??
+ - 2025-08-12 Disabled CKEditor5 "FullPage" plugin due to causing problems with "empty" text.
  - 2025-08-11 Fixed: Popup profiles with percentage values for width and height not working correctly. Thanks for reporting to Tim Püttmanns (maxence). [#634](https://github.com/znuny/Znuny/issues/634)
  - 2025-08-11 Fixed: Changed "Blockquote" CKEditor feature toolbar icon to be rendered also when enhanced mode of editor is disabled.
  - 2025-08-11 Fixed: Date/time of state change in AgentTicketBulk will now only be checked if a (pending) state has been selected instead of logging an error. Also fixed similar check for "watch ticket" selection. Thanks for reporting to @BuilderNSV. [#685](https://github.com/znuny/Znuny/issues/685)
