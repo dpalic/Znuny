@@ -27,7 +27,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.993222527029208;
+    $Self->{Completeness}        = 0.993061158625141;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2795,7 +2795,7 @@ sub Data {
         'Create New Process Ticket' => 'Neues Prozess-Ticket',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketProcessCategory.tt
-        'Process Ticket Category' => 'Prozess Ticket Kategorie',
+        'Process Ticket Category' => 'Prozess-Ticket-Kategorie',
         'Categories' => 'Kategorien',
         'Favourites' => 'Favoriten',
         'No process found.' => 'Kein Prozess gefunden.',
@@ -8056,11 +8056,11 @@ sub Data {
             'Legt das Format der exportierten Dateien bei Verwendung der Verwaltungsoberfläche fest.',
         'Defines the separator for export csv files.' => 'Legt das Trennzeichen für csv-Exportdateien fest.',
         'Defines the quote for export csv files.' => 'Legt das Zitat für den Export von csv-Dateien fest.',
-        'Define a process category.' => 'Definiere eine Prozesskategorie.',
         'Frontend module registration (disable ticket processes screen if no process available) for Agent.' =>
             'Frontend-Modul-Registrierung (Ansicht für Ticketprozesse deaktivieren, wenn kein Prozess verfügbar ist) für Agent.',
         'Defines the LinkTarget for AgentTicketProcessCategory.' => 'Definiert das LinkTarget für AgentTicketProcessCategory.',
         'Defines the LinkTarget for CustomerTicketProcessCategory.' => 'Definiert das LinkTarget für CustomerTicketProcessCategory.',
+        'Define a process category.' => 'Definiere eine Prozesskategorie.',
         'Define a process link target.' => 'Definieren Sie ein Prozessverknüpfungsziel.',
         'Define a process icon.' => 'Definieren Sie ein Prozess-Symbol.',
         'Defines which ContentTypes are permitted for the attachment preview.' =>
@@ -9107,12 +9107,12 @@ Ihr Helpdesk-Team
         'Process Management Path GUI' => 'Prozess-Management-Pfad Benutzeroberfläche',
         'Process Management Transition Action GUI' => 'Prozess-Management Übergangs-Aktionen Benutzeroberfläche',
         'Process Management Transition GUI' => 'Prozess-Management-Übergangs Benutzeroberfläche',
-        'Process Ticket Catalog' => 'Prozess-Ticket-Katalog',
-        'Process Ticket Catalog.' => 'Prozess-Ticket-Katalog.',
+        'Process Ticket Category.' => 'Prozess-Ticket-Kategorie.',
         'Process Ticket Category: Define a process category.' => 'Ticketprozess-Kategorie: Definieren Sie eine Prozesskategorie.',
         'Process Ticket Category: Define a process icon.' => 'Ticketprozess-Kategorie: Definieren Sie ein Prozess-Symbol.',
         'Process Ticket Category: Define a process link target.' => 'Ticketprozess-Kategorie: Definieren Sie ein Prozessverknüpfungsziel.',
         'Process Ticket.' => 'Prozess-Ticket.',
+        'Process ticket category' => '',
         'ProcessID' => 'ProcessID',
         'Processes & Automation' => 'Prozesse & Automatisierung',
         'Provides a matrix overview of the tickets per state per queue' =>

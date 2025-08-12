@@ -8057,11 +8057,11 @@ Search_DynamicField_XTimeSlotStartMonth=01; Search_DynamicField_XTimeSlotStartDa
             '',
         'Defines the separator for export csv files.' => '',
         'Defines the quote for export csv files.' => '',
-        'Define a process category.' => '',
         'Frontend module registration (disable ticket processes screen if no process available) for Agent.' =>
             '',
         'Defines the LinkTarget for AgentTicketProcessCategory.' => '',
         'Defines the LinkTarget for CustomerTicketProcessCategory.' => '',
+        'Define a process category.' => '',
         'Define a process link target.' => '',
         'Define a process icon.' => '',
         'Defines which ContentTypes are permitted for the attachment preview.' =>
@@ -9110,12 +9110,12 @@ Kumpulan MejaBantuan Anda
         'Process Management Path GUI' => 'Laluan Pengurusan Proses GUI',
         'Process Management Transition Action GUI' => 'GUI Tindakan Peralihan Pengurusan Proses ',
         'Process Management Transition GUI' => 'GUI Peralihan Pengurusan Proses ',
-        'Process Ticket Catalog' => '',
-        'Process Ticket Catalog.' => '',
+        'Process Ticket Category.' => '',
         'Process Ticket Category: Define a process category.' => '',
         'Process Ticket Category: Define a process icon.' => '',
         'Process Ticket Category: Define a process link target.' => '',
         'Process Ticket.' => '',
+        'Process ticket category' => '',
         'ProcessID' => 'IDProses',
         'Processes & Automation' => '',
         'Provides a matrix overview of the tickets per state per queue' =>

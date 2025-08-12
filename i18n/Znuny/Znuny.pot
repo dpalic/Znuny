@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2025-07-23 13:45+0000\n"
+"POT-Creation-Date: 2025-08-12 08:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20731,10 +20731,6 @@ msgid "Defines the quote for export csv files."
 msgstr ""
 
 #. XML Definition: Kernel/Config/Files/XML/Znuny.xml
-msgid "Define a process category."
-msgstr ""
-
-#. XML Definition: Kernel/Config/Files/XML/Znuny.xml
 msgid "Frontend module registration (disable ticket processes screen if no process available) for Agent."
 msgstr ""
 
@@ -20744,6 +20740,10 @@ msgstr ""
 
 #. XML Definition: Kernel/Config/Files/XML/Znuny.xml
 msgid "Defines the LinkTarget for CustomerTicketProcessCategory."
+msgstr ""
+
+#. XML Definition: Kernel/Config/Files/XML/Znuny.xml
+msgid "Define a process category."
 msgstr ""
 
 #. XML Definition: Kernel/Config/Files/XML/Znuny.xml
@@ -23914,11 +23914,7 @@ msgid "Process Management Transition GUI"
 msgstr ""
 
 #. SysConfig
-msgid "Process Ticket Catalog"
-msgstr ""
-
-#. SysConfig
-msgid "Process Ticket Catalog."
+msgid "Process Ticket Category."
 msgstr ""
 
 #. SysConfig
@@ -23935,6 +23931,10 @@ msgstr ""
 
 #. SysConfig
 msgid "Process Ticket."
+msgstr ""
+
+#. SysConfig
+msgid "Process ticket category"
 msgstr ""
 
 #. SysConfig

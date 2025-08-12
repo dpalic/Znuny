@@ -8061,11 +8061,11 @@ sub Data {
             '',
         'Defines the separator for export csv files.' => '',
         'Defines the quote for export csv files.' => '',
-        'Define a process category.' => '',
         'Frontend module registration (disable ticket processes screen if no process available) for Agent.' =>
             '',
         'Defines the LinkTarget for AgentTicketProcessCategory.' => '',
         'Defines the LinkTarget for CustomerTicketProcessCategory.' => '',
+        'Define a process category.' => '',
         'Define a process link target.' => '',
         'Define a process icon.' => '',
         'Defines which ContentTypes are permitted for the attachment preview.' =>
@@ -9113,12 +9113,12 @@ Vaša tehnička podrška
         'Process Management Path GUI' => 'Grafički interfejs putanje u procesima',
         'Process Management Transition Action GUI' => 'Grafički interfejs tranzicione akcije u procesima',
         'Process Management Transition GUI' => 'Grafički interfejs tranzicije u procesima',
-        'Process Ticket Catalog' => '',
-        'Process Ticket Catalog.' => '',
+        'Process Ticket Category.' => '',
         'Process Ticket Category: Define a process category.' => '',
         'Process Ticket Category: Define a process icon.' => '',
         'Process Ticket Category: Define a process link target.' => '',
         'Process Ticket.' => 'Proces tiket.',
+        'Process ticket category' => '',
         'ProcessID' => 'ID procesa',
         'Processes & Automation' => 'Procesi & automatizacija',
         'Provides a matrix overview of the tickets per state per queue' =>

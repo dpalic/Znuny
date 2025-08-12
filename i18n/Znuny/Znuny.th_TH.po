@@ -24938,3 +24938,11 @@ msgstr ""
 msgid "Toggle block comment"
 msgstr ""
 
+#. SysConfig
+msgid "Process Ticket Category."
+msgstr ""
+
+#. SysConfig
+msgid "Process ticket category"
+msgstr ""
+

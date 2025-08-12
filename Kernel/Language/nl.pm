@@ -8061,11 +8061,11 @@ sub Data {
             '',
         'Defines the separator for export csv files.' => '',
         'Defines the quote for export csv files.' => '',
-        'Define a process category.' => '',
         'Frontend module registration (disable ticket processes screen if no process available) for Agent.' =>
             '',
         'Defines the LinkTarget for AgentTicketProcessCategory.' => '',
         'Defines the LinkTarget for CustomerTicketProcessCategory.' => '',
+        'Define a process category.' => '',
         'Define a process link target.' => '',
         'Define a process icon.' => '',
         'Defines which ContentTypes are permitted for the attachment preview.' =>
@@ -9113,12 +9113,12 @@ Het Helpdesk Team
         'Process Management Path GUI' => 'Procesbeheer pad',
         'Process Management Transition Action GUI' => 'Procesbeheer transitie-actie',
         'Process Management Transition GUI' => 'Procesbeheer transitie',
-        'Process Ticket Catalog' => '',
-        'Process Ticket Catalog.' => '',
+        'Process Ticket Category.' => '',
         'Process Ticket Category: Define a process category.' => '',
         'Process Ticket Category: Define a process icon.' => '',
         'Process Ticket Category: Define a process link target.' => '',
         'Process Ticket.' => '',
+        'Process ticket category' => '',
         'ProcessID' => '',
         'Processes & Automation' => 'Processen & Automatisering',
         'Provides a matrix overview of the tickets per state per queue' =>
