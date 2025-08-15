@@ -46,11 +46,10 @@ sub _GetMigrateSysConfigSettings {
     my ( $Self, %Param ) = @_;
 
     my %MigrateSysConfigSettings = (
-
-        "Frontend::Module###AjaxAttachment" => {
+        'Frontend::Module###AjaxAttachment' => {
             UpdateName => 'Frontend::Module###AJAXAttachment'
         },
-        "CustomerFrontend::Module###AjaxAttachment" => {
+        'CustomerFrontend::Module###AjaxAttachment' => {
             UpdateName => 'CustomerFrontend::Module###AJAXAttachment'
         },
     );
