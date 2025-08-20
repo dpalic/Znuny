@@ -29,7 +29,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.340648700984347;
+    $Self->{Completeness}        = 0.340428963070472;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -1450,6 +1450,7 @@ sub Data {
         'URL for authorization code' => '',
         'URL for token by authorization code' => '',
         'URL for token by refresh token' => '',
+        'URL for token by client credentials' => '',
         'Access token scope' => '',
         'Template' => 'Skabelon',
         'This is the template that was used to create this OAuth2 token configuration.' =>
@@ -1473,6 +1474,7 @@ sub Data {
         'Import token configurations' => '',
         'Export token configurations' => '',
         'OAuth2 token configurations' => '',
+        'Auth flow' => '',
         'Token status' => '',
         'Refresh token status' => '',
         'Validity of token configuration' => '',
@@ -1487,6 +1489,7 @@ sub Data {
         'Refresh token is valid (without expiration date).' => '',
         'No refresh token was requested yet.' => '',
         'Refresh token request is not configured.' => '',
+        'Not available for this auth flow.' => '',
         'Request new token' => '',
         'Delete this token and its configuration.' => '',
 
@@ -3901,6 +3904,7 @@ sub Data {
 
         # Perl Module: Kernel/Modules/AdminOAuth2TokenManagement.pm
         'Authorization code parameters not found.' => '',
+        'OAuth2 token error: %s' => '',
 
         # Perl Module: Kernel/Modules/AdminPGP.pm
         'PGP environment is not working. Please check log for more info!' =>

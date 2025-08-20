@@ -38,7 +38,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.852832015491367;
+    $Self->{Completeness}        = 0.852281890017739;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -1459,6 +1459,7 @@ sub Data {
         'URL for authorization code' => 'URL для получения кода авторизации',
         'URL for token by authorization code' => 'URL для получения ключа доступа (token) по коду авторизации',
         'URL for token by refresh token' => 'URL для получения ключа доступа (token) по ключу обновления (refresh token)',
+        'URL for token by client credentials' => '',
         'Access token scope' => 'Область действия ключа (token)',
         'Template' => 'Шаблон',
         'This is the template that was used to create this OAuth2 token configuration.' =>
@@ -1482,6 +1483,7 @@ sub Data {
         'Import token configurations' => 'Импорт конфигураций ключей (tokens)',
         'Export token configurations' => 'Экспорт конфигураций ключей (tokens)',
         'OAuth2 token configurations' => 'Конфигурации OAuth2 ключей (tokens)',
+        'Auth flow' => '',
         'Token status' => 'Статус ключа (token)',
         'Refresh token status' => 'Статус ключа обновления (refresh token)',
         'Validity of token configuration' => 'Актуальность конфигурации ключа',
@@ -1496,6 +1498,7 @@ sub Data {
         'Refresh token is valid (without expiration date).' => 'Ключ обновления (refresh token) действительный (бессрочный).',
         'No refresh token was requested yet.' => 'Ключ обновления (refresh token) еще не был запрошен.',
         'Refresh token request is not configured.' => 'Запрос ключа обновления (refresh token) не настроен.',
+        'Not available for this auth flow.' => '',
         'Request new token' => 'Запросить новый ключ (token)',
         'Delete this token and its configuration.' => 'Удалить этот ключ (token) и его конфигурацию.',
 
@@ -3910,6 +3913,7 @@ sub Data {
 
         # Perl Module: Kernel/Modules/AdminOAuth2TokenManagement.pm
         'Authorization code parameters not found.' => '',
+        'OAuth2 token error: %s' => '',
 
         # Perl Module: Kernel/Modules/AdminPGP.pm
         'PGP environment is not working. Please check log for more info!' =>
