@@ -29,7 +29,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.60303372599645;
+    $Self->{Completeness}        = 0.602872357592383;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -1387,7 +1387,7 @@ sub Data {
         'Delete account' => 'حذف حساب',
         'Do you really want to delete this mail account?' => '',
         'Example: mail.example.com' => 'مثال: mail.example.com',
-        'IMAP Folder' => 'پوشه IMAP',
+        'Folder' => '',
         'Only modify this if you need to fetch mail from a different folder than INBOX.' =>
             'فقط این را تغییر دهید اگر شما نیاز به دریافت نامه از پوشه های مختلف از صندوق.',
         'Trusted' => 'مجاز',

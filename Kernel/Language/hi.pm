@@ -1384,7 +1384,7 @@ sub Data {
         'Delete account' => 'खाता हटाएँ',
         'Do you really want to delete this mail account?' => '',
         'Example: mail.example.com' => 'उदाहरण:मेल.उदाहरण.कॉम',
-        'IMAP Folder' => '',
+        'Folder' => '',
         'Only modify this if you need to fetch mail from a different folder than INBOX.' =>
             '',
         'Trusted' => 'विश्वसनीय',

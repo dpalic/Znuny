@@ -30,7 +30,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y/%M/%D';
     $Self->{DateInputFormat}     = '%Y/%M/%D';
     $Self->{DateInputFormatLong} = '%Y/%M/%D - %T';
-    $Self->{Completeness}        = 0.668549298047442;
+    $Self->{Completeness}        = 0.668387929643376;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -1387,7 +1387,7 @@ sub Data {
         'Delete account' => 'アカウント削除',
         'Do you really want to delete this mail account?' => '本当にこのメールアカウントを削除しますか？',
         'Example: mail.example.com' => '例: mail.example.com',
-        'IMAP Folder' => 'IMAPフォルダー',
+        'Folder' => '',
         'Only modify this if you need to fetch mail from a different folder than INBOX.' =>
             'INBOX以外のフォルダからメールを取得したい場合にのみ修正して下さい。',
         'Trusted' => '信頼済',

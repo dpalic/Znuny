@@ -60,6 +60,7 @@ sub Run {
         'Znuny4OTRS-MarkTicketSeenUnseen',
         'Znuny-Translations',
         'Znuny4OTRS-Translations',
+        'Znuny-MSGraphMail',
     );
 
     PACKAGENAME:

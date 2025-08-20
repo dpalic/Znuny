@@ -24866,8 +24866,12 @@ msgid "LinkTarget"
 msgstr "Linkziel"
 
 #. SysConfig
-msgid "Process Ticket Category."
-msgstr "Prozess-Ticket-Kategorie."
+msgid "Process Ticket Catalog"
+msgstr "Prozess-Ticket-Katalog"
+
+#. SysConfig
+msgid "Process Ticket Catalog."
+msgstr "Prozess-Ticket-Katalog."
 
 #. SysConfig
 msgid "TicketProcessCategory: Define a process icon."
@@ -24956,6 +24960,14 @@ msgstr "Zeilenkommentar ein/aus"
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminGenericInterfaceMappingXSLT.tt
 msgid "Toggle block comment"
 msgstr "Blockkomentar ein/aus"
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminMailAccount.tt
+msgid "Folder"
+msgstr "Ordner"
+
+#. SysConfig
+msgid "Process Ticket Category."
+msgstr "Prozess-Ticket-Kategorie."
 
 #. SysConfig
 msgid "Process ticket category"

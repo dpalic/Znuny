@@ -1382,7 +1382,7 @@ sub Data {
         'Delete account' => 'Eliminar compte',
         'Do you really want to delete this mail account?' => '',
         'Example: mail.example.com' => 'Exemple: mail.example.com',
-        'IMAP Folder' => '',
+        'Folder' => '',
         'Only modify this if you need to fetch mail from a different folder than INBOX.' =>
             '',
         'Trusted' => 'Es pot confiar',

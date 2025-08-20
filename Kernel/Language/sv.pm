@@ -29,7 +29,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y.%M.%D';
     $Self->{DateInputFormat}     = '%Y.%M.%D';
     $Self->{DateInputFormatLong} = '%Y.%M.%D - %T';
-    $Self->{Completeness}        = 0.323382281749234;
+    $Self->{Completeness}        = 0.323220913345167;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -1384,7 +1384,7 @@ sub Data {
         'Delete account' => 'Radera konto',
         'Do you really want to delete this mail account?' => '',
         'Example: mail.example.com' => 'T.ex. mail.example.com',
-        'IMAP Folder' => 'IMAP-katalog',
+        'Folder' => '',
         'Only modify this if you need to fetch mail from a different folder than INBOX.' =>
             'Ändra bara om du vill hämta e-post från en annan katalog än inkorgen.',
         'Trusted' => 'Betrodd',

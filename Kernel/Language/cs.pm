@@ -33,7 +33,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D/%M/%Y';
     $Self->{DateInputFormat}     = '%D/%M/%Y';
     $Self->{DateInputFormatLong} = '%D/%M/%Y - %T';
-    $Self->{Completeness}        = 0.238986606422462;
+    $Self->{Completeness}        = 0.238825238018396;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -1388,7 +1388,7 @@ sub Data {
         'Delete account' => 'Smazat účet',
         'Do you really want to delete this mail account?' => '',
         'Example: mail.example.com' => 'Příklad: mail.example.com',
-        'IMAP Folder' => 'IMAP složka',
+        'Folder' => '',
         'Only modify this if you need to fetch mail from a different folder than INBOX.' =>
             'Tuto volbu upravte pouze tehdy, pokud potřebujete přijmout zprávy z jiné složky než INBOX.',
         'Trusted' => 'Důvěryhodný',

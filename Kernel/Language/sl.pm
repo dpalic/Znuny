@@ -31,7 +31,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.207842504437631;
+    $Self->{Completeness}        = 0.207681136033565;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -1386,7 +1386,7 @@ sub Data {
         'Delete account' => 'Izbriši račun E-pošte',
         'Do you really want to delete this mail account?' => '',
         'Example: mail.example.com' => 'Primer: mail.example.com',
-        'IMAP Folder' => 'IMAP mapa',
+        'Folder' => '',
         'Only modify this if you need to fetch mail from a different folder than INBOX.' =>
             'Spremeni samo, če morate elektronska sporočila pobirati iz druge mape namesto mape Prejeto.',
         'Trusted' => 'Zaupljivo',

@@ -24937,6 +24937,10 @@ msgstr ""
 msgid "Toggle block comment"
 msgstr ""
 
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminMailAccount.tt
+msgid "Folder"
+msgstr ""
+
 #. SysConfig
 msgid "Process Ticket Category."
 msgstr ""

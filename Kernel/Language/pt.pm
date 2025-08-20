@@ -1384,7 +1384,7 @@ sub Data {
         'Delete account' => 'Ápagar conta',
         'Do you really want to delete this mail account?' => '',
         'Example: mail.example.com' => 'Exemplo: mail.example.com',
-        'IMAP Folder' => '',
+        'Folder' => '',
         'Only modify this if you need to fetch mail from a different folder than INBOX.' =>
             '',
         'Trusted' => 'De confiança',

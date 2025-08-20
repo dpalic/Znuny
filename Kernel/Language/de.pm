@@ -1382,7 +1382,7 @@ sub Data {
         'Delete account' => 'E-Mail-Konto löschen',
         'Do you really want to delete this mail account?' => 'Möchten Sie dieses E-Mail-Konto wirklich löschen?',
         'Example: mail.example.com' => 'Beispiel: mail.example.com',
-        'IMAP Folder' => 'IMAP-Ordner',
+        'Folder' => 'Ordner',
         'Only modify this if you need to fetch mail from a different folder than INBOX.' =>
             'Ändern Sie diese Einstellung nur, wenn die E-Mails aus einem anderen Ordner als "INBOX" geholt werden sollen.',
         'Trusted' => 'Vertraut',

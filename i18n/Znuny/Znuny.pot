@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2025-08-12 08:20+0000\n"
+"POT-Creation-Date: 2025-08-15 09:42+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -4143,7 +4143,7 @@ msgid "Example: mail.example.com"
 msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminMailAccount.tt
-msgid "IMAP Folder"
+msgid "Folder"
 msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminMailAccount.tt

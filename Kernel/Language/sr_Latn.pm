@@ -32,7 +32,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.873003065999677;
+    $Self->{Completeness}        = 0.872841697595611;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -1387,7 +1387,7 @@ sub Data {
         'Delete account' => 'Obriši nalog',
         'Do you really want to delete this mail account?' => 'Da li stvarno želite da obrišete ovaj imejl nalog?',
         'Example: mail.example.com' => 'Primer: mail.example.com',
-        'IMAP Folder' => 'IMAP folder',
+        'Folder' => '',
         'Only modify this if you need to fetch mail from a different folder than INBOX.' =>
             'Ovo izmenite samo ako je potrebno primiti poštu iz drugog foldera, a ne iz INBOX-a.',
         'Trusted' => 'Od poverenja',

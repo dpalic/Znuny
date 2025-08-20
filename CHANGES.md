@@ -31,6 +31,7 @@
  - 2025-06-23 Added and updated FormElements templates.
  - 2025-06-23 Added Download and Preview function to Kernel/Modules/AJAXAttachment.pm.
  - 2025-06-23 Fixed: The agent toolbar does not remain expanded.
+ - 2025-06-17 Integrated package Znuny-MSGraphMail.
  - 2025-06-17 Fixed AgentTicketBulk MarkTicketsAs selection- MarkTicketsAsSeen and MarkTicketsAsUnseen can be set simultaneously. This makes handling complicated and unnecessarily confusing.
  - 2025-06-17 Fixed: Added missing parameter TwoFactorToken in Kernel::GenericInterface::Operation::Session::Common->CreateSessionID() to Perldoc.
  - 2025-06-17 Improve error message when exiting due to PackageIsDownloadable = 0. Thanks for reporting to Darko (@dpalic). [#684](https://github.com/znuny/Znuny/issues/684)

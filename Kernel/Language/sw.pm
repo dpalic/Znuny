@@ -29,7 +29,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%M/%D/%Y';
     $Self->{DateInputFormat}     = '%M/%D/%Y';
     $Self->{DateInputFormatLong} = '%M/%D/%Y - %T';
-    $Self->{Completeness}        = 0.427303533968049;
+    $Self->{Completeness}        = 0.427142165563983;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -1384,7 +1384,7 @@ sub Data {
         'Delete account' => 'kufuta akaunti',
         'Do you really want to delete this mail account?' => '',
         'Example: mail.example.com' => 'Mfano: barua pepe.mfano.com',
-        'IMAP Folder' => 'Kabrasha la IMAP',
+        'Folder' => '',
         'Only modify this if you need to fetch mail from a different folder than INBOX.' =>
             'Rekebisha hii tu kama unahitaji kupakua barua pepe kutoka kwenye kabrasha tofauti na kikasha cha ndani.',
         'Trusted' => 'kuaminiwa',

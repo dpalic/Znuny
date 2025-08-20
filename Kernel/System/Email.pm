@@ -1112,8 +1112,9 @@ sub _CreateMimeEntity {
     }
 
     # Check if we need to force the encoding.
-    if ( $ConfigObject->Get('SendmailEncodingForce') ) {
-        $Header{Encoding} = $ConfigObject->Get('SendmailEncodingForce');
+    my $SendmailEncodingForce = $ConfigObject->Get('SendmailEncodingForce');
+    if ($SendmailEncodingForce) {
+        $Header{Encoding} = $SendmailEncodingForce;
     }
 
     # Check and create message id.
@@ -1235,6 +1236,18 @@ sub _CreateMimeEntity {
                 $ContentID = '<' . $ContentID . '>';
             }
 
+            # Graph has problems with text parts encoded as 'quoted-printable', so their encoding
+            # will be changed here to the one configured in config option SendmailEncodingForce (e.g. '8bit').
+            my $Encoding = $Upload->{Encoding};
+            if (
+                $SendmailEncodingForce
+                && defined $Upload->{ContentType}
+                && $Upload->{ContentType} =~ m{\Atext}i
+                )
+            {
+                $Encoding = $SendmailEncodingForce;
+            }
+
             # Attach file to email.
             $Entity->attach(
                 Filename    => $Filename,
@@ -1242,7 +1255,7 @@ sub _CreateMimeEntity {
                 Type        => $Upload->{ContentType},
                 Id          => $ContentID,
                 Disposition => $Upload->{Disposition} || 'inline',
-                Encoding    => $Upload->{Encoding} || '-SUGGEST',
+                Encoding    => $Encoding || '-SUGGEST',
             );
         }
 

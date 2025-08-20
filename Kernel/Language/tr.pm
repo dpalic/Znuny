@@ -27,7 +27,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.178957560109731;
+    $Self->{Completeness}        = 0.178796191705664;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -1382,7 +1382,7 @@ sub Data {
         'Delete account' => 'Hesap sil',
         'Do you really want to delete this mail account?' => '',
         'Example: mail.example.com' => 'Örnek: posta.kurum.com',
-        'IMAP Folder' => 'IMAP klasörü',
+        'Folder' => '',
         'Only modify this if you need to fetch mail from a different folder than INBOX.' =>
             '',
         'Trusted' => 'Güvenilir',

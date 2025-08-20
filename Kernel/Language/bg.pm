@@ -27,7 +27,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y - %T';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.192351137647249;
+    $Self->{Completeness}        = 0.192189769243182;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -1382,7 +1382,7 @@ sub Data {
         'Delete account' => 'Изтриване на акаунт',
         'Do you really want to delete this mail account?' => '',
         'Example: mail.example.com' => 'Например : mail.example.com',
-        'IMAP Folder' => 'IMAP папка',
+        'Folder' => '',
         'Only modify this if you need to fetch mail from a different folder than INBOX.' =>
             'Променяйте само това, ако трябва да извлечете поща от различна папка от Входящта.',
         'Trusted' => 'Доверен',

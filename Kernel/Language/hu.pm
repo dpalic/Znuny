@@ -32,7 +32,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%M-%D';
     $Self->{DateInputFormat}     = '%Y-%M-%D';
     $Self->{DateInputFormatLong} = '%Y-%M-%D - %T';
-    $Self->{Completeness}        = 0.876391802485073;
+    $Self->{Completeness}        = 0.876230434081007;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -1387,7 +1387,7 @@ sub Data {
         'Delete account' => 'Fiók törlése',
         'Do you really want to delete this mail account?' => 'Valóban törölni szeretné ezt a levelezési fiókot?',
         'Example: mail.example.com' => 'Példa: mail.example.com',
-        'IMAP Folder' => 'IMAP mappa',
+        'Folder' => '',
         'Only modify this if you need to fetch mail from a different folder than INBOX.' =>
             'Ezt csak akkor módosítsa, ha az INBOX mappától eltérőből szükséges a levél lekérése.',
         'Trusted' => 'Megbízható',

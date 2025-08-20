@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%M-%D';
     $Self->{DateInputFormat}     = '%Y-%M-%D';
     $Self->{DateInputFormatLong} = '%Y-%M-%D %T';
-    $Self->{Completeness}        = 0.848636436985638;
+    $Self->{Completeness}        = 0.848475068581572;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -1381,7 +1381,7 @@ sub Data {
         'Delete account' => '계정 삭제',
         'Do you really want to delete this mail account?' => '정말로 이 메일 계정을 삭제 하시겠습니까?',
         'Example: mail.example.com' => '예 : mail.example.com',
-        'IMAP Folder' => 'IMAP 폴더',
+        'Folder' => '',
         'Only modify this if you need to fetch mail from a different folder than INBOX.' =>
             'INBOX가 아닌 다른 폴더에서 메일을 가져와야하는 경우에만 수정하십시오.',
         'Trusted' => '신뢰할 수 있는',
