@@ -62,6 +62,7 @@
  - 2025-04-30 Fixed: OTRS_CUSTOMER_REALNAME placeholder expansion in AgentTicketMerge.
  - 2025-03-26 Fixed tree view icon not showing up for dynamic field types Dropdown and Multiselect.
  - 2025-03-25 Generic interface operation TicketUpdate now checks detailed ticket permissions of customer user.
+ - 2024-09-03 Added client credentials flow to OAuth2 token management.
  - 2024-07-30 Auto responses, notifications, processes, salutations, signatures and standard templates can now all be deleted, copied, imported and exported.
 
 # 7.1.7 2025-04-30

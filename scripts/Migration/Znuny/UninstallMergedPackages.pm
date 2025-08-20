@@ -53,6 +53,7 @@ sub Run {
         'Znuny4OTRS-ArticleColors',
         'Znuny-CustomPriorityColor',
         'Znuny4OTRS-CustomPriorityColor',
+        'Znuny-OAuth2ClientCredentialsFlow',
         'Znuny-DynamicFieldAdminAutoConfig',
         'Znuny4OTRS-DynamicFieldAdminAutoConfig',
         'Znuny-MarkTicketSeenUnseen',

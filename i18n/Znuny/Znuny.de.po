@@ -24325,6 +24325,22 @@ msgstr "Ergänzt Feld-Mapping für AgentTicketActionCommon für unbekannte Actio
 msgid "There were non-system tables found which do not have 'utf8mb4' as charset."
 msgstr "Es wurden systemfremde Tabellen gefunden, die nicht 'utf8mb4' als Zeichensatz haben."
 
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminOAuth2TokenManagement/Edit.tt
+msgid "URL for token by client credentials"
+msgstr "URL für Token per Client-Credentials"
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminOAuth2TokenManagement/Overview.tt
+msgid "Auth flow"
+msgstr "Auth-Flow"
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminOAuth2TokenManagement/Overview.tt
+msgid "Not available for this auth flow."
+msgstr "Nicht verfügbar für diesen Auth-Flow."
+
+#. Perl Module: Kernel/Modules/AdminOAuth2TokenManagement.pm
+msgid "OAuth2 token error: %s"
+msgstr "OAuth2-Token-Fehler: %s"
+
 #. SysConfig
 msgid "Mark as seen"
 msgstr "Als gelesen markieren"

@@ -1448,6 +1448,7 @@ sub Data {
         'URL for authorization code' => 'URL für Autorisierungscode',
         'URL for token by authorization code' => 'URL für Token per Autorisierungscode',
         'URL for token by refresh token' => 'URL für Token per Refresh-Token',
+        'URL for token by client credentials' => 'URL für Token per Client-Credentials',
         'Access token scope' => 'Access-Token-Scope',
         'Template' => 'Vorlage',
         'This is the template that was used to create this OAuth2 token configuration.' =>
@@ -1471,6 +1472,7 @@ sub Data {
         'Import token configurations' => 'Token-Konfigurationen importieren',
         'Export token configurations' => 'Token-Konfigurationen exportieren',
         'OAuth2 token configurations' => 'OAuth2-Token-Konfigurationen',
+        'Auth flow' => 'Auth-Flow',
         'Token status' => 'Token-Status',
         'Refresh token status' => 'Refresh-Token-Status',
         'Validity of token configuration' => 'Gültigkeit der Token-Konfiguration',
@@ -1485,6 +1487,7 @@ sub Data {
         'Refresh token is valid (without expiration date).' => 'Refresh-Token ist gültig (ohne Ablaufdatum).',
         'No refresh token was requested yet.' => 'Bisher wurde kein Refresh-Token angefordert.',
         'Refresh token request is not configured.' => 'Refresh-Token-Request ist nicht konfiguriert.',
+        'Not available for this auth flow.' => 'Nicht verfügbar für diesen Auth-Flow.',
         'Request new token' => 'Neues Token anfordern',
         'Delete this token and its configuration.' => 'Token und dessen Konfiguration löschen.',
 
@@ -3899,6 +3902,7 @@ sub Data {
 
         # Perl Module: Kernel/Modules/AdminOAuth2TokenManagement.pm
         'Authorization code parameters not found.' => 'Autorisierungscode-Parameter nicht gefunden.',
+        'OAuth2 token error: %s' => 'OAuth2-Token-Fehler: %s',
 
         # Perl Module: Kernel/Modules/AdminPGP.pm
         'PGP environment is not working. Please check log for more info!' =>

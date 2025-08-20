@@ -6,7 +6,7 @@
 # did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
 # --
 
-package Kernel::System::Console::Command::Admin::OAuth2TokenManagement::GenerateAuthorizationCodeRequestURL;
+package Kernel::System::Console::Command::Admin::OAuth2TokenManagement::RequestTokenByClientCredentials;
 
 use strict;
 use warnings;
@@ -24,12 +24,12 @@ sub Configure {
     my ( $Self, %Param ) = @_;
 
     $Self->Description(
-        'Generates a URL to request an authorization code for an OAuth 2 token. URL can then be called with a browser. Only available for auth flow "AuthorizationCode".'
+        'Requests a token by using client credentials. Only available for auth flow "ClientCredentials".'
     );
 
     $Self->AddArgument(
         Name        => 'token-config-name',
-        Description => 'Name of token config to generate the authorization code request URL for.',
+        Description => 'Name of token config to request the token for.',
         Required    => 1,
         ValueRegex  => qr{.+},
     );
@@ -56,17 +56,34 @@ sub Run {
     }
 
     my $AuthFlow = $TokenConfig{Config}->{AuthFlow} // 'AuthorizationCode';
-    if ( $AuthFlow ne 'AuthorizationCode' ) {
-        $Self->PrintError("Token config with name '$TokenConfigName' does not use auth flow 'AuthorizationCode'.");
+    if ( $AuthFlow ne 'ClientCredentials' ) {
+        $Self->PrintError(
+            "Token config with name '$TokenConfigName' does not use auth flow 'ClientCredentials'."
+        );
         return $Self->ExitCodeError();
     }
 
-    my $URL = $OAuth2TokenObject->GenerateAuthorizationCodeRequestURL(
+    my %Token = $OAuth2TokenObject->RequestTokenByClientCredentials(
         TokenConfigID => $TokenConfig{ $OAuth2TokenConfigObject->{Identifier} },
         UserID        => $UserID,
     );
+    if ( !%Token ) {
+        $Self->PrintError("Error requesting token by client credentials for token config '$TokenConfigName'");
+        return $Self->ExitCodeError();
+    }
 
-    $Self->Print("$URL\n");
+    my $TokenErrorMessage = $OAuth2TokenObject->GetTokenErrorMessage(
+        TokenConfigID => $TokenConfig{ $OAuth2TokenConfigObject->{Identifier} },
+        UserID        => $UserID,
+    );
+    if ( defined $TokenErrorMessage && length $TokenErrorMessage ) {
+        $Self->PrintError(
+            "Error requesting token by client credentials for token config '$TokenConfigName': $TokenErrorMessage"
+        );
+        return $Self->ExitCodeError();
+    }
+
+    $Self->Print("Token for token config with name '$TokenConfigName' has been successfully retrieved/updated.\n");
 
     return $Self->ExitCodeOk();
 }
