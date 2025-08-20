@@ -1,4 +1,5 @@
 # 7.2.1 2025-??-??
+ - 2025-08-13 CVE-2025-3573: Updated jquery-validate to 1.21.0.
  - 2025-08-18 Fixed: Calendar bug in Kernel/System/Calendar/Plugin.pm uninitialized value and fixed module check for calendar plugin.
  - 2025-08-12 Disabled CKEditor5 "FullPage" plugin due to causing problems with "empty" text.
  - 2025-08-11 Fixed: Popup profiles with percentage values for width and height not working correctly. Thanks for reporting to Tim Püttmanns (maxence). [#634](https://github.com/znuny/Znuny/issues/634)

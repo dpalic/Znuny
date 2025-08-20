@@ -52,6 +52,19 @@ sub _GetMigrateSysConfigSettings {
         'CustomerFrontend::Module###AjaxAttachment' => {
             UpdateName => 'CustomerFrontend::Module###AJAXAttachment'
         },
+
+        "Loader::Agent::CommonJS###000-Framework" => {
+            UpdateEffectiveValue => {
+                'thirdparty/jquery-validate-1.16.0/jquery.validate.js' =>
+                    'thirdparty/jquery-validation-1.21.0/jquery.validate.js',
+            },
+        },
+        "Loader::Customer::CommonJS###000-Framework" => {
+            UpdateEffectiveValue => {
+                'thirdparty/jquery-validate-1.16.0/jquery.validate.js' =>
+                    'thirdparty/jquery-validation-1.21.0/jquery.validate.js',
+            },
+        },
     );
 
     return %MigrateSysConfigSettings;
