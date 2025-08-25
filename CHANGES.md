@@ -1,3 +1,6 @@
+# 7.2.2 2025-xx-xx
+- 2025-08-25 Fixed: When using Dark Skin, article colors should not invert.
+
 # 7.2.1 2025-08-20
  - 2025-08-13 CVE-2025-3573: Updated jquery-validate to 1.21.0.
  - 2025-08-18 Fixed: Calendar bug in Kernel/System/Calendar/Plugin.pm uninitialized value and fixed module check for calendar plugin.
