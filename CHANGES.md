@@ -1,4 +1,5 @@
 # 7.2.2 2025-xx-xx
+- 2025-08-25 Fixed: UpgradeAJAXAttachmentSysConfig - Problems with Updating PostgreSQL and Oracle.
 - 2025-08-25 Fixed: When using Dark Skin, article colors should not invert.
 
 # 7.2.1 2025-08-20

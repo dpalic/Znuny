@@ -6,7 +6,7 @@
 # did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
 # --
 
-package scripts::Migration::Znuny::UpgradeDatabaseStructure::AJAXAttachment;    ## no critic
+package scripts::Migration::Znuny::UpgradeAJAXAttachmentSysConfig;    ## no critic
 
 use strict;
 use warnings;
@@ -38,7 +38,6 @@ sub Run {
             SET    name='Frontend::Module###AJAXAttachment'
             WHERE  name='Frontend::Module###AjaxAttachment'
         ",
-        Limit => 1,
     );
 
     return if !$DBObject->Prepare(
@@ -47,7 +46,6 @@ sub Run {
             SET    name='CustomerFrontend::Module###AJAXAttachment'
             WHERE  name='CustomerFrontend::Module###AjaxAttachment'
         ",
-        Limit => 1,
     );
 
     return 1;

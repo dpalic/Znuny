@@ -56,10 +56,6 @@ sub Run {
             Message => 'Create table for user process preferences support.',
             Module  => 'ProcessPreferences',
         },
-        {
-            Message => 'Alter old entry to avoid conflicts with MariaDB. (AjaxAttachment -> AJAXAttachment)',
-            Module  => 'AJAXAttachment',
-        },
     );
 
     return 1   if !@Tasks;
