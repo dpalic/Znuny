@@ -3,6 +3,7 @@
  - 2025-09-01 Sector Nord AG: Fixed: Enter/Ctrl+Enter leads to saving the draft instead of submitting the form. Thanks to Lukas Bröring (@LuBroering). [PR#704](https://github.com/znuny/Znuny/pull/704)
  - 2025-08-29 AdminSystemConfiguration: Current value of the settings key has been added to the HTML title attribute in the settings list when hovering over it.
  - 2025-08-28 Fixed: Table article_color color size to small if system is migrated.
+ - 2025-08-26 Fixed: Body of selected plain-text article not visible in customer ticket zoom.
  - 2025-08-25 Fixed: Updated Google Mail OAuth2 token configuration template to enable Google's consent dialog when obtaining first token.
  - 2025-08-25 Fixed: UpgradeAJAXAttachmentSysConfig - Problems with Updating PostgreSQL and Oracle.
  - 2025-08-25 Fixed: When using Dark Skin, article colors should not invert.
