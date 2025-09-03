@@ -8,6 +8,7 @@
  - 2025-08-25 Fixed: Updated Google Mail OAuth2 token configuration template to enable Google's consent dialog when obtaining first token.
  - 2025-08-25 Fixed: UpgradeAJAXAttachmentSysConfig - Problems with Updating PostgreSQL and Oracle.
  - 2025-08-25 Fixed: When using Dark Skin, article colors should not invert.
+ - 2025-08-22 Fixed: Issue with setting empty value for multiselect input fields.
 
 # 7.2.1 2025-08-20
  - 2025-08-13 CVE-2025-3573: Updated jquery-validate to 1.21.0.
