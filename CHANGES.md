@@ -1,4 +1,5 @@
 # 7.2.2 2025-??-??
+ - 2025-09-05 Fixed: Deleting a valid Webservice should not be possible.
  - 2025-09-03 Fixed: Installer was not able to check email account settings.
  - 2025-09-01 Sector Nord AG: Fixed: Duplicate favorites in AdminMenu. Thanks to Lukas Bröring (@LuBroering). [PR#705](https://github.com/znuny/Znuny/pull/705)
  - 2025-09-01 Sector Nord AG: Fixed: Enter/Ctrl+Enter leads to saving the draft instead of submitting the form. Thanks to Lukas Bröring (@LuBroering). [PR#704](https://github.com/znuny/Znuny/pull/704)
