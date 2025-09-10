@@ -1,4 +1,5 @@
 # 7.2.2 2025-??-??
+ - 2025-09-09 Fixed: AdminArticleColor search filter.
  - 2025-09-09 Fixed: Installer using wrong credentials for database requirements checks.
  - 2025-09-05 Fixed: Double Breadcrumb in SysConfig.
  - 2025-09-05 Fixed: Deleting a valid Webservice should not be possible.
