@@ -1,4 +1,4 @@
-# 7.2.2 2025-??-??
+# 7.2.2 2025-09-17
  - 2025-09-10 Fixed: Added NewResponsible as Change Property in ACL.
  - 2025-09-09 Fixed: AdminArticleColor search filter.
  - 2025-09-09 Fixed: Installer using wrong credentials for database requirements checks.
