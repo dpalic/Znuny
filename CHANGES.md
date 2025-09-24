@@ -1,3 +1,6 @@
+# 7.2.3 2025-09-24
+ - 2025-09-22 Fixed: Fix for installer email setting checks lead to issues with sending emails.
+
 # 7.2.2 2025-09-17
  - 2025-09-10 Fixed: Added NewResponsible as Change Property in ACL.
  - 2025-09-09 Fixed: AdminArticleColor search filter.
