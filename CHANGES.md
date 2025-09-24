@@ -476,6 +476,17 @@
  - 2022-08-08 Admin - Added counter of AdminSettingPages per widget and additional focus by filter.
  - 2022-07-15 Frontend::ToolBarModule - Refactored the Toolbar registration, position and view.
 
+# 6.5.18 2025-09-24
+ - 2025-09-22 Fixed: Fix for installer email setting checks lead to issues with sending emails.
+
+# 6.5.17 2025-09-17
+ - 2025-09-05 Fixed: Deleting a valid Webservice should not be possible.
+ - 2025-09-02 Fixed: Updated date picker highlight styles for better readability
+ - 2025-08-29 AdminSystemConfiguration: Current value of the settings key has been added to the HTML title attribute in the settings list when hovering over it.
+ - 2025-08-25 Fixed: Updated Google Mail OAuth2 token configuration template to enable Google's consent dialog when obtaining first token.
+ - 2025-08-22 Fixed: Issue with setting empty value for multiselect input fields.
+ - 2025-08-22 Fixed: Installer was not able to check settings of outgoing email account.
+
 # 6.5.16 2025-08-20
  - 2025-08-18 Fixed: Calendar bug in Kernel/System/Calendar/Plugin.pm uninitialized value and fixed module check for calendar plugin.
  - 2025-08-13 CVE-2025-3573: Updated jquery-validate to 1.21.0.
