@@ -117,9 +117,7 @@ Core.Form.ErrorTooltips = (function (TargetNS) {
     TargetNS.ShowTooltip = function($Element, TooltipContent, TooltipPosition) {
         var $TooltipContainer = $('#' + TooltipContainerID),
             TopOffset,
-            OffsetTopFileUpload,
-            OffsetLeftFileUpload,
-            FileUploadElement = $Element.attr('id') === 'FileUpload';
+            IsFileUploadElement = $Element.attr('id') === 'FileUpload';
 
         if (TooltipPosition == null) {
             TooltipPosition = TonguePosition;
@@ -130,13 +128,9 @@ Core.Form.ErrorTooltips = (function (TargetNS) {
             $TooltipContainer = $('#' + TooltipContainerID);
         }
 
-        if (FileUploadElement) {
-            OffsetTopFileUpload = 55;
-            OffsetLeftFileUpload = 40;
-        }
-        else {
-            OffsetTopFileUpload = TooltipOffsetTop;
-            OffsetLeftFileUpload = TooltipOffsetLeft;
+        if (IsFileUploadElement) {
+            TooltipOffsetTop = 55;
+            TooltipOffsetLeft = 40;
         }
 
         /*
