@@ -1,4 +1,5 @@
 # 7.3.1 2025-??-??
+ - 2025-09-25 SectorNord AG: Fixed: Problem filtering by Owner in the ticket view. Thanks for reporting to @giovanna-bolsoni [#698](https://github.com/znuny/Znuny/issues/698). Thanks to @LuBroering (Lukas Bröring Sector Nord AG) [PR#703](https://github.com/znuny/Znuny/pull/703).
  - 2025-09-25 Added 'Prio' Param to AgentTicketZoom MenuModules for individual sorting. Thanks for reporting and fixing to @itweserems [#646](https://github.com/znuny/Znuny/issues/646) [PR#647](https://github.com/znuny/Znuny/pull/647).
 
 # 7.2.3 2025-09-24
