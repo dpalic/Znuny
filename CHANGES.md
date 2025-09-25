@@ -1,3 +1,6 @@
+# 7.3.1 2025-??-??
+ - 2025-09-25 Added 'Prio' Param to AgentTicketZoom MenuModules for individual sorting. Thanks for reporting and fixing to @itweserems [#646](https://github.com/znuny/Znuny/issues/646) [PR#647](https://github.com/znuny/Znuny/pull/647).
+
 # 7.2.3 2025-09-24
  - 2025-09-22 Fixed: Fix for installer email setting checks lead to issues with sending emails.
 
