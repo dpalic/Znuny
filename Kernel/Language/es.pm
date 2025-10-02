@@ -33,7 +33,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D/%M/%Y';
     $Self->{DateInputFormat}     = '%D/%M/%Y';
     $Self->{DateInputFormatLong} = '%D/%M/%Y - %T';
-    $Self->{Completeness}        = 0.580874052572166;
+    $Self->{Completeness}        = 0.580780393421477;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -7788,6 +7788,7 @@ El control del acceso adicional para demostrar o no demostrar éste enlace puede
         'Sets the default link type of split tickets in the agent interface.' =>
             '',
         'Defines available article actions for Internal articles.' => '',
+        'Defines available article actions for Web articles.' => '',
         'Defines available article actions for Phone articles.' => '',
         'Defines available article actions for Email articles.' => '',
         'Defines available article actions for invalid articles.' => '',

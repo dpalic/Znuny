@@ -8,6 +8,7 @@ The following persons contributed to Znuny:
 * AM Mike <monitoring@amlogisticsolutions.de>
 * André Brás <andre.bras@otrs.com>
 * anonymous <unknown@anonymous>
+* Arthur Ritscher <arthur.ritscher@sectornord.de>
 * arlecchino <kolbma@users.noreply.github.com>
 * b1-luettje <53084931+b1-luettje@users.noreply.github.com>
 * Balazs Ur <balazs.ur@otrs.com>

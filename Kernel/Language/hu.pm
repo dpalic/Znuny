@@ -32,7 +32,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%M-%D';
     $Self->{DateInputFormat}     = '%Y-%M-%D';
     $Self->{DateInputFormatLong} = '%Y-%M-%D - %T';
-    $Self->{Completeness}        = 0.875665215287857;
+    $Self->{Completeness}        = 0.875524024508223;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -7780,6 +7780,7 @@ sub Data {
         'Sets the default link type of split tickets in the agent interface.' =>
             'Beállítja a felosztott jegyek alapértelmezett hivatkozás típusát az ügyintézői felületen.',
         'Defines available article actions for Internal articles.' => 'Meghatározza az elérhető bejegyzésműveleteket a belső bejegyzéseknél.',
+        'Defines available article actions for Web articles.' => '',
         'Defines available article actions for Phone articles.' => 'Meghatározza az elérhető bejegyzésműveleteket a telefonos bejegyzéseknél.',
         'Defines available article actions for Email articles.' => 'Meghatározza az elérhető bejegyzésműveleteket az e-mail bejegyzéseknél.',
         'Defines available article actions for invalid articles.' => 'Meghatározza az elérhető bejegyzésműveleteket az érvénytelen bejegyzéseknél.',

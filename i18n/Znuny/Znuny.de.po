@@ -24973,3 +24973,7 @@ msgstr "Prozess-Ticket-Kategorie."
 msgid "Process ticket category"
 msgstr ""
 
+#. XML Definition: Kernel/Config/Files/XML/Ticket.xml
+msgid "Defines available article actions for Web articles."
+msgstr "Legt verfügbare Artikel-Aktionen für Web-Artikel fest."
+

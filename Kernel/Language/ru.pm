@@ -38,7 +38,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.852443154329947;
+    $Self->{Completeness}        = 0.852305707836182;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -7786,6 +7786,7 @@ sub Data {
         'Sets the default link type of split tickets in the agent interface.' =>
             'Установливает тип связи по умолчанию при разделении заявок в интерфейсе агента.',
         'Defines available article actions for Internal articles.' => 'Задает список допустимых действий с внутренними сообщениями/заметками.',
+        'Defines available article actions for Web articles.' => '',
         'Defines available article actions for Phone articles.' => 'Задает список допустимых действий с телефонными сообщениями.',
         'Defines available article actions for Email articles.' => 'Задает список допустимых действий с почтовыми сообщениями.',
         'Defines available article actions for invalid articles.' => 'Задает список допустимых действий с недействительными сообщениями.',

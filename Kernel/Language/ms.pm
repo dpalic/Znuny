@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.525237864860506;
+    $Self->{Completeness}        = 0.525153176394711;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -7776,6 +7776,7 @@ Search_DynamicField_XTimeSlotStartMonth=01; Search_DynamicField_XTimeSlotStartDa
         'Sets the default link type of split tickets in the agent interface.' =>
             '',
         'Defines available article actions for Internal articles.' => '',
+        'Defines available article actions for Web articles.' => '',
         'Defines available article actions for Phone articles.' => '',
         'Defines available article actions for Email articles.' => '',
         'Defines available article actions for invalid articles.' => '',

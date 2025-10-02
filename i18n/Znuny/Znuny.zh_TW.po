@@ -24951,3 +24951,7 @@ msgstr ""
 msgid "OAuth2 token error: %s"
 msgstr ""
 
+#. XML Definition: Kernel/Config/Files/XML/Ticket.xml
+msgid "Defines available article actions for Web articles."
+msgstr ""
+

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2025-08-20 07:54+0000\n"
+"POT-Creation-Date: 2025-10-01 10:28+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -6462,6 +6462,14 @@ msgstr ""
 msgid "Go back to Deployment Details"
 msgstr ""
 
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminSystemConfigurationView.tt
+msgid "View a custom List of Settings"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminSystemConfigurationView.tt
+msgid "View single Setting: %s"
+msgstr ""
+
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminSystemFiles.tt
 msgid "System file support"
 msgstr ""
@@ -9776,14 +9784,6 @@ msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/Statistics/YAxisWidget.tt
 msgid "Please remember that the scale for the Y-axis has to be larger than the scale for the X-axis (e.g. X-axis => Month, Y-Axis => Year)."
-msgstr ""
-
-#. TT Template: Kernel/Output/HTML/Templates/Standard/SystemConfiguration/SettingsList.tt
-msgid "View a custom List of Settings"
-msgstr ""
-
-#. TT Template: Kernel/Output/HTML/Templates/Standard/SystemConfiguration/SettingsList.tt
-msgid "View single Setting: %s"
 msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/SystemConfiguration/SettingsList.tt
@@ -20084,6 +20084,10 @@ msgstr ""
 
 #. XML Definition: Kernel/Config/Files/XML/Ticket.xml
 msgid "Defines available article actions for Internal articles."
+msgstr ""
+
+#. XML Definition: Kernel/Config/Files/XML/Ticket.xml
+msgid "Defines available article actions for Web articles."
 msgstr ""
 
 #. XML Definition: Kernel/Config/Files/XML/Ticket.xml

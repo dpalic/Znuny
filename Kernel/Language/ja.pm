@@ -30,7 +30,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y/%M/%D';
     $Self->{DateInputFormat}     = '%Y/%M/%D';
     $Self->{DateInputFormatLong} = '%Y/%M/%D - %T';
-    $Self->{Completeness}        = 0.667956781164328;
+    $Self->{Completeness}        = 0.667849080941632;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -7790,6 +7790,7 @@ Contentはダイナミック・フィールドの形式によって設定内容�
         'Sets the default link type of split tickets in the agent interface.' =>
             '担当者Webインターフェイスのスプリットチケットのデフォルトリンクタイプを設定します。',
         'Defines available article actions for Internal articles.' => '',
+        'Defines available article actions for Web articles.' => '',
         'Defines available article actions for Phone articles.' => '',
         'Defines available article actions for Email articles.' => '',
         'Defines available article actions for invalid articles.' => '',

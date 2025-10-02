@@ -33,7 +33,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y.%M.%D';
     $Self->{DateInputFormat}     = '%Y.%M.%D';
     $Self->{DateInputFormatLong} = '%Y.%M.%D - %T';
-    $Self->{Completeness}        = 0.875665215287857;
+    $Self->{Completeness}        = 0.875524024508223;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -7781,6 +7781,7 @@ sub Data {
         'Sets the default link type of split tickets in the agent interface.' =>
             '设置在服务人员界面拆分工单默认的链接类型。',
         'Defines available article actions for Internal articles.' => '定义内部信件的可用信件操作。',
+        'Defines available article actions for Web articles.' => '',
         'Defines available article actions for Phone articles.' => '定义电话信件的可用信件操作。',
         'Defines available article actions for Email articles.' => '定义电子邮件信件的可用信件操作。',
         'Defines available article actions for invalid articles.' => '定义无效信件的可用信件操作。',
