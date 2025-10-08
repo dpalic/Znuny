@@ -2,15 +2,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2023-03-23 09:27+0000\n"
-"PO-Revision-Date: 2025-04-30 10:50+0000\n"
-"Last-Translator: Hog Duske <hog.duske@dusketech.de>\n"
-"Language-Team: German <https://translations.znuny.org/projects/znuny/znuny/de/>\n"
+"PO-Revision-Date: 2025-10-08 08:16+0000\n"
+"Last-Translator: Nina Knipprath <knipprath@hhu.de>\n"
+"Language-Team: German <https://translations.znuny.org/projects/znuny/znuny/"
+"de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.11\n"
+"X-Generator: Weblate 5.13.3\n"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminACL.tt
 msgid "Actions"
@@ -5942,7 +5943,7 @@ msgstr "Service hinzufügen"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminService.tt
 msgid "Configure Service Visibility and Defaults"
-msgstr "Serivce-Sichtbarkeit und Standardeinstellungen konfigurieren"
+msgstr "Service-Sichtbarkeit und Standardeinstellungen konfigurieren"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminService.tt
 msgid "Service Management"
@@ -24984,4 +24985,3 @@ msgstr "Fehler beim Abruf von Mails%s. Bitte Kommunikationsprotokoll prüfen."
 #. XML Definition: Kernel/Config/Files/XML/Ticket.xml
 msgid "Defines available article actions for Web articles."
 msgstr "Legt verfügbare Artikel-Aktionen für Web-Artikel fest."
-
