@@ -1,4 +1,5 @@
 # 7.3.1 2025-??-??
+ - 2025-10-01 Fixed: Improved error logging when fetching emails.
  - 2025-10-02 PostMaster: Assign multiselect dynamic fields. Thanks to Christian Ullrich (@chrullrich). [PR#699](https://github.com/znuny/Znuny/pull/699)
  - 2025-10-02 Sector Nord AG: Fixed: Web Channel Actions. Thanks to @ArthurRitscher (Arthur Ritscher Sector Nord AG) [PR#717](https://github.com/znuny/Znuny/pull/717). Thanks for reporting to @MadsDane [#729](https://github.com/znuny/Znuny/issues/729).
  - 2025-10-01 Fixed: RichTextEditor uses wrong Instance in Core.Agent.TicketAction.js.
@@ -486,6 +487,9 @@
  - 2022-08-22 Core.UI.InputFields.js - Changed the behaviour of the Core.UI.InputFields.js. Now no fields are automatically enlarged or reduced.
  - 2022-08-08 Admin - Added counter of AdminSettingPages per widget and additional focus by filter.
  - 2022-07-15 Frontend::ToolBarModule - Refactored the Toolbar registration, position and view.
+
+# 6.5.19 2025-??-??
+ - 2025-10-01 Fixed: Improved error logging when fetching emails.
 
 # 6.5.18 2025-09-24
  - 2025-09-22 Fixed: Fix for installer email setting checks lead to issues with sending emails.

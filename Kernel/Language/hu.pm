@@ -32,7 +32,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%M-%D';
     $Self->{DateInputFormat}     = '%Y-%M-%D';
     $Self->{DateInputFormatLong} = '%Y-%M-%D - %T';
-    $Self->{Completeness}        = 0.875524024508223;
+    $Self->{Completeness}        = 0.875382879251975;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -3881,6 +3881,7 @@ sub Data {
 
         # Perl Module: Kernel/Modules/AdminMailAccount.pm
         'Mail account added!' => 'Levelezőfiók hozzáadva!',
+        'Error fetching mail%s, please check the Communication Log!' => '',
         'Email account fetch already fetched by another process. Please try again later!' =>
             'Az e-mail fiók lekérését egy másik folyamat már lekérte. Próbálja meg később újra!',
         'Dispatching by email To: field.' => 'Szétválogatás az e-mail címzett mezője szerint.',

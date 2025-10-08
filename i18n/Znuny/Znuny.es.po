@@ -24967,6 +24967,10 @@ msgstr ""
 msgid "OAuth2 token error: %s"
 msgstr ""
 
+#. Perl Module: Kernel/Modules/AdminMailAccount.pm
+msgid "Error fetching mail%s, please check the Communication Log!"
+msgstr "Error al traer correos%s, ¡por favor consulte el registro de comunicaciones!"
+
 #. XML Definition: Kernel/Config/Files/XML/Ticket.xml
 msgid "Defines available article actions for Web articles."
 msgstr ""

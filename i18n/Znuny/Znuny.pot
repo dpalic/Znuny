@@ -11247,6 +11247,10 @@ msgid "Mail account added!"
 msgstr ""
 
 #. Perl Module: Kernel/Modules/AdminMailAccount.pm
+msgid "Error fetching mail%s, please check the Communication Log!"
+msgstr ""
+
+#. Perl Module: Kernel/Modules/AdminMailAccount.pm
 msgid "Email account fetch already fetched by another process. Please try again later!"
 msgstr ""
 

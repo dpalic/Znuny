@@ -22,14 +22,14 @@ sub Data {
 
     # $$START$$
     # possible charsets
-    $Self->{Charset} = ['utf-8', ];
+    $Self->{Charset} = [];
     # date formats (%A=WeekDay;%B=LongMonth;%T=Time;%D=Day;%M=Month;%Y=Year;)
-    $Self->{DateFormat}          = '%D/%M/%Y %T';
-    $Self->{DateFormatLong}      = '%A %D %B %T %Y';
-    $Self->{DateFormatShort}     = '%D/%M/%Y';
-    $Self->{DateInputFormat}     = '%D/%M/%Y';
-    $Self->{DateInputFormatLong} = '%D/%M/%Y - %T';
-    $Self->{Completeness}        = 0.302483069977427;
+    $Self->{DateFormat}          = '';
+    $Self->{DateFormatLong}      = '';
+    $Self->{DateFormatShort}     = '';
+    $Self->{DateInputFormat}     = '';
+    $Self->{DateInputFormatLong} = '';
+    $Self->{Completeness}        = 0.302595518297598;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -3878,6 +3878,7 @@ sub Data {
 
         # Perl Module: Kernel/Modules/AdminMailAccount.pm
         'Mail account added!' => 'Conta de Mail adicionada!',
+        'Error fetching mail%s, please check the Communication Log!' => 'Erro ao obter e-mails%s, por favor verifique no log de comunicação.',
         'Email account fetch already fetched by another process. Please try again later!' =>
             '',
         'Dispatching by email To: field.' => 'Enviado através do campo de email Para:',

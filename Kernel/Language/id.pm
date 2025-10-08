@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D/%M/%Y';
     $Self->{DateInputFormat}     = '%D/%M/%Y';
     $Self->{DateInputFormatLong} = '%D/%M/%Y - %T';
-    $Self->{Completeness}        = 0.591744598516608;
+    $Self->{Completeness}        = 0.591649201999033;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -3877,6 +3877,7 @@ bin/znuny.Daemon.pl status\').',
 
         # Perl Module: Kernel/Modules/AdminMailAccount.pm
         'Mail account added!' => 'Akun surat telah di tambahkan!',
+        'Error fetching mail%s, please check the Communication Log!' => '',
         'Email account fetch already fetched by another process. Please try again later!' =>
             '',
         'Dispatching by email To: field.' => 'Pengiriman melalui email Kepada: bidang.',

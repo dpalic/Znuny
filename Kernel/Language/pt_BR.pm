@@ -23,20 +23,20 @@ sub Data {
 
     # $$START$$
     # possible charsets
-    $Self->{Charset} = ['utf-8', ];
+    $Self->{Charset} = [];
     # date formats (%A=WeekDay;%B=LongMonth;%T=Time;%D=Day;%M=Month;%Y=Year;)
-    $Self->{DateFormat}          = '%D/%M/%Y %T';
-    $Self->{DateFormatLong}      = '%A %D %B %T %Y';
-    $Self->{DateFormatShort}     = '%D/%M/%Y';
-    $Self->{DateInputFormat}     = '%D/%M/%Y';
-    $Self->{DateInputFormatLong} = '%D/%M/%Y - %T';
-    $Self->{Completeness}        = 0.841502741051274;
+    $Self->{DateFormat}          = '';
+    $Self->{DateFormatLong}      = '';
+    $Self->{DateFormatShort}     = '';
+    $Self->{DateInputFormat}     = '';
+    $Self->{DateInputFormatLong} = '';
+    $Self->{Completeness}        = 0.841528292761567;
 
     # csv separator
-    $Self->{Separator}         = ';';
+    $Self->{Separator}         = '';
 
-    $Self->{DecimalSeparator}  = ',';
-    $Self->{ThousandSeparator} = '.';
+    $Self->{DecimalSeparator}  = '';
+    $Self->{ThousandSeparator} = '';
     $Self->{Translation} = {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminACL.tt
@@ -3879,6 +3879,7 @@ sub Data {
 
         # Perl Module: Kernel/Modules/AdminMailAccount.pm
         'Mail account added!' => 'Conta de e-mail adicionada!',
+        'Error fetching mail%s, please check the Communication Log!' => 'Erro coletando e-mails%s, por favor verifique no log de comunicação.',
         'Email account fetch already fetched by another process. Please try again later!' =>
             'Captura de conta de e-mail já foi capturada por um outro processo. Por favor, tente novamente mais tarde!',
         'Dispatching by email To: field.' => 'Distribuição por e-mail por campo: "Para:"',

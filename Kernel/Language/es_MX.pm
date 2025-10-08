@@ -27,7 +27,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D/%M/%Y';
     $Self->{DateInputFormat}     = '%D/%M/%Y';
     $Self->{DateInputFormatLong} = '%D/%M/%Y - %T';
-    $Self->{Completeness}        = 0.713801999355047;
+    $Self->{Completeness}        = 0.713848137997743;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -3876,6 +3876,7 @@ sub Data {
 
         # Perl Module: Kernel/Modules/AdminMailAccount.pm
         'Mail account added!' => '¡Cuanta de correo agregada!',
+        'Error fetching mail%s, please check the Communication Log!' => 'Error al traer correos%s, ¡por favor consulte el registro de comunicaciones!',
         'Email account fetch already fetched by another process. Please try again later!' =>
             'La recuperación de la cuenta de correo electrónico ya fue ejecutada por otro proceso. ¡Por favor, inténtelo de nuevo más tarde!',
         'Dispatching by email To: field.' => 'Despachar por el campo Para: del correo electrónico.',

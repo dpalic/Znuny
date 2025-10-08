@@ -32,7 +32,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.87213801999355;
+    $Self->{Completeness}        = 0.871997420602934;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -3881,6 +3881,7 @@ sub Data {
 
         # Perl Module: Kernel/Modules/AdminMailAccount.pm
         'Mail account added!' => 'Dodat imejl nalog!',
+        'Error fetching mail%s, please check the Communication Log!' => '',
         'Email account fetch already fetched by another process. Please try again later!' =>
             'Trenutno drugi proces preuzima poštu imejl naloga. Molimo pokušajte kasnije.',
         'Dispatching by email To: field.' => 'Otpremanje putem imejla Za: polje.',
