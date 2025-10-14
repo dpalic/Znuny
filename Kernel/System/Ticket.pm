@@ -43,6 +43,7 @@ our @ObjectDependencies = (
     'Kernel::System::Lock',
     'Kernel::System::Log',
     'Kernel::System::Main',
+    'Kernel::System::Mention',
     'Kernel::System::Priority',
     'Kernel::System::Queue',
     'Kernel::System::SLA',
@@ -6799,12 +6800,9 @@ sub TicketWatchGet {
     }
 
     if ( $Param{Notify} ) {
+        my $UserObject = $Kernel::OM->Get('Kernel::System::User');
 
         for my $UserID ( sort keys %Data ) {
-
-            # get user object
-            my $UserObject = $Kernel::OM->Get('Kernel::System::User');
-
             my %UserData = $UserObject->GetUserData(
                 UserID => $UserID,
                 Valid  => 1,
@@ -6816,15 +6814,8 @@ sub TicketWatchGet {
         }
     }
 
-    # check result
     if ( $Param{Result} && $Param{Result} eq 'ARRAY' ) {
-
-        my @UserIDs;
-
-        for my $UserID ( sort keys %Data ) {
-            push @UserIDs, $UserID;
-        }
-
+        my @UserIDs = sort keys %Data;
         return @UserIDs;
     }
 

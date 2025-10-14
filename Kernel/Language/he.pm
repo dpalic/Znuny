@@ -29,7 +29,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D/%M/%Y';
     $Self->{DateInputFormat}     = '%D/%M/%Y';
     $Self->{DateInputFormatLong} = '%D/%M/%Y - %T';
-    $Self->{Completeness}        = 0.21828147670482;
+    $Self->{Completeness}        = 0.218246292714378;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -5654,6 +5654,7 @@ sub Data {
         'Removes old generic interface debug log entries created before the specified amount of days.' =>
             '',
         'Delete expired ticket draft entries.' => '',
+        'Remove closed tickets from agents\' ticket watch lists.' => '',
 
         # XML Definition: Kernel/Config/Files/XML/Framework.xml
         'Disables the web installer (http://yourhost.example.com/znuny/installer.pl), to prevent the system from being hijacked. If not enabled, the system can be reinstalled and the current basic configuration will be used to pre-populate the questions within the installer script. If enabled, it also disables the GenericAgent, PackageManager and SQL Box.' =>
