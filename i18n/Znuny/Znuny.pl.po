@@ -24986,6 +24986,10 @@ msgstr ""
 msgid "OAuth2 token error: %s"
 msgstr ""
 
+#. XML Definition: Kernel/Config/Files/XML/Daemon.xml
+msgid "Remove closed tickets from agents' ticket watch lists."
+msgstr ""
+
 #. Perl Module: Kernel/Modules/AdminMailAccount.pm
 msgid "Error fetching mail%s, please check the Communication Log!"
 msgstr ""
