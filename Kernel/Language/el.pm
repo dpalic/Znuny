@@ -28,7 +28,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.134107027724049;
+    $Self->{Completeness}        = 0.133977455716586;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -280,6 +280,8 @@ sub Data {
         'Queues ↔ Auto Responses' => '',
         'Auto Response Management' => 'Διαχείρηση Αυτόματων Απαντήσεων',
         'Edit Auto Response' => 'Τροποποίηση Αυτόματης Απάντησης',
+        'Do you really want to delete this %s?' => '',
+        'auto response' => '',
         'Response' => 'Απάντηση',
         'Auto response from' => '',
 
@@ -1986,6 +1988,7 @@ sub Data {
         'Overwrite existing salutations?' => '',
         'Salutation Management' => 'Διαχείριση προσφωνήσεων',
         'Edit Salutation' => '',
+        'salutation' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminSecureMode.tt
         'Secure Mode Needs to be Enabled!' => '',
@@ -2048,6 +2051,7 @@ sub Data {
         'Overwrite existing signatures?' => '',
         'Signature Management' => 'Διαχείριση υπογραφών',
         'Edit Signature' => '',
+        'signature' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminState.tt
         'Add State' => 'Προσθήκη Κατάστασης',
@@ -8222,6 +8226,10 @@ sub Data {
             '',
         'Attachment was deleted successfully.' => '',
 
+        # JS File: var/httpd/htdocs/js/Core.Agent.Admin.AutoResponse.js
+        'Delete this %s' => '',
+        'Deleting the %s and its data. This may take a while...' => '',
+
         # JS File: var/httpd/htdocs/js/Core.Agent.Admin.DBCRUD.js
         'Deleting the object and its data. This may take a while...' => '',
 
@@ -9439,6 +9447,7 @@ Thanks for your help!
         'Delete field',
         'Delete invoker',
         'Delete operation',
+        'Delete this %s',
         'Delete this Attachment',
         'Delete this Event Trigger',
         'Delete this Invoker',
@@ -9451,6 +9460,7 @@ Thanks for your help!
         'Delete this task',
         'Delete web service',
         'Deleting attachment...',
+        'Deleting the %s and its data. This may take a while...',
         'Deleting the field and its data. This may take a while...',
         'Deleting the mail account and its data. This may take a while...',
         'Deleting the object and its data. This may take a while...',

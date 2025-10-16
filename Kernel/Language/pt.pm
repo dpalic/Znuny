@@ -29,7 +29,7 @@ sub Data {
     $Self->{DateFormatShort}     = '';
     $Self->{DateInputFormat}     = '';
     $Self->{DateInputFormatLong} = '';
-    $Self->{Completeness}        = 0.302546744036106;
+    $Self->{Completeness}        = 0.302254428341385;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -281,6 +281,8 @@ sub Data {
         'Queues ↔ Auto Responses' => '',
         'Auto Response Management' => 'Gestão de Respostas Automáticas',
         'Edit Auto Response' => 'Editar auto resposta',
+        'Do you really want to delete this %s?' => '',
+        'auto response' => '',
         'Response' => 'Resposta',
         'Auto response from' => 'Remetente da auto resposta',
 
@@ -1983,6 +1985,7 @@ sub Data {
         'Overwrite existing salutations?' => '',
         'Salutation Management' => 'Gestão de Saudações',
         'Edit Salutation' => 'Editar saudação',
+        'salutation' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminSecureMode.tt
         'Secure Mode Needs to be Enabled!' => '',
@@ -2045,6 +2048,7 @@ sub Data {
         'Overwrite existing signatures?' => '',
         'Signature Management' => 'Gestão de Assinaturas',
         'Edit Signature' => 'Editar assinatura',
+        'signature' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminState.tt
         'Add State' => 'Adicionar estado',
@@ -8219,6 +8223,10 @@ sub Data {
             '',
         'Attachment was deleted successfully.' => '',
 
+        # JS File: var/httpd/htdocs/js/Core.Agent.Admin.AutoResponse.js
+        'Delete this %s' => '',
+        'Deleting the %s and its data. This may take a while...' => '',
+
         # JS File: var/httpd/htdocs/js/Core.Agent.Admin.DBCRUD.js
         'Deleting the object and its data. This may take a while...' => '',
 
@@ -9449,6 +9457,7 @@ Devemos voltar a estar online dentro de momentos.',
         'Delete field',
         'Delete invoker',
         'Delete operation',
+        'Delete this %s',
         'Delete this Attachment',
         'Delete this Event Trigger',
         'Delete this Invoker',
@@ -9461,6 +9470,7 @@ Devemos voltar a estar online dentro de momentos.',
         'Delete this task',
         'Delete web service',
         'Deleting attachment...',
+        'Deleting the %s and its data. This may take a while...',
         'Deleting the field and its data. This may take a while...',
         'Deleting the mail account and its data. This may take a while...',
         'Deleting the object and its data. This may take a while...',
