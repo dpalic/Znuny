@@ -1,4 +1,5 @@
 # 7.3.1 2025-??-??
+ - 2025-09-15 Fixed: Only able to delete Signatures, Salutations and Auto Responses after accepting popup.
  - 2025-10-14 Added new ToolBarModule 161-Ticket::AgentTicketProcessCategory.
  - 2025-10-01 Fixed: Improved error logging when fetching emails.
  - 2025-10-02 PostMaster: Assign multiselect dynamic fields. Thanks to Christian Ullrich (@chrullrich). [PR#699](https://github.com/znuny/Znuny/pull/699)

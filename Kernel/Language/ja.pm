@@ -30,7 +30,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y/%M/%D';
     $Self->{DateInputFormat}     = '%Y/%M/%D';
     $Self->{DateInputFormatLong} = '%Y/%M/%D - %T';
-    $Self->{Completeness}        = 0.667633784655061;
+    $Self->{Completeness}        = 0.666988727858293;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -282,6 +282,8 @@ sub Data {
         'Queues ↔ Auto Responses' => '',
         'Auto Response Management' => '自動応答管理',
         'Edit Auto Response' => '自動応答編集',
+        'Do you really want to delete this %s?' => '',
+        'auto response' => '',
         'Response' => '応答',
         'Auto response from' => '自動応答差出人',
 
@@ -1986,6 +1988,7 @@ sub Data {
         'Overwrite existing salutations?' => '',
         'Salutation Management' => '挨拶文管理',
         'Edit Salutation' => '挨拶文を編集',
+        'salutation' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminSecureMode.tt
         'Secure Mode Needs to be Enabled!' => 'セキュアモードを有効にしてください。',
@@ -2048,6 +2051,7 @@ sub Data {
         'Overwrite existing signatures?' => '',
         'Signature Management' => '署名管理',
         'Edit Signature' => '署名を編集',
+        'signature' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminState.tt
         'Add State' => 'ステータスを追加',
@@ -8232,6 +8236,10 @@ Contentはダイナミック・フィールドの形式によって設定内容�
             '添付ファイル削除時にエラーが発生しました。詳細はログを確認してください。',
         'Attachment was deleted successfully.' => '添付ファイルが正常に削除されました。',
 
+        # JS File: var/httpd/htdocs/js/Core.Agent.Admin.AutoResponse.js
+        'Delete this %s' => '',
+        'Deleting the %s and its data. This may take a while...' => '',
+
         # JS File: var/httpd/htdocs/js/Core.Agent.Admin.DBCRUD.js
         'Deleting the object and its data. This may take a while...' => '',
 
@@ -9459,6 +9467,7 @@ Thanks for your help!
         'Delete field',
         'Delete invoker',
         'Delete operation',
+        'Delete this %s',
         'Delete this Attachment',
         'Delete this Event Trigger',
         'Delete this Invoker',
@@ -9471,6 +9480,7 @@ Thanks for your help!
         'Delete this task',
         'Delete web service',
         'Deleting attachment...',
+        'Deleting the %s and its data. This may take a while...',
         'Deleting the field and its data. This may take a while...',
         'Deleting the mail account and its data. This may take a while...',
         'Deleting the object and its data. This may take a while...',

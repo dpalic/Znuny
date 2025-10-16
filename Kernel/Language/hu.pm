@@ -32,7 +32,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%M-%D';
     $Self->{DateInputFormat}     = '%Y-%M-%D';
     $Self->{DateInputFormatLong} = '%Y-%M-%D - %T';
-    $Self->{Completeness}        = 0.875241779497099;
+    $Self->{Completeness}        = 0.8743961352657;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -284,6 +284,8 @@ sub Data {
         'Queues ↔ Auto Responses' => 'Várólisták ↔ Automatikus válaszok',
         'Auto Response Management' => 'Automatikus válasz kezelés',
         'Edit Auto Response' => 'Automatikus válasz szerkesztése',
+        'Do you really want to delete this %s?' => '',
+        'auto response' => '',
         'Response' => 'Válasz',
         'Auto response from' => 'Automatikus válasz feladója',
 
@@ -1986,6 +1988,7 @@ sub Data {
         'Overwrite existing salutations?' => '',
         'Salutation Management' => 'Megszólítás kezelés',
         'Edit Salutation' => 'Megszólítás szerkesztése',
+        'salutation' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminSecureMode.tt
         'Secure Mode Needs to be Enabled!' => 'A biztonsági módot engedélyezni szükséges!',
@@ -2048,6 +2051,7 @@ sub Data {
         'Overwrite existing signatures?' => '',
         'Signature Management' => 'Aláírás kezelés',
         'Edit Signature' => 'Aláírás szerkesztése',
+        'signature' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminState.tt
         'Add State' => 'Állapot hozzáadása',
@@ -8222,6 +8226,10 @@ sub Data {
             'Hiba történt a melléklet törlésekor. További információkért nézze meg a naplókat.',
         'Attachment was deleted successfully.' => 'A melléklet sikeresen törölve lett.',
 
+        # JS File: var/httpd/htdocs/js/Core.Agent.Admin.AutoResponse.js
+        'Delete this %s' => '',
+        'Deleting the %s and its data. This may take a while...' => '',
+
         # JS File: var/httpd/htdocs/js/Core.Agent.Admin.DBCRUD.js
         'Deleting the object and its data. This may take a while...' => '',
 
@@ -9450,6 +9458,7 @@ Az Ön segélyszolgálat csapata
         'Delete field',
         'Delete invoker',
         'Delete operation',
+        'Delete this %s',
         'Delete this Attachment',
         'Delete this Event Trigger',
         'Delete this Invoker',
@@ -9462,6 +9471,7 @@ Az Ön segélyszolgálat csapata
         'Delete this task',
         'Delete web service',
         'Deleting attachment...',
+        'Deleting the %s and its data. This may take a while...',
         'Deleting the field and its data. This may take a while...',
         'Deleting the mail account and its data. This may take a while...',
         'Deleting the object and its data. This may take a while...',
