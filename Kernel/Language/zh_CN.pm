@@ -33,7 +33,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y.%M.%D';
     $Self->{DateInputFormat}     = '%Y.%M.%D';
     $Self->{DateInputFormatLong} = '%Y.%M.%D - %T';
-    $Self->{Completeness}        = 0.875241779497099;
+    $Self->{Completeness}        = 0.8743961352657;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -285,6 +285,8 @@ sub Data {
         'Queues ↔ Auto Responses' => '队列 ↔ 自动回复',
         'Auto Response Management' => '自动响应管理',
         'Edit Auto Response' => '编辑自动响应',
+        'Do you really want to delete this %s?' => '',
+        'auto response' => '',
         'Response' => '回复内容',
         'Auto response from' => '自动响应的发件人',
 
@@ -1987,6 +1989,7 @@ sub Data {
         'Overwrite existing salutations?' => '',
         'Salutation Management' => '问候语管理',
         'Edit Salutation' => '编辑问候语',
+        'salutation' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminSecureMode.tt
         'Secure Mode Needs to be Enabled!' => '需要启用安全模式！',
@@ -2049,6 +2052,7 @@ sub Data {
         'Overwrite existing signatures?' => '',
         'Signature Management' => '签名管理',
         'Edit Signature' => '编辑签名',
+        'signature' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminState.tt
         'Add State' => '添加工单状态',
@@ -8223,6 +8227,10 @@ sub Data {
             '删除附件时出错。 请检查日志以获取更多信息。',
         'Attachment was deleted successfully.' => '附件已成功删除。',
 
+        # JS File: var/httpd/htdocs/js/Core.Agent.Admin.AutoResponse.js
+        'Delete this %s' => '',
+        'Deleting the %s and its data. This may take a while...' => '',
+
         # JS File: var/httpd/htdocs/js/Core.Agent.Admin.DBCRUD.js
         'Deleting the object and its data. This may take a while...' => '',
 
@@ -9450,6 +9458,7 @@ Thanks for your help!
         'Delete field',
         'Delete invoker',
         'Delete operation',
+        'Delete this %s',
         'Delete this Attachment',
         'Delete this Event Trigger',
         'Delete this Invoker',
@@ -9462,6 +9471,7 @@ Thanks for your help!
         'Delete this task',
         'Delete web service',
         'Deleting attachment...',
+        'Deleting the %s and its data. This may take a while...',
         'Deleting the field and its data. This may take a while...',
         'Deleting the mail account and its data. This may take a while...',
         'Deleting the object and its data. This may take a while...',

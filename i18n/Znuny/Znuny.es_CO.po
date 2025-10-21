@@ -24961,3 +24961,27 @@ msgstr "Error al traer correos%s, ¡por favor consulte el registro de comunicaci
 msgid "Defines available article actions for Web articles."
 msgstr ""
 
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminAutoResponse.tt
+msgid "Do you really want to delete this %s?"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminAutoResponse.tt
+msgid "auto response"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminSalutation.tt
+msgid "salutation"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminSignature.tt
+msgid "signature"
+msgstr ""
+
+#. JS File: var/httpd/htdocs/js/Core.Agent.Admin.AutoResponse.js
+msgid "Delete this %s"
+msgstr ""
+
+#. JS File: var/httpd/htdocs/js/Core.Agent.Admin.AutoResponse.js
+msgid "Deleting the %s and its data. This may take a while..."
+msgstr ""
+

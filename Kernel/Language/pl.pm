@@ -30,7 +30,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%M-%D';
     $Self->{DateInputFormat}     = '%Y-%M-%D';
     $Self->{DateInputFormatLong} = '%Y-%M-%D - %T';
-    $Self->{Completeness}        = 0.645390070921986;
+    $Self->{Completeness}        = 0.644766505636071;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -282,6 +282,8 @@ sub Data {
         'Queues ↔ Auto Responses' => 'Kolejki ↔ Odpowiedzi Automatyczne',
         'Auto Response Management' => 'Zarządzanie automatycznymi odpowiedziami',
         'Edit Auto Response' => 'Edytuj automatyczną odpowiedź',
+        'Do you really want to delete this %s?' => '',
+        'auto response' => '',
         'Response' => 'Odpowiedź',
         'Auto response from' => 'Automatyczna odpowiedź od',
 
@@ -1985,6 +1987,7 @@ sub Data {
         'Overwrite existing salutations?' => '',
         'Salutation Management' => 'Zarządzanie powitaniami',
         'Edit Salutation' => 'Edytuj powitanie',
+        'salutation' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminSecureMode.tt
         'Secure Mode Needs to be Enabled!' => '',
@@ -2047,6 +2050,7 @@ sub Data {
         'Overwrite existing signatures?' => '',
         'Signature Management' => 'Konfiguracja podpisów',
         'Edit Signature' => 'Edytuj podpis',
+        'signature' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminState.tt
         'Add State' => 'Dodaj stan',
@@ -8221,6 +8225,10 @@ sub Data {
             '',
         'Attachment was deleted successfully.' => 'Załącznik został pomyślnie usunięty.',
 
+        # JS File: var/httpd/htdocs/js/Core.Agent.Admin.AutoResponse.js
+        'Delete this %s' => '',
+        'Deleting the %s and its data. This may take a while...' => '',
+
         # JS File: var/httpd/htdocs/js/Core.Agent.Admin.DBCRUD.js
         'Deleting the object and its data. This may take a while...' => '',
 
@@ -9448,6 +9456,7 @@ Twój Zespół Helpdesk.
         'Delete field',
         'Delete invoker',
         'Delete operation',
+        'Delete this %s',
         'Delete this Attachment',
         'Delete this Event Trigger',
         'Delete this Invoker',
@@ -9460,6 +9469,7 @@ Twój Zespół Helpdesk.
         'Delete this task',
         'Delete web service',
         'Deleting attachment...',
+        'Deleting the %s and its data. This may take a while...',
         'Deleting the field and its data. This may take a while...',
         'Deleting the mail account and its data. This may take a while...',
         'Deleting the object and its data. This may take a while...',

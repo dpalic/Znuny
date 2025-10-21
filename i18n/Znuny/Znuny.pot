@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2025-10-01 10:28+0000\n"
+"POT-Creation-Date: 2025-10-13 19:25+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -788,6 +788,14 @@ msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminAutoResponse.tt
 msgid "Edit Auto Response"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminAutoResponse.tt
+msgid "Do you really want to delete this %s?"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminAutoResponse.tt
+msgid "auto response"
 msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminAutoResponse.tt
@@ -5978,6 +5986,10 @@ msgstr ""
 msgid "Edit Salutation"
 msgstr ""
 
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminSalutation.tt
+msgid "salutation"
+msgstr ""
+
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminSecureMode.tt
 msgid "Secure Mode Needs to be Enabled!"
 msgstr ""
@@ -6152,6 +6164,10 @@ msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminSignature.tt
 msgid "Edit Signature"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminSignature.tt
+msgid "signature"
 msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminState.tt
@@ -21236,6 +21252,14 @@ msgstr ""
 
 #. JS File: var/httpd/htdocs/js/Core.Agent.Admin.Attachment.js
 msgid "Attachment was deleted successfully."
+msgstr ""
+
+#. JS File: var/httpd/htdocs/js/Core.Agent.Admin.AutoResponse.js
+msgid "Delete this %s"
+msgstr ""
+
+#. JS File: var/httpd/htdocs/js/Core.Agent.Admin.AutoResponse.js
+msgid "Deleting the %s and its data. This may take a while..."
 msgstr ""
 
 #. JS File: var/httpd/htdocs/js/Core.Agent.Admin.DBCRUD.js
