@@ -4354,8 +4354,13 @@ sub ConfigurationSearch {
         SEARCHTERM:
         for my $SearchTerm (@SearchTerms) {
 
+            # Split on asterisks, quote each part, join with .*
+            # We need this way to make sure that SearchPattern will be valid
+            my @Parts         = split /\*/, $SearchTerm;
+            my $SearchPattern = join '.*', map {"\Q$_\E"} @Parts;
+
             # do not search with the x and/or g modifier as it would produce wrong search results!
-            if ( $Settings{$SettingName}->{Metadata} =~ m{\Q$SearchTerm\E}msi ) {
+            if ( $Settings{$SettingName}->{Metadata} =~ m{$SearchPattern}msi ) {
 
                 next SEARCHTERM if $Result{$SettingName};
 
