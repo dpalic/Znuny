@@ -2010,7 +2010,7 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminService.tt
         'Add Service' => 'Service hinzufügen',
-        'Configure Service Visibility and Defaults' => 'Serivce-Sichtbarkeit und Standardeinstellungen konfigurieren',
+        'Configure Service Visibility and Defaults' => 'Service-Sichtbarkeit und Standardeinstellungen konfigurieren',
         'Service Management' => 'Service-Verwaltung',
         'Edit Service' => 'Service bearbeiten',
         'Service name maximum length is 200 characters (with Sub-service).' =>
