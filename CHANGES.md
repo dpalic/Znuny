@@ -1,4 +1,5 @@
 # 7.3.1 2025-??-??
+ - 2025-10-21 Fixed: Console commands are not loaded/listed if they are located in the /Custom directory.
  - 2025-09-15 Fixed: Only able to delete Signatures, Salutations and Auto Responses after accepting popup.
  - 2025-10-14 Added new ToolBarModule 161-Ticket::AgentTicketProcessCategory.
  - 2025-10-01 Fixed: Improved error logging when fetching emails.
