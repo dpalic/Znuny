@@ -1,15 +1,15 @@
 # 7.3.1 2025-??-??
  - 2025-10-21 Added wildcard `*` support to system configuration setting search.
  - 2025-10-21 Fixed: Console commands are not loaded/listed if they are located in the /Custom directory.
- - 2025-09-15 Fixed: Only able to delete Signatures, Salutations and Auto Responses after accepting popup.
  - 2025-10-14 Added new ToolBarModule 161-Ticket::AgentTicketProcessCategory.
- - 2025-10-01 Fixed: Improved error logging when fetching emails.
  - 2025-10-02 PostMaster: Assign multiselect dynamic fields. Thanks to Christian Ullrich (@chrullrich). [PR#699](https://github.com/znuny/Znuny/pull/699)
  - 2025-10-02 Sector Nord AG: Fixed: Web Channel Actions. Thanks to @ArthurRitscher (Arthur Ritscher Sector Nord AG) [PR#717](https://github.com/znuny/Znuny/pull/717). Thanks for reporting to @MadsDane [#729](https://github.com/znuny/Znuny/issues/729).
+ - 2025-10-01 Fixed: Improved error logging when fetching emails.
  - 2025-10-01 Fixed: RichTextEditor uses wrong Instance in Core.Agent.TicketAction.js.
  - 2025-09-25 Sector Nord AG: Fixed misplaced attachment tooltip. Thanks to @LuBroering (Lukas Bröring Sector Nord AG) [PR#692](https://github.com/znuny/Znuny/pull/692).
  - 2025-09-25 SectorNord AG: Fixed: Problem filtering by Owner in the ticket view. Thanks for reporting to @giovanna-bolsoni [#698](https://github.com/znuny/Znuny/issues/698). Thanks to @LuBroering (Lukas Bröring Sector Nord AG) [PR#703](https://github.com/znuny/Znuny/pull/703).
  - 2025-09-25 Added 'Prio' Param to AgentTicketZoom MenuModules for individual sorting. Thanks for reporting and fixing to @itweserems [#646](https://github.com/znuny/Znuny/issues/646) [PR#647](https://github.com/znuny/Znuny/pull/647).
+ - 2025-09-15 Fixed: Only able to delete Signatures, Salutations and Auto Responses after accepting popup.
 
 # 7.2.3 2025-09-24
  - 2025-09-22 Fixed: Fix for installer email setting checks lead to issues with sending emails.
