@@ -1,4 +1,5 @@
 # 7.3.1 2025-??-??
+ - 2025-10-28 Fixed: Breadcrumb now loads immediately when switching System Configuration groups via Ajax.
  - 2025-10-21 Added wildcard `*` support to system configuration setting search.
  - 2025-10-21 Fixed: Console commands are not loaded/listed if they are located in the /Custom directory.
  - 2025-10-14 Added new ToolBarModule 161-Ticket::AgentTicketProcessCategory.
