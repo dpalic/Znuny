@@ -1260,8 +1260,8 @@ sub MaskAgentZoom {
 
                 for my $SubItem (
                     sort {
-                        ( $ZoomMenuItems{$Item}->{Items}->{$a}->{Priority} // 999 )
-                            <=> ( $ZoomMenuItems{$Item}->{Items}->{$b}->{Priority} // 999 )
+                        ( $ZoomMenuItems{$Item}->{Items}->{$a}->{Prio} // 999 )
+                            <=> ( $ZoomMenuItems{$Item}->{Items}->{$b}->{Prio} // 999 )
                     } keys %{ $ZoomMenuItems{$Item}->{Items} }
                     )
                 {
