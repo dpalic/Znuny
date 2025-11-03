@@ -1,5 +1,6 @@
 # 7.3.1 2025-??-??
  - 2025-10-31 Fixed: ProcessPrint. When printing the process, it produces empty results.
+ - 2025-10-29 Fixed: Parameter error in Kernel::System::Web::UploadCache does not try to dereference undef.
  - 2025-10-28 Fixed: Breadcrumb now loads immediately when switching System Configuration groups via Ajax.
  - 2025-10-21 Fixed: Issue with "Title" field on customer login screen where it wasn't set for new customer user at all.
  - 2025-10-21 Added wildcard `*` support to system configuration setting search.
