@@ -9,6 +9,7 @@
  - 2025-10-02 Sector Nord AG: Fixed: Web Channel Actions. Thanks to @ArthurRitscher (Arthur Ritscher Sector Nord AG) [PR#717](https://github.com/znuny/Znuny/pull/717). Thanks for reporting to @MadsDane [#729](https://github.com/znuny/Znuny/issues/729).
  - 2025-10-01 Fixed: Improved error logging when fetching emails.
  - 2025-10-01 Fixed: RichTextEditor uses wrong Instance in Core.Agent.TicketAction.js.
+ - 2025-09-25 Fixed: Queue selection in customer ticket dialog now cannot be set empty anymore.
  - 2025-09-25 Sector Nord AG: Fixed misplaced attachment tooltip. Thanks to @LuBroering (Lukas Bröring Sector Nord AG) [PR#692](https://github.com/znuny/Znuny/pull/692).
  - 2025-09-25 SectorNord AG: Fixed: Problem filtering by Owner in the ticket view. Thanks for reporting to @giovanna-bolsoni [#698](https://github.com/znuny/Znuny/issues/698). Thanks to @LuBroering (Lukas Bröring Sector Nord AG) [PR#703](https://github.com/znuny/Znuny/pull/703).
  - 2025-09-25 Added 'Prio' Param to AgentTicketZoom MenuModules for individual sorting. Thanks for reporting and fixing to @itweserems [#646](https://github.com/znuny/Znuny/issues/646) [PR#647](https://github.com/znuny/Znuny/pull/647).
