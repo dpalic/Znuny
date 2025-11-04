@@ -247,6 +247,10 @@ did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.
     width: 80%;
 }
 
+.Dialog.modal-fit-content {
+    width: fit-content;
+}
+
 .Dialog .Content {
     display: flex;
     flex-direction: column;
