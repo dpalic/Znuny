@@ -24987,3 +24987,19 @@ msgstr ""
 msgid "Deleting the %s and its data. This may take a while..."
 msgstr ""
 
+#. JS Template: Kernel/Output/JavaScript/Templates/Standard/Agent/TicketZoom/CopyTicketNumber/Icon.html.tmpl
+msgid "Copy ticket information"
+msgstr ""
+
+#. JS Template: Kernel/Output/JavaScript/Templates/Standard/Agent/TicketZoom/CopyTicketNumber/Menu.html.tmpl
+msgid "Copy Ticket Number"
+msgstr ""
+
+#. JS Template: Kernel/Output/JavaScript/Templates/Standard/Agent/TicketZoom/CopyTicketNumber/Menu.html.tmpl
+msgid "Copy Ticket Number + Title"
+msgstr ""
+
+#. JS File: var/httpd/htdocs/js/Core.Agent.CopyTicketNumber.js
+msgid "Copied to clipboard!"
+msgstr ""
+
