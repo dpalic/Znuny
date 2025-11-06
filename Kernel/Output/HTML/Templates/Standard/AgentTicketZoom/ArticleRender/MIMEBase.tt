@@ -217,7 +217,7 @@ function CheckIFrameHeight(IFrameID) {
                                 if (value.includes('invert')) {
                                     var frame = document.getElementById('Iframe[% Data.ArticleID | html %]');
                                     var node = document.createElement('style');
-                                    node.appendChild(document.createTextNode('img, video, svg {filter: invert(180%)hue-rotate(180deg);}'));
+                                    node.appendChild(document.createTextNode('img, video, svg {filter: invert(180%)hue-rotate(180deg) !important;}'));
                                     frame.contentWindow.document.head.appendChild(node);
                                 }
                             });
