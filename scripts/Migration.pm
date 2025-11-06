@@ -222,16 +222,8 @@ sub _TasksGet {
             Module  => 'scripts::Migration::Base::DatabaseDefaultStorageEngineCheck',
         },
         {
-            Message => 'Check if CKEditor migration related entities have been backed up',
-            Module  => 'scripts::Migration::Znuny::CKEditorEntitiesBackupCheck',
-        },
-        {
             Message => 'Upgrade database structure',
             Module  => 'scripts::Migration::Znuny::UpgradeDatabaseStructure',
-        },
-        {
-            Message => 'Alter old entry to avoid conflicts with MariaDB. (AjaxAttachment -> AJAXAttachment)',
-            Module  => 'scripts::Migration::Znuny::UpgradeAJAXAttachmentSysConfig',
         },
         {
             Message => 'Migrate database to utf8mb4',
@@ -250,24 +242,8 @@ sub _TasksGet {
             Module  => 'scripts::Migration::Znuny::MigrateDBCRUDUUIDColumns',
         },
         {
-            Message => 'Migrate notification events',
-            Module  => 'scripts::Migration::Znuny::MigrateNotificationEvents',
-        },
-        {
-            Message => 'Integrate Znuny-MarkTicketSeenUnseen',
-            Module  => 'scripts::Migration::Znuny::IntegrateZnunyMarkTicketSeenUnseen',
-        },
-        {
-            Message => 'Integrate Znuny-Translations',
-            Module  => 'scripts::Migration::Znuny::IntegrateZnunyTranslations',
-        },
-        {
             Message => 'Migrate SysConfig settings',
             Module  => 'scripts::Migration::Znuny::MigrateSysConfigSettings',
-        },
-        {
-            Message => 'Migrate CKEditor from version 4 to 5',
-            Module  => 'scripts::Migration::Znuny::MigrateCKEditorContent',
         },
 
         # NOTE: UninstallMergedPackages has to be called only after

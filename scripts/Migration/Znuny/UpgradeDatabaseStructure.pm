@@ -36,26 +36,13 @@ sub Run {
     my $Verbose = $Param{CommandlineOptions}->{Verbose} || 0;
 
     my @Tasks = (
-        {
-            Message => 'Increase size of columns of database table search_profile.',
-            Module  => 'SearchProfile',
-        },
-        {
-            Message => 'Create new communication channel Web.',
-            Module  => 'CreateCommunicationChannelWeb',
-        },
-        {
-            Message => 'Create database table translation.',
-            Module  => 'Translation',
-        },
-        {
-            Message => 'Create database table article_color.',
-            Module  => 'ArticleColor',
-        },
-        {
-            Message => 'Create table for user process preferences support.',
-            Module  => 'ProcessPreferences',
-        },
+
+        # TODO: Add your Task here.
+        # {
+        #     Message => 'Message.',
+        #     Module  => 'Module',
+        # },
+
     );
 
     return 1   if !@Tasks;

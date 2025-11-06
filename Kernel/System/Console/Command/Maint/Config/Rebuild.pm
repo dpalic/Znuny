@@ -24,7 +24,7 @@ our @ObjectDependencies = (
 sub Configure {
     my ( $Self, %Param ) = @_;
 
-    $Self->Description('Rebuild the system configuration of OTRS.');
+    $Self->Description('Rebuild the system configuration of Znuny.');
 
     $Self->AddOption(
         Name        => 'cleanup',
