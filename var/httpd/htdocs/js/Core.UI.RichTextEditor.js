@@ -790,9 +790,6 @@ Core.UI.RichTextEditor = (function (TargetNS) {
                     Change,
                     ImageElement,
                     Index;
-                if (editor.getData() != "") {
-                    $("#" + editor.ElementId).val(editor.getData());
-                }
 
                 // Listen to any image insert upload, then apply it's alignment
                 // to "alignBlockLeft" as it's not possible via config of image
@@ -1051,6 +1048,26 @@ Core.UI.RichTextEditor = (function (TargetNS) {
      */
     TargetNS.GetInstance = function (FieldID) {
         return CKEditorInstances[FieldID];
+    }
+
+    /**
+     * @name SynchronizeHiddenField
+     * @memberof Core.UI.RichTextEditor
+     * @function
+     * @returns {Boolean} Success result of synchronization.
+     * @param {String} FieldID - The field identifier of the element that is a rich text editor.
+     * @description
+     *      This function synchronizes data between hidden textarea field and RTE instance it is initialized/built on.
+     */
+    TargetNS.SynchronizeHiddenField = function (FieldID) {
+        var CKEInstance = TargetNS.GetInstance(FieldID);
+
+        if (CKEInstance !== undefined) {
+            CKEInstance.updateSourceElement();
+            return true;
+        }
+
+        return false;
     }
 
     /**

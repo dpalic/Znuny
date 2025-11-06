@@ -8,6 +8,7 @@
  - 2025-10-21 Fixed: Issue with "Title" field on customer login screen where it wasn't set for new customer user at all.
  - 2025-10-21 Added wildcard `*` support to system configuration setting search.
  - 2025-10-21 Fixed: Console commands are not loaded/listed if they are located in the /Custom directory.
+ - 2025-10-20 Fixed: Removed unnecessary synchronization of hidden text area with RTE instance due to performance issues. Thanks for reporting to @PrimeYeti. [#721](https://github.com/znuny/Znuny/issues/721).
  - 2025-10-14 Added new ToolBarModule 161-Ticket::AgentTicketProcessCategory.
  - 2025-10-02 PostMaster: Assign multiselect dynamic fields. Thanks to Christian Ullrich (@chrullrich). [PR#699](https://github.com/znuny/Znuny/pull/699)
  - 2025-10-02 Sector Nord AG: Fixed: Web Channel Actions. Thanks to @ArthurRitscher (Arthur Ritscher Sector Nord AG) [PR#717](https://github.com/znuny/Znuny/pull/717). Thanks for reporting to @MadsDane [#729](https://github.com/znuny/Znuny/issues/729).
