@@ -1,4 +1,5 @@
 # 7.3.1 2025-??-??
+ - 2025-11-06 Fixed: CustomerShortcutIconCustom config not working. Thanks to Daylton Rodrigues (@dayltonr) for reporting. [#737](https://github.com/znuny/Znuny/issues/737).
  - 2025-11-06 Fixed: Images in articles are inverted in Dark Skin. Thanks for reporting to @Vocta1310 [#724](https://github.com/znuny/Znuny/issues/724).
  - 2025-11-05 Integrated package Znuny-CopyTicketNumber.
  - 2025-10-31 Fixed: ProcessPrint. When printing the process, it produces empty results.
