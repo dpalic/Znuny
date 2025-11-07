@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D/%M/%Y';
     $Self->{DateInputFormat}     = '%D/%M/%Y';
     $Self->{DateInputFormatLong} = '%D/%M/%Y - %T';
-    $Self->{Completeness}        = 0.590601866752494;
+    $Self->{Completeness}        = 0.590506838294449;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -7754,6 +7754,8 @@ bin/znuny.Daemon.pl status\').',
             '',
         'Configures a default TicketDynamicField setting. "Name" defines the dynamic field which should be used, "Value" is the data that will be set, and "Event" defines the trigger event. Please check the developer manual (https://doc.znuny.org/manual/developer/), chapter "Ticket Event Module".' =>
             'Mengkonfigurasi TicketDynamicField pengaturan default. "Nama" mendefinisikan bidang yang dinamis yang harus digunakan, "Value" adalah data yang akan ditetapkan, dan "Event" mendefinisikan acara pemicu. Silakan periksa pengembang user (https://doc.znuny.org/manual/developer/), bab "Ticket acara Modul".',
+        'Defines the default search filter for the ticket merge screen. This filter is applied when searching for tickets to merge with. The StateType filter limits the search to tickets with specific states (new, open, closed, pending reminder, pending auto). Additional filters can be added dynamically.' =>
+            '',
         'Defines the list of types for templates.' => 'Mendefinisikan jenis urutan template',
         'List of default Standard Templates which are assigned automatically to new Queues upon creation.' =>
             'Daftar default Standar Template yang ditugaskan secara otomatis ke Antrian baru pada penciptaan.',
