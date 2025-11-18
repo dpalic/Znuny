@@ -1436,6 +1436,7 @@ sub _GetParam {
     $GetParam{ResponsibleAll} = $ParamObject->GetParam( Param => 'ResponsibleAll' );
     $GetParam{OwnerAll}       = $ParamObject->GetParam( Param => 'OwnerAll' );
     $GetParam{ElementChanged} = $ParamObject->GetParam( Param => 'ElementChanged' );
+    $GetParam{LinkTarget}     = $ParamObject->GetParam( Param => 'LinkTarget' );
 
     return \%GetParam;
 }
@@ -1694,17 +1695,16 @@ sub _OutputActivityDialog {
         $MainBoxClass = 'MainBox';
     }
 
+    my $Process = $ProcessObject->ProcessGet(
+        ProcessEntityID => $Param{ProcessEntityID},
+    );
+
     # display process information
     if ( $Self->{IsMainWindow} ) {
 
         # output SidebarColumn
         $LayoutObject->Block(
             Name => 'SidebarColumn',
-        );
-
-        # get process data
-        my $Process = $ProcessObject->ProcessGet(
-            ProcessEntityID => $Param{ProcessEntityID},
         );
 
         # output main process information
@@ -1808,6 +1808,7 @@ sub _OutputActivityDialog {
             IsMainWindow    => $Self->{IsMainWindow},
             IsProcessEnroll => $Self->{IsProcessEnroll},
             MainBoxClass    => $MainBoxClass || '',
+            LinkTarget      => $Process->{LinkTarget},
         },
     );
 
@@ -4826,7 +4827,8 @@ sub _RenderType {
 sub _StoreActivityDialog {
     my ( $Self, %Param ) = @_;
 
-    my $TicketID = $Param{GetParam}->{TicketID};
+    my $TicketID   = $Param{GetParam}->{TicketID};
+    my $LinkTarget = $Param{GetParam}->{LinkTarget} || '';
     my $ProcessStartpoint;
     my %Ticket;
     my $ProcessEntityID;
@@ -5976,8 +5978,13 @@ sub _StoreActivityDialog {
         );
     }
 
+    my $URL = "Action=AgentTicketZoom;TicketID=$TicketID";
+
+    return $LayoutObject->PopupClose(
+        URL => $URL,
+    ) if ( $LinkTarget eq 'AsPopup' );
     return $LayoutObject->Redirect(
-        OP => "Action=AgentTicketZoom;TicketID=$TicketID",
+        OP => $URL,
     );
 }
 

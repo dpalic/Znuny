@@ -1188,6 +1188,7 @@ sub _GetParam {
     $GetParam{ResponsibleAll} = $ParamObject->GetParam( Param => 'ResponsibleAll' );
     $GetParam{OwnerAll}       = $ParamObject->GetParam( Param => 'OwnerAll' );
     $GetParam{ElementChanged} = $ParamObject->GetParam( Param => 'ElementChanged' );
+    $GetParam{LinkTarget}     = $ParamObject->GetParam( Param => 'LinkTarget' );
 
     return \%GetParam;
 }
@@ -1473,6 +1474,11 @@ sub _OutputActivityDialog {
         }
     }
 
+    my $Process = $ProcessObject->ProcessGet(
+        ProcessEntityID => $Param{ProcessEntityID},
+        Preferences     => 0,
+    );
+
     $Output .= $LayoutObject->Output(
         TemplateFile => 'ProcessManagement/CustomerActivityDialogHeader',
         Data         => {
@@ -1491,6 +1497,7 @@ sub _OutputActivityDialog {
                 },
             IsMainWindow => $Self->{IsMainWindow},
             MainBoxClass => $MainBoxClass || '',
+            LinkTarget   => $Process->{LinkTarget},
         },
     );
 
@@ -3387,7 +3394,8 @@ sub _RenderType {
 sub _StoreActivityDialog {
     my ( $Self, %Param ) = @_;
 
-    my $TicketID = $Param{GetParam}->{TicketID};
+    my $TicketID   = $Param{GetParam}->{TicketID};
+    my $LinkTarget = $Param{GetParam}->{LinkTarget} || '';
     my $ProcessStartpoint;
     my %Ticket;
     my $ProcessEntityID;
@@ -4173,8 +4181,13 @@ sub _StoreActivityDialog {
         );
     }
 
+    my $URL = "Action=CustomerTicketZoom;TicketID=$TicketID";
+
+    return $LayoutObject->PopupClose(
+        URL => $URL,
+    ) if ( $LinkTarget eq 'AsPopup' );
     return $LayoutObject->Redirect(
-        OP => "Action=CustomerTicketZoom;TicketID=$TicketID",
+        OP => $URL,
     );
 }
 
