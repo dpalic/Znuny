@@ -1,4 +1,5 @@
 # 7.3.1 2025-??-??
+ - 2025-11-21 Fixed: Resource module displays deactivated Agents.
  - 2025-11-17 Fixed: Added rule to fix Firefox browser that does not wrap overflow text by default while displaying article content in AgentTicketZoom.
  - 2025-11-07 Added configurable filter for ticket search to ticket merge dialog (AgentTicketMerge).
  - 2025-11-06 Fixed: CustomerShortcutIconCustom config not working. Thanks to Daylton Rodrigues (@dayltonr) for reporting. [#737](https://github.com/znuny/Znuny/issues/737).
