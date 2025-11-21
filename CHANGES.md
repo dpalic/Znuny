@@ -1,4 +1,5 @@
 # 7.3.1 2025-??-??
+ - 2025-11-17 Fixed: Added rule to fix Firefox browser that does not wrap overflow text by default while displaying article content in AgentTicketZoom.
  - 2025-11-07 Added configurable filter for ticket search to ticket merge dialog (AgentTicketMerge).
  - 2025-11-06 Fixed: CustomerShortcutIconCustom config not working. Thanks to Daylton Rodrigues (@dayltonr) for reporting. [#737](https://github.com/znuny/Znuny/issues/737).
  - 2025-11-06 Fixed: Images in articles are inverted in Dark Skin. Thanks for reporting to @Vocta1310 [#724](https://github.com/znuny/Znuny/issues/724).

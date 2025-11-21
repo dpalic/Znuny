@@ -276,10 +276,13 @@ div.Headline .Flag {
 #ArticleItems .ArticleHTML,
 #ArticleItems .ArticleBody {
     -webkit-overflow-scrolling: touch;
-   margin-left: 0;
-   margin-right: 0;
-   position: relative;
-   word-break: break-all;
+    margin-left: 0;
+    margin-right: 0;
+    position: relative;
+    word-break: break-all;
+
+    /* fix for Firefox that does not wrap overflow text by default */
+    overflow-wrap: anywhere;
 }
 
 #ArticleItems .Incoming .ArticleMailContentHTMLWrapper,
