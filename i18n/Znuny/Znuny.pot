@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2025-11-07 10:43+0000\n"
+"POT-Creation-Date: 2025-11-14 13:40+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -7487,7 +7487,7 @@ msgid "Go back to editing this agent"
 msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentPreferences.tt
-msgid "Set up your personal preferences. Save each setting by clicking the checkmark on the right."
+msgid "Set up your personal preferences. Save each setting by clicking \"Save setting\" button."
 msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentPreferences.tt

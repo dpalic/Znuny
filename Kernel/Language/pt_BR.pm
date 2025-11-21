@@ -30,7 +30,7 @@ sub Data {
     $Self->{DateFormatShort}     = '';
     $Self->{DateInputFormat}     = '';
     $Self->{DateInputFormatLong} = '';
-    $Self->{Completeness}        = 0.839903459372486;
+    $Self->{Completeness}        = 0.839742558326629;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -2530,8 +2530,8 @@ sub Data {
         'Please note: you\'re currently editing the preferences of %s.' =>
             'Observe que você está editando a preferência %s no momento.',
         'Go back to editing this agent' => 'Retornar para a edição deste agente',
-        'Set up your personal preferences. Save each setting by clicking the checkmark on the right.' =>
-            'Defina suas preferências pessoais. Salve cada alteração ao clicar no ícone de verificação à direita.',
+        'Set up your personal preferences. Save each setting by clicking "Save setting" button.' =>
+            '',
         'You can use the navigation tree below to only show settings from certain groups.' =>
             'Você pode utilizar a árvore de navegação abaixo para mostrar apenas as definições de determinados grupos.',
         'Dynamic Actions' => 'Ações Dinâmicas',

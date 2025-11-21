@@ -2532,7 +2532,7 @@ sub Data {
         'Please note: you\'re currently editing the preferences of %s.' =>
             '',
         'Go back to editing this agent' => '',
-        'Set up your personal preferences. Save each setting by clicking the checkmark on the right.' =>
+        'Set up your personal preferences. Save each setting by clicking "Save setting" button.' =>
             '',
         'You can use the navigation tree below to only show settings from certain groups.' =>
             '',

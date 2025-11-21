@@ -33,7 +33,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D/%M/%Y';
     $Self->{DateInputFormat}     = '%D/%M/%Y';
     $Self->{DateInputFormatLong} = '%D/%M/%Y - %T';
-    $Self->{Completeness}        = 0.579726468222043;
+    $Self->{Completeness}        = 0.579565567176187;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2533,8 +2533,8 @@ sub Data {
         'Please note: you\'re currently editing the preferences of %s.' =>
             '',
         'Go back to editing this agent' => '',
-        'Set up your personal preferences. Save each setting by clicking the checkmark on the right.' =>
-            'Configura tus preferencias personales. Guarda cada configuración haciendo clic en el botón de verificación a la derecha.',
+        'Set up your personal preferences. Save each setting by clicking "Save setting" button.' =>
+            '',
         'You can use the navigation tree below to only show settings from certain groups.' =>
             '',
         'Dynamic Actions' => '',

@@ -33,7 +33,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y.%M.%D';
     $Self->{DateInputFormat}     = '%Y.%M.%D';
     $Self->{DateInputFormatLong} = '%Y.%M.%D - %T';
-    $Self->{Completeness}        = 0.873692679002414;
+    $Self->{Completeness}        = 0.873531777956557;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -2533,8 +2533,8 @@ sub Data {
         'Please note: you\'re currently editing the preferences of %s.' =>
             '请注意：你现在编辑的是%s的偏好设置。',
         'Go back to editing this agent' => '去编辑这个服务人员',
-        'Set up your personal preferences. Save each setting by clicking the checkmark on the right.' =>
-            '设置你的个人偏好。 通过单击右侧的钩形符号来保存每个设置。',
+        'Set up your personal preferences. Save each setting by clicking "Save setting" button.' =>
+            '',
         'You can use the navigation tree below to only show settings from certain groups.' =>
             '你可以使用下面的导航树仅显示某些组的设置。',
         'Dynamic Actions' => '动态操作',

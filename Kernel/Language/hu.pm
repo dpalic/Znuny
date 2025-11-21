@@ -32,7 +32,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%M-%D';
     $Self->{DateInputFormat}     = '%Y-%M-%D';
     $Self->{DateInputFormatLong} = '%Y-%M-%D - %T';
-    $Self->{Completeness}        = 0.873692679002414;
+    $Self->{Completeness}        = 0.873531777956557;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2532,8 +2532,8 @@ sub Data {
         'Please note: you\'re currently editing the preferences of %s.' =>
             'Ne feledje: jelenleg %s beállításait szerkeszti.',
         'Go back to editing this agent' => 'Vissza az ügyintéző szerkesztéséhez',
-        'Set up your personal preferences. Save each setting by clicking the checkmark on the right.' =>
-            'Állítsa be a személyes beállításait. Az egyes beállításokat a jobb oldalán lévő pipára kattintva mentheti el.',
+        'Set up your personal preferences. Save each setting by clicking "Save setting" button.' =>
+            '',
         'You can use the navigation tree below to only show settings from certain groups.' =>
             'Használhatja a lenti navigációs fát a csak bizonyos csoportokban lévő beállítások megjelenítéséhez.',
         'Dynamic Actions' => 'Dinamikus műveletek',

@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%M-%D';
     $Self->{DateInputFormat}     = '%Y-%M-%D';
     $Self->{DateInputFormatLong} = '%Y-%M-%D %T';
-    $Self->{Completeness}        = 0.846017699115044;
+    $Self->{Completeness}        = 0.845856798069187;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -2526,8 +2526,8 @@ sub Data {
         'Please note: you\'re currently editing the preferences of %s.' =>
             '참고 : 현재 %s의 환경 설정을 수정 중입니다.',
         'Go back to editing this agent' => '이 에이전트 편집으로 돌아가기',
-        'Set up your personal preferences. Save each setting by clicking the checkmark on the right.' =>
-            '개인적인 취향을 설정하십시오. 오른쪽의 체크 표시를 클릭하여 각 설정을 저장 하십시오.',
+        'Set up your personal preferences. Save each setting by clicking "Save setting" button.' =>
+            '',
         'You can use the navigation tree below to only show settings from certain groups.' =>
             '아래 탐색 트리를 사용하여 특정 그룹의 설정만 표시할 수 있습니다.',
         'Dynamic Actions' => '동적 동작',

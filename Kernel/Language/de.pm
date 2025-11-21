@@ -2527,8 +2527,8 @@ sub Data {
         'Please note: you\'re currently editing the preferences of %s.' =>
             'Bitte beachten: Sie bearbeiten derzeit die Einstellungen von %s.',
         'Go back to editing this agent' => 'Zurück zur Bearbeitung des Agenten',
-        'Set up your personal preferences. Save each setting by clicking the checkmark on the right.' =>
-            'Legen Sie Ihre persönlichen Einstellungen fest. Speichern Sie Einstellungen, indem Sie das Haken-Symbol auf der rechten Seite anklicken.',
+        'Set up your personal preferences. Save each setting by clicking "Save setting" button.' =>
+            'Legen Sie Ihre persönlichen Einstellungen fest. Speichern Sie jede Einstellung, indem Sie auf die Schaltfläche „Einstellung speichern“ klicken.',
         'You can use the navigation tree below to only show settings from certain groups.' =>
             'Sie können den Navigationsbaum verwenden, um nur Einstellungen aus bestimmten Kategorien anzuzeigen.',
         'Dynamic Actions' => 'Dynamische Aktionen',
