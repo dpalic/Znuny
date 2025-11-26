@@ -13202,7 +13202,7 @@ msgstr "Имате разрешен офис пакет, искате ли да 
 msgid "You have %s invalid setting(s) deployed. Click here to show invalid settings."
 msgstr ""
 
-#. Perl Module: Kernel/Output/HTML/Notification/SystemConfigurationIsDirtyCheck.pm
+#. JS File: var/httpd/htdocs/js/Core.SystemConfiguration.js
 msgid "You have undeployed settings, would you like to deploy them?"
 msgstr ""
 
@@ -25007,5 +25007,21 @@ msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentPreferences.tt
 msgid "Set up your personal preferences. Save each setting by clicking \"Save setting\" button."
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/SystemConfigurationIsDirtyCheck.tt
+msgid "You have undeployed settings:"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/SystemConfigurationIsDirtyCheck.tt
+msgid "Standard Deploy"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/SystemConfigurationIsDirtyCheck.tt
+msgid "Quick Deploy"
+msgstr ""
+
+#. Perl Module: Kernel/Modules/AdminSystemConfigurationDeployment.pm
+msgid "Quick Deploy by"
 msgstr ""
 

@@ -1084,6 +1084,7 @@ sub LoadDefaults {
         'Core.Agent.Header.js',
         'Core.UI.Notification.js',
         'Core.Agent.Responsive.js',
+        'Znuny.App.js',
     ];
 
     # --------------------------------------------------- #

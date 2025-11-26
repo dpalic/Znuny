@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2025-11-14 13:40+0000\n"
+"POT-Creation-Date: 2025-11-25 13:48+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -9978,6 +9978,18 @@ msgstr ""
 msgid "Navigation"
 msgstr ""
 
+#. TT Template: Kernel/Output/HTML/Templates/Standard/SystemConfigurationIsDirtyCheck.tt
+msgid "You have undeployed settings:"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/SystemConfigurationIsDirtyCheck.tt
+msgid "Standard Deploy"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/SystemConfigurationIsDirtyCheck.tt
+msgid "Quick Deploy"
+msgstr ""
+
 #. TT Template: Kernel/Output/HTML/Templates/Standard/Test.tt
 msgid "Znuny Test Page"
 msgstr ""
@@ -11947,6 +11959,10 @@ msgid "Category Search"
 msgstr ""
 
 #. Perl Module: Kernel/Modules/AdminSystemConfigurationDeployment.pm
+msgid "Quick Deploy by"
+msgstr ""
+
+#. Perl Module: Kernel/Modules/AdminSystemConfigurationDeployment.pm
 msgid "Some imported settings are not present in the current state of the configuration or it was not possible to update them. Please check the Znuny log for more information."
 msgstr ""
 
@@ -13620,10 +13636,6 @@ msgstr ""
 
 #. Perl Module: Kernel/Output/HTML/Notification/SystemConfigurationInvalidCheck.pm
 msgid "You have %s invalid setting(s) deployed. Click here to show invalid settings."
-msgstr ""
-
-#. Perl Module: Kernel/Output/HTML/Notification/SystemConfigurationIsDirtyCheck.pm
-msgid "You have undeployed settings, would you like to deploy them?"
 msgstr ""
 
 #. Perl Module: Kernel/Output/HTML/Notification/SystemConfigurationOutOfSyncCheck.pm
@@ -21916,6 +21928,10 @@ msgstr ""
 
 #. JS File: var/httpd/htdocs/js/Core.SystemConfiguration.js
 msgid "Please add values for all keys before saving the setting."
+msgstr ""
+
+#. JS File: var/httpd/htdocs/js/Core.SystemConfiguration.js
+msgid "You have undeployed settings, would you like to deploy them?"
 msgstr ""
 
 #. JS File: var/httpd/htdocs/js/Core.SystemConfiguration.js

@@ -2063,7 +2063,13 @@ handheld {
         font-weight: var(--normal);
     }
 
-
-
+    /* Shared admin deployment notification layout. */
+    .DeploymentContainer {
+        display: flex;
+        white-space: nowrap;
+        gap: var(--gap-sm);
+        position: relative;
+        align-items: center;
+    }
 
 }

@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%M-%D';
     $Self->{DateInputFormat}     = '%Y-%M-%D';
     $Self->{DateInputFormatLong} = '%Y-%M-%D %T';
-    $Self->{Completeness}        = 0.845856798069187;
+    $Self->{Completeness}        = 0.845312751246181;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -3429,6 +3429,11 @@ sub Data {
         # TT Template: Kernel/Output/HTML/Templates/Standard/SystemConfiguration/Sidebar/Navigation.tt
         'Navigation' => '항해',
 
+        # TT Template: Kernel/Output/HTML/Templates/Standard/SystemConfigurationIsDirtyCheck.tt
+        'You have undeployed settings:' => '',
+        'Standard Deploy' => '',
+        'Quick Deploy' => '',
+
         # TT Template: Kernel/Output/HTML/Templates/Standard/Test.tt
         'Znuny Test Page' => 'Znuny 테스트 페이지',
         'Unlock' => '잠금해제',
@@ -4135,6 +4140,7 @@ sub Data {
         'Category Search' => '카테고리 검색',
 
         # Perl Module: Kernel/Modules/AdminSystemConfigurationDeployment.pm
+        'Quick Deploy by' => '',
         'Some imported settings are not present in the current state of the configuration or it was not possible to update them. Please check the Znuny log for more information.' =>
             '일부 가져온 설정은 구성의 현재 상태에 나타나지 않거나 업데이트 할 수 없습니다. 자세한 내용은 Znuny 로그를 확인하십시오.',
 
@@ -4806,10 +4812,6 @@ sub Data {
         # Perl Module: Kernel/Output/HTML/Notification/SystemConfigurationInvalidCheck.pm
         'You have %s invalid setting(s) deployed. Click here to show invalid settings.' =>
             '배포된 %s 설정(들)이 잘못되었습니다. 잘못된 설정을 보려면 여기를 클릭하십시오.',
-
-        # Perl Module: Kernel/Output/HTML/Notification/SystemConfigurationIsDirtyCheck.pm
-        'You have undeployed settings, would you like to deploy them?' =>
-            '배포 취소 설정이 있습니다. 배포하시겠습니까?',
 
         # Perl Module: Kernel/Output/HTML/Notification/SystemConfigurationOutOfSyncCheck.pm
         'The configuration is being updated, please be patient...' => '구성이 업데이트 되고 있습니다. 기다려주십시오...',
@@ -8536,6 +8538,8 @@ sub Data {
         # JS File: var/httpd/htdocs/js/Core.SystemConfiguration.js
         'Open this node in a new window' => '새 창에서 이 노드 열기',
         'Please add values for all keys before saving the setting.' => '설정을 저장하기 전에 모든 키의 값을 추가하십시오.',
+        'You have undeployed settings, would you like to deploy them?' =>
+            '배포 취소 설정이 있습니다. 배포하시겠습니까?',
         'The key must not be empty.' => '키는 비워 둘 수 없습니다.',
         'A key with this name (\'%s\') already exists.' => '이 이름을 가진 키 (\'%s\')가 이미 있습니다.',
         'Do you really want to revert this setting to its historical value?' =>
@@ -9618,6 +9622,7 @@ Thanks for your help!
         'Previous',
         'Process state',
         'Queues',
+        'Quick Deploy',
         'Reload page',
         'Reload page (%ss)',
         'Remove',
@@ -9674,6 +9679,7 @@ Thanks for your help!
         'Sorry, you can only upload one file here.',
         'Split',
         'Stacked',
+        'Standard Deploy',
         'Start date',
         'Status',
         'Stream',
@@ -9755,6 +9761,7 @@ Thanks for your help!
         'You can either have the affected settings updated automatically to reflect the changes you just made or do it on your own by pressing \'update manually\'.',
         'You can use the category selection to limit the navigation tree below to entries from the selected category. As soon as you select the category, the tree will be re-built.',
         'You have undeployed settings, would you like to deploy them?',
+        'You have undeployed settings:',
         'activate to apply a descending sort',
         'activate to apply an ascending sort',
         'activate to remove the sort',
@@ -9764,6 +9771,7 @@ Thanks for your help!
         'more',
         'no',
         'none',
+        'or',
         'sorting is disabled',
         'week',
         'yes',

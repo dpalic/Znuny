@@ -1,0 +1,30 @@
+# --
+# Copyright (C) 2021 Znuny GmbH, https://znuny.org/
+# --
+# This software comes with ABSOLUTELY NO WARRANTY. For details, see
+# the enclosed file COPYING for license information (AGPL). If you
+# did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
+# --
+
+<div class="MessageBox Notice"{% if ID %} id="{{ ID }}"{% endif %}>
+    {% if Icon %}
+    <span>
+        <i class="fa {{ Icon }}"></i>
+    </span>
+    {% endif %}
+    <p>
+        <span>{{ "You have undeployed settings:" | Translate }}</span>
+    </p>
+    <div class="DeploymentContainer">
+        <a href="{{ Link }}" class="CallForAction btn-main btn-primary">
+            <span>{{ "Standard Deploy" | Translate }}</span>
+        </a>
+        <span class="">{{ "or" | Translate }}</span>
+        <a id="QuickDeploy" class="CallForAction btn-main btn-primary-ghost">
+            <span>{{ "Quick Deploy" | Translate }}</span>
+        </a>
+    </div>
+        <a href="#" class="Close icon-hover" title="{{ "Close this message" | Translate }}">
+        <i class="fa fa-times"></i>
+    </a>
+</div>

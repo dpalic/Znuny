@@ -30,7 +30,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%M-%D';
     $Self->{DateInputFormat}     = '%Y-%M-%D';
     $Self->{DateInputFormatLong} = '%Y-%M-%D - %T';
-    $Self->{Completeness}        = 0.644086886564763;
+    $Self->{Completeness}        = 0.643672616176234;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -3434,6 +3434,11 @@ sub Data {
         # TT Template: Kernel/Output/HTML/Templates/Standard/SystemConfiguration/Sidebar/Navigation.tt
         'Navigation' => 'Nawigacja',
 
+        # TT Template: Kernel/Output/HTML/Templates/Standard/SystemConfigurationIsDirtyCheck.tt
+        'You have undeployed settings:' => '',
+        'Standard Deploy' => '',
+        'Quick Deploy' => '',
+
         # TT Template: Kernel/Output/HTML/Templates/Standard/Test.tt
         'Znuny Test Page' => 'Znuny Strona testowa',
         'Unlock' => 'Odblokuj',
@@ -4140,6 +4145,7 @@ sub Data {
         'Category Search' => '',
 
         # Perl Module: Kernel/Modules/AdminSystemConfigurationDeployment.pm
+        'Quick Deploy by' => '',
         'Some imported settings are not present in the current state of the configuration or it was not possible to update them. Please check the Znuny log for more information.' =>
             '',
 
@@ -4811,10 +4817,6 @@ sub Data {
         # Perl Module: Kernel/Output/HTML/Notification/SystemConfigurationInvalidCheck.pm
         'You have %s invalid setting(s) deployed. Click here to show invalid settings.' =>
             'Są opublikowane nieprawidłowe parametry: %s. Kliknij tutaj aby je wyświetlić.',
-
-        # Perl Module: Kernel/Output/HTML/Notification/SystemConfigurationIsDirtyCheck.pm
-        'You have undeployed settings, would you like to deploy them?' =>
-            'Masz niewdrożone parametry, czy chcesz je wdrożyć?',
 
         # Perl Module: Kernel/Output/HTML/Notification/SystemConfigurationOutOfSyncCheck.pm
         'The configuration is being updated, please be patient...' => 'Trwa aktualizacja konfiguracji. Proszę o cierpliwość...',
@@ -8541,6 +8543,8 @@ sub Data {
         # JS File: var/httpd/htdocs/js/Core.SystemConfiguration.js
         'Open this node in a new window' => '',
         'Please add values for all keys before saving the setting.' => '',
+        'You have undeployed settings, would you like to deploy them?' =>
+            'Masz niewdrożone parametry, czy chcesz je wdrożyć?',
         'The key must not be empty.' => '',
         'A key with this name (\'%s\') already exists.' => 'Klucz o nazwie (\'%s\') już istnieje.',
         'Do you really want to revert this setting to its historical value?' =>
@@ -9622,6 +9626,7 @@ Twój Zespół Helpdesk.
         'Previous',
         'Process state',
         'Queues',
+        'Quick Deploy',
         'Reload page',
         'Reload page (%ss)',
         'Remove',
@@ -9678,6 +9683,7 @@ Twój Zespół Helpdesk.
         'Sorry, you can only upload one file here.',
         'Split',
         'Stacked',
+        'Standard Deploy',
         'Start date',
         'Status',
         'Stream',
@@ -9759,6 +9765,7 @@ Twój Zespół Helpdesk.
         'You can either have the affected settings updated automatically to reflect the changes you just made or do it on your own by pressing \'update manually\'.',
         'You can use the category selection to limit the navigation tree below to entries from the selected category. As soon as you select the category, the tree will be re-built.',
         'You have undeployed settings, would you like to deploy them?',
+        'You have undeployed settings:',
         'activate to apply a descending sort',
         'activate to apply an ascending sort',
         'activate to remove the sort',
@@ -9768,6 +9775,7 @@ Twój Zespół Helpdesk.
         'more',
         'no',
         'none',
+        'or',
         'sorting is disabled',
         'week',
         'yes',

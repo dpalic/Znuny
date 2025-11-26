@@ -13244,7 +13244,7 @@ msgstr "Sie haben die Abwesenheitszeit eingeschaltet, möchten Sie diese deaktiv
 msgid "You have %s invalid setting(s) deployed. Click here to show invalid settings."
 msgstr "Es wurden %s ungültige Einstellung(en) in Betrieb genommen. Klicken Sie hier, um die Einstellungen anzuzeigen."
 
-#. Perl Module: Kernel/Output/HTML/Notification/SystemConfigurationIsDirtyCheck.pm
+#. JS File: var/httpd/htdocs/js/Core.SystemConfiguration.js
 msgid "You have undeployed settings, would you like to deploy them?"
 msgstr "Es sind Einstellungen vorhanden, die bislang nicht in Betrieb genommen wurden. Möchten Sie jetzt eine Inbetriebnahme starten?"
 
@@ -25032,4 +25032,20 @@ msgstr ""
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentPreferences.tt
 msgid "Set up your personal preferences. Save each setting by clicking \"Save setting\" button."
 msgstr "Legen Sie Ihre persönlichen Einstellungen fest. Speichern Sie jede Einstellung, indem Sie auf die Schaltfläche „Einstellung speichern“ klicken."
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/SystemConfigurationIsDirtyCheck.tt
+msgid "You have undeployed settings:"
+msgstr "Es sind Einstellungen vorhanden, die bislang nicht in Betrieb genommen wurden:"
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/SystemConfigurationIsDirtyCheck.tt
+msgid "Standard Deploy"
+msgstr "Standard-Inbetriebnahme"
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/SystemConfigurationIsDirtyCheck.tt
+msgid "Quick Deploy"
+msgstr "Schnell-Inbetriebnahme"
+
+#. Perl Module: Kernel/Modules/AdminSystemConfigurationDeployment.pm
+msgid "Quick Deploy by"
+msgstr "Schnell-Inbetriebnahme durch"
 

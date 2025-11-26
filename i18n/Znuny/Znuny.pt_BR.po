@@ -13234,7 +13234,7 @@ msgstr "Você habilitou \"Fora do Escritório\", gostaria de desabilitar?"
 msgid "You have %s invalid setting(s) deployed. Click here to show invalid settings."
 msgstr "Você tem %s configuração(ões) inválidas implantadas. Clique aqui para mostrar estas configurações inválidas."
 
-#. Perl Module: Kernel/Output/HTML/Notification/SystemConfigurationIsDirtyCheck.pm
+#. JS File: var/httpd/htdocs/js/Core.SystemConfiguration.js
 msgid "You have undeployed settings, would you like to deploy them?"
 msgstr "Você tem definições que não foram implantadas. Gostaria de implantá-las?"
 
@@ -25018,5 +25018,21 @@ msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentPreferences.tt
 msgid "Set up your personal preferences. Save each setting by clicking \"Save setting\" button."
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/SystemConfigurationIsDirtyCheck.tt
+msgid "You have undeployed settings:"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/SystemConfigurationIsDirtyCheck.tt
+msgid "Standard Deploy"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/SystemConfigurationIsDirtyCheck.tt
+msgid "Quick Deploy"
+msgstr ""
+
+#. Perl Module: Kernel/Modules/AdminSystemConfigurationDeployment.pm
+msgid "Quick Deploy by"
 msgstr ""
 

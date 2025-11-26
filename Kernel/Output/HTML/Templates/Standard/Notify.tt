@@ -7,7 +7,7 @@
 # did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.
 # --
 <!-- start Notify -->
-<div class="MessageBox [% Data.BoxClass %]">
+<div class="MessageBox [% Data.BoxClass %]"[% IF Data.ID %] id="[% Data.ID | html %]"[% END %]>
     <span>
         <i class="[% Data.IconClass %]"></i>
     </span>

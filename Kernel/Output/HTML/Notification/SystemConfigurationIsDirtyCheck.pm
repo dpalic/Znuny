@@ -42,12 +42,14 @@ sub Run {
 
         if ($Result) {
 
+            my $Data = $LayoutObject->Output(
+                TemplateFile => 'SystemConfigurationIsDirtyCheck',
+            );
+
             return $LayoutObject->Notify(
                 Priority => 'Notice',
-                Link => $LayoutObject->{Baselink} . 'Action=AdminSystemConfigurationDeployment;Subaction=Deployment',
-                Data => $LayoutObject->{LanguageObject}->Translate(
-                    "You have undeployed settings, would you like to deploy them?"
-                ),
+                ID       => 'QuickDeployNotification',
+                Data     => $Data,
             );
         }
     }

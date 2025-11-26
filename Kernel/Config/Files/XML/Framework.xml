@@ -7983,6 +7983,7 @@ via the Preferences button after logging in.
                 <Item>Core.Agent.Header.js</Item>
                 <Item>Core.UI.Notification.js</Item>
                 <Item>Core.Agent.Responsive.js</Item>
+                <Item>Znuny.App.js</Item>
             </Array>
         </Value>
     </Setting>

@@ -482,7 +482,7 @@ Core.SystemConfiguration = (function (TargetNS) {
             URL,
             Value,
             function(Response) {
-                var LinkURL = 'Action=AdminSystemConfigurationDeployment;Subaction=Deployment';
+                var LinkURL = Core.Config.Get('Baselink') + 'Action=AdminSystemConfigurationDeployment;Subaction=Deployment';
 
                 TargetNS.CleanWidgetClasses($Widget);
                 TargetNS.SettingRender(Response, $Widget);
@@ -492,16 +492,16 @@ Core.SystemConfiguration = (function (TargetNS) {
                         LinkURL += ';' + Core.Config.Get('SessionName') + '=' + Core.Config.Get('SessionID');
                     }
 
-                    Core.UI.ShowNotification(
-                        Core.Language.Translate('You have undeployed settings, would you like to deploy them?'),
-                        'Notice',
-                        LinkURL,
-                        function() {
-                            Core.UI.InitStickyElement();
-                        },
-                        undefined,
-                        'fa-bell'
+                    Core.UI.ShowNotificationTemplate(
+                        {
+                            ID: 'QuickDeployNotification',
+                            Template: 'SysConfig/DirtyCheck',
+                            Type: 'Notice',
+                            Icon: 'fa-bell',
+                            Link: LinkURL,
+                        }
                     );
+
                     Core.UI.InitMessageBoxClose();
                 }
                 else if (Response.Data.DeploymentNeeded == 0) {
@@ -1082,7 +1082,7 @@ Core.SystemConfiguration = (function (TargetNS) {
             Core.Config.Get('Baselink'),
             Data,
             function(Response) {
-                var LinkURL = 'Action=AdminSystemConfigurationDeployment;Subaction=Deployment';
+                var LinkURL = Core.Config.Get('Baselink') + 'Action=AdminSystemConfigurationDeployment;Subaction=Deployment';
 
                 TargetNS.SettingRender(Response, $Widget);
                 TargetNS.CleanWidgetClasses($Widget);
@@ -1109,16 +1109,17 @@ Core.SystemConfiguration = (function (TargetNS) {
                         if (Core.Config.Get('SessionUseCookie') === '0') {
                             LinkURL += ';' + Core.Config.Get('SessionName') + '=' + Core.Config.Get('SessionID');
                         }
-                        Core.UI.ShowNotification(
-                            Core.Language.Translate('You have undeployed settings, would you like to deploy them?'),
-                            'Notice',
-                            LinkURL,
-                            function() {
-                                Core.UI.InitStickyElement();
-                            },
-                            undefined,
-                            'fa-bell'
+
+                        Core.UI.ShowNotificationTemplate(
+                            {
+                                ID: 'QuickDeployNotification',
+                                Template: 'SysConfig/DirtyCheck',
+                                Type: 'Notice',
+                                Icon: 'fa-bell',
+                                Link: LinkURL,
+                            }
                         );
+
                         Core.UI.InitMessageBoxClose();
                     }
                 }
