@@ -325,10 +325,10 @@ sub CreateUUIDString {
 
     # Create a Data::UUID object on demand and cache it for performance reasons.
     # Init of Data::UUID takes a long time.
-    my $DataUUID = $Self->{DataUUID} // Data::UUID->new();
-    return if !$DataUUID;
+    $Self->{DataUUID} //= Data::UUID->new();
+    return if !$Self->{DataUUID};
 
-    return lc $DataUUID->create_str(@Param);
+    return lc $Self->{DataUUID}->create_str(@Param);
 }
 
 1;
