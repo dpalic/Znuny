@@ -688,6 +688,7 @@ Core.Agent.CustomerSearch = (function (TargetNS) {
 
         // remove unnecessary classes
         $Clone.removeClass('Hidden CustomerTicketTemplate' + Field);
+        $Clone.removeClass('customerContainerCustomerHidden');
 
         // copy values and change ids and names
         $Clone.find(':input, a').each(function(){
@@ -710,10 +711,16 @@ Core.Agent.CustomerSearch = (function (TargetNS) {
 
                 // bind change function to radio button to select customer
                 $(this).on('change', function () {
+
+                    // we need to add active class to parent element
+                    $('.customerContainerCustomer', $(this).closest('.modCustomerContainer')).removeClass('customerContainerCustomerActive');
+                    $(this).parent().addClass('customerContainerCustomerActive');
+
                     // remove row
                     if ($(this).prop('checked')){
                         TargetNS.ReloadCustomerInfo(CustomerKey);
                     }
+
                     return false;
                 });
             }

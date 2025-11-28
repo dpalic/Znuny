@@ -12751,7 +12751,7 @@ Thanks for your help!
             </Hash>
         </Value>
     </Setting>
-   <Setting Name="Ticket::Frontend::AgentTicketZoom###Widgets###0300-LinkTable" Required="0" Valid="1">
+    <Setting Name="Ticket::Frontend::AgentTicketZoom###Widgets###0300-LinkTable" Required="0" Valid="1">
         <Description Translatable="1">AgentTicketZoom widget that displays a table of objects linked to the ticket.</Description>
         <Navigation>Frontend::Agent::View::TicketZoom</Navigation>
         <Value>

@@ -29,7 +29,7 @@ sub Data {
     $Self->{DateFormatShort}     = '';
     $Self->{DateInputFormat}     = '';
     $Self->{DateInputFormatLong} = '';
-    $Self->{Completeness}        = 0.301817012381412;
+    $Self->{Completeness}        = 0.301480051480051;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -2677,21 +2677,19 @@ sub Data {
         'Execute Bulk Action' => 'Executar ação em lote',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
-        'Compose Answer for %s%s%s' => 'Escrever resposta para %s%s%s',
         'Date Invalid!' => 'Data inválida',
-        'Select one or more recipients from the customer user address book.' =>
-            '',
-        'Customer user address book' => '',
-        'This address is registered as system address and cannot be used: %s' =>
-            'Este é um endereço de sistema e não pode ser utilizado: %s',
-        'Please include at least one recipient' => 'Necessita de incluir pelo menos um destinatário',
-        'Remove Ticket Customer' => '',
         'Please remove this entry and enter a new one with the correct value.' =>
             '',
         'This address already exists on the address list.' => '',
-        'Remove Cc' => 'Remover CC',
+        'Search for customer' => '',
+        'Open address book' => '',
+        'Address book' => '',
+        'Customer suggestions' => '',
+        'Please include at least one recipient' => 'Necessita de incluir pelo menos um destinatário',
+        'This address is registered as system address and cannot be used: %s' =>
+            'Este é um endereço de sistema e não pode ser utilizado: %s',
         'Bcc' => 'Cco',
-        'Remove Bcc' => 'Remover BCC',
+        'Undo & close' => 'Anular e fechar',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCustomer.tt
         'Change Customer of %s%s%s' => 'Modificar cliente de %s%s%s',
@@ -2700,22 +2698,24 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmail.tt
         'Create New Email Ticket' => 'Criar novo ticket',
-        'Example Template' => '',
         'To customer user' => 'Para o utilizador do cliente',
         'Please include at least one customer user for the ticket.' => '',
-        'Select this customer as the main customer.' => '',
-        'Remove Ticket Customer User' => '',
         'From queue' => 'Da fila',
         'Get all' => 'Obter todos',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailOutbound.tt
-        'Outbound Email for %s%s%s' => '',
+        'Undo & Close' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
         'Resend Email for %s%s%s' => '',
         'All fields marked with an asterisk (*) are mandatory.' => 'Os campos marcados com * são obrigatórios',
         'Cancel & close' => '',
-        'Undo & close' => 'Anular e fechar',
+        'Select one or more recipients from the customer user address book.' =>
+            '',
+        'Customer user address book' => '',
+        'Remove Ticket Customer' => '',
+        'Remove Cc' => 'Remover CC',
+        'Remove Bcc' => 'Remover BCC',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
         'Ticket %s: first response time is over (%s/%s)!' => 'Ticket %s: A primeira resposta está atrasada (%s/%s)',
@@ -2724,9 +2724,6 @@ sub Data {
         'Ticket %s: update time will be over in %s/%s!' => 'Ticket %s: A atualização estará atrasada em %s/%s',
         'Ticket %s: solution time is over (%s/%s)!' => 'Ticket %s: Resolução atrasada (%s/%s)',
         'Ticket %s: solution time will be over in %s/%s!' => 'Ticket %s: A resolução estará atrasada em %s/%s',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketForward.tt
-        'Forward %s%s%s' => 'Encaminhar %s%s%s',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketHistory.tt
         'History of %s%s%s' => 'Histórico de %s%s%s',
@@ -2794,9 +2791,6 @@ sub Data {
         'Please include at least one customer for the ticket.' => 'Deve incluir pelo menos um cliente',
         'To queue' => 'Para a fila',
 
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPhoneCommon.tt
-        'Phone Call for %s%s%s' => 'Chamada telefónica para %s%s%s',
-
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPlain.tt
         'View Email Plain Text for %s%s%s' => '',
         'Plain' => 'texto simples',
@@ -2850,12 +2844,12 @@ sub Data {
         'Save filter settings as default' => 'Guardar definições do filtro como padrão',
         'Event Type' => '',
         'Save as default' => '',
-        'Drafts' => '',
-        'by' => 'por',
         'Change Queue' => 'Mudar fila',
         'There are no dialogs available at this point in the process.' =>
             'Não existem mais diálogos disponíveis no processo.',
         'This item has no articles yet.' => 'Este item ainda não tem artigos.',
+        'Drafts' => '',
+        'by' => 'por',
         'Article Overview - %s Article(s)' => '',
         'Page %s' => '',
         'Add Filter' => 'Adicionar filtro',
@@ -8473,8 +8467,6 @@ sub Data {
             '',
         'Sorry, but you can\'t disable all methods for this notification.' =>
             '',
-        'Please note that at least one of the settings you have changed requires a page reload. Click here to reload the current screen.' =>
-            '',
         'An unknown error occurred. Please contact the administrator.' =>
             '',
 
@@ -9614,7 +9606,6 @@ Devemos voltar a estar online dentro de momentos.',
         'Please either turn some off first or increase the limit in configuration.',
         'Please enter at least one search value or * to find anything.',
         'Please enter at least one search word to find anything.',
-        'Please note that at least one of the settings you have changed requires a page reload. Click here to reload the current screen.',
         'Please only select at most %s files for upload.',
         'Please only select one file for upload.',
         'Please remove the following words from your search as they cannot be searched for:',

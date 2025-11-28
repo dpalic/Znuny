@@ -35,7 +35,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.37192474674385;
+    $Self->{Completeness}        = 0.371621621621622;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2683,21 +2683,19 @@ sub Data {
         'Execute Bulk Action' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
-        'Compose Answer for %s%s%s' => '',
         'Date Invalid!' => 'Date non valide !',
-        'Select one or more recipients from the customer user address book.' =>
-            '',
-        'Customer user address book' => '',
-        'This address is registered as system address and cannot be used: %s' =>
-            '',
-        'Please include at least one recipient' => 'Merci d\'inclure au moins un destinataire',
-        'Remove Ticket Customer' => 'Retirer le Ticket Client',
         'Please remove this entry and enter a new one with the correct value.' =>
             'Merci de retirer cette entrée et de la remplacer par une valeur correcte.',
         'This address already exists on the address list.' => 'Cette adresse existe déjà dans la liste d\'addresses.',
-        'Remove Cc' => 'Retirer le Cc',
+        'Search for customer' => '',
+        'Open address book' => '',
+        'Address book' => '',
+        'Customer suggestions' => '',
+        'Please include at least one recipient' => 'Merci d\'inclure au moins un destinataire',
+        'This address is registered as system address and cannot be used: %s' =>
+            '',
         'Bcc' => 'Copie Invisible',
-        'Remove Bcc' => 'Retirer le Bcc',
+        'Undo & close' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCustomer.tt
         'Change Customer of %s%s%s' => '',
@@ -2706,22 +2704,24 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmail.tt
         'Create New Email Ticket' => 'Créer un Nouveau Ticket par E-mail',
-        'Example Template' => 'Exemple de modèle',
         'To customer user' => 'Vers le client',
         'Please include at least one customer user for the ticket.' => '',
-        'Select this customer as the main customer.' => 'Sélectionner ce client comme le principal client',
-        'Remove Ticket Customer User' => 'Retirer le Ticket de l\'Utilisateur Client',
         'From queue' => 'De la file',
         'Get all' => 'Tout prendre',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailOutbound.tt
-        'Outbound Email for %s%s%s' => '',
+        'Undo & Close' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
         'Resend Email for %s%s%s' => '',
         'All fields marked with an asterisk (*) are mandatory.' => 'Les champs marqués d\'un astérisque (*) sont obligatoires.',
         'Cancel & close' => 'Annuler & fermer',
-        'Undo & close' => '',
+        'Select one or more recipients from the customer user address book.' =>
+            '',
+        'Customer user address book' => '',
+        'Remove Ticket Customer' => 'Retirer le Ticket Client',
+        'Remove Cc' => 'Retirer le Cc',
+        'Remove Bcc' => 'Retirer le Bcc',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
         'Ticket %s: first response time is over (%s/%s)!' => '',
@@ -2730,9 +2730,6 @@ sub Data {
         'Ticket %s: update time will be over in %s/%s!' => '',
         'Ticket %s: solution time is over (%s/%s)!' => '',
         'Ticket %s: solution time will be over in %s/%s!' => '',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketForward.tt
-        'Forward %s%s%s' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketHistory.tt
         'History of %s%s%s' => '',
@@ -2800,9 +2797,6 @@ sub Data {
         'Please include at least one customer for the ticket.' => 'Veuillez inclure au moins un client au ticket',
         'To queue' => 'Vers la file',
 
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPhoneCommon.tt
-        'Phone Call for %s%s%s' => '',
-
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPlain.tt
         'View Email Plain Text for %s%s%s' => '',
         'Plain' => 'Tel quel',
@@ -2856,12 +2850,12 @@ sub Data {
         'Save filter settings as default' => 'Sauvegarder les paramètres de filtrage comme paramètres par défaut',
         'Event Type' => '',
         'Save as default' => '',
-        'Drafts' => '',
-        'by' => 'par',
         'Change Queue' => 'Modifier la file',
         'There are no dialogs available at this point in the process.' =>
             '',
         'This item has no articles yet.' => 'Cet objet n\'a aucun article pour l\'instant. ',
+        'Drafts' => '',
+        'by' => 'par',
         'Article Overview - %s Article(s)' => '',
         'Page %s' => '',
         'Add Filter' => 'Ajouter filtre',
@@ -8479,8 +8473,6 @@ sub Data {
             '',
         'Sorry, but you can\'t disable all methods for this notification.' =>
             '',
-        'Please note that at least one of the settings you have changed requires a page reload. Click here to reload the current screen.' =>
-            '',
         'An unknown error occurred. Please contact the administrator.' =>
             '',
 
@@ -9607,7 +9599,6 @@ Thanks for your help!
         'Please either turn some off first or increase the limit in configuration.',
         'Please enter at least one search value or * to find anything.',
         'Please enter at least one search word to find anything.',
-        'Please note that at least one of the settings you have changed requires a page reload. Click here to reload the current screen.',
         'Please only select at most %s files for upload.',
         'Please only select one file for upload.',
         'Please remove the following words from your search as they cannot be searched for:',

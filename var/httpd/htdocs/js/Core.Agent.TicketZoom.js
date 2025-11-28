@@ -9,6 +9,8 @@
 
 "use strict";
 
+/* global App */
+
 var Core = Core || {};
 Core.Agent = Core.Agent || {};
 
@@ -633,6 +635,24 @@ Core.Agent.TicketZoom = (function (TargetNS) {
                 }
 
                 Core.UI.InitWidgetActionToggle();
+
+                // register loaded modules in the modular application
+                // Wait for document ready and App to be initialized
+                $(document).ready(function () {
+                    var moduleIds, id;
+                    // Wait a short time to ensure App is fully initialized
+                    setTimeout(function() {
+                        if (typeof App !== 'undefined') {
+                            // Make App globally accessible
+                            window.App = App;
+                            moduleIds = App.registerModules($('#' + ElementID));
+                            for (id in moduleIds) {
+                                App.start(moduleIds[id]);
+                            }
+                        }
+                    }, 100);
+                });
+
             });
         });
     }

@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D/%M/%Y';
     $Self->{DateInputFormat}     = '%D/%M/%Y';
     $Self->{DateInputFormatLong} = '%D/%M/%Y - %T';
-    $Self->{Completeness}        = 0.509406657018813;
+    $Self->{Completeness}        = 0.509169884169884;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -2677,21 +2677,19 @@ sub Data {
         'Execute Bulk Action' => 'เริ่มดำเนินการเป็นกลุ่ม',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
-        'Compose Answer for %s%s%s' => '',
         'Date Invalid!' => 'วันที่ไม่ถูกต้อง!',
-        'Select one or more recipients from the customer user address book.' =>
-            '',
-        'Customer user address book' => '',
-        'This address is registered as system address and cannot be used: %s' =>
-            'ที่อยู่นี้ถูกลงทะเบียนเป็นที่อยู่ในระบบและไม่สามารถนำมาใช้: %s',
-        'Please include at least one recipient' => 'โปรดระบุผู้รับอย่างน้อยหนึ่งคน',
-        'Remove Ticket Customer' => 'ลบตั๋วลูกค้า',
         'Please remove this entry and enter a new one with the correct value.' =>
             'โปรดลบข้อมูลนี้และป้อนใหม่ด้วยค่าที่ถูกต้อง',
         'This address already exists on the address list.' => 'ที่อยู่นี้มีอยู่แล้วในรายการที่อยู่',
-        'Remove Cc' => 'ลบสำเนา',
+        'Search for customer' => '',
+        'Open address book' => '',
+        'Address book' => '',
+        'Customer suggestions' => '',
+        'Please include at least one recipient' => 'โปรดระบุผู้รับอย่างน้อยหนึ่งคน',
+        'This address is registered as system address and cannot be used: %s' =>
+            'ที่อยู่นี้ถูกลงทะเบียนเป็นที่อยู่ในระบบและไม่สามารถนำมาใช้: %s',
         'Bcc' => 'Bcc',
-        'Remove Bcc' => 'ลบสำเนาลับ',
+        'Undo & close' => 'เลิกทำและปิด',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCustomer.tt
         'Change Customer of %s%s%s' => '',
@@ -2700,22 +2698,24 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmail.tt
         'Create New Email Ticket' => 'สร้างอีเมล์ตั๋วใหม่',
-        'Example Template' => 'ตัวอย่างแม่แบบ',
         'To customer user' => 'ถึงลูกค้าผู้ใช้',
         'Please include at least one customer user for the ticket.' => 'โปรดระบุอย่างน้อยหนึ่งลูกค้าผู้ใช้สำหรับตั๋ว',
-        'Select this customer as the main customer.' => 'เลือกลูกค้ารายนี้เป็นลูกค้าหลัก',
-        'Remove Ticket Customer User' => 'นำตั๋วลูกค้าผู้ใช้ออก',
         'From queue' => 'จากคิว',
         'Get all' => 'ได้รับทั้งหมด',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailOutbound.tt
-        'Outbound Email for %s%s%s' => '',
+        'Undo & Close' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
         'Resend Email for %s%s%s' => '',
         'All fields marked with an asterisk (*) are mandatory.' => 'ฟิลด์ที่มีเครื่องหมายดอกจันทั้งหมด (*) มีผลบังคับใช้',
         'Cancel & close' => 'ยกเลิกและปิด',
-        'Undo & close' => 'เลิกทำและปิด',
+        'Select one or more recipients from the customer user address book.' =>
+            '',
+        'Customer user address book' => '',
+        'Remove Ticket Customer' => 'ลบตั๋วลูกค้า',
+        'Remove Cc' => 'ลบสำเนา',
+        'Remove Bcc' => 'ลบสำเนาลับ',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
         'Ticket %s: first response time is over (%s/%s)!' => 'ตั๋ว %s: หมดเวลาสำหรับตอบสนองครั้งแรก (%s/%s)!',
@@ -2724,9 +2724,6 @@ sub Data {
         'Ticket %s: update time will be over in %s/%s!' => 'ตั๋ว %s: เวลาอัพเดตจะหมดภายใน %s/%s!',
         'Ticket %s: solution time is over (%s/%s)!' => 'ตั๋ว %s: หมดเวลาสำหรับการแก้ปัญหา (%s/%s)!',
         'Ticket %s: solution time will be over in %s/%s!' => 'ตั๋ว %s: เวลาการแก้ปัญหาจะจบลงภายใน %s/%s!',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketForward.tt
-        'Forward %s%s%s' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketHistory.tt
         'History of %s%s%s' => '',
@@ -2794,9 +2791,6 @@ sub Data {
         'Please include at least one customer for the ticket.' => 'กรุณาระบุลูกค้าอย่างน้อยหนึ่งคนสำหรับตั๋ว',
         'To queue' => 'ไปยังคิว',
 
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPhoneCommon.tt
-        'Phone Call for %s%s%s' => '',
-
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPlain.tt
         'View Email Plain Text for %s%s%s' => '',
         'Plain' => 'ว่าง',
@@ -2850,12 +2844,12 @@ sub Data {
         'Save filter settings as default' => 'บันทึกการตั้งค่าตัวกรองเป็นค่าเริ่มต้น',
         'Event Type' => 'ประเภทของกิจกรรม',
         'Save as default' => 'บันทึกเป็นค่าเริ่มต้น',
-        'Drafts' => '',
-        'by' => 'โดย',
         'Change Queue' => 'เปลี่ยนคิว',
         'There are no dialogs available at this point in the process.' =>
             'ไม่มีไดอะล็อกที่สามารถใช้ได้ในกระบวนการนี้',
         'This item has no articles yet.' => 'ไอเท็มนี้ยังไม่มีบทความ',
+        'Drafts' => '',
+        'by' => 'โดย',
         'Article Overview - %s Article(s)' => '',
         'Page %s' => '',
         'Add Filter' => 'เพิ่มตัวกรอง',
@@ -8476,8 +8470,6 @@ sub Data {
             'ขออภัยคุณไม่สามารถปิดการใช้งานวิธีการทั้งหมดสำหรับการแจ้งเตือนที่ระบุว่าเป็นที่บังคับใช้',
         'Sorry, but you can\'t disable all methods for this notification.' =>
             'ขออภัยคุณไม่สามารถปิดการใช้งานวิธีการทั้งหมดสำหรับการแจ้งเตือนนี้',
-        'Please note that at least one of the settings you have changed requires a page reload. Click here to reload the current screen.' =>
-            '',
         'An unknown error occurred. Please contact the administrator.' =>
             '',
 
@@ -9615,7 +9607,6 @@ Thanks for your help!
         'Please either turn some off first or increase the limit in configuration.',
         'Please enter at least one search value or * to find anything.',
         'Please enter at least one search word to find anything.',
-        'Please note that at least one of the settings you have changed requires a page reload. Click here to reload the current screen.',
         'Please only select at most %s files for upload.',
         'Please only select one file for upload.',
         'Please remove the following words from your search as they cannot be searched for:',

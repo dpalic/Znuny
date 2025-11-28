@@ -29,7 +29,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D/%M/%Y';
     $Self->{DateInputFormat}     = '%D/%M/%Y';
     $Self->{DateInputFormatLong} = '%D/%M/%Y - %T';
-    $Self->{Completeness}        = 0.588519054510371;
+    $Self->{Completeness}        = 0.587676962676963;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -2677,21 +2677,19 @@ sub Data {
         'Execute Bulk Action' => 'Execute Bulk Action',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
-        'Compose Answer for %s%s%s' => 'Compose Answer for %s%s%s',
         'Date Invalid!' => 'Date Invalid!',
-        'Select one or more recipients from the customer user address book.' =>
-            '',
-        'Customer user address book' => '',
-        'This address is registered as system address and cannot be used: %s' =>
-            'This address is registered as system address and cannot be used: %s',
-        'Please include at least one recipient' => 'Please include at least one recipient',
-        'Remove Ticket Customer' => 'Remove Ticket Customer',
         'Please remove this entry and enter a new one with the correct value.' =>
             'Please remove this entry and enter a new one with the correct value.',
         'This address already exists on the address list.' => 'This address already exists on the address list.',
-        'Remove Cc' => 'Remove Cc',
+        'Search for customer' => '',
+        'Open address book' => '',
+        'Address book' => '',
+        'Customer suggestions' => '',
+        'Please include at least one recipient' => 'Please include at least one recipient',
+        'This address is registered as system address and cannot be used: %s' =>
+            'This address is registered as system address and cannot be used: %s',
         'Bcc' => 'Bcc',
-        'Remove Bcc' => 'Remove Bcc',
+        'Undo & close' => 'Undo & close',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCustomer.tt
         'Change Customer of %s%s%s' => 'Change Customer of %s%s%s',
@@ -2700,22 +2698,24 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmail.tt
         'Create New Email Ticket' => 'Create New Email Ticket',
-        'Example Template' => 'Example Template',
         'To customer user' => 'To customer user',
         'Please include at least one customer user for the ticket.' => 'Please include at least one customer user for the ticket.',
-        'Select this customer as the main customer.' => 'Select this customer as the main customer.',
-        'Remove Ticket Customer User' => 'Remove Ticket Customer User',
         'From queue' => 'From queue',
         'Get all' => 'Get all',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailOutbound.tt
-        'Outbound Email for %s%s%s' => 'Outbound Email for %s%s%s',
+        'Undo & Close' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
         'Resend Email for %s%s%s' => '',
         'All fields marked with an asterisk (*) are mandatory.' => 'All fields marked with an asterisk (*) are mandatory.',
         'Cancel & close' => 'Cancel & close',
-        'Undo & close' => 'Undo & close',
+        'Select one or more recipients from the customer user address book.' =>
+            '',
+        'Customer user address book' => '',
+        'Remove Ticket Customer' => 'Remove Ticket Customer',
+        'Remove Cc' => 'Remove Cc',
+        'Remove Bcc' => 'Remove Bcc',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
         'Ticket %s: first response time is over (%s/%s)!' => 'Ticket %s: first response time is over (%s/%s)!',
@@ -2724,9 +2724,6 @@ sub Data {
         'Ticket %s: update time will be over in %s/%s!' => 'Ticket %s: update time will be over in %s/%s!',
         'Ticket %s: solution time is over (%s/%s)!' => 'Ticket %s: solution time is over (%s/%s)!',
         'Ticket %s: solution time will be over in %s/%s!' => 'Ticket %s: solution time will be over in %s/%s!',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketForward.tt
-        'Forward %s%s%s' => 'Forward %s%s%s',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketHistory.tt
         'History of %s%s%s' => 'History of %s%s%s',
@@ -2794,9 +2791,6 @@ sub Data {
         'Please include at least one customer for the ticket.' => 'Please include at least one customer for the ticket.',
         'To queue' => 'To queue',
 
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPhoneCommon.tt
-        'Phone Call for %s%s%s' => 'Phone Call for %s%s%s',
-
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPlain.tt
         'View Email Plain Text for %s%s%s' => 'View Email Plain Text for %s%s%s',
         'Plain' => 'Plain',
@@ -2850,12 +2844,12 @@ sub Data {
         'Save filter settings as default' => 'Save filter settings as default',
         'Event Type' => 'Event Type',
         'Save as default' => 'Save as default',
-        'Drafts' => '',
-        'by' => 'by',
         'Change Queue' => 'Change Queue',
         'There are no dialogs available at this point in the process.' =>
             'There are no dialogs available at this point in the process.',
         'This item has no articles yet.' => 'This item has no articles yet.',
+        'Drafts' => '',
+        'by' => 'by',
         'Article Overview - %s Article(s)' => '',
         'Page %s' => '',
         'Add Filter' => 'Add Filter',
@@ -8473,8 +8467,6 @@ sub Data {
             'Sorry, but you can\'t disable all methods for notifications marked as mandatory.',
         'Sorry, but you can\'t disable all methods for this notification.' =>
             'Sorry, but you can\'t disable all methods for this notification.',
-        'Please note that at least one of the settings you have changed requires a page reload. Click here to reload the current screen.' =>
-            '',
         'An unknown error occurred. Please contact the administrator.' =>
             '',
 
@@ -9612,7 +9604,6 @@ Thanks for your help!
         'Please either turn some off first or increase the limit in configuration.',
         'Please enter at least one search value or * to find anything.',
         'Please enter at least one search word to find anything.',
-        'Please note that at least one of the settings you have changed requires a page reload. Click here to reload the current screen.',
         'Please only select at most %s files for upload.',
         'Please only select one file for upload.',
         'Please remove the following words from your search as they cannot be searched for:',

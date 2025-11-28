@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%M-%D';
     $Self->{DateInputFormat}     = '%Y-%M-%D';
     $Self->{DateInputFormatLong} = '%Y-%M-%D %T';
-    $Self->{Completeness}        = 0.845312751246181;
+    $Self->{Completeness}        = 0.844433719433719;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -2674,21 +2674,19 @@ sub Data {
         'Execute Bulk Action' => '일괄 작업 실행',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
-        'Compose Answer for %s%s%s' => '%s%s%s에 대한 답변 작성',
         'Date Invalid!' => '잘못된 날짜!',
-        'Select one or more recipients from the customer user address book.' =>
-            '고객 사용자 주소록에서 하나 이상의 수신자를 선택하십시오.',
-        'Customer user address book' => '고객 사용자 주소록',
-        'This address is registered as system address and cannot be used: %s' =>
-            '이 주소는 시스템 주소로 등록되어 있으므로 사용할 수 없습니다 : %s',
-        'Please include at least one recipient' => '수신자를 한 명 이상 포함하십시오.',
-        'Remove Ticket Customer' => '티켓 고객 제거',
         'Please remove this entry and enter a new one with the correct value.' =>
             '이 항목을 제거하고 올바른 값으로 새 항목을 입력하십시오.',
         'This address already exists on the address list.' => '이 주소는 이미 주소록에 있습니다.',
-        'Remove Cc' => '참조 삭제',
+        'Search for customer' => '',
+        'Open address book' => '',
+        'Address book' => '',
+        'Customer suggestions' => '',
+        'Please include at least one recipient' => '수신자를 한 명 이상 포함하십시오.',
+        'This address is registered as system address and cannot be used: %s' =>
+            '이 주소는 시스템 주소로 등록되어 있으므로 사용할 수 없습니다 : %s',
         'Bcc' => '숨은 참조',
-        'Remove Bcc' => '숨은 참조 제거',
+        'Undo & close' => '실행 취소 및 닫기',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCustomer.tt
         'Change Customer of %s%s%s' => '고객을 %s%s%s로 변경하십시오.',
@@ -2697,22 +2695,24 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmail.tt
         'Create New Email Ticket' => '새 전자 메일 티켓 만들기',
-        'Example Template' => '템플릿 예제',
         'To customer user' => '고객 사용자에게',
         'Please include at least one customer user for the ticket.' => '적어도 한 명의 고객 사용자를 티켓에 포함하십시오.',
-        'Select this customer as the main customer.' => '이 고객을 주요 고객으로 선택하십시오.',
-        'Remove Ticket Customer User' => '티켓 고객 사용자 제거',
         'From queue' => '대기열에서',
         'Get all' => '모든 것을 가져라',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailOutbound.tt
-        'Outbound Email for %s%s%s' => '%s%s%s의 발신 이메일',
+        'Undo & Close' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
         'Resend Email for %s%s%s' => '%s%s%s에게 이메일 다시 보내기',
         'All fields marked with an asterisk (*) are mandatory.' => '별표 (*)로 표시된 모든 필드는 필수 항목입니다.',
         'Cancel & close' => '취소 및 닫기',
-        'Undo & close' => '실행 취소 및 닫기',
+        'Select one or more recipients from the customer user address book.' =>
+            '고객 사용자 주소록에서 하나 이상의 수신자를 선택하십시오.',
+        'Customer user address book' => '고객 사용자 주소록',
+        'Remove Ticket Customer' => '티켓 고객 제거',
+        'Remove Cc' => '참조 삭제',
+        'Remove Bcc' => '숨은 참조 제거',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
         'Ticket %s: first response time is over (%s/%s)!' => '티켓 %s: 첫 번째 응답 시간이 끝났습니다 (%s/ %s)!',
@@ -2721,9 +2721,6 @@ sub Data {
         'Ticket %s: update time will be over in %s/%s!' => '티켓 %s: 업데이트 시간이 %s / %s 이상입니다!',
         'Ticket %s: solution time is over (%s/%s)!' => '티켓 %s : 해결 시간이 끝났습니다 (%s / %s)!',
         'Ticket %s: solution time will be over in %s/%s!' => '티켓 %s : 해결 시간은 %s / %s로 끝납니다!',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketForward.tt
-        'Forward %s%s%s' => '전달 %s%s%s',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketHistory.tt
         'History of %s%s%s' => '%s%s%s의 기록',
@@ -2791,9 +2788,6 @@ sub Data {
         'Please include at least one customer for the ticket.' => '최소한 한 명의 고객을 티켓에 포함하십시오.',
         'To queue' => '대기열에 넣기',
 
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPhoneCommon.tt
-        'Phone Call for %s%s%s' => '%s%s%s 통화 중입니다.',
-
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPlain.tt
         'View Email Plain Text for %s%s%s' => '%s%s%s에 대한 이메일보기 일반 텍스트',
         'Plain' => '명백한',
@@ -2847,12 +2841,12 @@ sub Data {
         'Save filter settings as default' => '필터 설정을 기본값으로 저장',
         'Event Type' => '이벤트 유형',
         'Save as default' => '기본값으로 저장',
-        'Drafts' => '체커',
-        'by' => '으로',
         'Change Queue' => '대기열 변경',
         'There are no dialogs available at this point in the process.' =>
             '현재 이 과정에서 사용할 수 있는 대화 상자가 없습니다.',
         'This item has no articles yet.' => '이 항목에는 아직 기사가 없습니다.',
+        'Drafts' => '체커',
+        'by' => '으로',
         'Article Overview - %s Article(s)' => '기사 개관 - %s건의 기사',
         'Page %s' => '페이지 %s',
         'Add Filter' => '필터 추가',
@@ -8470,8 +8464,6 @@ sub Data {
             '죄송합니다. 하지만 필수로 표시된 알림에 대해서는 모든 방법을 사용 중지 할 수 없습니다.',
         'Sorry, but you can\'t disable all methods for this notification.' =>
             '죄송합니다만 이 알림에 대한 모든 방법을 사용중지 할 수는 없습니다.',
-        'Please note that at least one of the settings you have changed requires a page reload. Click here to reload the current screen.' =>
-            '변경한 설정 중 적어도 하나는 페이지를 새로고침해야 합니다. 현재 화면을 다시 로드하려면 여기를 클릭하십시오.',
         'An unknown error occurred. Please contact the administrator.' =>
             '알 수없는 오류가 발생했습니다. 관리자에게 문의하십시오.',
 
@@ -9609,7 +9601,6 @@ Thanks for your help!
         'Please either turn some off first or increase the limit in configuration.',
         'Please enter at least one search value or * to find anything.',
         'Please enter at least one search word to find anything.',
-        'Please note that at least one of the settings you have changed requires a page reload. Click here to reload the current screen.',
         'Please only select at most %s files for upload.',
         'Please only select one file for upload.',
         'Please remove the following words from your search as they cannot be searched for:',

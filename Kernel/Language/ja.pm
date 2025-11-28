@@ -30,7 +30,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y/%M/%D';
     $Self->{DateInputFormat}     = '%Y/%M/%D';
     $Self->{DateInputFormatLong} = '%Y/%M/%D - %T';
-    $Self->{Completeness}        = 0.665862678887281;
+    $Self->{Completeness}        = 0.66521879021879;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2680,21 +2680,19 @@ sub Data {
         'Execute Bulk Action' => '一括処理を実行',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
-        'Compose Answer for %s%s%s' => '%s%s%sの返信を作成',
         'Date Invalid!' => '日時が無効です。',
-        'Select one or more recipients from the customer user address book.' =>
-            '顧客ユーザーのアドレス帳から1人以上の受信者を選択します。',
-        'Customer user address book' => '顧客ユーザーのアドレス帳',
-        'This address is registered as system address and cannot be used: %s' =>
-            '',
-        'Please include at least one recipient' => '受信者を少なくとも1人は含めるようにして下さい。',
-        'Remove Ticket Customer' => 'チケットの顧客を削除',
         'Please remove this entry and enter a new one with the correct value.' =>
             'このエントリーを削除し、正しい値で新しいエントリーを追加してください。',
         'This address already exists on the address list.' => 'この住所はすでにアドレスリストに存在します。',
-        'Remove Cc' => 'Ccを削除',
+        'Search for customer' => '',
+        'Open address book' => '',
+        'Address book' => '',
+        'Customer suggestions' => '',
+        'Please include at least one recipient' => '受信者を少なくとも1人は含めるようにして下さい。',
+        'This address is registered as system address and cannot be used: %s' =>
+            '',
         'Bcc' => 'Bcc',
-        'Remove Bcc' => 'Bccを削除',
+        'Undo & close' => '元に戻して閉じる',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCustomer.tt
         'Change Customer of %s%s%s' => '%s%s%sの顧客を変更',
@@ -2703,22 +2701,24 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmail.tt
         'Create New Email Ticket' => '新規メールチケットの作成',
-        'Example Template' => 'テンプレート例',
         'To customer user' => '宛先顧客ユーザー',
         'Please include at least one customer user for the ticket.' => '',
-        'Select this customer as the main customer.' => '',
-        'Remove Ticket Customer User' => 'チケットの顧客ユーザーを削除',
         'From queue' => 'キューから',
         'Get all' => '全てを取得',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailOutbound.tt
-        'Outbound Email for %s%s%s' => '%s%s%sの送信メール',
+        'Undo & Close' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
         'Resend Email for %s%s%s' => '%s%s%sのメールを再送信',
         'All fields marked with an asterisk (*) are mandatory.' => 'アスタリスク（*）が付いている全ての領域は必須入力です。',
         'Cancel & close' => '中止して閉じる',
-        'Undo & close' => '元に戻して閉じる',
+        'Select one or more recipients from the customer user address book.' =>
+            '顧客ユーザーのアドレス帳から1人以上の受信者を選択します。',
+        'Customer user address book' => '顧客ユーザーのアドレス帳',
+        'Remove Ticket Customer' => 'チケットの顧客を削除',
+        'Remove Cc' => 'Ccを削除',
+        'Remove Bcc' => 'Bccを削除',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
         'Ticket %s: first response time is over (%s/%s)!' => '',
@@ -2727,9 +2727,6 @@ sub Data {
         'Ticket %s: update time will be over in %s/%s!' => '',
         'Ticket %s: solution time is over (%s/%s)!' => '',
         'Ticket %s: solution time will be over in %s/%s!' => '',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketForward.tt
-        'Forward %s%s%s' => '%s%s%sを転送',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketHistory.tt
         'History of %s%s%s' => '%s%s%sの履歴',
@@ -2797,9 +2794,6 @@ sub Data {
         'Please include at least one customer for the ticket.' => 'チケットには少なくとも1名のお客様を含めるようにして下さい。',
         'To queue' => 'キュー',
 
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPhoneCommon.tt
-        'Phone Call for %s%s%s' => '%s%s%sの受話',
-
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPlain.tt
         'View Email Plain Text for %s%s%s' => '%s%s%sの電子メールを表示',
         'Plain' => '書式なし',
@@ -2853,12 +2847,12 @@ sub Data {
         'Save filter settings as default' => 'デフォルトのフィルター設定を保存',
         'Event Type' => 'イベントタイプ',
         'Save as default' => 'ドラフトとして保存',
-        'Drafts' => '下書き',
-        'by' => 'by',
         'Change Queue' => 'キューを変更',
         'There are no dialogs available at this point in the process.' =>
             'このプロセスは完了しました。',
         'This item has no articles yet.' => 'このチケットにはまだ記事がありません。',
+        'Drafts' => '下書き',
+        'by' => 'by',
         'Article Overview - %s Article(s)' => '記事一覧 - %s件',
         'Page %s' => '%sページ',
         'Add Filter' => 'フィルターを追加',
@@ -8486,8 +8480,6 @@ Contentはダイナミック・フィールドの形式によって設定内容�
             '申し訳ありません。必須とマークされている通知は無効化することはできません。',
         'Sorry, but you can\'t disable all methods for this notification.' =>
             '申し訳ありません。この通知を無効化することはできません。',
-        'Please note that at least one of the settings you have changed requires a page reload. Click here to reload the current screen.' =>
-            '',
         'An unknown error occurred. Please contact the administrator.' =>
             'エラーが発生しました。管理者に連絡してください。',
 
@@ -9624,7 +9616,6 @@ Thanks for your help!
         'Please either turn some off first or increase the limit in configuration.',
         'Please enter at least one search value or * to find anything.',
         'Please enter at least one search word to find anything.',
-        'Please note that at least one of the settings you have changed requires a page reload. Click here to reload the current screen.',
         'Please only select at most %s files for upload.',
         'Please only select one file for upload.',
         'Please remove the following words from your search as they cannot be searched for:',

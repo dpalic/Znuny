@@ -503,8 +503,12 @@ Core.SystemConfiguration = (function (TargetNS) {
                     );
 
                     Core.UI.InitMessageBoxClose();
+
+                    // reload location and show notification with HTML
+                    location.reload();
                 }
                 else if (Response.Data.DeploymentNeeded == 0) {
+
                     Core.UI.HideNotification(
                         Core.Language.Translate('You have undeployed settings, would you like to deploy them?'),
                         'Notice',
@@ -1121,6 +1125,9 @@ Core.SystemConfiguration = (function (TargetNS) {
                         );
 
                         Core.UI.InitMessageBoxClose();
+
+                        // reload location and show notification with HTML
+                        location.reload();
                     }
                 }
                 Core.App.Publish('SystemConfiguration.SettingListUpdate');

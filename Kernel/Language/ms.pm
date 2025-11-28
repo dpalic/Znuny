@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.52371763949188;
+    $Self->{Completeness}        = 0.522844272844273;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2674,21 +2674,19 @@ sub Data {
         'Execute Bulk Action' => 'Laksanakan Tindakan Pukal',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
-        'Compose Answer for %s%s%s' => 'Mengarang Jawapan untuk %s%s%s',
         'Date Invalid!' => 'Tarikh tidak sah!',
-        'Select one or more recipients from the customer user address book.' =>
-            '',
-        'Customer user address book' => '',
-        'This address is registered as system address and cannot be used: %s' =>
-            'Alamat ini didaftarkan sebagai alamat sistem dan tidak boleh digunakan: %s',
-        'Please include at least one recipient' => 'Sila sertakan sekurang-kurangnya satu penerima',
-        'Remove Ticket Customer' => 'Buang Pelanggan Tiket',
         'Please remove this entry and enter a new one with the correct value.' =>
             'Sila keluarkan entri ini dan masukkan satu yang baru dengan nilai yang betul.',
         'This address already exists on the address list.' => 'Alamat ini sudah pun wujud pada senarai alamat',
-        'Remove Cc' => 'Buang Cc',
+        'Search for customer' => '',
+        'Open address book' => '',
+        'Address book' => '',
+        'Customer suggestions' => '',
+        'Please include at least one recipient' => 'Sila sertakan sekurang-kurangnya satu penerima',
+        'This address is registered as system address and cannot be used: %s' =>
+            'Alamat ini didaftarkan sebagai alamat sistem dan tidak boleh digunakan: %s',
         'Bcc' => 'Bcc',
-        'Remove Bcc' => 'Buang Bcc',
+        'Undo & close' => 'Buat semula & tutup',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCustomer.tt
         'Change Customer of %s%s%s' => 'Tukar Pelanggan bagi %s%s%s',
@@ -2697,22 +2695,24 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmail.tt
         'Create New Email Ticket' => 'Buat Tiket Email Baru.',
-        'Example Template' => 'Contoh Templat',
         'To customer user' => 'Ke pengguna pelanggan',
         'Please include at least one customer user for the ticket.' => 'Sila masukkan sekurang-kurangnya satu pengguna pelanggan bagi tiket.',
-        'Select this customer as the main customer.' => 'Pilih pelanggan ini sebagai pelanggan utama.',
-        'Remove Ticket Customer User' => 'Buang Tiket Pengguna Pelanggan',
         'From queue' => 'Dari barisan.',
         'Get all' => 'Dapatkan semua.',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailOutbound.tt
-        'Outbound Email for %s%s%s' => 'Emel Menuju Ke Luar bagi %s%s%s',
+        'Undo & Close' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
         'Resend Email for %s%s%s' => '',
         'All fields marked with an asterisk (*) are mandatory.' => 'Semua medan bertanda bintang (*) adalah wajib.',
         'Cancel & close' => 'Batal dan tutup',
-        'Undo & close' => 'Buat semula & tutup',
+        'Select one or more recipients from the customer user address book.' =>
+            '',
+        'Customer user address book' => '',
+        'Remove Ticket Customer' => 'Buang Pelanggan Tiket',
+        'Remove Cc' => 'Buang Cc',
+        'Remove Bcc' => 'Buang Bcc',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
         'Ticket %s: first response time is over (%s/%s)!' => 'Tiket %s: reaksi masa pertama sudah tamat (%s/%s)!',
@@ -2721,9 +2721,6 @@ sub Data {
         'Ticket %s: update time will be over in %s/%s!' => 'Tiket %s: masa kemaskini akan tamat dalam %s/%s!',
         'Ticket %s: solution time is over (%s/%s)!' => 'Tiket %s: masa penyelesaian sudah tamat (%s/%s)!',
         'Ticket %s: solution time will be over in %s/%s!' => 'Tiket %s: masa penyelesaian akan tamat dalam %s/%s!',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketForward.tt
-        'Forward %s%s%s' => 'Kehadapan %s%s%s',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketHistory.tt
         'History of %s%s%s' => 'Sejarah bagi %s%s%s',
@@ -2791,9 +2788,6 @@ sub Data {
         'Please include at least one customer for the ticket.' => 'Sila masukkan sekurang-kurangnya satu pelanggan bagi tiket.',
         'To queue' => 'Kepada barisan',
 
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPhoneCommon.tt
-        'Phone Call for %s%s%s' => 'Panggilan Telefon untuk %s%s%s',
-
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPlain.tt
         'View Email Plain Text for %s%s%s' => '',
         'Plain' => 'Biasa',
@@ -2847,12 +2841,12 @@ sub Data {
         'Save filter settings as default' => 'Simpan tetapan penapis sebagai piawai.',
         'Event Type' => 'Jenis Acara',
         'Save as default' => 'Simpan sebagai lalai',
-        'Drafts' => '',
-        'by' => 'oleh',
         'Change Queue' => 'Ubah Barisan',
         'There are no dialogs available at this point in the process.' =>
             'Tidak terdapat dialog ketika ini di dalam proses.',
         'This item has no articles yet.' => 'Barangan ini tidak mempunyai artikel lagi.',
+        'Drafts' => '',
+        'by' => 'oleh',
         'Article Overview - %s Article(s)' => '',
         'Page %s' => '',
         'Add Filter' => 'Tambah Tapisan',
@@ -8472,8 +8466,6 @@ Search_DynamicField_XTimeSlotStartMonth=01; Search_DynamicField_XTimeSlotStartDa
             'Maaf, tetapi anda tidak boleh mematikan semua kaedah untuk pemberitahuan yang ditanda sebagai mandatori.',
         'Sorry, but you can\'t disable all methods for this notification.' =>
             'Maaf, tetapi anda tidak boleh mematikan semua kaedah untuk pemberitahuan ini.',
-        'Please note that at least one of the settings you have changed requires a page reload. Click here to reload the current screen.' =>
-            '',
         'An unknown error occurred. Please contact the administrator.' =>
             '',
 
@@ -9612,7 +9604,6 @@ Kumpulan MejaBantuan Anda
         'Please either turn some off first or increase the limit in configuration.',
         'Please enter at least one search value or * to find anything.',
         'Please enter at least one search word to find anything.',
-        'Please note that at least one of the settings you have changed requires a page reload. Click here to reload the current screen.',
         'Please only select at most %s files for upload.',
         'Please only select one file for upload.',
         'Please remove the following words from your search as they cannot be searched for:',

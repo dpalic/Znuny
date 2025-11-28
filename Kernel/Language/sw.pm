@@ -29,7 +29,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%M/%D/%Y';
     $Self->{DateInputFormat}     = '%M/%D/%Y';
     $Self->{DateInputFormatLong} = '%M/%D/%Y - %T';
-    $Self->{Completeness}        = 0.425631130406818;
+    $Self->{Completeness}        = 0.425353925353925;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -2677,21 +2677,19 @@ sub Data {
         'Execute Bulk Action' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
-        'Compose Answer for %s%s%s' => '',
         'Date Invalid!' => 'Tarehe batili',
-        'Select one or more recipients from the customer user address book.' =>
-            '',
-        'Customer user address book' => '',
-        'This address is registered as system address and cannot be used: %s' =>
-            '',
-        'Please include at least one recipient' => 'Tafadhali ambatanisha mpokeaji japo mmoja',
-        'Remove Ticket Customer' => 'Mtoe mteja wa tiketi',
         'Please remove this entry and enter a new one with the correct value.' =>
             'Tafadhali toa ingizo hili na uweke jipya lenye thamani sahihi.',
         'This address already exists on the address list.' => 'Anwani hii tayari ipo katika orodha ya anwani',
-        'Remove Cc' => 'Toa Cc.',
+        'Search for customer' => '',
+        'Open address book' => '',
+        'Address book' => '',
+        'Customer suggestions' => '',
+        'Please include at least one recipient' => 'Tafadhali ambatanisha mpokeaji japo mmoja',
+        'This address is registered as system address and cannot be used: %s' =>
+            '',
         'Bcc' => 'Bcc',
-        'Remove Bcc' => 'Toa Bcc',
+        'Undo & close' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCustomer.tt
         'Change Customer of %s%s%s' => '',
@@ -2700,22 +2698,24 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmail.tt
         'Create New Email Ticket' => 'Tengeneza tiketi ya barua pepe mpya',
-        'Example Template' => 'Kiolezo cha mfano',
         'To customer user' => 'Kwenda kwa mtumiaji wa mteja',
         'Please include at least one customer user for the ticket.' => 'Tafadhali weka japo mtumiaji wa mteja mmoja kwa tiketi hii.',
-        'Select this customer as the main customer.' => 'Chagua mteja huyu kama mteja mkuu.',
-        'Remove Ticket Customer User' => 'Ondoa mtumiaji wa mteja wa tiketi',
         'From queue' => 'Kutoka kwenye foleni',
         'Get all' => 'Pata zote',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailOutbound.tt
-        'Outbound Email for %s%s%s' => '',
+        'Undo & Close' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
         'Resend Email for %s%s%s' => '',
         'All fields marked with an asterisk (*) are mandatory.' => 'Uga zote zilizowekwa alama ya kinyota (*) ni za lazima.',
         'Cancel & close' => '',
-        'Undo & close' => '',
+        'Select one or more recipients from the customer user address book.' =>
+            '',
+        'Customer user address book' => '',
+        'Remove Ticket Customer' => 'Mtoe mteja wa tiketi',
+        'Remove Cc' => 'Toa Cc.',
+        'Remove Bcc' => 'Toa Bcc',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
         'Ticket %s: first response time is over (%s/%s)!' => '',
@@ -2724,9 +2724,6 @@ sub Data {
         'Ticket %s: update time will be over in %s/%s!' => '',
         'Ticket %s: solution time is over (%s/%s)!' => '',
         'Ticket %s: solution time will be over in %s/%s!' => '',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketForward.tt
-        'Forward %s%s%s' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketHistory.tt
         'History of %s%s%s' => '',
@@ -2794,9 +2791,6 @@ sub Data {
         'Please include at least one customer for the ticket.' => 'Tafadhali ambatanisha japo mteja mmoja kwa tiketi hii.',
         'To queue' => 'Kwenda kwenye foleni',
 
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPhoneCommon.tt
-        'Phone Call for %s%s%s' => '',
-
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPlain.tt
         'View Email Plain Text for %s%s%s' => '',
         'Plain' => 'Wazi',
@@ -2850,12 +2844,12 @@ sub Data {
         'Save filter settings as default' => 'Hifadhi mipangilio ya kichuja kuwa chaguo-msingi',
         'Event Type' => 'Aina ya tukio',
         'Save as default' => 'Hifadhi kama chaguo-msingi',
-        'Drafts' => '',
-        'by' => 'Kwa',
         'Change Queue' => 'Badili foleni',
         'There are no dialogs available at this point in the process.' =>
             'Hakuna mazungumzo yaliyopo katika hatua hii ya mchakato.',
         'This item has no articles yet.' => 'Kipengee hakina makala bado.',
+        'Drafts' => '',
+        'by' => 'Kwa',
         'Article Overview - %s Article(s)' => '',
         'Page %s' => '',
         'Add Filter' => 'Ongeza kichuja',
@@ -8476,8 +8470,6 @@ Mfano:
             '',
         'Sorry, but you can\'t disable all methods for this notification.' =>
             '',
-        'Please note that at least one of the settings you have changed requires a page reload. Click here to reload the current screen.' =>
-            '',
         'An unknown error occurred. Please contact the administrator.' =>
             '',
 
@@ -9604,7 +9596,6 @@ Thanks for your help!
         'Please either turn some off first or increase the limit in configuration.',
         'Please enter at least one search value or * to find anything.',
         'Please enter at least one search word to find anything.',
-        'Please note that at least one of the settings you have changed requires a page reload. Click here to reload the current screen.',
         'Please only select at most %s files for upload.',
         'Please only select one file for upload.',
         'Please remove the following words from your search as they cannot be searched for:',

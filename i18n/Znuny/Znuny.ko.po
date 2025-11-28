@@ -7754,7 +7754,7 @@ msgstr "%s%s%s에 대한 답변 작성"
 msgid "Date Invalid!"
 msgstr "잘못된 날짜!"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
 msgid "Customer user address book"
 msgstr "고객 사용자 주소록"
 
@@ -7766,7 +7766,7 @@ msgstr "이 주소는 시스템 주소로 등록되어 있으므로 사용할 �
 msgid "Please include at least one recipient"
 msgstr "수신자를 한 명 이상 포함하십시오."
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
 msgid "Remove Ticket Customer"
 msgstr "티켓 고객 제거"
 
@@ -7778,7 +7778,7 @@ msgstr "이 항목을 제거하고 올바른 값으로 새 항목을 입력하�
 msgid "This address already exists on the address list."
 msgstr "이 주소는 이미 주소록에 있습니다."
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
 msgid "Remove Cc"
 msgstr "참조 삭제"
 
@@ -7786,7 +7786,7 @@ msgstr "참조 삭제"
 msgid "Bcc"
 msgstr "숨은 참조"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
 msgid "Remove Bcc"
 msgstr "숨은 참조 제거"
 
@@ -7834,7 +7834,7 @@ msgstr "모든 것을 가져라"
 msgid "Outbound Email for %s%s%s"
 msgstr "%s%s%s의 발신 이메일"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
 msgid "Select one or more recipients from the customer user address book."
 msgstr "고객 사용자 주소록에서 하나 이상의 수신자를 선택하십시오."
 
@@ -7850,7 +7850,7 @@ msgstr "별표 (*)로 표시된 모든 필드는 필수 항목입니다."
 msgid "Cancel & close"
 msgstr "취소 및 닫기"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
 msgid "Undo & close"
 msgstr "실행 취소 및 닫기"
 
@@ -25034,5 +25034,25 @@ msgstr ""
 
 #. Perl Module: Kernel/Modules/AdminSystemConfigurationDeployment.pm
 msgid "Quick Deploy by"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
+msgid "Search for customer"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
+msgid "Open address book"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
+msgid "Address book"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
+msgid "Customer suggestions"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailOutbound.tt
+msgid "Undo & Close"
 msgstr ""
 

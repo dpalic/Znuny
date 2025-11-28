@@ -7754,7 +7754,7 @@ msgstr ""
 msgid "Date Invalid!"
 msgstr "Neplatné datum!"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
 msgid "Customer user address book"
 msgstr ""
 
@@ -7766,7 +7766,7 @@ msgstr ""
 msgid "Please include at least one recipient"
 msgstr "Prosíme, uveďte alespoň jednoho příjemce"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
 msgid "Remove Ticket Customer"
 msgstr ""
 
@@ -7778,7 +7778,7 @@ msgstr "Prosíme, odstraňte tento záznam a vytvořte nový se správnou hodnot
 msgid "This address already exists on the address list."
 msgstr "Tato adresa již v adresáři existuje."
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
 msgid "Remove Cc"
 msgstr "Odstranit Cc"
 
@@ -7786,7 +7786,7 @@ msgstr "Odstranit Cc"
 msgid "Bcc"
 msgstr "Skrytá kopie"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
 msgid "Remove Bcc"
 msgstr "Odstranit Bcc"
 
@@ -7842,7 +7842,7 @@ msgstr "Všechna pole označena hvězdičkou (*) jsou povinná."
 msgid "Cancel & close"
 msgstr "Zrušit a zavřít"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
 msgid "Undo & close"
 msgstr "Krok zpět a zavřít"
 
@@ -24293,7 +24293,7 @@ msgstr ""
 msgid "cancel"
 msgstr ""
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
 msgid "Select one or more recipients from the customer user address book."
 msgstr ""
 
@@ -25023,5 +25023,25 @@ msgstr ""
 
 #. Perl Module: Kernel/Modules/AdminSystemConfigurationDeployment.pm
 msgid "Quick Deploy by"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
+msgid "Search for customer"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
+msgid "Open address book"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
+msgid "Address book"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
+msgid "Customer suggestions"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailOutbound.tt
+msgid "Undo & Close"
 msgstr ""
 

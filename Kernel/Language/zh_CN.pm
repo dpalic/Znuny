@@ -33,7 +33,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y.%M.%D';
     $Self->{DateInputFormat}     = '%Y.%M.%D';
     $Self->{DateInputFormatLong} = '%Y.%M.%D - %T';
-    $Self->{Completeness}        = 0.872969930857051;
+    $Self->{Completeness}        = 0.872104247104247;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -2681,21 +2681,19 @@ sub Data {
         'Execute Bulk Action' => '执行批量操作',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
-        'Compose Answer for %s%s%s' => '撰写工单%s%s%s的回复邮件',
         'Date Invalid!' => '日期无效！',
-        'Select one or more recipients from the customer user address book.' =>
-            '从客户用户通讯录中选择一个或多个收件人。',
-        'Customer user address book' => '客户用户通讯录',
-        'This address is registered as system address and cannot be used: %s' =>
-            '这个邮件地址：%s已被注册为系统邮件地址，不能使用。',
-        'Please include at least one recipient' => '请包括至少一个收件人',
-        'Remove Ticket Customer' => '移除工单客户',
         'Please remove this entry and enter a new one with the correct value.' =>
             '请删除这个条目并重新输入一个正确的值。',
         'This address already exists on the address list.' => '地址列表已有这个地址。',
-        'Remove Cc' => '移除Cc',
+        'Search for customer' => '',
+        'Open address book' => '',
+        'Address book' => '',
+        'Customer suggestions' => '',
+        'Please include at least one recipient' => '请包括至少一个收件人',
+        'This address is registered as system address and cannot be used: %s' =>
+            '这个邮件地址：%s已被注册为系统邮件地址，不能使用。',
         'Bcc' => '暗送',
-        'Remove Bcc' => '移除Bcc',
+        'Undo & close' => '撤销并关闭',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCustomer.tt
         'Change Customer of %s%s%s' => '变更工单%s%s%s的客户',
@@ -2704,22 +2702,24 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmail.tt
         'Create New Email Ticket' => '创建邮件工单',
-        'Example Template' => '模板样例',
         'To customer user' => '选择客户用户',
         'Please include at least one customer user for the ticket.' => '请包括至少一个客户用户。',
-        'Select this customer as the main customer.' => '选择这个客户用户作为主要联系人。',
-        'Remove Ticket Customer User' => '移除客户用户',
         'From queue' => '从队列',
         'Get all' => '获取全部',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailOutbound.tt
-        'Outbound Email for %s%s%s' => '%s%s%s的外发邮件',
+        'Undo & Close' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
         'Resend Email for %s%s%s' => '重新发送电子邮件给%s%s%s',
         'All fields marked with an asterisk (*) are mandatory.' => '所有带“*”的字段都是强制要求输入的字段.',
         'Cancel & close' => '取消并关闭',
-        'Undo & close' => '撤销并关闭',
+        'Select one or more recipients from the customer user address book.' =>
+            '从客户用户通讯录中选择一个或多个收件人。',
+        'Customer user address book' => '客户用户通讯录',
+        'Remove Ticket Customer' => '移除工单客户',
+        'Remove Cc' => '移除Cc',
+        'Remove Bcc' => '移除Bcc',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
         'Ticket %s: first response time is over (%s/%s)!' => '工单%s：首次响应时间已超时(%s/%s)！',
@@ -2728,9 +2728,6 @@ sub Data {
         'Ticket %s: update time will be over in %s/%s!' => '工单%s: 更新时间将在%s/%s内超时！',
         'Ticket %s: solution time is over (%s/%s)!' => '工单%s: 解决时间已超时(%s/%s)！',
         'Ticket %s: solution time will be over in %s/%s!' => '工单%s：解决时间将在%s/%s内超时！',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketForward.tt
-        'Forward %s%s%s' => '转发%s%s%s',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketHistory.tt
         'History of %s%s%s' => '%s%s%s历史',
@@ -2798,9 +2795,6 @@ sub Data {
         'Please include at least one customer for the ticket.' => '请包括至少一个客户用户。',
         'To queue' => '队列',
 
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPhoneCommon.tt
-        'Phone Call for %s%s%s' => '%s%s%s的电话',
-
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPlain.tt
         'View Email Plain Text for %s%s%s' => '查看%s%s%s的邮件纯文本',
         'Plain' => '纯文本',
@@ -2854,12 +2848,12 @@ sub Data {
         'Save filter settings as default' => '将过滤器设置保存为默认过滤器',
         'Event Type' => '事件类型',
         'Save as default' => '保存为默认',
-        'Drafts' => '草稿',
-        'by' => '由',
         'Change Queue' => '改变队列',
         'There are no dialogs available at this point in the process.' =>
             '目前流程中没有可用的活动对话框。',
         'This item has no articles yet.' => '此条目还没有信件。',
+        'Drafts' => '草稿',
+        'by' => '由',
         'Article Overview - %s Article(s)' => '信件概览-%s个信件',
         'Page %s' => '第%s页',
         'Add Filter' => '添加过滤器',
@@ -8477,8 +8471,6 @@ sub Data {
             '抱歉，你不能将标记为强制的通知的所有传输方法都禁用掉。',
         'Sorry, but you can\'t disable all methods for this notification.' =>
             '抱歉，你不能将本通知的所有传输方法都禁用掉。',
-        'Please note that at least one of the settings you have changed requires a page reload. Click here to reload the current screen.' =>
-            '请注意，你更改的设置至少有一个需要重新加载页面。 点击这里重新加载当前屏幕。',
         'An unknown error occurred. Please contact the administrator.' =>
             '出现未知错误，请联系管理员。',
 
@@ -9615,7 +9607,6 @@ Thanks for your help!
         'Please either turn some off first or increase the limit in configuration.',
         'Please enter at least one search value or * to find anything.',
         'Please enter at least one search word to find anything.',
-        'Please note that at least one of the settings you have changed requires a page reload. Click here to reload the current screen.',
         'Please only select at most %s files for upload.',
         'Please only select one file for upload.',
         'Please remove the following words from your search as they cannot be searched for:',

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2025-11-25 13:48+0000\n"
+"POT-Creation-Date: 2025-11-27 21:48+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -7947,31 +7947,7 @@ msgid "Execute Bulk Action"
 msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
-msgid "Compose Answer for %s%s%s"
-msgstr ""
-
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
 msgid "Date Invalid!"
-msgstr ""
-
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
-msgid "Select one or more recipients from the customer user address book."
-msgstr ""
-
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
-msgid "Customer user address book"
-msgstr ""
-
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
-msgid "This address is registered as system address and cannot be used: %s"
-msgstr ""
-
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
-msgid "Please include at least one recipient"
-msgstr ""
-
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
-msgid "Remove Ticket Customer"
 msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
@@ -7983,7 +7959,27 @@ msgid "This address already exists on the address list."
 msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
-msgid "Remove Cc"
+msgid "Search for customer"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
+msgid "Open address book"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
+msgid "Address book"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
+msgid "Customer suggestions"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
+msgid "Please include at least one recipient"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
+msgid "This address is registered as system address and cannot be used: %s"
 msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
@@ -7991,7 +7987,7 @@ msgid "Bcc"
 msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
-msgid "Remove Bcc"
+msgid "Undo & close"
 msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCustomer.tt
@@ -8011,23 +8007,11 @@ msgid "Create New Email Ticket"
 msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmail.tt
-msgid "Example Template"
-msgstr ""
-
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmail.tt
 msgid "To customer user"
 msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmail.tt
 msgid "Please include at least one customer user for the ticket."
-msgstr ""
-
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmail.tt
-msgid "Select this customer as the main customer."
-msgstr ""
-
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmail.tt
-msgid "Remove Ticket Customer User"
 msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmail.tt
@@ -8039,7 +8023,7 @@ msgid "Get all"
 msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailOutbound.tt
-msgid "Outbound Email for %s%s%s"
+msgid "Undo & Close"
 msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
@@ -8055,7 +8039,23 @@ msgid "Cancel & close"
 msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
-msgid "Undo & close"
+msgid "Select one or more recipients from the customer user address book."
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
+msgid "Customer user address book"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
+msgid "Remove Ticket Customer"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
+msgid "Remove Cc"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
+msgid "Remove Bcc"
 msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
@@ -8080,10 +8080,6 @@ msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
 msgid "Ticket %s: solution time will be over in %s/%s!"
-msgstr ""
-
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketForward.tt
-msgid "Forward %s%s%s"
 msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketHistory.tt
@@ -8274,10 +8270,6 @@ msgstr ""
 msgid "To queue"
 msgstr ""
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPhoneCommon.tt
-msgid "Phone Call for %s%s%s"
-msgstr ""
-
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPlain.tt
 msgid "View Email Plain Text for %s%s%s"
 msgstr ""
@@ -8447,14 +8439,6 @@ msgid "Save as default"
 msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom.tt
-msgid "Drafts"
-msgstr ""
-
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom.tt
-msgid "by"
-msgstr ""
-
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom.tt
 msgid "Change Queue"
 msgstr ""
 
@@ -8464,6 +8448,14 @@ msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom.tt
 msgid "This item has no articles yet."
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom.tt
+msgid "Drafts"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom.tt
+msgid "by"
 msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom.tt
@@ -21808,10 +21800,6 @@ msgstr ""
 
 #. JS File: var/httpd/htdocs/js/Core.Agent.Preferences.js
 msgid "Sorry, but you can't disable all methods for this notification."
-msgstr ""
-
-#. JS File: var/httpd/htdocs/js/Core.Agent.Preferences.js
-msgid "Please note that at least one of the settings you have changed requires a page reload. Click here to reload the current screen."
 msgstr ""
 
 #. JS File: var/httpd/htdocs/js/Core.Agent.Preferences.js

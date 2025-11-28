@@ -7754,7 +7754,7 @@ msgstr ""
 msgid "Date Invalid!"
 msgstr "¡Fecha Inválida!"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
 msgid "Customer user address book"
 msgstr "Libreta de direcciones del usuario del cliente"
 
@@ -7766,7 +7766,7 @@ msgstr "Esta dirección está registrada como una dirección del sistema y no pu
 msgid "Please include at least one recipient"
 msgstr "Incluya al menos un destinatario"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
 msgid "Remove Ticket Customer"
 msgstr "Eliminar al cliente del ticket"
 
@@ -7778,7 +7778,7 @@ msgstr "Elimine esta entrada e introduzca una nueva con el valor correcto."
 msgid "This address already exists on the address list."
 msgstr "Esta dirección ya existe en la lista de direcciones."
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
 msgid "Remove Cc"
 msgstr "Eliminar Copia para"
 
@@ -7786,7 +7786,7 @@ msgstr "Eliminar Copia para"
 msgid "Bcc"
 msgstr "Copia Oculta"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
 msgid "Remove Bcc"
 msgstr "Eliminar Copia oculta"
 
@@ -7834,7 +7834,7 @@ msgstr "Obtener todos"
 msgid "Outbound Email for %s%s%s"
 msgstr ""
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
 msgid "Select one or more recipients from the customer user address book."
 msgstr "Seleccione uno o mas destinatarios de la libreta de direcciones del usuario del cliente."
 
@@ -7850,7 +7850,7 @@ msgstr "Todos los campos marcados con un asterisco (*) son obligatorios."
 msgid "Cancel & close"
 msgstr "Cancelar y cerrar"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
 msgid "Undo & close"
 msgstr "Deshacer cambios y cerrar"
 
@@ -25034,5 +25034,25 @@ msgstr ""
 
 #. Perl Module: Kernel/Modules/AdminSystemConfigurationDeployment.pm
 msgid "Quick Deploy by"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
+msgid "Search for customer"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
+msgid "Open address book"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
+msgid "Address book"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
+msgid "Customer suggestions"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailOutbound.tt
+msgid "Undo & Close"
 msgstr ""
 

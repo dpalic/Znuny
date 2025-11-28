@@ -32,7 +32,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.869593182183631;
+    $Self->{Completeness}        = 0.868725868725869;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2680,21 +2680,19 @@ sub Data {
         'Execute Bulk Action' => 'Izvrši masovnu akciju',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
-        'Compose Answer for %s%s%s' => 'Napiši odgovor za %s%s%s',
         'Date Invalid!' => 'Neispravan datum!',
-        'Select one or more recipients from the customer user address book.' =>
-            'Odaberite jednog ili više primaoca iz adresara klijent korisnika.',
-        'Customer user address book' => 'Adresar klijent korisnika',
-        'This address is registered as system address and cannot be used: %s' =>
-            'Ova adresa je registrovana kao sistemska i ne može biti korišćena: %s',
-        'Please include at least one recipient' => 'Molimo da uključite bar jednog primaoca',
-        'Remove Ticket Customer' => 'Ukloni klijent sa tiketa **',
         'Please remove this entry and enter a new one with the correct value.' =>
             'Molimo da uklonite ovaj unos i unesete nov sa ispravnom vrednošću.',
         'This address already exists on the address list.' => 'Ova adresa već postoji u listi.',
-        'Remove Cc' => 'Ukloni Cc',
+        'Search for customer' => '',
+        'Open address book' => '',
+        'Address book' => '',
+        'Customer suggestions' => '',
+        'Please include at least one recipient' => 'Molimo da uključite bar jednog primaoca',
+        'This address is registered as system address and cannot be used: %s' =>
+            'Ova adresa je registrovana kao sistemska i ne može biti korišćena: %s',
         'Bcc' => 'Bcc',
-        'Remove Bcc' => 'Ukloni Bcc',
+        'Undo & close' => 'Odustani & zatvori',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCustomer.tt
         'Change Customer of %s%s%s' => 'Promeni klijenta za %s%s%s',
@@ -2703,22 +2701,24 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmail.tt
         'Create New Email Ticket' => 'Otvori novi imejl tiket',
-        'Example Template' => 'Primer šablona',
         'To customer user' => 'Za klijenta korisnika',
         'Please include at least one customer user for the ticket.' => 'Molimo vas uključite barem jednog klijenta korisnika za tiket.',
-        'Select this customer as the main customer.' => 'Označi ovog klijenta kao glavnog klijenta.',
-        'Remove Ticket Customer User' => 'Ukloni tiket klijenta korisnika **',
         'From queue' => 'iz reda',
         'Get all' => 'Uzmi sve',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailOutbound.tt
-        'Outbound Email for %s%s%s' => 'Odlazni imejl za %s%s%s',
+        'Undo & Close' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
         'Resend Email for %s%s%s' => 'Pošalji ponovo imejl za %s %s %s',
         'All fields marked with an asterisk (*) are mandatory.' => 'Sva polja označena zvezdicom (*) su obavezna.',
         'Cancel & close' => 'Poništi & zatvori',
-        'Undo & close' => 'Odustani & zatvori',
+        'Select one or more recipients from the customer user address book.' =>
+            'Odaberite jednog ili više primaoca iz adresara klijent korisnika.',
+        'Customer user address book' => 'Adresar klijent korisnika',
+        'Remove Ticket Customer' => 'Ukloni klijent sa tiketa **',
+        'Remove Cc' => 'Ukloni Cc',
+        'Remove Bcc' => 'Ukloni Bcc',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
         'Ticket %s: first response time is over (%s/%s)!' => 'Tiket %s: vreme odziva je isteklo (%s/%s)!',
@@ -2727,9 +2727,6 @@ sub Data {
         'Ticket %s: update time will be over in %s/%s!' => 'Tiket %s: vreme ažuriranja ističe za %s/%s!',
         'Ticket %s: solution time is over (%s/%s)!' => 'Tiket %s: vreme rešavanja je isteklo (%s/%s)!',
         'Ticket %s: solution time will be over in %s/%s!' => 'Tiket %s: vreme rešavanja ističe za %s/%s!',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketForward.tt
-        'Forward %s%s%s' => 'Prosledi %s%s%s',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketHistory.tt
         'History of %s%s%s' => 'Istorijat od %s%s%s',
@@ -2797,9 +2794,6 @@ sub Data {
         'Please include at least one customer for the ticket.' => 'Molimo da uključite bar jednog klijenta za tiket.',
         'To queue' => 'U red',
 
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPhoneCommon.tt
-        'Phone Call for %s%s%s' => 'Poziv za %s%s%s',
-
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPlain.tt
         'View Email Plain Text for %s%s%s' => 'Prikaz imejla kao običan tekst za %s%s%s',
         'Plain' => 'Neformatirano',
@@ -2853,12 +2847,12 @@ sub Data {
         'Save filter settings as default' => 'Sačuvaj podešavanja filtera kao podrazumevana',
         'Event Type' => 'Tip događaja',
         'Save as default' => 'Sačuvaj kao podrazumevano',
-        'Drafts' => 'Nacrti',
-        'by' => 'od',
         'Change Queue' => 'Promeni Red',
         'There are no dialogs available at this point in the process.' =>
             'U ovom trenutku nema slobodnih dijaloga u procesu.',
         'This item has no articles yet.' => 'Ova stavka još uvek nema člkanke.',
+        'Drafts' => 'Nacrti',
+        'by' => 'od',
         'Article Overview - %s Article(s)' => 'Pregled članaka - %s članak(a)',
         'Page %s' => 'Strana %s',
         'Add Filter' => 'Dodaj Filter',
@@ -8476,8 +8470,6 @@ sub Data {
             'Izvinite ali ne možete isključiti sve metode za obaveštenja označena kao obavezna.',
         'Sorry, but you can\'t disable all methods for this notification.' =>
             'Izvinite ali ne možete isključiti sve metode za ovo obaveštenje.',
-        'Please note that at least one of the settings you have changed requires a page reload. Click here to reload the current screen.' =>
-            'Napominjemo da najmanje jedno podešavanje koje ste izmenili zahteva ponovno učitavanje stranice. Kliknite ovde za ponovno učitavanje ekrana.',
         'An unknown error occurred. Please contact the administrator.' =>
             'Dogodila se nepoznata greška. Molimo kontaktirajte administratora.',
 
@@ -9615,7 +9607,6 @@ Vaša tehnička podrška
         'Please either turn some off first or increase the limit in configuration.',
         'Please enter at least one search value or * to find anything.',
         'Please enter at least one search word to find anything.',
-        'Please note that at least one of the settings you have changed requires a page reload. Click here to reload the current screen.',
         'Please only select at most %s files for upload.',
         'Please only select one file for upload.',
         'Please remove the following words from your search as they cannot be searched for:',

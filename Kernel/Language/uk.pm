@@ -27,7 +27,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%M/%D/%Y';
     $Self->{DateInputFormat}     = '%M/%D/%Y';
     $Self->{DateInputFormatLong} = '%M/%D/%Y - %T';
-    $Self->{Completeness}        = 0.424344749959801;
+    $Self->{Completeness}        = 0.423423423423423;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -2675,21 +2675,19 @@ sub Data {
         'Execute Bulk Action' => 'Виконати Масову Дію',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
-        'Compose Answer for %s%s%s' => 'Написати відповідь для %s%s%s',
         'Date Invalid!' => 'Невірна дата!',
-        'Select one or more recipients from the customer user address book.' =>
-            '',
-        'Customer user address book' => '',
-        'This address is registered as system address and cannot be used: %s' =>
-            'Ця адреса зареєстрована як системна та не може бути використана: %s',
-        'Please include at least one recipient' => 'Будь ласка, додайте хоч одного одержувача',
-        'Remove Ticket Customer' => 'Вилучити Квиток Клієнта',
         'Please remove this entry and enter a new one with the correct value.' =>
             'Будь ласка, вилучіть цей запис та додайте новий з правильним значенням.',
         'This address already exists on the address list.' => 'Ця адреса вже є в списку адрес',
-        'Remove Cc' => 'Вилучити Копія',
+        'Search for customer' => '',
+        'Open address book' => '',
+        'Address book' => '',
+        'Customer suggestions' => '',
+        'Please include at least one recipient' => 'Будь ласка, додайте хоч одного одержувача',
+        'This address is registered as system address and cannot be used: %s' =>
+            'Ця адреса зареєстрована як системна та не може бути використана: %s',
         'Bcc' => 'Прихована копія',
-        'Remove Bcc' => 'Вилучити Прихована Копія',
+        'Undo & close' => 'Скасувати та закрити',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCustomer.tt
         'Change Customer of %s%s%s' => 'Зміна Клаєнта: %s%s%s',
@@ -2698,22 +2696,24 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmail.tt
         'Create New Email Ticket' => 'Заявка по e-mail',
-        'Example Template' => 'Приклад шаблону',
         'To customer user' => 'Для користувача',
         'Please include at least one customer user for the ticket.' => 'Будь ласка, додайте хоча б одного користувача-клієнта для квитка.',
-        'Select this customer as the main customer.' => 'Виберіть клієнта у якості основного.',
-        'Remove Ticket Customer User' => 'Вилучити Користувача-Клієнта',
         'From queue' => ' Із черги',
         'Get all' => 'Отримати всі',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailOutbound.tt
-        'Outbound Email for %s%s%s' => 'Вихідна адреса електронної пошти для %s%s%s',
+        'Undo & Close' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
         'Resend Email for %s%s%s' => '',
         'All fields marked with an asterisk (*) are mandatory.' => 'Всі поля, позначені (*) є обов\'язковими.',
         'Cancel & close' => 'Скасувати & закрити',
-        'Undo & close' => 'Скасувати та закрити',
+        'Select one or more recipients from the customer user address book.' =>
+            '',
+        'Customer user address book' => '',
+        'Remove Ticket Customer' => 'Вилучити Квиток Клієнта',
+        'Remove Cc' => 'Вилучити Копія',
+        'Remove Bcc' => 'Вилучити Прихована Копія',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
         'Ticket %s: first response time is over (%s/%s)!' => 'Квиток %s: час першого відгуку складає більше (%s/%s)!',
@@ -2722,9 +2722,6 @@ sub Data {
         'Ticket %s: update time will be over in %s/%s!' => 'Квиток %s: час оновлення буде більше ніж %s/%s!',
         'Ticket %s: solution time is over (%s/%s)!' => 'Квиток %s: час розв\'язання більше ніж (%s/%s)!',
         'Ticket %s: solution time will be over in %s/%s!' => 'Квиток %s: час розв\'язання буде більше ніж %s/%s!',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketForward.tt
-        'Forward %s%s%s' => 'Перенаправити %s%s%s',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketHistory.tt
         'History of %s%s%s' => 'Історія: %s%s%s',
@@ -2792,9 +2789,6 @@ sub Data {
         'Please include at least one customer for the ticket.' => 'Будь ласка, вкажіть хоча б одного клієнта для квитка.',
         'To queue' => 'У чергу',
 
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPhoneCommon.tt
-        'Phone Call for %s%s%s' => 'Телефонний виклик для %s%s%s',
-
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPlain.tt
         'View Email Plain Text for %s%s%s' => 'Переглянути простий текст електронного повідомлення для %s%s%s',
         'Plain' => 'Звичайний',
@@ -2848,12 +2842,12 @@ sub Data {
         'Save filter settings as default' => 'Зберегти умови фільтра для показу за замовчуванням',
         'Event Type' => 'Тип події',
         'Save as default' => 'Зберегти як типовий',
-        'Drafts' => '',
-        'by' => 'ні',
         'Change Queue' => 'Перемінити черга',
         'There are no dialogs available at this point in the process.' =>
             'На даний момент в цьому процесі немає ніяких діалогових вікон.',
         'This item has no articles yet.' => 'У цього елемента ще немає статей.',
+        'Drafts' => '',
+        'by' => 'ні',
         'Article Overview - %s Article(s)' => '',
         'Page %s' => '',
         'Add Filter' => 'Додати фільтр',
@@ -8471,8 +8465,6 @@ sub Data {
             'Вибачте, але ви не можете вимкнути всі методи для сповіщень, що позначені як обов\'язкові.',
         'Sorry, but you can\'t disable all methods for this notification.' =>
             'Вибачте, але ви не можете вимкнути всі методи для цих сповіщень.',
-        'Please note that at least one of the settings you have changed requires a page reload. Click here to reload the current screen.' =>
-            '',
         'An unknown error occurred. Please contact the administrator.' =>
             '',
 
@@ -9599,7 +9591,6 @@ Thanks for your help!
         'Please either turn some off first or increase the limit in configuration.',
         'Please enter at least one search value or * to find anything.',
         'Please enter at least one search word to find anything.',
-        'Please note that at least one of the settings you have changed requires a page reload. Click here to reload the current screen.',
         'Please only select at most %s files for upload.',
         'Please only select one file for upload.',
         'Please remove the following words from your search as they cannot be searched for:',

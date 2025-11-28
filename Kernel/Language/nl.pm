@@ -32,7 +32,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D-%M-%Y';
     $Self->{DateInputFormat}     = '%D-%M-%Y';
     $Self->{DateInputFormatLong} = '%D-%M-%Y - %T';
-    $Self->{Completeness}        = 0.483357452966715;
+    $Self->{Completeness}        = 0.483108108108108;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2680,21 +2680,19 @@ sub Data {
         'Execute Bulk Action' => 'Bulkactie uitvoeren',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
-        'Compose Answer for %s%s%s' => '',
         'Date Invalid!' => 'Datum ongeldig.',
-        'Select one or more recipients from the customer user address book.' =>
-            '',
-        'Customer user address book' => 'Klantgebruiker adresboek',
-        'This address is registered as system address and cannot be used: %s' =>
-            'Dit adres is geregistreerd als een systee adres en kan niet worden gebruikt.',
-        'Please include at least one recipient' => 'Voeg tenminste één ontvanger toe',
-        'Remove Ticket Customer' => 'Verwijder ',
         'Please remove this entry and enter a new one with the correct value.' =>
             'Verwijder deze en geef een nieuwe met een correcte waarde.',
         'This address already exists on the address list.' => 'Dit adres is al toegevoegd.',
-        'Remove Cc' => 'Verwijder CC',
+        'Search for customer' => '',
+        'Open address book' => '',
+        'Address book' => '',
+        'Customer suggestions' => '',
+        'Please include at least one recipient' => 'Voeg tenminste één ontvanger toe',
+        'This address is registered as system address and cannot be used: %s' =>
+            'Dit adres is geregistreerd als een systee adres en kan niet worden gebruikt.',
         'Bcc' => 'Bcc',
-        'Remove Bcc' => 'Verwijder BCC',
+        'Undo & close' => 'Ongedaan maken & sluiten',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCustomer.tt
         'Change Customer of %s%s%s' => 'Wijzig klant van %s%s%s',
@@ -2703,22 +2701,24 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmail.tt
         'Create New Email Ticket' => 'Maak nieuw e-mail ticket',
-        'Example Template' => 'Voorbeeld Template',
         'To customer user' => 'Aan klant',
         'Please include at least one customer user for the ticket.' => 'Selecteer tenminste een klant voor dit ticket.',
-        'Select this customer as the main customer.' => 'Selecteer deze klant als hoofd-klant',
-        'Remove Ticket Customer User' => 'Verwijder klant van ticket',
         'From queue' => 'In wachtrij',
         'Get all' => 'Gebruik alle',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailOutbound.tt
-        'Outbound Email for %s%s%s' => '',
+        'Undo & Close' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
         'Resend Email for %s%s%s' => '',
         'All fields marked with an asterisk (*) are mandatory.' => 'Alle velden met een asterisk (*) zijn verplicht.',
         'Cancel & close' => 'Annuleren & sluiten',
-        'Undo & close' => 'Ongedaan maken & sluiten',
+        'Select one or more recipients from the customer user address book.' =>
+            '',
+        'Customer user address book' => 'Klantgebruiker adresboek',
+        'Remove Ticket Customer' => 'Verwijder ',
+        'Remove Cc' => 'Verwijder CC',
+        'Remove Bcc' => 'Verwijder BCC',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
         'Ticket %s: first response time is over (%s/%s)!' => 'Ticket %s: eerste antwoord tijd is voorbij (%s/%s)!',
@@ -2727,9 +2727,6 @@ sub Data {
         'Ticket %s: update time will be over in %s/%s!' => 'Ticket $s: vervolg tijd zal voorbij zijn binnen %s.',
         'Ticket %s: solution time is over (%s/%s)!' => 'Ticket %s: oplossing tijd is voorbij (%s/%s)!',
         'Ticket %s: solution time will be over in %s/%s!' => 'Ticket %s: oplossing tijd zal voorbij zijn binnen %s/%s!',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketForward.tt
-        'Forward %s%s%s' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketHistory.tt
         'History of %s%s%s' => '',
@@ -2797,9 +2794,6 @@ sub Data {
         'Please include at least one customer for the ticket.' => 'Voeg ten minste één klant toe voor dit ticket.',
         'To queue' => 'In wachtrij',
 
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPhoneCommon.tt
-        'Phone Call for %s%s%s' => '',
-
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPlain.tt
         'View Email Plain Text for %s%s%s' => '',
         'Plain' => 'Zonder opmaak',
@@ -2853,12 +2847,12 @@ sub Data {
         'Save filter settings as default' => 'Sla filter op als standaard',
         'Event Type' => 'Gebeurtenis type',
         'Save as default' => 'Opslaan als standaard',
-        'Drafts' => 'Concepten',
-        'by' => 'door',
         'Change Queue' => 'Wijzig wachtrij',
         'There are no dialogs available at this point in the process.' =>
             'Op dit moment zijn er geen dialogen beschikbaar.',
         'This item has no articles yet.' => 'Dit item heeft nog geen interacties.',
+        'Drafts' => 'Concepten',
+        'by' => 'door',
         'Article Overview - %s Article(s)' => '',
         'Page %s' => '',
         'Add Filter' => 'Nieuw filter',
@@ -8476,8 +8470,6 @@ sub Data {
             'Helaas, maar je kun niet alle methoden voor notificatie markeren als verplicht.',
         'Sorry, but you can\'t disable all methods for this notification.' =>
             'Helaas is het niet mogelijk om alle methodes voor deze notificatie uit te zetten.',
-        'Please note that at least one of the settings you have changed requires a page reload. Click here to reload the current screen.' =>
-            '',
         'An unknown error occurred. Please contact the administrator.' =>
             '',
 
@@ -9615,7 +9607,6 @@ Het Helpdesk Team
         'Please either turn some off first or increase the limit in configuration.',
         'Please enter at least one search value or * to find anything.',
         'Please enter at least one search word to find anything.',
-        'Please note that at least one of the settings you have changed requires a page reload. Click here to reload the current screen.',
         'Please only select at most %s files for upload.',
         'Please only select one file for upload.',
         'Please remove the following words from your search as they cannot be searched for:',

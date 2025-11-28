@@ -35,7 +35,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.371120758964464;
+    $Self->{Completeness}        = 0.370656370656371;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2683,21 +2683,19 @@ sub Data {
         'Execute Bulk Action' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
-        'Compose Answer for %s%s%s' => '',
         'Date Invalid!' => 'Ugyldig dato',
-        'Select one or more recipients from the customer user address book.' =>
-            '',
-        'Customer user address book' => '',
-        'This address is registered as system address and cannot be used: %s' =>
-            '',
-        'Please include at least one recipient' => 'Vennligst oppgi minst en mottaker',
-        'Remove Ticket Customer' => 'Fjern kunde fra sak',
         'Please remove this entry and enter a new one with the correct value.' =>
             'Vennlist fjern innlegget og legg til en med riktige verdier',
         'This address already exists on the address list.' => 'Denne adressen finnes allerede i adresseboken',
-        'Remove Cc' => 'Fjern Cc',
+        'Search for customer' => '',
+        'Open address book' => '',
+        'Address book' => '',
+        'Customer suggestions' => '',
+        'Please include at least one recipient' => 'Vennligst oppgi minst en mottaker',
+        'This address is registered as system address and cannot be used: %s' =>
+            '',
         'Bcc' => 'Blindkopi',
-        'Remove Bcc' => 'Fjern Bcc',
+        'Undo & close' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCustomer.tt
         'Change Customer of %s%s%s' => '',
@@ -2706,22 +2704,24 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmail.tt
         'Create New Email Ticket' => 'Opprett ny e-postsak',
-        'Example Template' => 'Eksempel på mal',
         'To customer user' => 'Til kunde-bruker',
         'Please include at least one customer user for the ticket.' => '',
-        'Select this customer as the main customer.' => 'Velg denne kunden som hovedkunden.',
-        'Remove Ticket Customer User' => 'Fjern kundebruker fra sak',
         'From queue' => 'Fra kø',
         'Get all' => 'Hent alle',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailOutbound.tt
-        'Outbound Email for %s%s%s' => '',
+        'Undo & Close' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
         'Resend Email for %s%s%s' => '',
         'All fields marked with an asterisk (*) are mandatory.' => '',
         'Cancel & close' => 'Avbryt og lukk',
-        'Undo & close' => '',
+        'Select one or more recipients from the customer user address book.' =>
+            '',
+        'Customer user address book' => '',
+        'Remove Ticket Customer' => 'Fjern kunde fra sak',
+        'Remove Cc' => 'Fjern Cc',
+        'Remove Bcc' => 'Fjern Bcc',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
         'Ticket %s: first response time is over (%s/%s)!' => '',
@@ -2730,9 +2730,6 @@ sub Data {
         'Ticket %s: update time will be over in %s/%s!' => '',
         'Ticket %s: solution time is over (%s/%s)!' => '',
         'Ticket %s: solution time will be over in %s/%s!' => '',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketForward.tt
-        'Forward %s%s%s' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketHistory.tt
         'History of %s%s%s' => '',
@@ -2800,9 +2797,6 @@ sub Data {
         'Please include at least one customer for the ticket.' => 'Vennligst oppgi minst en kunde for denne saken',
         'To queue' => 'Til kø',
 
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPhoneCommon.tt
-        'Phone Call for %s%s%s' => 'Telefonsamtale for %s%s%s',
-
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPlain.tt
         'View Email Plain Text for %s%s%s' => '',
         'Plain' => 'Enkel',
@@ -2856,12 +2850,12 @@ sub Data {
         'Save filter settings as default' => 'Lagre filter som standard',
         'Event Type' => '',
         'Save as default' => 'Lagre som standard',
-        'Drafts' => '',
-        'by' => 'av',
         'Change Queue' => 'Bytt kø',
         'There are no dialogs available at this point in the process.' =>
             '',
         'This item has no articles yet.' => '',
+        'Drafts' => '',
+        'by' => 'av',
         'Article Overview - %s Article(s)' => '',
         'Page %s' => '',
         'Add Filter' => 'Legg til filter',
@@ -8479,8 +8473,6 @@ sub Data {
             '',
         'Sorry, but you can\'t disable all methods for this notification.' =>
             '',
-        'Please note that at least one of the settings you have changed requires a page reload. Click here to reload the current screen.' =>
-            '',
         'An unknown error occurred. Please contact the administrator.' =>
             '',
 
@@ -9607,7 +9599,6 @@ Thanks for your help!
         'Please either turn some off first or increase the limit in configuration.',
         'Please enter at least one search value or * to find anything.',
         'Please enter at least one search word to find anything.',
-        'Please note that at least one of the settings you have changed requires a page reload. Click here to reload the current screen.',
         'Please only select at most %s files for upload.',
         'Please only select one file for upload.',
         'Please remove the following words from your search as they cannot be searched for:',

@@ -38,7 +38,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.849815082810741;
+    $Self->{Completeness}        = 0.848938223938224;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2686,21 +2686,19 @@ sub Data {
         'Execute Bulk Action' => 'Выполнить массовое действие',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
-        'Compose Answer for %s%s%s' => 'Создать ответ для %s%s%s',
         'Date Invalid!' => 'Неверная дата!',
-        'Select one or more recipients from the customer user address book.' =>
-            'Выберите одного или более получателей из адресной книги клиентов.',
-        'Customer user address book' => 'Адресная книга клиентов',
-        'This address is registered as system address and cannot be used: %s' =>
-            'Этот адрес является системным зарегистрированным адресом и не может быть использован: %s',
-        'Please include at least one recipient' => 'Пожалуйста, включите хотя бы одного получателя.',
-        'Remove Ticket Customer' => 'Удалить клиента-инициатора заявки',
         'Please remove this entry and enter a new one with the correct value.' =>
             'Пожалуйста, удалите эту запись и введите новую с корректным значением.',
         'This address already exists on the address list.' => 'Такой адрес уже существует в списке адресов.',
-        'Remove Cc' => 'Удалить из копии',
+        'Search for customer' => '',
+        'Open address book' => '',
+        'Address book' => '',
+        'Customer suggestions' => '',
+        'Please include at least one recipient' => 'Пожалуйста, включите хотя бы одного получателя.',
+        'This address is registered as system address and cannot be used: %s' =>
+            'Этот адрес является системным зарегистрированным адресом и не может быть использован: %s',
         'Bcc' => 'Скрытая копия',
-        'Remove Bcc' => 'Удалить из скрытой копии',
+        'Undo & close' => 'Отменить и закрыть',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCustomer.tt
         'Change Customer of %s%s%s' => 'Изменить клиента для %s%s%s',
@@ -2709,22 +2707,24 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmail.tt
         'Create New Email Ticket' => 'Создать заявку по email',
-        'Example Template' => 'Пример шаблона',
         'To customer user' => 'Клиенту',
         'Please include at least one customer user for the ticket.' => 'Укажите, пожалуйста, хотя бы одного клиента',
-        'Select this customer as the main customer.' => 'Выбрать этого клиента главным клиентом',
-        'Remove Ticket Customer User' => 'Удалить клиента заявки',
         'From queue' => 'Из очереди',
         'Get all' => 'Получить всех',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailOutbound.tt
-        'Outbound Email for %s%s%s' => 'Исходящее письмо для %s%s%s',
+        'Undo & Close' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
         'Resend Email for %s%s%s' => 'Отправить личное сообщение для %s%s%s',
         'All fields marked with an asterisk (*) are mandatory.' => 'Все поля отмеченные (*) являются обязательными',
         'Cancel & close' => 'Отменить и закрыть',
-        'Undo & close' => 'Отменить и закрыть',
+        'Select one or more recipients from the customer user address book.' =>
+            'Выберите одного или более получателей из адресной книги клиентов.',
+        'Customer user address book' => 'Адресная книга клиентов',
+        'Remove Ticket Customer' => 'Удалить клиента-инициатора заявки',
+        'Remove Cc' => 'Удалить из копии',
+        'Remove Bcc' => 'Удалить из скрытой копии',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
         'Ticket %s: first response time is over (%s/%s)!' => 'Заявка %s: время первого ответа истекло (%s/%s)!',
@@ -2733,9 +2733,6 @@ sub Data {
         'Ticket %s: update time will be over in %s/%s!' => 'Заявка %s: время обновления истекает через %s/%s!',
         'Ticket %s: solution time is over (%s/%s)!' => 'Заявка %s: время решения истекло (%s/%s)!',
         'Ticket %s: solution time will be over in %s/%s!' => 'Заявка %s: время решения истекает через %s/%s!',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketForward.tt
-        'Forward %s%s%s' => 'Переслать %s%s%s',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketHistory.tt
         'History of %s%s%s' => 'История для %s%s%s',
@@ -2803,9 +2800,6 @@ sub Data {
         'Please include at least one customer for the ticket.' => 'Пожалуйста, введите хотя бы одного клиента для заявки.',
         'To queue' => 'В очередь',
 
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPhoneCommon.tt
-        'Phone Call for %s%s%s' => 'Телефонный звонок для %s%s%s',
-
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPlain.tt
         'View Email Plain Text for %s%s%s' => 'Показать исходный формат письма для %s%s%s',
         'Plain' => 'Исходный',
@@ -2859,12 +2853,12 @@ sub Data {
         'Save filter settings as default' => 'Сохранить условия фильтра для показа по умолчанию',
         'Event Type' => 'Тип события',
         'Save as default' => 'Сохранить, как значение по умолчанию',
-        'Drafts' => 'Черновики',
-        'by' => 'кем',
         'Change Queue' => 'Сменить очередь',
         'There are no dialogs available at this point in the process.' =>
             'Нет доступных диалогов в этой части процесса.',
         'This item has no articles yet.' => 'Этот элемент пока не имеет заметок.',
+        'Drafts' => 'Черновики',
+        'by' => 'кем',
         'Article Overview - %s Article(s)' => 'Обзор заметок/сообщений - %s заметка(ок)',
         'Page %s' => 'Страница %s',
         'Add Filter' => 'Добавить фильтр',
@@ -8482,8 +8476,6 @@ sub Data {
             'Извините, но вы не можете отключить уведомления отмеченные как обязательные.',
         'Sorry, but you can\'t disable all methods for this notification.' =>
             'Извините, но вы не можете отключить все методы уведомления для этого оповещения.',
-        'Please note that at least one of the settings you have changed requires a page reload. Click here to reload the current screen.' =>
-            'Обратите внимание, что один из обновленных вами параметров требует обновления страницы. Нажмите здесь для обновления экрана.',
         'An unknown error occurred. Please contact the administrator.' =>
             'Произошла неизвестная ошибка. Свяжитесь с администратором.',
 
@@ -9621,7 +9613,6 @@ Thanks for your help!
         'Please either turn some off first or increase the limit in configuration.',
         'Please enter at least one search value or * to find anything.',
         'Please enter at least one search word to find anything.',
-        'Please note that at least one of the settings you have changed requires a page reload. Click here to reload the current screen.',
         'Please only select at most %s files for upload.',
         'Please only select one file for upload.',
         'Please remove the following words from your search as they cannot be searched for:',

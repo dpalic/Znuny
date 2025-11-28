@@ -29,7 +29,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y.%M.%D';
     $Self->{DateInputFormat}     = '%Y.%M.%D';
     $Self->{DateInputFormatLong} = '%Y.%M.%D - %T';
-    $Self->{Completeness}        = 0.300691429490272;
+    $Self->{Completeness}        = 0.300353925353925;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -2678,21 +2678,19 @@ sub Data {
         'Execute Bulk Action' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
-        'Compose Answer for %s%s%s' => '',
         'Date Invalid!' => '日期無效！',
-        'Select one or more recipients from the customer user address book.' =>
-            '',
-        'Customer user address book' => '',
-        'This address is registered as system address and cannot be used: %s' =>
-            '',
-        'Please include at least one recipient' => '請包括至少一個收件人',
-        'Remove Ticket Customer' => '刪除工單用戶',
         'Please remove this entry and enter a new one with the correct value.' =>
             '請刪除這個條目並重新輸入一個正確的值。',
         'This address already exists on the address list.' => '地址列表已有這個地址。',
-        'Remove Cc' => '刪除Cc',
+        'Search for customer' => '',
+        'Open address book' => '',
+        'Address book' => '',
+        'Customer suggestions' => '',
+        'Please include at least one recipient' => '請包括至少一個收件人',
+        'This address is registered as system address and cannot be used: %s' =>
+            '',
         'Bcc' => '暗送',
-        'Remove Bcc' => '刪除Bcc',
+        'Undo & close' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCustomer.tt
         'Change Customer of %s%s%s' => '',
@@ -2701,22 +2699,24 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmail.tt
         'Create New Email Ticket' => '創建郵件工單',
-        'Example Template' => '',
         'To customer user' => '選擇用戶',
         'Please include at least one customer user for the ticket.' => '請包括至少一個工單用戶。',
-        'Select this customer as the main customer.' => '選擇這個用戶作為主用戶',
-        'Remove Ticket Customer User' => '刪除工單用戶',
         'From queue' => '隊列',
         'Get all' => '獲取全部',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailOutbound.tt
-        'Outbound Email for %s%s%s' => '',
+        'Undo & Close' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
         'Resend Email for %s%s%s' => '',
         'All fields marked with an asterisk (*) are mandatory.' => '所有带 * 的字段都是強制要求輸入的字段.',
         'Cancel & close' => '',
-        'Undo & close' => '',
+        'Select one or more recipients from the customer user address book.' =>
+            '',
+        'Customer user address book' => '',
+        'Remove Ticket Customer' => '刪除工單用戶',
+        'Remove Cc' => '刪除Cc',
+        'Remove Bcc' => '刪除Bcc',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
         'Ticket %s: first response time is over (%s/%s)!' => '',
@@ -2725,9 +2725,6 @@ sub Data {
         'Ticket %s: update time will be over in %s/%s!' => '',
         'Ticket %s: solution time is over (%s/%s)!' => '',
         'Ticket %s: solution time will be over in %s/%s!' => '',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketForward.tt
-        'Forward %s%s%s' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketHistory.tt
         'History of %s%s%s' => '',
@@ -2795,9 +2792,6 @@ sub Data {
         'Please include at least one customer for the ticket.' => '請包括至少一個工單用戶。',
         'To queue' => '隊列',
 
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPhoneCommon.tt
-        'Phone Call for %s%s%s' => '',
-
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPlain.tt
         'View Email Plain Text for %s%s%s' => '',
         'Plain' => '純文本',
@@ -2851,12 +2845,12 @@ sub Data {
         'Save filter settings as default' => '將過濾器作為缺省設置並保存',
         'Event Type' => '',
         'Save as default' => '',
-        'Drafts' => '',
-        'by' => '由',
         'Change Queue' => '改變隊列',
         'There are no dialogs available at this point in the process.' =>
             '目前流程中沒有環節操作。',
         'This item has no articles yet.' => '此條目沒有信件。',
+        'Drafts' => '',
+        'by' => '由',
         'Article Overview - %s Article(s)' => '',
         'Page %s' => '',
         'Add Filter' => '添加過濾器',
@@ -8474,9 +8468,6 @@ sub Data {
             '',
         'Sorry, but you can\'t disable all methods for this notification.' =>
             '',
-        'Please note that at least one of the settings you have changed requires a page reload. Click here to reload the current screen.' =>
-            '您已成功變更設定，必須重新加載頁面來使變更生效。
-點此重新整理頁面。',
         'An unknown error occurred. Please contact the administrator.' =>
             '',
 
@@ -9603,7 +9594,6 @@ Thanks for your help!
         'Please either turn some off first or increase the limit in configuration.',
         'Please enter at least one search value or * to find anything.',
         'Please enter at least one search word to find anything.',
-        'Please note that at least one of the settings you have changed requires a page reload. Click here to reload the current screen.',
         'Please only select at most %s files for upload.',
         'Please only select one file for upload.',
         'Please remove the following words from your search as they cannot be searched for:',

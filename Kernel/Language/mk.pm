@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.269818298761859;
+    $Self->{Completeness}        = 0.269465894465894;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2674,21 +2674,19 @@ sub Data {
         'Execute Bulk Action' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
-        'Compose Answer for %s%s%s' => '',
         'Date Invalid!' => 'Невалиден датум!',
-        'Select one or more recipients from the customer user address book.' =>
-            '',
-        'Customer user address book' => '',
-        'This address is registered as system address and cannot be used: %s' =>
-            '',
-        'Please include at least one recipient' => 'Ве молиме изберете барем еден примател',
-        'Remove Ticket Customer' => 'Одстрани Клиент на Тикет',
         'Please remove this entry and enter a new one with the correct value.' =>
             'Ве молиме избришете го овој внес и внесете нов со коректна вредност.',
         'This address already exists on the address list.' => 'Оваа адреса веќе постои во листата на адреси.',
-        'Remove Cc' => 'Избриши Cc',
+        'Search for customer' => '',
+        'Open address book' => '',
+        'Address book' => '',
+        'Customer suggestions' => '',
+        'Please include at least one recipient' => 'Ве молиме изберете барем еден примател',
+        'This address is registered as system address and cannot be used: %s' =>
+            '',
         'Bcc' => 'Bcc',
-        'Remove Bcc' => 'Избриши Bcc',
+        'Undo & close' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCustomer.tt
         'Change Customer of %s%s%s' => '',
@@ -2697,22 +2695,24 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmail.tt
         'Create New Email Ticket' => 'Направи Нов E-mail Тикет',
-        'Example Template' => 'Пример за Шаблон',
         'To customer user' => 'До корисник клиент',
         'Please include at least one customer user for the ticket.' => 'Во молиме додавајте барем по еден регистриран корисник за тикетот.',
-        'Select this customer as the main customer.' => 'Избери го овој клиент како главен клиент.',
-        'Remove Ticket Customer User' => 'Избриши Тикет за Регистриран Корисник',
         'From queue' => 'Од редица',
         'Get all' => 'Избери сите',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailOutbound.tt
-        'Outbound Email for %s%s%s' => '',
+        'Undo & Close' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
         'Resend Email for %s%s%s' => '',
         'All fields marked with an asterisk (*) are mandatory.' => 'Полињата обележани со ѕвездички (*) се задолжителни.',
         'Cancel & close' => '',
-        'Undo & close' => '',
+        'Select one or more recipients from the customer user address book.' =>
+            '',
+        'Customer user address book' => '',
+        'Remove Ticket Customer' => 'Одстрани Клиент на Тикет',
+        'Remove Cc' => 'Избриши Cc',
+        'Remove Bcc' => 'Избриши Bcc',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
         'Ticket %s: first response time is over (%s/%s)!' => '',
@@ -2721,9 +2721,6 @@ sub Data {
         'Ticket %s: update time will be over in %s/%s!' => '',
         'Ticket %s: solution time is over (%s/%s)!' => '',
         'Ticket %s: solution time will be over in %s/%s!' => '',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketForward.tt
-        'Forward %s%s%s' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketHistory.tt
         'History of %s%s%s' => '',
@@ -2791,9 +2788,6 @@ sub Data {
         'Please include at least one customer for the ticket.' => 'Ве молиме внесете барем еден клиент за тикетот.',
         'To queue' => 'Во редица',
 
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPhoneCommon.tt
-        'Phone Call for %s%s%s' => '',
-
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPlain.tt
         'View Email Plain Text for %s%s%s' => '',
         'Plain' => 'Обичен',
@@ -2847,12 +2841,12 @@ sub Data {
         'Save filter settings as default' => 'Зачувај ги подесувањата за филтрирање како стандардни',
         'Event Type' => 'Тип на Настан',
         'Save as default' => 'Сними како стандард',
-        'Drafts' => '',
-        'by' => 'од',
         'Change Queue' => 'Измени Редица',
         'There are no dialogs available at this point in the process.' =>
             'Нема слободни дијалози во оваа состојба во процесот.',
         'This item has no articles yet.' => 'Оваа ставка сеуште нема артикли.',
+        'Drafts' => '',
+        'by' => 'од',
         'Article Overview - %s Article(s)' => '',
         'Page %s' => '',
         'Add Filter' => 'Додај Филтер',
@@ -8470,8 +8464,6 @@ sub Data {
             '',
         'Sorry, but you can\'t disable all methods for this notification.' =>
             '',
-        'Please note that at least one of the settings you have changed requires a page reload. Click here to reload the current screen.' =>
-            '',
         'An unknown error occurred. Please contact the administrator.' =>
             '',
 
@@ -9598,7 +9590,6 @@ Thanks for your help!
         'Please either turn some off first or increase the limit in configuration.',
         'Please enter at least one search value or * to find anything.',
         'Please enter at least one search word to find anything.',
-        'Please note that at least one of the settings you have changed requires a page reload. Click here to reload the current screen.',
         'Please only select at most %s files for upload.',
         'Please only select one file for upload.',
         'Please remove the following words from your search as they cannot be searched for:',

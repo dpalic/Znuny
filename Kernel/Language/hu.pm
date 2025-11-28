@@ -32,7 +32,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%M-%D';
     $Self->{DateInputFormat}     = '%Y-%M-%D';
     $Self->{DateInputFormatLong} = '%Y-%M-%D - %T';
-    $Self->{Completeness}        = 0.872969930857051;
+    $Self->{Completeness}        = 0.872104247104247;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2680,21 +2680,19 @@ sub Data {
         'Execute Bulk Action' => 'Tömeges művelet végrehajtása',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
-        'Compose Answer for %s%s%s' => 'Válasz írása erre: %s%s%s',
         'Date Invalid!' => 'Érvénytelen dátum!',
-        'Select one or more recipients from the customer user address book.' =>
-            'Egy vagy több címzett kiválasztása az ügyfél-felhasználó címjegyzékből.',
-        'Customer user address book' => 'Ügyfél-felhasználó címjegyzék',
-        'This address is registered as system address and cannot be used: %s' =>
-            'Ez a cím rendszercímként van regisztrálva és nem használható: %s',
-        'Please include at least one recipient' => 'Vegyen fel legalább egy címzettet',
-        'Remove Ticket Customer' => 'Jegy ügyfél eltávolítása',
         'Please remove this entry and enter a new one with the correct value.' =>
             'Távolítsa el ezt a bejegyzést, és adjon meg egy újat a helyes értékkel.',
         'This address already exists on the address list.' => 'Ez a cím már létezik a címlistában.',
-        'Remove Cc' => 'Másolat eltávolítása',
+        'Search for customer' => '',
+        'Open address book' => '',
+        'Address book' => '',
+        'Customer suggestions' => '',
+        'Please include at least one recipient' => 'Vegyen fel legalább egy címzettet',
+        'This address is registered as system address and cannot be used: %s' =>
+            'Ez a cím rendszercímként van regisztrálva és nem használható: %s',
         'Bcc' => 'Rejtett másolat',
-        'Remove Bcc' => 'Rejtett másolat eltávolítása',
+        'Undo & close' => 'Visszavonás és bezárás',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCustomer.tt
         'Change Customer of %s%s%s' => '%s%s%s ügyfelének módosítása',
@@ -2703,22 +2701,24 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmail.tt
         'Create New Email Ticket' => 'Új e-mail jegy létrehozása',
-        'Example Template' => 'Példa sablon',
         'To customer user' => 'Ügyfél-felhasználónak',
         'Please include at least one customer user for the ticket.' => 'Vegyen fel legalább egy ügyfél-felhasználót a jegyhez.',
-        'Select this customer as the main customer.' => 'Az ügyfél kijelölése fő ügyfélként.',
-        'Remove Ticket Customer User' => 'Jegy ügyfél-felhasználójának eltávolítása',
         'From queue' => 'Várólistából',
         'Get all' => 'Összes lekérése',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailOutbound.tt
-        'Outbound Email for %s%s%s' => 'Kimenő e-mail ehhez: %s%s%s',
+        'Undo & Close' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
         'Resend Email for %s%s%s' => 'E-mail újraküldése ennél: %s%s%s',
         'All fields marked with an asterisk (*) are mandatory.' => 'Minden csillaggal (*) jelölt mező kötelező.',
         'Cancel & close' => 'Megszakítás és bezárás',
-        'Undo & close' => 'Visszavonás és bezárás',
+        'Select one or more recipients from the customer user address book.' =>
+            'Egy vagy több címzett kiválasztása az ügyfél-felhasználó címjegyzékből.',
+        'Customer user address book' => 'Ügyfél-felhasználó címjegyzék',
+        'Remove Ticket Customer' => 'Jegy ügyfél eltávolítása',
+        'Remove Cc' => 'Másolat eltávolítása',
+        'Remove Bcc' => 'Rejtett másolat eltávolítása',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
         'Ticket %s: first response time is over (%s/%s)!' => '%s jegy: az első válaszidő lejárt (%s/%s)!',
@@ -2727,9 +2727,6 @@ sub Data {
         'Ticket %s: update time will be over in %s/%s!' => '%s jegy: a frissítési idő le fog járni: %s/%s!',
         'Ticket %s: solution time is over (%s/%s)!' => '%s jegy: a megoldási idő lejárt (%s/%s)!',
         'Ticket %s: solution time will be over in %s/%s!' => '%s jegy: a megoldási idő le fog járni: %s/%s!',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketForward.tt
-        'Forward %s%s%s' => '%s%s%s továbbítása',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketHistory.tt
         'History of %s%s%s' => '%s%s%s előzményei',
@@ -2797,9 +2794,6 @@ sub Data {
         'Please include at least one customer for the ticket.' => 'Vegyen fel legalább egy ügyfelet a jegyhez.',
         'To queue' => 'Várólistába',
 
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPhoneCommon.tt
-        'Phone Call for %s%s%s' => 'Telefonhívás ehhez: %s%s%s',
-
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPlain.tt
         'View Email Plain Text for %s%s%s' => 'Egyszerű szöveges e-mail megtekintése ennél: %s%s%s',
         'Plain' => 'Egyszerű',
@@ -2853,12 +2847,12 @@ sub Data {
         'Save filter settings as default' => 'Szűrőbeállítások mentése alapértelmezettként',
         'Event Type' => 'Eseménytípus',
         'Save as default' => 'Mentés alapértelmezettként',
-        'Drafts' => 'Piszkozatok',
-        'by' => '–',
         'Change Queue' => 'Várólista módosítása',
         'There are no dialogs available at this point in the process.' =>
             'Nem érhetők el párbeszédek a folyamat ezen pontján.',
         'This item has no articles yet.' => 'Ennek az elemnek még nincsenek bejegyzései.',
+        'Drafts' => 'Piszkozatok',
+        'by' => '–',
         'Article Overview - %s Article(s)' => 'Bejegyzés áttekintő – %s bejegyzés',
         'Page %s' => '%s. oldal',
         'Add Filter' => 'Szűrő hozzáadása',
@@ -8476,8 +8470,6 @@ sub Data {
             'Sajnáljuk, de nem tud minden módszert letiltani a kötelezőként megjelölt értesítéseknél.',
         'Sorry, but you can\'t disable all methods for this notification.' =>
             'Sajnáljuk, de nem tud minden módszert letiltani ennél az értesítésnél.',
-        'Please note that at least one of the settings you have changed requires a page reload. Click here to reload the current screen.' =>
-            'Ne feledje, hogy a megváltoztatott beállítások legalább egyike oldalújratöltést igényel. Kattintson ide a jelenlegi képernyő újratöltéséhez.',
         'An unknown error occurred. Please contact the administrator.' =>
             'Ismeretlen hiba történt. Vegye fel a kapcsolatot a rendszergazdával.',
 
@@ -9615,7 +9607,6 @@ Az Ön segélyszolgálat csapata
         'Please either turn some off first or increase the limit in configuration.',
         'Please enter at least one search value or * to find anything.',
         'Please enter at least one search word to find anything.',
-        'Please note that at least one of the settings you have changed requires a page reload. Click here to reload the current screen.',
         'Please only select at most %s files for upload.',
         'Please only select one file for upload.',
         'Please remove the following words from your search as they cannot be searched for:',

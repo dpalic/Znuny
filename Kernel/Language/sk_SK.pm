@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.17832448946776;
+    $Self->{Completeness}        = 0.177927927927928;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2674,21 +2674,19 @@ sub Data {
         'Execute Bulk Action' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
-        'Compose Answer for %s%s%s' => '',
         'Date Invalid!' => 'Chybný dátum',
-        'Select one or more recipients from the customer user address book.' =>
-            '',
-        'Customer user address book' => '',
-        'This address is registered as system address and cannot be used: %s' =>
-            '',
-        'Please include at least one recipient' => 'Prosím doplňte aspoň jedného prijemcu',
-        'Remove Ticket Customer' => 'Vymažte zákazníka tiketu',
         'Please remove this entry and enter a new one with the correct value.' =>
             'Vymažte tento vstup a vložte nový so správnou hodnotou',
         'This address already exists on the address list.' => 'Táto adresa je už v zoznamen adries',
-        'Remove Cc' => 'Vymazať Kópiu',
+        'Search for customer' => '',
+        'Open address book' => '',
+        'Address book' => '',
+        'Customer suggestions' => '',
+        'Please include at least one recipient' => 'Prosím doplňte aspoň jedného prijemcu',
+        'This address is registered as system address and cannot be used: %s' =>
+            '',
         'Bcc' => 'Skrytá kópia',
-        'Remove Bcc' => 'Vymazať Skrytú kópiu',
+        'Undo & close' => 'Vrátit naspäť a uzatvoriť',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCustomer.tt
         'Change Customer of %s%s%s' => '',
@@ -2697,22 +2695,24 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmail.tt
         'Create New Email Ticket' => 'Vytvoriť nový e-mail tiket',
-        'Example Template' => 'Príklad šablóny',
         'To customer user' => 'Používateľovi',
         'Please include at least one customer user for the ticket.' => 'Pridajte aspon jedného používateľa pre tiket',
-        'Select this customer as the main customer.' => 'Vybrat tohoto použivateľa ako hlavného',
-        'Remove Ticket Customer User' => 'Vymaž použivateľa z tiketu',
         'From queue' => 'Z radu',
         'Get all' => 'Vybrať všetko',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailOutbound.tt
-        'Outbound Email for %s%s%s' => '',
+        'Undo & Close' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
         'Resend Email for %s%s%s' => '',
         'All fields marked with an asterisk (*) are mandatory.' => 'Všetky polia vyznačené hviezdičkou(*) sú povinné',
         'Cancel & close' => 'Zrušiť a uzatvoriť',
-        'Undo & close' => 'Vrátit naspäť a uzatvoriť',
+        'Select one or more recipients from the customer user address book.' =>
+            '',
+        'Customer user address book' => '',
+        'Remove Ticket Customer' => 'Vymažte zákazníka tiketu',
+        'Remove Cc' => 'Vymazať Kópiu',
+        'Remove Bcc' => 'Vymazať Skrytú kópiu',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
         'Ticket %s: first response time is over (%s/%s)!' => 'Tiket %s: čas na prvú odozvu bol prekročený o (%s/%s)',
@@ -2721,9 +2721,6 @@ sub Data {
         'Ticket %s: update time will be over in %s/%s!' => 'Tiket %s: čas na aktualizáciu bude prekročený za %s/%s!',
         'Ticket %s: solution time is over (%s/%s)!' => 'Tiket %s: čas na vyriešenie bol prekročený o (%s/%s)',
         'Ticket %s: solution time will be over in %s/%s!' => 'Tiket %s: čas na vyriešenie bude prekročený za (%s/%s)',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketForward.tt
-        'Forward %s%s%s' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketHistory.tt
         'History of %s%s%s' => '',
@@ -2791,9 +2788,6 @@ sub Data {
         'Please include at least one customer for the ticket.' => 'Prosím doplňte aspoň jedného zákazníka pre tiket',
         'To queue' => 'Do radu',
 
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPhoneCommon.tt
-        'Phone Call for %s%s%s' => '',
-
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPlain.tt
         'View Email Plain Text for %s%s%s' => '',
         'Plain' => 'čistý',
@@ -2847,12 +2841,12 @@ sub Data {
         'Save filter settings as default' => 'Uložiť nastavenie filtra ako predvolené',
         'Event Type' => 'Typ udalosti',
         'Save as default' => 'Uložiť do prednastavených',
-        'Drafts' => '',
-        'by' => 'podľa',
         'Change Queue' => 'Zmeň rad',
         'There are no dialogs available at this point in the process.' =>
             'V tejto časti procesu nie je žiadna možnosť dialógu',
         'This item has no articles yet.' => 'Táto položka už nemá žiaden článok',
+        'Drafts' => '',
+        'by' => 'podľa',
         'Article Overview - %s Article(s)' => '',
         'Page %s' => '',
         'Add Filter' => 'Pridať filter',
@@ -8470,8 +8464,6 @@ sub Data {
             '',
         'Sorry, but you can\'t disable all methods for this notification.' =>
             '',
-        'Please note that at least one of the settings you have changed requires a page reload. Click here to reload the current screen.' =>
-            '',
         'An unknown error occurred. Please contact the administrator.' =>
             '',
 
@@ -9598,7 +9590,6 @@ Thanks for your help!
         'Please either turn some off first or increase the limit in configuration.',
         'Please enter at least one search value or * to find anything.',
         'Please enter at least one search word to find anything.',
-        'Please note that at least one of the settings you have changed requires a page reload. Click here to reload the current screen.',
         'Please only select at most %s files for upload.',
         'Please only select one file for upload.',
         'Please remove the following words from your search as they cannot be searched for:',

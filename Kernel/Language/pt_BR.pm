@@ -30,7 +30,7 @@ sub Data {
     $Self->{DateFormatShort}     = '';
     $Self->{DateInputFormat}     = '';
     $Self->{DateInputFormatLong} = '';
-    $Self->{Completeness}        = 0.839202444122849;
+    $Self->{Completeness}        = 0.838320463320463;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -2678,21 +2678,19 @@ sub Data {
         'Execute Bulk Action' => 'Executar Ação em Massa',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
-        'Compose Answer for %s%s%s' => 'Compor resposta para %s%s',
         'Date Invalid!' => 'Data Inválida!',
-        'Select one or more recipients from the customer user address book.' =>
-            'Selecione um ou mais destinatários do caderno de endereço do usuário cliente.',
-        'Customer user address book' => 'Caderno de endereços do Usuário Cliente',
-        'This address is registered as system address and cannot be used: %s' =>
-            'Esse endereço está registrado como endereço do sistema e não pode ser usado: %s',
-        'Please include at least one recipient' => 'Por favor, inclua pelo menos um destinatário',
-        'Remove Ticket Customer' => 'Remover Cliente do Chamado',
         'Please remove this entry and enter a new one with the correct value.' =>
             'Por favor, remova esta entrada e digite uma nova com o valor correto.',
         'This address already exists on the address list.' => 'Este endereço já existe na lista de endereços.',
-        'Remove Cc' => 'Remover Cc',
+        'Search for customer' => '',
+        'Open address book' => '',
+        'Address book' => '',
+        'Customer suggestions' => '',
+        'Please include at least one recipient' => 'Por favor, inclua pelo menos um destinatário',
+        'This address is registered as system address and cannot be used: %s' =>
+            'Esse endereço está registrado como endereço do sistema e não pode ser usado: %s',
         'Bcc' => 'Cópia Oculta',
-        'Remove Bcc' => 'Remover Bcc',
+        'Undo & close' => 'Desfazer e fechar',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCustomer.tt
         'Change Customer of %s%s%s' => 'Alterar Cliente de %s%s',
@@ -2701,22 +2699,24 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmail.tt
         'Create New Email Ticket' => 'Criar Novo Chamado Via E-mail',
-        'Example Template' => 'Exemplo de Modelo',
         'To customer user' => 'Para usuário cliente',
         'Please include at least one customer user for the ticket.' => 'Por favor, inclua ao menos um usuário cliente para este chamado.',
-        'Select this customer as the main customer.' => 'Selecione este cliente como principal',
-        'Remove Ticket Customer User' => 'Remover Usuário Cliente do Chamado',
         'From queue' => 'Da Fila',
         'Get all' => 'Obter todos',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailOutbound.tt
-        'Outbound Email for %s%s%s' => 'E-mail de saída para %s%s',
+        'Undo & Close' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
         'Resend Email for %s%s%s' => 'Reenvie E-mail para %s%s%s',
         'All fields marked with an asterisk (*) are mandatory.' => 'Todos os campos marcados com um asterisco (*) são obrigatórios.',
         'Cancel & close' => 'Cancelar e fechar',
-        'Undo & close' => 'Desfazer e fechar',
+        'Select one or more recipients from the customer user address book.' =>
+            'Selecione um ou mais destinatários do caderno de endereço do usuário cliente.',
+        'Customer user address book' => 'Caderno de endereços do Usuário Cliente',
+        'Remove Ticket Customer' => 'Remover Cliente do Chamado',
+        'Remove Cc' => 'Remover Cc',
+        'Remove Bcc' => 'Remover Bcc',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
         'Ticket %s: first response time is over (%s/%s)!' => 'Chamado %s: tempo de resposta inicial ultrapassado (%s/%s)!',
@@ -2725,9 +2725,6 @@ sub Data {
         'Ticket %s: update time will be over in %s/%s!' => 'Chamado %s: tempo de atualização será ultrapassado em %s/%s!',
         'Ticket %s: solution time is over (%s/%s)!' => 'Chamado %s: tempo de solução ultrapassado (%s/%s)!',
         'Ticket %s: solution time will be over in %s/%s!' => 'Chamado %s: tempo de solução será ultrapassado em %s/%s!',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketForward.tt
-        'Forward %s%s%s' => 'Encaminhar %s%s',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketHistory.tt
         'History of %s%s%s' => 'Histórico de %s%s',
@@ -2795,9 +2792,6 @@ sub Data {
         'Please include at least one customer for the ticket.' => 'Por favor, inclua pelo menos um cliente para o chamado.',
         'To queue' => 'Para a fila',
 
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPhoneCommon.tt
-        'Phone Call for %s%s%s' => 'Telefonema para %s%s',
-
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPlain.tt
         'View Email Plain Text for %s%s%s' => 'Visualizar texto do E-mail para %s%s%s',
         'Plain' => 'Plano',
@@ -2851,12 +2845,12 @@ sub Data {
         'Save filter settings as default' => 'Salvar configurações de filtro como padrão',
         'Event Type' => 'Tipo de Evento',
         'Save as default' => 'Salvar como padrão',
-        'Drafts' => 'Rascunhos',
-        'by' => 'por',
         'Change Queue' => 'Alterar Fila',
         'There are no dialogs available at this point in the process.' =>
             'Não existem diálogos disponíveis neste ponto do processo.',
         'This item has no articles yet.' => 'Este item não tem artigos ainda.',
+        'Drafts' => 'Rascunhos',
+        'by' => 'por',
         'Article Overview - %s Article(s)' => 'Visão Geral de Artigos - %s Artigo(s)',
         'Page %s' => 'Página %s',
         'Add Filter' => 'Adicionar Filtro',
@@ -8474,8 +8468,6 @@ sub Data {
             'Desculpe, mas você não pode desabilitar todos os métodos para notificações marcadas como mandatórias.',
         'Sorry, but you can\'t disable all methods for this notification.' =>
             'Desculpe, mas você não pode desabilitar todos os métodos para esta notificação.',
-        'Please note that at least one of the settings you have changed requires a page reload. Click here to reload the current screen.' =>
-            'Por favor, note que pelo menos uma das configurações que você modificou recentemente necessita que a página seja atualizada. Clique aqui para atualizar a tela atual.',
         'An unknown error occurred. Please contact the administrator.' =>
             'Ocorreu um erro desconhecido. Favor contatar o administrador.',
 
@@ -9613,7 +9605,6 @@ Obrigado pela ajuda!
         'Please either turn some off first or increase the limit in configuration.',
         'Please enter at least one search value or * to find anything.',
         'Please enter at least one search word to find anything.',
-        'Please note that at least one of the settings you have changed requires a page reload. Click here to reload the current screen.',
         'Please only select at most %s files for upload.',
         'Please only select one file for upload.',
         'Please remove the following words from your search as they cannot be searched for:',

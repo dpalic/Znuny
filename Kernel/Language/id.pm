@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D/%M/%Y';
     $Self->{DateInputFormat}     = '%D/%M/%Y';
     $Self->{DateInputFormatLong} = '%D/%M/%Y - %T';
-    $Self->{Completeness}        = 0.590127030069143;
+    $Self->{Completeness}        = 0.589285714285714;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -2676,21 +2676,19 @@ bin/znuny.Daemon.pl status\').',
         'Execute Bulk Action' => 'Menghasilkan Dukungan Bundle',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
-        'Compose Answer for %s%s%s' => 'Susunan jawaban untuk %s%s%s',
         'Date Invalid!' => 'Tanggal tidak sah!',
-        'Select one or more recipients from the customer user address book.' =>
-            '',
-        'Customer user address book' => '',
-        'This address is registered as system address and cannot be used: %s' =>
-            'Alamat ini terdaftar sebagai alamat sistem dan tidak bisa digunakan: %s',
-        'Please include at least one recipient' => 'Harap sertakan minimal satu penerima',
-        'Remove Ticket Customer' => 'Hapus tiket pelanggan',
         'Please remove this entry and enter a new one with the correct value.' =>
             'Tolong hapus entri ini dan masukan yang baru dengan value yang benar',
         'This address already exists on the address list.' => 'Alamat ini sudah ada yang menggunakan',
-        'Remove Cc' => 'Hapus Cc',
+        'Search for customer' => '',
+        'Open address book' => '',
+        'Address book' => '',
+        'Customer suggestions' => '',
+        'Please include at least one recipient' => 'Harap sertakan minimal satu penerima',
+        'This address is registered as system address and cannot be used: %s' =>
+            'Alamat ini terdaftar sebagai alamat sistem dan tidak bisa digunakan: %s',
         'Bcc' => 'Bcc',
-        'Remove Bcc' => 'Hapus Bccc',
+        'Undo & close' => 'Undur & tutup',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCustomer.tt
         'Change Customer of %s%s%s' => 'Ubah pelanggan dari %s%s%s',
@@ -2699,22 +2697,24 @@ bin/znuny.Daemon.pl status\').',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmail.tt
         'Create New Email Ticket' => 'Mencipta tiket email baru',
-        'Example Template' => 'Contoh template',
         'To customer user' => 'Untuk pengguna pelanggan',
         'Please include at least one customer user for the ticket.' => 'Tolong sertakan minimal satu pengguna pelanggan untuk tiket',
-        'Select this customer as the main customer.' => 'Pilih pelanggan ini sebagai pelanggan utama',
-        'Remove Ticket Customer User' => 'Hapus pengguna pelanggan tiket',
         'From queue' => 'Dari queue',
         'Get all' => 'Dapatkan semua',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailOutbound.tt
-        'Outbound Email for %s%s%s' => 'Email keluar untuk %s%s%s',
+        'Undo & Close' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
         'Resend Email for %s%s%s' => '',
         'All fields marked with an asterisk (*) are mandatory.' => 'Semua bidang yang ditandai dengan tanda bintang (*) wajib diisi.',
         'Cancel & close' => 'Batalkan dan tutup',
-        'Undo & close' => 'Undur & tutup',
+        'Select one or more recipients from the customer user address book.' =>
+            '',
+        'Customer user address book' => '',
+        'Remove Ticket Customer' => 'Hapus tiket pelanggan',
+        'Remove Cc' => 'Hapus Cc',
+        'Remove Bcc' => 'Hapus Bccc',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
         'Ticket %s: first response time is over (%s/%s)!' => 'Tiket %s: respon pertama berakhir (%s%s)!',
@@ -2723,9 +2723,6 @@ bin/znuny.Daemon.pl status\').',
         'Ticket %s: update time will be over in %s/%s!' => 'Tiket %S: Waktu pembaruan akan berakhir di %s%s!',
         'Ticket %s: solution time is over (%s/%s)!' => 'Tiket %s: Waktu solusi akan berakhir (%s%s)!',
         'Ticket %s: solution time will be over in %s/%s!' => 'Tiket %s: Waktu solusi akan berakhir di %s%s!',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketForward.tt
-        'Forward %s%s%s' => 'Mengirimkan %s%s%s',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketHistory.tt
         'History of %s%s%s' => 'Sejarah dari %s%s%s',
@@ -2793,9 +2790,6 @@ bin/znuny.Daemon.pl status\').',
         'Please include at least one customer for the ticket.' => 'Tolong sertakan minimal satu pelanggan untuk tiket',
         'To queue' => 'Untuk queue',
 
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPhoneCommon.tt
-        'Phone Call for %s%s%s' => 'Panggilan telepon untuk %s%s%s',
-
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPlain.tt
         'View Email Plain Text for %s%s%s' => 'Menampilkan plain teks email untuk %s%s%s',
         'Plain' => 'Sederhana',
@@ -2849,12 +2843,12 @@ bin/znuny.Daemon.pl status\').',
         'Save filter settings as default' => 'Simpan aturan filter sebagai default',
         'Event Type' => 'Jenis event',
         'Save as default' => 'Simpan sebagai default',
-        'Drafts' => '',
-        'by' => 'Oleh',
         'Change Queue' => 'Ubah queue',
         'There are no dialogs available at this point in the process.' =>
             'Tidak ada dialog yang terseedia di dalam proses ',
         'This item has no articles yet.' => 'Item ini belum mempunyai artikel',
+        'Drafts' => '',
+        'by' => 'Oleh',
         'Article Overview - %s Article(s)' => '',
         'Page %s' => '',
         'Add Filter' => 'Tambahkan filter',
@@ -8473,8 +8467,6 @@ bin/znuny.Daemon.pl status\').',
             'Maaf, tapi anda tidak bisa menonaktifkan semua metode untuk pemberitahuan yang ditandai sebagai wajib.',
         'Sorry, but you can\'t disable all methods for this notification.' =>
             'Maaf, tapi Anda tidak bisa menonaktifkan semua metode untuk pemberitahuan ini.',
-        'Please note that at least one of the settings you have changed requires a page reload. Click here to reload the current screen.' =>
-            '',
         'An unknown error occurred. Please contact the administrator.' =>
             '',
 
@@ -9612,7 +9604,6 @@ Helpdesk Team Anda
         'Please either turn some off first or increase the limit in configuration.',
         'Please enter at least one search value or * to find anything.',
         'Please enter at least one search word to find anything.',
-        'Please note that at least one of the settings you have changed requires a page reload. Click here to reload the current screen.',
         'Please only select at most %s files for upload.',
         'Please only select one file for upload.',
         'Please remove the following words from your search as they cannot be searched for:',

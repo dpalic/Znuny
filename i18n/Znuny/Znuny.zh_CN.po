@@ -7754,7 +7754,7 @@ msgstr "撰写工单%s%s%s的回复邮件"
 msgid "Date Invalid!"
 msgstr "日期无效！"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
 msgid "Customer user address book"
 msgstr "客户用户通讯录"
 
@@ -7766,7 +7766,7 @@ msgstr "这个邮件地址：%s已被注册为系统邮件地址，不能使用�
 msgid "Please include at least one recipient"
 msgstr "请包括至少一个收件人"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
 msgid "Remove Ticket Customer"
 msgstr "移除工单客户"
 
@@ -7778,7 +7778,7 @@ msgstr "请删除这个条目并重新输入一个正确的值。"
 msgid "This address already exists on the address list."
 msgstr "地址列表已有这个地址。"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
 msgid "Remove Cc"
 msgstr "移除Cc"
 
@@ -7786,7 +7786,7 @@ msgstr "移除Cc"
 msgid "Bcc"
 msgstr "暗送"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
 msgid "Remove Bcc"
 msgstr "移除Bcc"
 
@@ -7834,7 +7834,7 @@ msgstr "获取全部"
 msgid "Outbound Email for %s%s%s"
 msgstr "%s%s%s的外发邮件"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
 msgid "Select one or more recipients from the customer user address book."
 msgstr "从客户用户通讯录中选择一个或多个收件人。"
 
@@ -7850,7 +7850,7 @@ msgstr "所有带“*”的字段都是强制要求输入的字段."
 msgid "Cancel & close"
 msgstr "取消并关闭"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
 msgid "Undo & close"
 msgstr "撤销并关闭"
 
@@ -25033,5 +25033,25 @@ msgstr ""
 
 #. Perl Module: Kernel/Modules/AdminSystemConfigurationDeployment.pm
 msgid "Quick Deploy by"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
+msgid "Search for customer"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
+msgid "Open address book"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
+msgid "Address book"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
+msgid "Customer suggestions"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailOutbound.tt
+msgid "Undo & Close"
 msgstr ""
 

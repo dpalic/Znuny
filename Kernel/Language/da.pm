@@ -29,7 +29,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.339282842900788;
+    $Self->{Completeness}        = 0.338963963963964;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -2677,21 +2677,19 @@ sub Data {
         'Execute Bulk Action' => 'Udfør massehandling',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
-        'Compose Answer for %s%s%s' => '',
         'Date Invalid!' => 'Ugyldig dato!',
-        'Select one or more recipients from the customer user address book.' =>
-            '',
-        'Customer user address book' => '',
-        'This address is registered as system address and cannot be used: %s' =>
-            'Denne adresse er registreret som systemadresse og kan ikke benyttes: %s',
-        'Please include at least one recipient' => 'Der skal være mindst én modtager.',
-        'Remove Ticket Customer' => 'Fjern Sagens Kunde',
         'Please remove this entry and enter a new one with the correct value.' =>
             'Fjern venligst denne indtastning og skriv en ny med den korrekte værdi.',
         'This address already exists on the address list.' => 'Denne adresse eksisterer allerede i adresselisten.',
-        'Remove Cc' => 'Fjern Cc',
+        'Search for customer' => '',
+        'Open address book' => '',
+        'Address book' => '',
+        'Customer suggestions' => '',
+        'Please include at least one recipient' => 'Der skal være mindst én modtager.',
+        'This address is registered as system address and cannot be used: %s' =>
+            'Denne adresse er registreret som systemadresse og kan ikke benyttes: %s',
         'Bcc' => 'Bcc',
-        'Remove Bcc' => 'Fjern Bcc',
+        'Undo & close' => 'Afbryd og luk',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCustomer.tt
         'Change Customer of %s%s%s' => '',
@@ -2700,22 +2698,24 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmail.tt
         'Create New Email Ticket' => 'Opret ny mail-sag',
-        'Example Template' => 'Eksempel-skabelon',
         'To customer user' => 'Til kundebruger',
         'Please include at least one customer user for the ticket.' => 'Inkluder venligst mindst en kundebruger til sagen',
-        'Select this customer as the main customer.' => 'Vælg denne kunde som sagens hovedkunde',
-        'Remove Ticket Customer User' => 'Fjern kundebruger fra sagen',
         'From queue' => 'Fra kø',
         'Get all' => 'Hent alle',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailOutbound.tt
-        'Outbound Email for %s%s%s' => '',
+        'Undo & Close' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
         'Resend Email for %s%s%s' => '',
         'All fields marked with an asterisk (*) are mandatory.' => 'Alle felter markeret med en stjerne er obligatoriske.',
         'Cancel & close' => 'Annuller & Luk',
-        'Undo & close' => 'Afbryd og luk',
+        'Select one or more recipients from the customer user address book.' =>
+            '',
+        'Customer user address book' => '',
+        'Remove Ticket Customer' => 'Fjern Sagens Kunde',
+        'Remove Cc' => 'Fjern Cc',
+        'Remove Bcc' => 'Fjern Bcc',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
         'Ticket %s: first response time is over (%s/%s)!' => 'Sag %s: Tid til første svar er overskredet (%s/%s)!',
@@ -2724,9 +2724,6 @@ sub Data {
         'Ticket %s: update time will be over in %s/%s!' => '',
         'Ticket %s: solution time is over (%s/%s)!' => 'Sag %s: Tid til løsning er overskredet (%s/%s)!',
         'Ticket %s: solution time will be over in %s/%s!' => 'Sag %s: Tid til løsning overskrides om %s/%s!',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketForward.tt
-        'Forward %s%s%s' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketHistory.tt
         'History of %s%s%s' => '',
@@ -2794,9 +2791,6 @@ sub Data {
         'Please include at least one customer for the ticket.' => 'Der skal være mindst én kunde til sagen.',
         'To queue' => 'Til kø',
 
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPhoneCommon.tt
-        'Phone Call for %s%s%s' => '',
-
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPlain.tt
         'View Email Plain Text for %s%s%s' => '',
         'Plain' => 'Kildetekst',
@@ -2850,12 +2844,12 @@ sub Data {
         'Save filter settings as default' => 'Gem disse filterinstillinger som standard',
         'Event Type' => 'Hændelsestype',
         'Save as default' => 'Gem som standard',
-        'Drafts' => '',
-        'by' => 'af',
         'Change Queue' => 'Skift kø',
         'There are no dialogs available at this point in the process.' =>
             'Der er ingen dialoger tilgængelige på dette sted i processen.',
         'This item has no articles yet.' => '',
+        'Drafts' => '',
+        'by' => 'af',
         'Article Overview - %s Article(s)' => 'Indlægsoversigt - %s Indlæg',
         'Page %s' => '',
         'Add Filter' => 'Tilføj filter',
@@ -8473,8 +8467,6 @@ sub Data {
             '',
         'Sorry, but you can\'t disable all methods for this notification.' =>
             '',
-        'Please note that at least one of the settings you have changed requires a page reload. Click here to reload the current screen.' =>
-            '',
         'An unknown error occurred. Please contact the administrator.' =>
             '',
 
@@ -9601,7 +9593,6 @@ Thanks for your help!
         'Please either turn some off first or increase the limit in configuration.',
         'Please enter at least one search value or * to find anything.',
         'Please enter at least one search word to find anything.',
-        'Please note that at least one of the settings you have changed requires a page reload. Click here to reload the current screen.',
         'Please only select at most %s files for upload.',
         'Please only select one file for upload.',
         'Please remove the following words from your search as they cannot be searched for:',

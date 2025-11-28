@@ -29,7 +29,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.600739668757035;
+    $Self->{Completeness}        = 0.599903474903475;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -2680,21 +2680,19 @@ sub Data {
         'Execute Bulk Action' => 'ادراه کردن میزان عمل',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
-        'Compose Answer for %s%s%s' => 'نوشتن پاسخ برای %s %s %s',
         'Date Invalid!' => 'تاریخ نامعتبر!',
-        'Select one or more recipients from the customer user address book.' =>
-            '',
-        'Customer user address book' => '',
-        'This address is registered as system address and cannot be used: %s' =>
-            'این آدرس به عنوان آدرس سیستم ثبت شده و می تواند استفاده شود: %s',
-        'Please include at least one recipient' => 'لطفا حداقل یک گیرنده را قراردهید',
-        'Remove Ticket Customer' => 'حذف و ضوابط درخواست',
         'Please remove this entry and enter a new one with the correct value.' =>
             'لطفا این مطلب را حذف و یک مطلب جدید با مقدار صحیح را وارد کنید.',
         'This address already exists on the address list.' => 'این آدرس در لیست آدرس ها موجود است.',
-        'Remove Cc' => 'حذف رونوشت',
+        'Search for customer' => '',
+        'Open address book' => '',
+        'Address book' => '',
+        'Customer suggestions' => '',
+        'Please include at least one recipient' => 'لطفا حداقل یک گیرنده را قراردهید',
+        'This address is registered as system address and cannot be used: %s' =>
+            'این آدرس به عنوان آدرس سیستم ثبت شده و می تواند استفاده شود: %s',
         'Bcc' => 'رونوشت پنهان',
-        'Remove Bcc' => 'حذف کپی به',
+        'Undo & close' => 'عملیات را برگردان و پنجره را ببند',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCustomer.tt
         'Change Customer of %s%s%s' => 'تغییر مشتری از %s %s %s',
@@ -2703,22 +2701,24 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmail.tt
         'Create New Email Ticket' => 'ساخت درخواست ایمیلی جدید',
-        'Example Template' => 'به عنوان مثال قالب',
         'To customer user' => 'به کاربران مشتری',
         'Please include at least one customer user for the ticket.' => 'لطفا حداقل یک کاربر مشتری برای درخواست قرار دهید',
-        'Select this customer as the main customer.' => 'این مشتری را به عنوان مشتری اصلی انتخاب کنید.',
-        'Remove Ticket Customer User' => 'حذف درخواست  کاربرمشتری',
         'From queue' => 'از صف درخواست',
         'Get all' => 'گرفتن همه',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailOutbound.tt
-        'Outbound Email for %s%s%s' => 'عازم ناحیه دور دست ایمیل برای %s %s %s',
+        'Undo & Close' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
         'Resend Email for %s%s%s' => '',
         'All fields marked with an asterisk (*) are mandatory.' => 'همه فیلدهایی که با ستاره مشخص شده اند (*) الزامی است.',
         'Cancel & close' => 'لغو کنید و ببندید',
-        'Undo & close' => 'عملیات را برگردان و پنجره را ببند',
+        'Select one or more recipients from the customer user address book.' =>
+            '',
+        'Customer user address book' => '',
+        'Remove Ticket Customer' => 'حذف و ضوابط درخواست',
+        'Remove Cc' => 'حذف رونوشت',
+        'Remove Bcc' => 'حذف کپی به',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
         'Ticket %s: first response time is over (%s/%s)!' => 'بلیط %s : زمان پاسخ برای اولین بار است که بیش از ( %s / %s )!',
@@ -2727,9 +2727,6 @@ sub Data {
         'Ticket %s: update time will be over in %s/%s!' => 'بلیط %s : زمان به روز رسانی بیش از در خواهد %s / %s !',
         'Ticket %s: solution time is over (%s/%s)!' => 'بلیط %s : زمان حل به پایان رسیده است ( %s / %s )!',
         'Ticket %s: solution time will be over in %s/%s!' => 'بلیط %s : زمان حل بیش از در خواهد %s / %s !',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketForward.tt
-        'Forward %s%s%s' => 'رو به جلو %s %s %s',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketHistory.tt
         'History of %s%s%s' => 'تاریخ %s %s %s',
@@ -2797,9 +2794,6 @@ sub Data {
         'Please include at least one customer for the ticket.' => 'لطفا حداقل یک مشتری برای درخواست قراردهید',
         'To queue' => 'به صف درخواست',
 
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPhoneCommon.tt
-        'Phone Call for %s%s%s' => 'تماس بگیرید تلفن تماس برای %s %s %s',
-
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPlain.tt
         'View Email Plain Text for %s%s%s' => 'نمایش ایمیل متن ساده برای %s %s %s',
         'Plain' => 'ساده',
@@ -2853,12 +2847,12 @@ sub Data {
         'Save filter settings as default' => 'ذخیره تنظیمات فیلتر به عنوان تنظیمات پیش فرض',
         'Event Type' => 'نوع رویداد',
         'Save as default' => 'ذخیره به عنوان پیش فرض',
-        'Drafts' => '',
-        'by' => 'توسط',
         'Change Queue' => 'تغییر صف درخواست',
         'There are no dialogs available at this point in the process.' =>
             'هیچ پنجره موجود در این نقطه از این فرآیند وجود ندارد.',
         'This item has no articles yet.' => 'این محصول هنوز دارای هیچ مقاله ای نیست.',
+        'Drafts' => '',
+        'by' => 'توسط',
         'Article Overview - %s Article(s)' => '',
         'Page %s' => '',
         'Add Filter' => 'افزودن فیلتر',
@@ -8476,8 +8470,6 @@ sub Data {
             'با عرض پوزش، اما شما می توانید از تمام روش برای اطلاعیه مشخص شده به عنوان اجباری را غیر فعال کنید.',
         'Sorry, but you can\'t disable all methods for this notification.' =>
             'با عرض پوزش، اما شما می توانید از تمام روش برای این اطلاع رسانی را غیر فعال کنید.',
-        'Please note that at least one of the settings you have changed requires a page reload. Click here to reload the current screen.' =>
-            '',
         'An unknown error occurred. Please contact the administrator.' =>
             '',
 
@@ -9615,7 +9607,6 @@ Thanks for your help!
         'Please either turn some off first or increase the limit in configuration.',
         'Please enter at least one search value or * to find anything.',
         'Please enter at least one search word to find anything.',
-        'Please note that at least one of the settings you have changed requires a page reload. Click here to reload the current screen.',
         'Please only select at most %s files for upload.',
         'Please only select one file for upload.',
         'Please remove the following words from your search as they cannot be searched for:',
