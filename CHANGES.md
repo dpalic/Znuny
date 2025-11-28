@@ -5,6 +5,7 @@
  - 2025-11-21 Fixed: Wrong description text in personal preference. Thanks for reporting to @BuilderNSV. [#712](https://github.com/znuny/Znuny/issues/712).
  - 2025-11-21 Fixed: Resource module displays deactivated Agents.
  - 2025-11-17 Fixed: Added rule to fix Firefox browser that does not wrap overflow text by default while displaying article content in AgentTicketZoom.
+ - 2025-11-12 Sped up UUID creation for DBCRUD modules.
  - 2025-11-07 Added configurable filter for ticket search to ticket merge dialog (AgentTicketMerge).
  - 2025-11-06 Fixed: CustomerShortcutIconCustom config not working. Thanks to Daylton Rodrigues (@dayltonr) for reporting. [#737](https://github.com/znuny/Znuny/issues/737).
  - 2025-11-06 Fixed: Images in articles are inverted in Dark Skin. Thanks for reporting to @Vocta1310 [#724](https://github.com/znuny/Znuny/issues/724).
