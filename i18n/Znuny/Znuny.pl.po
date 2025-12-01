@@ -25170,3 +25170,7 @@ msgstr ""
 msgid "Outbound Email Profiles"
 msgstr ""
 
+#. Perl Module: Kernel/Modules/CustomerTicketOverview.pm
+msgid "You have no permission or the ticket does not exist."
+msgstr ""
+
