@@ -9056,7 +9056,7 @@ msgstr "Passworte stimmen nicht überein"
 msgid "SID"
 msgstr "SID"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/InstallerDBoracle.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminSendmailConfig.tt
 msgid "Port"
 msgstr "Port"
 
@@ -21428,11 +21428,11 @@ msgstr "Upload-Information"
 msgid "An unknown error occurred when deleting the attachment. Please try again. If the error persists, please contact your system administrator."
 msgstr "Beim Löschen des Anhangs ist ein unbekannter Fehler aufgetreten. Bitte versuchen Sie es erneut. Wenn der Fehler weiterhin auftritt, kontaktieren Sie bitte Ihren Systemadministrator."
 
-#. JS File: var/httpd/htdocs/js/test/Core.Language.UnitTest.js
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminSendmailConfig.tt
 msgid "yes"
 msgstr "ja"
 
-#. JS File: var/httpd/htdocs/js/test/Core.Language.UnitTest.js
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminSendmailConfig.tt
 msgid "no"
 msgstr "nein"
 
@@ -25068,4 +25068,92 @@ msgstr ""
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailOutbound.tt
 msgid "Undo & Close"
 msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminSendmailConfig.tt
+msgid "Add Outbound Email Profile"
+msgstr "Profil für ausgehende E-Mails hinzufügen"
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminSendmailConfig.tt
+msgid "Filter for outbound email profiles"
+msgstr "Filter für Profile für ausgehende E-Mails"
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminSendmailConfig.tt
+msgid "Manage Outbound Email Profiles"
+msgstr "Verwaltung von Profilen für ausgehende E-Mails"
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminSendmailConfig.tt
+msgid "Update Outbound Email Profile"
+msgstr "Profil für ausgehende E-Mails bearbeiten"
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminSendmailConfig.tt
+msgid "Email addresses"
+msgstr "E-Mail-Adressen"
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminSendmailConfig.tt
+msgid "Fallback"
+msgstr "Fallback"
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminSendmailConfig.tt
+msgid "Email addresses have to be configured!"
+msgstr "E-Mail-Adressen müssen konfiguriert werden!"
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminSendmailConfig.tt
+msgid "Delete outbound email profile"
+msgstr "Profil für ausgehende E-Mails löschen"
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminSendmailConfig.tt
+msgid "Command"
+msgstr "Kommando"
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminSendmailConfig.tt
+msgid "Enter a number between 1 and 65535."
+msgstr "Eine Nummer zwischen 1 und 65535 eingeben."
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminSendmailConfig.tt
+msgid "Port to use for given host (if non-standard port)."
+msgstr "Port für Host (falls Nicht-Standard-Port)."
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminSendmailConfig.tt
+msgid "Enter a number between 1 and 999."
+msgstr "Nummer zwischen 1 und 999 eingeben."
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminSendmailConfig.tt
+msgid "Timeout (in seconds) for connection to host."
+msgstr "Timeout (in Sekunden) für Verbindung zum Host."
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminSendmailConfig.tt
+msgid "Skip SSL verification"
+msgstr "SSL-Verifikation überspringen"
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminSendmailConfig.tt
+msgid "Select to make this the fallback/default config for any email address not configured in other outbound email profiles. Only one outbound email profile can be the fallback."
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminSendmailConfig.tt
+msgid "Edit current fallback outbound email profile (host %s)."
+msgstr ""
+
+#. Perl Module: Kernel/Modules/AdminSendmailConfig.pm
+msgid "Outbound email profile updated!"
+msgstr "Profil für ausgehende E-Mails aktualisiert!"
+
+#. Perl Module: Kernel/Modules/AdminSendmailConfig.pm
+msgid "Configuration option 'SendmailModule' has to be set to 'Kernel::System::Email::MultiSendmail' to be able to use the outbound email profiles managed here."
+msgstr "Konfigurationsoption 'SendmailModule' muss auf 'Kernel::System::Email::MultiSendmail' gesetzt werden, damit die hier konfigurierten Profile für ausgehende E-Mails verwendet werden können."
+
+#. XML Definition: Kernel/Config/Files/XML/Znuny.xml
+msgid "Names of system config options with email addresses to also be selectable for an outbound email profile (besides system addresses)."
+msgstr "Namen von Systemkonfigurationsoptionen mit E-Mail-Adressen, die ebenfalls in einem Profil für ausgehende E-Mails auswählbar sein sollen (neben Systemadressen)."
+
+#. JS File: var/httpd/htdocs/js/Core.Agent.Admin.SendmailConfig.js
+msgid "Do you really want to delete this outbound email profile?"
+msgstr "Soll dieses Profil für ausgehende E-Mails wirklich gelöscht werden?"
+
+#. SysConfig
+msgid "Manage outbound email profiles."
+msgstr "Profile für ausgehende E-Mails verwalten."
+
+#. SysConfig
+msgid "Outbound Email Profiles"
+msgstr "Profile für ausgehende E-Mails"
 

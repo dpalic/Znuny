@@ -9038,7 +9038,7 @@ msgstr "Os contrasinais non coinciden"
 msgid "SID"
 msgstr "SID"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/InstallerDBoracle.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminSendmailConfig.tt
 msgid "Port"
 msgstr "Porto"
 
@@ -21410,11 +21410,11 @@ msgstr ""
 msgid "An unknown error occurred when deleting the attachment. Please try again. If the error persists, please contact your system administrator."
 msgstr ""
 
-#. JS File: var/httpd/htdocs/js/test/Core.Language.UnitTest.js
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminSendmailConfig.tt
 msgid "yes"
 msgstr "si"
 
-#. JS File: var/httpd/htdocs/js/test/Core.Language.UnitTest.js
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminSendmailConfig.tt
 msgid "no"
 msgstr "non"
 
@@ -25043,5 +25043,93 @@ msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailOutbound.tt
 msgid "Undo & Close"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminSendmailConfig.tt
+msgid "Add Outbound Email Profile"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminSendmailConfig.tt
+msgid "Filter for outbound email profiles"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminSendmailConfig.tt
+msgid "Manage Outbound Email Profiles"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminSendmailConfig.tt
+msgid "Update Outbound Email Profile"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminSendmailConfig.tt
+msgid "Email addresses"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminSendmailConfig.tt
+msgid "Fallback"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminSendmailConfig.tt
+msgid "Email addresses have to be configured!"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminSendmailConfig.tt
+msgid "Delete outbound email profile"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminSendmailConfig.tt
+msgid "Command"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminSendmailConfig.tt
+msgid "Enter a number between 1 and 65535."
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminSendmailConfig.tt
+msgid "Port to use for given host (if non-standard port)."
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminSendmailConfig.tt
+msgid "Enter a number between 1 and 999."
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminSendmailConfig.tt
+msgid "Timeout (in seconds) for connection to host."
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminSendmailConfig.tt
+msgid "Skip SSL verification"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminSendmailConfig.tt
+msgid "Select to make this the fallback/default config for any email address not configured in other outbound email profiles. Only one outbound email profile can be the fallback."
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminSendmailConfig.tt
+msgid "Edit current fallback outbound email profile (host %s)."
+msgstr ""
+
+#. Perl Module: Kernel/Modules/AdminSendmailConfig.pm
+msgid "Outbound email profile updated!"
+msgstr ""
+
+#. Perl Module: Kernel/Modules/AdminSendmailConfig.pm
+msgid "Configuration option 'SendmailModule' has to be set to 'Kernel::System::Email::MultiSendmail' to be able to use the outbound email profiles managed here."
+msgstr ""
+
+#. XML Definition: Kernel/Config/Files/XML/Znuny.xml
+msgid "Names of system config options with email addresses to also be selectable for an outbound email profile (besides system addresses)."
+msgstr ""
+
+#. JS File: var/httpd/htdocs/js/Core.Agent.Admin.SendmailConfig.js
+msgid "Do you really want to delete this outbound email profile?"
+msgstr ""
+
+#. SysConfig
+msgid "Manage outbound email profiles."
+msgstr ""
+
+#. SysConfig
+msgid "Outbound Email Profiles"
 msgstr ""
 

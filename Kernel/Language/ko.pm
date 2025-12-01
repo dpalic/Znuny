@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%M-%D';
     $Self->{DateInputFormat}     = '%Y-%M-%D';
     $Self->{DateInputFormatLong} = '%Y-%M-%D %T';
-    $Self->{Completeness}        = 0.844433719433719;
+    $Self->{Completeness}        = 0.841455594741904;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -2010,6 +2010,28 @@ sub Data {
         '%s Results' => '결과 %s개',
         'Query is executed.' => '쿼리가 실행됩니다.',
 
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminSendmailConfig.tt
+        'Add Outbound Email Profile' => '',
+        'Filter for outbound email profiles' => '',
+        'Manage Outbound Email Profiles' => '',
+        'Update Outbound Email Profile' => '',
+        'Email addresses' => '',
+        'Fallback' => '',
+        'Email addresses have to be configured!' => '',
+        'yes' => '예',
+        'no' => '아니오',
+        'Delete outbound email profile' => '',
+        'Command' => '',
+        'Port' => '포트',
+        'Enter a number between 1 and 65535.' => '',
+        'Port to use for given host (if non-standard port).' => '',
+        'Enter a number between 1 and 999.' => '',
+        'Timeout (in seconds) for connection to host.' => '',
+        'Skip SSL verification' => '',
+        'Select to make this the fallback/default config for any email address not configured in other outbound email profiles. Only one outbound email profile can be the fallback.' =>
+            '',
+        'Edit current fallback outbound email profile (host %s).' => '',
+
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminService.tt
         'Add Service' => '서비스 추가',
         'Configure Service Visibility and Defaults' => '',
@@ -3144,7 +3166,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/InstallerDBoracle.tt
         'SID' => 'SID',
-        'Port' => '포트',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/InstallerFinish.tt
         'To be able to use Znuny you have to enter the following line in your command line (Terminal/Shell) as root.' =>
@@ -4098,6 +4119,11 @@ sub Data {
             '',
         'The following salutations were not updated: %s.' => '',
         'Errors adding/updating the following salutations: %s. Please check logs for more information.' =>
+            '',
+
+        # Perl Module: Kernel/Modules/AdminSendmailConfig.pm
+        'Outbound email profile updated!' => '',
+        'Configuration option \'SendmailModule\' has to be set to \'Kernel::System::Email::MultiSendmail\' to be able to use the outbound email profiles managed here.' =>
             '',
 
         # Perl Module: Kernel/Modules/AdminSignature.pm
@@ -8080,6 +8106,8 @@ sub Data {
         'Define a process icon.' => '',
         'Defines which ContentTypes are permitted for the attachment preview.' =>
             '',
+        'Names of system config options with email addresses to also be selectable for an outbound email profile (besides system addresses).' =>
+            '',
 
         # XML Definition: scripts/database/initial_insert.xml
         'invalid-temporarily' => '유효하지 않은 일시적',
@@ -8354,6 +8382,9 @@ sub Data {
         # JS File: var/httpd/htdocs/js/Core.Agent.Admin.SMIME.js
         'Do you really want to delete this certificate?' => '정말로 이 인증서를 삭제하시겠습니까?',
 
+        # JS File: var/httpd/htdocs/js/Core.Agent.Admin.SendmailConfig.js
+        'Do you really want to delete this outbound email profile?' => '',
+
         # JS File: var/httpd/htdocs/js/Core.Agent.Admin.SupportDataCollector.js
         'Generating...' => '생성 중...',
         'It was not possible to generate the Support Bundle.' => '지원 번들을 생성할 수 없었습니다.',
@@ -8596,8 +8627,6 @@ sub Data {
             '첨부파일을 삭제할 때 알 수없는 오류가 발생했습니다. 다시 시도하십시오. 오류가 계속되면 시스템 관리자에게 문의하십시오.',
 
         # JS File: var/httpd/htdocs/js/test/Core.Language.UnitTest.js
-        'yes' => '예',
-        'no' => '아니오',
         'This is %s' => '이것은 %s입니다.',
         'Complex %s with %s arguments' => '%s 인수가있는 복합 %s',
 
@@ -9037,6 +9066,7 @@ Thanks for your help!
         'Manage System Configuration Deployments.' => '시스템 구성 배포 관리.',
         'Manage different calendars.' => '다른 캘린더를 관리하십시오.',
         'Manage existing sessions.' => '기존 세션을 관리합니다.',
+        'Manage outbound email profiles.' => '',
         'Manage support data.' => '지원 데이터를 관리합니다.',
         'Manage system files.' => '',
         'Manage tasks triggered by event or time based execution.' => '이벤트 또는 시간 기반 실행에 의해 트리거된 작업을 관리합니다.',
@@ -9092,6 +9122,7 @@ Thanks for your help!
         'Out Of Office' => '부재중',
         'Out Of Office Time' => '부재중 시간',
         'Out of Office users.' => '부재중 사용자',
+        'Outbound Email Profiles' => '',
         'Overview Escalated Tickets.' => 'Escalated 티켓 개요',
         'Overview Refresh Time' => '개요 리프레쉬 시간',
         'Overview of all Tickets per assigned Queue.' => '할당된 대기열 당 모든 티켓 개요.',
@@ -9464,6 +9495,7 @@ Thanks for your help!
         'Delete field',
         'Delete invoker',
         'Delete operation',
+        'Delete outbound email profile',
         'Delete this %s',
         'Delete this Attachment',
         'Delete this Event Trigger',
@@ -9500,6 +9532,7 @@ Thanks for your help!
         'Do you really want to delete this link?',
         'Do you really want to delete this notification language?',
         'Do you really want to delete this notification?',
+        'Do you really want to delete this outbound email profile?',
         'Do you really want to delete this scheduled system maintenance?',
         'Do you really want to delete this token and its configuration?',
         'Do you really want to reset this setting to it\'s default value?',

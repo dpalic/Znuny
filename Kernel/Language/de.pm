@@ -27,7 +27,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.991151866151866;
+    $Self->{Completeness}        = 0.990862455915357;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2011,6 +2011,28 @@ sub Data {
         '%s Results' => '%s Ergebnisse',
         'Query is executed.' => 'Anfrage wird ausgeführt.',
 
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminSendmailConfig.tt
+        'Add Outbound Email Profile' => 'Profil für ausgehende E-Mails hinzufügen',
+        'Filter for outbound email profiles' => 'Filter für Profile für ausgehende E-Mails',
+        'Manage Outbound Email Profiles' => 'Verwaltung von Profilen für ausgehende E-Mails',
+        'Update Outbound Email Profile' => 'Profil für ausgehende E-Mails bearbeiten',
+        'Email addresses' => 'E-Mail-Adressen',
+        'Fallback' => 'Fallback',
+        'Email addresses have to be configured!' => 'E-Mail-Adressen müssen konfiguriert werden!',
+        'yes' => 'ja',
+        'no' => 'nein',
+        'Delete outbound email profile' => 'Profil für ausgehende E-Mails löschen',
+        'Command' => 'Kommando',
+        'Port' => 'Port',
+        'Enter a number between 1 and 65535.' => 'Eine Nummer zwischen 1 und 65535 eingeben.',
+        'Port to use for given host (if non-standard port).' => 'Port für Host (falls Nicht-Standard-Port).',
+        'Enter a number between 1 and 999.' => 'Nummer zwischen 1 und 999 eingeben.',
+        'Timeout (in seconds) for connection to host.' => 'Timeout (in Sekunden) für Verbindung zum Host.',
+        'Skip SSL verification' => 'SSL-Verifikation überspringen',
+        'Select to make this the fallback/default config for any email address not configured in other outbound email profiles. Only one outbound email profile can be the fallback.' =>
+            '',
+        'Edit current fallback outbound email profile (host %s).' => '',
+
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminService.tt
         'Add Service' => 'Service hinzufügen',
         'Configure Service Visibility and Defaults' => 'Service-Sichtbarkeit und Standardeinstellungen konfigurieren',
@@ -3145,7 +3167,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/InstallerDBoracle.tt
         'SID' => 'SID',
-        'Port' => 'Port',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/InstallerFinish.tt
         'To be able to use Znuny you have to enter the following line in your command line (Terminal/Shell) as root.' =>
@@ -4100,6 +4121,11 @@ sub Data {
         'The following salutations were not updated: %s.' => '',
         'Errors adding/updating the following salutations: %s. Please check logs for more information.' =>
             'Fehler beim Hinzufügen/Aktualisieren der folgenden Anreden: %s. Bitte Logs für weitere Informationen prüfen.',
+
+        # Perl Module: Kernel/Modules/AdminSendmailConfig.pm
+        'Outbound email profile updated!' => 'Profil für ausgehende E-Mails aktualisiert!',
+        'Configuration option \'SendmailModule\' has to be set to \'Kernel::System::Email::MultiSendmail\' to be able to use the outbound email profiles managed here.' =>
+            'Konfigurationsoption \'SendmailModule\' muss auf \'Kernel::System::Email::MultiSendmail\' gesetzt werden, damit die hier konfigurierten Profile für ausgehende E-Mails verwendet werden können.',
 
         # Perl Module: Kernel/Modules/AdminSignature.pm
         'Signature updated!' => 'Signatur aktualisiert!',
@@ -8081,6 +8107,8 @@ sub Data {
         'Define a process icon.' => 'Definieren Sie ein Prozess-Symbol.',
         'Defines which ContentTypes are permitted for the attachment preview.' =>
             'Legt fest, welche ContentTypes für die Anlagenvorschau zulässig sind.',
+        'Names of system config options with email addresses to also be selectable for an outbound email profile (besides system addresses).' =>
+            'Namen von Systemkonfigurationsoptionen mit E-Mail-Adressen, die ebenfalls in einem Profil für ausgehende E-Mails auswählbar sein sollen (neben Systemadressen).',
 
         # XML Definition: scripts/database/initial_insert.xml
         'invalid-temporarily' => 'ungültig-temporär',
@@ -8355,6 +8383,9 @@ sub Data {
         # JS File: var/httpd/htdocs/js/Core.Agent.Admin.SMIME.js
         'Do you really want to delete this certificate?' => 'Möchten Sie dieses Zertifikat wirklich löschen?',
 
+        # JS File: var/httpd/htdocs/js/Core.Agent.Admin.SendmailConfig.js
+        'Do you really want to delete this outbound email profile?' => 'Soll dieses Profil für ausgehende E-Mails wirklich gelöscht werden?',
+
         # JS File: var/httpd/htdocs/js/Core.Agent.Admin.SupportDataCollector.js
         'Generating...' => 'Wird erstellt...',
         'It was not possible to generate the Support Bundle.' => 'Das Support-Paket konnte nicht erzeugt werden.',
@@ -8597,8 +8628,6 @@ sub Data {
             'Beim Löschen des Anhangs ist ein unbekannter Fehler aufgetreten. Bitte versuchen Sie es erneut. Wenn der Fehler weiterhin auftritt, kontaktieren Sie bitte Ihren Systemadministrator.',
 
         # JS File: var/httpd/htdocs/js/test/Core.Language.UnitTest.js
-        'yes' => 'ja',
-        'no' => 'nein',
         'This is %s' => 'Dies ist %s',
         'Complex %s with %s arguments' => 'Komplex %s mit %s Argumenten',
 
@@ -9037,6 +9066,7 @@ Ihr Helpdesk-Team
         'Manage System Configuration Deployments.' => 'Inbetriebnahmen von Systemkonfigurationen verwalten.',
         'Manage different calendars.' => 'Verschiedene Kalender verwalten.',
         'Manage existing sessions.' => 'Sitzungen verwalten.',
+        'Manage outbound email profiles.' => 'Profile für ausgehende E-Mails verwalten.',
         'Manage support data.' => 'Supportdaten verwalten.',
         'Manage system files.' => 'Systemdateien verwalten',
         'Manage tasks triggered by event or time based execution.' => 'Verwaltung von event- oder zeitbasierten Aufgaben.',
@@ -9092,6 +9122,7 @@ Ihr Helpdesk-Team
         'Out Of Office' => 'Derzeit nicht im Büro',
         'Out Of Office Time' => 'Abwesenheitszeit',
         'Out of Office users.' => 'Abwesende Benutzer.',
+        'Outbound Email Profiles' => 'Profile für ausgehende E-Mails',
         'Overview Escalated Tickets.' => 'Übersicht eskalierter Tickets.',
         'Overview Refresh Time' => 'Aktualisierungszeiten der Übersichten',
         'Overview of all Tickets per assigned Queue.' => 'Übersicht aller Tickets pro zugewiesener Queue.',
@@ -9464,6 +9495,7 @@ Ihr Helpdesk-Team
         'Delete field',
         'Delete invoker',
         'Delete operation',
+        'Delete outbound email profile',
         'Delete this %s',
         'Delete this Attachment',
         'Delete this Event Trigger',
@@ -9500,6 +9532,7 @@ Ihr Helpdesk-Team
         'Do you really want to delete this link?',
         'Do you really want to delete this notification language?',
         'Do you really want to delete this notification?',
+        'Do you really want to delete this outbound email profile?',
         'Do you really want to delete this scheduled system maintenance?',
         'Do you really want to delete this token and its configuration?',
         'Do you really want to reset this setting to it\'s default value?',

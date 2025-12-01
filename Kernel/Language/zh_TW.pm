@@ -29,7 +29,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y.%M.%D';
     $Self->{DateInputFormat}     = '%Y.%M.%D';
     $Self->{DateInputFormatLong} = '%Y.%M.%D - %T';
-    $Self->{Completeness}        = 0.300353925353925;
+    $Self->{Completeness}        = 0.299294645719782;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -2013,6 +2013,28 @@ sub Data {
         '%s Results' => '',
         'Query is executed.' => '',
 
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminSendmailConfig.tt
+        'Add Outbound Email Profile' => '',
+        'Filter for outbound email profiles' => '',
+        'Manage Outbound Email Profiles' => '',
+        'Update Outbound Email Profile' => '',
+        'Email addresses' => '',
+        'Fallback' => '',
+        'Email addresses have to be configured!' => '',
+        'yes' => '是',
+        'no' => '否',
+        'Delete outbound email profile' => '',
+        'Command' => '',
+        'Port' => '',
+        'Enter a number between 1 and 65535.' => '',
+        'Port to use for given host (if non-standard port).' => '',
+        'Enter a number between 1 and 999.' => '',
+        'Timeout (in seconds) for connection to host.' => '',
+        'Skip SSL verification' => '',
+        'Select to make this the fallback/default config for any email address not configured in other outbound email profiles. Only one outbound email profile can be the fallback.' =>
+            '',
+        'Edit current fallback outbound email profile (host %s).' => '',
+
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminService.tt
         'Add Service' => '添加服務',
         'Configure Service Visibility and Defaults' => '',
@@ -3148,7 +3170,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/InstallerDBoracle.tt
         'SID' => '',
-        'Port' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/InstallerFinish.tt
         'To be able to use Znuny you have to enter the following line in your command line (Terminal/Shell) as root.' =>
@@ -4102,6 +4123,11 @@ sub Data {
             '',
         'The following salutations were not updated: %s.' => '',
         'Errors adding/updating the following salutations: %s. Please check logs for more information.' =>
+            '',
+
+        # Perl Module: Kernel/Modules/AdminSendmailConfig.pm
+        'Outbound email profile updated!' => '',
+        'Configuration option \'SendmailModule\' has to be set to \'Kernel::System::Email::MultiSendmail\' to be able to use the outbound email profiles managed here.' =>
             '',
 
         # Perl Module: Kernel/Modules/AdminSignature.pm
@@ -8084,6 +8110,8 @@ sub Data {
         'Define a process icon.' => '',
         'Defines which ContentTypes are permitted for the attachment preview.' =>
             '',
+        'Names of system config options with email addresses to also be selectable for an outbound email profile (besides system addresses).' =>
+            '',
 
         # XML Definition: scripts/database/initial_insert.xml
         'invalid-temporarily' => '暫時無效',
@@ -8358,6 +8386,9 @@ sub Data {
         # JS File: var/httpd/htdocs/js/Core.Agent.Admin.SMIME.js
         'Do you really want to delete this certificate?' => '',
 
+        # JS File: var/httpd/htdocs/js/Core.Agent.Admin.SendmailConfig.js
+        'Do you really want to delete this outbound email profile?' => '',
+
         # JS File: var/httpd/htdocs/js/Core.Agent.Admin.SupportDataCollector.js
         'Generating...' => '',
         'It was not possible to generate the Support Bundle.' => '',
@@ -8600,8 +8631,6 @@ sub Data {
             '',
 
         # JS File: var/httpd/htdocs/js/test/Core.Language.UnitTest.js
-        'yes' => '是',
-        'no' => '否',
         'This is %s' => '',
         'Complex %s with %s arguments' => '',
 
@@ -9030,6 +9059,7 @@ Thanks for your help!
         'Manage System Configuration Deployments.' => '',
         'Manage different calendars.' => '',
         'Manage existing sessions.' => '管理當前登錄會話.',
+        'Manage outbound email profiles.' => '',
         'Manage support data.' => '',
         'Manage system files.' => '',
         'Manage tasks triggered by event or time based execution.' => '管理基於事件或時間觸發的任務',
@@ -9085,6 +9115,7 @@ Thanks for your help!
         'Out Of Office' => '不在辦公室的用戶列表',
         'Out Of Office Time' => '不在辦公室的時間',
         'Out of Office users.' => '不在辦公室的用戶',
+        'Outbound Email Profiles' => '',
         'Overview Escalated Tickets.' => '',
         'Overview Refresh Time' => '概況刷新間隔',
         'Overview of all Tickets per assigned Queue.' => '',
@@ -9457,6 +9488,7 @@ Thanks for your help!
         'Delete field',
         'Delete invoker',
         'Delete operation',
+        'Delete outbound email profile',
         'Delete this %s',
         'Delete this Attachment',
         'Delete this Event Trigger',
@@ -9493,6 +9525,7 @@ Thanks for your help!
         'Do you really want to delete this link?',
         'Do you really want to delete this notification language?',
         'Do you really want to delete this notification?',
+        'Do you really want to delete this outbound email profile?',
         'Do you really want to delete this scheduled system maintenance?',
         'Do you really want to delete this token and its configuration?',
         'Do you really want to reset this setting to it\'s default value?',

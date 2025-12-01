@@ -30,7 +30,7 @@ sub Data {
     $Self->{DateFormatShort}     = '';
     $Self->{DateInputFormat}     = '';
     $Self->{DateInputFormatLong} = '';
-    $Self->{Completeness}        = 0.838320463320463;
+    $Self->{Completeness}        = 0.835363898685476;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -2014,6 +2014,28 @@ sub Data {
         '%s Results' => '%s Resultados',
         'Query is executed.' => 'Consulta executada.',
 
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminSendmailConfig.tt
+        'Add Outbound Email Profile' => '',
+        'Filter for outbound email profiles' => '',
+        'Manage Outbound Email Profiles' => '',
+        'Update Outbound Email Profile' => '',
+        'Email addresses' => '',
+        'Fallback' => '',
+        'Email addresses have to be configured!' => '',
+        'yes' => 'sim',
+        'no' => 'não',
+        'Delete outbound email profile' => '',
+        'Command' => '',
+        'Port' => 'Porta',
+        'Enter a number between 1 and 65535.' => '',
+        'Port to use for given host (if non-standard port).' => '',
+        'Enter a number between 1 and 999.' => '',
+        'Timeout (in seconds) for connection to host.' => '',
+        'Skip SSL verification' => '',
+        'Select to make this the fallback/default config for any email address not configured in other outbound email profiles. Only one outbound email profile can be the fallback.' =>
+            '',
+        'Edit current fallback outbound email profile (host %s).' => '',
+
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminService.tt
         'Add Service' => 'Adicionar Serviço',
         'Configure Service Visibility and Defaults' => '',
@@ -3148,7 +3170,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/InstallerDBoracle.tt
         'SID' => 'SID',
-        'Port' => 'Porta',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/InstallerFinish.tt
         'To be able to use Znuny you have to enter the following line in your command line (Terminal/Shell) as root.' =>
@@ -4102,6 +4123,11 @@ sub Data {
             '',
         'The following salutations were not updated: %s.' => '',
         'Errors adding/updating the following salutations: %s. Please check logs for more information.' =>
+            '',
+
+        # Perl Module: Kernel/Modules/AdminSendmailConfig.pm
+        'Outbound email profile updated!' => '',
+        'Configuration option \'SendmailModule\' has to be set to \'Kernel::System::Email::MultiSendmail\' to be able to use the outbound email profiles managed here.' =>
             '',
 
         # Perl Module: Kernel/Modules/AdminSignature.pm
@@ -8084,6 +8110,8 @@ sub Data {
         'Define a process icon.' => '',
         'Defines which ContentTypes are permitted for the attachment preview.' =>
             '',
+        'Names of system config options with email addresses to also be selectable for an outbound email profile (besides system addresses).' =>
+            '',
 
         # XML Definition: scripts/database/initial_insert.xml
         'invalid-temporarily' => 'inválido-temporariamente',
@@ -8358,6 +8386,9 @@ sub Data {
         # JS File: var/httpd/htdocs/js/Core.Agent.Admin.SMIME.js
         'Do you really want to delete this certificate?' => 'Você realmente quer excluir este certificado?',
 
+        # JS File: var/httpd/htdocs/js/Core.Agent.Admin.SendmailConfig.js
+        'Do you really want to delete this outbound email profile?' => '',
+
         # JS File: var/httpd/htdocs/js/Core.Agent.Admin.SupportDataCollector.js
         'Generating...' => 'Gerando...',
         'It was not possible to generate the Support Bundle.' => 'Não foi possível gerar o Pacote de Suporte.',
@@ -8600,8 +8631,6 @@ sub Data {
             'Um erro desconhecido ocorreu ao excluir o anexo. Por favor, tente novamente. Se o erro persistir, favor contatar seu administrador do sistema.',
 
         # JS File: var/httpd/htdocs/js/test/Core.Language.UnitTest.js
-        'yes' => 'sim',
-        'no' => 'não',
         'This is %s' => 'Isto é %s',
         'Complex %s with %s arguments' => '%s complexo com %s argumentos',
 
@@ -9041,6 +9070,7 @@ Obrigado pela ajuda!
         'Manage System Configuration Deployments.' => 'Gerenciar Implantações de Configuração de Sistema',
         'Manage different calendars.' => 'Gerenciar calendário diferentes.',
         'Manage existing sessions.' => 'Gerenciar sessões existentes.',
+        'Manage outbound email profiles.' => '',
         'Manage support data.' => 'Gerenciar dados de suporte.',
         'Manage system files.' => 'Gerenciar arquivos do sistema.',
         'Manage tasks triggered by event or time based execution.' => 'Gerenciar tarefas disparadas por evento ou com execução baseada em tempo.',
@@ -9096,6 +9126,7 @@ Obrigado pela ajuda!
         'Out Of Office' => 'Fora do Escritório',
         'Out Of Office Time' => 'Período Fora do Escritório',
         'Out of Office users.' => 'Usuários Fora do Escritório',
+        'Outbound Email Profiles' => '',
         'Overview Escalated Tickets.' => 'Visão Geral de Chamados Escalados.',
         'Overview Refresh Time' => 'Tempo de Atualização do Painel',
         'Overview of all Tickets per assigned Queue.' => 'Visão geral de todos os Chamados associados as Filas.',
@@ -9468,6 +9499,7 @@ Obrigado pela ajuda!
         'Delete field',
         'Delete invoker',
         'Delete operation',
+        'Delete outbound email profile',
         'Delete this %s',
         'Delete this Attachment',
         'Delete this Event Trigger',
@@ -9504,6 +9536,7 @@ Obrigado pela ajuda!
         'Do you really want to delete this link?',
         'Do you really want to delete this notification language?',
         'Do you really want to delete this notification?',
+        'Do you really want to delete this outbound email profile?',
         'Do you really want to delete this scheduled system maintenance?',
         'Do you really want to delete this token and its configuration?',
         'Do you really want to reset this setting to it\'s default value?',

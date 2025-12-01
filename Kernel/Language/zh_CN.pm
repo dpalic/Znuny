@@ -33,7 +33,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y.%M.%D';
     $Self->{DateInputFormat}     = '%Y.%M.%D';
     $Self->{DateInputFormatLong} = '%Y.%M.%D - %T';
-    $Self->{Completeness}        = 0.872104247104247;
+    $Self->{Completeness}        = 0.869028534786791;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -2017,6 +2017,28 @@ sub Data {
         '%s Results' => '%s 的结果',
         'Query is executed.' => '查询已执行。',
 
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminSendmailConfig.tt
+        'Add Outbound Email Profile' => '',
+        'Filter for outbound email profiles' => '',
+        'Manage Outbound Email Profiles' => '',
+        'Update Outbound Email Profile' => '',
+        'Email addresses' => '',
+        'Fallback' => '',
+        'Email addresses have to be configured!' => '',
+        'yes' => '是',
+        'no' => '否',
+        'Delete outbound email profile' => '',
+        'Command' => '',
+        'Port' => '端口',
+        'Enter a number between 1 and 65535.' => '',
+        'Port to use for given host (if non-standard port).' => '',
+        'Enter a number between 1 and 999.' => '',
+        'Timeout (in seconds) for connection to host.' => '',
+        'Skip SSL verification' => '',
+        'Select to make this the fallback/default config for any email address not configured in other outbound email profiles. Only one outbound email profile can be the fallback.' =>
+            '',
+        'Edit current fallback outbound email profile (host %s).' => '',
+
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminService.tt
         'Add Service' => '添加服务',
         'Configure Service Visibility and Defaults' => '',
@@ -3151,7 +3173,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/InstallerDBoracle.tt
         'SID' => '实例名',
-        'Port' => '端口',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/InstallerFinish.tt
         'To be able to use Znuny you have to enter the following line in your command line (Terminal/Shell) as root.' =>
@@ -4105,6 +4126,11 @@ sub Data {
             '',
         'The following salutations were not updated: %s.' => '',
         'Errors adding/updating the following salutations: %s. Please check logs for more information.' =>
+            '',
+
+        # Perl Module: Kernel/Modules/AdminSendmailConfig.pm
+        'Outbound email profile updated!' => '',
+        'Configuration option \'SendmailModule\' has to be set to \'Kernel::System::Email::MultiSendmail\' to be able to use the outbound email profiles managed here.' =>
             '',
 
         # Perl Module: Kernel/Modules/AdminSignature.pm
@@ -8087,6 +8113,8 @@ sub Data {
         'Define a process icon.' => '',
         'Defines which ContentTypes are permitted for the attachment preview.' =>
             '',
+        'Names of system config options with email addresses to also be selectable for an outbound email profile (besides system addresses).' =>
+            '',
 
         # XML Definition: scripts/database/initial_insert.xml
         'invalid-temporarily' => '暂时无效',
@@ -8361,6 +8389,9 @@ sub Data {
         # JS File: var/httpd/htdocs/js/Core.Agent.Admin.SMIME.js
         'Do you really want to delete this certificate?' => '你确定要删除这个证书吗？',
 
+        # JS File: var/httpd/htdocs/js/Core.Agent.Admin.SendmailConfig.js
+        'Do you really want to delete this outbound email profile?' => '',
+
         # JS File: var/httpd/htdocs/js/Core.Agent.Admin.SupportDataCollector.js
         'Generating...' => '正在生成...',
         'It was not possible to generate the Support Bundle.' => '无法生成支持数据包。',
@@ -8603,8 +8634,6 @@ sub Data {
             '删除附件时发生未知错误，请再试一次。 如果错误仍然存在，请与系统管理员联系。',
 
         # JS File: var/httpd/htdocs/js/test/Core.Language.UnitTest.js
-        'yes' => '是',
-        'no' => '否',
         'This is %s' => '这是%s',
         'Complex %s with %s arguments' => '复杂%s，带有%s参数',
 
@@ -9043,6 +9072,7 @@ Thanks for your help!
         'Manage System Configuration Deployments.' => '管理系统配置部署。',
         'Manage different calendars.' => '管理不同的日历。',
         'Manage existing sessions.' => '管理已登录会话。',
+        'Manage outbound email profiles.' => '',
         'Manage support data.' => '管理支持数据。',
         'Manage system files.' => '',
         'Manage tasks triggered by event or time based execution.' => '管理事件触发或基于时间执行的任务。',
@@ -9098,6 +9128,7 @@ Thanks for your help!
         'Out Of Office' => '不在办公室',
         'Out Of Office Time' => '不在办公室的时间',
         'Out of Office users.' => '不在办公室的用户。',
+        'Outbound Email Profiles' => '',
         'Overview Escalated Tickets.' => '已升级工单概览。',
         'Overview Refresh Time' => '概览刷新间隔',
         'Overview of all Tickets per assigned Queue.' => '每个分配队列的所有工单概览。',
@@ -9470,6 +9501,7 @@ Thanks for your help!
         'Delete field',
         'Delete invoker',
         'Delete operation',
+        'Delete outbound email profile',
         'Delete this %s',
         'Delete this Attachment',
         'Delete this Event Trigger',
@@ -9506,6 +9538,7 @@ Thanks for your help!
         'Do you really want to delete this link?',
         'Do you really want to delete this notification language?',
         'Do you really want to delete this notification?',
+        'Do you really want to delete this outbound email profile?',
         'Do you really want to delete this scheduled system maintenance?',
         'Do you really want to delete this token and its configuration?',
         'Do you really want to reset this setting to it\'s default value?',

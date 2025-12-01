@@ -32,7 +32,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%M-%D';
     $Self->{DateInputFormat}     = '%Y-%M-%D';
     $Self->{DateInputFormatLong} = '%Y-%M-%D - %T';
-    $Self->{Completeness}        = 0.872104247104247;
+    $Self->{Completeness}        = 0.869028534786791;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2016,6 +2016,28 @@ sub Data {
         '%s Results' => '%s találat',
         'Query is executed.' => 'Lekérdezés végrehajtva.',
 
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AdminSendmailConfig.tt
+        'Add Outbound Email Profile' => '',
+        'Filter for outbound email profiles' => '',
+        'Manage Outbound Email Profiles' => '',
+        'Update Outbound Email Profile' => '',
+        'Email addresses' => '',
+        'Fallback' => '',
+        'Email addresses have to be configured!' => '',
+        'yes' => 'igen',
+        'no' => 'nem',
+        'Delete outbound email profile' => '',
+        'Command' => '',
+        'Port' => 'Port',
+        'Enter a number between 1 and 65535.' => '',
+        'Port to use for given host (if non-standard port).' => '',
+        'Enter a number between 1 and 999.' => '',
+        'Timeout (in seconds) for connection to host.' => '',
+        'Skip SSL verification' => '',
+        'Select to make this the fallback/default config for any email address not configured in other outbound email profiles. Only one outbound email profile can be the fallback.' =>
+            '',
+        'Edit current fallback outbound email profile (host %s).' => '',
+
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminService.tt
         'Add Service' => 'Szolgáltatás hozzáadása',
         'Configure Service Visibility and Defaults' => '',
@@ -3150,7 +3172,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/InstallerDBoracle.tt
         'SID' => 'SID',
-        'Port' => 'Port',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/InstallerFinish.tt
         'To be able to use Znuny you have to enter the following line in your command line (Terminal/Shell) as root.' =>
@@ -4104,6 +4125,11 @@ sub Data {
             '',
         'The following salutations were not updated: %s.' => '',
         'Errors adding/updating the following salutations: %s. Please check logs for more information.' =>
+            '',
+
+        # Perl Module: Kernel/Modules/AdminSendmailConfig.pm
+        'Outbound email profile updated!' => '',
+        'Configuration option \'SendmailModule\' has to be set to \'Kernel::System::Email::MultiSendmail\' to be able to use the outbound email profiles managed here.' =>
             '',
 
         # Perl Module: Kernel/Modules/AdminSignature.pm
@@ -8086,6 +8112,8 @@ sub Data {
         'Define a process icon.' => '',
         'Defines which ContentTypes are permitted for the attachment preview.' =>
             '',
+        'Names of system config options with email addresses to also be selectable for an outbound email profile (besides system addresses).' =>
+            '',
 
         # XML Definition: scripts/database/initial_insert.xml
         'invalid-temporarily' => 'átmenetileg érvénytelen',
@@ -8360,6 +8388,9 @@ sub Data {
         # JS File: var/httpd/htdocs/js/Core.Agent.Admin.SMIME.js
         'Do you really want to delete this certificate?' => 'Valóban törölni szeretné ezt a tanúsítványt?',
 
+        # JS File: var/httpd/htdocs/js/Core.Agent.Admin.SendmailConfig.js
+        'Do you really want to delete this outbound email profile?' => '',
+
         # JS File: var/httpd/htdocs/js/Core.Agent.Admin.SupportDataCollector.js
         'Generating...' => 'Előállítás…',
         'It was not possible to generate the Support Bundle.' => 'Nem volt lehetséges a támogatási csomag előállítása.',
@@ -8602,8 +8633,6 @@ sub Data {
             'Ismeretlen hiba történt a melléklet törlése során. Kérjük, próbálja meg újra. Ha a hiba továbbra is fennáll, akkor vegye fel a kapcsolatot a rendszergazdával.',
 
         # JS File: var/httpd/htdocs/js/test/Core.Language.UnitTest.js
-        'yes' => 'igen',
-        'no' => 'nem',
         'This is %s' => 'Ez egy %s',
         'Complex %s with %s arguments' => 'Összetett %s %s argumentummal',
 
@@ -9043,6 +9072,7 @@ Az Ön segélyszolgálat csapata
         'Manage System Configuration Deployments.' => 'Rendszer-konfigurációs üzembe állítások kezelése.',
         'Manage different calendars.' => 'Különböző naptárak kezelése.',
         'Manage existing sessions.' => 'Meglévő munkamenetek kezelése.',
+        'Manage outbound email profiles.' => '',
         'Manage support data.' => 'Támogatási adatok kezelése.',
         'Manage system files.' => '',
         'Manage tasks triggered by event or time based execution.' => 'Esemény vagy időalapú végrehajtás által aktivált feladatok kezelése.',
@@ -9098,6 +9128,7 @@ Az Ön segélyszolgálat csapata
         'Out Of Office' => 'Irodán kívül',
         'Out Of Office Time' => 'Irodán kívüli idő',
         'Out of Office users.' => 'Irodán kívüli felhasználók.',
+        'Outbound Email Profiles' => '',
         'Overview Escalated Tickets.' => 'Eszkalált jegyek áttekintője.',
         'Overview Refresh Time' => 'Áttekintő frissítési ideje',
         'Overview of all Tickets per assigned Queue.' => 'Az összes jegy áttekintője a hozzárendelt várólistánként.',
@@ -9470,6 +9501,7 @@ Az Ön segélyszolgálat csapata
         'Delete field',
         'Delete invoker',
         'Delete operation',
+        'Delete outbound email profile',
         'Delete this %s',
         'Delete this Attachment',
         'Delete this Event Trigger',
@@ -9506,6 +9538,7 @@ Az Ön segélyszolgálat csapata
         'Do you really want to delete this link?',
         'Do you really want to delete this notification language?',
         'Do you really want to delete this notification?',
+        'Do you really want to delete this outbound email profile?',
         'Do you really want to delete this scheduled system maintenance?',
         'Do you really want to delete this token and its configuration?',
         'Do you really want to reset this setting to it\'s default value?',

@@ -47,6 +47,7 @@ sub Run {
     );
 
     my @PackageNames = (
+        'Znuny-MultiSendmail',
         'Znuny-CopyTicketNumber',
     );
 
