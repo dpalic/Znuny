@@ -15,6 +15,7 @@
  - 2025-11-05 Fixed: No styles when printing process in the admin interface.
  - 2025-11-05 Fixed: Customer ticket details screen now redirects to overview of tickets if a ticket is accessed without permissions.
  - 2025-11-05 Integrated package Znuny-CopyTicketNumber.
+ - 2025-10-31 Fixed: The link to a specific article in a ticket does not work if users have different settings for “Show all articles”. Article links now handle both display modes: 'Show one article' and 'Show all articles'.
  - 2025-10-31 Fixed: ProcessPrint. When printing the process, it produces empty results.
  - 2025-10-29 Fixed: Issue with popup redirections after submitting process category form.
  - 2025-10-29 Fixed: Parameter error in Kernel::System::Web::UploadCache does not try to dereference undef.
