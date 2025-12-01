@@ -6,6 +6,7 @@
  - 2025-11-21 Fixed: Wrong description text in personal preference. Thanks for reporting to @BuilderNSV. [#712](https://github.com/znuny/Znuny/issues/712).
  - 2025-11-21 Fixed: Resource module displays deactivated Agents.
  - 2025-11-17 Fixed: Added rule to fix Firefox browser that does not wrap overflow text by default while displaying article content in AgentTicketZoom.
+ - 2025-11-13 Changed ticket zoom information widget to count only open tickets with the same customer after enabling config option Ticket::Frontend::ZoomCustomerTickets.
  - 2025-11-13 Fixed: Unexpected rate limit is being applied when config option SendmailModule::RateLimit is disabled.
  - 2025-11-12 Sped up UUID creation for DBCRUD modules.
  - 2025-11-07 Added configurable filter for ticket search to ticket merge dialog (AgentTicketMerge).
