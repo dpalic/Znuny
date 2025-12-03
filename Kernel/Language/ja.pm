@@ -30,7 +30,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y/%M/%D';
     $Self->{DateInputFormat}     = '%Y/%M/%D';
     $Self->{DateInputFormatLong} = '%Y/%M/%D - %T';
-    $Self->{Completeness}        = 0.662766468985414;
+    $Self->{Completeness}        = 0.660648665921074;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -709,6 +709,9 @@ sub Data {
         'Add Job' => '',
         'Filter for Jobs' => '',
         'Filter for jobs' => '',
+        'Upload a file in YAML format (as provided by the export) to import generic agent jobs.' =>
+            '',
+        'Overwrite existing generic agents?' => '',
         'Generic Agent Job Management' => '',
         'Edit Job' => '',
         'Run Job' => '',
@@ -1620,6 +1623,9 @@ sub Data {
         'Add PostMaster Filter' => 'ポストマスター・フィルターを追加',
         'Filter for PostMaster Filters' => '',
         'Filter for PostMaster filters' => '',
+        'Upload a file in YAML format (as provided by the export) to import postmaster filters.' =>
+            '',
+        'Overwrite existing postmaster filters?' => '',
         'To dispatch or filter incoming emails based on email headers. Matching using Regular Expressions is also possible.' =>
             '振り分けやメールヘッダを元に受信メールをフィルタします。正規表現を使用できます。',
         'If you want to match only the email address, use EMAILADDRESS:info@example.com in From, To or Cc.' =>
@@ -3746,6 +3752,17 @@ sub Data {
         'Select at least one recipient.' => '',
 
         # Perl Module: Kernel/Modules/AdminGenericAgent.pm
+        'Error exporting generic agent job with Name %s!' => '',
+        'Error creating the generic agent job.' => '',
+        'Jobs could not be imported due to an unknown error. Please check logs for more information.' =>
+            '',
+        'The following generic agent jobs have been added successfully: %s.' =>
+            '',
+        'The following generic agent jobs have been updated successfully: %s.' =>
+            '',
+        'The following generic agent jobs were not updated: %s.' => '',
+        'Errors adding/updating the following generic agent jobs: %s. Please check logs for more information.' =>
+            '',
         'minute(s)' => '分',
         'hour(s)' => '時間',
         'Time unit' => '時間の単位',
@@ -3756,7 +3773,6 @@ sub Data {
         'archive tickets' => 'アーカイブ・チケット',
         'restore tickets from archive' => 'アーカイブからチケットを復元する',
         'Need Profile!' => 'プロファイルの入力が必要です！',
-        'Got no values to check.' => '',
         'Please remove the following words because they cannot be used for the ticket selection:' =>
             '',
 
@@ -3978,6 +3994,17 @@ sub Data {
 
         # Perl Module: Kernel/Modules/AdminPostMasterFilter.pm
         'No such filter: %s' => 'そのようなフィルターはありません: %s',
+        'Error exporting postmaster filter with Name %s!' => '',
+        'Error creating the postmaster filter.' => '',
+        'Filters could not be imported due to an unknown error. Please check logs for more information.' =>
+            '',
+        'The following postmaster filters have been added successfully: %s.' =>
+            '',
+        'The following postmaster filters have been updated successfully: %s.' =>
+            '',
+        'The following postmaster filters were not updated: %s.' => '',
+        'Errors adding/updating the following postmaster filters: %s. Please check logs for more information.' =>
+            '',
 
         # Perl Module: Kernel/Modules/AdminPriority.pm
         'Priority added!' => '優先度を追加しました。',
@@ -4565,6 +4592,7 @@ sub Data {
         'Customer Realname' => '顧客ユーザの氏名',
         'Created within the last' => '以内に作成された',
         'Created more than ... ago' => '以前に作成された',
+        'Got no values to check.' => '',
         'Please remove the following words because they cannot be used for the search:' =>
             '',
 
@@ -5041,6 +5069,10 @@ sub Data {
         'The field content is too long!' => 'その領域の内容が長すぎます。',
         'Maximum size is %s characters.' => '最大サイズは%s文字です。',
 
+        # Perl Module: Kernel/System/GenericAgent.pm
+        'Couldn\'t read Job configuration YAML file. Please make sure the file is valid.' =>
+            '',
+
         # Perl Module: Kernel/System/MailQueue.pm
         'Error while validating Message data.' => '',
         'Error while validating Sender email address.' => '',
@@ -5064,6 +5096,10 @@ sub Data {
         'File is not installed!' => 'ファイルがインストールされていません！',
         'File is different!' => '',
         'Can\'t read file!' => 'ファイルを読み込めません！',
+
+        # Perl Module: Kernel/System/PostMaster/Filter.pm
+        'Couldn\'t read Filter configuration YAML file. Please make sure the file is valid.' =>
+            '',
 
         # Perl Module: Kernel/System/ProcessManagement/DB/Process.pm
         'The process "%s" and all of its data has been imported successfully.' =>

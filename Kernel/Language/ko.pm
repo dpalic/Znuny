@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%M-%D';
     $Self->{DateInputFormat}     = '%Y-%M-%D';
     $Self->{DateInputFormatLong} = '%Y-%M-%D %T';
-    $Self->{Completeness}        = 0.841320724475076;
+    $Self->{Completeness}        = 0.838632369388081;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -705,6 +705,9 @@ sub Data {
         'Add Job' => '',
         'Filter for Jobs' => '',
         'Filter for jobs' => '',
+        'Upload a file in YAML format (as provided by the export) to import generic agent jobs.' =>
+            '',
+        'Overwrite existing generic agents?' => '',
         'Generic Agent Job Management' => '',
         'Edit Job' => '',
         'Run Job' => '',
@@ -1614,6 +1617,9 @@ sub Data {
         'Add PostMaster Filter' => 'PostMaster 필터 추가',
         'Filter for PostMaster Filters' => '',
         'Filter for PostMaster filters' => '',
+        'Upload a file in YAML format (as provided by the export) to import postmaster filters.' =>
+            '',
+        'Overwrite existing postmaster filters?' => '',
         'To dispatch or filter incoming emails based on email headers. Matching using Regular Expressions is also possible.' =>
             '전자 메일 헤더를 기반으로 수신 전자메일을 발송하거나 필터링합니다. 정규표현식을 사용하여 일치시킬 수도 있습니다.',
         'If you want to match only the email address, use EMAILADDRESS:info@example.com in From, To or Cc.' =>
@@ -3739,6 +3745,17 @@ sub Data {
         'Select at least one recipient.' => '받는 사람을 한 명 이상 선택하십시오.',
 
         # Perl Module: Kernel/Modules/AdminGenericAgent.pm
+        'Error exporting generic agent job with Name %s!' => '',
+        'Error creating the generic agent job.' => '',
+        'Jobs could not be imported due to an unknown error. Please check logs for more information.' =>
+            '',
+        'The following generic agent jobs have been added successfully: %s.' =>
+            '',
+        'The following generic agent jobs have been updated successfully: %s.' =>
+            '',
+        'The following generic agent jobs were not updated: %s.' => '',
+        'Errors adding/updating the following generic agent jobs: %s. Please check logs for more information.' =>
+            '',
         'minute(s)' => '분(s)',
         'hour(s)' => '시간(s)',
         'Time unit' => '시간 단위',
@@ -3749,7 +3766,6 @@ sub Data {
         'archive tickets' => '보관 티켓',
         'restore tickets from archive' => '보관에서 티켓을 복원',
         'Need Profile!' => '프로필이 필요',
-        'Got no values to check.' => '확인할 가치가 없습니다.',
         'Please remove the following words because they cannot be used for the ticket selection:' =>
             '티켓 선택에 사용할 수 없으므로 다음 단어를 삭제하십시오.',
 
@@ -3971,6 +3987,17 @@ sub Data {
 
         # Perl Module: Kernel/Modules/AdminPostMasterFilter.pm
         'No such filter: %s' => '해당 필터 없음 : %s',
+        'Error exporting postmaster filter with Name %s!' => '',
+        'Error creating the postmaster filter.' => '',
+        'Filters could not be imported due to an unknown error. Please check logs for more information.' =>
+            '',
+        'The following postmaster filters have been added successfully: %s.' =>
+            '',
+        'The following postmaster filters have been updated successfully: %s.' =>
+            '',
+        'The following postmaster filters were not updated: %s.' => '',
+        'Errors adding/updating the following postmaster filters: %s. Please check logs for more information.' =>
+            '',
 
         # Perl Module: Kernel/Modules/AdminPriority.pm
         'Priority added!' => '우선 순위가 추가되었습니다.',
@@ -4558,6 +4585,7 @@ sub Data {
         'Customer Realname' => '고객 실명',
         'Created within the last' => '마지막으로 생성된',
         'Created more than ... ago' => '만든 이상 ...전',
+        'Got no values to check.' => '확인할 가치가 없습니다.',
         'Please remove the following words because they cannot be used for the search:' =>
             '다음 단어를 검색에 사용할 수 없으므로 제거하십시오.',
 
@@ -5034,6 +5062,10 @@ sub Data {
         'The field content is too long!' => '입력란 내용이 너무 깁니다.',
         'Maximum size is %s characters.' => '최대 크기는%s자입니다.',
 
+        # Perl Module: Kernel/System/GenericAgent.pm
+        'Couldn\'t read Job configuration YAML file. Please make sure the file is valid.' =>
+            '',
+
         # Perl Module: Kernel/System/MailQueue.pm
         'Error while validating Message data.' => '',
         'Error while validating Sender email address.' => '',
@@ -5057,6 +5089,10 @@ sub Data {
         'File is not installed!' => '파일이 설치되지 않았습니다!',
         'File is different!' => '파일이 다릅니다!',
         'Can\'t read file!' => '파일을 읽을 수 없습니다!',
+
+        # Perl Module: Kernel/System/PostMaster/Filter.pm
+        'Couldn\'t read Filter configuration YAML file. Please make sure the file is valid.' =>
+            '',
 
         # Perl Module: Kernel/System/ProcessManagement/DB/Process.pm
         'The process "%s" and all of its data has been imported successfully.' =>

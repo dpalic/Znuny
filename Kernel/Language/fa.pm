@@ -29,7 +29,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.597691937810547;
+    $Self->{Completeness}        = 0.595782073813708;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -711,6 +711,9 @@ sub Data {
         'Add Job' => '',
         'Filter for Jobs' => '',
         'Filter for jobs' => '',
+        'Upload a file in YAML format (as provided by the export) to import generic agent jobs.' =>
+            '',
+        'Overwrite existing generic agents?' => '',
         'Generic Agent Job Management' => '',
         'Edit Job' => '',
         'Run Job' => '',
@@ -1620,6 +1623,9 @@ sub Data {
         'Add PostMaster Filter' => 'افزودن فیلتر پستی',
         'Filter for PostMaster Filters' => '',
         'Filter for PostMaster filters' => '',
+        'Upload a file in YAML format (as provided by the export) to import postmaster filters.' =>
+            '',
+        'Overwrite existing postmaster filters?' => '',
         'To dispatch or filter incoming emails based on email headers. Matching using Regular Expressions is also possible.' =>
             'برای توزیع یا پالایش ایمیل‌ها وارده بر اساس هدرهای ایمیل. تطابق بر اساس عبارات منظم نیز مجاز است.',
         'If you want to match only the email address, use EMAILADDRESS:info@example.com in From, To or Cc.' =>
@@ -3745,6 +3751,17 @@ sub Data {
         'Select at least one recipient.' => 'حداقل یک گیرنده را انتخاب کنید.',
 
         # Perl Module: Kernel/Modules/AdminGenericAgent.pm
+        'Error exporting generic agent job with Name %s!' => '',
+        'Error creating the generic agent job.' => '',
+        'Jobs could not be imported due to an unknown error. Please check logs for more information.' =>
+            '',
+        'The following generic agent jobs have been added successfully: %s.' =>
+            '',
+        'The following generic agent jobs have been updated successfully: %s.' =>
+            '',
+        'The following generic agent jobs were not updated: %s.' => '',
+        'Errors adding/updating the following generic agent jobs: %s. Please check logs for more information.' =>
+            '',
         'minute(s)' => 'دقیقه',
         'hour(s)' => 'ساعت',
         'Time unit' => 'واحد زمان',
@@ -3755,7 +3772,6 @@ sub Data {
         'archive tickets' => ' آرشیو درخواست',
         'restore tickets from archive' => 'بازگرداندن درخواست از آرشیو',
         'Need Profile!' => 'نیاز به مشخصات!',
-        'Got no values to check.' => 'هیچ ارزش به بررسی کردم.',
         'Please remove the following words because they cannot be used for the ticket selection:' =>
             'لطفا کلمات زیر حذف زیرا آنها می توانند برای انتخاب بلیط مورد استفاده قرار گیرد:',
 
@@ -3977,6 +3993,17 @@ sub Data {
 
         # Perl Module: Kernel/Modules/AdminPostMasterFilter.pm
         'No such filter: %s' => 'بدون چنین فیلتر: %s',
+        'Error exporting postmaster filter with Name %s!' => '',
+        'Error creating the postmaster filter.' => '',
+        'Filters could not be imported due to an unknown error. Please check logs for more information.' =>
+            '',
+        'The following postmaster filters have been added successfully: %s.' =>
+            '',
+        'The following postmaster filters have been updated successfully: %s.' =>
+            '',
+        'The following postmaster filters were not updated: %s.' => '',
+        'Errors adding/updating the following postmaster filters: %s. Please check logs for more information.' =>
+            '',
 
         # Perl Module: Kernel/Modules/AdminPriority.pm
         'Priority added!' => 'اولویت اضافه شده است!',
@@ -4564,6 +4591,7 @@ sub Data {
         'Customer Realname' => 'نام واقعی مشترک',
         'Created within the last' => 'ایجاد شده در آخرین',
         'Created more than ... ago' => 'ایجاد شده بیشتر از ... قبل',
+        'Got no values to check.' => 'هیچ ارزش به بررسی کردم.',
         'Please remove the following words because they cannot be used for the search:' =>
             'لطفا کلمات زیر را حذف کنید زیرا آنها نمی توانند برای جستجو استفاده  شوند:',
 
@@ -5040,6 +5068,10 @@ sub Data {
         'The field content is too long!' => 'محتویات این فیلد طولانی است!',
         'Maximum size is %s characters.' => 'حداکثر اندازه %s کاراکتر است.',
 
+        # Perl Module: Kernel/System/GenericAgent.pm
+        'Couldn\'t read Job configuration YAML file. Please make sure the file is valid.' =>
+            '',
+
         # Perl Module: Kernel/System/MailQueue.pm
         'Error while validating Message data.' => '',
         'Error while validating Sender email address.' => '',
@@ -5063,6 +5095,10 @@ sub Data {
         'File is not installed!' => 'فایل نصب نشده است!',
         'File is different!' => 'فایل متفاوت است!',
         'Can\'t read file!' => 'نمی توانید فایل خوانده شده!',
+
+        # Perl Module: Kernel/System/PostMaster/Filter.pm
+        'Couldn\'t read Filter configuration YAML file. Please make sure the file is valid.' =>
+            '',
 
         # Perl Module: Kernel/System/ProcessManagement/DB/Process.pm
         'The process "%s" and all of its data has been imported successfully.' =>

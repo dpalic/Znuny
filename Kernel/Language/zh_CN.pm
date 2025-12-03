@@ -33,7 +33,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y.%M.%D';
     $Self->{DateInputFormat}     = '%Y.%M.%D';
     $Self->{DateInputFormatLong} = '%Y.%M.%D - %T';
-    $Self->{Completeness}        = 0.868889245071325;
+    $Self->{Completeness}        = 0.866112797571497;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -712,6 +712,9 @@ sub Data {
         'Add Job' => '添加任务',
         'Filter for Jobs' => '任务筛选',
         'Filter for jobs' => '任务筛选',
+        'Upload a file in YAML format (as provided by the export) to import generic agent jobs.' =>
+            '',
+        'Overwrite existing generic agents?' => '',
         'Generic Agent Job Management' => '自动任务管理',
         'Edit Job' => '编辑任务',
         'Run Job' => '运行任务',
@@ -1621,6 +1624,9 @@ sub Data {
         'Add PostMaster Filter' => '添加邮箱管理员过滤器',
         'Filter for PostMaster Filters' => '邮箱管理员过滤规则筛选',
         'Filter for PostMaster filters' => '邮箱管理员过滤规则筛选',
+        'Upload a file in YAML format (as provided by the export) to import postmaster filters.' =>
+            '',
+        'Overwrite existing postmaster filters?' => '',
         'To dispatch or filter incoming emails based on email headers. Matching using Regular Expressions is also possible.' =>
             '基于邮件标头标记的分派或过滤。可以使用正则表达式进行匹配。',
         'If you want to match only the email address, use EMAILADDRESS:info@example.com in From, To or Cc.' =>
@@ -3746,6 +3752,17 @@ sub Data {
         'Select at least one recipient.' => '选择至少一个收件人。',
 
         # Perl Module: Kernel/Modules/AdminGenericAgent.pm
+        'Error exporting generic agent job with Name %s!' => '',
+        'Error creating the generic agent job.' => '',
+        'Jobs could not be imported due to an unknown error. Please check logs for more information.' =>
+            '',
+        'The following generic agent jobs have been added successfully: %s.' =>
+            '',
+        'The following generic agent jobs have been updated successfully: %s.' =>
+            '',
+        'The following generic agent jobs were not updated: %s.' => '',
+        'Errors adding/updating the following generic agent jobs: %s. Please check logs for more information.' =>
+            '',
         'minute(s)' => '分钟',
         'hour(s)' => '小时',
         'Time unit' => '时间单位',
@@ -3756,7 +3773,6 @@ sub Data {
         'archive tickets' => '归档工单',
         'restore tickets from archive' => '从归档中恢复工单',
         'Need Profile!' => '需要配置文件！',
-        'Got no values to check.' => '没有检查到值。',
         'Please remove the following words because they cannot be used for the ticket selection:' =>
             '请移除以下不能用于工单选择的词语：',
 
@@ -3978,6 +3994,17 @@ sub Data {
 
         # Perl Module: Kernel/Modules/AdminPostMasterFilter.pm
         'No such filter: %s' => '没有这个过滤器：%s',
+        'Error exporting postmaster filter with Name %s!' => '',
+        'Error creating the postmaster filter.' => '',
+        'Filters could not be imported due to an unknown error. Please check logs for more information.' =>
+            '',
+        'The following postmaster filters have been added successfully: %s.' =>
+            '',
+        'The following postmaster filters have been updated successfully: %s.' =>
+            '',
+        'The following postmaster filters were not updated: %s.' => '',
+        'Errors adding/updating the following postmaster filters: %s. Please check logs for more information.' =>
+            '',
 
         # Perl Module: Kernel/Modules/AdminPriority.pm
         'Priority added!' => '优先级已添加!',
@@ -4565,6 +4592,7 @@ sub Data {
         'Customer Realname' => '客户用户真实姓名',
         'Created within the last' => '在最近...之内创建的',
         'Created more than ... ago' => '在...之前创建的',
+        'Got no values to check.' => '没有检查到值。',
         'Please remove the following words because they cannot be used for the search:' =>
             '请移除以下不能用于搜索的词语：',
 
@@ -5041,6 +5069,10 @@ sub Data {
         'The field content is too long!' => '字段值太长了！',
         'Maximum size is %s characters.' => '最多%s个字符。',
 
+        # Perl Module: Kernel/System/GenericAgent.pm
+        'Couldn\'t read Job configuration YAML file. Please make sure the file is valid.' =>
+            '',
+
         # Perl Module: Kernel/System/MailQueue.pm
         'Error while validating Message data.' => '',
         'Error while validating Sender email address.' => '',
@@ -5064,6 +5096,10 @@ sub Data {
         'File is not installed!' => '文件没有安装！',
         'File is different!' => '文件被修改！',
         'Can\'t read file!' => '不能读取文件！',
+
+        # Perl Module: Kernel/System/PostMaster/Filter.pm
+        'Couldn\'t read Filter configuration YAML file. Please make sure the file is valid.' =>
+            '',
 
         # Perl Module: Kernel/System/ProcessManagement/DB/Process.pm
         'The process "%s" and all of its data has been imported successfully.' =>

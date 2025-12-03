@@ -32,7 +32,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.865523321045039;
+    $Self->{Completeness}        = 0.862757629014219;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -711,6 +711,9 @@ sub Data {
         'Add Job' => 'Dodaj posao',
         'Filter for Jobs' => 'Filter za poslove',
         'Filter for jobs' => 'Filter za poslove',
+        'Upload a file in YAML format (as provided by the export) to import generic agent jobs.' =>
+            '',
+        'Overwrite existing generic agents?' => '',
         'Generic Agent Job Management' => 'Upravljanje poslovima generičkog operatera',
         'Edit Job' => 'Uredi posao',
         'Run Job' => 'Pokreni posao',
@@ -1620,6 +1623,9 @@ sub Data {
         'Add PostMaster Filter' => 'Dodaj PostMaster filter',
         'Filter for PostMaster Filters' => 'Filter za PostMaster filtere',
         'Filter for PostMaster filters' => 'Filter za PostMaster filtere',
+        'Upload a file in YAML format (as provided by the export) to import postmaster filters.' =>
+            '',
+        'Overwrite existing postmaster filters?' => '',
         'To dispatch or filter incoming emails based on email headers. Matching using Regular Expressions is also possible.' =>
             'Radi otpreme ili filtriranja dolaznih imejlova na osnovu zaglavlja. Poklapanje pomoću regularnih izraza je takođe moguće.',
         'If you want to match only the email address, use EMAILADDRESS:info@example.com in From, To or Cc.' =>
@@ -3745,6 +3751,17 @@ sub Data {
         'Select at least one recipient.' => 'Izaberite bar jednog primaoca.',
 
         # Perl Module: Kernel/Modules/AdminGenericAgent.pm
+        'Error exporting generic agent job with Name %s!' => '',
+        'Error creating the generic agent job.' => '',
+        'Jobs could not be imported due to an unknown error. Please check logs for more information.' =>
+            '',
+        'The following generic agent jobs have been added successfully: %s.' =>
+            '',
+        'The following generic agent jobs have been updated successfully: %s.' =>
+            '',
+        'The following generic agent jobs were not updated: %s.' => '',
+        'Errors adding/updating the following generic agent jobs: %s. Please check logs for more information.' =>
+            '',
         'minute(s)' => 'minut(i)',
         'hour(s)' => 'sat(i)',
         'Time unit' => 'Jedinica vremena',
@@ -3755,7 +3772,6 @@ sub Data {
         'archive tickets' => 'arhiviraj tikete',
         'restore tickets from archive' => 'vrati tikete iz arhive',
         'Need Profile!' => 'Neophodan Profile!',
-        'Got no values to check.' => 'Nema vrednosti za proveru.',
         'Please remove the following words because they cannot be used for the ticket selection:' =>
             'Molimo da uklonite sledeće reči jer se ne mogu koristiti za izbor tiketa:',
 
@@ -3977,6 +3993,17 @@ sub Data {
 
         # Perl Module: Kernel/Modules/AdminPostMasterFilter.pm
         'No such filter: %s' => 'Nema takvog filtera: %s',
+        'Error exporting postmaster filter with Name %s!' => '',
+        'Error creating the postmaster filter.' => '',
+        'Filters could not be imported due to an unknown error. Please check logs for more information.' =>
+            '',
+        'The following postmaster filters have been added successfully: %s.' =>
+            '',
+        'The following postmaster filters have been updated successfully: %s.' =>
+            '',
+        'The following postmaster filters were not updated: %s.' => '',
+        'Errors adding/updating the following postmaster filters: %s. Please check logs for more information.' =>
+            '',
 
         # Perl Module: Kernel/Modules/AdminPriority.pm
         'Priority added!' => 'Dodat prioritet!',
@@ -4564,6 +4591,7 @@ sub Data {
         'Customer Realname' => 'Pravo ime klijenta',
         'Created within the last' => 'Kreirano u poslednjih',
         'Created more than ... ago' => 'Kreirano pre više od ...',
+        'Got no values to check.' => 'Nema vrednosti za proveru.',
         'Please remove the following words because they cannot be used for the search:' =>
             'Molimo da uklonite sledeće reči  jer se ne mogu koristiti za pretragu:',
 
@@ -5040,6 +5068,10 @@ sub Data {
         'The field content is too long!' => 'Sadržaj polja je predugačak!',
         'Maximum size is %s characters.' => 'Maksimalna veličina je %s karaktera.',
 
+        # Perl Module: Kernel/System/GenericAgent.pm
+        'Couldn\'t read Job configuration YAML file. Please make sure the file is valid.' =>
+            '',
+
         # Perl Module: Kernel/System/MailQueue.pm
         'Error while validating Message data.' => '',
         'Error while validating Sender email address.' => '',
@@ -5063,6 +5095,10 @@ sub Data {
         'File is not installed!' => 'Datoteka nije instalirana!',
         'File is different!' => 'Datoteka je različita!',
         'Can\'t read file!' => 'Nemoguće čitanje datoteke!',
+
+        # Perl Module: Kernel/System/PostMaster/Filter.pm
+        'Couldn\'t read Filter configuration YAML file. Please make sure the file is valid.' =>
+            '',
 
         # Perl Module: Kernel/System/ProcessManagement/DB/Process.pm
         'The process "%s" and all of its data has been imported successfully.' =>

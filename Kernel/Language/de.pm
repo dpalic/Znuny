@@ -27,7 +27,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.99086392050008;
+    $Self->{Completeness}        = 0.992331043297651;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -171,7 +171,7 @@ sub Data {
         'Filter for notifications' => 'Filter für Benachrichtigungen',
         'Import and export of configurations' => 'Import und Export von Konfigurationen',
         'Upload a file in YAML format (as provided by the export) to import appointment notifications.' =>
-            '',
+            'Datei im YAML-Format hochladen (wie durch den Export bereitgestellt), um Terminbenachrichtigungen zu importieren.',
         'Overwrite existing notifications?' => 'Bestehende Benachrichtigungen überschreiben?',
         'Import configurations' => 'Konfigurationen importieren',
         'Export configurations' => 'Konfigurationen exportieren',
@@ -706,6 +706,9 @@ sub Data {
         'Add Job' => 'Auftrag hinzufügen',
         'Filter for Jobs' => 'Aufträge filtern',
         'Filter for jobs' => 'Aufträge filtern',
+        'Upload a file in YAML format (as provided by the export) to import generic agent jobs.' =>
+            'Datei im YAML-Format hochladen (wie durch den Export bereitgestellt), um Generic-Agent-Jobs zu importieren.',
+        'Overwrite existing generic agents?' => 'Bestehende Generic-Agents überschreiben?',
         'Generic Agent Job Management' => 'Generic Agent-Auftragsverwaltung',
         'Edit Job' => 'Auftrag bearbeiten',
         'Run Job' => 'Auftrag ausführen',
@@ -1404,7 +1407,7 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminNotificationEvent.tt
         'Upload a file in YAML format (as provided by the export) to import ticket notifications.' =>
-            '',
+            'Datei im YAML-Format hochladen (wie durch den Export bereitgestellt), um Ticketbenachrichtigungen zu importieren',
         'Ticket Notification Management' => 'Verwaltung von Ticket-Benachrichtigungen',
         'Here you can choose which events will trigger this notification. An additional ticket filter can be applied below to only send for ticket with certain criteria.' =>
             'Hier können Sie auswählen, welche Ereignisse diese Benachrichtigung auslösen. Ein zusätzlicher Ticket-Filter kann weiter unten eingestellt werden, um die Benachrichtigung nur für Tickets mit bestimmten Merkmalen zu versenden.',
@@ -1615,6 +1618,9 @@ sub Data {
         'Add PostMaster Filter' => 'Postmaster-Filter hinzufügen',
         'Filter for PostMaster Filters' => 'Nach Postmaster Filtern suchen',
         'Filter for PostMaster filters' => 'Nach Postmaster Filtern suchen',
+        'Upload a file in YAML format (as provided by the export) to import postmaster filters.' =>
+            'Datei im YAML-Format hochladen (wie durch den Export bereitgestellt), um Postmaster-Filter zu importieren.',
+        'Overwrite existing postmaster filters?' => 'Bestehende Postmaster-Filter überschreiben?',
         'To dispatch or filter incoming emails based on email headers. Matching using Regular Expressions is also possible.' =>
             'Einkommende E-Mails anhand von E-Mail-Kopfzeilen verteilen oder filtern. Für die Suche können auch reguläre Ausdrücke benutzt werden.',
         'If you want to match only the email address, use EMAILADDRESS:info@example.com in From, To or Cc.' =>
@@ -1979,7 +1985,7 @@ sub Data {
         'Filter for Salutations' => 'Filter für Anreden',
         'Filter for salutations' => 'Filter für Anreden',
         'Upload a file in YAML format (as provided by the export) to import salutations.' =>
-            '',
+            'Datei im YAML-Format hochladen (wie durch den Export bereitgestellt), um Anreden zu importieren.',
         'Overwrite existing salutations?' => 'Bestehende Anreden überschreiben?',
         'Salutation Management' => 'Verwaltung von Anreden',
         'Edit Salutation' => 'Anrede bearbeiten',
@@ -2064,7 +2070,7 @@ sub Data {
         'Filter for Signatures' => 'Filter für Signaturen',
         'Filter for signatures' => 'Filter für Signaturen',
         'Upload a file in YAML format (as provided by the export) to import signatures.' =>
-            '',
+            'Datei im YAML-Format hochladen (wie durch den Export bereitgestellt), um Signaturen zu importieren.',
         'Overwrite existing signatures?' => 'Bestehende Signaturen überschreiben?',
         'Signature Management' => 'Signaturverwaltung',
         'Edit Signature' => 'Signatur bearbeiten',
@@ -2229,7 +2235,7 @@ sub Data {
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminTemplate.tt
         'Add Template' => 'Vorlage hinzufügen',
         'Upload a file in YAML format (as provided by the export) to import standard templates.' =>
-            '',
+            'Datei im YAML-Format hochladen (wie durch den Export bereitgestellt), um Standardvorlagen zu importieren.',
         'Overwrite existing standard templates?' => 'Bestehende Standardvorlagen überschreiben?',
         'A template is a default text which helps your agents to write faster tickets, answers or forwards.' =>
             'Eine Vorlage ist ein Standardtext, der Ihren Agenten helfen kann, Tickets schneller zu erstellen, beantworten oder weiterzuleiten.',
@@ -3740,6 +3746,17 @@ sub Data {
         'Select at least one recipient.' => 'Wählen Sie mindestens einen Empfänger aus.',
 
         # Perl Module: Kernel/Modules/AdminGenericAgent.pm
+        'Error exporting generic agent job with Name %s!' => 'Fehler beim Exportieren des Generic-Agent-Jobs %s!',
+        'Error creating the generic agent job.' => 'Fehler beim Erstellen des Generic-Agent-Jobs.',
+        'Jobs could not be imported due to an unknown error. Please check logs for more information.' =>
+            'Jobs konnten aufgrund eines unbekannten Fehlers nicht importiert werden. Bitte Logs für weitere Informationen prüfen.',
+        'The following generic agent jobs have been added successfully: %s.' =>
+            'Die folgenden Generic-Agent-Jobs wurden erfolgreich hinzugefügt: %s.',
+        'The following generic agent jobs have been updated successfully: %s.' =>
+            'Die folgenden Generic-Agent-Jobs wurden erfolgreich aktualisiert: %s.',
+        'The following generic agent jobs were not updated: %s.' => 'Die folgenden Generic-Agent-Jobs wurden nicht aktualisiert: %s.',
+        'Errors adding/updating the following generic agent jobs: %s. Please check logs for more information.' =>
+            'Fehler beim Erstellen/Aktualisieren der folgenden Generic-Agent-Jobs: %s. Bitte Logs für weitere Informationen prüfen.',
         'minute(s)' => 'Minute(n)',
         'hour(s)' => 'Stunde(n)',
         'Time unit' => 'Zeiteinheit',
@@ -3750,7 +3767,6 @@ sub Data {
         'archive tickets' => 'Tickets archivieren',
         'restore tickets from archive' => 'Tickets aus dem Archiv wiederherstellen',
         'Need Profile!' => 'Benötige Profile!',
-        'Got no values to check.' => 'Keine Werte zum Prüfen empfangen.',
         'Please remove the following words because they cannot be used for the ticket selection:' =>
             'Bitte entfernen Sie die folgenden Worte, da sie nicht für die Ticket-Auswahl genutzt werden können:',
 
@@ -3972,6 +3988,17 @@ sub Data {
 
         # Perl Module: Kernel/Modules/AdminPostMasterFilter.pm
         'No such filter: %s' => 'Kein solcher Filter: %s',
+        'Error exporting postmaster filter with Name %s!' => 'Fehler beim Exportieren des Postmaster-Filters %s!',
+        'Error creating the postmaster filter.' => 'Fehler beim Erstellen des Postmaster-Filters.',
+        'Filters could not be imported due to an unknown error. Please check logs for more information.' =>
+            'Filter konnten aufgrund eines unbekannten Fehlers nicht importiert werden. Bitte Logs für weitere Informationen prüfen.',
+        'The following postmaster filters have been added successfully: %s.' =>
+            'Die folgenden Postmaster-Filter wurden erfolgreich hinzugefügt: %s.',
+        'The following postmaster filters have been updated successfully: %s.' =>
+            'Die folgenden Postmaster-Filter wurden erfolgreich aktualisiert: %s.',
+        'The following postmaster filters were not updated: %s.' => 'Die folgenden Postmaster-Filter wurden nicht aktualisiert: %s.',
+        'Errors adding/updating the following postmaster filters: %s. Please check logs for more information.' =>
+            'Fehler beim Erstellen/Aktualisieren der folgenden Postmaster-Filter: %s. Bitte Logs für weitere Informationen prüfen.',
 
         # Perl Module: Kernel/Modules/AdminPriority.pm
         'Priority added!' => 'Priorität hinzugefügt!',
@@ -4559,6 +4586,7 @@ sub Data {
         'Customer Realname' => 'Kundenname',
         'Created within the last' => 'Erstellt innerhalb der letzten',
         'Created more than ... ago' => 'Erstellt vor mehr als ...',
+        'Got no values to check.' => 'Keine Werte zum Prüfen empfangen.',
         'Please remove the following words because they cannot be used for the search:' =>
             'Bitte entfernen Sie die folgenden Suchworte, da sie nicht für die Suche verwendet werden können:',
 
@@ -4982,7 +5010,7 @@ sub Data {
 
         # Perl Module: Kernel/System/AutoResponse.pm
         'Couldn\'t read auto response configuration file. Please make sure the file is valid.' =>
-            '',
+            'Die Auto-Response-Konfigurationsdatei konnte nicht gelesen werden. Bitte prüfen Sie, dass es sich um eine gültige Datei handelt.',
 
         # Perl Module: Kernel/System/Calendar/Event/Transport/Email.pm
         'PGP sign only' => 'Nur PGP-Signierung',
@@ -5035,6 +5063,10 @@ sub Data {
         'The field content is too long!' => 'Der Feldinhalt ist zu lang!',
         'Maximum size is %s characters.' => 'Die Maximallänge beträgt %s Zeichen.',
 
+        # Perl Module: Kernel/System/GenericAgent.pm
+        'Couldn\'t read Job configuration YAML file. Please make sure the file is valid.' =>
+            'Die Job-Konfigurationsdatei konnte nicht gelesen werden. Bitte prüfen Sie, dass es sich um eine gültige Datei handelt.',
+
         # Perl Module: Kernel/System/MailQueue.pm
         'Error while validating Message data.' => 'Fehler bei der Validierung der Nachrichtendaten.',
         'Error while validating Sender email address.' => 'Fehler bei der Validierung der Absender-E-Mail-Adresse.',
@@ -5059,6 +5091,10 @@ sub Data {
         'File is different!' => 'Datei unterschiedlich!',
         'Can\'t read file!' => 'Datei kann nicht gelesen werden!',
 
+        # Perl Module: Kernel/System/PostMaster/Filter.pm
+        'Couldn\'t read Filter configuration YAML file. Please make sure the file is valid.' =>
+            'Die Filter-Konfigurationsdatei konnte nicht gelesen werden. Bitte prüfen Sie, dass es sich um eine gültige Datei handelt.',
+
         # Perl Module: Kernel/System/ProcessManagement/DB/Process.pm
         'The process "%s" and all of its data has been imported successfully.' =>
             'Der Prozess "%s" und alle zugehörigen Daten wurden erfolgreich importiert.',
@@ -5069,15 +5105,15 @@ sub Data {
 
         # Perl Module: Kernel/System/Salutation.pm
         'Couldn\'t read salutation configuration file. Please make sure the file is valid.' =>
-            '',
+            'Die Konfigurationsdatei für Anreden konnte nicht gelesen werden. Bitte prüfen Sie, dass es sich um eine gültige Datei handelt.',
 
         # Perl Module: Kernel/System/Signature.pm
         'Couldn\'t read signature configuration file. Please make sure the file is valid.' =>
-            '',
+            'Die Konfigurationsdatei für Signaturen konnte nicht gelesen werden. Bitte prüfen Sie, dass es sich um eine gültige Datei handelt.',
 
         # Perl Module: Kernel/System/StandardTemplate.pm
         'Couldn\'t read standard template configuration file. Please make sure the file is valid.' =>
-            '',
+            'Die Konfigurationsdatei für Standardvorlagen konnte nicht gelesen werden. Bitte prüfen Sie, dass es sich um eine gültige Datei handelt.',
 
         # Perl Module: Kernel/System/Stats.pm
         'Sum' => 'Summe',

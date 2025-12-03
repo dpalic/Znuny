@@ -3562,6 +3562,16 @@
                         <Item Key="ModuleHandler">ProcessManagement</Item>
                     </Hash>
                 </Item>
+                <Item Key="PostMasterFilter">
+                    <Hash>
+                        <Item Key="ModuleHandler">PostMasterFilter</Item>
+                    </Hash>
+                </Item>
+                <Item Key="GenericAgent">
+                    <Hash>
+                        <Item Key="ModuleHandler">GenericAgent</Item>
+                    </Hash>
+                </Item>
             </Hash>
         </Value>
     </Setting>
@@ -3613,6 +3623,22 @@
                 <Item Key="ProcessManagement">
                     <Hash>
                         <Item Key="ModuleHandler">ProcessManagement</Item>
+                    </Hash>
+                </Item>
+                <Item Key="PostMasterFilter">
+                    <Hash>
+                        <Item Key="ImportModule">Kernel::System::PostMaster::Filter</Item>
+                        <Item Key="ImportFunctionName">FilterImport</Item>
+                        <Item Key="ImportOverwriteParameter">OverwriteExistingFilters</Item>
+                        <Item Key="ModuleHandler">PostMasterFilter</Item>
+                    </Hash>
+                </Item>
+                <Item Key="GenericAgent">
+                    <Hash>
+                        <Item Key="ImportModule">Kernel::System::GenericAgent</Item>
+                        <Item Key="ImportFunctionName">JobImport</Item>
+                        <Item Key="ImportOverwriteParameter">OverwriteExistingJobs</Item>
+                        <Item Key="ModuleHandler">GenericAgent</Item>
                     </Hash>
                 </Item>
             </Hash>

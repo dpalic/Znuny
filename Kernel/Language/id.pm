@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D/%M/%Y';
     $Self->{DateInputFormat}     = '%D/%M/%Y';
     $Self->{DateInputFormatLong} = '%D/%M/%Y - %T';
-    $Self->{Completeness}        = 0.587113319442218;
+    $Self->{Completeness}        = 0.585237258347979;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -705,6 +705,9 @@ sub Data {
         'Add Job' => '',
         'Filter for Jobs' => '',
         'Filter for jobs' => '',
+        'Upload a file in YAML format (as provided by the export) to import generic agent jobs.' =>
+            '',
+        'Overwrite existing generic agents?' => '',
         'Generic Agent Job Management' => '',
         'Edit Job' => '',
         'Run Job' => '',
@@ -1614,6 +1617,9 @@ sub Data {
         'Add PostMaster Filter' => 'Tambah penyaring PostMaster',
         'Filter for PostMaster Filters' => '',
         'Filter for PostMaster filters' => '',
+        'Upload a file in YAML format (as provided by the export) to import postmaster filters.' =>
+            '',
+        'Overwrite existing postmaster filters?' => '',
         'To dispatch or filter incoming emails based on email headers. Matching using Regular Expressions is also possible.' =>
             'Untuk mengirimkan atau menyaring email yang masuk berdasarkan header email. Kemungkinan dapat menyesuaikan dengan menggunakan Regular Expressions ',
         'If you want to match only the email address, use EMAILADDRESS:info@example.com in From, To or Cc.' =>
@@ -3741,6 +3747,17 @@ bin/znuny.Daemon.pl status\').',
         'Select at least one recipient.' => 'Pilih minimal satu penerima',
 
         # Perl Module: Kernel/Modules/AdminGenericAgent.pm
+        'Error exporting generic agent job with Name %s!' => '',
+        'Error creating the generic agent job.' => '',
+        'Jobs could not be imported due to an unknown error. Please check logs for more information.' =>
+            '',
+        'The following generic agent jobs have been added successfully: %s.' =>
+            '',
+        'The following generic agent jobs have been updated successfully: %s.' =>
+            '',
+        'The following generic agent jobs were not updated: %s.' => '',
+        'Errors adding/updating the following generic agent jobs: %s. Please check logs for more information.' =>
+            '',
         'minute(s)' => 'menit',
         'hour(s)' => 'jam',
         'Time unit' => 'Unit waktu',
@@ -3751,7 +3768,6 @@ bin/znuny.Daemon.pl status\').',
         'archive tickets' => 'tiket arsip',
         'restore tickets from archive' => 'mengembalikan tiket dari arsip',
         'Need Profile!' => 'Butuh Profil!',
-        'Got no values to check.' => 'Tidak ada value untuk di cek',
         'Please remove the following words because they cannot be used for the ticket selection:' =>
             'Harap hapus kata-kata berikut karena mereka tidak dapat digunakan untuk seleksi tiket:',
 
@@ -3973,6 +3989,17 @@ bin/znuny.Daemon.pl status\').',
 
         # Perl Module: Kernel/Modules/AdminPostMasterFilter.pm
         'No such filter: %s' => 'Tidak ada filter seperti: %s',
+        'Error exporting postmaster filter with Name %s!' => '',
+        'Error creating the postmaster filter.' => '',
+        'Filters could not be imported due to an unknown error. Please check logs for more information.' =>
+            '',
+        'The following postmaster filters have been added successfully: %s.' =>
+            '',
+        'The following postmaster filters have been updated successfully: %s.' =>
+            '',
+        'The following postmaster filters were not updated: %s.' => '',
+        'Errors adding/updating the following postmaster filters: %s. Please check logs for more information.' =>
+            '',
 
         # Perl Module: Kernel/Modules/AdminPriority.pm
         'Priority added!' => 'Prioritas ditambahkan!',
@@ -4560,6 +4587,7 @@ bin/znuny.Daemon.pl status\').',
         'Customer Realname' => 'Namaasli pelanggan',
         'Created within the last' => 'Dibuat dalam terakhir',
         'Created more than ... ago' => 'Dibuat lebih dari .... yang lalu',
+        'Got no values to check.' => 'Tidak ada value untuk di cek',
         'Please remove the following words because they cannot be used for the search:' =>
             'Tolong hapuskan kalimat berikut karena tidak dapat dicari',
 
@@ -5036,6 +5064,10 @@ bin/znuny.Daemon.pl status\').',
         'The field content is too long!' => 'Konten dari bidang ini terlalu panjang!',
         'Maximum size is %s characters.' => 'Ukuran maksimum adalah %s karakter',
 
+        # Perl Module: Kernel/System/GenericAgent.pm
+        'Couldn\'t read Job configuration YAML file. Please make sure the file is valid.' =>
+            '',
+
         # Perl Module: Kernel/System/MailQueue.pm
         'Error while validating Message data.' => '',
         'Error while validating Sender email address.' => '',
@@ -5059,6 +5091,10 @@ bin/znuny.Daemon.pl status\').',
         'File is not installed!' => '',
         'File is different!' => '',
         'Can\'t read file!' => '',
+
+        # Perl Module: Kernel/System/PostMaster/Filter.pm
+        'Couldn\'t read Filter configuration YAML file. Please make sure the file is valid.' =>
+            '',
 
         # Perl Module: Kernel/System/ProcessManagement/DB/Process.pm
         'The process "%s" and all of its data has been imported successfully.' =>

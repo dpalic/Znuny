@@ -38,7 +38,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.845808623176791;
+    $Self->{Completeness}        = 0.843105927464451;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -717,6 +717,9 @@ sub Data {
         'Add Job' => 'Добавить Задание',
         'Filter for Jobs' => 'Фильтр Заданий',
         'Filter for jobs' => 'Фильтр заданий',
+        'Upload a file in YAML format (as provided by the export) to import generic agent jobs.' =>
+            '',
+        'Overwrite existing generic agents?' => '',
         'Generic Agent Job Management' => 'Управление заданиями Планировщика задач',
         'Edit Job' => 'Изменить задание',
         'Run Job' => 'Выполнить Задание',
@@ -1626,6 +1629,9 @@ sub Data {
         'Add PostMaster Filter' => 'Добавить фильтр PostMaster-а',
         'Filter for PostMaster Filters' => '',
         'Filter for PostMaster filters' => '',
+        'Upload a file in YAML format (as provided by the export) to import postmaster filters.' =>
+            '',
+        'Overwrite existing postmaster filters?' => '',
         'To dispatch or filter incoming emails based on email headers. Matching using Regular Expressions is also possible.' =>
             'Для распределения или фильтрации входящей электронной почты по заголовкам. Возможна также проверка и с использованием регулярных выражений.',
         'If you want to match only the email address, use EMAILADDRESS:info@example.com in From, To or Cc.' =>
@@ -3751,6 +3757,17 @@ sub Data {
         'Select at least one recipient.' => 'Необходимо указать хотя бы одного получателя.',
 
         # Perl Module: Kernel/Modules/AdminGenericAgent.pm
+        'Error exporting generic agent job with Name %s!' => '',
+        'Error creating the generic agent job.' => '',
+        'Jobs could not be imported due to an unknown error. Please check logs for more information.' =>
+            '',
+        'The following generic agent jobs have been added successfully: %s.' =>
+            '',
+        'The following generic agent jobs have been updated successfully: %s.' =>
+            '',
+        'The following generic agent jobs were not updated: %s.' => '',
+        'Errors adding/updating the following generic agent jobs: %s. Please check logs for more information.' =>
+            '',
         'minute(s)' => 'минут(а)',
         'hour(s)' => 'час(ов)',
         'Time unit' => 'Единица времени',
@@ -3761,7 +3778,6 @@ sub Data {
         'archive tickets' => 'Архивировать заявки',
         'restore tickets from archive' => 'Восстановить заявки из архива',
         'Need Profile!' => 'Требуется Профиль!',
-        'Got no values to check.' => 'Нет значений для проверки.',
         'Please remove the following words because they cannot be used for the ticket selection:' =>
             'Удалите, пожалуйста, следующие слова, так как они не могут использоваться для выбора заявок:',
 
@@ -3983,6 +3999,17 @@ sub Data {
 
         # Perl Module: Kernel/Modules/AdminPostMasterFilter.pm
         'No such filter: %s' => 'Не существует фильтра: %s',
+        'Error exporting postmaster filter with Name %s!' => '',
+        'Error creating the postmaster filter.' => '',
+        'Filters could not be imported due to an unknown error. Please check logs for more information.' =>
+            '',
+        'The following postmaster filters have been added successfully: %s.' =>
+            '',
+        'The following postmaster filters have been updated successfully: %s.' =>
+            '',
+        'The following postmaster filters were not updated: %s.' => '',
+        'Errors adding/updating the following postmaster filters: %s. Please check logs for more information.' =>
+            '',
 
         # Perl Module: Kernel/Modules/AdminPriority.pm
         'Priority added!' => 'Приоритет добавлен!',
@@ -4570,6 +4597,7 @@ sub Data {
         'Customer Realname' => 'ФИО клиента',
         'Created within the last' => 'Созданы в течение последних ...',
         'Created more than ... ago' => 'Созданы более чем ... назад',
+        'Got no values to check.' => 'Нет значений для проверки.',
         'Please remove the following words because they cannot be used for the search:' =>
             'Удалите, пожалуйста, следующие слова, так как они не могут использоваться для поиска:',
 
@@ -5046,6 +5074,10 @@ sub Data {
         'The field content is too long!' => 'Содержимое поля слишком длинное!',
         'Maximum size is %s characters.' => 'Максимальный размер %s символов',
 
+        # Perl Module: Kernel/System/GenericAgent.pm
+        'Couldn\'t read Job configuration YAML file. Please make sure the file is valid.' =>
+            '',
+
         # Perl Module: Kernel/System/MailQueue.pm
         'Error while validating Message data.' => '',
         'Error while validating Sender email address.' => '',
@@ -5069,6 +5101,10 @@ sub Data {
         'File is not installed!' => 'Файл не установлен!',
         'File is different!' => 'Файл отличается!',
         'Can\'t read file!' => 'Невозможно прочитать файл!',
+
+        # Perl Module: Kernel/System/PostMaster/Filter.pm
+        'Couldn\'t read Filter configuration YAML file. Please make sure the file is valid.' =>
+            '',
 
         # Perl Module: Kernel/System/ProcessManagement/DB/Process.pm
         'The process "%s" and all of its data has been imported successfully.' =>

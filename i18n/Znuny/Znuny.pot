@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2025-12-01 10:12+0000\n"
+"POT-Creation-Date: 2025-12-03 09:18+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2052,6 +2052,14 @@ msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminGenericAgent.tt
 msgid "Filter for jobs"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminGenericAgent.tt
+msgid "Upload a file in YAML format (as provided by the export) to import generic agent jobs."
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminGenericAgent.tt
+msgid "Overwrite existing generic agents?"
 msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminGenericAgent.tt
@@ -4872,6 +4880,14 @@ msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminPostMasterFilter.tt
 msgid "Filter for PostMaster filters"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminPostMasterFilter.tt
+msgid "Upload a file in YAML format (as provided by the export) to import postmaster filters."
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminPostMasterFilter.tt
+msgid "Overwrite existing postmaster filters?"
 msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminPostMasterFilter.tt
@@ -10835,6 +10851,34 @@ msgid "Select at least one recipient."
 msgstr ""
 
 #. Perl Module: Kernel/Modules/AdminGenericAgent.pm
+msgid "Error exporting generic agent job with Name %s!"
+msgstr ""
+
+#. Perl Module: Kernel/Modules/AdminGenericAgent.pm
+msgid "Error creating the generic agent job."
+msgstr ""
+
+#. Perl Module: Kernel/Modules/AdminGenericAgent.pm
+msgid "Jobs could not be imported due to an unknown error. Please check logs for more information."
+msgstr ""
+
+#. Perl Module: Kernel/Modules/AdminGenericAgent.pm
+msgid "The following generic agent jobs have been added successfully: %s."
+msgstr ""
+
+#. Perl Module: Kernel/Modules/AdminGenericAgent.pm
+msgid "The following generic agent jobs have been updated successfully: %s."
+msgstr ""
+
+#. Perl Module: Kernel/Modules/AdminGenericAgent.pm
+msgid "The following generic agent jobs were not updated: %s."
+msgstr ""
+
+#. Perl Module: Kernel/Modules/AdminGenericAgent.pm
+msgid "Errors adding/updating the following generic agent jobs: %s. Please check logs for more information."
+msgstr ""
+
+#. Perl Module: Kernel/Modules/AdminGenericAgent.pm
 msgid "minute(s)"
 msgstr ""
 
@@ -10872,10 +10916,6 @@ msgstr ""
 
 #. Perl Module: Kernel/Modules/AdminGenericAgent.pm
 msgid "Need Profile!"
-msgstr ""
-
-#. Perl Module: Kernel/Modules/AdminGenericAgent.pm
-msgid "Got no values to check."
 msgstr ""
 
 #. Perl Module: Kernel/Modules/AdminGenericAgent.pm
@@ -11544,6 +11584,34 @@ msgstr ""
 
 #. Perl Module: Kernel/Modules/AdminPostMasterFilter.pm
 msgid "No such filter: %s"
+msgstr ""
+
+#. Perl Module: Kernel/Modules/AdminPostMasterFilter.pm
+msgid "Error exporting postmaster filter with Name %s!"
+msgstr ""
+
+#. Perl Module: Kernel/Modules/AdminPostMasterFilter.pm
+msgid "Error creating the postmaster filter."
+msgstr ""
+
+#. Perl Module: Kernel/Modules/AdminPostMasterFilter.pm
+msgid "Filters could not be imported due to an unknown error. Please check logs for more information."
+msgstr ""
+
+#. Perl Module: Kernel/Modules/AdminPostMasterFilter.pm
+msgid "The following postmaster filters have been added successfully: %s."
+msgstr ""
+
+#. Perl Module: Kernel/Modules/AdminPostMasterFilter.pm
+msgid "The following postmaster filters have been updated successfully: %s."
+msgstr ""
+
+#. Perl Module: Kernel/Modules/AdminPostMasterFilter.pm
+msgid "The following postmaster filters were not updated: %s."
+msgstr ""
+
+#. Perl Module: Kernel/Modules/AdminPostMasterFilter.pm
+msgid "Errors adding/updating the following postmaster filters: %s. Please check logs for more information."
 msgstr ""
 
 #. Perl Module: Kernel/Modules/AdminPriority.pm
@@ -13075,6 +13143,10 @@ msgid "Created more than ... ago"
 msgstr ""
 
 #. Perl Module: Kernel/Modules/CustomerTicketSearch.pm
+msgid "Got no values to check."
+msgstr ""
+
+#. Perl Module: Kernel/Modules/CustomerTicketSearch.pm
 msgid "Please remove the following words because they cannot be used for the search:"
 msgstr ""
 
@@ -14138,6 +14210,10 @@ msgstr ""
 msgid "Maximum size is %s characters."
 msgstr ""
 
+#. Perl Module: Kernel/System/GenericAgent.pm
+msgid "Couldn't read Job configuration YAML file. Please make sure the file is valid."
+msgstr ""
+
 #. Perl Module: Kernel/System/MailQueue.pm
 msgid "Error while validating Message data."
 msgstr ""
@@ -14188,6 +14264,10 @@ msgstr ""
 
 #. Perl Module: Kernel/System/Package.pm
 msgid "Can't read file!"
+msgstr ""
+
+#. Perl Module: Kernel/System/PostMaster/Filter.pm
+msgid "Couldn't read Filter configuration YAML file. Please make sure the file is valid."
 msgstr ""
 
 #. Perl Module: Kernel/System/ProcessManagement/DB/Process.pm
