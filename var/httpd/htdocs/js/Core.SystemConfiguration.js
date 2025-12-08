@@ -492,29 +492,28 @@ Core.SystemConfiguration = (function (TargetNS) {
                         LinkURL += ';' + Core.Config.Get('SessionName') + '=' + Core.Config.Get('SessionID');
                     }
 
-                    Core.UI.ShowNotificationTemplate(
-                        {
-                            ID: 'QuickDeployNotification',
-                            Template: 'SysConfig/DirtyCheck',
-                            Type: 'Notice',
-                            Icon: 'fa-bell',
-                            Link: LinkURL,
-                        }
-                    );
+                    if (!$('#QuickDeployNotification').length) {
+                        Core.UI.ShowNotificationTemplate(
+                            {
+                                ID: 'QuickDeployNotification',
+                                Template: 'SysConfig/DirtyCheck',
+                                Type: 'Notice',
+                                Icon: 'fa-bell',
+                                Link: LinkURL,
+                            }
+                        );
+                    }
 
-                    Core.UI.InitMessageBoxClose();
-
-                    // reload location and show notification with HTML
-                    location.reload();
                 }
                 else if (Response.Data.DeploymentNeeded == 0) {
 
                     Core.UI.HideNotification(
-                        Core.Language.Translate('You have undeployed settings, would you like to deploy them?'),
-                        'Notice',
+                        undefined,
+                        undefined,
                         function() {
                             Core.UI.InitStickyElement();
-                        }
+                        },
+                        'QuickDeployNotification'
                     );
                 }
 
@@ -1102,11 +1101,12 @@ Core.SystemConfiguration = (function (TargetNS) {
 
                         // hide the "deployment" notification
                         Core.UI.HideNotification(
-                            Core.Language.Translate('You have undeployed settings, would you like to deploy them?'),
-                            'Notice',
+                            undefined,
+                            undefined,
                             function() {
                                 Core.UI.InitStickyElement();
-                            }
+                            },
+                            'QuickDeployNotification'
                         );
                     }
                     else {
@@ -1114,20 +1114,18 @@ Core.SystemConfiguration = (function (TargetNS) {
                             LinkURL += ';' + Core.Config.Get('SessionName') + '=' + Core.Config.Get('SessionID');
                         }
 
-                        Core.UI.ShowNotificationTemplate(
-                            {
-                                ID: 'QuickDeployNotification',
-                                Template: 'SysConfig/DirtyCheck',
-                                Type: 'Notice',
-                                Icon: 'fa-bell',
-                                Link: LinkURL,
-                            }
-                        );
+                        if (!$('#QuickDeployNotification').length) {
+                            Core.UI.ShowNotificationTemplate(
+                                {
+                                    ID: 'QuickDeployNotification',
+                                    Template: 'SysConfig/DirtyCheck',
+                                    Type: 'Notice',
+                                    Icon: 'fa-bell',
+                                    Link: LinkURL,
+                                }
+                            );
+                        }
 
-                        Core.UI.InitMessageBoxClose();
-
-                        // reload location and show notification with HTML
-                        location.reload();
                     }
                 }
                 Core.App.Publish('SystemConfiguration.SettingListUpdate');

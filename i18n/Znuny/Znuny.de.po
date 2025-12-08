@@ -25033,15 +25033,15 @@ msgstr ""
 msgid "Set up your personal preferences. Save each setting by clicking \"Save setting\" button."
 msgstr "Legen Sie Ihre persönlichen Einstellungen fest. Speichern Sie jede Einstellung, indem Sie auf die Schaltfläche „Einstellung speichern“ klicken."
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/SystemConfigurationIsDirtyCheck.tt
+#. JS Template: Kernel/Output/JavaScript/Templates/Standard/SysConfig/DirtyCheck.html.tmpl
 msgid "You have undeployed settings:"
 msgstr "Es sind Einstellungen vorhanden, die bislang nicht in Betrieb genommen wurden:"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/SystemConfigurationIsDirtyCheck.tt
+#. JS Template: Kernel/Output/JavaScript/Templates/Standard/SysConfig/DirtyCheck.html.tmpl
 msgid "Standard Deploy"
 msgstr "Standard-Inbetriebnahme"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/SystemConfigurationIsDirtyCheck.tt
+#. JS Template: Kernel/Output/JavaScript/Templates/Standard/SysConfig/DirtyCheck.html.tmpl
 msgid "Quick Deploy"
 msgstr "Schnell-Inbetriebnahme"
 

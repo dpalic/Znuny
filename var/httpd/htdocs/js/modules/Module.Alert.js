@@ -162,7 +162,7 @@
          * @return {String} HTML for the alert
          */
         createAlert: function(data) {
-            var type, html, self;
+            var type, html, self, inlineMultipleActions, separatorText, actionClasses, actionId;
 
             if (!data) {
                 return '';
@@ -179,12 +179,31 @@
 
             // Handle multiple actions
             if (data.actions && data.actions.length) {
-                html += '<div class="alertActions">';
-                data.actions.forEach(function (action) {
+                inlineMultipleActions = data.actions.length > 1;
+                separatorText = data.actionSeparator || 'or';
+
+                html += '<div class="alertActions' + (inlineMultipleActions ? ' alertActionsInline' : '') + '">';
+                data.actions.forEach(function (action, index) {
                     if (action.url) {
-                        html += '<a class="btn-primary alertButton alertButton' + self.capitalizeFirstLetter(action.type || 'submit') + '" href="' + action.url + '">';
+                        actionClasses = 'btn-primary alertButton alertButton' + self.capitalizeFirstLetter(action.type || 'submit'),
+                            actionId = '';
+
+                        if (action.classes) {
+                            actionClasses += ' ' + (Array.isArray(action.classes) ? action.classes.join(' ') : action.classes);
+                        }
+
+                        if (action.id) {
+                            actionId = ' id="' + action.id + '"';
+                        }
+
+                        html += '<a class="' + actionClasses + '" href="' + action.url + '"' + actionId + '>';
                         html += action.text || 'Action';
                         html += '</a>';
+
+                        // Insert separator between inline actions
+                        if (inlineMultipleActions && index < data.actions.length - 1) {
+                            html += '<span class="alertActionSeparator">' + separatorText + '</span>';
+                        }
                     }
                 });
                 html += '</div>';

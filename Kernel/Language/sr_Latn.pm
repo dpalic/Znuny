@@ -32,7 +32,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.862757629014219;
+    $Self->{Completeness}        = 0.862713760588141;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -3456,11 +3456,6 @@ sub Data {
         # TT Template: Kernel/Output/HTML/Templates/Standard/SystemConfiguration/Sidebar/Navigation.tt
         'Navigation' => 'Navigacija',
 
-        # TT Template: Kernel/Output/HTML/Templates/Standard/SystemConfigurationIsDirtyCheck.tt
-        'You have undeployed settings:' => '',
-        'Standard Deploy' => '',
-        'Quick Deploy' => '',
-
         # TT Template: Kernel/Output/HTML/Templates/Standard/Test.tt
         'Znuny Test Page' => 'Znuny test strana',
         'Unlock' => 'Otključaj',
@@ -3523,6 +3518,11 @@ sub Data {
         # JS Template: Kernel/Output/JavaScript/Templates/Standard/SysConfig/DialogReset.html.tmpl
         'Do you really want to reset this setting to it\'s default value?' =>
             'Da li stvarno želite da poništite ovo podešavanje na njegovu podrazumevanu vrednost?',
+
+        # JS Template: Kernel/Output/JavaScript/Templates/Standard/SysConfig/DirtyCheck.html.tmpl
+        'You have undeployed settings:' => '',
+        'Standard Deploy' => '',
+        'Quick Deploy' => '',
 
         # JS Template: Kernel/Output/JavaScript/Templates/Standard/SysConfig/HelpDialog.html.tmpl
         'You can use the category selection to limit the navigation tree below to entries from the selected category. As soon as you select the category, the tree will be re-built.' =>
@@ -5931,8 +5931,6 @@ sub Data {
             'Definiše modul koji prikazuje sve trenutno prijavljene operatere u interfejsu operatera.',
         'Defines the module that shows all the currently logged in customers in the agent interface.' =>
             'Definiše modul koji prikazuje sve trenutno prijavljene klijente u interfejsu operatera.',
-        'Defines the module to display a notification in the agent interface, if there are modified sysconfig settings that are not deployed yet.' =>
-            'Definiše modul za prikaz obaveštenja u interfejsu operatera, ako postoje promenjena ali neraspoređena podešavanja u sistemskoj konfiguraciji.',
         'Defines the module to display a notification in the agent interface, if there are invalid sysconfig settings deployed.' =>
             'Definiše modul za prikaz obaveštenja u interfejsu operatera, ako su raspoređena nevažeća podešavanja u sistemskoj konfiguraciji.',
         'Defines the module to display a notification in the agent interface, if the agent is logged in while having out-of-office active.' =>
@@ -8604,8 +8602,6 @@ sub Data {
         # JS File: var/httpd/htdocs/js/Core.SystemConfiguration.js
         'Open this node in a new window' => 'Otvori ovu stavku u novom prozoru',
         'Please add values for all keys before saving the setting.' => 'Molimo unesite vrednosti za sve ključeve pre nego što sačuvate podešavanje.',
-        'You have undeployed settings, would you like to deploy them?' =>
-            'Imate neraspoređenih podešavanja, da li želite da ih rasporedite?',
         'The key must not be empty.' => 'Ključ ne sme biti prazan.',
         'A key with this name (\'%s\') already exists.' => 'Ključ sa ovim nazivom (\'%s\') već postoji.',
         'Do you really want to revert this setting to its historical value?' =>
@@ -9515,7 +9511,6 @@ Vaša tehnička podrška
         'Clone web service',
         'Close preview',
         'Close this dialog',
-        'Close this message',
         'Complex %s with %s arguments',
         'Confirm',
         'Copied to clipboard!',
@@ -9827,7 +9822,6 @@ Vaša tehnička podrška
         'Yes',
         'You can either have the affected settings updated automatically to reflect the changes you just made or do it on your own by pressing \'update manually\'.',
         'You can use the category selection to limit the navigation tree below to entries from the selected category. As soon as you select the category, the tree will be re-built.',
-        'You have undeployed settings, would you like to deploy them?',
         'You have undeployed settings:',
         'activate to apply a descending sort',
         'activate to apply an ascending sort',

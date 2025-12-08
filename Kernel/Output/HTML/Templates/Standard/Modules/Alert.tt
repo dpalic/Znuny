@@ -7,13 +7,14 @@
 # --
 ## nofilter(TidyAll::Plugin::Znuny::TT::ScriptUsage)
 
-<div class="mod modAlert">
+<div class="mod modAlert"[% IF Data.ID %] id="[% Data.ID | html %]"[% END %]>
     <div class="inner">
         <script type="application/json" class="alertData">
             {
                 "message": "[% Data.message | html %]",
                 "type": "[% Data.type || "notice" | html %]",
                 "hideAfter": [% Data.hideAfter || 0 %],
+                "actionSeparator": "[% Data.actionSeparator || Translate("or") | html %]",
                 "actions": [% Data.actions || "[]" %]
             }
         </script>

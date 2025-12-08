@@ -8,6 +8,7 @@
 // --
 
 "use strict";
+/* global App */
 
 var Core = Core || {},
     Znuny = Znuny || {};
@@ -424,6 +425,7 @@ Core.UI = (function (TargetNS) {
     TargetNS.ShowNotificationTemplate = function (Data) {
 
         var $NotificationObj,
+            ModuleID,
             ParamCheckSuccess = Znuny.App.ParamCheck(Data, ['ID', 'Template', 'Icon']);
 
         if (!Data.Template) {
@@ -463,6 +465,12 @@ Core.UI = (function (TargetNS) {
         // otherwise insert it on top
         else {
             $NotificationObj.insertAfter('#ToolBar');
+        }
+
+        // wire up modular alert handling
+        if (typeof App !== 'undefined' && typeof App.registerModule === 'function' && typeof App.start === 'function') {
+            ModuleID = App.registerModule($NotificationObj, 'Alert');
+            App.start(ModuleID);
         }
 
         // show it finally with animation and execute possible callbacks

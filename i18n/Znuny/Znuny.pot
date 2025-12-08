@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2025-12-03 09:18+0000\n"
+"POT-Creation-Date: 2025-12-03 21:07+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -10058,18 +10058,6 @@ msgstr ""
 msgid "Navigation"
 msgstr ""
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/SystemConfigurationIsDirtyCheck.tt
-msgid "You have undeployed settings:"
-msgstr ""
-
-#. TT Template: Kernel/Output/HTML/Templates/Standard/SystemConfigurationIsDirtyCheck.tt
-msgid "Standard Deploy"
-msgstr ""
-
-#. TT Template: Kernel/Output/HTML/Templates/Standard/SystemConfigurationIsDirtyCheck.tt
-msgid "Quick Deploy"
-msgstr ""
-
 #. TT Template: Kernel/Output/HTML/Templates/Standard/Test.tt
 msgid "Znuny Test Page"
 msgstr ""
@@ -10196,6 +10184,18 @@ msgstr ""
 
 #. JS Template: Kernel/Output/JavaScript/Templates/Standard/SysConfig/DialogReset.html.tmpl
 msgid "Do you really want to reset this setting to it's default value?"
+msgstr ""
+
+#. JS Template: Kernel/Output/JavaScript/Templates/Standard/SysConfig/DirtyCheck.html.tmpl
+msgid "You have undeployed settings:"
+msgstr ""
+
+#. JS Template: Kernel/Output/JavaScript/Templates/Standard/SysConfig/DirtyCheck.html.tmpl
+msgid "Standard Deploy"
+msgstr ""
+
+#. JS Template: Kernel/Output/JavaScript/Templates/Standard/SysConfig/DirtyCheck.html.tmpl
+msgid "Quick Deploy"
 msgstr ""
 
 #. JS Template: Kernel/Output/JavaScript/Templates/Standard/SysConfig/HelpDialog.html.tmpl
@@ -16136,10 +16136,6 @@ msgstr ""
 
 #. XML Definition: Kernel/Config/Files/XML/Framework.xml
 msgid "Defines the module that shows all the currently logged in customers in the agent interface."
-msgstr ""
-
-#. XML Definition: Kernel/Config/Files/XML/Framework.xml
-msgid "Defines the module to display a notification in the agent interface, if there are modified sysconfig settings that are not deployed yet."
 msgstr ""
 
 #. XML Definition: Kernel/Config/Files/XML/Framework.xml
@@ -22088,10 +22084,6 @@ msgstr ""
 
 #. JS File: var/httpd/htdocs/js/Core.SystemConfiguration.js
 msgid "Please add values for all keys before saving the setting."
-msgstr ""
-
-#. JS File: var/httpd/htdocs/js/Core.SystemConfiguration.js
-msgid "You have undeployed settings, would you like to deploy them?"
 msgstr ""
 
 #. JS File: var/httpd/htdocs/js/Core.SystemConfiguration.js

@@ -12,8 +12,10 @@
     Data = {
         message = (Data.Data || Translate(Data.Info)),
         type = Data.BoxClass.match('Notice') ? 'notice' : Data.BoxClass.match('Error') ? 'error' : Data.BoxClass.match('Success') ? 'success' : 'notice',
-        hideAfter = Data.BoxClass.match('Success') ? 5 : 0
-        actions = "[
+        hideAfter = Data.BoxClass.match('Success') ? 5 : 0,
+        actionSeparator = Data.ActionSeparator,
+        ID = Data.ID,
+        actions = Data.Actions || "[
             {
                 \"url\": \"" _ Data.Link _ "\",
                 \"text\": \"" _ Translate("Continue") _ "\",

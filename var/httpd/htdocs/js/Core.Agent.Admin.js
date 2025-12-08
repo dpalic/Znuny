@@ -195,7 +195,7 @@ Core.Agent.Admin = (function (TargetNS) {
                 $DialogContentObj,
                 $DialogFooterObj;
 
-            Core.UI.Dialog.ShowContentDialog($DialogObj, Core.Language.Translate('Quick Deploy'), '500px', 'Center', true);
+            Core.UI.Dialog.ShowContentDialog($DialogObj, Core.Language.Translate('Quick Deploy'), '35%', 'Center', true);
 
             $DialogContentObj = $('#DialogQuickDeploy');
             $DialogFooterObj = $DialogContentObj.next('.ContentFooter');

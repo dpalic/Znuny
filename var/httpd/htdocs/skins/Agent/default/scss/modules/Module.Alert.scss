@@ -62,6 +62,35 @@ $alertSpace: 15px;
           margin-right:  calc($alertSpace / 4);
           background-color: white;
         }
+
+        &.alertActionsInline {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: calc($alertSpace / 3);
+          flex-wrap: wrap;
+          width: 100%;
+          margin-top: $alertSpace;
+
+          .alertButton {
+            flex: 1 1 40%;
+            max-width: 46%;
+            text-align: center;
+            margin-right: 0;
+            white-space: normal;
+            word-break: break-word;
+            min-width: 120px;
+            padding: 8px 10px;
+          }
+
+          .alertActionSeparator {
+            color: var(--gray-dark);
+            font-weight: 600;
+            padding: 0 4px;
+            white-space: nowrap;
+            text-align: center;
+          }
+        }
       }
     }
   }

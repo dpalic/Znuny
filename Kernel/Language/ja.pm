@@ -30,7 +30,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y/%M/%D';
     $Self->{DateInputFormat}     = '%Y/%M/%D';
     $Self->{DateInputFormatLong} = '%Y/%M/%D - %T';
-    $Self->{Completeness}        = 0.660648665921074;
+    $Self->{Completeness}        = 0.6607000159821;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -3456,11 +3456,6 @@ sub Data {
         # TT Template: Kernel/Output/HTML/Templates/Standard/SystemConfiguration/Sidebar/Navigation.tt
         'Navigation' => 'ナビゲーション',
 
-        # TT Template: Kernel/Output/HTML/Templates/Standard/SystemConfigurationIsDirtyCheck.tt
-        'You have undeployed settings:' => '',
-        'Standard Deploy' => '',
-        'Quick Deploy' => '',
-
         # TT Template: Kernel/Output/HTML/Templates/Standard/Test.tt
         'Znuny Test Page' => 'Znuny テストページ',
         'Unlock' => 'ロック解除',
@@ -3523,6 +3518,11 @@ sub Data {
         # JS Template: Kernel/Output/JavaScript/Templates/Standard/SysConfig/DialogReset.html.tmpl
         'Do you really want to reset this setting to it\'s default value?' =>
             '',
+
+        # JS Template: Kernel/Output/JavaScript/Templates/Standard/SysConfig/DirtyCheck.html.tmpl
+        'You have undeployed settings:' => '',
+        'Standard Deploy' => '',
+        'Quick Deploy' => '',
 
         # JS Template: Kernel/Output/JavaScript/Templates/Standard/SysConfig/HelpDialog.html.tmpl
         'You can use the category selection to limit the navigation tree below to entries from the selected category. As soon as you select the category, the tree will be re-built.' =>
@@ -5931,8 +5931,6 @@ sub Data {
         'Defines the module that shows all the currently logged in agents in the agent interface.' =>
             '担当者インタフェースにおいて、現在ログインしている全ユーザを表示させるモジュールを定義します。',
         'Defines the module that shows all the currently logged in customers in the agent interface.' =>
-            '',
-        'Defines the module to display a notification in the agent interface, if there are modified sysconfig settings that are not deployed yet.' =>
             '',
         'Defines the module to display a notification in the agent interface, if there are invalid sysconfig settings deployed.' =>
             '',
@@ -8614,8 +8612,6 @@ Contentはダイナミック・フィールドの形式によって設定内容�
         # JS File: var/httpd/htdocs/js/Core.SystemConfiguration.js
         'Open this node in a new window' => '新規ウィンドウで注釈を開く',
         'Please add values for all keys before saving the setting.' => '',
-        'You have undeployed settings, would you like to deploy them?' =>
-            'デプロイされていない設定があります。デプロイしますか？',
         'The key must not be empty.' => 'キーは必須です',
         'A key with this name (\'%s\') already exists.' => '',
         'Do you really want to revert this setting to its historical value?' =>
@@ -9524,7 +9520,6 @@ Thanks for your help!
         'Clone web service',
         'Close preview',
         'Close this dialog',
-        'Close this message',
         'Complex %s with %s arguments',
         'Confirm',
         'Copied to clipboard!',
@@ -9836,7 +9831,6 @@ Thanks for your help!
         'Yes',
         'You can either have the affected settings updated automatically to reflect the changes you just made or do it on your own by pressing \'update manually\'.',
         'You can use the category selection to limit the navigation tree below to entries from the selected category. As soon as you select the category, the tree will be re-built.',
-        'You have undeployed settings, would you like to deploy them?',
         'You have undeployed settings:',
         'activate to apply a descending sort',
         'activate to apply an ascending sort',

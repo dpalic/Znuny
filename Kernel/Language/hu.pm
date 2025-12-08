@@ -32,7 +32,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%M-%D';
     $Self->{DateInputFormat}     = '%Y-%M-%D';
     $Self->{DateInputFormatLong} = '%Y-%M-%D - %T';
-    $Self->{Completeness}        = 0.866112797571497;
+    $Self->{Completeness}        = 0.86607000159821;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -3456,11 +3456,6 @@ sub Data {
         # TT Template: Kernel/Output/HTML/Templates/Standard/SystemConfiguration/Sidebar/Navigation.tt
         'Navigation' => 'Navigáció',
 
-        # TT Template: Kernel/Output/HTML/Templates/Standard/SystemConfigurationIsDirtyCheck.tt
-        'You have undeployed settings:' => '',
-        'Standard Deploy' => '',
-        'Quick Deploy' => '',
-
         # TT Template: Kernel/Output/HTML/Templates/Standard/Test.tt
         'Znuny Test Page' => 'Znuny tesztoldal',
         'Unlock' => 'Feloldás',
@@ -3523,6 +3518,11 @@ sub Data {
         # JS Template: Kernel/Output/JavaScript/Templates/Standard/SysConfig/DialogReset.html.tmpl
         'Do you really want to reset this setting to it\'s default value?' =>
             'Valóban vissza szeretné állítani ezt a beállítást az alapértelmezett értékére?',
+
+        # JS Template: Kernel/Output/JavaScript/Templates/Standard/SysConfig/DirtyCheck.html.tmpl
+        'You have undeployed settings:' => '',
+        'Standard Deploy' => '',
+        'Quick Deploy' => '',
 
         # JS Template: Kernel/Output/JavaScript/Templates/Standard/SysConfig/HelpDialog.html.tmpl
         'You can use the category selection to limit the navigation tree below to entries from the selected category. As soon as you select the category, the tree will be re-built.' =>
@@ -5931,8 +5931,6 @@ sub Data {
             'Meghatározza azt a modult, amely megjeleníti az összes aktuálisan bejelentkezett ügyintézőt az ügyintézői felületen.',
         'Defines the module that shows all the currently logged in customers in the agent interface.' =>
             'Meghatározza azt a modult, amely megjeleníti az összes aktuálisan bejelentkezett ügyfelet az ügyintézői felületen.',
-        'Defines the module to display a notification in the agent interface, if there are modified sysconfig settings that are not deployed yet.' =>
-            'Meghatározza azt a modult, amely egy értesítést jelenít meg az ügyintézői felületen, ha olyan módosított rendszerbeállítások vannak, amelyek még nincsenek üzembe állítva.',
         'Defines the module to display a notification in the agent interface, if there are invalid sysconfig settings deployed.' =>
             'Meghatározza azt a modult, amely egy értesítést jelenít meg az ügyintézői felületen, ha érvénytelen rendszerbeállítások vannak üzembe állítva.',
         'Defines the module to display a notification in the agent interface, if the agent is logged in while having out-of-office active.' =>
@@ -8604,8 +8602,6 @@ sub Data {
         # JS File: var/httpd/htdocs/js/Core.SystemConfiguration.js
         'Open this node in a new window' => 'A csomópont megnyitása egy új ablakban',
         'Please add values for all keys before saving the setting.' => 'Adjon értéket az összes kulcsnak, mielőtt elmentené a beállítást.',
-        'You have undeployed settings, would you like to deploy them?' =>
-            'Olyan beállításai vannak, melyek nincsenek üzembe állítva. Szeretné üzembe állítani azokat?',
         'The key must not be empty.' => 'A kulcs nem lehet üres.',
         'A key with this name (\'%s\') already exists.' => 'Egy ilyen nevű kulcs („%s”) már létezik.',
         'Do you really want to revert this setting to its historical value?' =>
@@ -9515,7 +9511,6 @@ Az Ön segélyszolgálat csapata
         'Clone web service',
         'Close preview',
         'Close this dialog',
-        'Close this message',
         'Complex %s with %s arguments',
         'Confirm',
         'Copied to clipboard!',
@@ -9827,7 +9822,6 @@ Az Ön segélyszolgálat csapata
         'Yes',
         'You can either have the affected settings updated automatically to reflect the changes you just made or do it on your own by pressing \'update manually\'.',
         'You can use the category selection to limit the navigation tree below to entries from the selected category. As soon as you select the category, the tree will be re-built.',
-        'You have undeployed settings, would you like to deploy them?',
         'You have undeployed settings:',
         'activate to apply a descending sort',
         'activate to apply an ascending sort',

@@ -30,7 +30,7 @@ sub Data {
     $Self->{DateFormatShort}     = '';
     $Self->{DateInputFormat}     = '';
     $Self->{DateInputFormatLong} = '';
-    $Self->{Completeness}        = 0.832561111998722;
+    $Self->{Completeness}        = 0.832507591497523;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -3454,11 +3454,6 @@ sub Data {
         # TT Template: Kernel/Output/HTML/Templates/Standard/SystemConfiguration/Sidebar/Navigation.tt
         'Navigation' => 'Navegação',
 
-        # TT Template: Kernel/Output/HTML/Templates/Standard/SystemConfigurationIsDirtyCheck.tt
-        'You have undeployed settings:' => '',
-        'Standard Deploy' => '',
-        'Quick Deploy' => '',
-
         # TT Template: Kernel/Output/HTML/Templates/Standard/Test.tt
         'Znuny Test Page' => 'Página de Teste do Gerenciador de Chamados',
         'Unlock' => 'Desbloquear',
@@ -3521,6 +3516,11 @@ sub Data {
         # JS Template: Kernel/Output/JavaScript/Templates/Standard/SysConfig/DialogReset.html.tmpl
         'Do you really want to reset this setting to it\'s default value?' =>
             'Você realmente quer redefinir essa definição para seu valor padrão?',
+
+        # JS Template: Kernel/Output/JavaScript/Templates/Standard/SysConfig/DirtyCheck.html.tmpl
+        'You have undeployed settings:' => '',
+        'Standard Deploy' => '',
+        'Quick Deploy' => '',
 
         # JS Template: Kernel/Output/JavaScript/Templates/Standard/SysConfig/HelpDialog.html.tmpl
         'You can use the category selection to limit the navigation tree below to entries from the selected category. As soon as you select the category, the tree will be re-built.' =>
@@ -5929,8 +5929,6 @@ sub Data {
             'Define o módulo que mostra todos os agentes logados no momento na interface de agente.',
         'Defines the module that shows all the currently logged in customers in the agent interface.' =>
             'Define o módulo que mostra na interface de agente todos os clientes logados no momento.',
-        'Defines the module to display a notification in the agent interface, if there are modified sysconfig settings that are not deployed yet.' =>
-            'Define o módulo para mostrar a notificação na interface de agente se houverem definições de configuração de sistema alteradas não implantadas no momento.',
         'Defines the module to display a notification in the agent interface, if there are invalid sysconfig settings deployed.' =>
             'Define o módulo para mostrar a notificação na interface de agente se houver uma definição de configuração de sistema inválida implantada.',
         'Defines the module to display a notification in the agent interface, if the agent is logged in while having out-of-office active.' =>
@@ -8602,8 +8600,6 @@ sub Data {
         # JS File: var/httpd/htdocs/js/Core.SystemConfiguration.js
         'Open this node in a new window' => '',
         'Please add values for all keys before saving the setting.' => 'Favor adicionar valores para todas as chaves antes de salvar esta definição.',
-        'You have undeployed settings, would you like to deploy them?' =>
-            'Você tem definições que não foram implantadas. Gostaria de implantá-las?',
         'The key must not be empty.' => 'A chave não pode estar vazia.',
         'A key with this name (\'%s\') already exists.' => 'Uma chave com o nome (\'%s\') já existe.',
         'Do you really want to revert this setting to its historical value?' =>
@@ -9513,7 +9509,6 @@ Obrigado pela ajuda!
         'Clone web service',
         'Close preview',
         'Close this dialog',
-        'Close this message',
         'Complex %s with %s arguments',
         'Confirm',
         'Copied to clipboard!',
@@ -9825,7 +9820,6 @@ Obrigado pela ajuda!
         'Yes',
         'You can either have the affected settings updated automatically to reflect the changes you just made or do it on your own by pressing \'update manually\'.',
         'You can use the category selection to limit the navigation tree below to entries from the selected category. As soon as you select the category, the tree will be re-built.',
-        'You have undeployed settings, would you like to deploy them?',
         'You have undeployed settings:',
         'activate to apply a descending sort',
         'activate to apply an ascending sort',

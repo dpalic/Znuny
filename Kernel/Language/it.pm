@@ -35,7 +35,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D/%M/%Y';
     $Self->{DateInputFormat}     = '%D/%M/%Y';
     $Self->{DateInputFormatLong} = '%D/%M/%Y - %T';
-    $Self->{Completeness}        = 0.580763700271609;
+    $Self->{Completeness}        = 0.580629694741889;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -3459,11 +3459,6 @@ sub Data {
         # TT Template: Kernel/Output/HTML/Templates/Standard/SystemConfiguration/Sidebar/Navigation.tt
         'Navigation' => 'Navigazione',
 
-        # TT Template: Kernel/Output/HTML/Templates/Standard/SystemConfigurationIsDirtyCheck.tt
-        'You have undeployed settings:' => '',
-        'Standard Deploy' => '',
-        'Quick Deploy' => '',
-
         # TT Template: Kernel/Output/HTML/Templates/Standard/Test.tt
         'Znuny Test Page' => 'Pagina di test Znuny',
         'Unlock' => 'Sblocca',
@@ -3526,6 +3521,11 @@ sub Data {
         # JS Template: Kernel/Output/JavaScript/Templates/Standard/SysConfig/DialogReset.html.tmpl
         'Do you really want to reset this setting to it\'s default value?' =>
             'Vuoi davvero ripristinare questa impostazione al suo valore predefinito?',
+
+        # JS Template: Kernel/Output/JavaScript/Templates/Standard/SysConfig/DirtyCheck.html.tmpl
+        'You have undeployed settings:' => '',
+        'Standard Deploy' => '',
+        'Quick Deploy' => '',
 
         # JS Template: Kernel/Output/JavaScript/Templates/Standard/SysConfig/HelpDialog.html.tmpl
         'You can use the category selection to limit the navigation tree below to entries from the selected category. As soon as you select the category, the tree will be re-built.' =>
@@ -5938,8 +5938,6 @@ NOTA: i sistemi di terze parti richiedono una configurazione a se.',
             '',
         'Defines the module that shows all the currently logged in customers in the agent interface.' =>
             '',
-        'Defines the module to display a notification in the agent interface, if there are modified sysconfig settings that are not deployed yet.' =>
-            'Definisce il modulo per mostrare una notifica nell\'interfaccia agente, nel caso in cui ci siano impostazioni di sistema modificate e non ancora attivate.',
         'Defines the module to display a notification in the agent interface, if there are invalid sysconfig settings deployed.' =>
             'Definisce il modulo per mostrare una notifica nell\'interfaccia agente, nel caso in cui ci siano attivate impostazioni di sistema non valide.',
         'Defines the module to display a notification in the agent interface, if the agent is logged in while having out-of-office active.' =>
@@ -8611,8 +8609,6 @@ NOTA: i sistemi di terze parti richiedono una configurazione a se.',
         # JS File: var/httpd/htdocs/js/Core.SystemConfiguration.js
         'Open this node in a new window' => '',
         'Please add values for all keys before saving the setting.' => '',
-        'You have undeployed settings, would you like to deploy them?' =>
-            'Ci sono modifiche non attivate. Attivarle adesso?',
         'The key must not be empty.' => '',
         'A key with this name (\'%s\') already exists.' => '',
         'Do you really want to revert this setting to its historical value?' =>
@@ -9522,7 +9518,6 @@ Il tuo helpdesk.
         'Clone web service',
         'Close preview',
         'Close this dialog',
-        'Close this message',
         'Complex %s with %s arguments',
         'Confirm',
         'Copied to clipboard!',
@@ -9834,7 +9829,6 @@ Il tuo helpdesk.
         'Yes',
         'You can either have the affected settings updated automatically to reflect the changes you just made or do it on your own by pressing \'update manually\'.',
         'You can use the category selection to limit the navigation tree below to entries from the selected category. As soon as you select the category, the tree will be re-built.',
-        'You have undeployed settings, would you like to deploy them?',
         'You have undeployed settings:',
         'activate to apply a descending sort',
         'activate to apply an ascending sort',

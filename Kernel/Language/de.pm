@@ -27,7 +27,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.992331043297651;
+    $Self->{Completeness}        = 0.992328591976986;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -3451,11 +3451,6 @@ sub Data {
         # TT Template: Kernel/Output/HTML/Templates/Standard/SystemConfiguration/Sidebar/Navigation.tt
         'Navigation' => 'Navigation',
 
-        # TT Template: Kernel/Output/HTML/Templates/Standard/SystemConfigurationIsDirtyCheck.tt
-        'You have undeployed settings:' => 'Es sind Einstellungen vorhanden, die bislang nicht in Betrieb genommen wurden:',
-        'Standard Deploy' => 'Standard-Inbetriebnahme',
-        'Quick Deploy' => 'Schnell-Inbetriebnahme',
-
         # TT Template: Kernel/Output/HTML/Templates/Standard/Test.tt
         'Znuny Test Page' => 'Znuny Testseite',
         'Unlock' => 'Entsperren',
@@ -3518,6 +3513,11 @@ sub Data {
         # JS Template: Kernel/Output/JavaScript/Templates/Standard/SysConfig/DialogReset.html.tmpl
         'Do you really want to reset this setting to it\'s default value?' =>
             'Möchten Sie diese Einstellung wirklich auf ihren Standardwert zurücksetzen?',
+
+        # JS Template: Kernel/Output/JavaScript/Templates/Standard/SysConfig/DirtyCheck.html.tmpl
+        'You have undeployed settings:' => 'Es sind Einstellungen vorhanden, die bislang nicht in Betrieb genommen wurden:',
+        'Standard Deploy' => 'Standard-Inbetriebnahme',
+        'Quick Deploy' => 'Schnell-Inbetriebnahme',
 
         # JS Template: Kernel/Output/JavaScript/Templates/Standard/SysConfig/HelpDialog.html.tmpl
         'You can use the category selection to limit the navigation tree below to entries from the selected category. As soon as you select the category, the tree will be re-built.' =>
@@ -5926,8 +5926,6 @@ sub Data {
             'Definiert das Modul das alle zur Zeit angemeldeten Agenten im Agenten-Interface anzeigt.',
         'Defines the module that shows all the currently logged in customers in the agent interface.' =>
             'Definiert das Modul, das alle zur Zeit angemeldeten Kunden im Agentenbereich anzeigt.',
-        'Defines the module to display a notification in the agent interface, if there are modified sysconfig settings that are not deployed yet.' =>
-            'Definiert das Modul, das eine Benachrichtigung im Agentenbereich anzeigt, wenn Konfigurationseinstellungen angepasst, aber noch nicht in Betrieb genommen wurden.',
         'Defines the module to display a notification in the agent interface, if there are invalid sysconfig settings deployed.' =>
             'Definiert das Modul, das eine Benachrichtigung im Agentenbereich anzeigt, wenn ungültige Konfigurationseinstellungen in Betrieb genommen wurden.',
         'Defines the module to display a notification in the agent interface, if the agent is logged in while having out-of-office active.' =>
@@ -8599,8 +8597,6 @@ sub Data {
         # JS File: var/httpd/htdocs/js/Core.SystemConfiguration.js
         'Open this node in a new window' => 'Diesen Knoten in einem neuen Fenster öffnen',
         'Please add values for all keys before saving the setting.' => 'Bitte tragen Sie Werte für alle Schlüssel ein, bevor Sie die Einstellung speichern.',
-        'You have undeployed settings, would you like to deploy them?' =>
-            'Es sind Einstellungen vorhanden, die bislang nicht in Betrieb genommen wurden. Möchten Sie jetzt eine Inbetriebnahme starten?',
         'The key must not be empty.' => 'Der Schlüssel darf nicht leer sein.',
         'A key with this name (\'%s\') already exists.' => 'Ein Schlüssel mit diesem Namen (\'%s\') existiert bereits.',
         'Do you really want to revert this setting to its historical value?' =>
@@ -9509,7 +9505,6 @@ Ihr Helpdesk-Team
         'Clone web service',
         'Close preview',
         'Close this dialog',
-        'Close this message',
         'Complex %s with %s arguments',
         'Confirm',
         'Copied to clipboard!',
@@ -9821,7 +9816,6 @@ Ihr Helpdesk-Team
         'Yes',
         'You can either have the affected settings updated automatically to reflect the changes you just made or do it on your own by pressing \'update manually\'.',
         'You can use the category selection to limit the navigation tree below to entries from the selected category. As soon as you select the category, the tree will be re-built.',
-        'You have undeployed settings, would you like to deploy them?',
         'You have undeployed settings:',
         'activate to apply a descending sort',
         'activate to apply an ascending sort',

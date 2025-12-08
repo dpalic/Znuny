@@ -6,25 +6,29 @@
 # did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
 # --
 
-<div class="MessageBox Notice"{% if ID %} id="{{ ID }}"{% endif %}>
-    {% if Icon %}
-    <span>
-        <i class="fa {{ Icon }}"></i>
-    </span>
-    {% endif %}
-    <p>
-        <span>{{ "You have undeployed settings:" | Translate }}</span>
-    </p>
-    <div class="DeploymentContainer">
-        <a href="{{ Link }}" class="CallForAction btn-main btn-primary">
-            <span>{{ "Standard Deploy" | Translate }}</span>
-        </a>
-        <span class="">{{ "or" | Translate }}</span>
-        <a id="QuickDeploy" class="CallForAction btn-main btn-primary-ghost">
-            <span>{{ "Quick Deploy" | Translate }}</span>
-        </a>
+<div class="mod modAlert"{% if ID %} id="{{ ID }}"{% endif %}>
+    <div class="inner">
+        <script type="application/json" class="alertData">
+            {
+                "message": "{{ "You have undeployed settings:" | Translate }}",
+                "type": "{{ Class | lower }}",
+                "actionSeparator": "{{ "or" | Translate }}",
+                "actions": [
+                    {
+                        "url": "{{ Link }}",
+                        "text": "{{ "Standard Deploy" | Translate }}",
+                        "type": "primary",
+                        "classes": "CallForAction btn-main btn-primary"
+                    },
+                    {
+                        "url": "#",
+                        "id": "QuickDeploy",
+                        "text": "{{ "Quick Deploy" | Translate }}",
+                        "type": "ghost",
+                        "classes": "CallForAction btn-main btn-primary-ghost"
+                    }
+                ]
+            }
+        </script>
     </div>
-        <a href="#" class="Close icon-hover" title="{{ "Close this message" | Translate }}">
-        <i class="fa fa-times"></i>
-    </a>
 </div>

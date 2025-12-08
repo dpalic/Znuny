@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%M-%D';
     $Self->{DateInputFormat}     = '%Y-%M-%D';
     $Self->{DateInputFormatLong} = '%Y-%M-%D %T';
-    $Self->{Completeness}        = 0.838632369388081;
+    $Self->{Completeness}        = 0.838580789515742;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -3450,11 +3450,6 @@ sub Data {
         # TT Template: Kernel/Output/HTML/Templates/Standard/SystemConfiguration/Sidebar/Navigation.tt
         'Navigation' => '항해',
 
-        # TT Template: Kernel/Output/HTML/Templates/Standard/SystemConfigurationIsDirtyCheck.tt
-        'You have undeployed settings:' => '',
-        'Standard Deploy' => '',
-        'Quick Deploy' => '',
-
         # TT Template: Kernel/Output/HTML/Templates/Standard/Test.tt
         'Znuny Test Page' => 'Znuny 테스트 페이지',
         'Unlock' => '잠금해제',
@@ -3517,6 +3512,11 @@ sub Data {
         # JS Template: Kernel/Output/JavaScript/Templates/Standard/SysConfig/DialogReset.html.tmpl
         'Do you really want to reset this setting to it\'s default value?' =>
             '이 설정을 기본값으로 재설정 하시겠습니까?',
+
+        # JS Template: Kernel/Output/JavaScript/Templates/Standard/SysConfig/DirtyCheck.html.tmpl
+        'You have undeployed settings:' => '',
+        'Standard Deploy' => '',
+        'Quick Deploy' => '',
 
         # JS Template: Kernel/Output/JavaScript/Templates/Standard/SysConfig/HelpDialog.html.tmpl
         'You can use the category selection to limit the navigation tree below to entries from the selected category. As soon as you select the category, the tree will be re-built.' =>
@@ -5925,8 +5925,6 @@ sub Data {
             '에이전트 인터페이스에 현재 로그인 되어 있는 모든 에이전트를 표시하는 모듈을 정의합니다.',
         'Defines the module that shows all the currently logged in customers in the agent interface.' =>
             '에이전트 인터페이스에 현재 로그인 한 모든 고객을 표시하는 모듈을 정의합니다.',
-        'Defines the module to display a notification in the agent interface, if there are modified sysconfig settings that are not deployed yet.' =>
-            '아직 배포되지 않은 수정 된 sysconfig 설정이있는 경우 에이전트 인터페이스에 알림을 표시 할 모듈을 정의합니다.',
         'Defines the module to display a notification in the agent interface, if there are invalid sysconfig settings deployed.' =>
             '잘못된 sysconfig 설정이 배포 된 경우 에이전트 인터페이스에 알림을 표시 할 모듈을 정의합니다.',
         'Defines the module to display a notification in the agent interface, if the agent is logged in while having out-of-office active.' =>
@@ -8598,8 +8596,6 @@ sub Data {
         # JS File: var/httpd/htdocs/js/Core.SystemConfiguration.js
         'Open this node in a new window' => '새 창에서 이 노드 열기',
         'Please add values for all keys before saving the setting.' => '설정을 저장하기 전에 모든 키의 값을 추가하십시오.',
-        'You have undeployed settings, would you like to deploy them?' =>
-            '배포 취소 설정이 있습니다. 배포하시겠습니까?',
         'The key must not be empty.' => '키는 비워 둘 수 없습니다.',
         'A key with this name (\'%s\') already exists.' => '이 이름을 가진 키 (\'%s\')가 이미 있습니다.',
         'Do you really want to revert this setting to its historical value?' =>
@@ -9509,7 +9505,6 @@ Thanks for your help!
         'Clone web service',
         'Close preview',
         'Close this dialog',
-        'Close this message',
         'Complex %s with %s arguments',
         'Confirm',
         'Copied to clipboard!',
@@ -9821,7 +9816,6 @@ Thanks for your help!
         'Yes',
         'You can either have the affected settings updated automatically to reflect the changes you just made or do it on your own by pressing \'update manually\'.',
         'You can use the category selection to limit the navigation tree below to entries from the selected category. As soon as you select the category, the tree will be re-built.',
-        'You have undeployed settings, would you like to deploy them?',
         'You have undeployed settings:',
         'activate to apply a descending sort',
         'activate to apply an ascending sort',
