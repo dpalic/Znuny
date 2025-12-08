@@ -118,10 +118,6 @@
                     if (Core && Core.UI && Core.UI.Popup) {
                         Core.UI.Popup.ClosePopup();
                     }
-                    // TODO: Wait for QA. If QA is error-free, this can be deleted.
-                    // else if (window.opener) {
-                    //     window.close();
-                    // }
                 }
             });
         },
@@ -155,6 +151,100 @@
         },
 
         /**
+         * Decode HTML entities and sanitize to allow only safe tags
+         *
+         * @method decodeAndSanitizeHTML
+         * @param {String} html - The HTML string with entities
+         * @return {String} Decoded and sanitized HTML
+         */
+        decodeAndSanitizeHTML: function(html) {
+            var txt, decoded, temp, sanitized;
+
+            // First decode HTML entities
+            txt = document.createElement('textarea');
+            txt.innerHTML = html;
+            decoded = txt.value;
+
+            // Create a temporary div to parse the HTML
+            temp = document.createElement('div');
+            temp.innerHTML = decoded;
+
+            // Sanitize: only allow safe tags and attributes
+            sanitized = this.sanitizeNode(temp);
+
+            return sanitized;
+        },
+
+        /**
+         * Recursively sanitize a DOM node, allowing only safe tags and attributes
+         *
+         * @method sanitizeNode
+         * @param {Node} node - The DOM node to sanitize
+         * @return {String} Sanitized HTML string
+         */
+        sanitizeNode: function(node) {
+            var result = '', i, child, tagName, href, target;
+
+            // Whitelist of allowed tags
+            var allowedTags = {
+                'a': ['href', 'target'],
+                'strong': [],
+                'b': [],
+                'em': [],
+                'i': [],
+                'u': [],
+                'br': [],
+                'span': []
+            };
+
+            for (i = 0; i < node.childNodes.length; i++) {
+                child = node.childNodes[i];
+
+                // Text node - keep as is
+                if (child.nodeType === 3) {
+                    result += child.textContent;
+                }
+                // Element node - check if allowed
+                else if (child.nodeType === 1) {
+                    tagName = child.tagName.toLowerCase();
+
+                    if (allowedTags[tagName]) {
+                        result += '<' + tagName;
+
+                        // Add allowed attributes
+                        if (tagName === 'a') {
+                            href = child.getAttribute('href');
+                            if (href) {
+                                // Prevent javascript: URLs
+                                if (!href.match(/^javascript:/i)) {
+                                    result += ' href="' + href.replace(/"/g, '&quot;') + '"';
+                                }
+                            }
+                            target = child.getAttribute('target');
+                            if (target) {
+                                result += ' target="' + target.replace(/"/g, '&quot;') + '"';
+                            }
+                        }
+
+                        result += '>';
+
+                        // Recursively process child nodes
+                        if (child.childNodes.length > 0) {
+                            result += this.sanitizeNode(child);
+                        }
+
+                        result += '</' + tagName + '>';
+                    } else {
+                        // Tag not allowed - just extract text content
+                        result += child.textContent;
+                    }
+                }
+            }
+
+            return result;
+        },
+
+        /**
          * Create a single alert from JSON data
          *
          * @method createAlert
@@ -162,7 +252,7 @@
          * @return {String} HTML for the alert
          */
         createAlert: function(data) {
-            var type, html, self, inlineMultipleActions, separatorText, actionClasses, actionId;
+            var type, html, self, message, inlineMultipleActions, separatorText, actionClasses, actionId;
 
             if (!data) {
                 return '';
@@ -172,10 +262,13 @@
             type = data.type || 'notice';
             self = this;
 
+            // Decode HTML entities and sanitize to only allow safe tags
+            message = this.decodeAndSanitizeHTML(data.message);
+
             html = '<div class="mod modAlert">';
             html += '<div class="inner">';
             html += '<div class="alert alertType' + this.capitalizeFirstLetter(type) + '">';
-            html += '<div class="alertContent">' + data.message + '</div>';
+            html += '<div class="alertContent">' + message + '</div>';
 
             // Handle multiple actions
             if (data.actions && data.actions.length) {
