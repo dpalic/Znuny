@@ -1,4 +1,5 @@
 # 7.3.1 2025-??-??
+ - 2025-12-08 Console command 'Admin::Package::RepositoryList' now indicates which of the displayed packages are installed.
  - 2025-12-01 Integrated package Znuny-MultiSendmail.
  - 2025-11-28 Added new GUI-Redesign. Thanks to Tim Binder stbt.de.
  - 2025-11-26 Fixed: MariaDB/MySQL throwing error regarding foreign keys when converting character set of tables to UTF8MB4.
