@@ -1,4 +1,5 @@
 # 7.3.1 2025-??-??
+ - 2025-12-09 Migration refactoring: Added new Component 'FollowUp'. Migration order: CheckPreviousRequirement, Run and FollowUp. Improved Steps for CheckPreviousRequirement. Removed empty CheckPreviousRequirement and Run functions.
  - 2025-12-09 Integrated package Znuny-AgentTicketActionCommonCustomer.
  - 2025-12-09 Fixed: Article overview text difficult to read in Dark Skin due to double filter inversion.
  - 2025-12-08 Console command 'Admin::Package::RepositoryList' now indicates which of the displayed packages are installed.
