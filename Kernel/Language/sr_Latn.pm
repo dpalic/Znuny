@@ -32,7 +32,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.862713760588141;
+    $Self->{Completeness}        = 0.862438089151622;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2656,6 +2656,7 @@ sub Data {
         'Change Responsible of %s%s%s' => 'Promeni odgovornog za %s%s%s',
         'The ticket has been locked' => 'Tiket je zaključan.',
         'Ticket Settings' => 'Podešavanje tiketa',
+        'Customer user' => 'Klijent korisnik',
         'Service invalid.' => 'Nevažeća usluga.',
         'SLA invalid.' => 'Nevažeći SLA.',
         'Team Data' => '',
@@ -2725,7 +2726,6 @@ sub Data {
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCustomer.tt
         'Change Customer of %s%s%s' => 'Promeni klijenta za %s%s%s',
         'Customer Information' => 'Informacije o klijentu',
-        'Customer user' => 'Klijent korisnik',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmail.tt
         'Create New Email Ticket' => 'Otvori novi imejl tiket',
@@ -6806,6 +6806,8 @@ sub Data {
         'Sets the queue in the ticket free text screen of a zoomed ticket in the agent interface.' =>
             'Postavlja red na prozoru slobodnog teksta tiketa na detaljnom prikazu tiketa u interfejsu operatera.',
         'Sets if queue must be selected by the agent.' => 'Definiše da li operater mora da odabere red.',
+        'Sets the customer user field in the agent interface.' => '',
+        'Sets the customer user field as mandatory.' => '',
         'Sets the ticket owner in the ticket free text screen of the agent interface.' =>
             'Postavlja vlasnika tiketa u prozoru slobodnog teksta tiketa u interfejsu operatera.',
         'Sets if ticket owner must be selected by the agent.' => 'Podešava ako vlasnik tiketa mora biti izabran od strane operatera.',

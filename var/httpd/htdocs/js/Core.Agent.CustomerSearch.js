@@ -389,7 +389,10 @@ Core.Agent.CustomerSearch = (function (TargetNS) {
      *      Initializes the module.
      */
     TargetNS.Init = function ($Element) {
-        var AutocompleteFocus = false;
+        var AutocompleteFocus = false,
+            Action = Core.Config.Get('Action'),
+            IsAllowedAction = false,
+            AllowedActions = [];
 
         // get customer tickets for AgentTicketCustomer
         if (Core.Config.Get('Action') === 'AgentTicketCustomer') {
@@ -404,13 +407,25 @@ Core.Agent.CustomerSearch = (function (TargetNS) {
             });
         }
 
-        // Enable free selection or input of CustomerID field on AgentTicketProcess and AgentTicketCustomer.
-        if ((Core.Config.Get('Action') === 'AgentTicketProcess'
-            && !Core.Config.Get('Ticket::Frontend::AgentTicketProcess::CustomerIDReadOnly'))
-            ||
-            (Core.Config.Get('Action') === 'AgentTicketCustomer'
-            && !Core.Config.Get('Ticket::Frontend::AgentTicketCustomer::CustomerIDReadOnly'))
-            ) {
+        // Enable free selection or input of CustomerID field for configured actions.
+        AllowedActions = [
+            'AgentTicketProcess',
+            'AgentTicketCustomer',
+            'AgentTicketNote',
+            'AgentTicketClose',
+            'AgentTicketFreeText',
+            'AgentTicketOwner',
+            'AgentTicketPending',
+            'AgentTicketPriority',
+            'AgentTicketResponsible'
+        ];
+
+        Action = Core.Config.Get('Action');
+        IsAllowedAction = AllowedActions.some(function(AllowedAction) {
+            return Action === AllowedAction && !Core.Config.Get('Ticket::Frontend::' + AllowedAction + '::CustomerIDReadOnly');
+        });
+
+        if (IsAllowedAction) {
             $('#CustomerAutoComplete').on('blur keyup' , function() {
                 if($('#CustomerAutoComplete').val()) {
                     ActivateSelectionCustomerID();
@@ -445,6 +460,11 @@ Core.Agent.CustomerSearch = (function (TargetNS) {
                 $Element.val(CustomerTicketText);
                 TargetNS.AddTicketCustomer($Element.attr('id'), CustomerTicketText, UserLogin);
             });
+
+            // fill up this variable to not loose the value of customer user
+            // when loaded in overview and blur action was triggered
+            // without any search action in autocomplete
+            BackupData.CustomerEmail = Core.Config.Get('CustomerMailString');
 
             Core.UI.Autocomplete.Init($Element, function (Request, Response) {
                 var URL = Core.Config.Get('Baselink'),

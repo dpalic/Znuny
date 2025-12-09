@@ -27,7 +27,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D/%M/%Y';
     $Self->{DateInputFormat}     = '%D/%M/%Y';
     $Self->{DateInputFormatLong} = '%D/%M/%Y - %T';
-    $Self->{Completeness}        = 0.447658622342976;
+    $Self->{Completeness}        = 0.447515577568302;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2651,6 +2651,7 @@ sub Data {
         'Change Responsible of %s%s%s' => '',
         'The ticket has been locked' => 'O tícket foi bloqueado',
         'Ticket Settings' => 'Axustes do Ticket',
+        'Customer user' => 'Usuario cliente',
         'Service invalid.' => 'Servizo incorrecto.',
         'SLA invalid.' => '',
         'Team Data' => '',
@@ -2720,7 +2721,6 @@ sub Data {
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCustomer.tt
         'Change Customer of %s%s%s' => '',
         'Customer Information' => 'Información do cliente',
-        'Customer user' => 'Usuario cliente',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmail.tt
         'Create New Email Ticket' => 'Crear un tícket de correo electrónico novo',
@@ -6801,6 +6801,8 @@ sub Data {
         'Sets the queue in the ticket free text screen of a zoomed ticket in the agent interface.' =>
             'Establece a cola na pantalla de texto libre de ticket dun ticket zoom na interface de axente.',
         'Sets if queue must be selected by the agent.' => '',
+        'Sets the customer user field in the agent interface.' => '',
+        'Sets the customer user field as mandatory.' => '',
         'Sets the ticket owner in the ticket free text screen of the agent interface.' =>
             'Establece o propietario do ticket na pantalla texto libre de ticket da interface de axente.',
         'Sets if ticket owner must be selected by the agent.' => 'Establce se propietario do ticket debe ser seleccionado polo axente.',

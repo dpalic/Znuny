@@ -27,7 +27,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.992328591976986;
+    $Self->{Completeness}        = 0.992331043297651;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2651,6 +2651,7 @@ sub Data {
         'Change Responsible of %s%s%s' => 'Verantwortlichen von %s%s%s ändern',
         'The ticket has been locked' => 'Das Ticket wurde gesperrt',
         'Ticket Settings' => 'Ticket-Einstellungen',
+        'Customer user' => 'Kundenbenutzer',
         'Service invalid.' => 'Ungültiger Service.',
         'SLA invalid.' => 'SLA ungültig.',
         'Team Data' => 'Teamdaten',
@@ -2720,7 +2721,6 @@ sub Data {
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCustomer.tt
         'Change Customer of %s%s%s' => 'Kunde von %s%s%s ändern',
         'Customer Information' => 'Kundeninformation',
-        'Customer user' => 'Kundenbenutzer',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmail.tt
         'Create New Email Ticket' => 'Neues E-Mail-Ticket erstellen',
@@ -6801,6 +6801,8 @@ sub Data {
         'Sets the queue in the ticket free text screen of a zoomed ticket in the agent interface.' =>
             'Setzt die Queue im Freitext-Bildschirm von Tickets im Agentenbereich.',
         'Sets if queue must be selected by the agent.' => 'Legt fest, ob Agenten eine Queue wählen müssen.',
+        'Sets the customer user field in the agent interface.' => 'Setzt das Kundenbenutzerfeld in der Agentenoberfläche.',
+        'Sets the customer user field as mandatory.' => 'Legt das Kundenbenutzerfeld als Pflichtfeld fest.',
         'Sets the ticket owner in the ticket free text screen of the agent interface.' =>
             'Setzt den Besitzer im Freitext-Bildschirm für Tickets im Agentenbereich.',
         'Sets if ticket owner must be selected by the agent.' => 'Gibt an, ob ein Ticket-Besitzer durch einen Agenten ausgewählt sein muss.',

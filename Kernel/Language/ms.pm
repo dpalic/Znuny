@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.519418251558255;
+    $Self->{Completeness}        = 0.519252276721521;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2650,6 +2650,7 @@ sub Data {
         'Change Responsible of %s%s%s' => ' ',
         'The ticket has been locked' => 'Tiket telah dikunci',
         'Ticket Settings' => 'Aturan Tiket',
+        'Customer user' => 'Pengguna pelanggan',
         'Service invalid.' => 'Perkhidmatan tidak sah.',
         'SLA invalid.' => '',
         'Team Data' => '',
@@ -2719,7 +2720,6 @@ sub Data {
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCustomer.tt
         'Change Customer of %s%s%s' => 'Tukar Pelanggan bagi %s%s%s',
         'Customer Information' => 'Informasi Pelanggan',
-        'Customer user' => 'Pengguna pelanggan',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmail.tt
         'Create New Email Ticket' => 'Buat Tiket Email Baru.',
@@ -6800,6 +6800,8 @@ sub Data {
         'Sets the queue in the ticket free text screen of a zoomed ticket in the agent interface.' =>
             'Set barisan dalam skrin teks tiket bebas pada tiket zum dalam antara muka agen.',
         'Sets if queue must be selected by the agent.' => '',
+        'Sets the customer user field in the agent interface.' => '',
+        'Sets the customer user field as mandatory.' => '',
         'Sets the ticket owner in the ticket free text screen of the agent interface.' =>
             'Tetapkan pemilik tiket dalam skrin tiket bebas teks dari paparan ejen.',
         'Sets if ticket owner must be selected by the agent.' => 'Tetapkan jika pemilik tiket mesti dipilih oleh ejen.',

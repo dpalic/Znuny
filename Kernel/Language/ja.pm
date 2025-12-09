@@ -30,7 +30,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y/%M/%D';
     $Self->{DateInputFormat}     = '%Y/%M/%D';
     $Self->{DateInputFormatLong} = '%Y/%M/%D - %T';
-    $Self->{Completeness}        = 0.6607000159821;
+    $Self->{Completeness}        = 0.660488895989775;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2656,6 +2656,7 @@ sub Data {
         'Change Responsible of %s%s%s' => '%s%s%sの責任者を変更',
         'The ticket has been locked' => 'チケットはロック済です',
         'Ticket Settings' => 'チケット設定',
+        'Customer user' => '顧客ユーザー',
         'Service invalid.' => '無効なサービスです',
         'SLA invalid.' => 'SLAが無効です。',
         'Team Data' => '',
@@ -2725,7 +2726,6 @@ sub Data {
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCustomer.tt
         'Change Customer of %s%s%s' => '%s%s%sの顧客を変更',
         'Customer Information' => '顧客情報',
-        'Customer user' => '顧客ユーザー',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmail.tt
         'Create New Email Ticket' => '新規メールチケットの作成',
@@ -6807,6 +6807,8 @@ sub Data {
         'Sets the queue in the ticket free text screen of a zoomed ticket in the agent interface.' =>
             '担当者インタフェースのズームされたチケットのチケット自由テキスト画面で、キューを設定します。',
         'Sets if queue must be selected by the agent.' => '担当者がキューを選択する必要があるかどうかを設定します。',
+        'Sets the customer user field in the agent interface.' => '',
+        'Sets the customer user field as mandatory.' => '',
         'Sets the ticket owner in the ticket free text screen of the agent interface.' =>
             '担当者インタフェースのチケット・フリー・テキスト・スクリーンで、チケット所有者を設定します。',
         'Sets if ticket owner must be selected by the agent.' => 'チケットの所有者が担当者によって必ず選択される必要があるかどうかを設定します。',

@@ -30,7 +30,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.211123541633371;
+    $Self->{Completeness}        = 0.211056079245886;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2654,6 +2654,7 @@ sub Data {
         'Change Responsible of %s%s%s' => '',
         'The ticket has been locked' => 'Kartica je zaključana.',
         'Ticket Settings' => 'Postavke kartica',
+        'Customer user' => 'Korisnik',
         'Service invalid.' => 'Neispravan servis',
         'SLA invalid.' => '',
         'Team Data' => '',
@@ -2723,7 +2724,6 @@ sub Data {
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCustomer.tt
         'Change Customer of %s%s%s' => '',
         'Customer Information' => 'Informacije o korisniku',
-        'Customer user' => 'Korisnik',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmail.tt
         'Create New Email Ticket' => 'Otvori novu karticu E-pošte',
@@ -6804,6 +6804,8 @@ sub Data {
         'Sets the queue in the ticket free text screen of a zoomed ticket in the agent interface.' =>
             '',
         'Sets if queue must be selected by the agent.' => '',
+        'Sets the customer user field in the agent interface.' => '',
+        'Sets the customer user field as mandatory.' => '',
         'Sets the ticket owner in the ticket free text screen of the agent interface.' =>
             '',
         'Sets if ticket owner must be selected by the agent.' => '',

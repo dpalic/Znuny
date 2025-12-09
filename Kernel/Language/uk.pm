@@ -27,7 +27,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%M/%D/%Y';
     $Self->{DateInputFormat}     = '%M/%D/%Y';
     $Self->{DateInputFormatLong} = '%M/%D/%Y - %T';
-    $Self->{Completeness}        = 0.420648873261947;
+    $Self->{Completeness}        = 0.420514459178783;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -2651,6 +2651,7 @@ sub Data {
         'Change Responsible of %s%s%s' => 'Змінити Відповідального',
         'The ticket has been locked' => 'Заявка заблокована',
         'Ticket Settings' => 'Настроювання заявок',
+        'Customer user' => 'Користувач клієнта',
         'Service invalid.' => 'Служба недійсна.',
         'SLA invalid.' => '',
         'Team Data' => '',
@@ -2720,7 +2721,6 @@ sub Data {
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCustomer.tt
         'Change Customer of %s%s%s' => 'Зміна Клаєнта: %s%s%s',
         'Customer Information' => 'Інформація про клієнта',
-        'Customer user' => 'Користувач клієнта',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmail.tt
         'Create New Email Ticket' => 'Заявка по e-mail',
@@ -6801,6 +6801,8 @@ sub Data {
         'Sets the queue in the ticket free text screen of a zoomed ticket in the agent interface.' =>
             '',
         'Sets if queue must be selected by the agent.' => '',
+        'Sets the customer user field in the agent interface.' => '',
+        'Sets the customer user field as mandatory.' => '',
         'Sets the ticket owner in the ticket free text screen of the agent interface.' =>
             '',
         'Sets if ticket owner must be selected by the agent.' => '',

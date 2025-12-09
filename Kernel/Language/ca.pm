@@ -27,7 +27,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.199616429598849;
+    $Self->{Completeness}        = 0.199552644192363;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -2651,6 +2651,7 @@ sub Data {
         'Change Responsible of %s%s%s' => '',
         'The ticket has been locked' => 'Aquest tiquet ha estat bloquejat',
         'Ticket Settings' => 'Configuració dels tiquets',
+        'Customer user' => 'Usuari del client',
         'Service invalid.' => 'Servei no vàlid.',
         'SLA invalid.' => '',
         'Team Data' => '',
@@ -2720,7 +2721,6 @@ sub Data {
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCustomer.tt
         'Change Customer of %s%s%s' => '',
         'Customer Information' => 'Informació del client',
-        'Customer user' => 'Usuari del client',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmail.tt
         'Create New Email Ticket' => 'Crear nou tiquet correu electrònic',
@@ -6801,6 +6801,8 @@ sub Data {
         'Sets the queue in the ticket free text screen of a zoomed ticket in the agent interface.' =>
             '',
         'Sets if queue must be selected by the agent.' => '',
+        'Sets the customer user field in the agent interface.' => '',
+        'Sets the customer user field as mandatory.' => '',
         'Sets the ticket owner in the ticket free text screen of the agent interface.' =>
             '',
         'Sets if ticket owner must be selected by the agent.' => '',

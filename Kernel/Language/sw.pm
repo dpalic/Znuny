@@ -29,7 +29,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%M/%D/%Y';
     $Self->{DateInputFormat}     = '%M/%D/%Y';
     $Self->{DateInputFormatLong} = '%M/%D/%Y - %T';
-    $Self->{Completeness}        = 0.4225667252677;
+    $Self->{Completeness}        = 0.42243169835437;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -2653,6 +2653,7 @@ sub Data {
         'Change Responsible of %s%s%s' => '',
         'The ticket has been locked' => 'Tiketi imefungwa',
         'Ticket Settings' => 'Mipangilio ya tiketi',
+        'Customer user' => 'Mtumiaji wa mteja',
         'Service invalid.' => 'HUduma batili.',
         'SLA invalid.' => '',
         'Team Data' => '',
@@ -2722,7 +2723,6 @@ sub Data {
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCustomer.tt
         'Change Customer of %s%s%s' => '',
         'Customer Information' => 'Taarifa za mteja',
-        'Customer user' => 'Mtumiaji wa mteja',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmail.tt
         'Create New Email Ticket' => 'Tengeneza tiketi ya barua pepe mpya',
@@ -6806,6 +6806,8 @@ Mfano:
         'Sets the queue in the ticket free text screen of a zoomed ticket in the agent interface.' =>
             'Weka foleni kwenye skrini ya matini huru ya tiketi ya tiketi iliyokuzwa katika kiolesura cha wakala',
         'Sets if queue must be selected by the agent.' => '',
+        'Sets the customer user field in the agent interface.' => '',
+        'Sets the customer user field as mandatory.' => '',
         'Sets the ticket owner in the ticket free text screen of the agent interface.' =>
             'Inamuweka mmiliki wa tiketi katika skrini matini huru ya tiketi ya  kiolesura cha wakala.',
         'Sets if ticket owner must be selected by the agent.' => 'Inaweka kama mmiliki wa tiketi lazima achaguliwe na wakala.',
