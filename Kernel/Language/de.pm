@@ -27,7 +27,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.992328591976986;
+    $Self->{Completeness}        = 1;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -279,8 +279,8 @@ sub Data {
         'Queues ↔ Auto Responses' => 'Queues ↔ Automatische Antworten',
         'Auto Response Management' => 'Verwaltung automatischer Antworten',
         'Edit Auto Response' => 'Automatische Antwort bearbeiten',
-        'Do you really want to delete this %s?' => '',
-        'auto response' => '',
+        'Do you really want to delete this %s?' => 'Möchten Sie dieses %s wirklich löschen?',
+        'auto response' => 'automatische Antwort',
         'Response' => 'Antwort',
         'Auto response from' => 'Automatische Antwort von',
 
@@ -1989,7 +1989,7 @@ sub Data {
         'Overwrite existing salutations?' => 'Bestehende Anreden überschreiben?',
         'Salutation Management' => 'Verwaltung von Anreden',
         'Edit Salutation' => 'Anrede bearbeiten',
-        'salutation' => '',
+        'salutation' => 'Anrede',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminSecureMode.tt
         'Secure Mode Needs to be Enabled!' => 'Sicherheitsmodus muss eingeschaltet sein!',
@@ -2036,8 +2036,8 @@ sub Data {
         'Timeout (in seconds) for connection to host.' => 'Timeout (in Sekunden) für Verbindung zum Host.',
         'Skip SSL verification' => 'SSL-Verifikation überspringen',
         'Select to make this the fallback/default config for any email address not configured in other outbound email profiles. Only one outbound email profile can be the fallback.' =>
-            '',
-        'Edit current fallback outbound email profile (host %s).' => '',
+            'Wählen Sie diese Option, um diese Einstellung als Fallback/Standardeinstellung für alle E-Mail-Adressen zu verwenden, die in anderen Profilen für ausgehende E-Mails nicht konfiguriert sind. Es kann nur ein Profil für ausgehende E-Mails als Fallback verwendet werden.',
+        'Edit current fallback outbound email profile (host %s).' => 'Aktuelles Fallback-Profil für ausgehende E-Mails (Host %s) bearbeiten.',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminService.tt
         'Add Service' => 'Service hinzufügen',
@@ -2074,7 +2074,7 @@ sub Data {
         'Overwrite existing signatures?' => 'Bestehende Signaturen überschreiben?',
         'Signature Management' => 'Signaturverwaltung',
         'Edit Signature' => 'Signatur bearbeiten',
-        'signature' => '',
+        'signature' => 'Signatur',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminState.tt
         'Add State' => 'Status hinzufügen',
@@ -2707,10 +2707,10 @@ sub Data {
         'Please remove this entry and enter a new one with the correct value.' =>
             'Bitte entfernen Sie diesen Eintrag und geben Sie einen mit einem gültigen Wert an.',
         'This address already exists on the address list.' => 'Dieser Eintrag existiert bereits in der Adressliste.',
-        'Search for customer' => '',
-        'Open address book' => '',
-        'Address book' => '',
-        'Customer suggestions' => '',
+        'Search for customer' => 'Kunde suchen',
+        'Open address book' => 'Adressbuch öffnen',
+        'Address book' => 'Adressbuch',
+        'Customer suggestions' => 'Kundenvorschläge',
         'Please include at least one recipient' => 'Bitte geben sie mindestens einen Empfänger an',
         'This address is registered as system address and cannot be used: %s' =>
             'Diese Adresse ist als Systemadresse registriert und kann daher nicht verwendet werden: %s',
@@ -2730,7 +2730,7 @@ sub Data {
         'Get all' => 'Alles holen',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailOutbound.tt
-        'Undo & Close' => '',
+        'Undo & Close' => 'Rückgängig machen und Schließen',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
         'Resend Email for %s%s%s' => 'E-Mail erneut versenden für %s%s%s',
@@ -3605,14 +3605,14 @@ sub Data {
         '%s (copy)' => '%s (Kopie)',
         'There was an error creating the Notification' => 'Beim Erstellen der Benachrichtigung ist ein Fehler aufgetreten',
         'Notifications could not be imported due to an unknown error, please check logs for more information.' =>
-            '',
+            'Benachrichtigungen konnten aufgrund eines unbekannten Fehlers nicht importiert werden. Bitte Logs für weitere Informationen prüfen.',
         'The following notifications have been added successfully: %s.' =>
-            '',
+            'Die folgenden Benachrichtigungen wurden erfolgreich hinzugefügt: %s.',
         'The following notifications have been updated successfully: %s.' =>
-            '',
-        'The following notifications were not updated: %s.' => '',
+            'Die folgenden Benachrichtigungen wurden erfolgreich aktualisiert: %s.',
+        'The following notifications were not updated: %s.' => 'Die folgenden Benachrichtigungen wurden nicht aktualisiert: %s.',
         'There where errors adding/updating the following notifications: %s. Please check the log file for more information.' =>
-            '',
+            'Beim Hinzufügen/Aktualisieren der folgenden Benachrichtigungen sind Fehler aufgetreten: %s. Bitte Logs für weitere Informationen prüfen.',
         'Notification updated!' => 'Benachrichtigung aktualisiert!',
         'Agent (resources), who are selected within the appointment' => 'Agenten (Ressourcen), welche innerhalb des Termins ausgewählt wurden',
         'All agents with (at least) read permission for the appointment (calendar)' =>
@@ -3627,10 +3627,10 @@ sub Data {
         'Auto responses could not be imported due to an unknown error. Please check logs for more information.' =>
             'Automatische Antworten konnten aufgrund eines unbekannten Fehlers nicht importiert werden. Bitte Logs für weitere Informationen prüfen.',
         'The following auto responses have been added successfully: %s.' =>
-            '',
+            'Die folgenden automatischen Antworten wurden erfolgreich hinzugefügt: %s.',
         'The following auto responses have been updated successfully: %s.' =>
-            '',
-        'The following auto responses were not updated: %s.' => '',
+            'Die folgenden automatischen Antworten wurden erfolgreich aktualisiert: %s.',
+        'The following auto responses were not updated: %s.' => 'Die folgenden automatischen Antworten wurden nicht aktualisiert: %s.',
         'Errors adding/updating the following auto responses: %s. Please check logs for more information.' =>
             'Fehler beim Hinzufügen/Aktualisieren der folgenden automatischen Antworten: %s. Bitte Logs für weitere Informationen prüfen.',
 
@@ -3931,7 +3931,7 @@ sub Data {
 
         # Perl Module: Kernel/Modules/AdminNotificationEvent.pm
         'Errors adding/updating the following notifications: %s. Please check logs for more information.' =>
-            '',
+            'Fehler beim Hinzufügen/Aktualisieren der folgenden Benachrichtigungen: %s. Bitte Logs für weitere Informationen prüfen.',
         'Agent who created the ticket' => 'Agent, der das Ticket erstellt hat',
         'Agent who owns the ticket' => 'Agent, der Besitzer des Tickets ist',
         'Agent who is responsible for the ticket' => 'Agent, der Verantwortlicher für das Ticket ist',
@@ -4142,10 +4142,10 @@ sub Data {
         'Error creating the salutation.' => 'Fehler beim Erstellen der Anrede.',
         'Salutations could not be imported due to an unknown error. Please check logs for more information.' =>
             'Anreden konnten aufgrund eines unbekannten Fehlers nicht importiert werden. Bitte Logs für weitere Informationen prüfen.',
-        'The following salutations have been added successfully: %s.' => '',
+        'The following salutations have been added successfully: %s.' => 'Die folgenden Anreden wurden erfolgreich hinzugefügt: %s.',
         'The following salutations have been updated successfully: %s.' =>
-            '',
-        'The following salutations were not updated: %s.' => '',
+            'Die folgenden Anreden wurden erfolgreich aktualisiert: %s.',
+        'The following salutations were not updated: %s.' => 'Die folgenden Anreden wurden nicht aktualisiert: %s.',
         'Errors adding/updating the following salutations: %s. Please check logs for more information.' =>
             'Fehler beim Hinzufügen/Aktualisieren der folgenden Anreden: %s. Bitte Logs für weitere Informationen prüfen.',
 
@@ -4161,10 +4161,10 @@ sub Data {
         'Error creating the signature.' => 'Fehler beim Erstellen der Signatur.',
         'Signatures could not be imported due to an unknown error. Please check logs for more information.' =>
             'Signaturen konnten aufgrund eines unbekannten Fehlers nicht importiert werden. Bitte Logs für weitere Informationen prüfen.',
-        'The following signatures have been added successfully: %s.' => '',
+        'The following signatures have been added successfully: %s.' => 'Die folgenden Signaturen wurden erfolgreich hinzugefügt: %s.',
         'The following signatures have been updated successfully: %s.' =>
-            '',
-        'The following signatures were not updated: %s.' => '',
+            'Die folgenden Signaturen wurden erfolgreich aktualisiert: %s.',
+        'The following signatures were not updated: %s.' => 'Die folgenden Signaturen wurden nicht aktualisiert: %s.',
         'Errors adding/updating the following signatures: %s. Please check logs for more information.' =>
             'Fehler beim Hinzufügen/Aktualisieren der folgenden Signaturen: %s. Bitte Logs für weitere Informationen prüfen.',
 
@@ -4228,10 +4228,10 @@ sub Data {
         'Standard templates could not be imported due to an unknown error. Please check logs for more information.' =>
             'Standardvorlagen konnten aufgrund eines unbekannten Fehlers nicht importiert werden. Bitte Logs für weitere Informationen prüfen.',
         'The following standard templates have been added successfully: %s.' =>
-            '',
+            'Die folgenden Standardvorlagen wurden erfolgreich hinzugefügt: %s.',
         'The following standard templates have been updated successfully: %s.' =>
-            '',
-        'The following standard templates were not updated: %s.' => '',
+            'Die folgenden Standardvorlagen wurden erfolgreich aktualisiert: %s.',
+        'The following standard templates were not updated: %s.' => 'Die folgenden Standardvorlagen wurden nicht aktualisiert: %s.',
         'Errors adding/updating the following standard templates: %s. Please check logs for more information.' =>
             'Fehler beim Hinzufügen/Aktualisieren der folgenden Standardvorlagen: %s. Bitte Logs für weitere Informationen prüfen.',
 
@@ -5793,11 +5793,11 @@ sub Data {
             'Nutzt richtext zum betrachten und bearbeiten von: Artikeln, Begrüßungen, Signaturen, Standard Vorlagen, Automatische Antworten und Benachrichtigungen.',
         'Defines the URL rich text editor path.' => 'Definiert den URL-RichTextEditor-Pfad.',
         'Path to RichText content CSS file that will be used to apply internal style to articles. The style will be appended into articles body when using agent interface. Customer internal article styles should match the same or very simillar rules.' =>
-            '',
+            'Pfad zum CSS-Datei, die für die Anwendung interner Stile auf Artikel verwendet wird. Der Stil wird am Ende der Artikel-Body beim Nutzen der Agenten-Oberfläche angehängt. Interner Stil für Artikel in der Kunden-Oberfläche sollte die selben oder sehr ähnliche Regeln haben.',
         'Path to RichText content CSS file that will be used to apply internal style to articles. The styles will be appended into articles body when using customer interface. Agent internal article styles should match the same or very simillar rules.' =>
-            '',
+            'Pfad zum CSS-Datei, die für die Anwendung interner Stile auf Artikel verwendet wird. Der Stil wird am Ende der Artikel-Body beim Nutzen der Kunden-Oberfläche angehängt. Interner Stil für Artikel in der Agenten-Oberfläche sollte die selben oder sehr ähnliche Regeln haben.',
         'Defines the additional default CSS used in rich text editors content. The style will be appended into articles body.' =>
-            '',
+            'Definiert den zusätzlichen Standard-CSS, der in den RichText-Editoren für den Inhalt verwendet wird. Der Stil wird am Ende der Artikel-Body angehängt.',
         'Defines if the enhanced mode should be used (enables use of table, replace, subscript, superscript, paste from word, etc.).' =>
             'Bestimmt, ob der erweiterte Modus genutzt werden soll (schaltet die Benutzung von Tabellen, Suchen & Ersetzen, Tiefstellen, Hochstellen, aus Word einfügen, etc. frei).',
         'Defines if the enhanced mode should be used (enables use of table, replace, subscript, superscript, paste from word, etc.) in customer interface.' =>
@@ -5807,20 +5807,20 @@ sub Data {
         'Defines the height for the rich text editor component. Enter number (pixels) or percent value (relative).' =>
             'Steuert die Höhe der Richtext-Editor-Komponente. Geben Sie eine Zahl (für die Höhe in Pixeln) oder einen prozentualen Wert (für eine relative Höhe) an.',
         'Defines the minimum height for the rich text editor component. Enter number (pixels) or percent value (relative).' =>
-            '',
+            'Definiert die minimale Höhe der RichText-Editor-Komponente. Geben Sie eine Zahl (für die Höhe in Pixeln) oder einen prozentualen Wert (für eine relative Höhe) an.',
         'Defines the selectable font sizes in the rich text editor.' => 'Legt die wählbaren Schriftgrößen im Rich-Text-Editor fest.',
         'Defines the selectable format tags in the rich text editor. Each option is an JSON equivalent of heading options used in CKEditor5, more info: https://ckeditor.com/docs/ckeditor5/latest/features/headings.html#configuring-heading-levels.' =>
-            '',
+            'Definiert die auswählbaren Format-Tags im Rich-Text-Editor. Jede Option ist ein JSON-äquivalent der Headings-Optionen, die in CKEditor5 verwendet werden, mehr Informationen: https://ckeditor.com/docs/ckeditor5/latest/features/headings.html#configuring-heading-levels.',
         'Defines enabled plugins that are available from the CKEditor build.' =>
-            '',
-        'Defines additional plugins in the rich text editor.' => '',
+            'Definiert die aktivierten Plugins, die aus dem CKEditor-Build verfügbar sind.',
+        'Defines additional plugins in the rich text editor.' => 'Definiert zusätzliche Plugins im Rich-Text-Editor.',
         'Defines plugins that will be excluded from usage in the rich text editor.' =>
-            '',
+            'Definiert die Plugins, die aus der Verwendung im Rich-Text-Editor ausgeschlossen werden.',
         'Defines the selectable fonts in the rich text editor.' => 'Legt die auswählbaren Schriftarten im Rich-Text-Editor fest.',
         'Defines content that is allowed for use in the rich text editor.' =>
-            '',
+            'Definiert den Inhalt, der für die Verwendung im Rich-Text-Editor erlaubt ist.',
         'Defines content that is disallowed for use in the rich text editor.' =>
-            '',
+            'Definiert den Inhalt, der für die Verwendung im Rich-Text-Editor nicht erlaubt ist.',
         'Global settings for all popup profiles.' => 'Globale Einstellungen für alle Popup-Profile.',
         'Disable autocomplete in the login screen.' => 'Deaktiviert die Autovervollständigung im Anmeldebildschirm.',
         'Disable HTTP header "X-Frame-Options: SAMEORIGIN" to allow Znuny to be included as an IFrame in other websites. Disabling this HTTP header can be a security issue! Only disable it, if you know what you are doing!' =>
@@ -7810,7 +7810,7 @@ sub Data {
         'Configures a default TicketDynamicField setting. "Name" defines the dynamic field which should be used, "Value" is the data that will be set, and "Event" defines the trigger event. Please check the developer manual (https://doc.znuny.org/manual/developer/), chapter "Ticket Event Module".' =>
             'Konfiguriert eine Standardeinstellung für TicketDynamicField. "Name" definiert das Dynamische Feld, das verwendet werden soll, "Wert" sind die Daten, die gesetzt werden sollen, und "Ereignis" definiert das Auslöseereignis. Bitte beachten Sie das Entwicklerhandbuch (https://doc.znuny.org/manual/developer/), Kapitel "Ticket Event Module".',
         'Defines the default search filter for the ticket merge screen. This filter is applied when searching for tickets to merge with. The StateType filter limits the search to tickets with specific states (new, open, closed, pending reminder, pending auto). Additional filters can be added dynamically.' =>
-            '',
+            'Definiert den Standard-Suchfilter für den Ticket-Zusammenführungsbildschirm. Dieser Filter wird angewendet, wenn nach Tickets gesucht wird, die zusammengeführt werden sollen. Der StateType-Filter beschränkt die Suche auf Tickets mit bestimmten Status (neu, offen, geschlossen, Wartung, Wartung automatisch). Zusätzliche Filter können dynamisch hinzugefügt werden.',
         'Defines the list of types for templates.' => 'Definiert die Typenliste für Templates.',
         'List of default Standard Templates which are assigned automatically to new Queues upon creation.' =>
             'Liste der Standardvorlagen, welche neuen Queues nach Erstellung automatisch zugeordnet werden.',
@@ -8014,7 +8014,7 @@ sub Data {
         'Maximum length of displayed attachment filenames in the article preview of ticket zoom view.' =>
             'Maximale Länge der angezeigten Dateinamen von Anhängen in der Artikelvorschau der Ticket-Detailansicht.',
         'General settings for autocompletion in rich text editor. By default "ItemTemplate" uses "li" html tag to show the option that is matching (list format). The value of the key is used to define html inside it.' =>
-            '',
+            'Allgemeine Einstellungen für Autocompletion im Rich-Text-Editor. Standardmäßig verwendet "ItemTemplate" den "li" HTML-Tag, um die Option anzuzeigen, die passt (Listenformat). Der Wert des Schlüssels wird verwendet, um HTML innerhalb des Tags zu definieren.',
         'Rich text editor configuration for autocompletion module.' => 'Rich-Text-Editor-Konfiguration für Autocompletion-Modul.',
         'Rich text editor configuration for autocompletion module to support templates.' =>
             'Rich-Text-Editor-Konfiguration für Autocompletion-Modul zur Unterstützung von Vorlagen.',
@@ -8034,9 +8034,9 @@ sub Data {
             'Benachrichtigungsmodul für Agenten-Interface, das die Anzahl der Erwähnungen anzeigt.',
         'Module to grant access to the mentioned agents of a ticket.' => 'Modul, das Zugriff für die erwähnten Agenten eines Tickets gewährt.',
         'Defines the default ticket attribute for ticket sorting in the mention ticket view of the agent interface.' =>
-            '',
+            'Definiert das Standard-Ticket-Attribut für die Ticket-Sortierung in der Ansicht "Erwähnte Tickets" des Agenten-Interface.',
         'Defines the default ticket order in the ticket mention view of the agent interface. Up: oldest on top. Down: latest on top.' =>
-            '',
+            'Definiert die Standard-Ticket-Reihenfolge in der Ansicht "Erwähnte Tickets" des Agenten-Interface. Auf: Älteste oben. Ab: Neuste oben.',
         'Assignment between event and type.' => 'Zuweisung zwischen Ereignis und Typ.',
         'Defines the link type for each activity.' => 'Legt den Verknüpfungstyp für jede Aktivität fest.',
         'List of colors in hexadecimal RGB which will be available for selection. Make sure the colors are dark enough so white text can be overlayed on them.' =>
@@ -8290,8 +8290,8 @@ sub Data {
         'Attachment was deleted successfully.' => 'Anhang erfolgreich entfernt.',
 
         # JS File: var/httpd/htdocs/js/Core.Agent.Admin.AutoResponse.js
-        'Delete this %s' => '',
-        'Deleting the %s and its data. This may take a while...' => '',
+        'Delete this %s' => 'Dieses %s löschen',
+        'Deleting the %s and its data. This may take a while...' => 'Lösche %s und die zugehörigen Daten. Dies kann eine Weile dauern...',
 
         # JS File: var/httpd/htdocs/js/Core.Agent.Admin.DBCRUD.js
         'Deleting the object and its data. This may take a while...' => 'Löschen des Objekts und seiner Daten. Dies kann eine Weile dauern...',
@@ -8656,7 +8656,7 @@ sub Data {
         'Available space %s of %s.' => 'Verfügbarer Platz %s von %s.',
         'Upload information' => 'Upload-Information',
         'An unknown error occurred when preview the attachment. Please try again. If the error persists, please contact your system administrator.' =>
-            '',
+            'Bei der Vorschau des Anhangs ist ein unbekannter Fehler aufgetreten. Bitte versuchen Sie es erneut. Wenn der Fehler weiterhin auftritt, kontaktieren Sie bitte Ihren Systemadministrator.',
         'An unknown error occurred when deleting the attachment. Please try again. If the error persists, please contact your system administrator.' =>
             'Beim Löschen des Anhangs ist ein unbekannter Fehler aufgetreten. Bitte versuchen Sie es erneut. Wenn der Fehler weiterhin auftritt, kontaktieren Sie bitte Ihren Systemadministrator.',
 
@@ -8788,7 +8788,7 @@ Ihr Helpdesk-Team
         'Arabic (Saudi Arabia)' => 'Arabisch (Saudi-Arabien)',
         'Article Color' => 'Artikel Farbe',
         'ArticleTree' => 'Artikelbaum',
-        'AsPopup' => '',
+        'AsPopup' => 'Als Popup',
         'Attachment Name' => 'Name des Anhangs',
         'Avatar' => 'Avatar',
         'Based on global RichText setting' => 'Basierend auf der globalen Richtext-Einstellung',
@@ -9199,7 +9199,7 @@ Ihr Helpdesk-Team
         'Process Ticket Category: Define a process icon.' => 'Ticketprozess-Kategorie: Definieren Sie ein Prozess-Symbol.',
         'Process Ticket Category: Define a process link target.' => 'Ticketprozess-Kategorie: Definieren Sie ein Prozessverknüpfungsziel.',
         'Process Ticket.' => 'Prozess-Ticket.',
-        'Process ticket category' => '',
+        'Process ticket category' => 'Prozess-Ticket-Kategorie',
         'ProcessID' => 'ProcessID',
         'Processes & Automation' => 'Prozesse & Automatisierung',
         'Provides a matrix overview of the tickets per state per queue' =>
