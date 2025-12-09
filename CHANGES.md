@@ -1,4 +1,5 @@
 # 7.3.1 2025-??-??
+ - 2025-12-09 Fixed: Article overview text difficult to read in Dark Skin due to double filter inversion.
  - 2025-12-08 Console command 'Admin::Package::RepositoryList' now indicates which of the displayed packages are installed.
  - 2025-12-01 Integrated package Znuny-MultiSendmail.
  - 2025-11-28 Added new GUI-Redesign. Thanks to Tim Binder stbt.de.
