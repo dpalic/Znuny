@@ -32,7 +32,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%M-%D';
     $Self->{DateInputFormat}     = '%Y-%M-%D';
     $Self->{DateInputFormatLong} = '%Y-%M-%D - %T';
-    $Self->{Completeness}        = 0.991689307975068;
+    $Self->{Completeness}        = 0.991372423709858;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2656,6 +2656,7 @@ sub Data {
         'Change Responsible of %s%s%s' => '%s%s%s felelősének módosítása',
         'The ticket has been locked' => 'A jegy zárolva lett',
         'Ticket Settings' => 'Jegybeállítások',
+        'Customer user' => 'Ügyfél-felhasználó',
         'Service invalid.' => 'Érvénytelen szolgáltatás.',
         'SLA invalid.' => 'Az SLA érvénytelen.',
         'Team Data' => 'Csapatadatok',
@@ -2725,7 +2726,6 @@ sub Data {
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCustomer.tt
         'Change Customer of %s%s%s' => '%s%s%s ügyfelének módosítása',
         'Customer Information' => 'Ügyfél-információk',
-        'Customer user' => 'Ügyfél-felhasználó',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmail.tt
         'Create New Email Ticket' => 'Új e-mail jegy létrehozása',
@@ -6806,6 +6806,8 @@ sub Data {
         'Sets the queue in the ticket free text screen of a zoomed ticket in the agent interface.' =>
             'Beállítja a várólistát egy nagyított jegynek a jegy szabad szöveg képernyőjén az ügyintézői felületen.',
         'Sets if queue must be selected by the agent.' => 'Beállítja, hogy az ügyintézőnek ki kell választania a várólistát.',
+        'Sets the customer user field in the agent interface.' => '',
+        'Sets the customer user field as mandatory.' => '',
         'Sets the ticket owner in the ticket free text screen of the agent interface.' =>
             'Beállítja a jegy tulajdonosát az ügyintézői felület jegy szabad szöveg képernyőjén.',
         'Sets if ticket owner must be selected by the agent.' => 'Beállítja, hogy az ügyintézőnek ki kell választania a jegy tulajdonosát.',

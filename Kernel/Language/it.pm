@@ -35,7 +35,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D/%M/%Y';
     $Self->{DateInputFormat}     = '%D/%M/%Y';
     $Self->{DateInputFormatLong} = '%D/%M/%Y - %T';
-    $Self->{Completeness}        = 0.580629694741889;
+    $Self->{Completeness}        = 0.580444160409011;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -2659,6 +2659,7 @@ sub Data {
         'Change Responsible of %s%s%s' => 'Responsabile del cambiamento di %s%s%s',
         'The ticket has been locked' => 'Il ticket è stato bloccato',
         'Ticket Settings' => 'Impostazioni dei ticket',
+        'Customer user' => 'Utenza cliente',
         'Service invalid.' => 'Servizio non valido.',
         'SLA invalid.' => 'SLA non valido.',
         'Team Data' => '',
@@ -2728,7 +2729,6 @@ sub Data {
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCustomer.tt
         'Change Customer of %s%s%s' => 'Cambia cliente di %s%s%s',
         'Customer Information' => 'Informazioni cliente',
-        'Customer user' => 'Utenza cliente',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmail.tt
         'Create New Email Ticket' => 'Crea nuovo ticket email',
@@ -6813,6 +6813,8 @@ NOTA: i sistemi di terze parti richiedono una configurazione a se.',
         'Sets the queue in the ticket free text screen of a zoomed ticket in the agent interface.' =>
             '',
         'Sets if queue must be selected by the agent.' => 'Attivare se l’agente deve selezionare la coda.',
+        'Sets the customer user field in the agent interface.' => '',
+        'Sets the customer user field as mandatory.' => '',
         'Sets the ticket owner in the ticket free text screen of the agent interface.' =>
             '',
         'Sets if ticket owner must be selected by the agent.' => 'Imposta se il proprietario del ticket deve essere selezionato dall\'agente.',

@@ -7798,7 +7798,7 @@ msgstr ""
 msgid "Customer Information"
 msgstr "Renseignements sur le client"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCustomer.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
 msgid "Customer user"
 msgstr "Client utilisateur "
 
@@ -25215,5 +25215,13 @@ msgstr ""
 
 #. Perl Module: Kernel/System/PostMaster/Filter.pm
 msgid "Couldn't read Filter configuration YAML file. Please make sure the file is valid."
+msgstr ""
+
+#. XML Definition: Kernel/Config/Files/XML/Ticket.xml
+msgid "Sets the customer user field in the agent interface."
+msgstr ""
+
+#. XML Definition: Kernel/Config/Files/XML/Ticket.xml
+msgid "Sets the customer user field as mandatory."
 msgstr ""
 

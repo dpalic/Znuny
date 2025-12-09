@@ -29,7 +29,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D/%M/%Y';
     $Self->{DateInputFormat}     = '%D/%M/%Y';
     $Self->{DateInputFormatLong} = '%D/%M/%Y - %T';
-    $Self->{Completeness}        = 0.249480581748442;
+    $Self->{Completeness}        = 0.249400862757629;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2653,6 +2653,7 @@ sub Data {
         'Change Responsible of %s%s%s' => '',
         'The ticket has been locked' => 'टिकट के लॉक कर दिया गया है',
         'Ticket Settings' => 'टिकट व्यवस्थाऐं',
+        'Customer user' => 'ग्राहक उपयोगकर्ता',
         'Service invalid.' => 'अवैध सेवा।',
         'SLA invalid.' => '',
         'Team Data' => '',
@@ -2722,7 +2723,6 @@ sub Data {
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCustomer.tt
         'Change Customer of %s%s%s' => '',
         'Customer Information' => 'ग्राहक की जानकारी',
-        'Customer user' => 'ग्राहक उपयोगकर्ता',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmail.tt
         'Create New Email Ticket' => 'नई ईमेल टिकट बनाएँ',
@@ -6803,6 +6803,8 @@ sub Data {
         'Sets the queue in the ticket free text screen of a zoomed ticket in the agent interface.' =>
             '',
         'Sets if queue must be selected by the agent.' => '',
+        'Sets the customer user field in the agent interface.' => '',
+        'Sets the customer user field as mandatory.' => '',
         'Sets the ticket owner in the ticket free text screen of the agent interface.' =>
             'प्रतिनिधि अंतरफलक के टिकट मुक्त पाठ स्क्रीन में टिकट के स्वामी को स्थापित करता है।',
         'Sets if ticket owner must be selected by the agent.' => 'स्थापित करता है,यदि टिकट स्वामी प्रतिनिधि के द्वारा चुना जाना चाहिए।',

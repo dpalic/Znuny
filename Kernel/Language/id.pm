@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D/%M/%Y';
     $Self->{DateInputFormat}     = '%D/%M/%Y';
     $Self->{DateInputFormatLong} = '%D/%M/%Y - %T';
-    $Self->{Completeness}        = 0.585424324756273;
+    $Self->{Completeness}        = 0.585237258347979;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -2652,6 +2652,7 @@ bin/znuny.Daemon.pl status\').',
         'Change Responsible of %s%s%s' => 'Ubah tanggung jawab dari %s%s%s',
         'The ticket has been locked' => 'Tiket telah dikunci',
         'Ticket Settings' => 'Pengaturan email',
+        'Customer user' => 'Pengguna pelanggan',
         'Service invalid.' => 'Layanan tidak sah',
         'SLA invalid.' => '',
         'Team Data' => '',
@@ -2721,7 +2722,6 @@ bin/znuny.Daemon.pl status\').',
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCustomer.tt
         'Change Customer of %s%s%s' => 'Ubah pelanggan dari %s%s%s',
         'Customer Information' => 'Informasi Pelanggan',
-        'Customer user' => 'Pengguna pelanggan',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmail.tt
         'Create New Email Ticket' => 'Mencipta tiket email baru',
@@ -6802,6 +6802,8 @@ bin/znuny.Daemon.pl status\').',
         'Sets the queue in the ticket free text screen of a zoomed ticket in the agent interface.' =>
             'Set antrian di layar teks tiket gratis dari tiket yang diperbesar di antarmuka agen.',
         'Sets if queue must be selected by the agent.' => '',
+        'Sets the customer user field in the agent interface.' => '',
+        'Sets the customer user field as mandatory.' => '',
         'Sets the ticket owner in the ticket free text screen of the agent interface.' =>
             'Menetapkan pemilik tiket di tiket layar teks bebas dari antarmuka agen.',
         'Sets if ticket owner must be selected by the agent.' => 'Set pemilik tiket harus dipilih oleh agen.',

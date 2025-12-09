@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%M-%D';
     $Self->{DateInputFormat}     = '%Y-%M-%D';
     $Self->{DateInputFormatLong} = '%Y-%M-%D %T';
-    $Self->{Completeness}        = 0.838580789515742;
+    $Self->{Completeness}        = 0.838312829525483;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -2650,6 +2650,7 @@ sub Data {
         'Change Responsible of %s%s%s' => '%s%s%s의 책임 변경',
         'The ticket has been locked' => '티켓이 잠겼습니다.',
         'Ticket Settings' => '티켓 설정',
+        'Customer user' => '고객 사용자',
         'Service invalid.' => '서비스가 유효하지 않습니다.',
         'SLA invalid.' => 'SLA가 유효하지 않습니다.',
         'Team Data' => '',
@@ -2719,7 +2720,6 @@ sub Data {
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCustomer.tt
         'Change Customer of %s%s%s' => '고객을 %s%s%s로 변경하십시오.',
         'Customer Information' => '고객 정보',
-        'Customer user' => '고객 사용자',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmail.tt
         'Create New Email Ticket' => '새 전자 메일 티켓 만들기',
@@ -6800,6 +6800,8 @@ sub Data {
         'Sets the queue in the ticket free text screen of a zoomed ticket in the agent interface.' =>
             '에이전트 인터페이스에서 확대 / 축소 된 티켓의 티켓 프리 텍스트 화면에 대기열을 설정합니다.',
         'Sets if queue must be selected by the agent.' => '에이전트가 대기열을 선택해야하는지 여부를 설정합니다.',
+        'Sets the customer user field in the agent interface.' => '',
+        'Sets the customer user field as mandatory.' => '',
         'Sets the ticket owner in the ticket free text screen of the agent interface.' =>
             '에이전트 인터페이스의 티켓 프리 텍스트 화면에 티켓 소유자를 설정합니다.',
         'Sets if ticket owner must be selected by the agent.' => '에이전트가 티켓 소유자를 선택해야하는지 설정합니다.',

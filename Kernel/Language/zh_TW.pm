@@ -29,7 +29,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y.%M.%D';
     $Self->{DateInputFormat}     = '%Y.%M.%D';
     $Self->{DateInputFormatLong} = '%Y.%M.%D - %T';
-    $Self->{Completeness}        = 0.298385807895157;
+    $Self->{Completeness}        = 0.298290461735101;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -2654,6 +2654,7 @@ sub Data {
         'Change Responsible of %s%s%s' => '',
         'The ticket has been locked' => '工單已鎖定',
         'Ticket Settings' => '工單設置',
+        'Customer user' => '用戶',
         'Service invalid.' => '服務無效。',
         'SLA invalid.' => '',
         'Team Data' => '',
@@ -2723,7 +2724,6 @@ sub Data {
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCustomer.tt
         'Change Customer of %s%s%s' => '',
         'Customer Information' => '客戶訊息',
-        'Customer user' => '用戶',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmail.tt
         'Create New Email Ticket' => '創建郵件工單',
@@ -6804,6 +6804,8 @@ sub Data {
         'Sets the queue in the ticket free text screen of a zoomed ticket in the agent interface.' =>
             '',
         'Sets if queue must be selected by the agent.' => '',
+        'Sets the customer user field in the agent interface.' => '',
+        'Sets the customer user field as mandatory.' => '',
         'Sets the ticket owner in the ticket free text screen of the agent interface.' =>
             '',
         'Sets if ticket owner must be selected by the agent.' => '',

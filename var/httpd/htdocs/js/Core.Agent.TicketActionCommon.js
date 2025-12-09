@@ -31,7 +31,7 @@ Core.Agent.TicketActionCommon = (function (TargetNS) {
     TargetNS.Init = function () {
 
         var DynamicFieldNames = Core.Config.Get('DynamicFieldNames'),
-            Fields = ['TypeID', 'ServiceID', 'SLAID', 'NewOwnerID', 'NewResponsibleID', 'NewStateID', 'NewPriorityID'],
+            Fields = ['TypeID', 'ServiceID', 'SLAID', 'NewOwnerID', 'NewResponsibleID', 'NewStateID', 'NewPriorityID', 'CustomerAutoComplete'],
             ModifiedFields;
 
         // Bind events to specific fields
@@ -104,6 +104,8 @@ Core.Agent.TicketActionCommon = (function (TargetNS) {
                 }
             });
         });
+
+        Core.Agent.CustomerSearch.Init($('#CustomerAutoComplete'));
     };
 
     /**

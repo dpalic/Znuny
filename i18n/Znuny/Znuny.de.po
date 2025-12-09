@@ -7808,7 +7808,7 @@ msgstr "Kunde von %s%s%s ändern"
 msgid "Customer Information"
 msgstr "Kundeninformation"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCustomer.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
 msgid "Customer user"
 msgstr "Kundenbenutzer"
 
@@ -25240,4 +25240,12 @@ msgstr "Die Job-Konfigurationsdatei konnte nicht gelesen werden. Bitte prüfen S
 #. Perl Module: Kernel/System/PostMaster/Filter.pm
 msgid "Couldn't read Filter configuration YAML file. Please make sure the file is valid."
 msgstr "Die Filter-Konfigurationsdatei konnte nicht gelesen werden. Bitte prüfen Sie, dass es sich um eine gültige Datei handelt."
+
+#. XML Definition: Kernel/Config/Files/XML/Ticket.xml
+msgid "Sets the customer user field in the agent interface."
+msgstr "Setzt das Kundenbenutzerfeld in der Agentenoberfläche."
+
+#. XML Definition: Kernel/Config/Files/XML/Ticket.xml
+msgid "Sets the customer user field as mandatory."
+msgstr "Legt das Kundenbenutzerfeld als Pflichtfeld fest."
 

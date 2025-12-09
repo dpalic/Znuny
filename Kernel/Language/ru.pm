@@ -38,7 +38,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%D.%M.%Y';
     $Self->{DateInputFormat}     = '%D.%M.%Y';
     $Self->{DateInputFormatLong} = '%D.%M.%Y - %T';
-    $Self->{Completeness}        = 0.843055777529167;
+    $Self->{Completeness}        = 0.842786387601853;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2662,6 +2662,7 @@ sub Data {
         'Change Responsible of %s%s%s' => 'Изменить ответственного для %s%s%s',
         'The ticket has been locked' => 'Заявка была заблокирована',
         'Ticket Settings' => 'Настройки заявки',
+        'Customer user' => 'Учетная запись клиента',
         'Service invalid.' => 'Некорректный сервис.',
         'SLA invalid.' => 'Неверное SLA.',
         'Team Data' => '',
@@ -2731,7 +2732,6 @@ sub Data {
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCustomer.tt
         'Change Customer of %s%s%s' => 'Изменить клиента для %s%s%s',
         'Customer Information' => 'Информация о компании',
-        'Customer user' => 'Учетная запись клиента',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmail.tt
         'Create New Email Ticket' => 'Создать заявку по email',
@@ -6812,6 +6812,8 @@ sub Data {
         'Sets the queue in the ticket free text screen of a zoomed ticket in the agent interface.' =>
             'Задает очередь при изменении Дополнительных полей заявки в интерфейсе агента.',
         'Sets if queue must be selected by the agent.' => '',
+        'Sets the customer user field in the agent interface.' => '',
+        'Sets the customer user field as mandatory.' => '',
         'Sets the ticket owner in the ticket free text screen of the agent interface.' =>
             'Задает Владельца при измененииДополнительных полей заявки в интерфейсе агента.',
         'Sets if ticket owner must be selected by the agent.' => 'Задает, что Владелец должен быть выбран агентом.',

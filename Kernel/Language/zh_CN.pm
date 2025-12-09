@@ -33,7 +33,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y.%M.%D';
     $Self->{DateInputFormat}     = '%Y.%M.%D';
     $Self->{DateInputFormatLong} = '%Y.%M.%D - %T';
-    $Self->{Completeness}        = 0.86607000159821;
+    $Self->{Completeness}        = 0.865793257708899;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -2657,6 +2657,7 @@ sub Data {
         'Change Responsible of %s%s%s' => '变更工单%s%s%s的负责人',
         'The ticket has been locked' => '工单已锁定',
         'Ticket Settings' => '工单设置',
+        'Customer user' => '客户用户',
         'Service invalid.' => '服务无效。',
         'SLA invalid.' => 'SLA无效。',
         'Team Data' => '',
@@ -2726,7 +2727,6 @@ sub Data {
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCustomer.tt
         'Change Customer of %s%s%s' => '变更工单%s%s%s的客户',
         'Customer Information' => '客户信息',
-        'Customer user' => '客户用户',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmail.tt
         'Create New Email Ticket' => '创建邮件工单',
@@ -6807,6 +6807,8 @@ sub Data {
         'Sets the queue in the ticket free text screen of a zoomed ticket in the agent interface.' =>
             '设置服务人员界面工单自定义字段屏幕的队列。',
         'Sets if queue must be selected by the agent.' => '设置是否必须由服务人员选择队列。',
+        'Sets the customer user field in the agent interface.' => '',
+        'Sets the customer user field as mandatory.' => '',
         'Sets the ticket owner in the ticket free text screen of the agent interface.' =>
             '设置服务人员界面工单自定义字段屏幕的工单所有者。',
         'Sets if ticket owner must be selected by the agent.' => '设置是否必须由服务人员选择工单所有者。',
