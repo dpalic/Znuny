@@ -2,15 +2,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2023-03-23 09:27+0000\n"
-"PO-Revision-Date: 2025-10-08 08:16+0000\n"
-"Last-Translator: Nina Knipprath <knipprath@hhu.de>\n"
-"Language-Team: German <https://translations.znuny.org/projects/znuny/znuny/de/>\n"
+"PO-Revision-Date: 2025-12-10 12:00+0000\n"
+"Last-Translator: Denny Korsukéwitz <dennykorsukewitz@gmail.com>\n"
+"Language-Team: German <https://translations.znuny.org/projects/znuny/znuny/"
+"de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.13.3\n"
+"X-Generator: Weblate 5.14.2\n"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminACL.tt
 msgid "Actions"
@@ -24475,7 +24476,7 @@ msgstr "Übersetzungen erstellen und verwalten."
 
 #. SysConfig
 msgid "Manage translation."
-msgstr "Übersatzungen verwalten."
+msgstr "Übersetzung verwalten."
 
 #. SysConfig
 msgid "YAML"
@@ -25248,4 +25249,3 @@ msgstr "Setzt das Kundenbenutzerfeld in der Agentenoberfläche."
 #. XML Definition: Kernel/Config/Files/XML/Ticket.xml
 msgid "Sets the customer user field as mandatory."
 msgstr "Legt das Kundenbenutzerfeld als Pflichtfeld fest."
-
