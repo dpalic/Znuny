@@ -11,8 +11,7 @@ The following persons contributed to Znuny:
 * arlecchino <kolbma@users.noreply.github.com>
 * Arthur Ritscher <arthur.ritscher@sectornord.de>
 * b1-luettje <53084931+b1-luettje@users.noreply.github.com>
-* Balazs Ur <balazs.ur@otrs.com>
-* Balázs Úr <balazs.ur@otrs.com>
+* Balázs Úr <balazs@urbalazs.hu>
 * Belnet <info@belnet.be>
 * Bernhard Schmalhofer <Bernhard.Schmalhofer@gmx.de>
 * Bodo Bauer <bodo.bauer@otrs.com>
