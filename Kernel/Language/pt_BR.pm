@@ -3545,7 +3545,7 @@ sub Data {
         'Got no FormID.' => 'Não contém ID de Formulário.',
         '%s is missing. The file could not be downloaded properly.' => 'está faltando. O arquivo não pode ser baixado corretamente.',
         'Please contact the administrator.' => 'Por favor, entre em contato com o administrador.',
-        '%s is missing. The file could not be previewed properly.' => 'está faltando. O arquivo não pode ser baixado corretamente.',
+        '%s is missing. The file could not be previewed properly.' => 'está em falta. O ficheiro não pode ser pré-visualizado corretamente.',
         'Error: the file could not be deleted properly. Please contact your administrator (missing FileID).' =>
             'Erro: o arquivo não pôde ser excluído corretamente. Por favor entrar em contato com seu administrador (Falta ID de Campo)',
 

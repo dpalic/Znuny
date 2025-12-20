@@ -24712,7 +24712,7 @@ msgstr "está faltando. O arquivo não pode ser baixado corretamente."
 
 #. Perl Module: Kernel/Modules/AJAXAttachment.pm
 msgid "%s is missing. The file could not be previewed properly."
-msgstr "está faltando. O arquivo não pode ser baixado corretamente."
+msgstr "está em falta. O ficheiro não pode ser pré-visualizado corretamente."
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/FormElements/AttachmentList.tt
 msgid "Preview"
