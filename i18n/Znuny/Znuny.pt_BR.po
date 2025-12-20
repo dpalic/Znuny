@@ -4,8 +4,7 @@ msgstr ""
 "POT-Creation-Date: 2023-03-23 09:27+0000\n"
 "PO-Revision-Date: 2025-12-13 17:14+0000\n"
 "Last-Translator: Genilson Borges <genilsonborges17@gmail.com>\n"
-"Language-Team: Portuguese (Brazil) <https://translations.znuny.org/projects/"
-"znuny/znuny/pt_BR/>\n"
+"Language-Team: Portuguese (Brazil) <https://translations.znuny.org/projects/znuny/znuny/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24357,9 +24356,7 @@ msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminACLEdit.tt
 msgid "A list of all possible match and set criteria is found in the ACL Reference Guide %sdocumentation%s."
-msgstr ""
-"Um lista de todos possíveis critérios de correspondência e definição pode "
-"ser encontrada no Guia de Referência de ACL"
+msgstr "Um lista de todos possíveis critérios de correspondência e definição pode ser encontrada no Guia de Referência de ACL"
 
 #. JS File: var/httpd/htdocs/js/Core.UI.js
 msgid "The following files types are allowed: %s"
@@ -25240,3 +25237,4 @@ msgstr ""
 #. XML Definition: Kernel/Config/Files/XML/Ticket.xml
 msgid "Sets the customer user field as mandatory."
 msgstr ""
+

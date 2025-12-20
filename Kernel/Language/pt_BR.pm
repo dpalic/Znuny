@@ -30,7 +30,7 @@ sub Data {
     $Self->{DateFormatShort}     = '';
     $Self->{DateInputFormat}     = '';
     $Self->{DateInputFormatLong} = '';
-    $Self->{Completeness}        = 0.832241572136124;
+    $Self->{Completeness}        = 0.83288065186132;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -84,7 +84,7 @@ sub Data {
         'Set up what you want to change if the criteria match. Keep in mind that \'Possible\' is a white list, \'PossibleNot\' a black list.' =>
             'Configure o que você quer alterar se o critério coincidir. Mantenha em mente que \'Possible\' é uma adição à lista e \'PossibleNot\', uma exclusão da lista.',
         'A list of all possible match and set criteria is found in the ACL Reference Guide %sdocumentation%s.' =>
-            '',
+            'Um lista de todos possíveis critérios de correspondência e definição pode ser encontrada no Guia de Referência de ACL',
         'Edit ACL %s' => 'Editar ACL %s',
         'Edit ACL' => 'Editar ACL',
         'Show or hide the content' => 'Mostrar ou esconder o conteúdo',
@@ -3543,9 +3543,9 @@ sub Data {
 
         # Perl Module: Kernel/Modules/AJAXAttachment.pm
         'Got no FormID.' => 'Não contém ID de Formulário.',
-        '%s is missing. The file could not be downloaded properly.' => '',
+        '%s is missing. The file could not be downloaded properly.' => 'está faltando. O arquivo não pode ser baixado corretamente.',
         'Please contact the administrator.' => 'Por favor, entre em contato com o administrador.',
-        '%s is missing. The file could not be previewed properly.' => '',
+        '%s is missing. The file could not be previewed properly.' => 'está faltando. O arquivo não pode ser baixado corretamente.',
         'Error: the file could not be deleted properly. Please contact your administrator (missing FileID).' =>
             'Erro: o arquivo não pôde ser excluído corretamente. Por favor entrar em contato com seu administrador (Falta ID de Campo)',
 
@@ -8727,7 +8727,7 @@ Obrigado pela ajuda!
         'A Website' => 'Um website',
         'A picture' => 'Uma figura',
         'AJAX functions for notification event transport web service.' =>
-            '',
+            'Função AJAX para web service de transporte de eventos de notificação',
         'AJAX interface for the web service dynamic field backends.' => '',
         'AccountedTime' => 'Tempo contabilizado',
         'Activation of dynamic fields for screens.' => '',
