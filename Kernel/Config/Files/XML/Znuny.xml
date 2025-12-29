@@ -2778,6 +2778,13 @@
             </Hash>
         </Value>
     </Setting>
+    <Setting Name="Activity###MaxKeepActivities" Required="0" Valid="1">
+        <Description Translatable="1">Maximum number of activities to keep per user. Older ones will be deleted.</Description>
+        <Navigation>Core</Navigation>
+        <Value>
+            <Item ValueType="String" ValueRegex="^[1-9][0-9]*$">50</Item>
+        </Value>
+    </Setting>
     <Setting Name="Activity###EventTypeMapping" Required="1" Valid="1">
         <Description Translatable="1">Assignment between event and type.</Description>
         <Navigation>Core</Navigation>

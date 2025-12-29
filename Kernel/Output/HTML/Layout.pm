@@ -1513,35 +1513,21 @@ sub Header {
         }
 
         my $ActivityObject = $Kernel::OM->Get('Kernel::System::Activity');
-        my @Activities     = $ActivityObject->ListGet(
+        my $ActivityStats  = $ActivityObject->StatsGet(
             UserID => $Self->{UserID},
         );
-
-        my $Count       = scalar @Activities;
-        my $NewActivity = grep { $_->{State} eq 'new' } @Activities;
-
         my $ActivityBellClass = '';
-        if ($NewActivity) {
+        if ( $ActivityStats->{HasNew} ) {
             $ActivityBellClass = 'activity-new';
         }
 
         $Self->Block(
             Name => 'Activity',
             Data => {
-                Count             => $Count,
+                Count             => $ActivityStats->{Count},
                 ActivityBellClass => $ActivityBellClass,
             },
         );
-
-        for my $Activity (@Activities) {
-            $Self->Block(
-                Name => 'ActivityList',
-                Data => {
-                    %{$Activity},
-                    LinkTarget => $Self->{UserActivityLinkTarget} || '_self',
-                },
-            );
-        }
 
         $Self->AddJSData(
             Key   => 'UserActivityLinkTarget',
