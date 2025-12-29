@@ -1,4 +1,5 @@
 # 7.3.1 2025-??-??
+ - 2025-12-19 Fixed: Dynamic field labels are capitalized via CSS in AgentTicketProcess.
  - 2025-12-16 Fixed: In certain settings, only greyscale can be selected in the color picker. Updated thirdparty lib jscolor to 2.5.2. Alters database table calendar and article_color size of column color to 25.
  - 2025-12-15 Sector Nord AG: Fixed: Wrong Subaction for TranslationDeployment in AdminTranslation. Thanks to @LuBroering (Lukas Bröring Sector Nord AG) [PR#741](https://github.com/znuny/Znuny/pull/741).
  - 2025-12-12 Fixed typo in '--regenerate' command option 'Dev/Tools/TranslationsUpdate'. Thanks to @urbalazs (Balázs Úr) [PR#751](https://github.com/znuny/Znuny/pull/751).
