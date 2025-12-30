@@ -22,20 +22,20 @@ sub Data {
 
     # $$START$$
     # possible charsets
-    $Self->{Charset} = [];
-    # date formats (%A=WeekDay;%B=LongMonth;%T=Time;%D=Day;%M=Month;%Y=Year;)
-    $Self->{DateFormat}          = '';
-    $Self->{DateFormatLong}      = '';
-    $Self->{DateFormatShort}     = '';
-    $Self->{DateInputFormat}     = '';
-    $Self->{DateInputFormatLong} = '';
+    $Self->{Charset} = ['utf-8', ];
+    # date formats (%a=Weekday;%b=Month;%T=Time;%d=Day;%m=Month;%Y=Year;)
+    $Self->{DateFormat}          = '%F %T';
+    $Self->{DateFormatLong}      = '%a, %d de %b de %Y, %T';
+    $Self->{DateFormatShort}     = '%Y-%m-%d';
+    $Self->{DateInputFormat}     = '%Y-%m-%d';
+    $Self->{DateInputFormatLong} = '%Y-%m-%d %T';
     $Self->{Completeness}        = 0.299313208752595;
 
     # csv separator
-    $Self->{Separator}         = '';
+    $Self->{Separator}         = ',';
 
-    $Self->{DecimalSeparator}  = '';
-    $Self->{ThousandSeparator} = '';
+    $Self->{DecimalSeparator}  = ',';
+    $Self->{ThousandSeparator} = '.';
     $Self->{Translation} = {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminACL.tt

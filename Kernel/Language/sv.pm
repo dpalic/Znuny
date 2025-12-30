@@ -23,12 +23,12 @@ sub Data {
     # $$START$$
     # possible charsets
     $Self->{Charset} = ['utf-8', ];
-    # date formats (%A=WeekDay;%B=LongMonth;%T=Time;%D=Day;%M=Month;%Y=Year;)
-    $Self->{DateFormat}          = '%D/%M %Y %T';
-    $Self->{DateFormatLong}      = '%A %D. %B %Y %T';
-    $Self->{DateFormatShort}     = '%Y.%M.%D';
-    $Self->{DateInputFormat}     = '%Y.%M.%D';
-    $Self->{DateInputFormatLong} = '%Y.%M.%D - %T';
+    # date formats (%a=Weekday;%b=Month;%T=Time;%d=Day;%m=Month;%Y=Year;)
+    $Self->{DateFormat}          = '%d/%m %Y %T';
+    $Self->{DateFormatLong}      = '%a %d. %b %Y %T';
+    $Self->{DateFormatShort}     = '%Y.%m.%d';
+    $Self->{DateInputFormat}     = '%Y.%m.%d';
+    $Self->{DateInputFormatLong} = '%Y.%m.%d - %T';
     $Self->{Completeness}        = 0.319437789490497;
 
     # csv separator

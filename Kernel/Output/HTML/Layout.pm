@@ -3922,10 +3922,8 @@ sub BuildDateSelection {
     delete $Param{ $Prefix . 'Second' };
 
     # date format
-    $Output .= $Self->{LanguageObject}->Time(
-        Action => 'Return',
+    $Output .= $Self->{LanguageObject}->FormatNonNumericTime(
         Format => 'DateInputFormat',
-        Mode   => 'NotNumeric',
         %Param,
     );
 

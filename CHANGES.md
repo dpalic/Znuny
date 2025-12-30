@@ -47,6 +47,7 @@
  - 2025-09-25 SectorNord AG: Fixed: Problem filtering by Owner in the ticket view. Thanks for reporting to @giovanna-bolsoni [#698](https://github.com/znuny/Znuny/issues/698). Thanks to @LuBroering (Lukas Bröring Sector Nord AG) [PR#703](https://github.com/znuny/Znuny/pull/703).
  - 2025-09-25 Added 'Prio' Param to AgentTicketZoom MenuModules for individual sorting. Thanks for reporting and fixing to @itweserems [#646](https://github.com/znuny/Znuny/issues/646) [PR#647](https://github.com/znuny/Znuny/pull/647).
  - 2025-09-15 Fixed: Only able to delete Signatures, Salutations and Auto Responses after accepting popup.
+ - 2025-06-30 Improved date formatting on language level.
 
 # 7.2.3 2025-09-24
  - 2025-09-22 Fixed: Fix for installer email setting checks lead to issues with sending emails.
