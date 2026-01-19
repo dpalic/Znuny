@@ -1,4 +1,5 @@
 # 7.3.1 2025-??-??
+ - 2026-01-19 Fixed: Missing translation for 'last-search' in ToolBar/TicketSearchProfile.
  - 2026-01-13 Fixed: Date check regex for config option ICSParser::StartDate actually matches YYYYMMDD.
  - 2025-12-19 Fixed: Dynamic field labels are capitalized via CSS in AgentTicketProcess.
  - 2025-12-16 Fixed: In certain settings, only greyscale can be selected in the color picker. Updated thirdparty lib jscolor to 2.5.2. Alters database table calendar and article_color size of column color to 25.
