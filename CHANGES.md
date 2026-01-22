@@ -1,4 +1,5 @@
 # 7.3.1 2025-??-??
+ - 2025-01-22 Fixed: Process ticket submission validates Responsible field client-side.
  - 2026-01-22 Fixed: URL parameters were not used to pre-fill new email and phone ticket forms.
  - 2026-01-21 Fixed: The tags <OTRS_TICKET> and <OTRS_MERGE_TO_TICKET> can only be used once in the text of the configuration Ticket::Frontend::AutomaticMergeText. The 'global' flag is missing. Thanks to Tim Püttmanns (@tipue-dev), maxence. [PR#753](https://github.com/znuny/Znuny/pull/753)
  - 2026-01-19 Fixed: Customer interface uses layout "PopupClose" function that loads agent interface header and footer which results in referencing features that are not supported - such as popup profiles. Added CustomerPopupClose function.

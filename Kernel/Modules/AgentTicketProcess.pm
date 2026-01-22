@@ -3419,7 +3419,7 @@ sub _RenderResponsible {
         Name         => 'ResponsibleID',
         Translation  => 1,
         SelectedID   => $SelectedID,
-        Class        => "Modernize $ServerError",
+        Class        => "Modernize $ServerError $Data{ValidateRequired}",
         PossibleNone => 1,
     );
 
