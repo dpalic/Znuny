@@ -145,12 +145,14 @@
                     customerData = JSON.parse(cleanedJson);
                     if (Array.isArray(customerData) && customerData.length > 0) {
                         extractedCustomers = customerData.map(function (customer) {
+                            var hasErrors = Boolean(customer.disabled);
+
                             return {
                             value: customer.customerKey,
                             name: customer.customerElement,
                             selected: customer.selected,
                             disabled: customer.disabled,
-                            errors: customer.errors
+                            errors: hasErrors ? customer.errors : {}
                             };
                         });
 
@@ -190,12 +192,14 @@
                     customerData = JSON.parse(cleanedJson);
                     if (Array.isArray(customerData) && customerData.length > 0) {
                         extractedCustomers = customerData.map(function (customer) {
+                            var hasErrors = Boolean(customer.disabled);
+
                             return {
                             value: customer.customerKey,
                             name: customer.customerElement,
                             selected: customer.selected,
                             disabled: customer.disabled,
-                            errors: customer.errors
+                            errors: hasErrors ? customer.errors : {}
                             };
                         });
 

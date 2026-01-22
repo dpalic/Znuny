@@ -1129,6 +1129,18 @@ sub Run {
                 );
                 $FromExternalCustomer{Email} = $ExternalCustomerUserData{UserMailString};
             }
+
+            if ( $GetParam{From} && !@MultipleCustomer ) {
+                push @MultipleCustomer, {
+                    Count            => 1,
+                    CustomerElement  => $GetParam{From},
+                    CustomerSelected => 'checked="checked"',
+                    CustomerKey      => $CustomerUser,
+                    CustomerError    => '',
+                    CustomerErrorMsg => 'CustomerGenericServerErrorMsg',
+                    CustomerDisabled => '',
+                };
+            }
             $Error{ExpandCustomerName} = 1;
         }
 
