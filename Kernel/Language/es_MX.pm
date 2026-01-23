@@ -27,7 +27,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d/%m/%Y';
     $Self->{DateInputFormat}     = '%d/%m/%Y';
     $Self->{DateInputFormatLong} = '%d/%m/%Y - %T';
-    $Self->{Completeness}        = 0.706117233668743;
+    $Self->{Completeness}        = 0.706004471414883;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -6320,6 +6320,8 @@ sub Data {
             'Define un filtro para salida html para añadir vínculos a una cadena definida. El elemento Imagen permite dos tipos de entrada: un nombre de imagen (por ejemplo: faq.png). En este caso, se usa la ruta de imágenes de Znuny. La otra posibilidad es insertar el vínculo a la imagen.',
         'If enabled, the Znuny version tag will be removed from the Webinterface, the HTTP headers and the X-Headers of outgoing mails. NOTE: If you change this option, please make sure to delete the cache.' =>
             'Si está habilitado, la etiqueta de versión Znuny se eliminará de la interfaz web, los encabezados HTTP y los X-Headers de los correos salientes. NOTA: Si cambia esta opción, asegúrese de eliminar el caché.',
+        'Default template for notification e-mails (see Kernel/Output/HTML/Templates/Standard/NotificationEvent/Email directory for available templates).' =>
+            '',
         'If enabled, Znuny will deliver all CSS files in minified form.' =>
             'Si está habilitado, Znuny entregará todos los archivos CSS en forma minimizada.',
         'If enabled, Znuny will deliver all JavaScript files in minified form.' =>

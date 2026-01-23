@@ -25233,3 +25233,7 @@ msgstr ""
 msgid "Could not load activities."
 msgstr ""
 
+#. XML Definition: Kernel/Config/Files/XML/Framework.xml
+msgid "Default template for notification e-mails (see Kernel/Output/HTML/Templates/Standard/NotificationEvent/Email directory for available templates)."
+msgstr ""
+

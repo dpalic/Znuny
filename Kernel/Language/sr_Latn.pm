@@ -32,7 +32,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d.%m.%Y';
     $Self->{DateInputFormat}     = '%d.%m.%Y';
     $Self->{DateInputFormatLong} = '%d.%m.%Y - %T';
-    $Self->{Completeness}        = 0.862162593834851;
+    $Self->{Completeness}        = 0.862024912168636;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -6325,6 +6325,8 @@ sub Data {
             'Definiše filter za html izlaz da bi ste dodali veze iza definisanog niza znakova. Element Image dozvoljava dva načina ulaza. U jednom naziv slike (npr. faq.png). I tom slučaju biće korišćena Znuny putanja slike. Drugi način je unošenje veze do slike.',
         'If enabled, the Znuny version tag will be removed from the Webinterface, the HTTP headers and the X-Headers of outgoing mails. NOTE: If you change this option, please make sure to delete the cache.' =>
             'Ako je aktivirano, oznaka Znuny verzije će biti uklonjena iz veb interfejsa, HTTP zaglavlja i X-Headers u odlaznim imejl porukama. NAPOMENA: ako menjate ovu opciju, molimo da osigurate brisanje keša.',
+        'Default template for notification e-mails (see Kernel/Output/HTML/Templates/Standard/NotificationEvent/Email directory for available templates).' =>
+            '',
         'If enabled, Znuny will deliver all CSS files in minified form.' =>
             'Ukoliko je uključeno, Znuny će isporučiti sve CSS datoteke u smanjenoj formi.',
         'If enabled, Znuny will deliver all JavaScript files in minified form.' =>

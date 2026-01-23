@@ -1,4 +1,6 @@
+
 # 7.3.1 2025-??-??
+ - 2025-01-23 System configuration: Added `NotificationEmailDefaultTemplate` option. Thanks to Paweł Bogusławski (@pboguslawski) [PR#382](https://github.com/znuny/Znuny/pull/382).
  - 2025-01-23 Increased length of the password column for users, customer_user, and mail_account.
  - 2025-01-22 Fixed: Process ticket submission validates Responsible field client-side.
  - 2026-01-22 Fixed: URL parameters were not used to pre-fill new email and phone ticket forms.

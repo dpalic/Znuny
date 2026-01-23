@@ -30,7 +30,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%m-%d';
     $Self->{DateInputFormat}     = '%Y-%m-%d';
     $Self->{DateInputFormatLong} = '%Y-%m-%d - %T';
-    $Self->{Completeness}        = 0.638076984507267;
+    $Self->{Completeness}        = 0.637975087831364;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -6323,6 +6323,8 @@ sub Data {
         'Defines a filter for html output to add links behind a defined string. The element Image allows two input kinds. At once the name of an image (e.g. faq.png). In this case the Znuny image path will be used. The second possiblity is to insert the link to the image.' =>
             'Definicja filtru wyświetlania HTML dodającego linki pod wskazanym ciągiem znaków. Element Image pozwala na dwa rodzaje danych. Może to być nazwa grafiki (np. faq.png) i wtedy zostanie użyta ścieżka dostępu do grafik Znuny. Drugą możliwością jest podanie linku do grafiki.',
         'If enabled, the Znuny version tag will be removed from the Webinterface, the HTTP headers and the X-Headers of outgoing mails. NOTE: If you change this option, please make sure to delete the cache.' =>
+            '',
+        'Default template for notification e-mails (see Kernel/Output/HTML/Templates/Standard/NotificationEvent/Email directory for available templates).' =>
             '',
         'If enabled, Znuny will deliver all CSS files in minified form.' =>
             '',

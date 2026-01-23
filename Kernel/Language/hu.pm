@@ -32,7 +32,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%m-%d';
     $Self->{DateInputFormat}     = '%Y-%m-%d';
     $Self->{DateInputFormatLong} = '%Y-%m-%d - %T';
-    $Self->{Completeness}        = 0.991055741894266;
+    $Self->{Completeness}        = 0.990897476844459;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -6325,6 +6325,8 @@ sub Data {
             'Szűrő meghatározása a HTML kimenethez, hogy hivatkozást adjon egy meghatározott szöveg mögé. Ez a képelem kétfajta bevitelt tesz lehetővé. Elsőként egy kép nevét (például faq.png). Ez esetben a Znuny képútvonal lesz felhasználva. A másik lehetőség a hivatkozás beszúrása a képhez.',
         'If enabled, the Znuny version tag will be removed from the Webinterface, the HTTP headers and the X-Headers of outgoing mails. NOTE: If you change this option, please make sure to delete the cache.' =>
             'Ha engedélyezve van, akkor a Znuny verziócímke el lesz távolítva a webes felületről, a HTTP fejlécekből és a kimenő levelek X-Headers bejegyzéseiből. Megjegyzés: ha megváltoztatja ezt a beállítást, akkor gondoskodjon a gyorsítótár törléséről is.',
+        'Default template for notification e-mails (see Kernel/Output/HTML/Templates/Standard/NotificationEvent/Email directory for available templates).' =>
+            '',
         'If enabled, Znuny will deliver all CSS files in minified form.' =>
             'Ha engedélyezve van, akkor a Znuny minden CSS-fájlt minimalizált formában fog szállítani.',
         'If enabled, Znuny will deliver all JavaScript files in minified form.' =>

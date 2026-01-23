@@ -25257,3 +25257,7 @@ msgstr "Maximale Anzahl der Aktivitäten, die pro Benutzer gespeichert werden. �
 msgid "Could not load activities."
 msgstr "Aktivitäten konnten nicht geladen werden."
 
+#. XML Definition: Kernel/Config/Files/XML/Framework.xml
+msgid "Default template for notification e-mails (see Kernel/Output/HTML/Templates/Standard/NotificationEvent/Email directory for available templates)."
+msgstr "Standardvorlage für Benachrichtigungs-E-Mails (verfügbare Vorlagen finden Sie im Verzeichnis Kernel/Output/HTML/Templates/Standard/NotificationEvent/Email)."
+

@@ -33,7 +33,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y.%m.%d';
     $Self->{DateInputFormat}     = '%Y.%m.%d';
     $Self->{DateInputFormatLong} = '%Y.%m.%d - %T';
-    $Self->{Completeness}        = 0.865516690624501;
+    $Self->{Completeness}        = 0.865378473331204;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -6326,6 +6326,8 @@ sub Data {
             '在HTML输出结果中为预定义字符串添加链接的过滤器。图像元素允许两种输入方式：第一种是用图像的名称（如faq.png），在这种情况下会使用Znuny的图像路径；第二种是插入图像的链接。',
         'If enabled, the Znuny version tag will be removed from the Webinterface, the HTTP headers and the X-Headers of outgoing mails. NOTE: If you change this option, please make sure to delete the cache.' =>
             '如果启用了此选项，将从WEB界面、HTTP头信息和外发邮件的X-Headers头信息中移除Znuny版本标签。注意：如果你要修改这个选项，请确保清空缓存。',
+        'Default template for notification e-mails (see Kernel/Output/HTML/Templates/Standard/NotificationEvent/Email directory for available templates).' =>
+            '',
         'If enabled, Znuny will deliver all CSS files in minified form.' =>
             '如果启用，Znuny将以最小化的形式提供所有CSS文件。',
         'If enabled, Znuny will deliver all JavaScript files in minified form.' =>

@@ -6320,6 +6320,8 @@ sub Data {
             'Definiert einen Filter für die HTML-Ausgabe um Links hinter einer bestimmten Zeichenfolge hinzufügen. Das Element Bild erlaubt zwei Eingabearten. Zum einem den Namen eines Bildes (Beispielsweise faq.png). In diesem Fall wird der Znuny-Bildpfad verwendet. Die zweite Möglichkeit ist, den Link zu dem Bild einzufügen.',
         'If enabled, the Znuny version tag will be removed from the Webinterface, the HTTP headers and the X-Headers of outgoing mails. NOTE: If you change this option, please make sure to delete the cache.' =>
             'Wenn aktiviert, werden Znuny-Versionsinformationen aus der Oberfläche und HTTP-Headern und X-Headern entfernt. Hinweis: Nach Änderung dieser Option muss der Cache gelöscht werden.',
+        'Default template for notification e-mails (see Kernel/Output/HTML/Templates/Standard/NotificationEvent/Email directory for available templates).' =>
+            'Standardvorlage für Benachrichtigungs-E-Mails (verfügbare Vorlagen finden Sie im Verzeichnis Kernel/Output/HTML/Templates/Standard/NotificationEvent/Email).',
         'If enabled, Znuny will deliver all CSS files in minified form.' =>
             'Wenn aktiviert, liefert Znuny CSS-Dateien in minifizierter Form aus.',
         'If enabled, Znuny will deliver all JavaScript files in minified form.' =>
