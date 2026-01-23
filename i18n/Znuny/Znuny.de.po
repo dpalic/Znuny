@@ -25261,3 +25261,7 @@ msgstr "Aktivitäten konnten nicht geladen werden."
 msgid "Default template for notification e-mails (see Kernel/Output/HTML/Templates/Standard/NotificationEvent/Email directory for available templates)."
 msgstr "Standardvorlage für Benachrichtigungs-E-Mails (verfügbare Vorlagen finden Sie im Verzeichnis Kernel/Output/HTML/Templates/Standard/NotificationEvent/Email)."
 
+#. Perl Module: Kernel/Modules/AJAXAttachment.pm
+msgid "%s is missing. The file could not be deleted properly."
+msgstr "%s fehlt. Die Datei konnte nicht ordnungsgemäß gelöscht werden."
+

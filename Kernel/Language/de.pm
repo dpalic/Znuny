@@ -3539,12 +3539,10 @@ sub Data {
         'Manage add-ons.' => 'Add-ons verwalten.',
 
         # Perl Module: Kernel/Modules/AJAXAttachment.pm
-        'Got no FormID.' => 'FormID fehlt.',
         '%s is missing. The file could not be downloaded properly.' => '%s fehlt. Die Datei konnte nicht ordnungsgemäß heruntergeladen werden.',
         'Please contact the administrator.' => 'Bitte kontaktieren Sie den Administrator.',
         '%s is missing. The file could not be previewed properly.' => '%s fehlt. Die Datei konnte nicht ordnungsgemäß in der Vorschau angezeigt werden.',
-        'Error: the file could not be deleted properly. Please contact your administrator (missing FileID).' =>
-            'Fehler: die Datei konnte nicht korrekt gelöscht werden. Bitte kontaktieren Sie Ihren Administrator (fehlende FileID).',
+        '%s is missing. The file could not be deleted properly.' => '%s fehlt. Die Datei konnte nicht ordnungsgemäß gelöscht werden.',
 
         # Perl Module: Kernel/Modules/AdminACL.pm
         'ACL information from database is not in sync with the system configuration, please deploy all ACLs.' =>
@@ -9508,6 +9506,8 @@ Ihr Helpdesk-Team
         'Clear debug log',
         'Clear search',
         'Click to delete this attachment.',
+        'Click to download this file.',
+        'Click to preview this file.',
         'Click to select a file for upload.',
         'Clone web service',
         'Close preview',

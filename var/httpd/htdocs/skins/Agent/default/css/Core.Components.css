@@ -77,6 +77,12 @@ handheld {
         transition: var(--main-transition);
     }
 
+    .icon-hover.Hidden,
+    .icon-hover-md.Hidden,
+    .icon-hover-sm.Hidden {
+        display: none;
+    }
+
     .Field .icon-hover,
     .Field .icon-hover-md,
     .Field .icon-hover-sm {

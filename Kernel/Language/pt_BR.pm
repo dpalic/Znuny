@@ -30,7 +30,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d/%m/%Y';
     $Self->{DateInputFormat}     = '%d/%m/%Y';
     $Self->{DateInputFormatLong} = '%d/%m/%Y - %T';
-    $Self->{Completeness}        = 0.8324816352603;
+    $Self->{Completeness}        = 0.832295160517489;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -3542,12 +3542,10 @@ sub Data {
         'Manage add-ons.' => '',
 
         # Perl Module: Kernel/Modules/AJAXAttachment.pm
-        'Got no FormID.' => 'Não contém ID de Formulário.',
         '%s is missing. The file could not be downloaded properly.' => 'está faltando. O arquivo não pode ser baixado corretamente.',
         'Please contact the administrator.' => 'Por favor, entre em contato com o administrador.',
         '%s is missing. The file could not be previewed properly.' => 'está em falta. O ficheiro não pode ser pré-visualizado corretamente.',
-        'Error: the file could not be deleted properly. Please contact your administrator (missing FileID).' =>
-            'Erro: o arquivo não pôde ser excluído corretamente. Por favor entrar em contato com seu administrador (Falta ID de Campo)',
+        '%s is missing. The file could not be deleted properly.' => '',
 
         # Perl Module: Kernel/Modules/AdminACL.pm
         'ACL information from database is not in sync with the system configuration, please deploy all ACLs.' =>
@@ -9512,6 +9510,8 @@ Obrigado pela ajuda!
         'Clear debug log',
         'Clear search',
         'Click to delete this attachment.',
+        'Click to download this file.',
+        'Click to preview this file.',
         'Click to select a file for upload.',
         'Clone web service',
         'Close preview',

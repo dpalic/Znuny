@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%m-%d';
     $Self->{DateInputFormat}     = '%Y-%m-%d';
     $Self->{DateInputFormatLong} = '%Y-%m-%d %T';
-    $Self->{Completeness}        = 0.837911210475886;
+    $Self->{Completeness}        = 0.837725602938828;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -3538,12 +3538,10 @@ sub Data {
         'Manage add-ons.' => '',
 
         # Perl Module: Kernel/Modules/AJAXAttachment.pm
-        'Got no FormID.' => 'FormID 없음.',
         '%s is missing. The file could not be downloaded properly.' => '',
         'Please contact the administrator.' => '관리자에게 문의하십시오.',
         '%s is missing. The file could not be previewed properly.' => '',
-        'Error: the file could not be deleted properly. Please contact your administrator (missing FileID).' =>
-            '오류 : 파일을 제대로 삭제할 수 없습니다. 관리자에게 문의하십시오 (누락 된 FileID).',
+        '%s is missing. The file could not be deleted properly.' => '',
 
         # Perl Module: Kernel/Modules/AdminACL.pm
         'ACL information from database is not in sync with the system configuration, please deploy all ACLs.' =>
@@ -9508,6 +9506,8 @@ Thanks for your help!
         'Clear debug log',
         'Clear search',
         'Click to delete this attachment.',
+        'Click to download this file.',
+        'Click to preview this file.',
         'Click to select a file for upload.',
         'Clone web service',
         'Close preview',

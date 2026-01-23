@@ -4471,17 +4471,19 @@
         <Navigation>Frontend::Base</Navigation>
         <Value>
             <Hash>
-                <Item Key="application/pdf">pdf</Item>
                 <Item Key="application/json">json</Item>
-                <Item Key="text/markdown">markdown</Item>
+                <Item Key="application/octet-stream">markdown</Item>
+                <Item Key="application/pdf">pdf</Item>
+                <Item Key="image/gif">gif</Item>
+                <Item Key="image/jpeg">jpeg</Item>
+                <Item Key="image/png">png</Item>
+                <Item Key="image/svg+xml">svg</Item>
+                <Item Key="text/css">css</Item>
                 <Item Key="text/html">html</Item>
-                <Item Key="text/xml">xml</Item>
+                <Item Key="text/markdown">markdown</Item>
                 <Item Key="text/plain">plain</Item>
                 <Item Key="text/x-sh">sh</Item>
-                <Item Key="image/svg+xml">svg</Item>
-                <Item Key="image/png">png</Item>
-                <Item Key="image/jpeg">jpeg</Item>
-                <Item Key="image/gif">gif</Item>
+                <Item Key="text/xml">xml</Item>
             </Hash>
         </Value>
     </Setting>

@@ -32,7 +32,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%m-%d';
     $Self->{DateInputFormat}     = '%Y-%m-%d';
     $Self->{DateInputFormatLong} = '%Y-%m-%d - %T';
-    $Self->{Completeness}        = 0.990897476844459;
+    $Self->{Completeness}        = 0.990736304104776;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -3544,12 +3544,10 @@ sub Data {
         'Manage add-ons.' => 'Kiegészítők kezelése.',
 
         # Perl Module: Kernel/Modules/AJAXAttachment.pm
-        'Got no FormID.' => 'Nem érkezett űrlap-azonosító.',
         '%s is missing. The file could not be downloaded properly.' => 'A(z) %s hiányzik. A fájlt nem sikerült megfelelően letölteni.',
         'Please contact the administrator.' => 'Vegye fel a kapcsolatot a rendszergazdával.',
         '%s is missing. The file could not be previewed properly.' => 'A(z) %s hiányzik. A fájl előnézetét nem sikerült megfelelően megjeleníteni.',
-        'Error: the file could not be deleted properly. Please contact your administrator (missing FileID).' =>
-            'Hiba: a fájlt nem sikerült megfelelően törölni. Vegye fel a kapcsolatot a rendszergazdával (hiányzó fájlazonosító).',
+        '%s is missing. The file could not be deleted properly.' => '',
 
         # Perl Module: Kernel/Modules/AdminACL.pm
         'ACL information from database is not in sync with the system configuration, please deploy all ACLs.' =>
@@ -9514,6 +9512,8 @@ Az Ön ügyfélszolgálati csapata
         'Clear debug log',
         'Clear search',
         'Click to delete this attachment.',
+        'Click to download this file.',
+        'Click to preview this file.',
         'Click to select a file for upload.',
         'Clone web service',
         'Close preview',

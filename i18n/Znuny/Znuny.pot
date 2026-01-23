@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2026-01-14 20:48+0000\n"
+"POT-Creation-Date: 2026-01-23 22:39+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -10255,10 +10255,6 @@ msgid "Manage add-ons."
 msgstr ""
 
 #. Perl Module: Kernel/Modules/AJAXAttachment.pm
-msgid "Got no FormID."
-msgstr ""
-
-#. Perl Module: Kernel/Modules/AJAXAttachment.pm
 msgid "%s is missing. The file could not be downloaded properly."
 msgstr ""
 
@@ -10271,7 +10267,7 @@ msgid "%s is missing. The file could not be previewed properly."
 msgstr ""
 
 #. Perl Module: Kernel/Modules/AJAXAttachment.pm
-msgid "Error: the file could not be deleted properly. Please contact your administrator (missing FileID)."
+msgid "%s is missing. The file could not be deleted properly."
 msgstr ""
 
 #. Perl Module: Kernel/Modules/AdminACL.pm

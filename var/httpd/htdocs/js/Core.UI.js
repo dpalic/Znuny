@@ -699,7 +699,7 @@ Core.UI = (function (TargetNS) {
                     FileExtension = File.name.slice((File.name.lastIndexOf(".") - 1 >>> 0) + 2),
                     AttachmentItem = Core.Template.Render('AjaxDnDUpload/AttachmentItemUploading', {
                         'Filename' : File.name,
-                        'Filetype' : File.type
+                        'Filetype' : File.type,
                     }),
                     FileExists;
 
@@ -793,7 +793,7 @@ Core.UI = (function (TargetNS) {
                                 $TargetObj;
 
                             // update the existing item if one exists
-                            if ($ExistingItemObj.length) {
+                            if ($ExistingItemObj && $ExistingItemObj.length) {
 
                                 $TargetObj = $ExistingItemObj.closest('tr');
 
@@ -801,25 +801,25 @@ Core.UI = (function (TargetNS) {
                                     return;
                                 }
 
-                                $TargetObj
-                                    .find('.Filetype')
-                                    .text(Attachment.ContentType)
-                                    .closest('tr')
-                                    .find('.Filesize')
-                                    .text(Attachment.HumanReadableDataSize)
-                                    .attr('data-file-size', Attachment.Filesize)
-                                    .next('td')
-                                    .find('a')
-                                    .removeClass('Hidden')
-                                    .data('file-id', Attachment.FileID);
+                                $TargetObj.find('.Filetype').text(Attachment.ContentType);
+                                $TargetObj.find('.Filesize').text(Attachment.HumanReadableDataSize).attr('data-file-size', Attachment.Filesize);
+                                $TargetObj.find('.Download').find('a').attr('href', Core.Config.Get('Baselink') + 'Action=AJAXAttachment;Subaction=Download;FileID=' + Attachment.FileID + ';FormID=' + FormID + ';ChallengeToken=' + ChallengeToken + SessionToken).attr('data-file-id', Attachment.FileID).removeClass('Hidden');
+                                $TargetObj.find('.Delete').find('a').attr('data-file-id', Attachment.FileID).removeClass('Hidden');
+
+                                if (Attachment.Preview) {
+                                    $TargetObj.find('.Preview').find('a').attr('data-file-id', Attachment.FileID).removeClass('Hidden');
+                                }
+
                             }
                             else {
 
                                 AttachmentItem = Core.Template.Render('AjaxDnDUpload/AttachmentItem', {
-                                    'Filename' : Attachment.Filename,
-                                    'Filetype' : Attachment.ContentType,
-                                    'Filesize' : Attachment.Filesize,
-                                    'FileID'   : Attachment.FileID,
+                                    'Filename'   : Attachment.Filename,
+                                    'Filetype'   : Attachment.ContentType,
+                                    'Filesize'   : Attachment.Filesize,
+                                    'FileID'     : Attachment.FileID,
+                                    'DownloadURL': Core.Config.Get('Baselink') + 'Action=AJAXAttachment;Subaction=Download;FileID=' + Attachment.FileID + ';FormID=' + FormID + ';ChallengeToken=' + ChallengeToken + SessionToken,
+                                    'Preview'    : Attachment.Preview,
                                 });
 
                                 $(AttachmentItem).prependTo($ContainerObj.find('.AttachmentList tbody')).fadeIn();
@@ -918,18 +918,18 @@ Core.UI = (function (TargetNS) {
         });
 
         // Attachment Preview
-        $('.AttachmentPreview').off('click').on('click', function() {
+        $(document).off('click.AttachmentPreview').on('click.AttachmentPreview', '.AttachmentPreview', function() {
             var $TriggerObj = $(this),
                 $AttachmentListContainerObj = $TriggerObj.closest('.AttachmentListContainer'),
                 $UploadFieldObj = $AttachmentListContainerObj.nextAll('.AjaxDnDUpload'),
                 FormID = $UploadFieldObj.data('form-id') ? $UploadFieldObj.data('form-id') : $(this).closest('form').find('input[name=FormID]').val(),
                 Data = {
-                    Action:    $(this).data('preview-action') ? $(this).data('preview-action') : 'AJAXAttachment',
+                    Action:    $(this).attr('data-preview-action') ? $(this).attr('data-preview-action') : 'AJAXAttachment',
                     Subaction: 'Preview',
-                    FileID:    $(this).data('file-id'),
+                    FileID:    $(this).attr('data-file-id'),
                     FormID:    FormID,
-                    ObjectID:  $(this).data('object-id'),
-                    FieldID:   $(this).data('field-id')
+                    ObjectID:  $(this).attr('data-object-id'),
+                    FieldID:   $(this).attr('data-field-id')
                 };
 
             $TriggerObj.closest('.AttachmentListContainer').find('.Busy').fadeIn();
@@ -975,12 +975,12 @@ Core.UI = (function (TargetNS) {
                 $UploadFieldObj = $AttachmentListContainerObj.nextAll('.AjaxDnDUpload'),
                 FormID = $UploadFieldObj.data('form-id') ? $UploadFieldObj.data('form-id') : $(this).closest('form').find('input[name=FormID]').val(),
                 Data = {
-                    Action:    $(this).data('delete-action') ? $(this).data('delete-action') : 'AJAXAttachment',
+                    Action:    $(this).attr('data-delete-action') ? $(this).attr('data-delete-action') : 'AJAXAttachment',
                     Subaction: 'Delete',
-                    FileID:    $(this).data('file-id'),
+                    FileID:    $(this).attr('data-file-id'),
                     FormID:    FormID,
-                    ObjectID:  $(this).data('object-id'),
-                    FieldID:   $(this).data('field-id')
+                    ObjectID:  $(this).attr('data-object-id'),
+                    FieldID:   $(this).attr('data-field-id')
                 };
 
             $TriggerObj.closest('.AttachmentListContainer').find('.Busy').fadeIn();

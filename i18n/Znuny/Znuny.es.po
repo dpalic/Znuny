@@ -25255,3 +25255,7 @@ msgstr ""
 msgid "Default template for notification e-mails (see Kernel/Output/HTML/Templates/Standard/NotificationEvent/Email directory for available templates)."
 msgstr ""
 
+#. Perl Module: Kernel/Modules/AJAXAttachment.pm
+msgid "%s is missing. The file could not be deleted properly."
+msgstr ""
+

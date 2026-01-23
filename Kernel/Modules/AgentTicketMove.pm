@@ -1573,6 +1573,29 @@ sub AgentMove {
             );
         }
 
+        my $PreviewContentTypes = $ConfigObject->Get('Attachment')->{PreviewContentTypes} || {};
+
+        # show attachments
+        ATTACHMENT:
+        for my $Attachment ( @{ $Param{Attachments} } ) {
+            if (
+                $Attachment->{ContentID}
+                && $LayoutObject->{BrowserRichText}
+                && ( $Attachment->{ContentType} =~ /image/i )
+                && ( $Attachment->{Disposition} eq 'inline' )
+                )
+            {
+                next ATTACHMENT;
+            }
+
+            # Add preview flag if content type is in the preview content types list.
+            # This is used to determine if the attachment can be previewed in the UI.
+            if ( $Attachment->{ContentType} && $PreviewContentTypes->{ $Attachment->{ContentType} } ) {
+                $Attachment->{Preview} = 1;
+            }
+            push @{ $Param{AttachmentList} }, $Attachment;
+        }
+
         $LayoutObject->Block(
             Name => 'Note',
             Data => {%Param},
@@ -1615,22 +1638,6 @@ sub AgentMove {
                 Name => 'TimeUnits',
                 Data => \%Param,
             );
-        }
-
-        # show attachments
-        ATTACHMENT:
-        for my $Attachment ( @{ $Param{Attachments} } ) {
-            if (
-                $Attachment->{ContentID}
-                && $LayoutObject->{BrowserRichText}
-                && ( $Attachment->{ContentType} =~ /image/i )
-                && ( $Attachment->{Disposition} eq 'inline' )
-                )
-            {
-                next ATTACHMENT;
-            }
-
-            push @{ $Param{AttachmentList} }, $Attachment;
         }
 
         # add rich text editor
