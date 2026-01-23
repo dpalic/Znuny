@@ -97,6 +97,7 @@ sub Add {
     }
 
     my %ValidatedParams = $Self->_EvaluateParams(%Param);
+    return if !%ValidatedParams;
 
     my $SQL = '
         INSERT INTO sendmail_config (

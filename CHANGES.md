@@ -1,4 +1,5 @@
 # 7.3.1 2025-??-??
+ - 2025-01-23 Increased length of the password column for users, customer_user, and mail_account.
  - 2025-01-22 Fixed: Process ticket submission validates Responsible field client-side.
  - 2026-01-22 Fixed: URL parameters were not used to pre-fill new email and phone ticket forms.
  - 2026-01-21 Fixed: The tags <OTRS_TICKET> and <OTRS_MERGE_TO_TICKET> can only be used once in the text of the configuration Ticket::Frontend::AutomaticMergeText. The 'global' flag is missing. Thanks to Tim Püttmanns (@tipue-dev), maxence. [PR#753](https://github.com/znuny/Znuny/pull/753)

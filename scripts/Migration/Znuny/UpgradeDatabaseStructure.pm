@@ -57,6 +57,10 @@ sub Run {
             Message => 'Create database table sendmail_config.',
             Module  => 'SendmailConfig',
         },
+        {
+            Message => 'Alters password column sizes in users, customer_user and mail_account.',
+            Module  => 'PasswordColumnLength',
+        },
     );
 
     return 1   if !@Tasks;
