@@ -1,5 +1,6 @@
 
 # 7.3.1 2025-??-??
+ - 2026-01-23 Fixed: Znuny re-directs after login to default view even if there is specified ExternalURL parameter with the Action encoded in the link.
  - 2026-01-23 Added preview and download function to AttachmentList.
  - 2026-01-23 Improved handling of read-only fields for the backend of CustomerUser::DB and CustomerCompany::DB.
  - 2025-01-23 System configuration: Added `NotificationEmailDefaultTemplate` option. Thanks to Paweł Bogusławski (@pboguslawski) [PR#382](https://github.com/znuny/Znuny/pull/382).

@@ -207,6 +207,16 @@ sub Run {
         $Param{$Key} = $ParamObject->GetParam( Param => $Key ) || $CommonObjectParam{$Key};
     }
 
+    # when no action parameter exists but there is passed
+    # valid session and requested url, redirect to the link
+    if ( !$Param{Action} && $Param{SessionID} && $Param{RequestedURL} ) {
+        print $Kernel::OM->Get('Kernel::Output::HTML::Layout')->Redirect(
+            OP => $Param{RequestedURL},
+        );
+
+        return;
+    }
+
     # security check Action Param (replace non word chars)
     $Param{Action} =~ s/\W//g;
 
