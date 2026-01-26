@@ -2642,56 +2642,53 @@ sub Data {
             'Diese Statistik enthält Konfigurationsfehler und kann momentan nicht verwendet werden.',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
-        'Change Free Text of %s%s%s' => 'Den Freitext von %s%s%s ändern',
-        'Change Owner of %s%s%s' => 'Besitzer von %s%s%s wechseln',
-        'Close %s%s%s' => '%s%s%s schließen',
-        'Add Note to %s%s%s' => 'Notiz zu %s%s%s hinzufügen',
-        'Set Pending Time for %s%s%s' => 'Wartezeit setzen für %s%s%s',
-        'Change Priority of %s%s%s' => 'Priorität von %s%s%s ändern',
-        'Change Responsible of %s%s%s' => 'Verantwortlichen von %s%s%s ändern',
         'The ticket has been locked' => 'Das Ticket wurde gesperrt',
-        'Ticket Settings' => 'Ticket-Einstellungen',
+        'Unlock and close popup' => 'Sperre aufheben und schließen',
         'Customer user' => 'Kundenbenutzer',
         'Service invalid.' => 'Ungültiger Service.',
-        'SLA invalid.' => 'SLA ungültig.',
         'Team Data' => 'Teamdaten',
         'Queue invalid.' => 'Queue ungültig.',
-        'New Owner' => 'Neuer Besitzer',
         'Please set a new owner!' => 'Bitte legen Sie einen neuen Besitzer fest!',
         'Owner invalid.' => 'Besitzer ungültig.',
-        'New Responsible' => 'Neuer Verantwortlicher',
         'Please set a new responsible!' => 'Bitte legen Sie einen neuen Verantwortlichen fest!',
         'Responsible invalid.' => 'Verantwortlicher ungültig.',
         'Ticket Data' => 'Ticketdaten',
-        'Next state' => 'Nächster Status',
         'State invalid.' => 'Status ungültig.',
         'For all pending* states.' => 'Für alle warten* Status.',
-        'Dynamic Info' => 'Dynamische Felder',
-        'Add Article' => 'Artikel hinzufügen',
+        'Communications' => 'Kommunikation',
         'Inform' => 'Informiere',
         'Inform agents' => 'Agenten informieren',
         'Inform involved agents' => 'Involvierte Agenten informieren',
         'Here you can select additional agents which should receive a notification regarding the new article.' =>
             'Hier können Sie zusätzliche Agenten auswählen, die eine Benachrichtigung über den neuen Artikel enthalten sollen.',
         'Text will also be received by' => 'Text wird auch gesendet an',
-        'Communications' => 'Kommunikation',
         'Create an Article' => 'Artikel erstellen',
         'Setting a template will overwrite any text or attachment.' => 'Die Auswahl einer Vorlage wird bereits bestehenden Text oder Anhänge löschen.',
+        'Article' => 'Artikel',
+        'Undo & close' => 'Rückgängig machen und Beenden',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
+        'Archive' => 'Archiv',
+        'This ticket is archived.' => 'Dieses Ticket ist archiviert.',
+        'is invalid' => 'ist ungültig',
+        'Pending till' => 'Warten bis',
+        'Locked' => 'Sperre',
+        'First Response Time' => 'Reaktionszeit',
+        'Update Time' => 'Aktualisierungszeit',
+        'Solution Time' => 'Lösungszeit',
+        'Accounted time' => 'Erfasste Zeit',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBounce.tt
-        'Bounce %s%s%s' => '%s%s%s umleiten',
-        'cancel' => 'abbrechen',
         'Bounce to' => 'Umleiten an',
         'You need a email address.' => 'Sie benötigen eine E-Mail-Adresse.',
         'Need a valid email address or don\'t use a local email address.' =>
             'Benötige eine gültige E-Mail-Adresse, verwenden Sie keine lokale Adresse.',
-        'Next ticket state' => 'Nächster Status des Tickets',
         'Inform sender' => 'Sender informieren',
-        'Send mail' => 'E-Mail senden',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBulk.tt
         'Ticket Bulk Action' => 'Ticket Sammelaktion',
         'Send Email' => 'E-Mail versenden',
+        'Next state' => 'Nächster Status',
         'Merge' => 'Zusammenfassen',
         'Merge to' => 'Zusammenfassen zu',
         'Invalid ticket identifier!' => 'Ungültiger Ticket-Identifizierer!',
@@ -2716,7 +2713,7 @@ sub Data {
         'This address is registered as system address and cannot be used: %s' =>
             'Diese Adresse ist als Systemadresse registriert und kann daher nicht verwendet werden: %s',
         'Bcc' => 'Bcc',
-        'Undo & close' => 'Rückgängig machen und Beenden',
+        'Send mail' => 'E-Mail senden',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCustomer.tt
         'Change Customer of %s%s%s' => 'Kunde von %s%s%s ändern',
@@ -2728,9 +2725,6 @@ sub Data {
         'Please include at least one customer user for the ticket.' => 'Bitte tragen Sie wenigstens einen Kundenbenutzer für das Ticket ein.',
         'From queue' => 'Aus Queue',
         'Get all' => 'Alles holen',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailOutbound.tt
-        'Undo & Close' => 'Rückgängig machen und Schließen',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
         'Resend Email for %s%s%s' => 'E-Mail erneut versenden für %s%s%s',
@@ -2757,10 +2751,8 @@ sub Data {
         'Filter for history items' => 'Filter für Historieneinträge',
         'Expand/Collapse all' => 'Alle einblenden/ausblenden',
         'CreateTime' => 'Erstellzeit',
-        'Article' => 'Artikel',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketMerge.tt
-        'Merge %s%s%s' => '%s%s%s zusammenführen',
         'Merge Settings' => 'Einstellungen für Zusammenführung',
         'Try typing part of the ticket number or title in order to search by it.' =>
             'Geben Sie einen Teil der Ticketnummer oder des Titels ein, um danach zu suchen.',
@@ -2771,13 +2763,11 @@ sub Data {
         'Need a valid email address.' => 'Gültige E-Mail-Adresse benötigt.',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketMove.tt
-        'Move %s%s%s' => '%s%s%s verschieben',
         'New Queue' => 'Neue Queue',
-        'Communication' => 'Kommunikation',
+        'New Owner' => 'Neuer Besitzer',
         'Move' => 'Verschieben',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketNoteToLinkedTicket.tt
-        'Add note to linked %s%s%s' => 'Notiz zu verlinktem %s%s%s hinzufügen',
         'Notes' => 'Notizen',
         'Note to linked Ticket' => 'Notiz zu verlinktem Ticket',
         'LinkList invalid.' => 'LinkList ungültig.',
@@ -2791,9 +2781,6 @@ sub Data {
         'Sender' => 'Sender',
         'Customer User Name' => 'Kundenbenutzer-Name',
         'Impact' => 'Auswirkung',
-        'Update Time' => 'Aktualisierungszeit',
-        'Solution Time' => 'Lösungszeit',
-        'First Response Time' => 'Reaktionszeit',
         'Move ticket to a different queue' => 'Ticket in eine andere Queue verschieben',
         'Change queue' => 'Queue wechseln',
 
@@ -2816,6 +2803,9 @@ sub Data {
         'Create New Phone Ticket' => 'Neues Telefon-Ticket erstellen',
         'Please include at least one customer for the ticket.' => 'Bitte geben Sie mindestens einen Kunden für das Ticket an.',
         'To queue' => 'An Queue',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPhoneCommon.tt
+        'Communication' => 'Kommunikation',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPlain.tt
         'View Email Plain Text for %s%s%s' => 'E-Mail-Klartext für %s%s%s ansehen',
@@ -2919,14 +2909,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/MentionsTable.tt
         'Mentions' => 'Erwähnungen',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/TicketInformation.tt
-        'Archive' => 'Archiv',
-        'This ticket is archived.' => 'Dieses Ticket ist archiviert.',
-        'is invalid' => 'ist ungültig',
-        'Pending till' => 'Warten bis',
-        'Locked' => 'Sperre',
-        'Accounted time' => 'Erfasste Zeit',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/ArticleContent/Invalid.tt
         'Preview of this article is not possible because %s channel is missing in the system.' =>
@@ -4472,6 +4454,7 @@ sub Data {
             'Wartezeit kann nur verwendet werden, wenn Status oder StatusID für den Aktivitätsdialog konfiguriert sind. Aktivitätsdialog: %s!',
         'Pending Date' => 'Warten bis',
         'for pending* states' => 'für warten* Status',
+        'Next ticket state' => 'Nächster Status des Tickets',
         'ActivityDialogEntityID missing!' => 'ActivityDialogEntityID wird benötigt!',
         'Couldn\'t get Config for ActivityDialogEntityID "%s"!' => 'Konnte Konfiguration für ActivityDialogEntityID "%s" nicht ermitteln!',
         'Couldn\'t use CustomerID as an invisible field.' => 'CustomerID konnte nicht als unsichtbares Feld verwendet werden.',
@@ -4947,6 +4930,9 @@ sub Data {
         'Unable to load %s!' => 'Kann %s nicht laden!',
         'Content' => 'Inhalt',
 
+        # Perl Module: Kernel/Output/HTML/TicketActionCommon/TicketInformation.pm
+        'Ticket Information' => 'Ticket-Informationen',
+
         # Perl Module: Kernel/Output/HTML/TicketMenu/Lock.pm
         'Unlock to give it back to the queue' => 'Zur Rückgabe an die Queue entsperren',
         'Lock it to work on it' => 'Zur Bearbeitung sperren',
@@ -4958,9 +4944,6 @@ sub Data {
 
         # Perl Module: Kernel/Output/HTML/TicketOverviewMenu/Sort.pm
         'Order by' => 'Sortieren nach',
-
-        # Perl Module: Kernel/Output/HTML/TicketZoom/TicketInformation.pm
-        'Ticket Information' => 'Ticket-Informationen',
 
         # Perl Module: Kernel/Output/HTML/ToolBar/TicketLocked.pm
         'Locked Tickets New' => 'Neue gesperrte Tickets',
@@ -6788,6 +6771,7 @@ sub Data {
             'Bestimmt das Standard-Ticket-Attribut für das Sortieren der Tickets in der Beobachten-Anzeige im Agent-Interface.',
         'Defines the default ticket order in the watch view of the agent interface. Up: oldest on top. Down: latest on top.' =>
             'Steuert die Ticket-Sortierung für die Beobachten-Ansicht des Agentenbereichs. Auf: Älteste oben. Ab: Neuste oben.',
+        'Displayed in the sidebar as additional information.' => 'Wird in der Seitenleiste als zusätzliche Information angezeigt.',
         'Required permissions to use the ticket free text screen in the agent interface.' =>
             'Benötigte Rechte um den "Freitext"-Dialog eines Tickets im Agenten-Interface aufzurufen.',
         'Defines if a ticket lock is required in the ticket free text screen of the agent interface (if the ticket isn\'t locked yet, the ticket gets locked and the current agent will be set automatically as its owner).' =>
@@ -6842,6 +6826,11 @@ sub Data {
             'Definiert den Historien-Typ für die Aktion "Ticket FreiText" welcher für die Ticket-Historie in der Agenten-Oberfläche benutzt wird.',
         'Defines the history comment for the ticket free text screen action, which gets used for ticket history.' =>
             'Steuert den Historien-Kommentar für die Freitext-Aktion im Agentenbereich.',
+        'TicketActionCommon widget that displays the current action description.' =>
+            'TicketActionCommon-Widget, das die aktuelle Aktion beschreibt.',
+        'TicketActionCommon widget that displays ticket information.' => 'TicketActionCommon-Widget, das Ticketinformationen anzeigt.',
+        'TicketActionCommon widget that displays customer information.' =>
+            'TicketActionCommon-Widget, das Kundeninformationen anzeigt.',
         'Required permissions to use the ticket phone outbound screen in the agent interface.' =>
             'Benötigte Rechte um den "Ausgehender Telefonanruf"-Dialog eines Tickets im Agenten-Interface aufzurufen.',
         'Defines if a ticket lock is required in the ticket phone outbound screen of the agent interface (if the ticket isn\'t locked yet, the ticket gets locked and the current agent will be set automatically as its owner).' =>
@@ -6852,6 +6841,8 @@ sub Data {
             'Bestimmt den Standard-Betreff für Telefon-Tickets in der Ausgehende-Telefon-Tickets-Anzeige in der Agent-Oberfläche.',
         'Defines the default note body text for phone tickets in the ticket phone outbound screen of the agent interface.' =>
             'Bestimmt die Vorbelegung des Textfeldes für Telefon-Tickets im Bildschirm für ausgehende Anrufe im Agenten-Interface.',
+        'Sets the state of a ticket in screen of the agent interface.' =>
+            'Setzt den Status eines Tickets im Bildschirm des Agenten-Interfaces.',
         'Defines the default ticket next state after adding a phone note in the ticket phone outbound screen of the agent interface.' =>
             'Steuert den Ticketstatus, nachdem eine Notiz über den "Ausgehender Anruf"-Bildschirm im Agentenbereich hinzugefügt wurde.',
         'Next possible ticket states after adding a phone note in the ticket phone outbound screen of the agent interface.' =>
@@ -8901,6 +8892,7 @@ Ihr Helpdesk-Team
             'Erzeugt eine Unit-Test-Datei für dieses Ticket und sendet diese an Znuny.',
         'Creates a unit test file for this ticket.' => 'Erzeugt eine Unit-Test-Datei für dieses Ticket.',
         'Croatian' => 'Kroatisch',
+        'Current action description.' => 'Beschreibung der aktuellen Aktion.',
         'Customer Administration' => 'Kundenverwaltung',
         'Customer Companies' => 'Kunden',
         'Customer IDs' => 'Kundennummern',
@@ -9359,11 +9351,13 @@ Ihr Helpdesk-Team
         'Ticket Priority.' => 'Ticket-Priorität.',
         'Ticket Queue Overview' => 'Ticket-Übersicht nach Queues',
         'Ticket Responsible.' => 'Ticket-Verantwortlicher.',
+        'Ticket Settings' => 'Ticket-Einstellungen',
         'Ticket Watcher' => 'Ticket-Beobachter',
         'Ticket Zoom' => 'Ticket-Zoom',
         'Ticket Zoom.' => 'Ticket-Detailansicht.',
         'Ticket bulk module.' => 'Ticket-Stapelverarbeitung.',
         'Ticket creation' => 'Ticketerstellung',
+        'Ticket information' => 'Ticketinformation',
         'Ticket limit per page for Ticket Overview "Medium".' => 'Maximale Anzahl Tickets pro Seite für Ticketübersicht "Mittel".',
         'Ticket limit per page for Ticket Overview "Preview".' => 'Maximale Anzahl Tickets pro Seite für Ticketübersicht "Vorschau".',
         'Ticket limit per page for Ticket Overview "Small".' => 'Maximale Anzahl Tickets pro Seite für Ticketübersicht "Klein".',

@@ -21,7 +21,15 @@ did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
 }
 @media (max-width: 1199px) {
   .modSidebar > .inner.sidebarActive {
-    width: 40px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 310px;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: -2px 0 20px rgba(0, 0, 0, 0.1);
   }
 }
 @media (min-width: 1200px) {
@@ -101,9 +109,6 @@ did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
   background-repeat: no-repeat;
   background-size: cover;
   transform: rotate(180deg);
-}
-.modSidebar > .inner .sidebarTitle h2 {
-  font-size: 12px;
 }
 .modSidebar > .inner .sidebarTitle:hover {
   cursor: pointer;

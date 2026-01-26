@@ -274,6 +274,7 @@ sub AgentQueueListOption {
     my $TreeView           = $Param{TreeView}                  ? $Param{TreeView}        : 0;
     my $OptionTitle        = defined( $Param{OptionTitle} )    ? $Param{OptionTitle}     : 0;
     my $OnChangeSubmit     = defined( $Param{OnChangeSubmit} ) ? $Param{OnChangeSubmit}  : '';
+    my $Placeholder        = defined( $Param{Placeholder} )    ? $Param{Placeholder}     : '';
 
     if ($OnChangeSubmit) {
         $OnChangeSubmit = " onchange=\"submit();\"";
@@ -348,6 +349,7 @@ sub AgentQueueListOption {
             SelectedID    => $Param{SelectedID} || $Param{SelectedIDRefArray} || '',
             SelectedValue => $Param{Selected},
             Translation   => 0,
+            Placeholder   => $Placeholder,
         );
         return $Param{MoveQueuesStrg};
     }
@@ -360,6 +362,9 @@ sub AgentQueueListOption {
         . '" class="'
         . $Class
         . '" data-tree="true"'
+        . ' placeholder="'
+        . $Placeholder
+        . '"'
         . " $Size $Multiple $OnChangeSubmit>\n";
     my %UsedData;
     my %Data;

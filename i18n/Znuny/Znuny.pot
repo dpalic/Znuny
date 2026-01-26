@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2026-01-23 22:39+0000\n"
+"POT-Creation-Date: 2026-01-26 09:26+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -7827,39 +7827,11 @@ msgid "This statistic contains configuration errors and can currently not be use
 msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
-msgid "Change Free Text of %s%s%s"
-msgstr ""
-
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
-msgid "Change Owner of %s%s%s"
-msgstr ""
-
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
-msgid "Close %s%s%s"
-msgstr ""
-
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
-msgid "Add Note to %s%s%s"
-msgstr ""
-
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
-msgid "Set Pending Time for %s%s%s"
-msgstr ""
-
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
-msgid "Change Priority of %s%s%s"
-msgstr ""
-
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
-msgid "Change Responsible of %s%s%s"
-msgstr ""
-
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
 msgid "The ticket has been locked"
 msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
-msgid "Ticket Settings"
+msgid "Unlock and close popup"
 msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
@@ -7871,10 +7843,6 @@ msgid "Service invalid."
 msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
-msgid "SLA invalid."
-msgstr ""
-
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
 msgid "Team Data"
 msgstr ""
 
@@ -7883,19 +7851,11 @@ msgid "Queue invalid."
 msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
-msgid "New Owner"
-msgstr ""
-
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
 msgid "Please set a new owner!"
 msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
 msgid "Owner invalid."
-msgstr ""
-
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
-msgid "New Responsible"
 msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
@@ -7911,10 +7871,6 @@ msgid "Ticket Data"
 msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
-msgid "Next state"
-msgstr ""
-
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
 msgid "State invalid."
 msgstr ""
 
@@ -7923,11 +7879,7 @@ msgid "For all pending* states."
 msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
-msgid "Dynamic Info"
-msgstr ""
-
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
-msgid "Add Article"
+msgid "Communications"
 msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
@@ -7951,10 +7903,6 @@ msgid "Text will also be received by"
 msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
-msgid "Communications"
-msgstr ""
-
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
 msgid "Create an Article"
 msgstr ""
 
@@ -7962,12 +7910,48 @@ msgstr ""
 msgid "Setting a template will overwrite any text or attachment."
 msgstr ""
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBounce.tt
-msgid "Bounce %s%s%s"
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
+msgid "Article"
 msgstr ""
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBounce.tt
-msgid "cancel"
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
+msgid "Undo & close"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
+msgid "Archive"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
+msgid "This ticket is archived."
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
+msgid "is invalid"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
+msgid "Pending till"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
+msgid "Locked"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
+msgid "First Response Time"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
+msgid "Update Time"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
+msgid "Solution Time"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
+msgid "Accounted time"
 msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBounce.tt
@@ -7983,15 +7967,7 @@ msgid "Need a valid email address or don't use a local email address."
 msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBounce.tt
-msgid "Next ticket state"
-msgstr ""
-
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBounce.tt
 msgid "Inform sender"
-msgstr ""
-
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBounce.tt
-msgid "Send mail"
 msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBulk.tt
@@ -8000,6 +7976,10 @@ msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBulk.tt
 msgid "Send Email"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBulk.tt
+msgid "Next state"
 msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBulk.tt
@@ -8083,7 +8063,7 @@ msgid "Bcc"
 msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
-msgid "Undo & close"
+msgid "Send mail"
 msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCustomer.tt
@@ -8112,10 +8092,6 @@ msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmail.tt
 msgid "Get all"
-msgstr ""
-
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailOutbound.tt
-msgid "Undo & Close"
 msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
@@ -8194,14 +8170,6 @@ msgstr ""
 msgid "CreateTime"
 msgstr ""
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketHistory.tt
-msgid "Article"
-msgstr ""
-
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketMerge.tt
-msgid "Merge %s%s%s"
-msgstr ""
-
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketMerge.tt
 msgid "Merge Settings"
 msgstr ""
@@ -8231,23 +8199,15 @@ msgid "Need a valid email address."
 msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketMove.tt
-msgid "Move %s%s%s"
-msgstr ""
-
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketMove.tt
 msgid "New Queue"
 msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketMove.tt
-msgid "Communication"
+msgid "New Owner"
 msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketMove.tt
 msgid "Move"
-msgstr ""
-
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketNoteToLinkedTicket.tt
-msgid "Add note to linked %s%s%s"
 msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketNoteToLinkedTicket.tt
@@ -8292,18 +8252,6 @@ msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketOverviewMedium.tt
 msgid "Impact"
-msgstr ""
-
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketOverviewMedium.tt
-msgid "Update Time"
-msgstr ""
-
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketOverviewMedium.tt
-msgid "Solution Time"
-msgstr ""
-
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketOverviewMedium.tt
-msgid "First Response Time"
 msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketOverviewMedium.tt
@@ -8360,6 +8308,10 @@ msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPhone.tt
 msgid "To queue"
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPhoneCommon.tt
+msgid "Communication"
 msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPlain.tt
@@ -8680,30 +8632,6 @@ msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/MentionsTable.tt
 msgid "Mentions"
-msgstr ""
-
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/TicketInformation.tt
-msgid "Archive"
-msgstr ""
-
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/TicketInformation.tt
-msgid "This ticket is archived."
-msgstr ""
-
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/TicketInformation.tt
-msgid "is invalid"
-msgstr ""
-
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/TicketInformation.tt
-msgid "Pending till"
-msgstr ""
-
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/TicketInformation.tt
-msgid "Locked"
-msgstr ""
-
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/TicketInformation.tt
-msgid "Accounted time"
 msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/ArticleContent/Invalid.tt
@@ -12843,6 +12771,10 @@ msgid "for pending* states"
 msgstr ""
 
 #. Perl Module: Kernel/Modules/AgentTicketProcess.pm
+msgid "Next ticket state"
+msgstr ""
+
+#. Perl Module: Kernel/Modules/AgentTicketProcess.pm
 msgid "ActivityDialogEntityID missing!"
 msgstr ""
 
@@ -13970,6 +13902,10 @@ msgstr ""
 msgid "Content"
 msgstr ""
 
+#. Perl Module: Kernel/Output/HTML/TicketActionCommon/TicketInformation.pm
+msgid "Ticket Information"
+msgstr ""
+
 #. Perl Module: Kernel/Output/HTML/TicketMenu/Lock.pm
 msgid "Unlock to give it back to the queue"
 msgstr ""
@@ -13992,10 +13928,6 @@ msgstr ""
 
 #. Perl Module: Kernel/Output/HTML/TicketOverviewMenu/Sort.pm
 msgid "Order by"
-msgstr ""
-
-#. Perl Module: Kernel/Output/HTML/TicketZoom/TicketInformation.pm
-msgid "Ticket Information"
 msgstr ""
 
 #. Perl Module: Kernel/Output/HTML/ToolBar/TicketLocked.pm
@@ -18063,6 +17995,10 @@ msgid "Defines the default ticket order in the watch view of the agent interface
 msgstr ""
 
 #. XML Definition: Kernel/Config/Files/XML/Ticket.xml
+msgid "Displayed in the sidebar as additional information."
+msgstr ""
+
+#. XML Definition: Kernel/Config/Files/XML/Ticket.xml
 msgid "Required permissions to use the ticket free text screen in the agent interface."
 msgstr ""
 
@@ -18187,6 +18123,18 @@ msgid "Defines the history comment for the ticket free text screen action, which
 msgstr ""
 
 #. XML Definition: Kernel/Config/Files/XML/Ticket.xml
+msgid "TicketActionCommon widget that displays the current action description."
+msgstr ""
+
+#. XML Definition: Kernel/Config/Files/XML/Ticket.xml
+msgid "TicketActionCommon widget that displays ticket information."
+msgstr ""
+
+#. XML Definition: Kernel/Config/Files/XML/Ticket.xml
+msgid "TicketActionCommon widget that displays customer information."
+msgstr ""
+
+#. XML Definition: Kernel/Config/Files/XML/Ticket.xml
 msgid "Required permissions to use the ticket phone outbound screen in the agent interface."
 msgstr ""
 
@@ -18204,6 +18152,10 @@ msgstr ""
 
 #. XML Definition: Kernel/Config/Files/XML/Ticket.xml
 msgid "Defines the default note body text for phone tickets in the ticket phone outbound screen of the agent interface."
+msgstr ""
+
+#. XML Definition: Kernel/Config/Files/XML/Ticket.xml
+msgid "Sets the state of a ticket in screen of the agent interface."
 msgstr ""
 
 #. XML Definition: Kernel/Config/Files/XML/Ticket.xml
@@ -23034,6 +22986,10 @@ msgid "Croatian"
 msgstr ""
 
 #. SysConfig
+msgid "Current action description."
+msgstr ""
+
+#. SysConfig
 msgid "Customer Administration"
 msgstr ""
 
@@ -24758,6 +24714,10 @@ msgid "Ticket Responsible."
 msgstr ""
 
 #. SysConfig
+msgid "Ticket Settings"
+msgstr ""
+
+#. SysConfig
 msgid "Ticket Watcher"
 msgstr ""
 
@@ -24775,6 +24735,10 @@ msgstr ""
 
 #. SysConfig
 msgid "Ticket creation"
+msgstr ""
+
+#. SysConfig
+msgid "Ticket information"
 msgstr ""
 
 #. SysConfig

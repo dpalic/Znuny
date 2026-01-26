@@ -27,7 +27,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d.%m.%Y';
     $Self->{DateInputFormat}     = '%d.%m.%Y';
     $Self->{DateInputFormatLong} = '%d.%m.%Y - %T';
-    $Self->{Completeness}        = 0.86184315604536;
+    $Self->{Completeness}        = 0.861004478566859;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2642,56 +2642,53 @@ sub Data {
             'Ова статистика садржи конфигурационе грешке и сад се не може користити.',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
-        'Change Free Text of %s%s%s' => 'Промени слободни текст за %s%s%s',
-        'Change Owner of %s%s%s' => 'Промени власника за %s%s%s',
-        'Close %s%s%s' => 'Затвори %s%s%s',
-        'Add Note to %s%s%s' => 'Додај напомену %s%s%s',
-        'Set Pending Time for %s%s%s' => 'Постави време чекања за %s%s%s',
-        'Change Priority of %s%s%s' => 'Промени приоритет за %s%s%s',
-        'Change Responsible of %s%s%s' => 'Промени одговорног за %s%s%s',
         'The ticket has been locked' => 'Тикет је закључан.',
-        'Ticket Settings' => 'Подешавање тикета',
+        'Unlock and close popup' => '',
         'Customer user' => 'Клијент корисник',
         'Service invalid.' => 'Неважећа услуга.',
-        'SLA invalid.' => 'Неважећи SLA.',
         'Team Data' => '',
         'Queue invalid.' => 'Неважећи ред.',
-        'New Owner' => 'Нови власник',
         'Please set a new owner!' => 'Молимо да одредите новог власника!',
         'Owner invalid.' => ' Неважећи власник.',
-        'New Responsible' => 'Нови одговорни',
         'Please set a new responsible!' => 'Молимо да одредите новог одговорног!',
         'Responsible invalid.' => 'Неважећи одговоран.',
         'Ticket Data' => '',
-        'Next state' => 'Следећи статус',
         'State invalid.' => 'Неважеће стање.',
         'For all pending* states.' => 'За сва стања* чекања.',
-        'Dynamic Info' => '',
-        'Add Article' => 'Додај чланак',
+        'Communications' => '',
         'Inform' => '',
         'Inform agents' => 'Обавести оператере',
         'Inform involved agents' => 'Обавести укључене оператере',
         'Here you can select additional agents which should receive a notification regarding the new article.' =>
             'Овде можете изабрати додатне оператере који треба да примају обавештења у вези са новим чланком.',
         'Text will also be received by' => 'Текст ће такође примити и:',
-        'Communications' => '',
         'Create an Article' => 'Креирај чланак',
         'Setting a template will overwrite any text or attachment.' => 'Подешавање шаблона ће преписати сваки текст или прилог.',
+        'Article' => 'Чланак',
+        'Undo & close' => 'Одустани & затвори',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
+        'Archive' => 'Архивирај',
+        'This ticket is archived.' => 'Овај тикет је архивиран',
+        'is invalid' => '',
+        'Pending till' => 'На чекању до',
+        'Locked' => 'Закључано',
+        'First Response Time' => 'Време првог одговора',
+        'Update Time' => 'Време ажурирања',
+        'Solution Time' => 'Време решавања',
+        'Accounted time' => 'Обрачунато време',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBounce.tt
-        'Bounce %s%s%s' => 'Одбаци %s%s%s',
-        'cancel' => '',
         'Bounce to' => 'Преусмери на',
         'You need a email address.' => 'Потребна вам је имејл адреса.',
         'Need a valid email address or don\'t use a local email address.' =>
             'Исправна имејл адреса је неопходна, али не користите локалну адресу!',
-        'Next ticket state' => 'Наредни статус тикета',
         'Inform sender' => 'Обавести пошиљаоца',
-        'Send mail' => 'Пошаљи имејл!',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBulk.tt
         'Ticket Bulk Action' => 'Масовне акције на тикетима',
         'Send Email' => 'Пошаљи имејл',
+        'Next state' => 'Следећи статус',
         'Merge' => 'Споји',
         'Merge to' => 'Обједини са',
         'Invalid ticket identifier!' => 'Неважећи идентификатор тикета!',
@@ -2716,7 +2713,7 @@ sub Data {
         'This address is registered as system address and cannot be used: %s' =>
             'Ова адреса је регистрована као системска и не може бити коришћена: %s',
         'Bcc' => 'Bcc',
-        'Undo & close' => 'Одустани & затвори',
+        'Send mail' => 'Пошаљи имејл!',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCustomer.tt
         'Change Customer of %s%s%s' => 'Промени клијента за %s%s%s',
@@ -2728,9 +2725,6 @@ sub Data {
         'Please include at least one customer user for the ticket.' => 'Молимо вас укључите барем једног клијента корисника за тикет.',
         'From queue' => 'из реда',
         'Get all' => 'Узми све',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailOutbound.tt
-        'Undo & Close' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
         'Resend Email for %s%s%s' => 'Пошаљи поново имејл за %s %s %s',
@@ -2757,10 +2751,8 @@ sub Data {
         'Filter for history items' => 'Филтер за ставке историјата',
         'Expand/Collapse all' => '',
         'CreateTime' => 'Време креирања',
-        'Article' => 'Чланак',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketMerge.tt
-        'Merge %s%s%s' => 'Споји %s%s%s',
         'Merge Settings' => 'Подешавања спајања',
         'Try typing part of the ticket number or title in order to search by it.' =>
             'Унесите део броја или наслова тикета за претрагу.',
@@ -2771,13 +2763,11 @@ sub Data {
         'Need a valid email address.' => 'Потребна је исправна имејл адреса.',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketMove.tt
-        'Move %s%s%s' => 'Премести %s%s%s',
         'New Queue' => 'Нови Ред',
-        'Communication' => 'Комуникација',
+        'New Owner' => 'Нови власник',
         'Move' => 'Премести',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketNoteToLinkedTicket.tt
-        'Add note to linked %s%s%s' => '',
         'Notes' => '',
         'Note to linked Ticket' => '',
         'LinkList invalid.' => '',
@@ -2791,9 +2781,6 @@ sub Data {
         'Sender' => 'Пошиљаоц',
         'Customer User Name' => 'Назив клијент корисника',
         'Impact' => 'Утицај',
-        'Update Time' => 'Време ажурирања',
-        'Solution Time' => 'Време решавања',
-        'First Response Time' => 'Време првог одговора',
         'Move ticket to a different queue' => 'Премести тикет у други ред',
         'Change queue' => 'Промени ред',
 
@@ -2816,6 +2803,9 @@ sub Data {
         'Create New Phone Ticket' => 'Отвори нови тикет позива',
         'Please include at least one customer for the ticket.' => 'Молимо да укључите бар једног клијента за тикет.',
         'To queue' => 'У ред',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPhoneCommon.tt
+        'Communication' => 'Комуникација',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPlain.tt
         'View Email Plain Text for %s%s%s' => 'Приказ имејла као обичан текст за %s%s%s',
@@ -2919,14 +2909,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/MentionsTable.tt
         'Mentions' => '',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/TicketInformation.tt
-        'Archive' => 'Архивирај',
-        'This ticket is archived.' => 'Овај тикет је архивиран',
-        'is invalid' => '',
-        'Pending till' => 'На чекању до',
-        'Locked' => 'Закључано',
-        'Accounted time' => 'Обрачунато време',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/ArticleContent/Invalid.tt
         'Preview of this article is not possible because %s channel is missing in the system.' =>
@@ -4472,6 +4454,7 @@ sub Data {
             'Време чекања тикета може бити коришћено ако су State или StateID подешени за исти дијалог активности. ActivityDialog: %s!',
         'Pending Date' => 'Датум чекања',
         'for pending* states' => 'за стања* чекања',
+        'Next ticket state' => 'Наредни статус тикета',
         'ActivityDialogEntityID missing!' => 'Недостаје ActivityDialogEntityID!',
         'Couldn\'t get Config for ActivityDialogEntityID "%s"!' => 'Не могу прибавити конфигурацију за ActivityDialogEntityID "%s"!',
         'Couldn\'t use CustomerID as an invisible field.' => 'CustomerID се не може користити као невидљиво поље.',
@@ -4947,6 +4930,9 @@ sub Data {
         'Unable to load %s!' => 'Није могуће учитати %s!',
         'Content' => 'Садржај',
 
+        # Perl Module: Kernel/Output/HTML/TicketActionCommon/TicketInformation.pm
+        'Ticket Information' => 'Информације о тикету',
+
         # Perl Module: Kernel/Output/HTML/TicketMenu/Lock.pm
         'Unlock to give it back to the queue' => 'Откључајте за враћање у ред',
         'Lock it to work on it' => 'Закључајте за рад на тикету',
@@ -4958,9 +4944,6 @@ sub Data {
 
         # Perl Module: Kernel/Output/HTML/TicketOverviewMenu/Sort.pm
         'Order by' => 'Сортирај по',
-
-        # Perl Module: Kernel/Output/HTML/TicketZoom/TicketInformation.pm
-        'Ticket Information' => 'Информације о тикету',
 
         # Perl Module: Kernel/Output/HTML/ToolBar/TicketLocked.pm
         'Locked Tickets New' => 'Нови закључани тикети',
@@ -6788,6 +6771,7 @@ sub Data {
             'Дефинише подразумевани атрибут тикета за сортирање тикета у посматраном прегледу интерфејса оператера.',
         'Defines the default ticket order in the watch view of the agent interface. Up: oldest on top. Down: latest on top.' =>
             'Дефинише подразумевани редослед тикета у посматраном прегледу интерфејса оператера. Горе: Најстарији на врху. Доле: Најновије на врху.',
+        'Displayed in the sidebar as additional information.' => '',
         'Required permissions to use the ticket free text screen in the agent interface.' =>
             'Неопходне дозволе за употребу екрана слободног текста тикета у интерфејсу оператера.',
         'Defines if a ticket lock is required in the ticket free text screen of the agent interface (if the ticket isn\'t locked yet, the ticket gets locked and the current agent will be set automatically as its owner).' =>
@@ -6842,6 +6826,11 @@ sub Data {
             'Дефинише тип историје за приказ екрана активности тикета слободног текста, који се користи за историју тикета у интерфејсу оператера.',
         'Defines the history comment for the ticket free text screen action, which gets used for ticket history.' =>
             'Дефинише коментар историје за приказ екрана активности тикета слебодног текста, који се користи за историју тикета у интерфејсу оператера.',
+        'TicketActionCommon widget that displays the current action description.' =>
+            '',
+        'TicketActionCommon widget that displays ticket information.' => '',
+        'TicketActionCommon widget that displays customer information.' =>
+            '',
         'Required permissions to use the ticket phone outbound screen in the agent interface.' =>
             'Неопходне дозволе за употребу екрана одлазних позива тикета у интерфејсу оператера.',
         'Defines if a ticket lock is required in the ticket phone outbound screen of the agent interface (if the ticket isn\'t locked yet, the ticket gets locked and the current agent will be set automatically as its owner).' =>
@@ -6852,6 +6841,8 @@ sub Data {
             'Дефинише подразумевани предмет за тикете позива на приказу екрана за одлазне позиве у интерфејсу оператера.',
         'Defines the default note body text for phone tickets in the ticket phone outbound screen of the agent interface.' =>
             'Дефинише подразумевани следећи статус тикета позива у приказу екрана за одлазне позиве у интерфејсу оператера.',
+        'Sets the state of a ticket in screen of the agent interface.' =>
+            '',
         'Defines the default ticket next state after adding a phone note in the ticket phone outbound screen of the agent interface.' =>
             'Дефинише подразумевани следећи статус тикета после додавања позива на приказу екрана за одлазне позиве у интерфејсу оператера.',
         'Next possible ticket states after adding a phone note in the ticket phone outbound screen of the agent interface.' =>
@@ -8902,6 +8893,7 @@ Thanks for your help!
             '',
         'Creates a unit test file for this ticket.' => '',
         'Croatian' => 'Хрватски',
+        'Current action description.' => '',
         'Customer Administration' => 'Администрација клијената',
         'Customer Companies' => 'Фирме клијенти',
         'Customer IDs' => 'ID клијента',
@@ -9360,11 +9352,13 @@ Thanks for your help!
         'Ticket Priority.' => 'Приоритет тикета.',
         'Ticket Queue Overview' => 'Преглед реда тикета',
         'Ticket Responsible.' => 'Одговоран за тикет.',
+        'Ticket Settings' => 'Подешавање тикета',
         'Ticket Watcher' => 'Праћење тикета.',
         'Ticket Zoom' => 'Детаљи тикета',
         'Ticket Zoom.' => 'Детаљи тикета.',
         'Ticket bulk module.' => 'Модул масовне акције на тикетима.',
         'Ticket creation' => '',
+        'Ticket information' => '',
         'Ticket limit per page for Ticket Overview "Medium".' => 'Ограничење тикета по страни за преглед типа "средње".',
         'Ticket limit per page for Ticket Overview "Preview".' => 'Ограничење тикета по страни за преглед типа "приказ".',
         'Ticket limit per page for Ticket Overview "Small".' => 'Ограничење тикета по страни за преглед типа "мало".',

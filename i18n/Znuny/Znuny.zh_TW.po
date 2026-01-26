@@ -7579,7 +7579,7 @@ msgstr ""
 msgid "The ticket has been locked"
 msgstr "工單已鎖定"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
+#. SysConfig
 msgid "Ticket Settings"
 msgstr "工單設置"
 
@@ -7599,7 +7599,7 @@ msgstr ""
 msgid "Queue invalid."
 msgstr ""
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketMove.tt
 msgid "New Owner"
 msgstr "新所有者"
 
@@ -7627,7 +7627,7 @@ msgstr ""
 msgid "Ticket Data"
 msgstr ""
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBulk.tt
 msgid "Next state"
 msgstr "工單狀態"
 
@@ -7695,7 +7695,7 @@ msgstr "需要一個郵件地址。"
 msgid "Need a valid email address or don't use a local email address."
 msgstr "需要一個有效的郵件地址，同時不可以使用本地郵件地址。"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBounce.tt
+#. Perl Module: Kernel/Modules/AgentTicketProcess.pm
 msgid "Next ticket state"
 msgstr "工單狀態"
 
@@ -7703,7 +7703,7 @@ msgstr "工單狀態"
 msgid "Inform sender"
 msgstr "通知發送者"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBounce.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
 msgid "Send mail"
 msgstr "發送!"
 
@@ -7843,7 +7843,7 @@ msgstr "所有带 * 的字段都是強制要求輸入的字段."
 msgid "Cancel & close"
 msgstr ""
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
 msgid "Undo & close"
 msgstr ""
 
@@ -7895,7 +7895,7 @@ msgstr ""
 msgid "CreateTime"
 msgstr "創建時間"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketHistory.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
 msgid "Article"
 msgstr "信件"
 
@@ -7939,7 +7939,7 @@ msgstr ""
 msgid "New Queue"
 msgstr "新隊列"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketMove.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPhoneCommon.tt
 msgid "Communication"
 msgstr ""
 
@@ -7995,15 +7995,15 @@ msgstr "影響"
 msgid "CustomerID"
 msgstr "客戶編號"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketOverviewMedium.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
 msgid "Update Time"
 msgstr "更新時間"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketOverviewMedium.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
 msgid "Solution Time"
 msgstr "解決時間"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketOverviewMedium.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
 msgid "First Response Time"
 msgstr "第一響應時間"
 
@@ -8371,23 +8371,23 @@ msgstr "已連接的對象"
 msgid "Mentions"
 msgstr ""
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/TicketInformation.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
 msgid "Archive"
 msgstr "歸檔"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/TicketInformation.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
 msgid "This ticket is archived."
 msgstr "該工單已歸檔"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/TicketInformation.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
 msgid "is invalid"
 msgstr ""
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/TicketInformation.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
 msgid "Pending till"
 msgstr "掛起至"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/TicketInformation.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
 msgid "Locked"
 msgstr "鎖定狀態"
 
@@ -8395,7 +8395,7 @@ msgstr "鎖定狀態"
 msgid "%s Ticket(s)"
 msgstr ""
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/TicketInformation.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
 msgid "Accounted time"
 msgstr "所用時間"
 
@@ -13439,7 +13439,7 @@ msgstr "訂閱此工單"
 msgid "Order by"
 msgstr "排序"
 
-#. Perl Module: Kernel/Output/HTML/TicketZoom/TicketInformation.pm
+#. Perl Module: Kernel/Output/HTML/TicketActionCommon/TicketInformation.pm
 msgid "Ticket Information"
 msgstr "工單信息"
 
@@ -25241,5 +25241,37 @@ msgstr ""
 
 #. Perl Module: Kernel/Modules/AJAXAttachment.pm
 msgid "%s is missing. The file could not be deleted properly."
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
+msgid "Unlock and close popup"
+msgstr ""
+
+#. XML Definition: Kernel/Config/Files/XML/Ticket.xml
+msgid "Displayed in the sidebar as additional information."
+msgstr ""
+
+#. XML Definition: Kernel/Config/Files/XML/Ticket.xml
+msgid "TicketActionCommon widget that displays the current action description."
+msgstr ""
+
+#. XML Definition: Kernel/Config/Files/XML/Ticket.xml
+msgid "TicketActionCommon widget that displays ticket information."
+msgstr ""
+
+#. XML Definition: Kernel/Config/Files/XML/Ticket.xml
+msgid "TicketActionCommon widget that displays customer information."
+msgstr ""
+
+#. XML Definition: Kernel/Config/Files/XML/Ticket.xml
+msgid "Sets the state of a ticket in screen of the agent interface."
+msgstr ""
+
+#. SysConfig
+msgid "Current action description."
+msgstr ""
+
+#. SysConfig
+msgid "Ticket information"
 msgstr ""
 

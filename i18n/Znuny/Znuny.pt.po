@@ -7604,7 +7604,7 @@ msgstr "Modificar responsável de %s%s%s"
 msgid "The ticket has been locked"
 msgstr "Ticket bloqueado"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
+#. SysConfig
 msgid "Ticket Settings"
 msgstr "Definições de tickets"
 
@@ -7624,7 +7624,7 @@ msgstr ""
 msgid "Queue invalid."
 msgstr ""
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketMove.tt
 msgid "New Owner"
 msgstr "Novo Proprietário"
 
@@ -7652,7 +7652,7 @@ msgstr ""
 msgid "Ticket Data"
 msgstr "Dados do Chamado"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBulk.tt
 msgid "Next state"
 msgstr "Próximo estado"
 
@@ -7720,7 +7720,7 @@ msgstr "Necessita de um endereço de email"
 msgid "Need a valid email address or don't use a local email address."
 msgstr "Necessita de um endereço de email válido, não utilize endereços de email locais"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBounce.tt
+#. Perl Module: Kernel/Modules/AgentTicketProcess.pm
 msgid "Next ticket state"
 msgstr "Próximo estado do ticket"
 
@@ -7728,7 +7728,7 @@ msgstr "Próximo estado do ticket"
 msgid "Inform sender"
 msgstr "Informar o remetente"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBounce.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
 msgid "Send mail"
 msgstr "Enviar email"
 
@@ -7864,7 +7864,7 @@ msgstr "Os campos marcados com * são obrigatórios"
 msgid "Cancel & close"
 msgstr ""
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
 msgid "Undo & close"
 msgstr "Anular e fechar"
 
@@ -7916,7 +7916,7 @@ msgstr ""
 msgid "CreateTime"
 msgstr "Criado em"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketHistory.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
 msgid "Article"
 msgstr "Artigo"
 
@@ -7960,7 +7960,7 @@ msgstr "Mover %s%s%s"
 msgid "New Queue"
 msgstr "Nova Fila"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketMove.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPhoneCommon.tt
 msgid "Communication"
 msgstr "Comunicação"
 
@@ -8016,15 +8016,15 @@ msgstr "Impacto"
 msgid "CustomerID"
 msgstr "ID de Cliente"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketOverviewMedium.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
 msgid "Update Time"
 msgstr "Tempo de actualização"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketOverviewMedium.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
 msgid "Solution Time"
 msgstr "Tempo de solução"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketOverviewMedium.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
 msgid "First Response Time"
 msgstr "Tempo da primeira resposta"
 
@@ -8392,23 +8392,23 @@ msgstr "Objetos ligados"
 msgid "Mentions"
 msgstr ""
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/TicketInformation.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
 msgid "Archive"
 msgstr "Arquivar"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/TicketInformation.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
 msgid "This ticket is archived."
 msgstr "Este ticket está arquivado."
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/TicketInformation.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
 msgid "is invalid"
 msgstr ""
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/TicketInformation.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
 msgid "Pending till"
 msgstr "Pendente até"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/TicketInformation.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
 msgid "Locked"
 msgstr "Bloqueado"
 
@@ -8416,7 +8416,7 @@ msgstr "Bloqueado"
 msgid "%s Ticket(s)"
 msgstr "%s Ticket(s)"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/TicketInformation.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
 msgid "Accounted time"
 msgstr "Tempo contabilizado"
 
@@ -13460,7 +13460,7 @@ msgstr "Adicionar aos tickets vigiados"
 msgid "Order by"
 msgstr "Ordenado por"
 
-#. Perl Module: Kernel/Output/HTML/TicketZoom/TicketInformation.pm
+#. Perl Module: Kernel/Output/HTML/TicketActionCommon/TicketInformation.pm
 msgid "Ticket Information"
 msgstr "Informação do ticket"
 
@@ -25274,5 +25274,37 @@ msgstr ""
 
 #. Perl Module: Kernel/Modules/AJAXAttachment.pm
 msgid "%s is missing. The file could not be deleted properly."
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
+msgid "Unlock and close popup"
+msgstr ""
+
+#. XML Definition: Kernel/Config/Files/XML/Ticket.xml
+msgid "Displayed in the sidebar as additional information."
+msgstr ""
+
+#. XML Definition: Kernel/Config/Files/XML/Ticket.xml
+msgid "TicketActionCommon widget that displays the current action description."
+msgstr ""
+
+#. XML Definition: Kernel/Config/Files/XML/Ticket.xml
+msgid "TicketActionCommon widget that displays ticket information."
+msgstr ""
+
+#. XML Definition: Kernel/Config/Files/XML/Ticket.xml
+msgid "TicketActionCommon widget that displays customer information."
+msgstr ""
+
+#. XML Definition: Kernel/Config/Files/XML/Ticket.xml
+msgid "Sets the state of a ticket in screen of the agent interface."
+msgstr ""
+
+#. SysConfig
+msgid "Current action description."
+msgstr ""
+
+#. SysConfig
+msgid "Ticket information"
 msgstr ""
 

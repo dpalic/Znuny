@@ -7580,7 +7580,7 @@ msgstr "%s%s%s felelősének módosítása"
 msgid "The ticket has been locked"
 msgstr "A jegy zárolva lett"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
+#. SysConfig
 msgid "Ticket Settings"
 msgstr "Jegybeállítások"
 
@@ -7600,7 +7600,7 @@ msgstr "Csapatadatok"
 msgid "Queue invalid."
 msgstr "A várólista érvénytelen."
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketMove.tt
 msgid "New Owner"
 msgstr "Új tulajdonos"
 
@@ -7628,7 +7628,7 @@ msgstr "A felelős érvénytelen."
 msgid "Ticket Data"
 msgstr "Jegyadatok"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBulk.tt
 msgid "Next state"
 msgstr "Következő állapot"
 
@@ -7696,7 +7696,7 @@ msgstr "Egy e-mail-címre van szüksége."
 msgid "Need a valid email address or don't use a local email address."
 msgstr "Egy érvényes e-mail-cím szükséges, vagy ne használja a helyi e-mail-címet."
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBounce.tt
+#. Perl Module: Kernel/Modules/AgentTicketProcess.pm
 msgid "Next ticket state"
 msgstr "Következő jegyállapot"
 
@@ -7704,7 +7704,7 @@ msgstr "Következő jegyállapot"
 msgid "Inform sender"
 msgstr "Küldő tájékoztatása"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBounce.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
 msgid "Send mail"
 msgstr "Levél küldése"
 
@@ -7852,7 +7852,7 @@ msgstr "A csillaggal (*) megjelölt összes mező kötelező."
 msgid "Cancel & close"
 msgstr "Megszakítás és bezárás"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
 msgid "Undo & close"
 msgstr "Visszavonás és bezárás"
 
@@ -7904,7 +7904,7 @@ msgstr "Összes kinyitása vagy összecsukása"
 msgid "CreateTime"
 msgstr "Létrehozás ideje"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketHistory.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
 msgid "Article"
 msgstr "Bejegyzés"
 
@@ -7948,7 +7948,7 @@ msgstr "%s%s%s áthelyezése"
 msgid "New Queue"
 msgstr "Új várólista"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketMove.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPhoneCommon.tt
 msgid "Communication"
 msgstr "Kommunikáció"
 
@@ -8004,15 +8004,15 @@ msgstr "Hatás"
 msgid "CustomerID"
 msgstr "Ügyfél-azonosító"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketOverviewMedium.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
 msgid "Update Time"
 msgstr "Frissítés ideje"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketOverviewMedium.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
 msgid "Solution Time"
 msgstr "Megoldás ideje"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketOverviewMedium.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
 msgid "First Response Time"
 msgstr "Első válaszidő"
 
@@ -8384,23 +8384,23 @@ msgstr "Kapcsolt objektumok"
 msgid "Mentions"
 msgstr "Említések"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/TicketInformation.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
 msgid "Archive"
 msgstr "Archiválás"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/TicketInformation.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
 msgid "This ticket is archived."
 msgstr "Ez a jegy archiválva van."
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/TicketInformation.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
 msgid "is invalid"
 msgstr "érvénytelen"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/TicketInformation.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
 msgid "Pending till"
 msgstr "Várakozás eddig"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/TicketInformation.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
 msgid "Locked"
 msgstr "Zárolva"
 
@@ -8408,7 +8408,7 @@ msgstr "Zárolva"
 msgid "%s Ticket(s)"
 msgstr "%s jegy"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/TicketInformation.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
 msgid "Accounted time"
 msgstr "Elszámolt idő"
 
@@ -13452,7 +13452,7 @@ msgstr "Hozzáadás a megfigyelt jegyek listájához"
 msgid "Order by"
 msgstr "Rendezés"
 
-#. Perl Module: Kernel/Output/HTML/TicketZoom/TicketInformation.pm
+#. Perl Module: Kernel/Output/HTML/TicketActionCommon/TicketInformation.pm
 msgid "Ticket Information"
 msgstr "Jegyinformációk"
 
@@ -25252,5 +25252,37 @@ msgstr ""
 
 #. Perl Module: Kernel/Modules/AJAXAttachment.pm
 msgid "%s is missing. The file could not be deleted properly."
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
+msgid "Unlock and close popup"
+msgstr ""
+
+#. XML Definition: Kernel/Config/Files/XML/Ticket.xml
+msgid "Displayed in the sidebar as additional information."
+msgstr ""
+
+#. XML Definition: Kernel/Config/Files/XML/Ticket.xml
+msgid "TicketActionCommon widget that displays the current action description."
+msgstr ""
+
+#. XML Definition: Kernel/Config/Files/XML/Ticket.xml
+msgid "TicketActionCommon widget that displays ticket information."
+msgstr ""
+
+#. XML Definition: Kernel/Config/Files/XML/Ticket.xml
+msgid "TicketActionCommon widget that displays customer information."
+msgstr ""
+
+#. XML Definition: Kernel/Config/Files/XML/Ticket.xml
+msgid "Sets the state of a ticket in screen of the agent interface."
+msgstr ""
+
+#. SysConfig
+msgid "Current action description."
+msgstr ""
+
+#. SysConfig
+msgid "Ticket information"
 msgstr ""
 

@@ -248,13 +248,47 @@ sub Run {
         },
     );
 
-    # show right header
-    $LayoutObject->Block(
-        Name => 'Header' . $Self->{Action},
-        Data => {
-            %Ticket,
-        },
+    # Get all valid Widgets
+    my %Widgets = $Self->_GetWidgets(
+        Config   => $Config,
+        Ticket   => \%Ticket,
+        UserID   => $Self->{UserID},
+        TicketID => $Self->{TicketID},
+        Action   => $Self->{Action},
     );
+
+    # Grep all SidebarWidgets
+    my %SidebarWidgets;
+    for my $Key ( sort keys %Widgets ) {
+        if ( $Widgets{$Key}->{Location} eq 'Sidebar' ) {
+            $SidebarWidgets{$Key} = $Widgets{$Key};
+        }
+    }
+
+    if (%SidebarWidgets) {
+        $LayoutObject->Block(
+            Name => 'Sidebar',
+            Data => {
+                %Ticket,
+                %Param,
+                %SidebarWidgets,
+            },
+        );
+
+        # Sort by Prio
+        for my $Key ( sort { $SidebarWidgets{$a}->{Prio} <=> $SidebarWidgets{$b}->{Prio} } keys %SidebarWidgets ) {
+
+            $LayoutObject->Block(
+                Name => 'SidebarWidget',
+                Data => {
+                    %Ticket,
+                    %Param,
+                    Sidebar       => $Key,
+                    SidebarWidget => $SidebarWidgets{$Key},
+                },
+            );
+        }
+    }
 
     # get lock state
     if ( $Config->{RequiredLock} ) {
@@ -284,6 +318,14 @@ sub Run {
                 # Show lock state.
                 $LayoutObject->Block(
                     Name => 'PropertiesLock',
+                    Data => {
+                        %Param,
+                        TicketID => $Self->{TicketID},
+                    },
+                );
+
+                $LayoutObject->Block(
+                    Name => 'PropertiesLockNotify',
                     Data => {
                         %Param,
                         TicketID => $Self->{TicketID},
@@ -2011,6 +2053,7 @@ sub _Mask {
 
     # get list type
     my $TreeView = 0;
+    my %Selected;
 
     # get config object
     my $ConfigObject = $Kernel::OM->Get('Kernel::Config');
@@ -2054,26 +2097,6 @@ sub _Mask {
         FieldFilter => $Config->{DynamicField} || {},
     );
 
-    # Widget Ticket Actions
-    if (
-        ( $ConfigObject->Get('Ticket::Type') && $Config->{TicketType} )
-        ||
-        ( $ConfigObject->Get('Ticket::Service') && $Config->{Service} )         ||
-        ( $ConfigObject->Get('Ticket::Responsible') && $Config->{Responsible} ) ||
-        $Config->{Title}                                                        ||
-        $Config->{Queue}                                                        ||
-        $Config->{Owner}                                                        ||
-        $Config->{State}                                                        ||
-        $Config->{Priority}                                                     ||
-        $Config->{CustomerUser}                                                 ||
-        scalar @{ $Param{TicketTypeDynamicFields} } > 0
-        )
-    {
-        $LayoutObject->Block(
-            Name => 'WidgetTicketActions',
-        );
-    }
-
     if ( $Config->{Title} ) {
         $LayoutObject->Block(
             Name => 'Title',
@@ -2098,11 +2121,14 @@ sub _Mask {
             Action => $Self->{Action},
             UserID => $Self->{UserID},
         );
+
+        $Selected{TypeID} = $Param{NewTypeID} || $Param{TypeID} || '';
+
         $Param{TypeStrg} = $LayoutObject->BuildSelection(
             Class        => 'Validate_Required Modernize ' . ( $Param{Errors}->{TypeIDInvalid} || '' ),
             Data         => \%Type,
             Name         => 'TypeID',
-            SelectedID   => $Param{TypeID},
+            SelectedID   => $Selected{TypeID},
             PossibleNone => 1,
             Sort         => 'AlphanumericValue',
             Translation  => 0,
@@ -2143,10 +2169,12 @@ sub _Mask {
             $Param{ServiceID} = '';
         }
 
+        $Selected{ServiceID} = $Param{NewServiceID} || $Param{ServiceID} || '';
+
         $Param{ServiceStrg} = $LayoutObject->BuildSelection(
             Data       => $Services,
             Name       => 'ServiceID',
-            SelectedID => $Param{ServiceID},
+            SelectedID => $Selected{ServiceID},
             Class      => "Modernize "
                 . ( $Config->{ServiceMandatory} ? 'Validate_Required ' : '' )
                 . ( $Param{ServiceInvalid} || '' ),
@@ -2171,10 +2199,12 @@ sub _Mask {
             UserID => $Self->{UserID},
         );
 
+        $Selected{SLAID} = $Param{NewSLAID} || $Param{SLAID} || '';
+
         $Param{SLAStrg} = $LayoutObject->BuildSelection(
             Data       => \%SLA,
             Name       => 'SLAID',
-            SelectedID => $Param{SLAID},
+            SelectedID => $Selected{SLAID},
             Class      => "Modernize "
                 . ( $Config->{SLAMandatory} ? 'Validate_Required ' : '' )
                 . ( $Param{ServiceInvalid} || '' ),
@@ -2203,6 +2233,8 @@ sub _Mask {
             Type     => 'move_into',
         );
 
+        $Selected{QueueID} = $Param{NewQueueID} || $Param{QueueID};
+
         # set move queues
         $Param{QueuesStrg} = $LayoutObject->AgentQueueListOption(
             Data     => { %MoveQueues, '' => '-' },
@@ -2212,7 +2244,7 @@ sub _Mask {
                 . ( $Config->{QueueMandatory} ? 'Validate_Required ' : '' )
                 . ( $Param{NewQueueInvalid} || '' ),
             Name           => 'NewQueueID',
-            SelectedID     => $Param{NewQueueID},
+            SelectedID     => $Selected{QueueID},
             TreeView       => $TreeView,
             CurrentQueueID => $Param{QueueID},
             OnChangeSubmit => 0,
@@ -2319,10 +2351,12 @@ sub _Mask {
             %OldOwnersShown = $TicketObject->TicketAclData();
         }
 
+        $Selected{OwnerID} = $Param{NewOwnerID} || $Param{OwnerID} || '';
+
         # build string
         $Param{OwnerStrg} = $LayoutObject->BuildSelection(
             Data       => \%ShownUsers,
-            SelectedID => $Param{NewOwnerID},
+            SelectedID => $Selected{OwnerID},
             Name       => 'NewOwnerID',
             Class      => 'Modernize '
                 . ( $Config->{OwnerMandatory} ? 'Validate_Required ' : '' )
@@ -2388,10 +2422,12 @@ sub _Mask {
 
         @ShownUsers{ keys %ShownUsers } = @AllGroupsMembersFullnames{ keys %ShownUsers };
 
+        $Selected{ResponsibleID} = $Param{NewResponsibleID} || $Param{ResponsibleID} || '';
+
         # get responsible
         $Param{ResponsibleStrg} = $LayoutObject->BuildSelection(
             Data       => \%ShownUsers,
-            SelectedID => $Param{NewResponsibleID},
+            SelectedID => $Selected{ResponsibleID},
             Name       => 'NewResponsibleID',
             Class      => 'Modernize '
                 . ( $Config->{ResponsibleMandatory} ? 'Validate_Required ' : '' )
@@ -2417,25 +2453,30 @@ sub _Mask {
             TicketID => $Self->{TicketID},
             UserID   => $Self->{UserID},
         );
+
         if ( !$Param{NewStateID} ) {
             if ( $Config->{StateDefault} ) {
-                $State{SelectedValue} = $Config->{StateDefault};
+                my %StateListReversed = reverse %StateList;
+                $Selected{StateID} = $StateListReversed{ $Config->{StateDefault} };
+            }
+            else {
+                $Selected{StateID} = $Param{StateID} || '';
             }
         }
         else {
-            $State{SelectedID} = $Param{NewStateID};
+            $Selected{StateID} = $Param{NewStateID} || $Param{StateID} || '';
         }
 
-        # build next states string
         $Param{StateStrg} = $LayoutObject->BuildSelection(
             Data  => \%StateList,
             Name  => 'NewStateID',
             Class => 'Modernize '
                 . ( $Config->{StateMandatory} ? 'Validate_Required ' : '' )
                 . ( $Param{NewStateInvalid} || '' ),
-            PossibleNone => $Config->{StateDefault} ? 0 : 1,
-            %State,
+            PossibleNone => 1,
+            SelectedID   => $Selected{StateID},
         );
+
         $LayoutObject->Block(
             Name => 'State',
             Data => {
@@ -2494,22 +2535,31 @@ sub _Mask {
         }
         if ( !$Param{NewPriorityID} ) {
             if ( $Config->{PriorityDefault} ) {
-                $Priority{SelectedValue} = $Config->{PriorityDefault};
+                my %PriorityListReversed = reverse %PriorityList;
+                $Selected{PriorityID} = $PriorityListReversed{ $Config->{PriorityDefault} };
+            }
+            else {
+                $Selected{PriorityID} = $Param{PriorityID} || '';
             }
         }
         else {
             $Priority{SelectedID} = $Param{NewPriorityID};
         }
-        $Priority{SelectedID} ||= $Param{PriorityID};
+
         $Param{PriorityStrg} = $LayoutObject->BuildSelection(
             Data  => \%PriorityList,
             Name  => 'NewPriorityID',
-            Class => 'Modernize',
-            %Priority,
+            Class => 'Modernize '
+                . ( $Config->{PriorityMandatory} ? 'Validate_Required ' : '' ),
+            PossibleNone => 1,
+            SelectedID   => $Selected{PriorityID},
         );
         $LayoutObject->Block(
             Name => 'Priority',
-            Data => \%Param,
+            Data => {
+                %Param,
+                PriorityMandatory => $Config->{PriorityMandatory} || 0,
+            },
         );
     }
 
@@ -2538,7 +2588,7 @@ sub _Mask {
     # Widget Article
     if ( $Config->{Note} ) {
 
-        $Param{WidgetStatus} = 'Collapsed';
+        $Param{CardStatus} = 'cardClosed';
 
         if (
             $Config->{NoteMandatory}
@@ -2547,7 +2597,7 @@ sub _Mask {
             || $Param{CreateArticle}
             )
         {
-            $Param{WidgetStatus} = 'Expanded';
+            $Param{CardStatus} = '';
         }
 
         if (
@@ -2896,6 +2946,12 @@ sub _Mask {
             $LayoutObject->Block(
                 Name => 'TimeUnits',
                 Data => \%Param,
+            );
+        }
+
+        if ( IsArrayRefWithData( $Param{ArticleTypeDynamicFields} ) ) {
+            $LayoutObject->Block(
+                Name => 'ArticleTypeDynamicFields',
             );
         }
 
@@ -3388,6 +3444,69 @@ sub _GetQueues {
         Type     => 'move_into',
     );
     return \%Queues;
+}
+
+sub _GetWidgets {
+    my ( $Self, %Param ) = @_;
+
+    my $MainObject = $Kernel::OM->Get('Kernel::System::Main');
+    my $LogObject  = $Kernel::OM->Get('Kernel::System::Log');
+
+    my $Config = $Param{Config};
+
+    my %Widgets;
+    my $Prio = 0;
+
+    # my %AsyncSidebarActions;
+    WIDGET:
+    for my $Key ( sort keys %{ $Config->{Widgets} // {} } ) {
+        my $WidgetConfig = $Config->{Widgets}->{$Key};
+
+        next WIDGET if !$WidgetConfig->{Active};
+
+        if ( $WidgetConfig->{Prio} ) {
+            $Prio = $WidgetConfig->{Prio};
+        }
+        else {
+            $Prio++;
+        }
+
+        $Widgets{$Key}->{Prio}     = $Prio;
+        $Widgets{$Key}->{Location} = $WidgetConfig->{Location};
+
+        my $Success = eval { $MainObject->Require( $WidgetConfig->{Module} ) };
+        next WIDGET if !$Success;
+
+        my $Module = eval { $WidgetConfig->{Module}->new(%$Self) };
+        if ( !$Module ) {
+            $LogObject->Log(
+                Priority => 'error',
+                Message  => "new() of Sidebar module $WidgetConfig->{Module} not successful!",
+
+            );
+            next WIDGET;
+        }
+
+        my $WidgetOutputRef = $Module->Run(
+            Ticket       => $Param{Ticket},
+            Config       => $Config,
+            WidgetConfig => $WidgetConfig,
+        );
+
+        my %WidgetOutput;
+        if ( ref $WidgetOutputRef eq 'HASH' ) {
+            %WidgetOutput = %{$WidgetOutputRef};
+        }
+
+        next WIDGET if !%WidgetOutput;
+
+        # Merge the WidgetOutput into the Widgets hash
+        %{ $Widgets{$Key} } = ( %{ $Widgets{$Key} // {} }, %WidgetOutput );
+
+        # s
+    }
+
+    return %Widgets;
 }
 
 1;

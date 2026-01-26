@@ -400,6 +400,7 @@ sub Run {
             SLAID        => $Ticket{SLAID},
             TicketNumber => $Ticket{TicketNumber},
             Title        => $Ticket{Title},
+            State        => $Ticket{State},
             NextStates   => $Self->_GetNextStates(
                 %GetParam,
             ),
@@ -787,6 +788,7 @@ sub Run {
                 QueueID      => $Ticket{QueueID},
                 SLAID        => $Ticket{SLAID},
                 Title        => $Ticket{Title},
+                State        => $Ticket{State},
                 NextStates   => $Self->_GetNextStates(
                     %GetParam,
                 ),
@@ -1310,9 +1312,13 @@ sub _MaskPhone {
     if ( $Param{NextStateID} ) {
         $Selected{SelectedID} = $Param{NextStateID};
     }
-    elsif ( $Config->{State} ) {
-        $Selected{SelectedValue} = $Config->{State};
+    elsif ( $Config->{StateDefault} ) {
+        $Selected{SelectedValue} = $Config->{StateDefault};
     }
+    else {
+        $Selected{SelectedValue} = $Param{State};
+    }
+
     $Param{NextStatesStrg} = $LayoutObject->BuildSelection(
         Data         => $Param{NextStates},
         Name         => 'NextStateID',

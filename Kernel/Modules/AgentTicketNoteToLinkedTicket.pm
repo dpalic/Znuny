@@ -300,6 +300,13 @@ sub Run {
                         TicketID => $Self->{TicketID},
                     },
                 );
+                $LayoutObject->Block(
+                    Name => 'PropertiesLockNotify',
+                    Data => {
+                        %Param,
+                        TicketID => $Self->{TicketID},
+                    },
+                );
             }
         }
         else {
@@ -2393,7 +2400,7 @@ sub _Mask {
     # Widget Article
     if ( $Config->{Note} ) {
 
-        $Param{WidgetStatus} = 'Collapsed';
+        $Param{CardStatus} = 'cardClosed';
 
         if (
             $Config->{NoteMandatory}
@@ -2402,7 +2409,7 @@ sub _Mask {
             || $Param{CreateArticle}
             )
         {
-            $Param{WidgetStatus} = 'Expanded';
+            $Param{CardStatus} = '';
         }
 
         if (

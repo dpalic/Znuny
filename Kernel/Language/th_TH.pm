@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d/%m/%Y';
     $Self->{DateInputFormat}     = '%d/%m/%Y';
     $Self->{DateInputFormatLong} = '%d/%m/%Y - %T';
-    $Self->{Completeness}        = 0.505510301868711;
+    $Self->{Completeness}        = 0.505918106206014;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -2644,56 +2644,53 @@ sub Data {
             'สถิตินี้ประกอบด้วยข้อผิดพลาดการตั้งค่าและไม่สามารถใช้งานได้ในขณะนี้',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
-        'Change Free Text of %s%s%s' => '',
-        'Change Owner of %s%s%s' => '',
-        'Close %s%s%s' => '',
-        'Add Note to %s%s%s' => '',
-        'Set Pending Time for %s%s%s' => '',
-        'Change Priority of %s%s%s' => '',
-        'Change Responsible of %s%s%s' => '',
         'The ticket has been locked' => 'ตั๋วถูกล็อค',
-        'Ticket Settings' => 'การตั้งค่าตั๋ว',
+        'Unlock and close popup' => '',
         'Customer user' => 'ลูกค้าผู้ใช้',
         'Service invalid.' => 'การบริการที่ใช้ไม่ได้',
-        'SLA invalid.' => '',
         'Team Data' => '',
         'Queue invalid.' => '',
-        'New Owner' => 'เจ้าของใหม่',
         'Please set a new owner!' => 'โปรดกำหนดเจ้าของใหม่!',
         'Owner invalid.' => '',
-        'New Responsible' => 'ความรับผิดชอบใหม่',
         'Please set a new responsible!' => '',
         'Responsible invalid.' => '',
         'Ticket Data' => '',
-        'Next state' => 'สถานะถัดไป',
         'State invalid.' => '',
         'For all pending* states.' => 'สำหรับสถานะที่ค้างอยู่ทั้งหมด *',
-        'Dynamic Info' => '',
-        'Add Article' => 'เพิ่มบทความ',
+        'Communications' => '',
         'Inform' => '',
         'Inform agents' => 'แจ้งเอเย่นต์',
         'Inform involved agents' => 'แจ้งเอเย่นต์ที่เกี่ยวข้อง',
         'Here you can select additional agents which should receive a notification regarding the new article.' =>
             'คุณสามารถเลือกเอเย่นต์เพิ่มเติมที่นี้ซึ่งควรได้รับการแจ้งเตือนเกี่ยวกับบทความใหม่',
         'Text will also be received by' => '',
-        'Communications' => '',
         'Create an Article' => 'สร้างบทความ',
         'Setting a template will overwrite any text or attachment.' => 'การตั้งค่าแม่แบบจะเขียนทับข้อความหรือสิ่งที่แนบมา',
+        'Article' => 'บทความ',
+        'Undo & close' => 'เลิกทำและปิด',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
+        'Archive' => 'เอกสารเก่า',
+        'This ticket is archived.' => 'จัดเก็บตั๋วนี่แล้ว',
+        'is invalid' => '',
+        'Pending till' => 'รอดำเนินการจนถึง',
+        'Locked' => 'ถูกล็อค',
+        'First Response Time' => 'เวลาตอบสนองครั้งแรก',
+        'Update Time' => 'เวลาการอัพเดต',
+        'Solution Time' => 'เวลาการแก้ปัญหา',
+        'Accounted time' => 'เวลาที่คิด',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBounce.tt
-        'Bounce %s%s%s' => '',
-        'cancel' => '',
         'Bounce to' => 'การตีกลับไปยัง',
         'You need a email address.' => 'คุณจำเป็นต้องมีที่อยู่อีเมล',
         'Need a valid email address or don\'t use a local email address.' =>
             'ต้องการที่อยู่อีเมลที่ถูกต้องหรือไม่ใช้ที่อยู่อีเมลในท้องถิ่น',
-        'Next ticket state' => 'สถานะถัดไปของตั๋ว',
         'Inform sender' => 'แจ้งผู้ส่ง',
-        'Send mail' => 'ส่งอีเมล์',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBulk.tt
         'Ticket Bulk Action' => 'ตั๋วการทำงานเป็นกลุ่ม',
         'Send Email' => 'ส่งอีเมล์',
+        'Next state' => 'สถานะถัดไป',
         'Merge' => 'ผสาน',
         'Merge to' => 'ผสานไปยัง',
         'Invalid ticket identifier!' => 'ตัวระบุตั๋วไม่ถูกต้อง!',
@@ -2718,7 +2715,7 @@ sub Data {
         'This address is registered as system address and cannot be used: %s' =>
             'ที่อยู่นี้ถูกลงทะเบียนเป็นที่อยู่ในระบบและไม่สามารถนำมาใช้: %s',
         'Bcc' => 'Bcc',
-        'Undo & close' => 'เลิกทำและปิด',
+        'Send mail' => 'ส่งอีเมล์',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCustomer.tt
         'Change Customer of %s%s%s' => '',
@@ -2730,9 +2727,6 @@ sub Data {
         'Please include at least one customer user for the ticket.' => 'โปรดระบุอย่างน้อยหนึ่งลูกค้าผู้ใช้สำหรับตั๋ว',
         'From queue' => 'จากคิว',
         'Get all' => 'ได้รับทั้งหมด',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailOutbound.tt
-        'Undo & Close' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
         'Resend Email for %s%s%s' => '',
@@ -2759,10 +2753,8 @@ sub Data {
         'Filter for history items' => '',
         'Expand/Collapse all' => '',
         'CreateTime' => 'เวลาในการสร้าง',
-        'Article' => 'บทความ',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketMerge.tt
-        'Merge %s%s%s' => '',
         'Merge Settings' => 'การตั้งค่าการผสาน',
         'Try typing part of the ticket number or title in order to search by it.' =>
             '',
@@ -2773,13 +2765,11 @@ sub Data {
         'Need a valid email address.' => 'ต้องการที่อยู่อีเมลที่ถูกต้อง',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketMove.tt
-        'Move %s%s%s' => '',
         'New Queue' => 'คิวใหม่',
-        'Communication' => 'การสื่อสาร',
+        'New Owner' => 'เจ้าของใหม่',
         'Move' => 'ย้าย',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketNoteToLinkedTicket.tt
-        'Add note to linked %s%s%s' => '',
         'Notes' => '',
         'Note to linked Ticket' => '',
         'LinkList invalid.' => '',
@@ -2793,9 +2783,6 @@ sub Data {
         'Sender' => 'ผู้ส่ง',
         'Customer User Name' => '',
         'Impact' => 'ผลกระทบ',
-        'Update Time' => 'เวลาการอัพเดต',
-        'Solution Time' => 'เวลาการแก้ปัญหา',
-        'First Response Time' => 'เวลาตอบสนองครั้งแรก',
         'Move ticket to a different queue' => 'ย้ายตั๋วไปคิวอื่น',
         'Change queue' => 'เปลี่ยนคิว',
 
@@ -2818,6 +2805,9 @@ sub Data {
         'Create New Phone Ticket' => 'สร้างตั๋วจากโทรศัพท์ใหม่ ',
         'Please include at least one customer for the ticket.' => 'กรุณาระบุลูกค้าอย่างน้อยหนึ่งคนสำหรับตั๋ว',
         'To queue' => 'ไปยังคิว',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPhoneCommon.tt
+        'Communication' => 'การสื่อสาร',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPlain.tt
         'View Email Plain Text for %s%s%s' => '',
@@ -2921,14 +2911,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/MentionsTable.tt
         'Mentions' => '',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/TicketInformation.tt
-        'Archive' => 'เอกสารเก่า',
-        'This ticket is archived.' => 'จัดเก็บตั๋วนี่แล้ว',
-        'is invalid' => '',
-        'Pending till' => 'รอดำเนินการจนถึง',
-        'Locked' => 'ถูกล็อค',
-        'Accounted time' => 'เวลาที่คิด',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/ArticleContent/Invalid.tt
         'Preview of this article is not possible because %s channel is missing in the system.' =>
@@ -4474,6 +4456,7 @@ sub Data {
             'PendingTime สามารถนำมาใช้ถ้าสถานะ หรือ StateID มีการกำหนดค่าเดียวกันสำหรับ ',
         'Pending Date' => 'วันที่รอดำเนินการ',
         'for pending* states' => 'สำหรับสถานะที่ค้างอยู่ *',
+        'Next ticket state' => 'สถานะถัดไปของตั๋ว',
         'ActivityDialogEntityID missing!' => 'ActivityDialogEntityID หายไป!',
         'Couldn\'t get Config for ActivityDialogEntityID "%s"!' => 'ไม่สามารถได้รับการกำหนดค่าสำหรับ ActivityDialogEntityID "%s"!',
         'Couldn\'t use CustomerID as an invisible field.' => '',
@@ -4949,6 +4932,9 @@ sub Data {
         'Unable to load %s!' => '',
         'Content' => 'เนื้อหา',
 
+        # Perl Module: Kernel/Output/HTML/TicketActionCommon/TicketInformation.pm
+        'Ticket Information' => 'ข้อมูลของตั๋ว',
+
         # Perl Module: Kernel/Output/HTML/TicketMenu/Lock.pm
         'Unlock to give it back to the queue' => 'ปลดล็อคเพื่อส่งกลับไปที่คิว',
         'Lock it to work on it' => 'ล็อคไว้เพื่อทำงานกับมัน',
@@ -4960,9 +4946,6 @@ sub Data {
 
         # Perl Module: Kernel/Output/HTML/TicketOverviewMenu/Sort.pm
         'Order by' => 'จัดเรียงโดย',
-
-        # Perl Module: Kernel/Output/HTML/TicketZoom/TicketInformation.pm
-        'Ticket Information' => 'ข้อมูลของตั๋ว',
 
         # Perl Module: Kernel/Output/HTML/ToolBar/TicketLocked.pm
         'Locked Tickets New' => 'ตั๋วล็อคใหม่',
@@ -6791,6 +6774,7 @@ sub Data {
             'กำหนดคแอตทริบิวต์เริ่มต้นของตั๋วสำหรับการเรียงลำดับตั๋วในมุมมองการดูในอินเตอร์เฟซเอเย่นต์',
         'Defines the default ticket order in the watch view of the agent interface. Up: oldest on top. Down: latest on top.' =>
             'กำหนดการจัดเรียงเริ่มต้นของตั๋วในมุมมองการดูของอินเตอร์เฟซเอเย่นต์ ขึ้น: เก่าที่สุดด้านบน ลง: ล่าสุดด้านบน',
+        'Displayed in the sidebar as additional information.' => '',
         'Required permissions to use the ticket free text screen in the agent interface.' =>
             '',
         'Defines if a ticket lock is required in the ticket free text screen of the agent interface (if the ticket isn\'t locked yet, the ticket gets locked and the current agent will be set automatically as its owner).' =>
@@ -6845,6 +6829,11 @@ sub Data {
             'กำหนดประเภทของประวัติสำหรับการกระทำหน้าจอตั๋วข้อความฟรี ซึ่งทำให้เกิดความคุ้นเคยในประวัติของตั๋วในอินเตอร์เฟซเอเย่นต์',
         'Defines the history comment for the ticket free text screen action, which gets used for ticket history.' =>
             'กำหนดประวัติการแสดงความเห็นสำหรับการกระทำหน้าจอตั๋วข้อความฟรั ซึ่งทำให้เกิดความคุ้นเคยในประวัติของตั๋ว',
+        'TicketActionCommon widget that displays the current action description.' =>
+            '',
+        'TicketActionCommon widget that displays ticket information.' => '',
+        'TicketActionCommon widget that displays customer information.' =>
+            '',
         'Required permissions to use the ticket phone outbound screen in the agent interface.' =>
             '',
         'Defines if a ticket lock is required in the ticket phone outbound screen of the agent interface (if the ticket isn\'t locked yet, the ticket gets locked and the current agent will be set automatically as its owner).' =>
@@ -6855,6 +6844,8 @@ sub Data {
             'กำหนดหัวข้อเริ่มต้นสำหรับตั๋วโทรศัพท์ในหน้าจอตั๋วโทรศัพท์ขาออกของอินเตอร์เฟซเอเย่นต์',
         'Defines the default note body text for phone tickets in the ticket phone outbound screen of the agent interface.' =>
             'กำหนดเนื้อเรื่องเริ่มต้นของโน้ตสำหรับตั๋วโทรศัพท์ในหน้าจอตั๋วโทรศัพท์ขาออกในอินเตอร์เฟซของเอเย่นต์',
+        'Sets the state of a ticket in screen of the agent interface.' =>
+            '',
         'Defines the default ticket next state after adding a phone note in the ticket phone outbound screen of the agent interface.' =>
             'กำหนดค่าเริ่มต้นของสถานภาพถัดไปของตั๋วหลังจากเพิ่มโน้ตในหน้าจอตั๋วโทรศัพท์ขาออกของอินเตอร์เฟซเอเย่นต์',
         'Next possible ticket states after adding a phone note in the ticket phone outbound screen of the agent interface.' =>
@@ -8907,6 +8898,7 @@ Thanks for your help!
             '',
         'Creates a unit test file for this ticket.' => '',
         'Croatian' => 'ภาษาโครเอเชีย',
+        'Current action description.' => '',
         'Customer Administration' => 'การบริหารลูกค้า',
         'Customer Companies' => 'บริษัทลูกค้า',
         'Customer IDs' => '',
@@ -9365,11 +9357,13 @@ Thanks for your help!
         'Ticket Priority.' => '',
         'Ticket Queue Overview' => '',
         'Ticket Responsible.' => '',
+        'Ticket Settings' => 'การตั้งค่าตั๋ว',
         'Ticket Watcher' => '',
         'Ticket Zoom' => '',
         'Ticket Zoom.' => '',
         'Ticket bulk module.' => '',
         'Ticket creation' => '',
+        'Ticket information' => '',
         'Ticket limit per page for Ticket Overview "Medium".' => '',
         'Ticket limit per page for Ticket Overview "Preview".' => '',
         'Ticket limit per page for Ticket Overview "Small".' => '',

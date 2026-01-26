@@ -6,6 +6,8 @@
 // did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
 // --
 
+/*eslint-disable no-window*/
+
 /**
  * Alert Module
  *
@@ -110,16 +112,7 @@
          * @method bindEvents
          */
         bindEvents: function() {
-            // Bind click event to all action links
-            jQuery('a', this.ctx).on('click', function(event) {
-                // If the link has the UndoClosePopup class, close the popup
-                if (jQuery(event.currentTarget).hasClass('UndoClosePopup')) {
-                    // If we're in a popup, close it
-                    if (Core && Core.UI && Core.UI.Popup) {
-                        Core.UI.Popup.ClosePopup();
-                    }
-                }
-            });
+            // UndoClosePopup handling is done by Core.UI.Popup via event delegation
         },
 
         /**
@@ -281,8 +274,8 @@
                         actionClasses = 'btn-primary alertButton alertButton' + self.capitalizeFirstLetter(action.type || 'submit'),
                             actionId = '';
 
-                        if (action.classes) {
-                            actionClasses += ' ' + (Array.isArray(action.classes) ? action.classes.join(' ') : action.classes);
+                        if (action.class) {
+                            actionClasses += ' ' + (Array.isArray(action.class) ? action.class.join(' ') : action.class);
                         }
 
                         if (action.id) {

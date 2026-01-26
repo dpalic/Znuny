@@ -173,8 +173,10 @@ $Selenium->RunTest(
         );
 
         $HelperObject->ConfigSettingChange(
-            Key   => 'Ticket::Frontend::AgentTicketPhone::CustomerIDReadOnly',
-            Value => 0,
+            Key   => 'Ticket::Frontend::AgentTicketPhone',
+            Value => {
+                CustomerIDReadOnly => 0,
+            },
         );
 
         # Check if the additional CustomerID select button is not disabled.

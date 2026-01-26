@@ -7580,7 +7580,7 @@ msgstr ""
 msgid "The ticket has been locked"
 msgstr ""
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
+#. SysConfig
 msgid "Ticket Settings"
 msgstr ""
 
@@ -7600,7 +7600,7 @@ msgstr ""
 msgid "Queue invalid."
 msgstr ""
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketMove.tt
 msgid "New Owner"
 msgstr "Phụ trách mới"
 
@@ -7628,7 +7628,7 @@ msgstr ""
 msgid "Ticket Data"
 msgstr ""
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBulk.tt
 msgid "Next state"
 msgstr "Trạng thái tiếp"
 
@@ -7696,7 +7696,7 @@ msgstr ""
 msgid "Need a valid email address or don't use a local email address."
 msgstr ""
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBounce.tt
+#. Perl Module: Kernel/Modules/AgentTicketProcess.pm
 msgid "Next ticket state"
 msgstr "Trạng thái thẻ tiếp theo"
 
@@ -7704,7 +7704,7 @@ msgstr "Trạng thái thẻ tiếp theo"
 msgid "Inform sender"
 msgstr "Thông báo người gửi"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBounce.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
 msgid "Send mail"
 msgstr "Gửi mail!"
 
@@ -7836,7 +7836,7 @@ msgstr ""
 msgid "Cancel & close"
 msgstr "Hủy và đóng"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCompose.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
 msgid "Undo & close"
 msgstr ""
 
@@ -7888,7 +7888,7 @@ msgstr ""
 msgid "CreateTime"
 msgstr ""
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketHistory.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
 msgid "Article"
 msgstr "Bài viết"
 
@@ -7932,7 +7932,7 @@ msgstr ""
 msgid "New Queue"
 msgstr "Hàng đợi mới"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketMove.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPhoneCommon.tt
 msgid "Communication"
 msgstr ""
 
@@ -7988,15 +7988,15 @@ msgstr "Tác động"
 msgid "CustomerID"
 msgstr "Mã khách hàng"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketOverviewMedium.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
 msgid "Update Time"
 msgstr "Thời gian cập nhật"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketOverviewMedium.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
 msgid "Solution Time"
 msgstr "Thời gian giải pháp"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketOverviewMedium.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
 msgid "First Response Time"
 msgstr "Lần phản hồi đầu tiên"
 
@@ -8356,23 +8356,23 @@ msgstr ""
 msgid "Mentions"
 msgstr ""
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/TicketInformation.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
 msgid "Archive"
 msgstr ""
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/TicketInformation.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
 msgid "This ticket is archived."
 msgstr ""
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/TicketInformation.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
 msgid "is invalid"
 msgstr ""
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/TicketInformation.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
 msgid "Pending till"
 msgstr "Treo tới khi"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/TicketInformation.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
 msgid "Locked"
 msgstr "Đã khóa"
 
@@ -8380,7 +8380,7 @@ msgstr "Đã khóa"
 msgid "%s Ticket(s)"
 msgstr ""
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/TicketInformation.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
 msgid "Accounted time"
 msgstr "Thời gian kê khai"
 
@@ -13424,7 +13424,7 @@ msgstr "Thêm vào danh sách theo dõi vé"
 msgid "Order by"
 msgstr "Đặt hàng bởi"
 
-#. Perl Module: Kernel/Output/HTML/TicketZoom/TicketInformation.pm
+#. Perl Module: Kernel/Output/HTML/TicketActionCommon/TicketInformation.pm
 msgid "Ticket Information"
 msgstr "Tin tức về vé"
 
@@ -25253,5 +25253,37 @@ msgstr ""
 
 #. Perl Module: Kernel/Modules/AJAXAttachment.pm
 msgid "%s is missing. The file could not be deleted properly."
+msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
+msgid "Unlock and close popup"
+msgstr ""
+
+#. XML Definition: Kernel/Config/Files/XML/Ticket.xml
+msgid "Displayed in the sidebar as additional information."
+msgstr ""
+
+#. XML Definition: Kernel/Config/Files/XML/Ticket.xml
+msgid "TicketActionCommon widget that displays the current action description."
+msgstr ""
+
+#. XML Definition: Kernel/Config/Files/XML/Ticket.xml
+msgid "TicketActionCommon widget that displays ticket information."
+msgstr ""
+
+#. XML Definition: Kernel/Config/Files/XML/Ticket.xml
+msgid "TicketActionCommon widget that displays customer information."
+msgstr ""
+
+#. XML Definition: Kernel/Config/Files/XML/Ticket.xml
+msgid "Sets the state of a ticket in screen of the agent interface."
+msgstr ""
+
+#. SysConfig
+msgid "Current action description."
+msgstr ""
+
+#. SysConfig
+msgid "Ticket information"
 msgstr ""
 

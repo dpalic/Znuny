@@ -38,7 +38,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d.%m.%Y';
     $Self->{DateInputFormat}     = '%d.%m.%Y';
     $Self->{DateInputFormatLong} = '%d.%m.%Y - %T';
-    $Self->{Completeness}        = 0.842197731991695;
+    $Self->{Completeness}        = 0.841330774152271;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2653,56 +2653,53 @@ sub Data {
             'Этот отчет содержит ошибки в настройках и не может в настоящее время использоваться.',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
-        'Change Free Text of %s%s%s' => 'Изменить свободный текст для %s%s%s',
-        'Change Owner of %s%s%s' => 'Изменить владельца для %s%s',
-        'Close %s%s%s' => 'Закрыть %s%s%s',
-        'Add Note to %s%s%s' => 'Добавить заметку к %s%s%s',
-        'Set Pending Time for %s%s%s' => 'Установить время ожидания до %s%s%s',
-        'Change Priority of %s%s%s' => 'Сменить приоритет %s%s%s',
-        'Change Responsible of %s%s%s' => 'Изменить ответственного для %s%s%s',
         'The ticket has been locked' => 'Заявка была заблокирована',
-        'Ticket Settings' => 'Настройки заявки',
+        'Unlock and close popup' => '',
         'Customer user' => 'Учетная запись клиента',
         'Service invalid.' => 'Некорректный сервис.',
-        'SLA invalid.' => 'Неверное SLA.',
         'Team Data' => '',
         'Queue invalid.' => 'Неверная очередь.',
-        'New Owner' => 'Новый владелец',
         'Please set a new owner!' => 'Укажите нового владельца!',
         'Owner invalid.' => 'Неверный владелец',
-        'New Responsible' => 'Новый ответственный',
         'Please set a new responsible!' => 'Пожалуйста, задайте нового ответственного!',
         'Responsible invalid.' => 'Неверный ответственный.',
         'Ticket Data' => 'Данные заявки',
-        'Next state' => 'Следующее состояние',
         'State invalid.' => 'Неверное состояние.',
         'For all pending* states.' => 'Для всех состояний "ожидает ..."',
-        'Dynamic Info' => '',
-        'Add Article' => 'Добавить заметку',
+        'Communications' => 'Сообщение',
         'Inform' => 'Уведомление',
         'Inform agents' => 'Уведомить агентов',
         'Inform involved agents' => 'Уведомить участвующих агентов',
         'Here you can select additional agents which should receive a notification regarding the new article.' =>
             'Здесь вы можете выбрать дополнительных агентов, которые получат уведомление в зависимости от нового сообщения/заметки',
         'Text will also be received by' => 'Текст будет также получен',
-        'Communications' => 'Сообщение',
         'Create an Article' => 'Создать заметку/сообщение',
         'Setting a template will overwrite any text or attachment.' => 'Создание шаблона перезаписывает любой существующий текст или вложение',
+        'Article' => 'Сообщение',
+        'Undo & close' => 'Отменить и закрыть',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
+        'Archive' => 'Архив',
+        'This ticket is archived.' => 'Заявка перемещена в архив.',
+        'is invalid' => 'недействительный',
+        'Pending till' => 'В ожидании еще',
+        'Locked' => 'Блокировка',
+        'First Response Time' => 'Время до первого ответа',
+        'Update Time' => 'Время до изменения заявки',
+        'Solution Time' => 'Время до решения заявки',
+        'Accounted time' => 'Потраченное на заявку время',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBounce.tt
-        'Bounce %s%s%s' => 'Перенаправить %s%s%s',
-        'cancel' => '',
         'Bounce to' => 'Перенаправить на',
         'You need a email address.' => 'Нужно указать адрес электронной почты.',
         'Need a valid email address or don\'t use a local email address.' =>
             'Требуется корректный адрес электронной почты либо не указывайте локальный адрес.',
-        'Next ticket state' => 'Следующее состояние заявки',
         'Inform sender' => 'Информировать отправителя',
-        'Send mail' => 'Отправить письмо',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBulk.tt
         'Ticket Bulk Action' => 'Массовое действие',
         'Send Email' => 'Отправить письмо',
+        'Next state' => 'Следующее состояние',
         'Merge' => 'Объединить',
         'Merge to' => 'Объединить с',
         'Invalid ticket identifier!' => 'Некорректный идентификатор заявки!',
@@ -2727,7 +2724,7 @@ sub Data {
         'This address is registered as system address and cannot be used: %s' =>
             'Этот адрес является системным зарегистрированным адресом и не может быть использован: %s',
         'Bcc' => 'Скрытая копия',
-        'Undo & close' => 'Отменить и закрыть',
+        'Send mail' => 'Отправить письмо',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCustomer.tt
         'Change Customer of %s%s%s' => 'Изменить клиента для %s%s%s',
@@ -2739,9 +2736,6 @@ sub Data {
         'Please include at least one customer user for the ticket.' => 'Укажите, пожалуйста, хотя бы одного клиента',
         'From queue' => 'Из очереди',
         'Get all' => 'Получить всех',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailOutbound.tt
-        'Undo & Close' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
         'Resend Email for %s%s%s' => 'Отправить личное сообщение для %s%s%s',
@@ -2768,10 +2762,8 @@ sub Data {
         'Filter for history items' => 'Фильтр для элементов истории',
         'Expand/Collapse all' => 'Раскрыть/Свернуть все',
         'CreateTime' => 'ВремяСоздания',
-        'Article' => 'Сообщение',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketMerge.tt
-        'Merge %s%s%s' => 'Объединить %s%s%s',
         'Merge Settings' => 'Настройки объединения',
         'Try typing part of the ticket number or title in order to search by it.' =>
             'Начните вводить номер заявки или или текст заголовка для поиска по ним.',
@@ -2782,13 +2774,11 @@ sub Data {
         'Need a valid email address.' => 'Требуется верный почтовый адрес.',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketMove.tt
-        'Move %s%s%s' => 'Переслать %s%s%s',
         'New Queue' => 'Новая очередь',
-        'Communication' => 'Взаимодействие',
+        'New Owner' => 'Новый владелец',
         'Move' => 'Переместить',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketNoteToLinkedTicket.tt
-        'Add note to linked %s%s%s' => '',
         'Notes' => '',
         'Note to linked Ticket' => '',
         'LinkList invalid.' => 'Список связей недействительный.',
@@ -2802,9 +2792,6 @@ sub Data {
         'Sender' => 'Отправитель',
         'Customer User Name' => 'Имя клиента',
         'Impact' => 'Степень влияния',
-        'Update Time' => 'Время до изменения заявки',
-        'Solution Time' => 'Время до решения заявки',
-        'First Response Time' => 'Время до первого ответа',
         'Move ticket to a different queue' => 'Переместить заявку в другую очередь',
         'Change queue' => 'Сменить очередь',
 
@@ -2827,6 +2814,9 @@ sub Data {
         'Create New Phone Ticket' => 'Создать телефонную заявку',
         'Please include at least one customer for the ticket.' => 'Пожалуйста, введите хотя бы одного клиента для заявки.',
         'To queue' => 'В очередь',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPhoneCommon.tt
+        'Communication' => 'Взаимодействие',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPlain.tt
         'View Email Plain Text for %s%s%s' => 'Показать исходный формат письма для %s%s%s',
@@ -2930,14 +2920,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/MentionsTable.tt
         'Mentions' => 'Упоминания',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/TicketInformation.tt
-        'Archive' => 'Архив',
-        'This ticket is archived.' => 'Заявка перемещена в архив.',
-        'is invalid' => 'недействительный',
-        'Pending till' => 'В ожидании еще',
-        'Locked' => 'Блокировка',
-        'Accounted time' => 'Потраченное на заявку время',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/ArticleContent/Invalid.tt
         'Preview of this article is not possible because %s channel is missing in the system.' =>
@@ -4483,6 +4465,7 @@ sub Data {
             'PendingTime может просто использоваться если State или StateID настроены для такого же ActivityDialog. ActivityDialog: %s!',
         'Pending Date' => 'Ожидать до',
         'for pending* states' => 'для состояний "ожидает ..."',
+        'Next ticket state' => 'Следующее состояние заявки',
         'ActivityDialogEntityID missing!' => 'Отсутствует ActivityDialogEntityID!',
         'Couldn\'t get Config for ActivityDialogEntityID "%s"!' => 'Невозможно получить Config для ActivityDialogEntityID "%s"!',
         'Couldn\'t use CustomerID as an invisible field.' => 'Невозможно использовать CustomerID в качестве невидимого поля. ',
@@ -4958,6 +4941,9 @@ sub Data {
         'Unable to load %s!' => 'Не удалось загрузить %s!',
         'Content' => 'Содержание',
 
+        # Perl Module: Kernel/Output/HTML/TicketActionCommon/TicketInformation.pm
+        'Ticket Information' => 'Информация о заявке',
+
         # Perl Module: Kernel/Output/HTML/TicketMenu/Lock.pm
         'Unlock to give it back to the queue' => 'Разблокировать, чтобы вернуть в очередь',
         'Lock it to work on it' => 'Заблокировать, чтобы работать с нею',
@@ -4969,9 +4955,6 @@ sub Data {
 
         # Perl Module: Kernel/Output/HTML/TicketOverviewMenu/Sort.pm
         'Order by' => 'Сортировка по',
-
-        # Perl Module: Kernel/Output/HTML/TicketZoom/TicketInformation.pm
-        'Ticket Information' => 'Информация о заявке',
 
         # Perl Module: Kernel/Output/HTML/ToolBar/TicketLocked.pm
         'Locked Tickets New' => 'Заблокированные заявки: Новые',
@@ -6799,6 +6782,7 @@ sub Data {
             'Задает атрибут заявки по умолчанию для сортировки заявок в обзоре наблюдаемых заявок в интерфейсе агента.',
         'Defines the default ticket order in the watch view of the agent interface. Up: oldest on top. Down: latest on top.' =>
             'Задает стандартный порядок сортировки в обзоре наблюдаемых заявок в интерфейсе агента. Up: старые вверху. Down: новые вверху.',
+        'Displayed in the sidebar as additional information.' => '',
         'Required permissions to use the ticket free text screen in the agent interface.' =>
             'Права, требуемые для изменения Дополнительных полей заявки в интерфейсе агента.',
         'Defines if a ticket lock is required in the ticket free text screen of the agent interface (if the ticket isn\'t locked yet, the ticket gets locked and the current agent will be set automatically as its owner).' =>
@@ -6853,6 +6837,11 @@ sub Data {
             'Задает текст в записи истории для экрана изменения Дополнительных полей заявки, в интерфейсе агента.',
         'Defines the history comment for the ticket free text screen action, which gets used for ticket history.' =>
             'Задает текст комментария в записи истории при изменении Дополнительных полей, в интерфейсе агента.',
+        'TicketActionCommon widget that displays the current action description.' =>
+            '',
+        'TicketActionCommon widget that displays ticket information.' => '',
+        'TicketActionCommon widget that displays customer information.' =>
+            '',
         'Required permissions to use the ticket phone outbound screen in the agent interface.' =>
             'Права, требуемые для регистрации исходящего звонка клиента в интерфейсе агента.',
         'Defines if a ticket lock is required in the ticket phone outbound screen of the agent interface (if the ticket isn\'t locked yet, the ticket gets locked and the current agent will be set automatically as its owner).' =>
@@ -6863,6 +6852,8 @@ sub Data {
             'Тема по умолчанию для телефонной заявки на экране регистрации исходящего звонка клиенту в интерфейсе агента.',
         'Defines the default note body text for phone tickets in the ticket phone outbound screen of the agent interface.' =>
             'Задать стандартный текст для телефонной заявки при регистрации исходящего звонка клиенту в интерфейсе агента.',
+        'Sets the state of a ticket in screen of the agent interface.' =>
+            '',
         'Defines the default ticket next state after adding a phone note in the ticket phone outbound screen of the agent interface.' =>
             'Задает следующее состояние по умолчанию после регистрации исходящего звонка клиента в интерфейсе агента.',
         'Next possible ticket states after adding a phone note in the ticket phone outbound screen of the agent interface.' =>
@@ -8913,6 +8904,7 @@ Thanks for your help!
             '',
         'Creates a unit test file for this ticket.' => '',
         'Croatian' => 'Хорватский',
+        'Current action description.' => '',
         'Customer Administration' => 'Управление Компаниями',
         'Customer Companies' => 'Компании клиента',
         'Customer IDs' => 'Компании клиента',
@@ -9371,11 +9363,13 @@ Thanks for your help!
         'Ticket Priority.' => 'Приоритет заявки.',
         'Ticket Queue Overview' => 'Итоги по очередям',
         'Ticket Responsible.' => 'Ответственный за заявку.',
+        'Ticket Settings' => 'Настройки заявки',
         'Ticket Watcher' => 'Наблюдающий за заявкой',
         'Ticket Zoom' => 'Подробный просмотр заявки',
         'Ticket Zoom.' => 'Подробный просмотр заявки.',
         'Ticket bulk module.' => 'Массовое действие с заявкой.',
         'Ticket creation' => '',
+        'Ticket information' => '',
         'Ticket limit per page for Ticket Overview "Medium".' => '',
         'Ticket limit per page for Ticket Overview "Preview".' => '',
         'Ticket limit per page for Ticket Overview "Small".' => '',

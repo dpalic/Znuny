@@ -35,7 +35,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d.%m.%Y';
     $Self->{DateInputFormat}     = '%d.%m.%Y';
     $Self->{DateInputFormatLong} = '%d.%m.%Y - %T';
-    $Self->{Completeness}        = 0.367992333493052;
+    $Self->{Completeness}        = 0.368202175303903;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2650,56 +2650,53 @@ sub Data {
             '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
-        'Change Free Text of %s%s%s' => '',
-        'Change Owner of %s%s%s' => '',
-        'Close %s%s%s' => '',
-        'Add Note to %s%s%s' => '',
-        'Set Pending Time for %s%s%s' => '',
-        'Change Priority of %s%s%s' => '',
-        'Change Responsible of %s%s%s' => '',
         'The ticket has been locked' => 'Saken har blitt låst',
-        'Ticket Settings' => 'Oppsett av saker',
+        'Unlock and close popup' => '',
         'Customer user' => 'Kunde',
         'Service invalid.' => 'Tjenesten er ugyldig.',
-        'SLA invalid.' => '',
         'Team Data' => '',
         'Queue invalid.' => '',
-        'New Owner' => 'Ny eier',
         'Please set a new owner!' => 'Vennligst sett en ny eier!',
         'Owner invalid.' => '',
-        'New Responsible' => 'Ny ansvarlig',
         'Please set a new responsible!' => '',
         'Responsible invalid.' => '',
         'Ticket Data' => '',
-        'Next state' => 'Neste status',
         'State invalid.' => '',
         'For all pending* states.' => 'For alle med ventende-tilstander',
-        'Dynamic Info' => '',
-        'Add Article' => 'Legg til artikkel',
+        'Communications' => '',
         'Inform' => '',
         'Inform agents' => 'Informer saksbehandlerne',
         'Inform involved agents' => 'Informer involverte saksbehandlere',
         'Here you can select additional agents which should receive a notification regarding the new article.' =>
             '',
         'Text will also be received by' => '',
-        'Communications' => '',
         'Create an Article' => 'Lag en artikkel',
         'Setting a template will overwrite any text or attachment.' => '',
+        'Article' => 'Innlegg',
+        'Undo & close' => '',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
+        'Archive' => 'Arkiv',
+        'This ticket is archived.' => 'Denne saken er arkivert.',
+        'is invalid' => '',
+        'Pending till' => 'Utsatt til',
+        'Locked' => 'Tilgjengelighet',
+        'First Response Time' => 'Første responstid',
+        'Update Time' => 'Oppdateringstid',
+        'Solution Time' => 'Løsningstid',
+        'Accounted time' => 'Benyttet tid',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBounce.tt
-        'Bounce %s%s%s' => '',
-        'cancel' => '',
         'Bounce to' => 'Oversend til',
         'You need a email address.' => 'Du trenger en e-postadresse.',
         'Need a valid email address or don\'t use a local email address.' =>
             'Må ha en gyldig e-postadresse, og ikke en lokal adresse',
-        'Next ticket state' => 'Neste status på sak',
         'Inform sender' => 'Informer avsender',
-        'Send mail' => 'Send e-posten',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBulk.tt
         'Ticket Bulk Action' => 'Masseredigering av saker',
         'Send Email' => 'Send e-post',
+        'Next state' => 'Neste status',
         'Merge' => 'Flett',
         'Merge to' => 'Flett med',
         'Invalid ticket identifier!' => 'Ugyldig Saksnummer',
@@ -2724,7 +2721,7 @@ sub Data {
         'This address is registered as system address and cannot be used: %s' =>
             '',
         'Bcc' => 'Blindkopi',
-        'Undo & close' => '',
+        'Send mail' => 'Send e-posten',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCustomer.tt
         'Change Customer of %s%s%s' => '',
@@ -2736,9 +2733,6 @@ sub Data {
         'Please include at least one customer user for the ticket.' => '',
         'From queue' => 'Fra kø',
         'Get all' => 'Hent alle',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailOutbound.tt
-        'Undo & Close' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
         'Resend Email for %s%s%s' => '',
@@ -2765,10 +2759,8 @@ sub Data {
         'Filter for history items' => '',
         'Expand/Collapse all' => '',
         'CreateTime' => 'Opprettelsestidspunkt',
-        'Article' => 'Innlegg',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketMerge.tt
-        'Merge %s%s%s' => '',
         'Merge Settings' => '',
         'Try typing part of the ticket number or title in order to search by it.' =>
             '',
@@ -2779,13 +2771,11 @@ sub Data {
         'Need a valid email address.' => 'Trenger en gyldig e-postadresse',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketMove.tt
-        'Move %s%s%s' => '',
         'New Queue' => 'Ny kø',
-        'Communication' => 'Kommunikasjon',
+        'New Owner' => 'Ny eier',
         'Move' => 'Flytt',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketNoteToLinkedTicket.tt
-        'Add note to linked %s%s%s' => '',
         'Notes' => '',
         'Note to linked Ticket' => '',
         'LinkList invalid.' => '',
@@ -2799,9 +2789,6 @@ sub Data {
         'Sender' => 'Avsender',
         'Customer User Name' => '',
         'Impact' => 'Omfang',
-        'Update Time' => 'Oppdateringstid',
-        'Solution Time' => 'Løsningstid',
-        'First Response Time' => 'Første responstid',
         'Move ticket to a different queue' => 'Flytt saker til annen kø',
         'Change queue' => 'Endre kø',
 
@@ -2824,6 +2811,9 @@ sub Data {
         'Create New Phone Ticket' => 'Lag ny Telefon-sak',
         'Please include at least one customer for the ticket.' => 'Vennligst oppgi minst en kunde for denne saken',
         'To queue' => 'Til kø',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPhoneCommon.tt
+        'Communication' => 'Kommunikasjon',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPlain.tt
         'View Email Plain Text for %s%s%s' => '',
@@ -2927,14 +2917,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/MentionsTable.tt
         'Mentions' => '',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/TicketInformation.tt
-        'Archive' => 'Arkiv',
-        'This ticket is archived.' => 'Denne saken er arkivert.',
-        'is invalid' => '',
-        'Pending till' => 'Utsatt til',
-        'Locked' => 'Tilgjengelighet',
-        'Accounted time' => 'Benyttet tid',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/ArticleContent/Invalid.tt
         'Preview of this article is not possible because %s channel is missing in the system.' =>
@@ -4480,6 +4462,7 @@ sub Data {
             '',
         'Pending Date' => 'Utsatt til',
         'for pending* states' => 'for vente-tilstander',
+        'Next ticket state' => 'Neste status på sak',
         'ActivityDialogEntityID missing!' => '',
         'Couldn\'t get Config for ActivityDialogEntityID "%s"!' => '',
         'Couldn\'t use CustomerID as an invisible field.' => '',
@@ -4955,6 +4938,9 @@ sub Data {
         'Unable to load %s!' => '',
         'Content' => 'Innhold',
 
+        # Perl Module: Kernel/Output/HTML/TicketActionCommon/TicketInformation.pm
+        'Ticket Information' => 'Saksinformasjon',
+
         # Perl Module: Kernel/Output/HTML/TicketMenu/Lock.pm
         'Unlock to give it back to the queue' => 'Frigi sak til køen',
         'Lock it to work on it' => 'Lås sak for å arbeide med den',
@@ -4966,9 +4952,6 @@ sub Data {
 
         # Perl Module: Kernel/Output/HTML/TicketOverviewMenu/Sort.pm
         'Order by' => 'Sorter etter',
-
-        # Perl Module: Kernel/Output/HTML/TicketZoom/TicketInformation.pm
-        'Ticket Information' => 'Saksinformasjon',
 
         # Perl Module: Kernel/Output/HTML/ToolBar/TicketLocked.pm
         'Locked Tickets New' => 'Nye saker under behandling',
@@ -6796,6 +6779,7 @@ sub Data {
             '',
         'Defines the default ticket order in the watch view of the agent interface. Up: oldest on top. Down: latest on top.' =>
             '',
+        'Displayed in the sidebar as additional information.' => '',
         'Required permissions to use the ticket free text screen in the agent interface.' =>
             '',
         'Defines if a ticket lock is required in the ticket free text screen of the agent interface (if the ticket isn\'t locked yet, the ticket gets locked and the current agent will be set automatically as its owner).' =>
@@ -6850,6 +6834,11 @@ sub Data {
             '',
         'Defines the history comment for the ticket free text screen action, which gets used for ticket history.' =>
             '',
+        'TicketActionCommon widget that displays the current action description.' =>
+            '',
+        'TicketActionCommon widget that displays ticket information.' => '',
+        'TicketActionCommon widget that displays customer information.' =>
+            '',
         'Required permissions to use the ticket phone outbound screen in the agent interface.' =>
             '',
         'Defines if a ticket lock is required in the ticket phone outbound screen of the agent interface (if the ticket isn\'t locked yet, the ticket gets locked and the current agent will be set automatically as its owner).' =>
@@ -6860,6 +6849,8 @@ sub Data {
             'Definerer standardverdi for emnefeltet i skjermbildet for utgående telefonsak i agentbildet.',
         'Defines the default note body text for phone tickets in the ticket phone outbound screen of the agent interface.' =>
             'Definerer standard notistekst for utgående telefon-saker i agentdelen',
+        'Sets the state of a ticket in screen of the agent interface.' =>
+            '',
         'Defines the default ticket next state after adding a phone note in the ticket phone outbound screen of the agent interface.' =>
             '',
         'Next possible ticket states after adding a phone note in the ticket phone outbound screen of the agent interface.' =>
@@ -8899,6 +8890,7 @@ Thanks for your help!
             '',
         'Creates a unit test file for this ticket.' => '',
         'Croatian' => 'Kroatisk',
+        'Current action description.' => '',
         'Customer Administration' => '',
         'Customer Companies' => 'Kundefirma',
         'Customer IDs' => '',
@@ -9357,11 +9349,13 @@ Thanks for your help!
         'Ticket Priority.' => '',
         'Ticket Queue Overview' => '',
         'Ticket Responsible.' => '',
+        'Ticket Settings' => 'Oppsett av saker',
         'Ticket Watcher' => '',
         'Ticket Zoom' => '',
         'Ticket Zoom.' => '',
         'Ticket bulk module.' => '',
         'Ticket creation' => '',
+        'Ticket information' => '',
         'Ticket limit per page for Ticket Overview "Medium".' => '',
         'Ticket limit per page for Ticket Overview "Preview".' => '',
         'Ticket limit per page for Ticket Overview "Small".' => '',

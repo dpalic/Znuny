@@ -29,7 +29,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d.%m.%Y';
     $Self->{DateInputFormat}     = '%d.%m.%Y';
     $Self->{DateInputFormatLong} = '%d.%m.%Y - %T';
-    $Self->{Completeness}        = 0.595591758505031;
+    $Self->{Completeness}        = 0.594529750479846;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -2647,56 +2647,53 @@ sub Data {
             'این آمار شامل خطاهای پیکربندی هستند و در حال حاضر قابل استفاده نیستند.',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
-        'Change Free Text of %s%s%s' => 'تغییر متن رایگان از %s %s %s',
-        'Change Owner of %s%s%s' => 'تغییر صاحب %s %s %s',
-        'Close %s%s%s' => 'نزدیک %s %s %s',
-        'Add Note to %s%s%s' => 'اضافه کردن یادداشت به %s %s %s',
-        'Set Pending Time for %s%s%s' => 'تنظیم انتظار زمان برای %s %s %s',
-        'Change Priority of %s%s%s' => 'تغییر اولویت %s %s %s',
-        'Change Responsible of %s%s%s' => 'تغییر مسئول %s %s %s',
         'The ticket has been locked' => 'درخواست تحویل گرفته شده است',
-        'Ticket Settings' => 'تنظیمات درخواست',
+        'Unlock and close popup' => '',
         'Customer user' => 'مشترک',
         'Service invalid.' => 'سرویس نامعتبر',
-        'SLA invalid.' => '',
         'Team Data' => '',
         'Queue invalid.' => '',
-        'New Owner' => 'صاحب جدید',
         'Please set a new owner!' => 'لطفا یک صاحب جدید مشخص نمایید!',
         'Owner invalid.' => '',
-        'New Responsible' => ' مسئول جدید',
         'Please set a new responsible!' => '',
         'Responsible invalid.' => '',
         'Ticket Data' => '',
-        'Next state' => 'وضعیت بعدی',
         'State invalid.' => '',
         'For all pending* states.' => 'برای همه کشورهای * در انتظار.',
-        'Dynamic Info' => '',
-        'Add Article' => 'اضافه کردن نوشته',
+        'Communications' => '',
         'Inform' => '',
         'Inform agents' => 'اطلاع عوامل',
         'Inform involved agents' => 'اطلاع عوامل درگیر',
         'Here you can select additional agents which should receive a notification regarding the new article.' =>
             'در اینجا شما می توانید عوامل اضافی که باید اطلاع رسانی در مورد این مقاله جدید دریافت خواهید کرد را انتخاب کنید.',
         'Text will also be received by' => 'متن نیز دریافت می شود  توسط',
-        'Communications' => '',
         'Create an Article' => 'ایجاد یک مقاله',
         'Setting a template will overwrite any text or attachment.' => 'تنظیم یک قالب هر گونه متن یا پیوست بازنویسی.',
+        'Article' => 'نوشته',
+        'Undo & close' => 'عملیات را برگردان و پنجره را ببند',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
+        'Archive' => 'آرشیو',
+        'This ticket is archived.' => 'این درخواست بایگانی شده است.',
+        'is invalid' => '',
+        'Pending till' => 'تا زمانی که',
+        'Locked' => 'تحویل گرفته شده',
+        'First Response Time' => 'زمان اولین پاسخ',
+        'Update Time' => 'زمان بروز رسانی',
+        'Solution Time' => 'زمان ارائه راهکار',
+        'Accounted time' => 'زمان محاسبه شده',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBounce.tt
-        'Bounce %s%s%s' => 'پریدن %s %s %s',
-        'cancel' => '',
         'Bounce to' => 'ارجاع شده به',
         'You need a email address.' => 'به یک آدرس ایمیل نیاز دارید',
         'Need a valid email address or don\'t use a local email address.' =>
             'به یک آدرس ایمیل معتبر نیاز دارید یا از یک آدرس ایمیل محلی استفاده نکنید.',
-        'Next ticket state' => 'وضعیت بعدی درخواست',
         'Inform sender' => 'به ارسال کننده اطلاع بده',
-        'Send mail' => 'ارسال ایمیل!',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBulk.tt
         'Ticket Bulk Action' => 'عملیات کلی روی درخواست',
         'Send Email' => 'ارسال ایمیل!',
+        'Next state' => 'وضعیت بعدی',
         'Merge' => 'ادغام ',
         'Merge to' => 'ادغام با',
         'Invalid ticket identifier!' => 'شناسه درخواست نامعتبر',
@@ -2721,7 +2718,7 @@ sub Data {
         'This address is registered as system address and cannot be used: %s' =>
             'این آدرس به عنوان آدرس سیستم ثبت شده و می تواند استفاده شود: %s',
         'Bcc' => 'رونوشت پنهان',
-        'Undo & close' => 'عملیات را برگردان و پنجره را ببند',
+        'Send mail' => 'ارسال ایمیل!',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCustomer.tt
         'Change Customer of %s%s%s' => 'تغییر مشتری از %s %s %s',
@@ -2733,9 +2730,6 @@ sub Data {
         'Please include at least one customer user for the ticket.' => 'لطفا حداقل یک کاربر مشتری برای درخواست قرار دهید',
         'From queue' => 'از صف درخواست',
         'Get all' => 'گرفتن همه',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailOutbound.tt
-        'Undo & Close' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
         'Resend Email for %s%s%s' => '',
@@ -2762,10 +2756,8 @@ sub Data {
         'Filter for history items' => '',
         'Expand/Collapse all' => '',
         'CreateTime' => 'زمان ساختن',
-        'Article' => 'نوشته',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketMerge.tt
-        'Merge %s%s%s' => 'ادغام %s %s %s',
         'Merge Settings' => 'ادغام تنظیمات',
         'Try typing part of the ticket number or title in order to search by it.' =>
             '',
@@ -2776,13 +2768,11 @@ sub Data {
         'Need a valid email address.' => 'به آدرس ایمیل معتبر نیاز است.',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketMove.tt
-        'Move %s%s%s' => 'حرکت %s %s %s',
         'New Queue' => 'لیست درخواست جدید',
-        'Communication' => 'ارتباطات',
+        'New Owner' => 'صاحب جدید',
         'Move' => 'انتقال',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketNoteToLinkedTicket.tt
-        'Add note to linked %s%s%s' => '',
         'Notes' => '',
         'Note to linked Ticket' => '',
         'LinkList invalid.' => '',
@@ -2796,9 +2786,6 @@ sub Data {
         'Sender' => 'فرستنده',
         'Customer User Name' => '',
         'Impact' => 'اثر',
-        'Update Time' => 'زمان بروز رسانی',
-        'Solution Time' => 'زمان ارائه راهکار',
-        'First Response Time' => 'زمان اولین پاسخ',
         'Move ticket to a different queue' => 'انتقال درخواست یه صف درخواست دیگر',
         'Change queue' => 'تغییر لیست درخواست',
 
@@ -2821,6 +2808,9 @@ sub Data {
         'Create New Phone Ticket' => 'ساخت درخواست تلفنی جدید',
         'Please include at least one customer for the ticket.' => 'لطفا حداقل یک مشتری برای درخواست قراردهید',
         'To queue' => 'به صف درخواست',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPhoneCommon.tt
+        'Communication' => 'ارتباطات',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPlain.tt
         'View Email Plain Text for %s%s%s' => 'نمایش ایمیل متن ساده برای %s %s %s',
@@ -2924,14 +2914,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/MentionsTable.tt
         'Mentions' => '',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/TicketInformation.tt
-        'Archive' => 'آرشیو',
-        'This ticket is archived.' => 'این درخواست بایگانی شده است.',
-        'is invalid' => '',
-        'Pending till' => 'تا زمانی که',
-        'Locked' => 'تحویل گرفته شده',
-        'Accounted time' => 'زمان محاسبه شده',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/ArticleContent/Invalid.tt
         'Preview of this article is not possible because %s channel is missing in the system.' =>
@@ -4477,6 +4459,7 @@ sub Data {
             'PendingTime میتوانید از استفاده اگر دولت و یا StateID برای ActivityDialog همان پیکربندی شده است. ActivityDialog: %s !',
         'Pending Date' => 'مهلت تعلیق',
         'for pending* states' => 'برای حالات تعلیق',
+        'Next ticket state' => 'وضعیت بعدی درخواست',
         'ActivityDialogEntityID missing!' => 'ActivityDialogEntityID از دست رفته!',
         'Couldn\'t get Config for ActivityDialogEntityID "%s"!' => 'می تواند پیکربندی برای ActivityDialogEntityID \ "نمی %s "!',
         'Couldn\'t use CustomerID as an invisible field.' => 'می تواند به عنوان یک CustomerID میدان نامرئی استفاده کنید.',
@@ -4952,6 +4935,9 @@ sub Data {
         'Unable to load %s!' => '',
         'Content' => 'محتوا',
 
+        # Perl Module: Kernel/Output/HTML/TicketActionCommon/TicketInformation.pm
+        'Ticket Information' => 'اطلاعات درخواست',
+
         # Perl Module: Kernel/Output/HTML/TicketMenu/Lock.pm
         'Unlock to give it back to the queue' => 'ان را برگردان به لیست باز شده . ',
         'Lock it to work on it' => 'قفل آن را بر روی آن کاربگذار ',
@@ -4963,9 +4949,6 @@ sub Data {
 
         # Perl Module: Kernel/Output/HTML/TicketOverviewMenu/Sort.pm
         'Order by' => 'مرتب‌سازی بر اساس',
-
-        # Perl Module: Kernel/Output/HTML/TicketZoom/TicketInformation.pm
-        'Ticket Information' => 'اطلاعات درخواست',
 
         # Perl Module: Kernel/Output/HTML/ToolBar/TicketLocked.pm
         'Locked Tickets New' => 'درخواست‌های تازه تحویل گرفته شده',
@@ -6793,6 +6776,7 @@ sub Data {
             'تعریف می کند که به طور پیش فرض ویژگی بلیط برای بلیط مرتب سازی در نظر دیده بان رابط عامل.',
         'Defines the default ticket order in the watch view of the agent interface. Up: oldest on top. Down: latest on top.' =>
             'تعریف می کند که به طور پیش فرض سفارش بلیط در نظر دیده بان رابط عامل. تا: قدیمی ترین در بالای صفحه. پایین: شدن در بالای صفحه.',
+        'Displayed in the sidebar as additional information.' => '',
         'Required permissions to use the ticket free text screen in the agent interface.' =>
             'دسترسی مورد نیاز برای استفاده ازدرخواست صفحه نمایش های متنی رایگان در صفحه ی کارشناس.',
         'Defines if a ticket lock is required in the ticket free text screen of the agent interface (if the ticket isn\'t locked yet, the ticket gets locked and the current agent will be set automatically as its owner).' =>
@@ -6847,6 +6831,11 @@ sub Data {
             'تعریف می کند نوع تاریخ برای بلیط رایگان عمل صفحه نمایش متن، می شود که برای تاریخ بلیط استفاده می شود.',
         'Defines the history comment for the ticket free text screen action, which gets used for ticket history.' =>
             'تعریف می کند که نظر تاریخ برای بلیط رایگان عمل صفحه نمایش متن، می شود که برای تاریخ بلیط استفاده می شود.',
+        'TicketActionCommon widget that displays the current action description.' =>
+            '',
+        'TicketActionCommon widget that displays ticket information.' => '',
+        'TicketActionCommon widget that displays customer information.' =>
+            '',
         'Required permissions to use the ticket phone outbound screen in the agent interface.' =>
             'دسترسی مورد نیاز برای استفاده از صفحه نمایش خروجی تلفن بلیط در رابط عامل.',
         'Defines if a ticket lock is required in the ticket phone outbound screen of the agent interface (if the ticket isn\'t locked yet, the ticket gets locked and the current agent will be set automatically as its owner).' =>
@@ -6857,6 +6846,8 @@ sub Data {
             'تعریف می کند که موضوع به طور پیش فرض برای بلیط تلفن در صفحه نمایش خروجی تلفن بلیط رابط عامل.',
         'Defines the default note body text for phone tickets in the ticket phone outbound screen of the agent interface.' =>
             'تعریف می کند که به طور پیش فرض متن توجه داشته باشید بدن برای بلیط تلفن در صفحه نمایش خروجی تلفن بلیط رابط عامل.',
+        'Sets the state of a ticket in screen of the agent interface.' =>
+            '',
         'Defines the default ticket next state after adding a phone note in the ticket phone outbound screen of the agent interface.' =>
             'تعریف می کند که به طور پیش فرض بلیط دولت بعد و پس از اضافه کردن یک یادداشت تلفن در صفحه نمایش خروجی تلفن بلیط رابط عامل.',
         'Next possible ticket states after adding a phone note in the ticket phone outbound screen of the agent interface.' =>
@@ -8907,6 +8898,7 @@ Thanks for your help!
             '',
         'Creates a unit test file for this ticket.' => '',
         'Croatian' => 'کرواتی',
+        'Current action description.' => '',
         'Customer Administration' => 'اداره مشتری',
         'Customer Companies' => 'شرکت/سازمان‌های مشترک',
         'Customer IDs' => '',
@@ -9365,11 +9357,13 @@ Thanks for your help!
         'Ticket Priority.' => 'اولویت درخواست',
         'Ticket Queue Overview' => 'بررسی اجمالی صف درخواست',
         'Ticket Responsible.' => 'درخواست به عهده دارد.',
+        'Ticket Settings' => 'تنظیمات درخواست',
         'Ticket Watcher' => 'نگهبان درخواست',
         'Ticket Zoom' => '',
         'Ticket Zoom.' => 'درخواست زوم.',
         'Ticket bulk module.' => 'درخواست ماژول انبوه ',
         'Ticket creation' => '',
+        'Ticket information' => '',
         'Ticket limit per page for Ticket Overview "Medium".' => '',
         'Ticket limit per page for Ticket Overview "Preview".' => '',
         'Ticket limit per page for Ticket Overview "Small".' => '',

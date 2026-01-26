@@ -361,7 +361,7 @@ Core.UI.TreeSelection = (function (TargetNS) {
             $('#TreeContainer')
                 .prepend($TreeObj)
                 .prepend('<div id="TreeSearch"><input type="text" id="TreeSearchInput" placeholder="' + Core.Language.Translate('Search') + '..." /><span title="' + Core.Language.Translate('Delete') + '">x</span></div>')
-                .append('<input type="button" id="SubmitTree" class="Primary" title="' + Core.Language.Translate('Apply') + '" value="' + Core.Language.Translate('Apply') + '" />');
+                .append('<input type="button" id="SubmitTree" class="CallForAction Primary btn-primary btn-main btn-width-md" title="' + Core.Language.Translate('Apply') + '" value="' + Core.Language.Translate('Apply') + '" />')
 
             // Get the element which is currently being focused and set the focus to the search field
             $CurrentFocusedObj = document.activeElement;

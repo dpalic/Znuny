@@ -226,7 +226,6 @@ sub _TasksGet {
             Message => 'Check if database has been backed up',
             Module  => 'scripts::Migration::Base::DatabaseBackupCheck',
         },
-
         {
             Message => 'Check required database version',
             Module  => 'scripts::Migration::Base::DatabaseVersionCheck',
@@ -235,11 +234,18 @@ sub _TasksGet {
             Message => 'Check database default storage engine',
             Module  => 'scripts::Migration::Base::DatabaseDefaultStorageEngineCheck',
         },
+
+        # 7.3 specific tasks before database migration
+        {
+            Message => 'Phone state settings migration notice',
+            Module  => 'scripts::Migration::Znuny::MigratePhoneStateSettings',
+        },
+
+        # Base
         {
             Message => 'Upgrade database structure',
             Module  => 'scripts::Migration::Znuny::UpgradeDatabaseStructure',
         },
-
         {
             Message => 'Migrate database to utf8mb4',
             Module  => 'scripts::Migration::Znuny::MigrateUTF8MB4',
@@ -253,6 +259,10 @@ sub _TasksGet {
             Module  => 'scripts::Migration::Base::RebuildConfig',
         },
 
+        # 7.3 specific tasks after database migration
+        # ...to be added here...
+
+        # Base tasks after database migration
         {
             Message => 'Migrate DBCRUD UUID columns',
             Module  => 'scripts::Migration::Znuny::MigrateDBCRUDUUIDColumns',
@@ -273,6 +283,10 @@ sub _TasksGet {
             Module  => 'scripts::Migration::Znuny::RemoveMentionFlagFromArchivedTickets',
         },
 
+        # 7.3 specific tasks after SysConfig migration
+        # ...to be added here...
+
+        # Base tasks after SysConfig migration
         {
             Message => 'Initialize default cron jobs',
             Module  => 'scripts::Migration::Base::InitializeDefaultCronjobs',
@@ -297,7 +311,6 @@ sub _TasksGet {
             Message => 'Check invalid settings',
             Module  => 'scripts::Migration::Base::InvalidSettingsCheck',
         },
-
     );
 
     return @Tasks;

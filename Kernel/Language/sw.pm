@@ -29,7 +29,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%m/%d/%Y';
     $Self->{DateInputFormat}     = '%m/%d/%Y';
     $Self->{DateInputFormatLong} = '%m/%d/%Y - %T';
-    $Self->{Completeness}        = 0.422296757706437;
+    $Self->{Completeness}        = 0.42274472168906;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -2644,56 +2644,53 @@ sub Data {
             '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
-        'Change Free Text of %s%s%s' => '',
-        'Change Owner of %s%s%s' => '',
-        'Close %s%s%s' => '',
-        'Add Note to %s%s%s' => '',
-        'Set Pending Time for %s%s%s' => '',
-        'Change Priority of %s%s%s' => '',
-        'Change Responsible of %s%s%s' => '',
         'The ticket has been locked' => 'Tiketi imefungwa',
-        'Ticket Settings' => 'Mipangilio ya tiketi',
+        'Unlock and close popup' => '',
         'Customer user' => 'Mtumiaji wa mteja',
         'Service invalid.' => 'HUduma batili.',
-        'SLA invalid.' => '',
         'Team Data' => '',
         'Queue invalid.' => '',
-        'New Owner' => 'Mmiliki mpya.',
         'Please set a new owner!' => 'Tafadhali weka mmiliki mpya!',
         'Owner invalid.' => '',
-        'New Responsible' => '',
         'Please set a new responsible!' => '',
         'Responsible invalid.' => '',
         'Ticket Data' => '',
-        'Next state' => 'Hali ijayo',
         'State invalid.' => '',
         'For all pending* states.' => '',
-        'Dynamic Info' => '',
-        'Add Article' => 'Ongeza makala',
+        'Communications' => '',
         'Inform' => '',
         'Inform agents' => '',
         'Inform involved agents' => '',
         'Here you can select additional agents which should receive a notification regarding the new article.' =>
             'Hapa unaweza kuchagua mawakala wa kuongezea ambao watapokea taarifa kuhusiana na makala mpya.',
         'Text will also be received by' => '',
-        'Communications' => '',
         'Create an Article' => 'Tengeneza makala',
         'Setting a template will overwrite any text or attachment.' => 'Kuweka kiolezo kutaandika juu ya matini yoyote au kiambatisho.',
+        'Article' => 'Makala',
+        'Undo & close' => '',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
+        'Archive' => 'Nyaraka',
+        'This ticket is archived.' => 'Tiketi hii imewekwa kwenye nyaraka',
+        'is invalid' => '',
+        'Pending till' => 'Inasubiri hadi',
+        'Locked' => 'Fungwa',
+        'First Response Time' => 'Muda wa kwanza wa majibu',
+        'Update Time' => 'Muda wa kusasisha',
+        'Solution Time' => 'Muda wa ufumbuzi',
+        'Accounted time' => 'Muda wa kuhesabu',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBounce.tt
-        'Bounce %s%s%s' => '',
-        'cancel' => '',
         'Bounce to' => 'Dunda kwenda ',
         'You need a email address.' => 'Unahitaji anwani ya barua pepe',
         'Need a valid email address or don\'t use a local email address.' =>
             'Unahitaji anwani halali ya barua pepe au usitumie anwani ya kawaida ya barua pepe.',
-        'Next ticket state' => 'Hali ijayo ya tiketi.',
         'Inform sender' => 'Taarifu mtumaji.',
-        'Send mail' => 'Tuma barua pepe',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBulk.tt
         'Ticket Bulk Action' => 'Kitendo cha wingi cha tiketi.',
         'Send Email' => 'Tuma barua pepe',
+        'Next state' => 'Hali ijayo',
         'Merge' => 'Ibuka',
         'Merge to' => 'Unganishwa kwa',
         'Invalid ticket identifier!' => 'Kitambulishi cha tiketi batili!',
@@ -2718,7 +2715,7 @@ sub Data {
         'This address is registered as system address and cannot be used: %s' =>
             '',
         'Bcc' => 'Bcc',
-        'Undo & close' => '',
+        'Send mail' => 'Tuma barua pepe',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCustomer.tt
         'Change Customer of %s%s%s' => '',
@@ -2730,9 +2727,6 @@ sub Data {
         'Please include at least one customer user for the ticket.' => 'Tafadhali weka japo mtumiaji wa mteja mmoja kwa tiketi hii.',
         'From queue' => 'Kutoka kwenye foleni',
         'Get all' => 'Pata zote',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailOutbound.tt
-        'Undo & Close' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
         'Resend Email for %s%s%s' => '',
@@ -2759,10 +2753,8 @@ sub Data {
         'Filter for history items' => '',
         'Expand/Collapse all' => '',
         'CreateTime' => 'Muda wa kutengeneza',
-        'Article' => 'Makala',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketMerge.tt
-        'Merge %s%s%s' => '',
         'Merge Settings' => '',
         'Try typing part of the ticket number or title in order to search by it.' =>
             '',
@@ -2773,13 +2765,11 @@ sub Data {
         'Need a valid email address.' => 'Anwani ya barua pepe halali inahitajika.',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketMove.tt
-        'Move %s%s%s' => '',
         'New Queue' => 'Foleni mpya',
-        'Communication' => '',
+        'New Owner' => 'Mmiliki mpya.',
         'Move' => 'Sogea',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketNoteToLinkedTicket.tt
-        'Add note to linked %s%s%s' => '',
         'Notes' => '',
         'Note to linked Ticket' => '',
         'LinkList invalid.' => '',
@@ -2793,9 +2783,6 @@ sub Data {
         'Sender' => 'Mtumaji',
         'Customer User Name' => '',
         'Impact' => 'Madhara',
-        'Update Time' => 'Muda wa kusasisha',
-        'Solution Time' => 'Muda wa ufumbuzi',
-        'First Response Time' => 'Muda wa kwanza wa majibu',
         'Move ticket to a different queue' => 'Hamisha tiketi kwenye foleni nyingine',
         'Change queue' => 'Badili foleni',
 
@@ -2818,6 +2805,9 @@ sub Data {
         'Create New Phone Ticket' => 'Tengeneza tiketi mpya ya simu',
         'Please include at least one customer for the ticket.' => 'Tafadhali ambatanisha japo mteja mmoja kwa tiketi hii.',
         'To queue' => 'Kwenda kwenye foleni',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPhoneCommon.tt
+        'Communication' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPlain.tt
         'View Email Plain Text for %s%s%s' => '',
@@ -2921,14 +2911,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/MentionsTable.tt
         'Mentions' => '',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/TicketInformation.tt
-        'Archive' => 'Nyaraka',
-        'This ticket is archived.' => 'Tiketi hii imewekwa kwenye nyaraka',
-        'is invalid' => '',
-        'Pending till' => 'Inasubiri hadi',
-        'Locked' => 'Fungwa',
-        'Accounted time' => 'Muda wa kuhesabu',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/ArticleContent/Invalid.tt
         'Preview of this article is not possible because %s channel is missing in the system.' =>
@@ -4474,6 +4456,7 @@ sub Data {
             '',
         'Pending Date' => 'Tarehe ya kusubiri',
         'for pending* states' => 'Kwa hali zinazosubiri',
+        'Next ticket state' => 'Hali ijayo ya tiketi.',
         'ActivityDialogEntityID missing!' => '',
         'Couldn\'t get Config for ActivityDialogEntityID "%s"!' => '',
         'Couldn\'t use CustomerID as an invisible field.' => '',
@@ -4949,6 +4932,9 @@ sub Data {
         'Unable to load %s!' => '',
         'Content' => 'Maudhui',
 
+        # Perl Module: Kernel/Output/HTML/TicketActionCommon/TicketInformation.pm
+        'Ticket Information' => 'Taarifa za tiketi',
+
         # Perl Module: Kernel/Output/HTML/TicketMenu/Lock.pm
         'Unlock to give it back to the queue' => 'Fungua kuirudisha kwenye foleni',
         'Lock it to work on it' => 'Ifunge ufanyenayo kazi',
@@ -4960,9 +4946,6 @@ sub Data {
 
         # Perl Module: Kernel/Output/HTML/TicketOverviewMenu/Sort.pm
         'Order by' => 'Panga kwa',
-
-        # Perl Module: Kernel/Output/HTML/TicketZoom/TicketInformation.pm
-        'Ticket Information' => 'Taarifa za tiketi',
 
         # Perl Module: Kernel/Output/HTML/ToolBar/TicketLocked.pm
         'Locked Tickets New' => 'Funga tiketi mpya',
@@ -6793,6 +6776,7 @@ Mfano:
             'Inafafanua sifa ya tiketi chaguo-msingi kwa ajili ya kupanga tiketi katika mandhari ya kuangalia ya kiolesura cha mteja.',
         'Defines the default ticket order in the watch view of the agent interface. Up: oldest on top. Down: latest on top.' =>
             'Inafafanua mpangilio wa tiketi chaguo-msingi katika mandhari ya kuangalia  ya kiolesura cha wakala. Juu: Kongwe juu. Chini: Za sasa juu.',
+        'Displayed in the sidebar as additional information.' => '',
         'Required permissions to use the ticket free text screen in the agent interface.' =>
             'Inahitaji ruhusa kutumia skrini ya matini huru ya tiketi katika kiolesura cha wakala.',
         'Defines if a ticket lock is required in the ticket free text screen of the agent interface (if the ticket isn\'t locked yet, the ticket gets locked and the current agent will be set automatically as its owner).' =>
@@ -6847,6 +6831,11 @@ Mfano:
             'Inafafanua aina ya historia kwa kitendo cha skrini ya matini huru ya tiketi, ambayo inatumika kwa ajili ya historia ya tiketi.',
         'Defines the history comment for the ticket free text screen action, which gets used for ticket history.' =>
             'Inafafanua maoni ya historia kwa kitendo cha skrini ya matini huru ya tiketi, ambayo inatumika kwa ajili ya historia ya tiketi katika kiolesura cha wakala.',
+        'TicketActionCommon widget that displays the current action description.' =>
+            '',
+        'TicketActionCommon widget that displays ticket information.' => '',
+        'TicketActionCommon widget that displays customer information.' =>
+            '',
         'Required permissions to use the ticket phone outbound screen in the agent interface.' =>
             'Inahitaji ruhusa kutumia skrini ya iliyofungwa nje ya simu ya tiketi katika kiolesura cha wakala.',
         'Defines if a ticket lock is required in the ticket phone outbound screen of the agent interface (if the ticket isn\'t locked yet, the ticket gets locked and the current agent will be set automatically as its owner).' =>
@@ -6857,6 +6846,8 @@ Mfano:
             'Inafafanua somo chaguo-msingi kwa tiketi za simu katika skrini ya tiketi ya simu zilizofungwa nje ya kiolesura cha wakala.',
         'Defines the default note body text for phone tickets in the ticket phone outbound screen of the agent interface.' =>
             'Inafafanua matini kiini ya kidokezo chaguo msingi kwa skrini iliyofungwa nje ya tiketi ya simu ya kiolesura cha wakala.',
+        'Sets the state of a ticket in screen of the agent interface.' =>
+            '',
         'Defines the default ticket next state after adding a phone note in the ticket phone outbound screen of the agent interface.' =>
             'Inafafanua hali ijayo ya tiketi chaguo-msingi baada ya kuongeza kidokezo cha simu katika skrini ya simu zilizofungwa nje za tiketi ya kiolesura cha wakala.',
         'Next possible ticket states after adding a phone note in the ticket phone outbound screen of the agent interface.' =>
@@ -8896,6 +8887,7 @@ Thanks for your help!
             '',
         'Creates a unit test file for this ticket.' => '',
         'Croatian' => '',
+        'Current action description.' => '',
         'Customer Administration' => 'Usimamizi wa mteja',
         'Customer Companies' => 'Kampuni ya mteja',
         'Customer IDs' => '',
@@ -9354,11 +9346,13 @@ Thanks for your help!
         'Ticket Priority.' => '',
         'Ticket Queue Overview' => 'Mapitio ya foleni ya tiketi',
         'Ticket Responsible.' => '',
+        'Ticket Settings' => 'Mipangilio ya tiketi',
         'Ticket Watcher' => '',
         'Ticket Zoom' => '',
         'Ticket Zoom.' => '',
         'Ticket bulk module.' => '',
         'Ticket creation' => '',
+        'Ticket information' => '',
         'Ticket limit per page for Ticket Overview "Medium".' => '',
         'Ticket limit per page for Ticket Overview "Preview".' => '',
         'Ticket limit per page for Ticket Overview "Small".' => '',

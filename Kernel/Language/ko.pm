@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%m-%d';
     $Self->{DateInputFormat}     = '%Y-%m-%d';
     $Self->{DateInputFormatLong} = '%Y-%m-%d %T';
-    $Self->{Completeness}        = 0.837725602938828;
+    $Self->{Completeness}        = 0.836852207293666;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -2641,56 +2641,53 @@ sub Data {
             '이 통계에는 구성 오류가 있으며 현재 사용할 수 없습니다.',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
-        'Change Free Text of %s%s%s' => '%s%s%s의 자유 텍스트 변경 ',
-        'Change Owner of %s%s%s' => '%s%s%s의 소유자 변경',
-        'Close %s%s%s' => '닫기 %s%s%s',
-        'Add Note to %s%s%s' => '%s%s%s에 메모 추가',
-        'Set Pending Time for %s%s%s' => '%s%s%s의 보류 시간 설정',
-        'Change Priority of %s%s%s' => '%s%s%s의 우선 순위 변경',
-        'Change Responsible of %s%s%s' => '%s%s%s의 책임 변경',
         'The ticket has been locked' => '티켓이 잠겼습니다.',
-        'Ticket Settings' => '티켓 설정',
+        'Unlock and close popup' => '',
         'Customer user' => '고객 사용자',
         'Service invalid.' => '서비스가 유효하지 않습니다.',
-        'SLA invalid.' => 'SLA가 유효하지 않습니다.',
         'Team Data' => '',
         'Queue invalid.' => '대기열이 잘못 되었습니다.',
-        'New Owner' => '신규 소유자',
         'Please set a new owner!' => '새 주인을 설정하십시오!',
         'Owner invalid.' => '소유자가 유효하지 않습니다.',
-        'New Responsible' => '새로운 책임',
         'Please set a new responsible!' => '새로운 책임을 설정하십시오!',
         'Responsible invalid.' => '책임지지 않습니다.',
         'Ticket Data' => '',
-        'Next state' => '다음 상태',
         'State invalid.' => '상태가 유효하지 않습니다.',
         'For all pending* states.' => '모든 보류 * 상태.',
-        'Dynamic Info' => '',
-        'Add Article' => '기사 추가',
+        'Communications' => '',
         'Inform' => '',
         'Inform agents' => '에이전트에게 알리기',
         'Inform involved agents' => '관련 요원에게 알린다.',
         'Here you can select additional agents which should receive a notification regarding the new article.' =>
             '여기에서 새 기사와 관련된 알림을 받을 추가 상담원을 선택할 수 있습니다.',
         'Text will also be received by' => '다음에 의해 텍스트도 받게 됩니다.',
-        'Communications' => '',
         'Create an Article' => '기사 작성',
         'Setting a template will overwrite any text or attachment.' => '템플릿을 설정하면 텍스트나 첨부파일을 덮어씁니다.',
+        'Article' => '조',
+        'Undo & close' => '실행 취소 및 닫기',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
+        'Archive' => '아카이브',
+        'This ticket is archived.' => '이 티켓은 보관 처리됩니다.',
+        'is invalid' => '',
+        'Pending till' => '대기 시간까지',
+        'Locked' => '잠김',
+        'First Response Time' => '첫 번째 응답 시간',
+        'Update Time' => '업데이트 시간',
+        'Solution Time' => '솔루션 시간',
+        'Accounted time' => '소요 시간',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBounce.tt
-        'Bounce %s%s%s' => '바운스 %s%s%s',
-        'cancel' => '',
         'Bounce to' => '바운스',
         'You need a email address.' => '이메일 주소가 필요합니다.',
         'Need a valid email address or don\'t use a local email address.' =>
             '유효한 전자 메일 주소가 필요하거나 로컬 전자 메일 주소를 사용하지 마십시오.',
-        'Next ticket state' => '다음 티켓 상태',
         'Inform sender' => '발신자에게 알리기',
-        'Send mail' => '이메일 전송',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBulk.tt
         'Ticket Bulk Action' => '티켓 일괄 작업',
         'Send Email' => '이메일 전송',
+        'Next state' => '다음 상태',
         'Merge' => '합침',
         'Merge to' => '합침',
         'Invalid ticket identifier!' => '잘못된 티켓 식별자입니다!',
@@ -2715,7 +2712,7 @@ sub Data {
         'This address is registered as system address and cannot be used: %s' =>
             '이 주소는 시스템 주소로 등록되어 있으므로 사용할 수 없습니다 : %s',
         'Bcc' => '숨은 참조',
-        'Undo & close' => '실행 취소 및 닫기',
+        'Send mail' => '이메일 전송',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCustomer.tt
         'Change Customer of %s%s%s' => '고객을 %s%s%s로 변경하십시오.',
@@ -2727,9 +2724,6 @@ sub Data {
         'Please include at least one customer user for the ticket.' => '적어도 한 명의 고객 사용자를 티켓에 포함하십시오.',
         'From queue' => '대기열에서',
         'Get all' => '모든 것을 가져라',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailOutbound.tt
-        'Undo & Close' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
         'Resend Email for %s%s%s' => '%s%s%s에게 이메일 다시 보내기',
@@ -2756,10 +2750,8 @@ sub Data {
         'Filter for history items' => '기록 항목 필터링',
         'Expand/Collapse all' => '',
         'CreateTime' => 'Created',
-        'Article' => '조',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketMerge.tt
-        'Merge %s%s%s' => '병합 %s%s%s',
         'Merge Settings' => '병합 설정',
         'Try typing part of the ticket number or title in order to search by it.' =>
             '티켓 번호 또는 제목의 일부를 입력하여 검색하십시오.',
@@ -2770,13 +2762,11 @@ sub Data {
         'Need a valid email address.' => '유효한 이메일 주소가 필요합니다.',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketMove.tt
-        'Move %s%s%s' => '%s%s%s 로 이동',
         'New Queue' => '새로운 대기열',
-        'Communication' => '통신',
+        'New Owner' => '신규 소유자',
         'Move' => '이동',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketNoteToLinkedTicket.tt
-        'Add note to linked %s%s%s' => '',
         'Notes' => '',
         'Note to linked Ticket' => '',
         'LinkList invalid.' => '',
@@ -2790,9 +2780,6 @@ sub Data {
         'Sender' => '보낸사람',
         'Customer User Name' => '고객 사용자 이름',
         'Impact' => '',
-        'Update Time' => '업데이트 시간',
-        'Solution Time' => '솔루션 시간',
-        'First Response Time' => '첫 번째 응답 시간',
         'Move ticket to a different queue' => '티켓을 다른 대기열로 이동',
         'Change queue' => '대기열 변경',
 
@@ -2815,6 +2802,9 @@ sub Data {
         'Create New Phone Ticket' => '새로운 폰 티켓 생성',
         'Please include at least one customer for the ticket.' => '최소한 한 명의 고객을 티켓에 포함하십시오.',
         'To queue' => '대기열에 넣기',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPhoneCommon.tt
+        'Communication' => '통신',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPlain.tt
         'View Email Plain Text for %s%s%s' => '%s%s%s에 대한 이메일보기 일반 텍스트',
@@ -2918,14 +2908,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/MentionsTable.tt
         'Mentions' => '',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/TicketInformation.tt
-        'Archive' => '아카이브',
-        'This ticket is archived.' => '이 티켓은 보관 처리됩니다.',
-        'is invalid' => '',
-        'Pending till' => '대기 시간까지',
-        'Locked' => '잠김',
-        'Accounted time' => '소요 시간',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/ArticleContent/Invalid.tt
         'Preview of this article is not possible because %s channel is missing in the system.' =>
@@ -4471,6 +4453,7 @@ sub Data {
             '상태 또는 StateID가 동일한 ActivityDialog에 대해 구성된 경우 PendingTime을 사용할 수 있습니다. ActivityDialog : %s!',
         'Pending Date' => '보류 날짜',
         'for pending* states' => '보류 중 * 상태',
+        'Next ticket state' => '다음 티켓 상태',
         'ActivityDialogEntityID missing!' => 'ActivityDialogEntityID가 없습니다!',
         'Couldn\'t get Config for ActivityDialogEntityID "%s"!' => 'ActivityDialogEntityID "%s"에 대한 구성을 가져올 수 없습니다!',
         'Couldn\'t use CustomerID as an invisible field.' => '보이지 않는 필드로 CustomerID를 사용할 수 없습니다.',
@@ -4946,6 +4929,9 @@ sub Data {
         'Unable to load %s!' => '%s를 로드 할 수 없습니다!',
         'Content' => '만족',
 
+        # Perl Module: Kernel/Output/HTML/TicketActionCommon/TicketInformation.pm
+        'Ticket Information' => '티켓 정보',
+
         # Perl Module: Kernel/Output/HTML/TicketMenu/Lock.pm
         'Unlock to give it back to the queue' => '잠금 해제하여 다시 대기열로 보냅니다.',
         'Lock it to work on it' => '잠금 기능',
@@ -4957,9 +4943,6 @@ sub Data {
 
         # Perl Module: Kernel/Output/HTML/TicketOverviewMenu/Sort.pm
         'Order by' => '주문',
-
-        # Perl Module: Kernel/Output/HTML/TicketZoom/TicketInformation.pm
-        'Ticket Information' => '티켓 정보',
 
         # Perl Module: Kernel/Output/HTML/ToolBar/TicketLocked.pm
         'Locked Tickets New' => '잠긴 티켓 신규',
@@ -6787,6 +6770,7 @@ sub Data {
             '에이전트 인터페이스의 보기에서 티켓 정렬에 대한 기본 티켓 속성을 정의합니다.',
         'Defines the default ticket order in the watch view of the agent interface. Up: oldest on top. Down: latest on top.' =>
             '에이전트 인터페이스의보기보기에서 기본 티켓 순서를 정의합니다. 위로 : 가장 오래된 것. 아래 : 위에 최신.',
+        'Displayed in the sidebar as additional information.' => '',
         'Required permissions to use the ticket free text screen in the agent interface.' =>
             '에이전트 인터페이스에서 티켓없는 텍스트 화면을 사용하는데 필요한 권한입니다.',
         'Defines if a ticket lock is required in the ticket free text screen of the agent interface (if the ticket isn\'t locked yet, the ticket gets locked and the current agent will be set automatically as its owner).' =>
@@ -6841,6 +6825,11 @@ sub Data {
             '티켓 기록에 사용되는 티켓 비어있는 텍스트 화면 조치에 대한 기록 유형을 정의합니다.',
         'Defines the history comment for the ticket free text screen action, which gets used for ticket history.' =>
             '티켓 기록에 사용되는 티켓 비어있는 텍스트 화면 작업에 대한 기록 주석을 정의합니다.',
+        'TicketActionCommon widget that displays the current action description.' =>
+            '',
+        'TicketActionCommon widget that displays ticket information.' => '',
+        'TicketActionCommon widget that displays customer information.' =>
+            '',
         'Required permissions to use the ticket phone outbound screen in the agent interface.' =>
             '에이전트 인터페이스에서 티켓 전화 아웃 바운드 화면을 사용하는 데 필요한 권한입니다.',
         'Defines if a ticket lock is required in the ticket phone outbound screen of the agent interface (if the ticket isn\'t locked yet, the ticket gets locked and the current agent will be set automatically as its owner).' =>
@@ -6851,6 +6840,8 @@ sub Data {
             '에이전트 인터페이스의 티켓 전화 아웃바운드 화면에서 전화 티켓의 기본 제목을 정의합니다.',
         'Defines the default note body text for phone tickets in the ticket phone outbound screen of the agent interface.' =>
             '에이전트 인터페이스의 티켓 전화 아웃바운드 화면에서 전화 티켓의 기본 노트 본문 텍스트를 정의합니다.',
+        'Sets the state of a ticket in screen of the agent interface.' =>
+            '',
         'Defines the default ticket next state after adding a phone note in the ticket phone outbound screen of the agent interface.' =>
             '에이전트 인터페이스의 티켓 폰 아웃바운드 화면에 전화 메모를 추가한 후 기본 티켓 다음 상태를 정의합니다.',
         'Next possible ticket states after adding a phone note in the ticket phone outbound screen of the agent interface.' =>
@@ -8901,6 +8892,7 @@ Thanks for your help!
             '',
         'Creates a unit test file for this ticket.' => '',
         'Croatian' => '크로아티아 사람',
+        'Current action description.' => '',
         'Customer Administration' => '고객 관리',
         'Customer Companies' => '고객사',
         'Customer IDs' => '고객 ID',
@@ -9359,11 +9351,13 @@ Thanks for your help!
         'Ticket Priority.' => '티켓 심각도',
         'Ticket Queue Overview' => '티켓 대기열 개요',
         'Ticket Responsible.' => '책임 티켓.',
+        'Ticket Settings' => '티켓 설정',
         'Ticket Watcher' => '티켓 워처',
         'Ticket Zoom' => '티켓 확대/축소',
         'Ticket Zoom.' => '티켓 확대/축소.',
         'Ticket bulk module.' => '티켓 벌크 모듈.',
         'Ticket creation' => '',
+        'Ticket information' => '',
         'Ticket limit per page for Ticket Overview "Medium".' => '티켓 개요 "보통"에 대한 페이지 당 티켓 한도.',
         'Ticket limit per page for Ticket Overview "Preview".' => '티켓 개요 "미리보기"에 대한 페이지 당 티켓 한도.',
         'Ticket limit per page for Ticket Overview "Small".' => '티켓 개요 "Small"에 대한 페이지 당 티켓 한도.',

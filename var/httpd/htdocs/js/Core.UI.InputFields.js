@@ -1266,6 +1266,7 @@ Core.UI.InputFields = (function (TargetNS) {
                     .attr('type', 'text')
                     .attr('role', 'search')
                     .attr('autocomplete', 'off')
+                    .attr('placeholder', $SelectObj.attr('placeholder'))
                     .after('<i class="fa fa-caret-down"></i>');
 
                 // If original field has class small, add it to the input field, too

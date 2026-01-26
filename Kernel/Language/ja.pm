@@ -30,7 +30,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y/%m/%d';
     $Self->{DateInputFormat}     = '%Y/%m/%d';
     $Self->{DateInputFormatLong} = '%Y/%m/%d - %T';
-    $Self->{Completeness}        = 0.660277910876857;
+    $Self->{Completeness}        = 0.659149072296865;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2647,56 +2647,53 @@ sub Data {
             'このレポートには構成エラーがあり、現在は使用できません。',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
-        'Change Free Text of %s%s%s' => '%s%s%sのフリーテキストを変更',
-        'Change Owner of %s%s%s' => '%s%s%sの所有者を変更',
-        'Close %s%s%s' => '%s%s%sを閉じる',
-        'Add Note to %s%s%s' => '%s%s%sにメモを追加',
-        'Set Pending Time for %s%s%s' => '%s%s%sの保留時間を設定',
-        'Change Priority of %s%s%s' => '%s%s%sの優先度を変更',
-        'Change Responsible of %s%s%s' => '%s%s%sの責任者を変更',
         'The ticket has been locked' => 'チケットはロック済です',
-        'Ticket Settings' => 'チケット設定',
+        'Unlock and close popup' => '',
         'Customer user' => '顧客ユーザー',
         'Service invalid.' => '無効なサービスです',
-        'SLA invalid.' => 'SLAが無効です。',
         'Team Data' => '',
         'Queue invalid.' => '無効なキューです。',
-        'New Owner' => '新しい所有者',
         'Please set a new owner!' => '新規所有者を設定してください。',
         'Owner invalid.' => '所有者が無効です。',
-        'New Responsible' => '新しい責任者',
         'Please set a new responsible!' => '新しい責任者を設定して下さい！',
         'Responsible invalid.' => '責任者が無効です。',
         'Ticket Data' => '',
-        'Next state' => 'ステータス',
         'State invalid.' => 'ステータスが無効です。',
         'For all pending* states.' => '全ての保留ステータスに対して有効',
-        'Dynamic Info' => '',
-        'Add Article' => '記事を追加',
+        'Communications' => '',
         'Inform' => '',
         'Inform agents' => '担当者に通知する',
         'Inform involved agents' => '関係する担当者に通知する',
         'Here you can select additional agents which should receive a notification regarding the new article.' =>
             'ここでは、新しい記事に関する通知を受け取るべき担当者をを選択することができます。',
         'Text will also be received by' => 'このテキストは、次の方も閲覧可能です',
-        'Communications' => '',
         'Create an Article' => '記事を作成',
         'Setting a template will overwrite any text or attachment.' => 'テンプレートを設定すると作成中の本文または添付ファイルは上書きされます。',
+        'Article' => '記事',
+        'Undo & close' => '元に戻して閉じる',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
+        'Archive' => 'アーカイブ',
+        'This ticket is archived.' => 'このチケットはアーカイブされています。',
+        'is invalid' => '',
+        'Pending till' => '保留時間',
+        'Locked' => 'ロック状態',
+        'First Response Time' => '初回応答期限',
+        'Update Time' => '更新期限',
+        'Solution Time' => '解決期限',
+        'Accounted time' => '作業時間',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBounce.tt
-        'Bounce %s%s%s' => '%s%s%sをバウンス',
-        'cancel' => '',
         'Bounce to' => 'バウンスto',
         'You need a email address.' => 'メールアドレスが必要です',
         'Need a valid email address or don\'t use a local email address.' =>
             '有効なメールアドレスを使用するか、ローカルなメールアドレスを使用しないでください。',
-        'Next ticket state' => 'ステータス',
         'Inform sender' => '送信者に知らせる',
-        'Send mail' => 'メール送信！',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBulk.tt
         'Ticket Bulk Action' => 'チケット一括処理',
         'Send Email' => 'Eメールの送信',
+        'Next state' => 'ステータス',
         'Merge' => '結合',
         'Merge to' => 'これと結合',
         'Invalid ticket identifier!' => '無効なチケット識別子です。',
@@ -2721,7 +2718,7 @@ sub Data {
         'This address is registered as system address and cannot be used: %s' =>
             '',
         'Bcc' => 'Bcc',
-        'Undo & close' => '元に戻して閉じる',
+        'Send mail' => 'メール送信！',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCustomer.tt
         'Change Customer of %s%s%s' => '%s%s%sの顧客を変更',
@@ -2733,9 +2730,6 @@ sub Data {
         'Please include at least one customer user for the ticket.' => '',
         'From queue' => 'キューから',
         'Get all' => '全てを取得',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailOutbound.tt
-        'Undo & Close' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
         'Resend Email for %s%s%s' => '%s%s%sのメールを再送信',
@@ -2762,10 +2756,8 @@ sub Data {
         'Filter for history items' => '履歴アイテムをフィルター',
         'Expand/Collapse all' => '',
         'CreateTime' => '作成日時',
-        'Article' => '記事',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketMerge.tt
-        'Merge %s%s%s' => '%s%s%sをマージ',
         'Merge Settings' => 'マージ設定',
         'Try typing part of the ticket number or title in order to search by it.' =>
             '',
@@ -2776,13 +2768,11 @@ sub Data {
         'Need a valid email address.' => '有効なメールアドレスが必要です。',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketMove.tt
-        'Move %s%s%s' => '%s%s%sを移転',
         'New Queue' => '新規キュー',
-        'Communication' => 'コミュニケーション',
+        'New Owner' => '新しい所有者',
         'Move' => '移転',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketNoteToLinkedTicket.tt
-        'Add note to linked %s%s%s' => '',
         'Notes' => '',
         'Note to linked Ticket' => '',
         'LinkList invalid.' => '',
@@ -2796,9 +2786,6 @@ sub Data {
         'Sender' => '送信者',
         'Customer User Name' => '顧客ユーザー名',
         'Impact' => '影響度',
-        'Update Time' => '更新期限',
-        'Solution Time' => '解決期限',
-        'First Response Time' => '初回応答期限',
         'Move ticket to a different queue' => '別のキューへチケットを移転',
         'Change queue' => 'キュー変更',
 
@@ -2821,6 +2808,9 @@ sub Data {
         'Create New Phone Ticket' => '新規電話チケットの作成',
         'Please include at least one customer for the ticket.' => 'チケットには少なくとも1名のお客様を含めるようにして下さい。',
         'To queue' => 'キュー',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPhoneCommon.tt
+        'Communication' => 'コミュニケーション',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPlain.tt
         'View Email Plain Text for %s%s%s' => '%s%s%sの電子メールを表示',
@@ -2924,14 +2914,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/MentionsTable.tt
         'Mentions' => '',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/TicketInformation.tt
-        'Archive' => 'アーカイブ',
-        'This ticket is archived.' => 'このチケットはアーカイブされています。',
-        'is invalid' => '',
-        'Pending till' => '保留時間',
-        'Locked' => 'ロック状態',
-        'Accounted time' => '作業時間',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/ArticleContent/Invalid.tt
         'Preview of this article is not possible because %s channel is missing in the system.' =>
@@ -4478,6 +4460,7 @@ sub Data {
             '',
         'Pending Date' => '保留期間',
         'for pending* states' => 'ステータス:保留にする',
+        'Next ticket state' => 'ステータス',
         'ActivityDialogEntityID missing!' => 'ActivityDialogEntityID が入力されていません！',
         'Couldn\'t get Config for ActivityDialogEntityID "%s"!' => '',
         'Couldn\'t use CustomerID as an invisible field.' => '非表示フィールドとして顧客IDを使用できませんでした。',
@@ -4953,6 +4936,9 @@ sub Data {
         'Unable to load %s!' => '%sを読み込めません！',
         'Content' => '内容',
 
+        # Perl Module: Kernel/Output/HTML/TicketActionCommon/TicketInformation.pm
+        'Ticket Information' => 'チケット情報',
+
         # Perl Module: Kernel/Output/HTML/TicketMenu/Lock.pm
         'Unlock to give it back to the queue' => 'キューに戻すためチケットをロック解除',
         'Lock it to work on it' => '作業するためチケットをロック',
@@ -4964,9 +4950,6 @@ sub Data {
 
         # Perl Module: Kernel/Output/HTML/TicketOverviewMenu/Sort.pm
         'Order by' => '順序',
-
-        # Perl Module: Kernel/Output/HTML/TicketZoom/TicketInformation.pm
-        'Ticket Information' => 'チケット情報',
 
         # Perl Module: Kernel/Output/HTML/ToolBar/TicketLocked.pm
         'Locked Tickets New' => 'ロック済チケット新規',
@@ -6794,6 +6777,7 @@ sub Data {
             '担当者インタフェースの監視（watch）ビューで、チケット・ソートのためのデフォルトのチケット属性を定義します。',
         'Defines the default ticket order in the watch view of the agent interface. Up: oldest on top. Down: latest on top.' =>
             '担当者インタフェースの監視（watch）ビューで、デフォルトのチケットの順番を定義します。Up: 一番古いものがトップ. Down: 最新のものがトップ。',
+        'Displayed in the sidebar as additional information.' => '',
         'Required permissions to use the ticket free text screen in the agent interface.' =>
             '担当者インタフェースで、チケット・フリー・テキスト画面を使用する為の必要な許可です。',
         'Defines if a ticket lock is required in the ticket free text screen of the agent interface (if the ticket isn\'t locked yet, the ticket gets locked and the current agent will be set automatically as its owner).' =>
@@ -6848,6 +6832,11 @@ sub Data {
             'チケット履歴で使用される。、チケット・フリー・テキスト画面のアクションに関して履歴タイプを定義します。',
         'Defines the history comment for the ticket free text screen action, which gets used for ticket history.' =>
             'チケット履歴で使用される、チケット・フリー・テキスト画面のアクションに関する履歴コメントを定義します。',
+        'TicketActionCommon widget that displays the current action description.' =>
+            '',
+        'TicketActionCommon widget that displays ticket information.' => '',
+        'TicketActionCommon widget that displays customer information.' =>
+            '',
         'Required permissions to use the ticket phone outbound screen in the agent interface.' =>
             '担当者インタフェースで、チケット電話アウトバウンド画面を使用するための必要な許可です。',
         'Defines if a ticket lock is required in the ticket phone outbound screen of the agent interface (if the ticket isn\'t locked yet, the ticket gets locked and the current agent will be set automatically as its owner).' =>
@@ -6858,6 +6847,8 @@ sub Data {
             '担当者インタフェースのチケット電話アウトバウンド画面で、電話チケットのためのデフォルトの件名を定義します。',
         'Defines the default note body text for phone tickets in the ticket phone outbound screen of the agent interface.' =>
             '担当者インタフェースのチケット電話アウトバウンド画面で、電話チケットのためのデフォルトのメモ本文テキストを定義します。',
+        'Sets the state of a ticket in screen of the agent interface.' =>
+            '',
         'Defines the default ticket next state after adding a phone note in the ticket phone outbound screen of the agent interface.' =>
             '担当者インタフェースの電話応答発信画面で、電話メモを追加した後のチケットのデフォルトの次の状態を定義します。',
         'Next possible ticket states after adding a phone note in the ticket phone outbound screen of the agent interface.' =>
@@ -8915,6 +8906,7 @@ Thanks for your help!
             '',
         'Creates a unit test file for this ticket.' => '',
         'Croatian' => 'クロアチア',
+        'Current action description.' => '',
         'Customer Administration' => '顧客管理',
         'Customer Companies' => '顧客企業',
         'Customer IDs' => '顧客ID',
@@ -9374,11 +9366,13 @@ Thanks for your help!
         'Ticket Priority.' => 'チケットの優先度',
         'Ticket Queue Overview' => 'チケット・キュー一覧',
         'Ticket Responsible.' => 'チケット責任者',
+        'Ticket Settings' => 'チケット設定',
         'Ticket Watcher' => 'チケット監視者',
         'Ticket Zoom' => 'チケットのズーム',
         'Ticket Zoom.' => 'チケット・ズーム',
         'Ticket bulk module.' => 'チケットの一括モジュール',
         'Ticket creation' => '',
+        'Ticket information' => '',
         'Ticket limit per page for Ticket Overview "Medium".' => '',
         'Ticket limit per page for Ticket Overview "Preview".' => '',
         'Ticket limit per page for Ticket Overview "Small".' => '',

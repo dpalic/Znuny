@@ -12,12 +12,12 @@ did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-@media (max-width: 1199px) {
+@media (max-width: 575px) {
   .modFormSubmitArea > .inner .formSubmitArea {
     grid-template-columns: 1fr;
   }
 }
-@media (max-width: 1199px) {
+@media (max-width: 575px) {
   .modFormSubmitArea > .inner .formSubmitArea .formSubmitAreaCancel a.btn-main, .modFormSubmitArea > .inner .formSubmitArea .formSubmitAreaCancel button.btn-main, .modFormSubmitArea > .inner .formSubmitArea .formSubmitAreaCancel button.btn-cancel-ghost {
     width: 100%;
     margin-bottom: 10px;
@@ -33,7 +33,7 @@ did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
 .modFormSubmitArea > .inner .formSubmitArea .formSubmitAreaSubmit button {
   margin-left: 10px;
 }
-@media (max-width: 1199px) {
+@media (max-width: 575px) {
   .modFormSubmitArea > .inner .formSubmitArea .formSubmitAreaSubmit {
     display: flex;
     justify-content: center;

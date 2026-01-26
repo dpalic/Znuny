@@ -27,7 +27,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%m/%d/%Y';
     $Self->{DateInputFormat}     = '%m/%d/%Y';
     $Self->{DateInputFormatLong} = '%m/%d/%Y - %T';
-    $Self->{Completeness}        = 0.420380130969494;
+    $Self->{Completeness}        = 0.419065898912348;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -2642,56 +2642,53 @@ sub Data {
             'Ця статистика містить помилки налаштування та наразі не може використовуватись.',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
-        'Change Free Text of %s%s%s' => 'Змінити Вільний Текст ',
-        'Change Owner of %s%s%s' => 'Зміна Власника: %s%s%s',
-        'Close %s%s%s' => 'Закрити %s%s%s',
-        'Add Note to %s%s%s' => 'Додати замітку до %s%s%s',
-        'Set Pending Time for %s%s%s' => 'Встановити Відкладений Час для ',
-        'Change Priority of %s%s%s' => 'Змінити Пріоритет ',
-        'Change Responsible of %s%s%s' => 'Змінити Відповідального',
         'The ticket has been locked' => 'Заявка заблокована',
-        'Ticket Settings' => 'Настроювання заявок',
+        'Unlock and close popup' => '',
         'Customer user' => 'Користувач клієнта',
         'Service invalid.' => 'Служба недійсна.',
-        'SLA invalid.' => '',
         'Team Data' => '',
         'Queue invalid.' => '',
-        'New Owner' => 'Новий власник',
         'Please set a new owner!' => 'Будь ласка вкажіть нового власника!',
         'Owner invalid.' => '',
-        'New Responsible' => 'Новий Відповідальний',
         'Please set a new responsible!' => '',
         'Responsible invalid.' => '',
         'Ticket Data' => '',
-        'Next state' => 'Наступний стан',
         'State invalid.' => '',
         'For all pending* states.' => 'Для всіх станів, що очкують*.',
-        'Dynamic Info' => '',
-        'Add Article' => 'Додати замітку',
+        'Communications' => '',
         'Inform' => '',
         'Inform agents' => 'Інформувати агентів',
         'Inform involved agents' => 'Інформувати залучених агентів',
         'Here you can select additional agents which should receive a notification regarding the new article.' =>
             'Тут ви можете вибрати додаткових агентів, що мають отримувати повідомлення стосовно нової статті.',
         'Text will also be received by' => 'Текст буде також отриманий',
-        'Communications' => '',
         'Create an Article' => 'Створити Статтю',
         'Setting a template will overwrite any text or attachment.' => 'Налаштування шаблону перепише будь-який текст або вкладення.',
+        'Article' => 'Повідомлення',
+        'Undo & close' => 'Скасувати та закрити',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
+        'Archive' => 'Архів',
+        'This ticket is archived.' => 'Цей квиток архивований',
+        'is invalid' => '',
+        'Pending till' => 'В очікуванні до',
+        'Locked' => 'Блокування',
+        'First Response Time' => 'Час до першої відповіді',
+        'Update Time' => 'Час до зміни заявки',
+        'Solution Time' => 'Час розв\'язку заявки',
+        'Accounted time' => 'Витрачене на заявку час',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBounce.tt
-        'Bounce %s%s%s' => 'Повернути %s%s%s',
-        'cancel' => '',
         'Bounce to' => 'Повернути до',
         'You need a email address.' => 'Вам потрібна адреса електронної пошти.',
         'Need a valid email address or don\'t use a local email address.' =>
             'Потрібна дійсна адреса електронної пошти або не використовуйте локальну адресу електронної пошти.',
-        'Next ticket state' => 'Наступний стан заявки',
         'Inform sender' => 'Інформувати відправника',
-        'Send mail' => 'Відправити лист',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBulk.tt
         'Ticket Bulk Action' => 'Масова дія',
         'Send Email' => 'Відправити лист',
+        'Next state' => 'Наступний стан',
         'Merge' => 'Об\'єднати',
         'Merge to' => 'Об\'єднати с',
         'Invalid ticket identifier!' => 'Недійсний ідентифікатор квитка!',
@@ -2716,7 +2713,7 @@ sub Data {
         'This address is registered as system address and cannot be used: %s' =>
             'Ця адреса зареєстрована як системна та не може бути використана: %s',
         'Bcc' => 'Прихована копія',
-        'Undo & close' => 'Скасувати та закрити',
+        'Send mail' => 'Відправити лист',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCustomer.tt
         'Change Customer of %s%s%s' => 'Зміна Клаєнта: %s%s%s',
@@ -2728,9 +2725,6 @@ sub Data {
         'Please include at least one customer user for the ticket.' => 'Будь ласка, додайте хоча б одного користувача-клієнта для квитка.',
         'From queue' => ' Із черги',
         'Get all' => 'Отримати всі',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailOutbound.tt
-        'Undo & Close' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
         'Resend Email for %s%s%s' => '',
@@ -2757,10 +2751,8 @@ sub Data {
         'Filter for history items' => '',
         'Expand/Collapse all' => '',
         'CreateTime' => '',
-        'Article' => 'Повідомлення',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketMerge.tt
-        'Merge %s%s%s' => 'Об\'єднати %s%s%s',
         'Merge Settings' => 'Об\'єднати Налаштування',
         'Try typing part of the ticket number or title in order to search by it.' =>
             '',
@@ -2771,13 +2763,11 @@ sub Data {
         'Need a valid email address.' => ' Потрібно вірну поштову адресу.',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketMove.tt
-        'Move %s%s%s' => 'Перемістити %s%s%s',
         'New Queue' => 'Нова черга',
-        'Communication' => '',
+        'New Owner' => 'Новий власник',
         'Move' => 'Перемістити',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketNoteToLinkedTicket.tt
-        'Add note to linked %s%s%s' => '',
         'Notes' => '',
         'Note to linked Ticket' => '',
         'LinkList invalid.' => '',
@@ -2791,9 +2781,6 @@ sub Data {
         'Sender' => 'Відправник',
         'Customer User Name' => '',
         'Impact' => '',
-        'Update Time' => 'Час до зміни заявки',
-        'Solution Time' => 'Час розв\'язку заявки',
-        'First Response Time' => 'Час до першої відповіді',
         'Move ticket to a different queue' => 'Перемістити заявку в іншу чергу',
         'Change queue' => 'Перемістити в іншу чергу',
 
@@ -2816,6 +2803,9 @@ sub Data {
         'Create New Phone Ticket' => 'Заявка по телефону',
         'Please include at least one customer for the ticket.' => 'Будь ласка, вкажіть хоча б одного клієнта для квитка.',
         'To queue' => 'У чергу',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPhoneCommon.tt
+        'Communication' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPlain.tt
         'View Email Plain Text for %s%s%s' => 'Переглянути простий текст електронного повідомлення для %s%s%s',
@@ -2919,14 +2909,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/MentionsTable.tt
         'Mentions' => '',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/TicketInformation.tt
-        'Archive' => 'Архів',
-        'This ticket is archived.' => 'Цей квиток архивований',
-        'is invalid' => '',
-        'Pending till' => 'В очікуванні до',
-        'Locked' => 'Блокування',
-        'Accounted time' => 'Витрачене на заявку час',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/ArticleContent/Invalid.tt
         'Preview of this article is not possible because %s channel is missing in the system.' =>
@@ -4472,6 +4454,7 @@ sub Data {
             'Час очікування може бути використаний якщо Стан, або StateID налаштовані на такий самий Діалог Активності. Діалог Активності: %s!',
         'Pending Date' => 'Наступна дата',
         'for pending* states' => ' для наступних станів* ',
+        'Next ticket state' => 'Наступний стан заявки',
         'ActivityDialogEntityID missing!' => 'Пропущено ActivityDialogEntityID!',
         'Couldn\'t get Config for ActivityDialogEntityID "%s"!' => 'Неможливо отримати налаштування для ',
         'Couldn\'t use CustomerID as an invisible field.' => 'Неможливо використати CustomerID у якості невидимого поля.',
@@ -4947,6 +4930,9 @@ sub Data {
         'Unable to load %s!' => '',
         'Content' => 'Зміст',
 
+        # Perl Module: Kernel/Output/HTML/TicketActionCommon/TicketInformation.pm
+        'Ticket Information' => 'Інформація про заявку',
+
         # Perl Module: Kernel/Output/HTML/TicketMenu/Lock.pm
         'Unlock to give it back to the queue' => 'Розблокувати, щоб повернути у чергу',
         'Lock it to work on it' => 'Заблокувати, щоб працювати над цим',
@@ -4958,9 +4944,6 @@ sub Data {
 
         # Perl Module: Kernel/Output/HTML/TicketOverviewMenu/Sort.pm
         'Order by' => 'Сортування',
-
-        # Perl Module: Kernel/Output/HTML/TicketZoom/TicketInformation.pm
-        'Ticket Information' => 'Інформація про заявку',
 
         # Perl Module: Kernel/Output/HTML/ToolBar/TicketLocked.pm
         'Locked Tickets New' => 'Блоковані заявки нові',
@@ -6788,6 +6771,7 @@ sub Data {
             '',
         'Defines the default ticket order in the watch view of the agent interface. Up: oldest on top. Down: latest on top.' =>
             '',
+        'Displayed in the sidebar as additional information.' => '',
         'Required permissions to use the ticket free text screen in the agent interface.' =>
             '',
         'Defines if a ticket lock is required in the ticket free text screen of the agent interface (if the ticket isn\'t locked yet, the ticket gets locked and the current agent will be set automatically as its owner).' =>
@@ -6842,6 +6826,11 @@ sub Data {
             '',
         'Defines the history comment for the ticket free text screen action, which gets used for ticket history.' =>
             '',
+        'TicketActionCommon widget that displays the current action description.' =>
+            '',
+        'TicketActionCommon widget that displays ticket information.' => '',
+        'TicketActionCommon widget that displays customer information.' =>
+            '',
         'Required permissions to use the ticket phone outbound screen in the agent interface.' =>
             '',
         'Defines if a ticket lock is required in the ticket phone outbound screen of the agent interface (if the ticket isn\'t locked yet, the ticket gets locked and the current agent will be set automatically as its owner).' =>
@@ -6851,6 +6840,8 @@ sub Data {
         'Defines the default subject for phone tickets in the ticket phone outbound screen of the agent interface.' =>
             '',
         'Defines the default note body text for phone tickets in the ticket phone outbound screen of the agent interface.' =>
+            '',
+        'Sets the state of a ticket in screen of the agent interface.' =>
             '',
         'Defines the default ticket next state after adding a phone note in the ticket phone outbound screen of the agent interface.' =>
             '',
@@ -8891,6 +8882,7 @@ Thanks for your help!
             '',
         'Creates a unit test file for this ticket.' => '',
         'Croatian' => '',
+        'Current action description.' => '',
         'Customer Administration' => '',
         'Customer Companies' => 'Компанії клієнта',
         'Customer IDs' => '',
@@ -9349,11 +9341,13 @@ Thanks for your help!
         'Ticket Priority.' => '',
         'Ticket Queue Overview' => '',
         'Ticket Responsible.' => '',
+        'Ticket Settings' => 'Настроювання заявок',
         'Ticket Watcher' => '',
         'Ticket Zoom' => '',
         'Ticket Zoom.' => '',
         'Ticket bulk module.' => '',
         'Ticket creation' => '',
+        'Ticket information' => '',
         'Ticket limit per page for Ticket Overview "Medium".' => '',
         'Ticket limit per page for Ticket Overview "Preview".' => '',
         'Ticket limit per page for Ticket Overview "Small".' => '',

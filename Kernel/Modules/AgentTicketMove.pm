@@ -927,6 +927,13 @@ sub Run {
                             TicketID => $Self->{TicketID}
                         },
                     );
+                    $LayoutObject->Block(
+                        Name => 'PropertiesLockNotify',
+                        Data => {
+                            %Param,
+                            TicketID => $Self->{TicketID},
+                        },
+                    );
                     $TicketUnlock = 1;
                 }
             }
@@ -1530,7 +1537,7 @@ sub AgentMove {
 
     if ( $Config->{Note} ) {
 
-        $Param{WidgetStatus} = 'Collapsed';
+        $Param{CardStatus} = 'cardClosed';
 
         if (
             $Config->{NoteMandatory}
@@ -1539,7 +1546,7 @@ sub AgentMove {
             || $Param{CreateArticle}
             )
         {
-            $Param{WidgetStatus} = 'Expanded';
+            $Param{CardStatus} = '';
         }
 
         if (

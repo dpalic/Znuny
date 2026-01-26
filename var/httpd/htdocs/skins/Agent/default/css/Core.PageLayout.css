@@ -1370,11 +1370,6 @@ did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.
         min-width: 100%;
     }
 
-    .RealPopup .SaveButtons,
-    .LayoutPopup .SaveButtons {
-        border-top: var(--border-width) var(--border-solid) var(--border-color);
-    }
-
     .AdminManagement .ImportExport .SaveButtons {
         padding: 0;
     }

@@ -16,12 +16,12 @@ did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
       display: grid;
       grid-template-columns: 1fr 1fr;
 
-      @include respond-below(lg) {
+      @include respond-below(xs) {
         grid-template-columns: 1fr;
       }
 
       .formSubmitAreaCancel {
-        @include respond-below(lg) {
+        @include respond-below(xs) {
           a.btn-main, button.btn-main, button.btn-cancel-ghost {
             width: 100%;
             margin-bottom: 10px;
@@ -40,7 +40,7 @@ did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
           margin-left: 10px;
         }
 
-        @include respond-below(lg) {
+        @include respond-below(xs) {
           display: flex;
           justify-content: center;
           align-items: center;

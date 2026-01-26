@@ -676,6 +676,7 @@ thead .headerSortDown a {
 
 .TicketList {
     overflow: auto;
+    border-radius: var(--border-radius-sm);
 }
 
 .TicketList table {

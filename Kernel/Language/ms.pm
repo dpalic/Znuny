@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d.%m.%Y';
     $Self->{DateInputFormat}     = '%d.%m.%Y';
     $Self->{DateInputFormatLong} = '%d.%m.%Y - %T';
-    $Self->{Completeness}        = 0.519086407922057;
+    $Self->{Completeness}        = 0.517914267434421;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2641,56 +2641,53 @@ sub Data {
             'Statistik ini mengandungi ralat konfigurasi dan tidak boleh digunakan pada masa sekarang.',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
-        'Change Free Text of %s%s%s' => 'Tukar Teks Percuma bagi %s%s%s',
-        'Change Owner of %s%s%s' => 'Tukar Pemilik bagi %s%s%s',
-        'Close %s%s%s' => 'Tutup %s%s%s',
-        'Add Note to %s%s%s' => 'Tambah Nota pada %s%s%s',
-        'Set Pending Time for %s%s%s' => 'Tentukan Waktu Sementara bagi %s%s%s',
-        'Change Priority of %s%s%s' => 'Tukar Kewajipan bagi %s%s%s',
-        'Change Responsible of %s%s%s' => ' ',
         'The ticket has been locked' => 'Tiket telah dikunci',
-        'Ticket Settings' => 'Aturan Tiket',
+        'Unlock and close popup' => '',
         'Customer user' => 'Pengguna pelanggan',
         'Service invalid.' => 'Perkhidmatan tidak sah.',
-        'SLA invalid.' => '',
         'Team Data' => '',
         'Queue invalid.' => '',
-        'New Owner' => 'Pemilik baru',
         'Please set a new owner!' => 'Sila tetapkan pemilik baru!',
         'Owner invalid.' => '',
-        'New Responsible' => 'Tanggungjawab baharu',
         'Please set a new responsible!' => '',
         'Responsible invalid.' => '',
         'Ticket Data' => '',
-        'Next state' => 'Keadaan seterusnya',
         'State invalid.' => '',
         'For all pending* states.' => 'Untuk semua keadaan tergantung*.',
-        'Dynamic Info' => '',
-        'Add Article' => 'Tambah Artikel',
+        'Communications' => '',
         'Inform' => '',
         'Inform agents' => 'Memaklumkan agen',
         'Inform involved agents' => 'Beritahu ejen terlibat',
         'Here you can select additional agents which should receive a notification regarding the new article.' =>
             'Di sini anda boleh memilih ejen tambahan yang sepatutnya menerima pemberitahuan mengenai artikel baru.',
         'Text will also be received by' => 'Teks juga akan diterima oleh',
-        'Communications' => '',
         'Create an Article' => 'Cipta Artikel',
         'Setting a template will overwrite any text or attachment.' => 'Menetapkan templat akan menulis ganti sebarang teks atau lampiran.',
+        'Article' => 'Artikel',
+        'Undo & close' => 'Buat semula & tutup',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
+        'Archive' => 'Arkib',
+        'This ticket is archived.' => 'Sistem ini diarkibkan.',
+        'is invalid' => '',
+        'Pending till' => 'Menunggu sehingga',
+        'Locked' => 'Terkunci',
+        'First Response Time' => 'Masa respon pertama',
+        'Update Time' => 'Masa Kemas Kini',
+        'Solution Time' => 'Masa Penyelasaian',
+        'Accounted time' => 'Masa yang diperuntukan',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBounce.tt
-        'Bounce %s%s%s' => 'Lantunan %s%s%s',
-        'cancel' => '',
         'Bounce to' => 'Bounce kepada',
         'You need a email address.' => 'Anda perlu alamat e-mel.',
         'Need a valid email address or don\'t use a local email address.' =>
             'Perlu alamat emel yang sah atau jangan menggunakan alamat emel tempatan.',
-        'Next ticket state' => 'Status tiket seterusnya',
         'Inform sender' => 'Memaklumkan penghantar',
-        'Send mail' => 'Hantar mel!',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBulk.tt
         'Ticket Bulk Action' => 'Tindakan Pukal Tiket',
         'Send Email' => 'Hantar Emel',
+        'Next state' => 'Keadaan seterusnya',
         'Merge' => 'Bergabung',
         'Merge to' => 'Gabung dengan',
         'Invalid ticket identifier!' => 'Pengecam tiket tidak sah!',
@@ -2715,7 +2712,7 @@ sub Data {
         'This address is registered as system address and cannot be used: %s' =>
             'Alamat ini didaftarkan sebagai alamat sistem dan tidak boleh digunakan: %s',
         'Bcc' => 'Bcc',
-        'Undo & close' => 'Buat semula & tutup',
+        'Send mail' => 'Hantar mel!',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCustomer.tt
         'Change Customer of %s%s%s' => 'Tukar Pelanggan bagi %s%s%s',
@@ -2727,9 +2724,6 @@ sub Data {
         'Please include at least one customer user for the ticket.' => 'Sila masukkan sekurang-kurangnya satu pengguna pelanggan bagi tiket.',
         'From queue' => 'Dari barisan.',
         'Get all' => 'Dapatkan semua.',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailOutbound.tt
-        'Undo & Close' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
         'Resend Email for %s%s%s' => '',
@@ -2756,10 +2750,8 @@ sub Data {
         'Filter for history items' => '',
         'Expand/Collapse all' => '',
         'CreateTime' => 'Cipta Masa',
-        'Article' => 'Artikel',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketMerge.tt
-        'Merge %s%s%s' => 'Menggabungkan %s%s%s',
         'Merge Settings' => 'Gabung Aturan',
         'Try typing part of the ticket number or title in order to search by it.' =>
             '',
@@ -2770,13 +2762,11 @@ sub Data {
         'Need a valid email address.' => 'Memerlukan alamat emel yang sah.',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketMove.tt
-        'Move %s%s%s' => 'Menggerakkan %s%s%s',
         'New Queue' => 'Barisan baru',
-        'Communication' => 'Komunikasi',
+        'New Owner' => 'Pemilik baru',
         'Move' => 'Gerak',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketNoteToLinkedTicket.tt
-        'Add note to linked %s%s%s' => '',
         'Notes' => '',
         'Note to linked Ticket' => '',
         'LinkList invalid.' => '',
@@ -2790,9 +2780,6 @@ sub Data {
         'Sender' => 'Penghantar',
         'Customer User Name' => '',
         'Impact' => 'Kesan',
-        'Update Time' => 'Masa Kemas Kini',
-        'Solution Time' => 'Masa Penyelasaian',
-        'First Response Time' => 'Masa respon pertama',
         'Move ticket to a different queue' => 'Pindah tiket ke barisan baru',
         'Change queue' => 'Ubah barisan',
 
@@ -2815,6 +2802,9 @@ sub Data {
         'Create New Phone Ticket' => 'Buat Tiket Telefon Baru.',
         'Please include at least one customer for the ticket.' => 'Sila masukkan sekurang-kurangnya satu pelanggan bagi tiket.',
         'To queue' => 'Kepada barisan',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPhoneCommon.tt
+        'Communication' => 'Komunikasi',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPlain.tt
         'View Email Plain Text for %s%s%s' => '',
@@ -2918,14 +2908,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/MentionsTable.tt
         'Mentions' => '',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/TicketInformation.tt
-        'Archive' => 'Arkib',
-        'This ticket is archived.' => 'Sistem ini diarkibkan.',
-        'is invalid' => '',
-        'Pending till' => 'Menunggu sehingga',
-        'Locked' => 'Terkunci',
-        'Accounted time' => 'Masa yang diperuntukan',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/ArticleContent/Invalid.tt
         'Preview of this article is not possible because %s channel is missing in the system.' =>
@@ -4471,6 +4453,7 @@ sub Data {
             '',
         'Pending Date' => 'Tarikh penangguhan',
         'for pending* states' => 'Untuk status tertangguh',
+        'Next ticket state' => 'Status tiket seterusnya',
         'ActivityDialogEntityID missing!' => '',
         'Couldn\'t get Config for ActivityDialogEntityID "%s"!' => '',
         'Couldn\'t use CustomerID as an invisible field.' => '',
@@ -4946,6 +4929,9 @@ sub Data {
         'Unable to load %s!' => '',
         'Content' => 'kandungan',
 
+        # Perl Module: Kernel/Output/HTML/TicketActionCommon/TicketInformation.pm
+        'Ticket Information' => 'Informasi Tiket',
+
         # Perl Module: Kernel/Output/HTML/TicketMenu/Lock.pm
         'Unlock to give it back to the queue' => 'Buka untuk diberi semula pada barisan',
         'Lock it to work on it' => 'Kunci ia untuk digunakan ia',
@@ -4957,9 +4943,6 @@ sub Data {
 
         # Perl Module: Kernel/Output/HTML/TicketOverviewMenu/Sort.pm
         'Order by' => 'Disusun mengikut',
-
-        # Perl Module: Kernel/Output/HTML/TicketZoom/TicketInformation.pm
-        'Ticket Information' => 'Informasi Tiket',
 
         # Perl Module: Kernel/Output/HTML/ToolBar/TicketLocked.pm
         'Locked Tickets New' => 'Tiket Baru Dikunci',
@@ -6787,6 +6770,7 @@ sub Data {
             'Mentakrifkan sifat tiket asal untuk aturan tiket dalam paparan pantau dari paparan ejen',
         'Defines the default ticket order in the watch view of the agent interface. Up: oldest on top. Down: latest on top.' =>
             'Mentakrifkan turutan tiket asal dalam paparan pantau dari paparan ejen. Atas: yang lama di atas. Bawah: yang terbaru di atas.',
+        'Displayed in the sidebar as additional information.' => '',
         'Required permissions to use the ticket free text screen in the agent interface.' =>
             'Memerlukan kebenaran untuk menggunakan skrin tiket bebas teks dalam paparan ejen.',
         'Defines if a ticket lock is required in the ticket free text screen of the agent interface (if the ticket isn\'t locked yet, the ticket gets locked and the current agent will be set automatically as its owner).' =>
@@ -6841,6 +6825,11 @@ sub Data {
             'Mentakrifkan jenis sejarah untuk tindakan skrin tiket bebas teks, yang dapat digunakan untuk sejarah tiket di dalam paparan ejen.',
         'Defines the history comment for the ticket free text screen action, which gets used for ticket history.' =>
             'Mentakrifkan sejarah komen untuk tindakan skrin tiket bebas teks, yang dapat digunakan untuk sejarah tiket di dalam paparan ejen.',
+        'TicketActionCommon widget that displays the current action description.' =>
+            '',
+        'TicketActionCommon widget that displays ticket information.' => '',
+        'TicketActionCommon widget that displays customer information.' =>
+            '',
         'Required permissions to use the ticket phone outbound screen in the agent interface.' =>
             'Memerlukan kebenaran untuk menggunakan skrin tiket telefon keluar dalam paparan ejen.',
         'Defines if a ticket lock is required in the ticket phone outbound screen of the agent interface (if the ticket isn\'t locked yet, the ticket gets locked and the current agent will be set automatically as its owner).' =>
@@ -6851,6 +6840,8 @@ sub Data {
             'Mentakrifkan subjek asal untuk tiket telefon dalam skrin tiket telefon keluar dari paparan ejen.',
         'Defines the default note body text for phone tickets in the ticket phone outbound screen of the agent interface.' =>
             'Mentakrifkan teks badan nota asal untuk tiket telefon dalam skrin keluar telefon tiket dari paparan ejen.',
+        'Sets the state of a ticket in screen of the agent interface.' =>
+            '',
         'Defines the default ticket next state after adding a phone note in the ticket phone outbound screen of the agent interface.' =>
             'Mentakrifkan keadaan seterusnya tiket asal selepas menambah nota telefon dalam skrin tiket telefon keluar dari paparan ejen.',
         'Next possible ticket states after adding a phone note in the ticket phone outbound screen of the agent interface.' =>
@@ -8904,6 +8895,7 @@ Kumpulan MejaBantuan Anda
             '',
         'Creates a unit test file for this ticket.' => '',
         'Croatian' => 'Croatia',
+        'Current action description.' => '',
         'Customer Administration' => 'Pentadbiran Pelanggan',
         'Customer Companies' => 'Firma Pelanggan',
         'Customer IDs' => '',
@@ -9362,11 +9354,13 @@ Kumpulan MejaBantuan Anda
         'Ticket Priority.' => '',
         'Ticket Queue Overview' => 'Tinjauan Barisan Tiket',
         'Ticket Responsible.' => '',
+        'Ticket Settings' => 'Aturan Tiket',
         'Ticket Watcher' => '',
         'Ticket Zoom' => '',
         'Ticket Zoom.' => '',
         'Ticket bulk module.' => 'modul pukal tiket',
         'Ticket creation' => '',
+        'Ticket information' => '',
         'Ticket limit per page for Ticket Overview "Medium".' => '',
         'Ticket limit per page for Ticket Overview "Preview".' => '',
         'Ticket limit per page for Ticket Overview "Small".' => '',

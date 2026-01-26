@@ -256,8 +256,10 @@ $Selenium->RunTest(
 
         $HelperObject->ConfigSettingChange(
             Valid => 1,
-            Key   => 'Ticket::Frontend::AgentTicketCustomer::CustomerIDReadOnly',
-            Value => 0
+            Key   => 'Ticket::Frontend::AgentTicketCustomer',
+            Value => {
+                CustomerIDReadOnly => 0,
+            },
         );
 
         # Wait for update.
@@ -308,8 +310,10 @@ $Selenium->RunTest(
         # Return CustomerID read only to default.
         $HelperObject->ConfigSettingChange(
             Valid => 1,
-            Key   => 'Ticket::Frontend::AgentTicketCustomer::CustomerIDReadOnly',
-            Value => 1
+            Key   => 'Ticket::Frontend::AgentTicketCustomer',
+            Value => {
+                CustomerIDReadOnly => 1,
+            },
         );
 
         $Selenium->find_element( "#Submit", 'css' )->click();

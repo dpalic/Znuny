@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d/%m/%Y';
     $Self->{DateInputFormat}     = '%d/%m/%Y';
     $Self->{DateInputFormatLong} = '%d/%m/%Y - %T';
-    $Self->{Completeness}        = 0.585050311451845;
+    $Self->{Completeness}        = 0.583973128598848;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -2643,56 +2643,53 @@ bin/znuny.Daemon.pl status\').',
             'Statistik ini mengandung kesalahan konfigurasi dan dapat saat ini tidak digunakan.',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
-        'Change Free Text of %s%s%s' => 'Ubah teks bebas dari %s%s%s',
-        'Change Owner of %s%s%s' => 'Ubah pemilik dari %s%s%s',
-        'Close %s%s%s' => 'Tutup %s%s%s',
-        'Add Note to %s%s%s' => 'Tambah catatan untuk %s%s%s',
-        'Set Pending Time for %s%s%s' => 'Set Waktu Tertunda untuk %s%s%s',
-        'Change Priority of %s%s%s' => 'Tukar prioritas dari %s%s%s',
-        'Change Responsible of %s%s%s' => 'Ubah tanggung jawab dari %s%s%s',
         'The ticket has been locked' => 'Tiket telah dikunci',
-        'Ticket Settings' => 'Pengaturan email',
+        'Unlock and close popup' => '',
         'Customer user' => 'Pengguna pelanggan',
         'Service invalid.' => 'Layanan tidak sah',
-        'SLA invalid.' => '',
         'Team Data' => '',
         'Queue invalid.' => '',
-        'New Owner' => 'Pemilik baru',
         'Please set a new owner!' => 'Silahkan set sebagain owner baru!',
         'Owner invalid.' => '',
-        'New Responsible' => 'Tanggung jawab baru',
         'Please set a new responsible!' => '',
         'Responsible invalid.' => '',
         'Ticket Data' => '',
-        'Next state' => 'Pilihan berikutnya',
         'State invalid.' => '',
         'For all pending* states.' => 'Untuk semua yang tertunda',
-        'Dynamic Info' => '',
-        'Add Article' => 'Tambahkan artikel',
+        'Communications' => '',
         'Inform' => '',
         'Inform agents' => 'Beritahu agen',
         'Inform involved agents' => 'Beritahu agen yang terlibat',
         'Here you can select additional agents which should receive a notification regarding the new article.' =>
             'Di sini anda dapat memilih agen tambahan yang harus menerima pemberitahuan tentang artikel baru.',
         'Text will also be received by' => 'Teks akan diterima oleh',
-        'Communications' => '',
         'Create an Article' => 'Membuat sebuah artikel',
         'Setting a template will overwrite any text or attachment.' => 'Pengaturan template akan menimpa teks atau lampiran.',
+        'Article' => 'Artikel',
+        'Undo & close' => 'Undur & tutup',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
+        'Archive' => 'Arsip',
+        'This ticket is archived.' => 'Tiket ini diarsipkan',
+        'is invalid' => '',
+        'Pending till' => 'Ditunda hingga',
+        'Locked' => 'Dikunci',
+        'First Response Time' => 'Waktu respon yang pertama',
+        'Update Time' => 'Memperbaru waktu',
+        'Solution Time' => 'Solusi waktu',
+        'Accounted time' => 'Waktu dicatat',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBounce.tt
-        'Bounce %s%s%s' => 'Bounce %s%s%s',
-        'cancel' => '',
         'Bounce to' => 'Melompat',
         'You need a email address.' => 'Anda perlu alamat email',
         'Need a valid email address or don\'t use a local email address.' =>
             'Membutuhkan alamat email yang valid atau tidak menggunakan alamat email lokal.',
-        'Next ticket state' => 'Pilihan tiket berikutnya',
         'Inform sender' => 'Beritahun penghantar',
-        'Send mail' => 'Hantarkan surat',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBulk.tt
         'Ticket Bulk Action' => 'Aksi Tiket Massal ',
         'Send Email' => 'Hantarkan email',
+        'Next state' => 'Pilihan berikutnya',
         'Merge' => 'Gabung',
         'Merge to' => 'Menggabungkan',
         'Invalid ticket identifier!' => 'Identifier tiket tidak valid!',
@@ -2717,7 +2714,7 @@ bin/znuny.Daemon.pl status\').',
         'This address is registered as system address and cannot be used: %s' =>
             'Alamat ini terdaftar sebagai alamat sistem dan tidak bisa digunakan: %s',
         'Bcc' => 'Bcc',
-        'Undo & close' => 'Undur & tutup',
+        'Send mail' => 'Hantarkan surat',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCustomer.tt
         'Change Customer of %s%s%s' => 'Ubah pelanggan dari %s%s%s',
@@ -2729,9 +2726,6 @@ bin/znuny.Daemon.pl status\').',
         'Please include at least one customer user for the ticket.' => 'Tolong sertakan minimal satu pengguna pelanggan untuk tiket',
         'From queue' => 'Dari queue',
         'Get all' => 'Dapatkan semua',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailOutbound.tt
-        'Undo & Close' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
         'Resend Email for %s%s%s' => '',
@@ -2758,10 +2752,8 @@ bin/znuny.Daemon.pl status\').',
         'Filter for history items' => '',
         'Expand/Collapse all' => '',
         'CreateTime' => 'WaktuPembuatan',
-        'Article' => 'Artikel',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketMerge.tt
-        'Merge %s%s%s' => 'Memisahkan %s%s%s',
         'Merge Settings' => 'Atur penggabungan',
         'Try typing part of the ticket number or title in order to search by it.' =>
             '',
@@ -2772,13 +2764,11 @@ bin/znuny.Daemon.pl status\').',
         'Need a valid email address.' => 'Diperlukan alamat email yang sah',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketMove.tt
-        'Move %s%s%s' => 'Pindah %s%s%s',
         'New Queue' => 'Queue baru',
-        'Communication' => 'Komunikasi',
+        'New Owner' => 'Pemilik baru',
         'Move' => 'Pindah',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketNoteToLinkedTicket.tt
-        'Add note to linked %s%s%s' => '',
         'Notes' => '',
         'Note to linked Ticket' => '',
         'LinkList invalid.' => '',
@@ -2792,9 +2782,6 @@ bin/znuny.Daemon.pl status\').',
         'Sender' => 'Pengirim',
         'Customer User Name' => '',
         'Impact' => 'Dampak',
-        'Update Time' => 'Memperbaru waktu',
-        'Solution Time' => 'Solusi waktu',
-        'First Response Time' => 'Waktu respon yang pertama',
         'Move ticket to a different queue' => 'Pindahkan tiket ke queue yang berbeda',
         'Change queue' => 'Ubah queue',
 
@@ -2817,6 +2804,9 @@ bin/znuny.Daemon.pl status\').',
         'Create New Phone Ticket' => 'Menciptakan telepon tiket yang baru',
         'Please include at least one customer for the ticket.' => 'Tolong sertakan minimal satu pelanggan untuk tiket',
         'To queue' => 'Untuk queue',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPhoneCommon.tt
+        'Communication' => 'Komunikasi',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPlain.tt
         'View Email Plain Text for %s%s%s' => 'Menampilkan plain teks email untuk %s%s%s',
@@ -2920,14 +2910,6 @@ bin/znuny.Daemon.pl status\').',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/MentionsTable.tt
         'Mentions' => '',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/TicketInformation.tt
-        'Archive' => 'Arsip',
-        'This ticket is archived.' => 'Tiket ini diarsipkan',
-        'is invalid' => '',
-        'Pending till' => 'Ditunda hingga',
-        'Locked' => 'Dikunci',
-        'Accounted time' => 'Waktu dicatat',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/ArticleContent/Invalid.tt
         'Preview of this article is not possible because %s channel is missing in the system.' =>
@@ -4473,6 +4455,7 @@ bin/znuny.Daemon.pl status\').',
             'PendingTime bisa digunakan apabila State atau StateID dikonfigurasi untuk ActivityDialogyang sama. ActivityDialog: %s!',
         'Pending Date' => 'Tanggal yang tertunda',
         'for pending* states' => 'Tertunda untuk states',
+        'Next ticket state' => 'Pilihan tiket berikutnya',
         'ActivityDialogEntityID missing!' => 'ActivityDialogEntityID telah hilang!',
         'Couldn\'t get Config for ActivityDialogEntityID "%s"!' => 'Tidak bisa mendapatkan konfigurasi untuk ActivityDialogEntityID "%s"!',
         'Couldn\'t use CustomerID as an invisible field.' => '',
@@ -4948,6 +4931,9 @@ bin/znuny.Daemon.pl status\').',
         'Unable to load %s!' => '',
         'Content' => 'Konten',
 
+        # Perl Module: Kernel/Output/HTML/TicketActionCommon/TicketInformation.pm
+        'Ticket Information' => 'Informasi tiket',
+
         # Perl Module: Kernel/Output/HTML/TicketMenu/Lock.pm
         'Unlock to give it back to the queue' => 'Buka kuncu untuk mengembalikannya pada antrian',
         'Lock it to work on it' => 'Kunci untuk dikerjakan',
@@ -4959,9 +4945,6 @@ bin/znuny.Daemon.pl status\').',
 
         # Perl Module: Kernel/Output/HTML/TicketOverviewMenu/Sort.pm
         'Order by' => 'Dipesan oleh',
-
-        # Perl Module: Kernel/Output/HTML/TicketZoom/TicketInformation.pm
-        'Ticket Information' => 'Informasi tiket',
 
         # Perl Module: Kernel/Output/HTML/ToolBar/TicketLocked.pm
         'Locked Tickets New' => 'Tiket terkunci baru',
@@ -6789,6 +6772,7 @@ bin/znuny.Daemon.pl status\').',
             'Mendefinisikan atribut tiket default untuk tiket menyortir dalam tampilan antarmuka agen.',
         'Defines the default ticket order in the watch view of the agent interface. Up: oldest on top. Down: latest on top.' =>
             'Mendefinisikan urutan tiket default dalam menonton tampilan antarmuka agen. Atas: tertua di atas. Bawah: terbaru di atas.',
+        'Displayed in the sidebar as additional information.' => '',
         'Required permissions to use the ticket free text screen in the agent interface.' =>
             'izin yang diperlukan untuk menggunakan layar teks bebas tiket di antarmuka agen.',
         'Defines if a ticket lock is required in the ticket free text screen of the agent interface (if the ticket isn\'t locked yet, the ticket gets locked and the current agent will be set automatically as its owner).' =>
@@ -6843,6 +6827,11 @@ bin/znuny.Daemon.pl status\').',
             'Mendefinisikan nama domain berkualifikasi lengkap dari sistem. Pengaturan ini digunakan sebagai variabel, OTRS_CONFIG_FQDN yang ditemukan dalam semua bentuk pesan yang digunakan oleh aplikasi, untuk membangun link ke tiket dalam sistem Anda.',
         'Defines the history comment for the ticket free text screen action, which gets used for ticket history.' =>
             'Mendefinisikan komentar sejarah untuk tiket gratis tindakan layar teks, yang akan digunakan untuk sejarah tiket.',
+        'TicketActionCommon widget that displays the current action description.' =>
+            '',
+        'TicketActionCommon widget that displays ticket information.' => '',
+        'TicketActionCommon widget that displays customer information.' =>
+            '',
         'Required permissions to use the ticket phone outbound screen in the agent interface.' =>
             'izin yang diperlukan untuk menggunakan layar keluar ponsel tiket di antarmuka agen.',
         'Defines if a ticket lock is required in the ticket phone outbound screen of the agent interface (if the ticket isn\'t locked yet, the ticket gets locked and the current agent will be set automatically as its owner).' =>
@@ -6853,6 +6842,8 @@ bin/znuny.Daemon.pl status\').',
             'Mendefinisikan subjek default untuk tiket ponsel di layar keluar ponsel tiket dari antarmuka agen.',
         'Defines the default note body text for phone tickets in the ticket phone outbound screen of the agent interface.' =>
             'Mendefinisikan teks tubuh catatan default untuk tiket ponsel di layar keluar ponsel tiket dari antarmuka agen.',
+        'Sets the state of a ticket in screen of the agent interface.' =>
+            '',
         'Defines the default ticket next state after adding a phone note in the ticket phone outbound screen of the agent interface.' =>
             'Mendefinisikan tiket standar negara berikutnya setelah menambahkan catatan telepon di layar keluar ponsel tiket dari antarmuka agen.',
         'Next possible ticket states after adding a phone note in the ticket phone outbound screen of the agent interface.' =>
@@ -8904,6 +8895,7 @@ Helpdesk Team Anda
             '',
         'Creates a unit test file for this ticket.' => '',
         'Croatian' => 'Kroasia',
+        'Current action description.' => '',
         'Customer Administration' => 'Administrasi pelanggan',
         'Customer Companies' => 'Perusahaan Pelanggan',
         'Customer IDs' => '',
@@ -9362,11 +9354,13 @@ Helpdesk Team Anda
         'Ticket Priority.' => 'Prioritas tiket',
         'Ticket Queue Overview' => 'Antrian tiket keseluruhan',
         'Ticket Responsible.' => 'Penanggung jawab tiket',
+        'Ticket Settings' => 'Pengaturan email',
         'Ticket Watcher' => 'Watcher tiket',
         'Ticket Zoom' => '',
         'Ticket Zoom.' => 'Tiket Zoom.',
         'Ticket bulk module.' => 'Tiket massal modulus.',
         'Ticket creation' => '',
+        'Ticket information' => '',
         'Ticket limit per page for Ticket Overview "Medium".' => '',
         'Ticket limit per page for Ticket Overview "Preview".' => '',
         'Ticket limit per page for Ticket Overview "Small".' => '',

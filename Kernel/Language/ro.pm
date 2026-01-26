@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d.%m.%Y';
     $Self->{DateInputFormat}     = '%d.%m.%Y';
     $Self->{DateInputFormatLong} = '%d.%m.%Y - %T';
-    $Self->{Completeness}        = 0.278390033540968;
+    $Self->{Completeness}        = 0.278470889315419;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2641,56 +2641,53 @@ sub Data {
             '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
-        'Change Free Text of %s%s%s' => '',
-        'Change Owner of %s%s%s' => '',
-        'Close %s%s%s' => '',
-        'Add Note to %s%s%s' => '',
-        'Set Pending Time for %s%s%s' => '',
-        'Change Priority of %s%s%s' => '',
-        'Change Responsible of %s%s%s' => '',
         'The ticket has been locked' => 'Tichetul a fost blocat',
-        'Ticket Settings' => 'Setările tichetelor',
+        'Unlock and close popup' => '',
         'Customer user' => 'Client utilizator',
         'Service invalid.' => '',
-        'SLA invalid.' => '',
         'Team Data' => '',
         'Queue invalid.' => '',
-        'New Owner' => 'Posesor nou',
         'Please set a new owner!' => 'Te rog alege un posesor nou!',
         'Owner invalid.' => '',
-        'New Responsible' => 'Responsabil nou',
         'Please set a new responsible!' => '',
         'Responsible invalid.' => '',
         'Ticket Data' => '',
-        'Next state' => 'Starea',
         'State invalid.' => '',
         'For all pending* states.' => 'Pentru toate stările de limite de așteptare* .',
-        'Dynamic Info' => '',
-        'Add Article' => 'Adaugă articol',
+        'Communications' => '',
         'Inform' => '',
         'Inform agents' => 'Informează agenții',
         'Inform involved agents' => 'Informează agenții implicați',
         'Here you can select additional agents which should receive a notification regarding the new article.' =>
             '',
         'Text will also be received by' => '',
-        'Communications' => '',
         'Create an Article' => 'Creaza un articol',
         'Setting a template will overwrite any text or attachment.' => 'Adăugarea unui șablon va suprascrie orice text sau atașament existent.',
+        'Article' => 'Articol',
+        'Undo & close' => 'Refă și închide',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
+        'Archive' => 'Arhivă',
+        'This ticket is archived.' => 'Acest tichet este arhivat.',
+        'is invalid' => '',
+        'Pending till' => 'În așteptare până',
+        'Locked' => 'Blocat',
+        'First Response Time' => 'Timpul primului răspuns',
+        'Update Time' => 'Momentul actualizării',
+        'Solution Time' => 'Momentul soluționării',
+        'Accounted time' => 'Timp contorizat',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBounce.tt
-        'Bounce %s%s%s' => '',
-        'cancel' => '',
         'Bounce to' => 'Rederectioneaza catre',
         'You need a email address.' => 'Este nevoie de o adresa de e-mail.',
         'Need a valid email address or don\'t use a local email address.' =>
             '',
-        'Next ticket state' => 'Starea',
         'Inform sender' => 'Informează adresantul',
-        'Send mail' => 'Trimite e-mail',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBulk.tt
         'Ticket Bulk Action' => 'Acțiune asupra grupului de tichete',
         'Send Email' => 'Trimite e-mail',
+        'Next state' => 'Starea',
         'Merge' => 'Contopire',
         'Merge to' => 'Unește cu',
         'Invalid ticket identifier!' => '',
@@ -2715,7 +2712,7 @@ sub Data {
         'This address is registered as system address and cannot be used: %s' =>
             '',
         'Bcc' => 'Bcc',
-        'Undo & close' => 'Refă și închide',
+        'Send mail' => 'Trimite e-mail',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCustomer.tt
         'Change Customer of %s%s%s' => '',
@@ -2727,9 +2724,6 @@ sub Data {
         'Please include at least one customer user for the ticket.' => 'Include cel putin un utilizator al clientului pentru tichet.',
         'From queue' => 'Din coada',
         'Get all' => 'Ia tot',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailOutbound.tt
-        'Undo & Close' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
         'Resend Email for %s%s%s' => '',
@@ -2756,10 +2750,8 @@ sub Data {
         'Filter for history items' => '',
         'Expand/Collapse all' => '',
         'CreateTime' => '',
-        'Article' => 'Articol',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketMerge.tt
-        'Merge %s%s%s' => '',
         'Merge Settings' => 'Setări de unire',
         'Try typing part of the ticket number or title in order to search by it.' =>
             '',
@@ -2770,13 +2762,11 @@ sub Data {
         'Need a valid email address.' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketMove.tt
-        'Move %s%s%s' => '',
         'New Queue' => 'Coadă nouă',
-        'Communication' => 'Comunicare',
+        'New Owner' => 'Posesor nou',
         'Move' => 'Mutare',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketNoteToLinkedTicket.tt
-        'Add note to linked %s%s%s' => '',
         'Notes' => '',
         'Note to linked Ticket' => '',
         'LinkList invalid.' => '',
@@ -2790,9 +2780,6 @@ sub Data {
         'Sender' => 'Expeditor',
         'Customer User Name' => '',
         'Impact' => 'Impact',
-        'Update Time' => 'Momentul actualizării',
-        'Solution Time' => 'Momentul soluționării',
-        'First Response Time' => 'Timpul primului răspuns',
         'Move ticket to a different queue' => 'Mută tichetul într-o coadă diferită',
         'Change queue' => 'Schimbă coada',
 
@@ -2815,6 +2802,9 @@ sub Data {
         'Create New Phone Ticket' => 'Crează tichet nou telefonic',
         'Please include at least one customer for the ticket.' => 'Te rog include cel puțin un client pentru tichet.',
         'To queue' => 'În coada',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPhoneCommon.tt
+        'Communication' => 'Comunicare',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPlain.tt
         'View Email Plain Text for %s%s%s' => '',
@@ -2918,14 +2908,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/MentionsTable.tt
         'Mentions' => '',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/TicketInformation.tt
-        'Archive' => 'Arhivă',
-        'This ticket is archived.' => 'Acest tichet este arhivat.',
-        'is invalid' => '',
-        'Pending till' => 'În așteptare până',
-        'Locked' => 'Blocat',
-        'Accounted time' => 'Timp contorizat',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/ArticleContent/Invalid.tt
         'Preview of this article is not possible because %s channel is missing in the system.' =>
@@ -4471,6 +4453,7 @@ sub Data {
             '',
         'Pending Date' => 'Data limita asteptare',
         'for pending* states' => 'pentru datele limita de așteptare',
+        'Next ticket state' => 'Starea',
         'ActivityDialogEntityID missing!' => '',
         'Couldn\'t get Config for ActivityDialogEntityID "%s"!' => '',
         'Couldn\'t use CustomerID as an invisible field.' => '',
@@ -4946,6 +4929,9 @@ sub Data {
         'Unable to load %s!' => '',
         'Content' => 'Conținut',
 
+        # Perl Module: Kernel/Output/HTML/TicketActionCommon/TicketInformation.pm
+        'Ticket Information' => 'Informații depsre tichet',
+
         # Perl Module: Kernel/Output/HTML/TicketMenu/Lock.pm
         'Unlock to give it back to the queue' => 'Deblochează-l pentru a putea fi pus înapoi in coadă',
         'Lock it to work on it' => 'Blocați-l pentru a lucra la el',
@@ -4957,9 +4943,6 @@ sub Data {
 
         # Perl Module: Kernel/Output/HTML/TicketOverviewMenu/Sort.pm
         'Order by' => 'Ordonat după',
-
-        # Perl Module: Kernel/Output/HTML/TicketZoom/TicketInformation.pm
-        'Ticket Information' => 'Informații depsre tichet',
 
         # Perl Module: Kernel/Output/HTML/ToolBar/TicketLocked.pm
         'Locked Tickets New' => 'Tichete Noi Blocate',
@@ -6787,6 +6770,7 @@ sub Data {
             '',
         'Defines the default ticket order in the watch view of the agent interface. Up: oldest on top. Down: latest on top.' =>
             '',
+        'Displayed in the sidebar as additional information.' => '',
         'Required permissions to use the ticket free text screen in the agent interface.' =>
             '',
         'Defines if a ticket lock is required in the ticket free text screen of the agent interface (if the ticket isn\'t locked yet, the ticket gets locked and the current agent will be set automatically as its owner).' =>
@@ -6841,6 +6825,11 @@ sub Data {
             '',
         'Defines the history comment for the ticket free text screen action, which gets used for ticket history.' =>
             '',
+        'TicketActionCommon widget that displays the current action description.' =>
+            '',
+        'TicketActionCommon widget that displays ticket information.' => '',
+        'TicketActionCommon widget that displays customer information.' =>
+            '',
         'Required permissions to use the ticket phone outbound screen in the agent interface.' =>
             '',
         'Defines if a ticket lock is required in the ticket phone outbound screen of the agent interface (if the ticket isn\'t locked yet, the ticket gets locked and the current agent will be set automatically as its owner).' =>
@@ -6850,6 +6839,8 @@ sub Data {
         'Defines the default subject for phone tickets in the ticket phone outbound screen of the agent interface.' =>
             '',
         'Defines the default note body text for phone tickets in the ticket phone outbound screen of the agent interface.' =>
+            '',
+        'Sets the state of a ticket in screen of the agent interface.' =>
             '',
         'Defines the default ticket next state after adding a phone note in the ticket phone outbound screen of the agent interface.' =>
             '',
@@ -8890,6 +8881,7 @@ Thanks for your help!
             '',
         'Creates a unit test file for this ticket.' => '',
         'Croatian' => '',
+        'Current action description.' => '',
         'Customer Administration' => '',
         'Customer Companies' => 'Companii client',
         'Customer IDs' => '',
@@ -9348,11 +9340,13 @@ Thanks for your help!
         'Ticket Priority.' => 'Prioritate Tichet.',
         'Ticket Queue Overview' => '',
         'Ticket Responsible.' => 'Responsabil Tichet.',
+        'Ticket Settings' => 'Setările tichetelor',
         'Ticket Watcher' => 'Urmăritor tichet',
         'Ticket Zoom' => '',
         'Ticket Zoom.' => '',
         'Ticket bulk module.' => '',
         'Ticket creation' => '',
+        'Ticket information' => '',
         'Ticket limit per page for Ticket Overview "Medium".' => '',
         'Ticket limit per page for Ticket Overview "Preview".' => '',
         'Ticket limit per page for Ticket Overview "Small".' => '',

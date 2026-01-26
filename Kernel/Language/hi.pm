@@ -29,7 +29,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d/%m/%Y';
     $Self->{DateInputFormat}     = '%d/%m/%Y';
     $Self->{DateInputFormatLong} = '%d/%m/%Y - %T';
-    $Self->{Completeness}        = 0.249321194697333;
+    $Self->{Completeness}        = 0.249680102367242;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2644,56 +2644,53 @@ sub Data {
             '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
-        'Change Free Text of %s%s%s' => '',
-        'Change Owner of %s%s%s' => '',
-        'Close %s%s%s' => '',
-        'Add Note to %s%s%s' => '',
-        'Set Pending Time for %s%s%s' => '',
-        'Change Priority of %s%s%s' => '',
-        'Change Responsible of %s%s%s' => '',
         'The ticket has been locked' => 'टिकट के लॉक कर दिया गया है',
-        'Ticket Settings' => 'टिकट व्यवस्थाऐं',
+        'Unlock and close popup' => '',
         'Customer user' => 'ग्राहक उपयोगकर्ता',
         'Service invalid.' => 'अवैध सेवा।',
-        'SLA invalid.' => '',
         'Team Data' => '',
         'Queue invalid.' => '',
-        'New Owner' => 'नया स्वामी',
         'Please set a new owner!' => 'कृपया नया स्वामी सेट करें',
         'Owner invalid.' => '',
-        'New Responsible' => '',
         'Please set a new responsible!' => '',
         'Responsible invalid.' => '',
         'Ticket Data' => '',
-        'Next state' => 'अगली स्थिति',
         'State invalid.' => '',
         'For all pending* states.' => '',
-        'Dynamic Info' => '',
-        'Add Article' => '',
+        'Communications' => '',
         'Inform' => '',
         'Inform agents' => '',
         'Inform involved agents' => '',
         'Here you can select additional agents which should receive a notification regarding the new article.' =>
             '',
         'Text will also be received by' => '',
-        'Communications' => '',
         'Create an Article' => '',
         'Setting a template will overwrite any text or attachment.' => '',
+        'Article' => 'अनुच्छेद',
+        'Undo & close' => '',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
+        'Archive' => '',
+        'This ticket is archived.' => '',
+        'is invalid' => '',
+        'Pending till' => 'स्थगित जब तक',
+        'Locked' => 'लॉकड',
+        'First Response Time' => 'पहला प्रतिक्रिया समय',
+        'Update Time' => 'अद्यतन समय',
+        'Solution Time' => 'समाधान समय',
+        'Accounted time' => 'अकाउंटटेड समय',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBounce.tt
-        'Bounce %s%s%s' => '',
-        'cancel' => '',
         'Bounce to' => 'फलांग तक',
         'You need a email address.' => 'आपको ईमेल पते की आवश्यकता।',
         'Need a valid email address or don\'t use a local email address.' =>
             'एक मान्य ईमेल पता की आवश्यकता है या एक स्थानीय ईमेल पते का उपयोग मत किजिए।',
-        'Next ticket state' => 'टिकट की अगली स्थिति',
         'Inform sender' => 'प्रेषक को सूचित करें',
-        'Send mail' => 'मेल भेजें',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBulk.tt
         'Ticket Bulk Action' => 'टिकट थोक कार्रवाई',
         'Send Email' => 'मेल भेजें',
+        'Next state' => 'अगली स्थिति',
         'Merge' => 'मिलाएं',
         'Merge to' => 'मे मिलाएं',
         'Invalid ticket identifier!' => 'अवैध टिकट पहचानकर्ता',
@@ -2718,7 +2715,7 @@ sub Data {
         'This address is registered as system address and cannot be used: %s' =>
             '',
         'Bcc' => 'गुप्त प्रति',
-        'Undo & close' => '',
+        'Send mail' => 'मेल भेजें',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCustomer.tt
         'Change Customer of %s%s%s' => '',
@@ -2730,9 +2727,6 @@ sub Data {
         'Please include at least one customer user for the ticket.' => '',
         'From queue' => 'श्रेणी से',
         'Get all' => 'सभी प्राप्त करें',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailOutbound.tt
-        'Undo & Close' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
         'Resend Email for %s%s%s' => '',
@@ -2759,10 +2753,8 @@ sub Data {
         'Filter for history items' => '',
         'Expand/Collapse all' => '',
         'CreateTime' => '',
-        'Article' => 'अनुच्छेद',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketMerge.tt
-        'Merge %s%s%s' => '',
         'Merge Settings' => '',
         'Try typing part of the ticket number or title in order to search by it.' =>
             '',
@@ -2773,13 +2765,11 @@ sub Data {
         'Need a valid email address.' => 'वैध ईमेल पता चाहिए।',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketMove.tt
-        'Move %s%s%s' => '',
         'New Queue' => 'नई श्रेणी',
-        'Communication' => '',
+        'New Owner' => 'नया स्वामी',
         'Move' => 'स्थान-परिवर्तन',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketNoteToLinkedTicket.tt
-        'Add note to linked %s%s%s' => '',
         'Notes' => '',
         'Note to linked Ticket' => '',
         'LinkList invalid.' => '',
@@ -2793,9 +2783,6 @@ sub Data {
         'Sender' => 'प्रेषक',
         'Customer User Name' => '',
         'Impact' => '',
-        'Update Time' => 'अद्यतन समय',
-        'Solution Time' => 'समाधान समय',
-        'First Response Time' => 'पहला प्रतिक्रिया समय',
         'Move ticket to a different queue' => 'एक अलग श्रेणी में टिकट को ले जाएँ',
         'Change queue' => 'श्रेणी बदलें',
 
@@ -2818,6 +2805,9 @@ sub Data {
         'Create New Phone Ticket' => 'नया फोन टिकट बनाएँ',
         'Please include at least one customer for the ticket.' => '',
         'To queue' => 'श्रेणी में',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPhoneCommon.tt
+        'Communication' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPlain.tt
         'View Email Plain Text for %s%s%s' => '',
@@ -2921,14 +2911,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/MentionsTable.tt
         'Mentions' => '',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/TicketInformation.tt
-        'Archive' => '',
-        'This ticket is archived.' => '',
-        'is invalid' => '',
-        'Pending till' => 'स्थगित जब तक',
-        'Locked' => 'लॉकड',
-        'Accounted time' => 'अकाउंटटेड समय',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/ArticleContent/Invalid.tt
         'Preview of this article is not possible because %s channel is missing in the system.' =>
@@ -4474,6 +4456,7 @@ sub Data {
             '',
         'Pending Date' => 'विचाराधीन दिनांक',
         'for pending* states' => 'विचाराधीन* स्थिति के लिए',
+        'Next ticket state' => 'टिकट की अगली स्थिति',
         'ActivityDialogEntityID missing!' => '',
         'Couldn\'t get Config for ActivityDialogEntityID "%s"!' => '',
         'Couldn\'t use CustomerID as an invisible field.' => '',
@@ -4949,6 +4932,9 @@ sub Data {
         'Unable to load %s!' => '',
         'Content' => 'अंतर्वस्तु',
 
+        # Perl Module: Kernel/Output/HTML/TicketActionCommon/TicketInformation.pm
+        'Ticket Information' => '',
+
         # Perl Module: Kernel/Output/HTML/TicketMenu/Lock.pm
         'Unlock to give it back to the queue' => '',
         'Lock it to work on it' => '',
@@ -4960,9 +4946,6 @@ sub Data {
 
         # Perl Module: Kernel/Output/HTML/TicketOverviewMenu/Sort.pm
         'Order by' => 'के आदेश से',
-
-        # Perl Module: Kernel/Output/HTML/TicketZoom/TicketInformation.pm
-        'Ticket Information' => '',
 
         # Perl Module: Kernel/Output/HTML/ToolBar/TicketLocked.pm
         'Locked Tickets New' => 'नए लॉकड टिकट',
@@ -6790,6 +6773,7 @@ sub Data {
             'प्रतिनिधि अंतरफलक के टिकट के ध्यानाधीन दृश्य में तयशुदा टिकट की छँटाई के लिए टिकट की विशेषता को परिभाषित करता है।',
         'Defines the default ticket order in the watch view of the agent interface. Up: oldest on top. Down: latest on top.' =>
             'प्रतिनिधि अंतरफलक की ध्यानाधीन दृश्य में तयशुदा टिकट के क्रम को परिभाषित करता है। ऊपर:शीर्ष पर सबसे पुरानी। नीचे:शीर्ष पर नवीनतम।',
+        'Displayed in the sidebar as additional information.' => '',
         'Required permissions to use the ticket free text screen in the agent interface.' =>
             'प्रतिनिधि अंतरफलक में टिकट मुक्त पाठ स्क्रीन का उपयोग करने के लिए आवश्यक अनुमतियां।',
         'Defines if a ticket lock is required in the ticket free text screen of the agent interface (if the ticket isn\'t locked yet, the ticket gets locked and the current agent will be set automatically as its owner).' =>
@@ -6844,6 +6828,11 @@ sub Data {
             'टिकट मुक्त पाठ स्क्रीन कार्रवाई के लिए इतिहास के प्रकार को परिभाषित करता है,जो टिकट इतिहास के लिए इस्तेमाल किया जाता है।',
         'Defines the history comment for the ticket free text screen action, which gets used for ticket history.' =>
             'टिकट मुक्त पाठ स्क्रीन कार्रवाई के लिए इतिहास समीक्षा को परिभाषित करता है,जो टिकट इतिहास के लिए इस्तेमाल किया जाता है।',
+        'TicketActionCommon widget that displays the current action description.' =>
+            '',
+        'TicketActionCommon widget that displays ticket information.' => '',
+        'TicketActionCommon widget that displays customer information.' =>
+            '',
         'Required permissions to use the ticket phone outbound screen in the agent interface.' =>
             'प्रतिनिधि अंतरफलक में टिकट फोन आउटबाउंड स्क्रीन का उपयोग करने के लिए आवश्यक अनुमतियां।',
         'Defines if a ticket lock is required in the ticket phone outbound screen of the agent interface (if the ticket isn\'t locked yet, the ticket gets locked and the current agent will be set automatically as its owner).' =>
@@ -6854,6 +6843,8 @@ sub Data {
             'प्रतिनिधि अंतरफलक के टिकट की फोन आउटबाउंड फोन स्क्रीन में टिकटों के लिए तयशुदा विषय को परिभाषित करता है।',
         'Defines the default note body text for phone tickets in the ticket phone outbound screen of the agent interface.' =>
             'प्रतिनिधि अंतरफलक के फोन आउटबाउंड स्क्रीन में फोन टिकटों के लिए तयशुदा टिप्पणी मुख्य-भाग पाठ को परिभाषित करता है।',
+        'Sets the state of a ticket in screen of the agent interface.' =>
+            '',
         'Defines the default ticket next state after adding a phone note in the ticket phone outbound screen of the agent interface.' =>
             'प्रतिनिधि अंतरफलक के टिकट के फोन आउटबाउंड स्क्रीन में एक फोन टिप्पणी जोड़ने के बाद तयशुदा टिकट की अगली स्थिति को परिभाषित करता है।',
         'Next possible ticket states after adding a phone note in the ticket phone outbound screen of the agent interface.' =>
@@ -8893,6 +8884,7 @@ Thanks for your help!
             '',
         'Creates a unit test file for this ticket.' => '',
         'Croatian' => '',
+        'Current action description.' => '',
         'Customer Administration' => '',
         'Customer Companies' => 'ग्राहक की कंपनियां',
         'Customer IDs' => '',
@@ -9351,11 +9343,13 @@ Thanks for your help!
         'Ticket Priority.' => '',
         'Ticket Queue Overview' => '',
         'Ticket Responsible.' => '',
+        'Ticket Settings' => 'टिकट व्यवस्थाऐं',
         'Ticket Watcher' => '',
         'Ticket Zoom' => '',
         'Ticket Zoom.' => '',
         'Ticket bulk module.' => '',
         'Ticket creation' => '',
+        'Ticket information' => '',
         'Ticket limit per page for Ticket Overview "Medium".' => '',
         'Ticket limit per page for Ticket Overview "Preview".' => '',
         'Ticket limit per page for Ticket Overview "Small".' => '',

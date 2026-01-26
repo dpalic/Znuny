@@ -20,7 +20,15 @@ $sidebarTitleBackgroundColor: #EAEAEE;
     &.sidebarActive {
       width: 310px;
       @include respond-below(lg) {
-        width: 40px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 310px;
+        z-index: 1000;
+        background-color: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        box-shadow: -2px 0 20px rgba(0, 0, 0, 0.1);
       }
 
       @include respond-above(lg) {
@@ -98,9 +106,6 @@ $sidebarTitleBackgroundColor: #EAEAEE;
         background-repeat: no-repeat;
         background-size: cover;
         transform: rotate(180deg);
-      }
-      h2 {
-        font-size: 12px;
       }
       &:hover {
         cursor: pointer;

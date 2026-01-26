@@ -32,7 +32,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%m-%d';
     $Self->{DateInputFormat}     = '%Y-%m-%d';
     $Self->{DateInputFormatLong} = '%Y-%m-%d - %T';
-    $Self->{Completeness}        = 0.990736304104776;
+    $Self->{Completeness}        = 0.989603326935381;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2647,56 +2647,53 @@ sub Data {
             'Ez a statisztika beállítási hibákat tartalmaz, és jelenleg nem használható.',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
-        'Change Free Text of %s%s%s' => '%s%s%s szabad szövegének módosítása',
-        'Change Owner of %s%s%s' => '%s%s%s tulajdonosának módosítása',
-        'Close %s%s%s' => '%s%s%s lezárása',
-        'Add Note to %s%s%s' => 'Jegyzet hozzáadása ehhez: %s%s%s',
-        'Set Pending Time for %s%s%s' => '%s%s%s várakozási idejének beállítása',
-        'Change Priority of %s%s%s' => '%s%s%s prioritásának módosítása',
-        'Change Responsible of %s%s%s' => '%s%s%s felelősének módosítása',
         'The ticket has been locked' => 'A jegy zárolva lett',
-        'Ticket Settings' => 'Jegybeállítások',
+        'Unlock and close popup' => '',
         'Customer user' => 'Ügyfél-felhasználó',
         'Service invalid.' => 'Érvénytelen szolgáltatás.',
-        'SLA invalid.' => 'Az SLA érvénytelen.',
         'Team Data' => 'Csapatadatok',
         'Queue invalid.' => 'A várólista érvénytelen.',
-        'New Owner' => 'Új tulajdonos',
         'Please set a new owner!' => 'Állítson be új tulajdonost!',
         'Owner invalid.' => 'A tulajdonos érvénytelen.',
-        'New Responsible' => 'Új felelős',
         'Please set a new responsible!' => 'Állítson be új felelőst!',
         'Responsible invalid.' => 'A felelős érvénytelen.',
         'Ticket Data' => 'Jegyadatok',
-        'Next state' => 'Következő állapot',
         'State invalid.' => 'Az állapot érvénytelen.',
         'For all pending* states.' => 'Minden függőben* állapotnál.',
-        'Dynamic Info' => 'Dinamikus információ',
-        'Add Article' => 'Bejegyzés hozzáadása',
+        'Communications' => 'Kommunikációk',
         'Inform' => 'Tájékoztatás',
         'Inform agents' => 'Ügyintézők tájékoztatása',
         'Inform involved agents' => 'Résztvevő ügyintézők tájékoztatása',
         'Here you can select additional agents which should receive a notification regarding the new article.' =>
             'Itt választhat ki további ügyintézőket, akiknek értesítést kell kapniuk az új bejegyzést illetően.',
         'Text will also be received by' => 'A szöveget meg fogja még kapni',
-        'Communications' => 'Kommunikációk',
         'Create an Article' => 'Egy bejegyzés létrehozása',
         'Setting a template will overwrite any text or attachment.' => 'Egy sablon beállítása felül fog írni minden szöveget vagy mellékletet.',
+        'Article' => 'Bejegyzés',
+        'Undo & close' => 'Visszavonás és bezárás',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
+        'Archive' => 'Archiválás',
+        'This ticket is archived.' => 'Ez a jegy archiválva van.',
+        'is invalid' => 'érvénytelen',
+        'Pending till' => 'Várakozás eddig',
+        'Locked' => 'Zárolva',
+        'First Response Time' => 'Első válaszidő',
+        'Update Time' => 'Frissítés ideje',
+        'Solution Time' => 'Megoldás ideje',
+        'Accounted time' => 'Elszámolt idő',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBounce.tt
-        'Bounce %s%s%s' => '%s%s%s átirányítása',
-        'cancel' => 'mégse',
         'Bounce to' => 'Átirányítás ide',
         'You need a email address.' => 'Egy e-mail-címre van szüksége.',
         'Need a valid email address or don\'t use a local email address.' =>
             'Egy érvényes e-mail-cím szükséges, vagy ne használja a helyi e-mail-címet.',
-        'Next ticket state' => 'Következő jegyállapot',
         'Inform sender' => 'Küldő tájékoztatása',
-        'Send mail' => 'Levél küldése',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBulk.tt
         'Ticket Bulk Action' => 'Tömeges jegyművelet',
         'Send Email' => 'E-mail küldése',
+        'Next state' => 'Következő állapot',
         'Merge' => 'Egyesítés',
         'Merge to' => 'Egyesítés ezzel:',
         'Invalid ticket identifier!' => 'Érvénytelen jegyazonosító!',
@@ -2721,7 +2718,7 @@ sub Data {
         'This address is registered as system address and cannot be used: %s' =>
             'Ez a cím rendszercímként van regisztrálva és nem használható: %s',
         'Bcc' => 'Rejtett másolat',
-        'Undo & close' => 'Visszavonás és bezárás',
+        'Send mail' => 'Levél küldése',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCustomer.tt
         'Change Customer of %s%s%s' => '%s%s%s ügyfelének módosítása',
@@ -2733,9 +2730,6 @@ sub Data {
         'Please include at least one customer user for the ticket.' => 'Vegyen fel legalább egy ügyfél-felhasználót a jegyhez.',
         'From queue' => 'Várólistából',
         'Get all' => 'Összes lekérése',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailOutbound.tt
-        'Undo & Close' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
         'Resend Email for %s%s%s' => 'E-mail újraküldése ennél: %s%s%s',
@@ -2762,10 +2756,8 @@ sub Data {
         'Filter for history items' => 'Szűrő az előzményelemekhez',
         'Expand/Collapse all' => 'Összes kinyitása vagy összecsukása',
         'CreateTime' => 'Létrehozás ideje',
-        'Article' => 'Bejegyzés',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketMerge.tt
-        'Merge %s%s%s' => '%s%s%s egyesítése',
         'Merge Settings' => 'Egyesítés beállítások',
         'Try typing part of the ticket number or title in order to search by it.' =>
             'Próbálja meg beírni a jegyszám vagy a cím egy részét annak kereséséhez.',
@@ -2776,13 +2768,11 @@ sub Data {
         'Need a valid email address.' => 'Érvényes e-mail-cím szükséges.',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketMove.tt
-        'Move %s%s%s' => '%s%s%s áthelyezése',
         'New Queue' => 'Új várólista',
-        'Communication' => 'Kommunikáció',
+        'New Owner' => 'Új tulajdonos',
         'Move' => 'Áthelyezés',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketNoteToLinkedTicket.tt
-        'Add note to linked %s%s%s' => 'Jegyzet hozzáadása ehhez: kapcsolt s%s%s',
         'Notes' => 'Jegyzetek',
         'Note to linked Ticket' => 'Jegyzet a kapcsolt jegyhez',
         'LinkList invalid.' => 'A hivatkozáslista érvénytelen.',
@@ -2796,9 +2786,6 @@ sub Data {
         'Sender' => 'Küldő',
         'Customer User Name' => 'Ügyfél-felhasználó neve',
         'Impact' => 'Hatás',
-        'Update Time' => 'Frissítés ideje',
-        'Solution Time' => 'Megoldás ideje',
-        'First Response Time' => 'Első válaszidő',
         'Move ticket to a different queue' => 'Jegy áthelyezése egy másik várólistába',
         'Change queue' => 'Várólista módosítása',
 
@@ -2821,6 +2808,9 @@ sub Data {
         'Create New Phone Ticket' => 'Új telefonos jegy létrehozása',
         'Please include at least one customer for the ticket.' => 'Vegyen fel legalább egy ügyfelet a jegyhez.',
         'To queue' => 'Várólistába',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPhoneCommon.tt
+        'Communication' => 'Kommunikáció',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPlain.tt
         'View Email Plain Text for %s%s%s' => 'Egyszerű szöveges e-mail megtekintése ennél: %s%s%s',
@@ -2924,14 +2914,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/MentionsTable.tt
         'Mentions' => 'Említések',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/TicketInformation.tt
-        'Archive' => 'Archiválás',
-        'This ticket is archived.' => 'Ez a jegy archiválva van.',
-        'is invalid' => 'érvénytelen',
-        'Pending till' => 'Várakozás eddig',
-        'Locked' => 'Zárolva',
-        'Accounted time' => 'Elszámolt idő',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/ArticleContent/Invalid.tt
         'Preview of this article is not possible because %s channel is missing in the system.' =>
@@ -4477,6 +4459,7 @@ sub Data {
             'A várakozási idő csak akkor használható, ha az állapot vagy az állapotazonosító be van állítva ugyanannál a tevékenység-párbeszédablaknál. Tevékenység-párbeszédablak: %s!',
         'Pending Date' => 'Várakozás dátuma',
         'for pending* states' => 'függőben* állapotokhoz',
+        'Next ticket state' => 'Következő jegyállapot',
         'ActivityDialogEntityID missing!' => 'A tevékenység-párbeszédablak egyedazonosító hiányzik!',
         'Couldn\'t get Config for ActivityDialogEntityID "%s"!' => 'Nem sikerült lekérni a beállítást a tevékenység-párbeszédablak egyedazonosítóhoz: „%s”!',
         'Couldn\'t use CustomerID as an invisible field.' => 'Nem sikerült az ügyfél-azonosítót láthatatlan mezőként használni.',
@@ -4952,6 +4935,9 @@ sub Data {
         'Unable to load %s!' => 'Nem lehet betölteni: %s!',
         'Content' => 'Tartalom',
 
+        # Perl Module: Kernel/Output/HTML/TicketActionCommon/TicketInformation.pm
+        'Ticket Information' => 'Jegyinformációk',
+
         # Perl Module: Kernel/Output/HTML/TicketMenu/Lock.pm
         'Unlock to give it back to the queue' => 'Feloldás a várakozási sorba való visszarakáshoz',
         'Lock it to work on it' => 'Zárolás a rajta végzett munkához',
@@ -4963,9 +4949,6 @@ sub Data {
 
         # Perl Module: Kernel/Output/HTML/TicketOverviewMenu/Sort.pm
         'Order by' => 'Rendezés',
-
-        # Perl Module: Kernel/Output/HTML/TicketZoom/TicketInformation.pm
-        'Ticket Information' => 'Jegyinformációk',
 
         # Perl Module: Kernel/Output/HTML/ToolBar/TicketLocked.pm
         'Locked Tickets New' => 'Zárolt jegyek (új)',
@@ -6793,6 +6776,7 @@ sub Data {
             'Meghatározza az alapértelmezett jegyattribútumot a jegyrendezéshez az ügyintézői felület megfigyelés nézetében.',
         'Defines the default ticket order in the watch view of the agent interface. Up: oldest on top. Down: latest on top.' =>
             'Meghatározza az alapértelmezett jegysorrendet az ügyintézői felület megfigyelés nézetében. Fel: legrégebbi felülre. Le: legutolsó felülre.',
+        'Displayed in the sidebar as additional information.' => '',
         'Required permissions to use the ticket free text screen in the agent interface.' =>
             'A jegy szabad szöveg képernyő használatához szükséges jogosultságok az ügyintézői felületen.',
         'Defines if a ticket lock is required in the ticket free text screen of the agent interface (if the ticket isn\'t locked yet, the ticket gets locked and the current agent will be set automatically as its owner).' =>
@@ -6847,6 +6831,11 @@ sub Data {
             'Meghatározza az előzmények típusát a jegy szabad szöveg képernyő művelethez, amelyet a jegy előzményeinél szoktak használni.',
         'Defines the history comment for the ticket free text screen action, which gets used for ticket history.' =>
             'Meghatározza az előzmények megjegyzést a jegy szabad szöveg képernyő művelethez, amelyet a jegy előzményeinél szoktak használni.',
+        'TicketActionCommon widget that displays the current action description.' =>
+            '',
+        'TicketActionCommon widget that displays ticket information.' => '',
+        'TicketActionCommon widget that displays customer information.' =>
+            '',
         'Required permissions to use the ticket phone outbound screen in the agent interface.' =>
             'A kimenő telefonhívás képernyő használatához szükséges jogosultságok az ügyintézői felületen.',
         'Defines if a ticket lock is required in the ticket phone outbound screen of the agent interface (if the ticket isn\'t locked yet, the ticket gets locked and the current agent will be set automatically as its owner).' =>
@@ -6857,6 +6846,8 @@ sub Data {
             'Meghatározza a telefonos jegyek alapértelmezett tárgyát az ügyintézői felület kimenő telefonhívás képernyőjén.',
         'Defines the default note body text for phone tickets in the ticket phone outbound screen of the agent interface.' =>
             'Meghatározza a telefonos jegyek alapértelmezett jegyzet törzsét az ügyintézői felület kimenő telefonhívás képernyőjén.',
+        'Sets the state of a ticket in screen of the agent interface.' =>
+            '',
         'Defines the default ticket next state after adding a phone note in the ticket phone outbound screen of the agent interface.' =>
             'Meghatározza egy jegy alapértelmezett következő állapotát egy telefonos jegyzet hozzáadása után az ügyintézői felület kimenő telefonhívás képernyőjén.',
         'Next possible ticket states after adding a phone note in the ticket phone outbound screen of the agent interface.' =>
@@ -8907,6 +8898,7 @@ Az Ön ügyfélszolgálati csapata
             'Létrehoz egy egységtesztfájlt ehhez a jegyhez, és elküldi a Znuny-nak.',
         'Creates a unit test file for this ticket.' => 'Létrehoz egy egységtesztfájlt ehhez a jegyhez.',
         'Croatian' => 'Horvát',
+        'Current action description.' => '',
         'Customer Administration' => 'Ügyfél adminisztráció',
         'Customer Companies' => 'Ügyfél-vállalatok',
         'Customer IDs' => 'Ügyfél-azonosítók',
@@ -9365,11 +9357,13 @@ Az Ön ügyfélszolgálati csapata
         'Ticket Priority.' => 'Jegyprioritás.',
         'Ticket Queue Overview' => 'Jegyvárólista áttekintő',
         'Ticket Responsible.' => 'Jegyfelelős.',
+        'Ticket Settings' => 'Jegybeállítások',
         'Ticket Watcher' => 'Jegymegfigyelő',
         'Ticket Zoom' => 'Jegynagyítás',
         'Ticket Zoom.' => 'Jegynagyítás.',
         'Ticket bulk module.' => 'Jegy tömeges modul.',
         'Ticket creation' => 'Jegylétrehozás',
+        'Ticket information' => '',
         'Ticket limit per page for Ticket Overview "Medium".' => 'Oldalankénti jegykorlát a „Közepes” jegyáttekintéshez.',
         'Ticket limit per page for Ticket Overview "Preview".' => 'Oldalankénti jegykorlát az „Előnézet” jegyáttekintéshez.',
         'Ticket limit per page for Ticket Overview "Small".' => 'Oldalankénti jegykorlát a „Kis” jegyáttekintéshez.',

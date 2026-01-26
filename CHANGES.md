@@ -1,5 +1,6 @@
 
 # 7.3.1 2025-??-??
+ - 2025-01-26 Fixed issues after GUI redesign: Added widget functions to AgentTicketActionCommon. Fixed unlock notification after GUI redesign. Added UndoClosePopup class. Change to "Unlock and close popup" button.
  - 2026-01-23 Fixed: Znuny re-directs after login to default view even if there is specified ExternalURL parameter with the Action encoded in the link.
  - 2026-01-23 Added preview and download function to AttachmentList.
  - 2026-01-23 Improved handling of read-only fields for the backend of CustomerUser::DB and CustomerCompany::DB.

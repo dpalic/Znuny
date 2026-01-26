@@ -33,7 +33,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y.%m.%d';
     $Self->{DateInputFormat}     = '%Y.%m.%d';
     $Self->{DateInputFormatLong} = '%Y.%m.%d - %T';
-    $Self->{Completeness}        = 0.86519725283501;
+    $Self->{Completeness}        = 0.864363403710813;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -2648,56 +2648,53 @@ sub Data {
             '统计包含有错误配置，当前不能使用。',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
-        'Change Free Text of %s%s%s' => '修改%s%s%s的自由文本',
-        'Change Owner of %s%s%s' => '变更工单%s%s%s的所有者',
-        'Close %s%s%s' => '关闭%s%s%s',
-        'Add Note to %s%s%s' => '添加备注到',
-        'Set Pending Time for %s%s%s' => '为%s%s%s添加挂起时间',
-        'Change Priority of %s%s%s' => '变更工单%s%s%s的优先级',
-        'Change Responsible of %s%s%s' => '变更工单%s%s%s的负责人',
         'The ticket has been locked' => '工单已锁定',
-        'Ticket Settings' => '工单设置',
+        'Unlock and close popup' => '',
         'Customer user' => '客户用户',
         'Service invalid.' => '服务无效。',
-        'SLA invalid.' => 'SLA无效。',
         'Team Data' => '',
         'Queue invalid.' => '队列无效。',
-        'New Owner' => '新的所有者',
         'Please set a new owner!' => '请指定新的所有者！',
         'Owner invalid.' => '所有者无效。',
-        'New Responsible' => '新的负责人',
         'Please set a new responsible!' => '请指定新的负责人！',
         'Responsible invalid.' => '负责人无效。',
         'Ticket Data' => '',
-        'Next state' => '工单下一状态',
         'State invalid.' => '状态无效。',
         'For all pending* states.' => '适用于各种挂起状态。',
-        'Dynamic Info' => '',
-        'Add Article' => '添加信件',
+        'Communications' => '',
         'Inform' => '',
         'Inform agents' => '通知服务人员',
         'Inform involved agents' => '通知相关服务人员',
         'Here you can select additional agents which should receive a notification regarding the new article.' =>
             '你可以在这里选择额外的服务人员，以收到这封信件的通知。',
         'Text will also be received by' => '内容也将被以下人员接收到',
-        'Communications' => '',
         'Create an Article' => '创建一封信件',
         'Setting a template will overwrite any text or attachment.' => '设置一个模板将覆盖任何文本或附件。',
+        'Article' => '信件',
+        'Undo & close' => '撤销并关闭',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
+        'Archive' => '归档',
+        'This ticket is archived.' => '该工单已归档。',
+        'is invalid' => '',
+        'Pending till' => '挂起至',
+        'Locked' => '锁定状态',
+        'First Response Time' => '首次响应时间',
+        'Update Time' => '更新时间',
+        'Solution Time' => '解决时间',
+        'Accounted time' => '所用工时',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBounce.tt
-        'Bounce %s%s%s' => '退回%s%s%s',
-        'cancel' => '',
         'Bounce to' => '退回到',
         'You need a email address.' => '需要一个邮件地址。',
         'Need a valid email address or don\'t use a local email address.' =>
             '需要一个有效的邮件地址，不可以使用本地邮件地址。',
-        'Next ticket state' => '工单下一状态',
         'Inform sender' => '通知发送者',
-        'Send mail' => '发送邮件',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBulk.tt
         'Ticket Bulk Action' => '工单批量操作',
         'Send Email' => '发送邮件',
+        'Next state' => '工单下一状态',
         'Merge' => '合并',
         'Merge to' => '合并到',
         'Invalid ticket identifier!' => '无效的工单标识符!',
@@ -2722,7 +2719,7 @@ sub Data {
         'This address is registered as system address and cannot be used: %s' =>
             '这个邮件地址：%s已被注册为系统邮件地址，不能使用。',
         'Bcc' => '暗送',
-        'Undo & close' => '撤销并关闭',
+        'Send mail' => '发送邮件',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCustomer.tt
         'Change Customer of %s%s%s' => '变更工单%s%s%s的客户',
@@ -2734,9 +2731,6 @@ sub Data {
         'Please include at least one customer user for the ticket.' => '请包括至少一个客户用户。',
         'From queue' => '从队列',
         'Get all' => '获取全部',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailOutbound.tt
-        'Undo & Close' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
         'Resend Email for %s%s%s' => '重新发送电子邮件给%s%s%s',
@@ -2763,10 +2757,8 @@ sub Data {
         'Filter for history items' => '历史条目过滤器',
         'Expand/Collapse all' => '',
         'CreateTime' => '创建时间',
-        'Article' => '信件',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketMerge.tt
-        'Merge %s%s%s' => '合并%s%s%s',
         'Merge Settings' => '合并设置',
         'Try typing part of the ticket number or title in order to search by it.' =>
             '尝试输入工单编号或标题的一部分，以便进行搜索。',
@@ -2777,13 +2769,11 @@ sub Data {
         'Need a valid email address.' => '需要有效的邮件地址。',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketMove.tt
-        'Move %s%s%s' => '转移%s%s%s',
         'New Queue' => '新队列',
-        'Communication' => '通信',
+        'New Owner' => '新的所有者',
         'Move' => '转移',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketNoteToLinkedTicket.tt
-        'Add note to linked %s%s%s' => '',
         'Notes' => '',
         'Note to linked Ticket' => '',
         'LinkList invalid.' => '',
@@ -2797,9 +2787,6 @@ sub Data {
         'Sender' => '发件人',
         'Customer User Name' => '客户用户姓名',
         'Impact' => '影响',
-        'Update Time' => '更新时间',
-        'Solution Time' => '解决时间',
-        'First Response Time' => '首次响应时间',
         'Move ticket to a different queue' => '将工单转移到另一个队列',
         'Change queue' => '更改队列',
 
@@ -2822,6 +2809,9 @@ sub Data {
         'Create New Phone Ticket' => '创建电话工单',
         'Please include at least one customer for the ticket.' => '请包括至少一个客户用户。',
         'To queue' => '队列',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPhoneCommon.tt
+        'Communication' => '通信',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPlain.tt
         'View Email Plain Text for %s%s%s' => '查看%s%s%s的邮件纯文本',
@@ -2925,14 +2915,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/MentionsTable.tt
         'Mentions' => '',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/TicketInformation.tt
-        'Archive' => '归档',
-        'This ticket is archived.' => '该工单已归档。',
-        'is invalid' => '',
-        'Pending till' => '挂起至',
-        'Locked' => '锁定状态',
-        'Accounted time' => '所用工时',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/ArticleContent/Invalid.tt
         'Preview of this article is not possible because %s channel is missing in the system.' =>
@@ -4478,6 +4460,7 @@ sub Data {
             '挂起时间只能在同一个活动对话框配置了状态或状态ID时使用。活动对话框：%s！',
         'Pending Date' => '挂起时间',
         'for pending* states' => '针对各种挂起状态',
+        'Next ticket state' => '工单下一状态',
         'ActivityDialogEntityID missing!' => '缺少ActivityDialogEntityID（活动对话框实体ID）！',
         'Couldn\'t get Config for ActivityDialogEntityID "%s"!' => '不能获得ActivityDialogEntityID（活动对话框实体ID） “%s”的配置！',
         'Couldn\'t use CustomerID as an invisible field.' => '不能将CustomerID（客户ID）用作不可见字段。',
@@ -4953,6 +4936,9 @@ sub Data {
         'Unable to load %s!' => '无法加载%s！',
         'Content' => '值',
 
+        # Perl Module: Kernel/Output/HTML/TicketActionCommon/TicketInformation.pm
+        'Ticket Information' => '工单信息',
+
         # Perl Module: Kernel/Output/HTML/TicketMenu/Lock.pm
         'Unlock to give it back to the queue' => '解锁并释放工单到队列',
         'Lock it to work on it' => '锁定并处理工单',
@@ -4964,9 +4950,6 @@ sub Data {
 
         # Perl Module: Kernel/Output/HTML/TicketOverviewMenu/Sort.pm
         'Order by' => '排序',
-
-        # Perl Module: Kernel/Output/HTML/TicketZoom/TicketInformation.pm
-        'Ticket Information' => '工单信息',
 
         # Perl Module: Kernel/Output/HTML/ToolBar/TicketLocked.pm
         'Locked Tickets New' => '新的锁定工单数',
@@ -6794,6 +6777,7 @@ sub Data {
             '定义服务人员界面工单关注视图工单排序的默认工单属性。',
         'Defines the default ticket order in the watch view of the agent interface. Up: oldest on top. Down: latest on top.' =>
             '定义服务人员界面工单关注视图的默认工单顺序。上：最老的在最上面，下：最近的在最上面。',
+        'Displayed in the sidebar as additional information.' => '',
         'Required permissions to use the ticket free text screen in the agent interface.' =>
             '服务人员界面使用工单自定义字段屏幕必需的权限。',
         'Defines if a ticket lock is required in the ticket free text screen of the agent interface (if the ticket isn\'t locked yet, the ticket gets locked and the current agent will be set automatically as its owner).' =>
@@ -6848,6 +6832,11 @@ sub Data {
             '为工单自定义字段操作屏幕定义历史类型，以用于服务人员界面的工单历史。',
         'Defines the history comment for the ticket free text screen action, which gets used for ticket history.' =>
             '为工单自定义字段屏幕定义历史注释信息，以用于服务人员界面的工单历史。',
+        'TicketActionCommon widget that displays the current action description.' =>
+            '',
+        'TicketActionCommon widget that displays ticket information.' => '',
+        'TicketActionCommon widget that displays customer information.' =>
+            '',
         'Required permissions to use the ticket phone outbound screen in the agent interface.' =>
             '服务人员界面使用工单拨出电话屏幕必需的权限。',
         'Defines if a ticket lock is required in the ticket phone outbound screen of the agent interface (if the ticket isn\'t locked yet, the ticket gets locked and the current agent will be set automatically as its owner).' =>
@@ -6858,6 +6847,8 @@ sub Data {
             '定义服务人员界面工单拨出电话屏幕电话工单的默认主题。',
         'Defines the default note body text for phone tickets in the ticket phone outbound screen of the agent interface.' =>
             '定义服务人员界面在工单拨出电话屏幕电话工单的默认备注正文文本。',
+        'Sets the state of a ticket in screen of the agent interface.' =>
+            '',
         'Defines the default ticket next state after adding a phone note in the ticket phone outbound screen of the agent interface.' =>
             '定义服务人员界面工单拨出电话屏幕添加电话备注后默认的工单下一状态。',
         'Next possible ticket states after adding a phone note in the ticket phone outbound screen of the agent interface.' =>
@@ -8907,6 +8898,7 @@ Thanks for your help!
             '',
         'Creates a unit test file for this ticket.' => '',
         'Croatian' => '克罗地亚语',
+        'Current action description.' => '',
         'Customer Administration' => '客户管理',
         'Customer Companies' => '客户单位',
         'Customer IDs' => '客户ID',
@@ -9365,11 +9357,13 @@ Thanks for your help!
         'Ticket Priority.' => '工单优先级。',
         'Ticket Queue Overview' => '工单队列概览',
         'Ticket Responsible.' => '工单负责人。',
+        'Ticket Settings' => '工单设置',
         'Ticket Watcher' => '工单关注人',
         'Ticket Zoom' => '工单详情',
         'Ticket Zoom.' => '工单详情。',
         'Ticket bulk module.' => '工单批量操作模块。',
         'Ticket creation' => '',
+        'Ticket information' => '',
         'Ticket limit per page for Ticket Overview "Medium".' => '工单概览基本版式的每页工单数量。',
         'Ticket limit per page for Ticket Overview "Preview".' => '工单概览预览版式的每页工单数量。',
         'Ticket limit per page for Ticket Overview "Small".' => '工单概览简洁版式的每页工单数量。',

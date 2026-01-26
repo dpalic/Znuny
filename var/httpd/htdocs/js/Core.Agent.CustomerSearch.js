@@ -422,7 +422,8 @@ Core.Agent.CustomerSearch = (function (TargetNS) {
 
         Action = Core.Config.Get('Action');
         IsAllowedAction = AllowedActions.some(function(AllowedAction) {
-            return Action === AllowedAction && !Core.Config.Get('Ticket::Frontend::' + AllowedAction + '::CustomerIDReadOnly');
+            var Config = Core.Config.Get('Ticket::Frontend::' + AllowedAction);
+            return Action === AllowedAction && Config && !Config['CustomerIDReadOnly'];
         });
 
         if (IsAllowedAction) {

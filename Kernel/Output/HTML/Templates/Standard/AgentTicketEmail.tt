@@ -8,6 +8,8 @@
 # --
 ## nofilter(TidyAll::Plugin::Znuny::TT::ScriptUsage)
 
+[% TicketFrontendConfig = Config("Ticket::Frontend::" _ Env("Action") ) %]
+
 <div class="layoutContentSidebar">
     <main class="sectionContent">
         <div class="container-fluid ARIARoleMain">
@@ -320,7 +322,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="col">
-                                                        [% INCLUDE "CustomerCompany/TicketCustomerIDSelection.tt" Required = 0 Readonly = Config("Ticket::Frontend::AgentTicketEmail::CustomerIDReadOnly") %]
+                                                        [% INCLUDE "CustomerCompany/TicketCustomerIDSelection.tt" Required = 0 Readonly = TicketFrontendConfig.CustomerIDReadOnly %]
                                                     </div>
                                                 </div>
                                             </div>
@@ -466,7 +468,7 @@
                                                     </div>
                                                     [% RenderBlockEnd("TicketType") %]
                                                     <div class="col">
-                                                        <label for="NextStateID">[% Translate("Next ticket state") | html %]:</label>
+                                                        <label for="NextStateID">[% Translate("State") | html %]:</label>
                                                         <div class="Field">
                                                             [% Data.NextStatesStrg %]
                                                         </div>
@@ -502,7 +504,7 @@
                                     <div class="mod modCard">
                                         <div class="inner">
                                             <div class="cardTitle">
-                                                <h2>[% Translate("Dynamic Info") | html %]</h2>
+                                                <h2>[% Translate("Dynamic Fields") | html %]</h2>
                                                 <span class="cardTitleTrigger"></span>
                                             </div>
                                             <div class="cardContent">

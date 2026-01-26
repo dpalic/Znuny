@@ -1831,30 +1831,33 @@ sub Footer {
 
     # add JS data
     my %JSConfig = (
-        Baselink                       => $Self->{Baselink},
-        CGIHandle                      => $Self->{CGIHandle},
-        WebPath                        => $WebPath,
-        Action                         => $Self->{Action},
-        Subaction                      => $Self->{Subaction},
-        SessionIDCookie                => $Self->{SessionIDCookie},
-        SessionName                    => $Self->{SessionName},
-        SessionID                      => $Self->{SessionID},
-        SessionUseCookie               => $ConfigObject->Get('SessionUseCookie'),
-        ChallengeToken                 => $Self->{UserChallengeToken},
-        CustomerPanelSessionName       => $ConfigObject->Get('CustomerPanelSessionName'),
-        UserLanguage                   => $Self->{UserLanguage},
-        CKEUserLanguage                => $CKEUserLanguage,
-        IncludeRichTextTranslation     => $IncludeRichTextTranslation,
-        WebMaxFileUpload               => $ConfigObject->Get('WebMaxFileUpload'),
-        RichTextSet                    => $RichTextSet,
-        CheckEmailAddresses            => $ConfigObject->Get('CheckEmailAddresses'),
-        MenuDragDropEnabled            => $ConfigObject->Get('Frontend::MenuDragDropEnabled'),
-        OpenMainMenuOnHover            => $ConfigObject->Get('OpenMainMenuOnHover'),
-        CustomerInfoSet                => $ConfigObject->Get('Ticket::Frontend::CustomerInfoCompose'),
-        IncludeUnknownTicketCustomers  => $ConfigObject->Get('Ticket::IncludeUnknownTicketCustomers'),
-        InputFieldsActivated           => $ConfigObject->Get('ModernizeFormFields'),
-        DatepickerShowWeek             => $ConfigObject->Get('Datepicker::ShowWeek') || 0,
-        PendingStateIDs                => \@PendingStateIDs,
+        Baselink                      => $Self->{Baselink},
+        CGIHandle                     => $Self->{CGIHandle},
+        WebPath                       => $WebPath,
+        Action                        => $Self->{Action},
+        Subaction                     => $Self->{Subaction},
+        SessionIDCookie               => $Self->{SessionIDCookie},
+        SessionName                   => $Self->{SessionName},
+        SessionID                     => $Self->{SessionID},
+        SessionUseCookie              => $ConfigObject->Get('SessionUseCookie'),
+        ChallengeToken                => $Self->{UserChallengeToken},
+        CustomerPanelSessionName      => $ConfigObject->Get('CustomerPanelSessionName'),
+        UserLanguage                  => $Self->{UserLanguage},
+        CKEUserLanguage               => $CKEUserLanguage,
+        IncludeRichTextTranslation    => $IncludeRichTextTranslation,
+        WebMaxFileUpload              => $ConfigObject->Get('WebMaxFileUpload'),
+        RichTextSet                   => $RichTextSet,
+        CheckEmailAddresses           => $ConfigObject->Get('CheckEmailAddresses'),
+        MenuDragDropEnabled           => $ConfigObject->Get('Frontend::MenuDragDropEnabled'),
+        OpenMainMenuOnHover           => $ConfigObject->Get('OpenMainMenuOnHover'),
+        CustomerInfoSet               => $ConfigObject->Get('Ticket::Frontend::CustomerInfoCompose'),
+        IncludeUnknownTicketCustomers => $ConfigObject->Get('Ticket::IncludeUnknownTicketCustomers'),
+        InputFieldsActivated          => $ConfigObject->Get('ModernizeFormFields'),
+        DatepickerShowWeek            => $ConfigObject->Get('Datepicker::ShowWeek') || 0,
+        PendingStateIDs               => \@PendingStateIDs,
+
+        'Ticket::Frontend::' . $Self->{Action} => $ConfigObject->Get( 'Ticket::Frontend::' . $Self->{Action} ),
+
         CheckSearchStringsForStopWords => (
             $ConfigObject->Get('Ticket::SearchIndex::WarnOnStopWordUsage')
                 &&
@@ -2407,8 +2410,9 @@ build a HTML option element based on given data
         DisabledBranch => 'Branch',          # (optional) disable all elements of this branch (use string or arrayref)
         Max            => 100,               # (optional) default 100 max size of the shown value
         HTMLQuote      => 0,                 # (optional) default 1 (0|1) disable html quote
-        Title          => 'C<Tooltip> Text',    # (optional) string will be shown as c<Tooltip> on c<mouseover>
+        Title          => 'C<Tooltip> Text', # (optional) string will be shown as c<Tooltip> on c<mouseover>
         OptionTitle    => 1,                 # (optional) default 0 (0|1) show title attribute (the option value) on every option element
+        Placeholder    => 'Placeholder',     # (optional) string will be shown as placeholder text in the input field
 
         Filters => {                         # (optional) filter data, used by InputFields
             LastOwners => {                  # filter id
@@ -2568,6 +2572,7 @@ sub BuildSelection {
         AttributeRef       => $AttributeRef,
         DataRef            => $DataRef,
         OptionTitle        => $Param{OptionTitle},
+        Placeholder        => $Param{Placeholder},
         TreeView           => $Param{TreeView},
         FiltersRef         => \@Filters,
         FilterActive       => $FilterActive,
@@ -5645,7 +5650,7 @@ sub _BuildSelectionAttributeRefCreate {
     my $AttributeRef = {};
 
     # check params with key and value
-    for my $Needed (qw(Name ID Size Class OnChange OnClick AutoComplete)) {
+    for my $Needed (qw(Name ID Size Class OnChange OnClick AutoComplete Placeholder)) {
         if ( $Param{$Needed} ) {
             $AttributeRef->{ lc($Needed) } = $Param{$Needed};
         }
@@ -6152,6 +6157,7 @@ create the html string
     my $HTMLString = $LayoutObject->_BuildSelectionOutput(
         AttributeRef       => $AttributeRef,
         DataRef            => $DataRef,
+        OptionTitle        => 1,              # optional, see BuildSelection()
         TreeView           => 0,              # optional, see BuildSelection()
         FiltersRef         => \@Filters,      # optional, see BuildSelection()
         FilterActive       => $FilterActive,  # optional, see BuildSelection()

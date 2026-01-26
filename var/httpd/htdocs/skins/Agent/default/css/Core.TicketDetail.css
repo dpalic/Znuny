@@ -810,8 +810,8 @@ tbody td.Sender {
     color: var(--black);
     font-weight: var(--normal);
     padding-left: var(--padding-sm);
-    margin-top: var(--margin-sm);
-    margin-bottom: 0;
+    margin-top: var(--margin-md);
+    margin-bottom: var(--margin-md);
 }
 
 .ProcessInformation > fieldset.flex-column {

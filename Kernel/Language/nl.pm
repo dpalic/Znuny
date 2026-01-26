@@ -32,7 +32,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d-%m-%Y';
     $Self->{DateInputFormat}     = '%d-%m-%Y';
     $Self->{DateInputFormatLong} = '%d-%m-%Y - %T';
-    $Self->{Completeness}        = 0.479635840919981;
+    $Self->{Completeness}        = 0.478886756238004;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2647,56 +2647,53 @@ sub Data {
             'Deze rapportage bevat configuratiefouten en kan niet worden gebruikt',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
-        'Change Free Text of %s%s%s' => '',
-        'Change Owner of %s%s%s' => 'Verander de eigenaar van %s %s %s',
-        'Close %s%s%s' => 'Sluit %s%s%s',
-        'Add Note to %s%s%s' => 'Voeg notitie aan %s%s%s',
-        'Set Pending Time for %s%s%s' => '',
-        'Change Priority of %s%s%s' => 'Wijzig de prioriteit van %s%s%s',
-        'Change Responsible of %s%s%s' => 'Wijzig de verantwoordelijke van %s%s%s',
         'The ticket has been locked' => 'Het ticket is vergrendeld',
-        'Ticket Settings' => 'Ticket instellingen',
+        'Unlock and close popup' => '',
         'Customer user' => 'Klant',
         'Service invalid.' => 'Service is ongeldig.',
-        'SLA invalid.' => 'SLA ongeldig',
         'Team Data' => '',
         'Queue invalid.' => 'Wachtrij ongeldig',
-        'New Owner' => 'Nieuwe eigenaar',
         'Please set a new owner!' => 'Kies een nieuwe eigenaar.',
         'Owner invalid.' => 'Eigenaar ongeldig',
-        'New Responsible' => 'Nieuwe verantwoordelijke',
         'Please set a new responsible!' => 'Kies een nieuwe verantwoordelijke!',
         'Responsible invalid.' => 'Verantwoordelijke ongeldig',
         'Ticket Data' => '',
-        'Next state' => 'Status',
         'State invalid.' => 'Status ongeldig',
         'For all pending* states.' => 'Voor alle cases die staan te wachten',
-        'Dynamic Info' => '',
-        'Add Article' => 'Voeg Artikel toe',
+        'Communications' => '',
         'Inform' => '',
         'Inform agents' => 'Stel gebruikers op de hoogte',
         'Inform involved agents' => 'Stel betrokken gebruikers op de hoogte',
         'Here you can select additional agents which should receive a notification regarding the new article.' =>
             'Hier kun je extra gebruikers aanvinken die een notificatie zouden moeten krijgen over het nieuwe artikel.',
         'Text will also be received by' => '',
-        'Communications' => '',
         'Create an Article' => 'Maak een Artikel',
         'Setting a template will overwrite any text or attachment.' => 'Het instellen van een template overschrijft alle testen en bijlagen.',
+        'Article' => 'Interactie',
+        'Undo & close' => 'Ongedaan maken & sluiten',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon/TicketInformation.tt
+        'Archive' => 'Archief',
+        'This ticket is archived.' => 'Dit ticket is gearchiveerd.',
+        'is invalid' => '',
+        'Pending till' => 'In de wacht tot',
+        'Locked' => 'Vergrendeling',
+        'First Response Time' => 'Eerste reactie',
+        'Update Time' => 'Vervolg tijd',
+        'Solution Time' => 'Oplossingstijd',
+        'Accounted time' => 'Bestede tijd',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBounce.tt
-        'Bounce %s%s%s' => '',
-        'cancel' => '',
         'Bounce to' => 'Bounce naar',
         'You need a email address.' => 'E-mailadres is verplicht.',
         'Need a valid email address or don\'t use a local email address.' =>
             'Een e-mailadres is verplicht. U kunt geen lokale adressen gebruiken.',
-        'Next ticket state' => 'Status',
         'Inform sender' => 'Informeer afzender',
-        'Send mail' => 'Bericht versturen',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBulk.tt
         'Ticket Bulk Action' => 'Ticket bulk-actie',
         'Send Email' => 'Stuur e-mail',
+        'Next state' => 'Status',
         'Merge' => 'Samenvoegen',
         'Merge to' => 'Voeg samen met',
         'Invalid ticket identifier!' => 'Ongeldige ticket identifier.',
@@ -2721,7 +2718,7 @@ sub Data {
         'This address is registered as system address and cannot be used: %s' =>
             'Dit adres is geregistreerd als een systee adres en kan niet worden gebruikt.',
         'Bcc' => 'Bcc',
-        'Undo & close' => 'Ongedaan maken & sluiten',
+        'Send mail' => 'Bericht versturen',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketCustomer.tt
         'Change Customer of %s%s%s' => 'Wijzig klant van %s%s%s',
@@ -2733,9 +2730,6 @@ sub Data {
         'Please include at least one customer user for the ticket.' => 'Selecteer tenminste een klant voor dit ticket.',
         'From queue' => 'In wachtrij',
         'Get all' => 'Gebruik alle',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailOutbound.tt
-        'Undo & Close' => '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
         'Resend Email for %s%s%s' => '',
@@ -2762,10 +2756,8 @@ sub Data {
         'Filter for history items' => '',
         'Expand/Collapse all' => '',
         'CreateTime' => 'Aangemaakt op',
-        'Article' => 'Interactie',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketMerge.tt
-        'Merge %s%s%s' => 'Samenvoegen %s%s%s',
         'Merge Settings' => 'Samenvoegingsinstellingen',
         'Try typing part of the ticket number or title in order to search by it.' =>
             '',
@@ -2776,13 +2768,11 @@ sub Data {
         'Need a valid email address.' => 'Geen geldig e-mailadres.',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketMove.tt
-        'Move %s%s%s' => '',
         'New Queue' => 'Nieuwe wachtrij',
-        'Communication' => 'Communicatie',
+        'New Owner' => 'Nieuwe eigenaar',
         'Move' => 'Verplaatsen',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketNoteToLinkedTicket.tt
-        'Add note to linked %s%s%s' => '',
         'Notes' => '',
         'Note to linked Ticket' => '',
         'LinkList invalid.' => '',
@@ -2796,9 +2786,6 @@ sub Data {
         'Sender' => 'Afzender',
         'Customer User Name' => '',
         'Impact' => 'Impact',
-        'Update Time' => 'Vervolg tijd',
-        'Solution Time' => 'Oplossingstijd',
-        'First Response Time' => 'Eerste reactie',
         'Move ticket to a different queue' => 'Verplaats naar nieuwe wachtrij',
         'Change queue' => 'Verplaats naar wachtrij',
 
@@ -2821,6 +2808,9 @@ sub Data {
         'Create New Phone Ticket' => 'Maak nieuw telefoon ticket aan',
         'Please include at least one customer for the ticket.' => 'Voeg ten minste één klant toe voor dit ticket.',
         'To queue' => 'In wachtrij',
+
+        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPhoneCommon.tt
+        'Communication' => 'Communicatie',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketPlain.tt
         'View Email Plain Text for %s%s%s' => '',
@@ -2924,14 +2914,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/MentionsTable.tt
         'Mentions' => '',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom/TicketInformation.tt
-        'Archive' => 'Archief',
-        'This ticket is archived.' => 'Dit ticket is gearchiveerd.',
-        'is invalid' => '',
-        'Pending till' => 'In de wacht tot',
-        'Locked' => 'Vergrendeling',
-        'Accounted time' => 'Bestede tijd',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/ArticleContent/Invalid.tt
         'Preview of this article is not possible because %s channel is missing in the system.' =>
@@ -4477,6 +4459,7 @@ sub Data {
             'Wacht op tijd kan alleen gebruikt worden wanneer Status of StatusID is geconfigureerd voor dezelfde ActiviteitDialoog. ActiviteitDialoog: %s!',
         'Pending Date' => 'Wacht tot datum',
         'for pending* states' => 'voor \'wachtend op-\' statussen',
+        'Next ticket state' => 'Status',
         'ActivityDialogEntityID missing!' => '',
         'Couldn\'t get Config for ActivityDialogEntityID "%s"!' => '',
         'Couldn\'t use CustomerID as an invisible field.' => '',
@@ -4952,6 +4935,9 @@ sub Data {
         'Unable to load %s!' => '',
         'Content' => 'Inhoud',
 
+        # Perl Module: Kernel/Output/HTML/TicketActionCommon/TicketInformation.pm
+        'Ticket Information' => 'Ticket-informatie',
+
         # Perl Module: Kernel/Output/HTML/TicketMenu/Lock.pm
         'Unlock to give it back to the queue' => 'Ontgrendelen om dit ticket vrij te geven',
         'Lock it to work on it' => 'Vergrendel dit ticket',
@@ -4963,9 +4949,6 @@ sub Data {
 
         # Perl Module: Kernel/Output/HTML/TicketOverviewMenu/Sort.pm
         'Order by' => 'Sorteren op',
-
-        # Perl Module: Kernel/Output/HTML/TicketZoom/TicketInformation.pm
-        'Ticket Information' => 'Ticket-informatie',
 
         # Perl Module: Kernel/Output/HTML/ToolBar/TicketLocked.pm
         'Locked Tickets New' => 'Nieuwe vergrendelde tickets',
@@ -6793,6 +6776,7 @@ sub Data {
             '',
         'Defines the default ticket order in the watch view of the agent interface. Up: oldest on top. Down: latest on top.' =>
             '',
+        'Displayed in the sidebar as additional information.' => '',
         'Required permissions to use the ticket free text screen in the agent interface.' =>
             '',
         'Defines if a ticket lock is required in the ticket free text screen of the agent interface (if the ticket isn\'t locked yet, the ticket gets locked and the current agent will be set automatically as its owner).' =>
@@ -6847,6 +6831,11 @@ sub Data {
             '',
         'Defines the history comment for the ticket free text screen action, which gets used for ticket history.' =>
             '',
+        'TicketActionCommon widget that displays the current action description.' =>
+            '',
+        'TicketActionCommon widget that displays ticket information.' => '',
+        'TicketActionCommon widget that displays customer information.' =>
+            '',
         'Required permissions to use the ticket phone outbound screen in the agent interface.' =>
             '',
         'Defines if a ticket lock is required in the ticket phone outbound screen of the agent interface (if the ticket isn\'t locked yet, the ticket gets locked and the current agent will be set automatically as its owner).' =>
@@ -6856,6 +6845,8 @@ sub Data {
         'Defines the default subject for phone tickets in the ticket phone outbound screen of the agent interface.' =>
             '',
         'Defines the default note body text for phone tickets in the ticket phone outbound screen of the agent interface.' =>
+            '',
+        'Sets the state of a ticket in screen of the agent interface.' =>
             '',
         'Defines the default ticket next state after adding a phone note in the ticket phone outbound screen of the agent interface.' =>
             '',
@@ -8907,6 +8898,7 @@ Het Helpdesk Team
             '',
         'Creates a unit test file for this ticket.' => '',
         'Croatian' => '',
+        'Current action description.' => '',
         'Customer Administration' => 'Beheer klanten',
         'Customer Companies' => 'Bedrijven',
         'Customer IDs' => '',
@@ -9365,11 +9357,13 @@ Het Helpdesk Team
         'Ticket Priority.' => '',
         'Ticket Queue Overview' => 'Ticketwachtrij overzicht',
         'Ticket Responsible.' => '',
+        'Ticket Settings' => 'Ticket instellingen',
         'Ticket Watcher' => '',
         'Ticket Zoom' => '',
         'Ticket Zoom.' => '',
         'Ticket bulk module.' => '',
         'Ticket creation' => '',
+        'Ticket information' => '',
         'Ticket limit per page for Ticket Overview "Medium".' => '',
         'Ticket limit per page for Ticket Overview "Preview".' => '',
         'Ticket limit per page for Ticket Overview "Small".' => '',
