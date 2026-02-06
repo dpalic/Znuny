@@ -29,7 +29,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%m/%d/%Y';
     $Self->{DateInputFormat}     = '%m/%d/%Y';
     $Self->{DateInputFormatLong} = '%m/%d/%Y - %T';
-    $Self->{Completeness}        = 0.42274472168906;
+    $Self->{Completeness}        = 0.422609529900863;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -8144,6 +8144,8 @@ Mfano:
             '',
         'Names of system config options with email addresses to also be selectable for an outbound email profile (besides system addresses).' =>
             '',
+        'List of session (keys) that are allowed to be updated by UpdateAJAX subaction of frontend module AgentSession. These are regular expressions.' =>
+            '',
 
         # XML Definition: scripts/database/initial_insert.xml
         'invalid-temporarily' => 'isiyo halali kwa muda mfupi',
@@ -8746,6 +8748,7 @@ Thanks for your help!
         'Agent Name' => '',
         'Agent Name + FromSeparator + System Address Display Name' => '',
         'Agent Preferences.' => '',
+        'Agent Session.' => '',
         'Agent Statistics.' => '',
         'Agent User Search' => '',
         'Agent User Search.' => '',

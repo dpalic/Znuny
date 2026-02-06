@@ -32,7 +32,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%m-%d';
     $Self->{DateInputFormat}     = '%Y-%m-%d';
     $Self->{DateInputFormatLong} = '%Y-%m-%d - %T';
-    $Self->{Completeness}        = 0.989603326935381;
+    $Self->{Completeness}        = 0.989286856411896;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -8144,6 +8144,8 @@ sub Data {
             'Meghatározza, hogy mely tartalomtípusok engedélyezettek a melléklet előnézetéhez.',
         'Names of system config options with email addresses to also be selectable for an outbound email profile (besides system addresses).' =>
             '',
+        'List of session (keys) that are allowed to be updated by UpdateAJAX subaction of frontend module AgentSession. These are regular expressions.' =>
+            '',
 
         # XML Definition: scripts/database/initial_insert.xml
         'invalid-temporarily' => 'átmenetileg érvénytelen',
@@ -8757,6 +8759,7 @@ Az Ön ügyfélszolgálati csapata
         'Agent Name' => 'Ügyintézőnév',
         'Agent Name + FromSeparator + System Address Display Name' => 'Ügyintézőnév + feladóelválasztó + rendszercím megjelenített neve',
         'Agent Preferences.' => 'Ügyintézői beállítások.',
+        'Agent Session.' => '',
         'Agent Statistics.' => 'Ügyintézői statisztikák.',
         'Agent User Search' => 'Ügyintézői felhasználó-keresés',
         'Agent User Search.' => 'Ügyintézői felhasználó-keresés.',

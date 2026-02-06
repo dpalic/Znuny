@@ -25277,3 +25277,19 @@ msgstr ""
 msgid "Ticket information"
 msgstr ""
 
+#. Perl Module: Kernel/Modules/AgentSession.pm
+msgid "Invalid subaction!"
+msgstr ""
+
+#. XML Definition: Kernel/Config/Files/XML/Znuny.xml
+msgid "List of session keys that are allowed to be updated by UpdateAJAX subaction of frontend module AgentSession."
+msgstr ""
+
+#. SysConfig
+msgid "Agent Session."
+msgstr ""
+
+#. XML Definition: Kernel/Config/Files/XML/Znuny.xml
+msgid "List of session (keys) that are allowed to be updated by UpdateAJAX subaction of frontend module AgentSession. These are regular expressions."
+msgstr ""
+

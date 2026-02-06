@@ -12,6 +12,7 @@
         <script type="application/json" class="alertData">
             {
                 "type": "[% Data.type || "notice" | html %]",
+                "id": "[% Data.id | html %]",
                 "message": "[% Data.message | html %]",
                 "hideAfter": [% Data.hideAfter || 0 %],
                 "actionSeparator": "[% Data.actionSeparator || Translate("or") | html %]",

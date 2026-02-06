@@ -8139,6 +8139,8 @@ sub Data {
             'Legt fest, welche ContentTypes für die Anlagenvorschau zulässig sind.',
         'Names of system config options with email addresses to also be selectable for an outbound email profile (besides system addresses).' =>
             'Namen von Systemkonfigurationsoptionen mit E-Mail-Adressen, die ebenfalls in einem Profil für ausgehende E-Mails auswählbar sein sollen (neben Systemadressen).',
+        'List of session (keys) that are allowed to be updated by UpdateAJAX subaction of frontend module AgentSession. These are regular expressions.' =>
+            'Liste der Sitzungen (Schlüssel), die durch die Unteraktion UpdateAJAX des Frontend-Moduls AgentSession aktualisiert werden dürfen. Dabei handelt es sich um reguläre Ausdrücke.',
 
         # XML Definition: scripts/database/initial_insert.xml
         'invalid-temporarily' => 'ungültig-temporär',
@@ -8751,6 +8753,7 @@ Ihr Helpdesk-Team
         'Agent Name' => 'Agentenname',
         'Agent Name + FromSeparator + System Address Display Name' => 'Agenten-Name + From-Trennzeichen + Anzeigename der System-Adresse',
         'Agent Preferences.' => 'Agenten-Einstellungen.',
+        'Agent Session.' => 'Agent Sitzung.',
         'Agent Statistics.' => 'Agent Statistiken.',
         'Agent User Search' => 'Nutzersuche Agentenbereich',
         'Agent User Search.' => 'Nutzersuche Agentenbereich.',

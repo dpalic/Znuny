@@ -30,7 +30,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%m-%d';
     $Self->{DateInputFormat}     = '%Y-%m-%d';
     $Self->{DateInputFormatLong} = '%Y-%m-%d - %T';
-    $Self->{Completeness}        = 0.636756238003839;
+    $Self->{Completeness}        = 0.636552606331948;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -8143,6 +8143,8 @@ sub Data {
             '',
         'Names of system config options with email addresses to also be selectable for an outbound email profile (besides system addresses).' =>
             '',
+        'List of session (keys) that are allowed to be updated by UpdateAJAX subaction of frontend module AgentSession. These are regular expressions.' =>
+            '',
 
         # XML Definition: scripts/database/initial_insert.xml
         'invalid-temporarily' => 'czasowo nieaktualne',
@@ -8755,6 +8757,7 @@ Twój Zespół Helpdesk.
         'Agent Name' => 'Imię i nazwisko Agenta',
         'Agent Name + FromSeparator + System Address Display Name' => 'Imię i nazwisko agenta + Separator + Systemowy adres ',
         'Agent Preferences.' => 'Preferencje Agenta',
+        'Agent Session.' => '',
         'Agent Statistics.' => 'Statystyki Agenta',
         'Agent User Search' => '',
         'Agent User Search.' => '',

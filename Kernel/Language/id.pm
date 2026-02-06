@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d/%m/%Y';
     $Self->{DateInputFormat}     = '%d/%m/%Y';
     $Self->{DateInputFormatLong} = '%d/%m/%Y - %T';
-    $Self->{Completeness}        = 0.583973128598848;
+    $Self->{Completeness}        = 0.5837863767189;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -8141,6 +8141,8 @@ bin/znuny.Daemon.pl status\').',
             '',
         'Names of system config options with email addresses to also be selectable for an outbound email profile (besides system addresses).' =>
             '',
+        'List of session (keys) that are allowed to be updated by UpdateAJAX subaction of frontend module AgentSession. These are regular expressions.' =>
+            '',
 
         # XML Definition: scripts/database/initial_insert.xml
         'invalid-temporarily' => 'tidak valid sementara',
@@ -8754,6 +8756,7 @@ Helpdesk Team Anda
         'Agent Name' => 'Nama agen',
         'Agent Name + FromSeparator + System Address Display Name' => 'Agen Nama + Dari Separator + Sistem Alamat Nama Tampilan',
         'Agent Preferences.' => 'Preferensi agen.',
+        'Agent Session.' => '',
         'Agent Statistics.' => '',
         'Agent User Search' => '',
         'Agent User Search.' => '',

@@ -56,17 +56,31 @@
          * @method onStart
          */
         onStart: function () {
-            var html, messagesModule;
+            var html, messagesModule, messageId;
 
             this.bindEvents();
 
             if (this.alertData) {
-                html = this.createAlert(this.alertData);
-
-                // Find the Messages module and send the generated HTML to it
+                // Find the Messages module first
                 messagesModule = this.findMessagesModule();
                 if (messagesModule) {
-                    messagesModule.addMessage(html, this.alertData.type || 'notice', this.alertData.hideAfter || 0);
+                    // Generate messageId from alert data (use id if provided, otherwise generate from message text using Messages module)
+                    if (this.alertData.id) {
+                        messageId = this.alertData.id;
+                    } else if (messagesModule.generateMessageId) {
+                        messageId = messagesModule.generateMessageId(this.alertData.message);
+                    }
+
+                    // Check if message was already closed before creating it
+                    if (messagesModule.isMessageClosed && messagesModule.isMessageClosed(messageId)) {
+                        // Message was closed, don't display it
+                        return;
+                    }
+
+                    html = this.createAlert(this.alertData);
+
+                    // Send the generated HTML to Messages module with messageId
+                    messagesModule.addMessage(html, this.alertData.type || 'notice', this.alertData.hideAfter || 0, messageId);
                 }
             }
         },
@@ -137,7 +151,6 @@
                 }
             }
         },
-
 
         capitalizeFirstLetter: function (string) {
             return string.charAt(0).toUpperCase() + string.slice(1);

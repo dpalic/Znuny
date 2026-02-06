@@ -30,7 +30,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d/%m/%Y';
     $Self->{DateInputFormat}     = '%d/%m/%Y';
     $Self->{DateInputFormatLong} = '%d/%m/%Y - %T';
-    $Self->{Completeness}        = 0.831413947536788;
+    $Self->{Completeness}        = 0.831148065238247;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -8142,6 +8142,8 @@ sub Data {
             '',
         'Names of system config options with email addresses to also be selectable for an outbound email profile (besides system addresses).' =>
             '',
+        'List of session (keys) that are allowed to be updated by UpdateAJAX subaction of frontend module AgentSession. These are regular expressions.' =>
+            '',
 
         # XML Definition: scripts/database/initial_insert.xml
         'invalid-temporarily' => 'inválido-temporariamente',
@@ -8755,6 +8757,7 @@ Obrigado pela ajuda!
         'Agent Name' => 'Nome do Agente',
         'Agent Name + FromSeparator + System Address Display Name' => 'Nome do Agente + FromSeparator + Nome de Exibição do Endereço de Sistema',
         'Agent Preferences.' => 'Preferências do Agente.',
+        'Agent Session.' => '',
         'Agent Statistics.' => 'Estatísticas de Agente.',
         'Agent User Search' => 'Pesquisa de Agente',
         'Agent User Search.' => 'Pesquisa de Usuário Agente.',

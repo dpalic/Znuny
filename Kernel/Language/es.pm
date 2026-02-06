@@ -33,7 +33,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d/%m/%Y';
     $Self->{DateInputFormat}     = '%d/%m/%Y';
     $Self->{DateInputFormatLong} = '%d/%m/%Y - %T';
-    $Self->{Completeness}        = 0.573096609085093;
+    $Self->{Completeness}        = 0.572913335465302;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -8152,6 +8152,8 @@ El control del acceso adicional para demostrar o no demostrar éste enlace puede
             '',
         'Names of system config options with email addresses to also be selectable for an outbound email profile (besides system addresses).' =>
             '',
+        'List of session (keys) that are allowed to be updated by UpdateAJAX subaction of frontend module AgentSession. These are regular expressions.' =>
+            '',
 
         # XML Definition: scripts/database/initial_insert.xml
         'invalid-temporarily' => 'temporalmente-no-válido',
@@ -8765,6 +8767,7 @@ Tu Equipo de Soporte
         'Agent Name' => 'Nombre del agente',
         'Agent Name + FromSeparator + System Address Display Name' => 'Nombre del Agente + DesdeSeparador + Nombre de la Dirección del Sistema para Mostrar',
         'Agent Preferences.' => 'Preferencias del Agente.',
+        'Agent Session.' => '',
         'Agent Statistics.' => 'Estadísticas de agente.',
         'Agent User Search' => '',
         'Agent User Search.' => '',

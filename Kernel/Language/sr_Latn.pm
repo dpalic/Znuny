@@ -32,7 +32,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d.%m.%Y';
     $Self->{DateInputFormat}     = '%d.%m.%Y';
     $Self->{DateInputFormatLong} = '%d.%m.%Y - %T';
-    $Self->{Completeness}        = 0.861004478566859;
+    $Self->{Completeness}        = 0.860729133354653;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -8144,6 +8144,8 @@ sub Data {
             '',
         'Names of system config options with email addresses to also be selectable for an outbound email profile (besides system addresses).' =>
             '',
+        'List of session (keys) that are allowed to be updated by UpdateAJAX subaction of frontend module AgentSession. These are regular expressions.' =>
+            '',
 
         # XML Definition: scripts/database/initial_insert.xml
         'invalid-temporarily' => 'nevažeći-privremeno',
@@ -8757,6 +8759,7 @@ Vaša tehnička podrška
         'Agent Name' => 'Ime operatera',
         'Agent Name + FromSeparator + System Address Display Name' => 'Naziv operatera + separator "od" + sistemska adresa za prikaz',
         'Agent Preferences.' => 'Operaterska podešavanja.',
+        'Agent Session.' => '',
         'Agent Statistics.' => 'Statistike za interfejs operatera.',
         'Agent User Search' => 'Pretraga korisnika za operatere',
         'Agent User Search.' => 'Pretraga korisnika za operatere.',

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2026-01-26 09:26+0000\n"
+"POT-Creation-Date: 2026-02-06 13:06+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20950,6 +20950,10 @@ msgstr ""
 msgid "Names of system config options with email addresses to also be selectable for an outbound email profile (besides system addresses)."
 msgstr ""
 
+#. XML Definition: Kernel/Config/Files/XML/Znuny.xml
+msgid "List of session (keys) that are allowed to be updated by UpdateAJAX subaction of frontend module AgentSession. These are regular expressions."
+msgstr ""
+
 #. XML Definition: scripts/database/initial_insert.xml
 msgid "invalid-temporarily"
 msgstr ""
@@ -22479,6 +22483,10 @@ msgstr ""
 
 #. SysConfig
 msgid "Agent Preferences."
+msgstr ""
+
+#. SysConfig
+msgid "Agent Session."
 msgstr ""
 
 #. SysConfig

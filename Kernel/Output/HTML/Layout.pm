@@ -1829,6 +1829,16 @@ sub Footer {
 
     $IncludeRichTextTranslation = 1 if $RichTextSet && -e $LanguageFileWebPath;
 
+    # Get closed messages from session
+    my $SessionObject      = $Kernel::OM->Get('Kernel::System::AuthSession');
+    my $UserClosedMessages = '[]';
+    if ( $Self->{SessionID} ) {
+        my %SessionData = $SessionObject->GetSessionIDData( SessionID => $Self->{SessionID} );
+        if ( $SessionData{UserClosedMessages} ) {
+            $UserClosedMessages = $SessionData{UserClosedMessages};
+        }
+    }
+
     # add JS data
     my %JSConfig = (
         Baselink                      => $Self->{Baselink},
@@ -1871,6 +1881,7 @@ sub Footer {
         'Mentions::RichTextEditor' => $ConfigObject->Get('Mentions::RichTextEditor') // {},
         Skin                       => $Self->{SkinSelected},
         AutoAttributFieldIDMapping => $ConfigObject->Get('AutoAttributFieldIDMapping') || 1,
+        UserClosedMessages         => $UserClosedMessages,
     );
 
     for my $Config ( sort keys %JSConfig ) {

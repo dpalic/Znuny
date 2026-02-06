@@ -27,7 +27,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d.%m.%Y';
     $Self->{DateInputFormat}     = '%d.%m.%Y';
     $Self->{DateInputFormatLong} = '%d.%m.%Y - %T';
-    $Self->{Completeness}        = 0.861004478566859;
+    $Self->{Completeness}        = 0.860729133354653;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -8139,6 +8139,8 @@ sub Data {
             '',
         'Names of system config options with email addresses to also be selectable for an outbound email profile (besides system addresses).' =>
             '',
+        'List of session (keys) that are allowed to be updated by UpdateAJAX subaction of frontend module AgentSession. These are regular expressions.' =>
+            '',
 
         # XML Definition: scripts/database/initial_insert.xml
         'invalid-temporarily' => 'неважећи-привремено',
@@ -8752,6 +8754,7 @@ Thanks for your help!
         'Agent Name' => 'Име оператера',
         'Agent Name + FromSeparator + System Address Display Name' => 'Назив оператера + сепаратор "oд" + системска адреса за приказ',
         'Agent Preferences.' => 'Оператерска подешавања.',
+        'Agent Session.' => '',
         'Agent Statistics.' => 'Статистике за интерфејс оператера.',
         'Agent User Search' => 'Претрага корисника за оператере',
         'Agent User Search.' => 'Претрага корисника за оператере.',
