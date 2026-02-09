@@ -162,7 +162,7 @@
                                                                 <div class="customerSelector" role="form">
                                                                     <div class="customerSelectorField">
                                                                         <!-- Customer selector label -->
-                                                                        <label for="CcCustomerSelectorInput" class="customerSelectorFieldLabel customerSelectorFieldLabelRequired">
+                                                                        <label for="CcCustomerSelectorInput" class="customerSelectorFieldLabel">
                                                                             [% Translate("Cc") | html %]:
                                                                         </label>
 
@@ -248,7 +248,7 @@
                                                                 <div class="customerSelector" role="form">
                                                                     <div class="customerSelectorField">
                                                                         <!-- Customer selector label -->
-                                                                        <label for="BccCustomerSelectorInput" class="customerSelectorFieldLabel customerSelectorFieldLabelRequired">
+                                                                        <label for="BccCustomerSelectorInput" class="customerSelectorFieldLabel">
                                                                             [% Translate("Bcc") | html %]:
                                                                         </label>
 
