@@ -4472,7 +4472,6 @@
         <Value>
             <Hash>
                 <Item Key="application/json">json</Item>
-                <Item Key="application/octet-stream">markdown</Item>
                 <Item Key="application/pdf">pdf</Item>
                 <Item Key="image/gif">gif</Item>
                 <Item Key="image/jpeg">jpeg</Item>
