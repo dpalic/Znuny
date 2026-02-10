@@ -12,6 +12,7 @@ package Kernel::Modules::CustomerTicketProcess;
 
 use strict;
 use warnings;
+use utf8;
 
 use Kernel::System::VariableCheck qw(:all);
 use Kernel::Language              qw(Translatable);
@@ -3953,7 +3954,11 @@ sub _StoreActivityDialog {
                     $HistoryType = 'FollowUp';
                 }
 
-                my $From = "$Self->{UserFullname} <$Self->{UserEmail}>";
+                my $FullName = $Kernel::OM->Get('Kernel::System::CustomerUser')->CustomerName(
+                    UserLogin => $Self->{UserLogin},
+                );
+                my $From = "\"$FullName\" <$Self->{UserEmail}>";
+
                 $ArticleID = $ArticleBackendObject->ArticleCreate(
                     TicketID             => $TicketID,
                     SenderType           => 'customer',
