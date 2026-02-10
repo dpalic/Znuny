@@ -1,4 +1,5 @@
 # 7.3.1 2025-??-??
+ - 2025-02-10 Fixed: Console command Admin::Group::UserLink and Admin::Group::RoleLink with inconsistent available permissions.
  - 2025-02-10 Fixed: Sender address for process tickets is not assigned properly in CustomerInterface.
  - 2026-02-09 Fixed: The attachment dialog displays a preview for non-presentable items. Removed application/octet-stream.
  - 2026-02-06 Added AgentSession module to store UserClosedMessages in current UserSession (AuthSession). This allows previously defined keys to be set in the session.
