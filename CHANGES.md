@@ -1,17 +1,18 @@
-# 7.3.1 2025-??-??
- - 2025-02-10 Fixed: Console command Admin::Group::UserLink and Admin::Group::RoleLink with inconsistent available permissions.
- - 2025-02-10 Fixed: Sender address for process tickets is not assigned properly in CustomerInterface.
+# 7.3.1 2026-??-??
+ - 2026-02-11 Fixed: Issue with sorting dropdown elements when setting Ticket::Frontend::AccountTimeType is set to Dropdown.
+ - 2026-02-10 Fixed: Console command Admin::Group::UserLink and Admin::Group::RoleLink with inconsistent available permissions.
+ - 2026-02-10 Fixed: Sender address for process tickets is not assigned properly in CustomerInterface.
  - 2026-02-09 Fixed: The attachment dialog displays a preview for non-presentable items. Removed application/octet-stream.
  - 2026-02-06 Added AgentSession module to store UserClosedMessages in current UserSession (AuthSession). This allows previously defined keys to be set in the session.
  - 2026-02-02 Fixed: Restored breadcrumb rendering on the AdminTicketAttributeRelations Edit and Add views.
  - 2026-02-02 Fixed: SLA cache now clears after service assignments change so data stays current. Thanks to @dkmonaghan for reporting [#643](https://github.com/znuny/Znuny/issues/643).
- - 2025-01-26 Fixed issues after GUI redesign: Added widget functions to AgentTicketActionCommon. Fixed unlock notification after GUI redesign. Added UndoClosePopup class. Change to "Unlock and close popup" button.
+ - 2026-01-26 Fixed issues after GUI redesign: Added widget functions to AgentTicketActionCommon. Fixed unlock notification after GUI redesign. Added UndoClosePopup class. Change to "Unlock and close popup" button.
  - 2026-01-23 Fixed: Znuny re-directs after login to default view even if there is specified ExternalURL parameter with the Action encoded in the link.
  - 2026-01-23 Added preview and download function to AttachmentList.
  - 2026-01-23 Improved handling of read-only fields for the backend of CustomerUser::DB and CustomerCompany::DB.
- - 2025-01-23 System configuration: Added `NotificationEmailDefaultTemplate` option. Thanks to Paweł Bogusławski (@pboguslawski) [PR#382](https://github.com/znuny/Znuny/pull/382).
- - 2025-01-23 Increased length of the password column for users, customer_user, and mail_account.
- - 2025-01-22 Fixed: Process ticket submission validates Responsible field client-side.
+ - 2026-01-23 System configuration: Added `NotificationEmailDefaultTemplate` option. Thanks to Paweł Bogusławski (@pboguslawski) [PR#382](https://github.com/znuny/Znuny/pull/382).
+ - 2026-01-23 Increased length of the password column for users, customer_user, and mail_account.
+ - 2026-01-22 Fixed: Process ticket submission validates Responsible field client-side.
  - 2026-01-22 Fixed: URL parameters were not used to pre-fill new email and phone ticket forms.
  - 2026-01-21 Fixed: The tags <OTRS_TICKET> and <OTRS_MERGE_TO_TICKET> can only be used once in the text of the configuration Ticket::Frontend::AutomaticMergeText. The 'global' flag is missing. Thanks to Tim Püttmanns (@tipue-dev), maxence. [PR#753](https://github.com/znuny/Znuny/pull/753)
  - 2026-01-19 Fixed: Customer interface uses layout "PopupClose" function that loads agent interface header and footer which results in referencing features that are not supported - such as popup profiles. Added CustomerPopupClose function.
