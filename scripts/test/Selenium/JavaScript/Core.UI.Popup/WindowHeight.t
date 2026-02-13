@@ -95,7 +95,7 @@ $Selenium->RunTest(
         # Wait until page has loaded, if necessary.
         $Selenium->WaitFor(
             JavaScript =>
-                'return typeof($) === "function" && $(".WidgetSimple").length;'
+                'return typeof($) === "function" && $("#AppWrapper").length;'
         );
 
         my $PopupWindowHeight = $Selenium->execute_script(
@@ -140,7 +140,7 @@ $Selenium->RunTest(
         # Wait until page has loaded, if necessary.
         $Selenium->WaitFor(
             JavaScript =>
-                'return typeof($) === "function" && $(".WidgetSimple").length;'
+                'return typeof($) === "function" && $("#AppWrapper").length;'
         );
 
         $PopupWindowHeight = $Selenium->execute_script(

@@ -92,7 +92,7 @@
                                         <div class="mod modCard">
                                             <div class="inner">
                                                 <div class="cardTitle">
-                                                    <h2>[% Translate("Team Data") | html %]</h2>
+                                                    <h2>[% Translate("Ticket Data") | html %]</h2>
                                                     <span class="cardTitleTrigger"></span>
                                                 </div>
                                                 <div class="cardContent">
@@ -151,7 +151,7 @@
                                                         <div class="col-12">
                                                             <div class="mod modDynamicField">
                                                                 <div class="inner">
-                                                                    <div lass="Row_DynamicField_[% Data.Name | html %] dynamicField dynamicField[% Data.Name | html %]">
+                                                                    <div lass="Row Row_DynamicField_[% Data.Name | html %] dynamicField dynamicField[% Data.Name | html %]">
                                                                         [% Data.Label %]
                                                                         <div class="Field">
                                                                             [% Data.Field %]
@@ -181,7 +181,7 @@
                                                     <div class="row gy-3">
                                                         <h2 class="card-title">[% Translate("Create an Article") | html %]</h2>
 
-                                                        [% IF Data.CardStatus != 'cardClosed' %]
+                                                        [% IF Data.CardStatus != 'Collapsed' %]
                                                         <input type="hidden" id="CreateArticle" name="CreateArticle" value="1" />
                                                         [% ELSE %]
                                                         <div class="col-12">

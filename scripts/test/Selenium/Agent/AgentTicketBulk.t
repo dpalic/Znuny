@@ -428,12 +428,8 @@ $Selenium->RunTest(
             "On update - Ticket queue is not translated",
         );
 
-        $Selenium->WaitForjQueryEventBound(
-            CSSSelector => ".UndoClosePopup",
-        );
-
         # Click on 'Undo & close' link.
-        $Selenium->execute_script("\$('.UndoClosePopup').click();");
+        $Selenium->find_element('.UndoClosePopup')->click();
 
         # Return to status view.
         $Selenium->WaitFor( WindowCount => 1 );

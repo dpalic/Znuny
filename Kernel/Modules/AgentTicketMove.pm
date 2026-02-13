@@ -1537,7 +1537,7 @@ sub AgentMove {
 
     if ( $Config->{Note} ) {
 
-        $Param{CardStatus} = 'cardClosed';
+        $Param{CardStatus} = 'Collapsed';
 
         if (
             $Config->{NoteMandatory}
@@ -1546,7 +1546,7 @@ sub AgentMove {
             || $Param{CreateArticle}
             )
         {
-            $Param{CardStatus} = '';
+            $Param{CardStatus} = 'Expanded';
         }
 
         if (

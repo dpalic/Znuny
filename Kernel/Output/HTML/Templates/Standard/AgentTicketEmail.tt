@@ -101,9 +101,9 @@
                                                                             <div id="customerContainer"></div>
 
                                                                             <!-- Customer search input -->
-                                                                            <input id="customerSelectorInput"
+                                                                            <input id="ToCustomer"
                                                                                 type="text"
-                                                                                name="customerSelectorInput"
+                                                                                name="ToCustomer"
                                                                                 value=""
                                                                                 class="customerSelectorFieldInputElement"
                                                                                 autocomplete="off"
@@ -196,7 +196,7 @@
                                                                             <div id="ccCustomerContainer"></div>
 
                                                                             <!-- Customer search input -->
-                                                                            <input id="CcCustomerSelectorInput"
+                                                                            <input id="CcCustomer"
                                                                                     type="text"
                                                                                     name="CcCustomerSelectorInput"
                                                                                     value=""
@@ -282,7 +282,7 @@
                                                                             <div id="bccCustomerContainer"></div>
 
                                                                             <!-- Customer search input -->
-                                                                            <input id="BccCustomerSelectorInput"
+                                                                            <input id="BccCustomer"
                                                                                 type="text"
                                                                                 name="BccCustomerSelectorInput"
                                                                                 value=""

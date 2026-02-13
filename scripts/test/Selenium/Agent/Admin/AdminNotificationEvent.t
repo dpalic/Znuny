@@ -209,7 +209,7 @@ $Selenium->RunTest(
         # Check is there notification 'Notification added!' after notification is added.
         my $Notification = 'Notification added!';
         $Self->True(
-            $Selenium->execute_script("return \$('.MessageBox.Notice p:contains($Notification)').length;"),
+            $Selenium->execute_script("return \$('.messageNotice .alertContent:contains($Notification)').length;"),
             "$Notification - notification is found."
         );
 
@@ -300,7 +300,7 @@ $Selenium->RunTest(
         # Check is there notification 'Notification updated!' after notification is added.
         $Notification = 'Notification updated!';
         $Self->True(
-            $Selenium->execute_script("return \$('.MessageBox.Notice p:contains($Notification)').length;"),
+            $Selenium->execute_script("return \$('.messageNotice .alertContent:contains($Notification)').length;"),
             "$Notification - notification is found."
         );
 

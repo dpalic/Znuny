@@ -72,16 +72,16 @@ did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
   border-bottom-left-radius: var(--border-radius-sm);
   border-bottom-right-radius: var(--border-radius-sm);
 }
-.modCard > .inner.cardClosed {
+.modCard > .inner.Collapsed {
   overflow: hidden;
 }
-.modCard > .inner.cardClosed .cardTitle {
+.modCard > .inner.Collapsed .cardTitle {
   border-bottom: none;
 }
-.modCard > .inner.cardClosed .cardTitle .cardTitleTrigger {
+.modCard > .inner.Collapsed .cardTitle .cardTitleTrigger {
   transform: rotate(180deg);
 }
-.modCard > .inner.cardClosed .cardContent {
+.modCard > .inner.Collapsed .cardContent {
   max-height: 0px;
   overflow: hidden;
   padding-bottom: 0;

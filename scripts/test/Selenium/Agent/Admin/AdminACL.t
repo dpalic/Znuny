@@ -409,6 +409,11 @@ JAVASCRIPT
         # Click 'Save and Finish'.
         $Selenium->find_element( "#Submit", 'css' )->VerifiedClick();
 
+        $Selenium->CloseNotification(
+            Text =>
+                'Die ACL-Konfiguration ist laut Datenbank nicht synchron mit der Systemkonfiguration, bitte ACLs in Betrieb nehmen.',
+        );
+
         # Checks for AdminValidFilter
         $Self->True(
             $Selenium->find_element( "#ValidFilter", 'css' )->is_displayed(),

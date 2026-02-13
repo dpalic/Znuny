@@ -78,7 +78,7 @@ did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
             border-bottom-right-radius: var(--border-radius-sm);
         }
 
-        &.cardClosed {
+        &.Collapsed {
             overflow: hidden;
             .cardTitle {
                 border-bottom: none;

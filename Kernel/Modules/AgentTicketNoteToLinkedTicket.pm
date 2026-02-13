@@ -2400,7 +2400,7 @@ sub _Mask {
     # Widget Article
     if ( $Config->{Note} ) {
 
-        $Param{CardStatus} = 'cardClosed';
+        $Param{CardStatus} = 'Collapsed';
 
         if (
             $Config->{NoteMandatory}
@@ -2409,7 +2409,7 @@ sub _Mask {
             || $Param{CreateArticle}
             )
         {
-            $Param{CardStatus} = '';
+            $Param{CardStatus} = 'Expanded';
         }
 
         if (

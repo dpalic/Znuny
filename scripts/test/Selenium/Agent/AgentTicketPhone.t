@@ -260,7 +260,10 @@ $Selenium->RunTest(
         }
 
         $Selenium->find_element( "#FromCustomer", 'css' )->send_keys($TestCustomer);
-        $Selenium->WaitFor( JavaScript => 'return typeof($) === "function" && $("li.ui-menu-item:visible").length;' );
+        $Selenium->WaitFor(
+            JavaScript =>
+                'return typeof($) === "function" && $("li.ui-menu-item:visible").length;'
+        );
         $Selenium->execute_script("\$('li.ui-menu-item:contains($TestCustomer)').click();");
 
         if ($IsITSMIncidentProblemManagementInstalled) {
@@ -368,7 +371,10 @@ $Selenium->RunTest(
 
         # Add customer again.
         $Selenium->find_element( "#FromCustomer", 'css' )->send_keys($TestCustomer);
-        $Selenium->WaitFor( JavaScript => 'return typeof($) === "function" && $("li.ui-menu-item:visible").length;' );
+        $Selenium->WaitFor(
+            JavaScript =>
+                'return typeof($) === "function" && $("li.ui-menu-item:visible").length;'
+        );
         $Selenium->execute_script("\$('li.ui-menu-item:contains($TestCustomer)').click();");
 
         # Make sure that Customer email is not a link.
@@ -547,7 +553,8 @@ $Selenium->RunTest(
 
             $Selenium->find_element( "#FromCustomer", 'css' )->send_keys($TestCustomer);
             $Selenium->WaitFor(
-                JavaScript => 'return typeof($) === "function" && $("li.ui-menu-item:visible").length'
+                JavaScript =>
+                    'return typeof($) === "function" && $("li.ui-menu-item:visible").length'
             );
             $Selenium->execute_script("\$('li.ui-menu-item:contains($TestCustomer)').click()");
 

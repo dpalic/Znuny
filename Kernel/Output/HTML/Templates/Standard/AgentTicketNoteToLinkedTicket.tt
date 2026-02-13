@@ -391,10 +391,10 @@
                                                 <div class="cardContent">
                                                     <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3 gy-3">
 [% RenderBlockStart("TicketTypeDynamicField") %]
-                                                        <div class="col-12">
-                                                            <div class="mod modDynamicField">
-                                                                <div class="inner">
-                                                                    <div class="Row_DynamicField_[% Data.Name | html %] dynamicField dynamicField[% Data.Name | html %]">
+                                                        <div class="Row Row_DynamicField_[% Data.Name | html %] dynamicField dynamicField[% Data.Name | html %]">
+                                                            <div class="col-12">
+                                                                <div class="mod modDynamicField">
+                                                                    <div class="inner">
                                                                         <div class="dynamicFieldLabel">
                                                                             [% Data.Label %]
                                                                         </div>
@@ -459,7 +459,7 @@
                                                     <h2 class="card-title">[% Translate("Notes") | html %]</h2>
                                                     <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2 gy-3">
 
-                                                        [% IF Data.CardStatus != 'cardClosed' %]
+                                                        [% IF Data.CardStatus != 'Collapsed' %]
                                                         <input type="hidden" id="CreateArticle" name="CreateArticle" value="1" />
                                                         [% ELSE %]
                                                         <div class="col-12">
@@ -617,10 +617,10 @@
                                                                     <div class="cardContent">
                                                                         <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3 gy-3">
 [% RenderBlockStart("ArticleTypeDynamicField") %]
-                                                                            <div class="col-12">
-                                                                                <div class="mod modDynamicField">
-                                                                                    <div class="inner">
-                                                                                        <div class="Row_DynamicField_[% Data.Name | html %] dynamicField dynamicField[% Data.Name | html %]">
+                                                                            <div class="Row Row_DynamicField_[% Data.Name | html %] dynamicField dynamicField[% Data.Name | html %]">
+                                                                                <div class="col-12">
+                                                                                    <div class="mod modDynamicField">
+                                                                                        <div class="inner">
                                                                                             <div class="dynamicFieldLabel">
                                                                                                 [% Data.Label %]
                                                                                             </div>

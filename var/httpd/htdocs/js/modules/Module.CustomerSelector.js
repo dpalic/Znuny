@@ -302,6 +302,19 @@
             this.inputField.keydown(function (event) {
                 this.handleKeyboardNavigation(event);
             }.bind(this));
+
+            // Handle change events (e.g., when triggered programmatically)
+            this.inputField.on('change', function () {
+                var inputValue = this.inputField.val().trim();
+
+                // Only add customer if there's a value and suggestions are not visible
+                // (to avoid conflicts with user interaction)
+                if (inputValue !== '' && !this.suggestElement.hasClass(this.suggestElementActiveClass)) {
+                    this.addCustomer(inputValue, inputValue, {});
+                    this.hideSuggest();
+                    this.clearInput();
+                }
+            }.bind(this));
         },
 
         /**
@@ -1017,7 +1030,7 @@
                     html = '<ul>';
                     jQuery.each(filteredData, function (i, item) {
                         var itemLabel = item.Label.replace(/</g, "&lt;").replace(/>/g, "&gt;");
-                        html += '<li class="customerSelectorFieldSuggestItem" data-value="' + item.Value + '">' + itemLabel + '</li>';
+                        html += '<li class="ui-menu-item customerSelectorFieldSuggestItem" data-value="' + item.Value + '">' + itemLabel + '</li>';
                     });
                     html += '</ul>';
 

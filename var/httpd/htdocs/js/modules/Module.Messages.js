@@ -368,9 +368,7 @@
                 // Update session via AJAX
                 if (typeof Core !== 'undefined' && Core.Agent && Core.Agent.UpdateSessionID) {
                     closedMessagesJson = JSON.stringify(this.closedMessages);
-                    Core.Agent.UpdateSessionID(
-                        'UserClosedMessages',
-                        closedMessagesJson,
+                    Core.Agent.UpdateSessionID('UserClosedMessages', closedMessagesJson,
                         function() {
                             // Success callback - message added to closedMessages array
                         },

@@ -25,7 +25,8 @@
 
         // Module configuration
         name: 'modCard',
-        closeClass : 'cardClosed',
+        closeClass : 'Collapsed',
+        openClass : 'Expanded',
 
         /**
          * Hook function to load the module specific dependencies.
@@ -59,6 +60,7 @@
             var element;
 
             jQuery('.inner:first', this.ctx).addClass(this.closeClass);
+            jQuery('.inner:first', this.ctx).removeClass(this.openClass);
             element = jQuery('.cardContent', this.ctx)[0];
             element.style.maxHeight = '0px';
 
@@ -72,6 +74,7 @@
             scrollHeight = element.scrollHeight + 40;
             element.style.maxHeight = scrollHeight + 'px';
             jQuery('.inner:first', this.ctx).removeClass(this.closeClass);
+            jQuery('.inner:first', this.ctx).addClass(this.openClass);
 
             setTimeout(function () {
                 element.style.maxHeight = 'unset';

@@ -415,15 +415,15 @@ $Selenium->RunTest(
         my $Message = 'Article subject will be empty if the subject contains only the ticket hook!';
 
         $Self->True(
-            $Selenium->execute_script("return \$('.MessageBox.Notice:contains(\"$Message\")').length == 0;"),
+            $Selenium->execute_script("return \$('.messageNotice .alertContent:contains(\"$Message\")').length == 0;"),
             "No Notification about empty subject is shown",
         );
 
         $Selenium->execute_script("\$('#Subject').val( \$('#Subject').val().replace(/].*/, ']') ).trigger('change');");
 
-        $Selenium->WaitFor( JavaScript => "return \$('.MessageBox.Notice:contains(\"$Message\")').length;" );
+        $Selenium->WaitFor( JavaScript => "return \$('.messageNotice .alertContent:contains(\"$Message\")').length;" );
         $Self->True(
-            $Selenium->execute_script("return \$('.MessageBox.Notice:contains(\"$Message\")').length;"),
+            $Selenium->execute_script("return \$('.messageNotice .alertContent:contains(\"$Message\")').length;"),
             "Notification about empty subject is found",
         );
 

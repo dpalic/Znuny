@@ -154,7 +154,7 @@ $Selenium->RunTest(
         # Check is there notification after agent is updated.
         my $Notification = 'Agent updated!';
         $Self->True(
-            $Selenium->execute_script("return \$('.MessageBox.Notice p:contains($Notification)').length"),
+            $Selenium->execute_script("return \$('.messageNotice .alertContent:contains($Notification)').length"),
             "$Notification - notification is found."
         );
 

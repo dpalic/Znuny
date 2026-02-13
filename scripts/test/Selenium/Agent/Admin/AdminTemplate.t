@@ -170,7 +170,7 @@ $Selenium->RunTest(
         # Check is there notification after template is updated.
         my $Notification = 'Template updated!';
         $Self->True(
-            $Selenium->execute_script("return \$('.MessageBox.Notice p:contains($Notification)').length"),
+            $Selenium->execute_script("return \$('.messageNotice .alertContent:contains($Notification)').length"),
             "$Notification - notification is found."
         );
 

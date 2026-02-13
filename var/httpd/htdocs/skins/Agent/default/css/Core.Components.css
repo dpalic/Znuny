@@ -1176,15 +1176,9 @@ handheld {
         justify-content: flex-end;
         position: absolute;
         gap: var(--padding-md);
-        top: -30px;
+        top: 0px;
         right: 0;
     }
-
-    /* .main-search-component .search-ticket .create-tpl-btn {
-        position: absolute;
-        top: var(--padding-md);
-        right: 0;
-    } */
 
     .main-search-component .search-ticket .create-tpm-btn button {
         min-width: var(--btn-max-width-sm);

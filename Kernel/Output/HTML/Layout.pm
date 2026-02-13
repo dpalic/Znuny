@@ -1252,6 +1252,7 @@ sub Notify {
             },
         );
     }
+
     return $Self->Output(
         TemplateFile => 'Notify',
         Data         => {
