@@ -7855,27 +7855,27 @@ msgid "Undo & close"
 msgstr "Одустани & затвори"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
-msgid "Ticket %s: first response time is over (%s/%s)!"
+msgid "Ticket %s: first response time is over (%s %s)!"
 msgstr "Тикет %s: време одзива је истекло (%s/%s)!"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
-msgid "Ticket %s: first response time will be over in %s/%s!"
+msgid "Ticket %s: first response time will be over in %s %s!"
 msgstr "Тикет %s: време одзива ће истећи за %s/%s!"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
-msgid "Ticket %s: update time is over (%s/%s)!"
+msgid "Ticket %s: update time is over (%s %s)!"
 msgstr "Тикет %s: време ажурирања је преко (%s/%s)!"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
-msgid "Ticket %s: update time will be over in %s/%s!"
+msgid "Ticket %s: update time will be over in %s %s!"
 msgstr "Тикет %s: време ажурирања истиче за %s/%s!"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
-msgid "Ticket %s: solution time is over (%s/%s)!"
+msgid "Ticket %s: solution time is over (%s %s)!"
 msgstr "Тикет %s: време решавања је истекло (%s/%s)!"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
-msgid "Ticket %s: solution time will be over in %s/%s!"
+msgid "Ticket %s: solution time will be over in %s %s!"
 msgstr "Тикет %s: време решавања истиче за %s/%s!"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketForward.tt

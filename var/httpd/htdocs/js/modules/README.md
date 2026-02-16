@@ -22,7 +22,7 @@ Individual feature modules that extend the base `Env.Module` class:
 - `Module.Card.js` - Collapsible card functionality
 - `Module.CustomerSelector.js` - Customer selection interface
 - `Module.Form.js` - Form functionality and field manipulation
-- `Module.Messages.js` - Message display system
+- `Module.Notification.js` - Notification display system
 - `Module.Sidebar.js` - Main sidebar functionality
 - `Module.SidebarWidget.js` - Sidebar widget components
 
@@ -132,13 +132,13 @@ this.sandbox.notify('eventName', data);
 
 ### Inter-Module Examples
 
-#### Alert → Messages Communication
+#### Alert → Notification Communication
 
 ```javascript
-// Alert module sends generated HTML to Messages module
-var messagesModule = this.findMessagesModule();
-if (messagesModule) {
-    messagesModule.addMessage(html, 'notice', 5);
+// Alert module sends generated HTML to Notification module
+var notificationModule = this.findNotificationModule();
+if (notificationModule) {
+    notificationModule.addMessage(html, 'notice', 5);
 }
 ```
 
@@ -307,7 +307,7 @@ modules/
 ├── Module.Card.js          # Collapsible card functionality
 ├── Module.CustomerSelector.js  # Customer selection interface
 ├── Module.Form.js          # Form handling and field manipulation
-├── Module.Messages.js      # Message display system
+├── Module.Notification.js  # Notification display system
 ├── Module.Sidebar.js       # Main sidebar functionality
 └── Module.SidebarWidget.js # Sidebar widget components
 ```

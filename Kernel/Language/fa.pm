@@ -2743,12 +2743,12 @@ sub Data {
         'Remove Bcc' => 'حذف کپی به',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
-        'Ticket %s: first response time is over (%s/%s)!' => 'بلیط %s : زمان پاسخ برای اولین بار است که بیش از ( %s / %s )!',
-        'Ticket %s: first response time will be over in %s/%s!' => 'بلیط %s : اول زمان پاسخ را در خواهد %s / %s !',
-        'Ticket %s: update time is over (%s/%s)!' => 'بلیط %s : زمان به روز رسانی به پایان رسیده است ( %s / %s )!',
-        'Ticket %s: update time will be over in %s/%s!' => 'بلیط %s : زمان به روز رسانی بیش از در خواهد %s / %s !',
-        'Ticket %s: solution time is over (%s/%s)!' => 'بلیط %s : زمان حل به پایان رسیده است ( %s / %s )!',
-        'Ticket %s: solution time will be over in %s/%s!' => 'بلیط %s : زمان حل بیش از در خواهد %s / %s !',
+        'Ticket %s: first response time is over (%s %s)!' => 'بلیط %s : زمان پاسخ برای اولین بار است که بیش از ( %s / %s )!',
+        'Ticket %s: first response time will be over in %s %s!' => 'بلیط %s : اول زمان پاسخ را در خواهد %s / %s !',
+        'Ticket %s: update time is over (%s %s)!' => 'بلیط %s : زمان به روز رسانی به پایان رسیده است ( %s / %s )!',
+        'Ticket %s: update time will be over in %s %s!' => 'بلیط %s : زمان به روز رسانی بیش از در خواهد %s / %s !',
+        'Ticket %s: solution time is over (%s %s)!' => 'بلیط %s : زمان حل به پایان رسیده است ( %s / %s )!',
+        'Ticket %s: solution time will be over in %s %s!' => 'بلیط %s : زمان حل بیش از در خواهد %s / %s !',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketHistory.tt
         'History of %s%s%s' => 'تاریخ %s %s %s',

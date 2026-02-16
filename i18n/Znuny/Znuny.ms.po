@@ -7851,27 +7851,27 @@ msgid "Undo & close"
 msgstr "Buat semula & tutup"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
-msgid "Ticket %s: first response time is over (%s/%s)!"
+msgid "Ticket %s: first response time is over (%s %s)!"
 msgstr "Tiket %s: reaksi masa pertama sudah tamat (%s/%s)!"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
-msgid "Ticket %s: first response time will be over in %s/%s!"
+msgid "Ticket %s: first response time will be over in %s %s!"
 msgstr "Tiket %s: reaksi masa pertama akan tamat dalam %s/%s!"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
-msgid "Ticket %s: update time is over (%s/%s)!"
+msgid "Ticket %s: update time is over (%s %s)!"
 msgstr "Tiket %s: masa kemaskini telah tamat (%s/%s)!"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
-msgid "Ticket %s: update time will be over in %s/%s!"
+msgid "Ticket %s: update time will be over in %s %s!"
 msgstr "Tiket %s: masa kemaskini akan tamat dalam %s/%s!"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
-msgid "Ticket %s: solution time is over (%s/%s)!"
+msgid "Ticket %s: solution time is over (%s %s)!"
 msgstr "Tiket %s: masa penyelesaian sudah tamat (%s/%s)!"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
-msgid "Ticket %s: solution time will be over in %s/%s!"
+msgid "Ticket %s: solution time will be over in %s %s!"
 msgstr "Tiket %s: masa penyelesaian akan tamat dalam %s/%s!"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketForward.tt

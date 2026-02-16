@@ -2737,12 +2737,12 @@ sub Data {
         'Remove Bcc' => '숨은 참조 제거',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
-        'Ticket %s: first response time is over (%s/%s)!' => '티켓 %s: 첫 번째 응답 시간이 끝났습니다 (%s/ %s)!',
-        'Ticket %s: first response time will be over in %s/%s!' => '티켓 %s : 첫 번째 응답 시간은 %s/ %s로 끝납니다!',
-        'Ticket %s: update time is over (%s/%s)!' => '티켓 %s : 업데이트 시간이 끝났습니다 (%s / %s)!',
-        'Ticket %s: update time will be over in %s/%s!' => '티켓 %s: 업데이트 시간이 %s / %s 이상입니다!',
-        'Ticket %s: solution time is over (%s/%s)!' => '티켓 %s : 해결 시간이 끝났습니다 (%s / %s)!',
-        'Ticket %s: solution time will be over in %s/%s!' => '티켓 %s : 해결 시간은 %s / %s로 끝납니다!',
+        'Ticket %s: first response time is over (%s %s)!' => '티켓 %s: 첫 번째 응답 시간이 끝났습니다 (%s/ %s)!',
+        'Ticket %s: first response time will be over in %s %s!' => '티켓 %s : 첫 번째 응답 시간은 %s/ %s로 끝납니다!',
+        'Ticket %s: update time is over (%s %s)!' => '티켓 %s : 업데이트 시간이 끝났습니다 (%s / %s)!',
+        'Ticket %s: update time will be over in %s %s!' => '티켓 %s: 업데이트 시간이 %s / %s 이상입니다!',
+        'Ticket %s: solution time is over (%s %s)!' => '티켓 %s : 해결 시간이 끝났습니다 (%s / %s)!',
+        'Ticket %s: solution time will be over in %s %s!' => '티켓 %s : 해결 시간은 %s / %s로 끝납니다!',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketHistory.tt
         'History of %s%s%s' => '%s%s%s의 기록',

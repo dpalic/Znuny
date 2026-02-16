@@ -6,7 +6,7 @@
 # did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
 # --
 
-<div class="mod modMessages" role="alert">
+<div class="mod modNotification" role="alert">
     <div class="inner" data-close-translation="[% Translate("Close") | html %]" data-close-icon-path="[% Config("Frontend::ImagePath") %]/icons/xmark-gray.svg">
         <div class="messages">
 

@@ -2740,12 +2740,12 @@ sub Data {
         'Remove Bcc' => 'Remover BCC',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
-        'Ticket %s: first response time is over (%s/%s)!' => 'Ticket %s: A primeira resposta está atrasada (%s/%s)',
-        'Ticket %s: first response time will be over in %s/%s!' => 'Ticket %s: A primeira resposta estará atrasada em %s/%s',
-        'Ticket %s: update time is over (%s/%s)!' => 'Ticket %s: Atualização atrasada (%s/%s)',
-        'Ticket %s: update time will be over in %s/%s!' => 'Ticket %s: A atualização estará atrasada em %s/%s',
-        'Ticket %s: solution time is over (%s/%s)!' => 'Ticket %s: Resolução atrasada (%s/%s)',
-        'Ticket %s: solution time will be over in %s/%s!' => 'Ticket %s: A resolução estará atrasada em %s/%s',
+        'Ticket %s: first response time is over (%s %s)!' => 'Ticket %s: A primeira resposta está atrasada (%s/%s)',
+        'Ticket %s: first response time will be over in %s %s!' => 'Ticket %s: A primeira resposta estará atrasada em %s/%s',
+        'Ticket %s: update time is over (%s %s)!' => 'Ticket %s: Atualização atrasada (%s/%s)',
+        'Ticket %s: update time will be over in %s %s!' => 'Ticket %s: A atualização estará atrasada em %s/%s',
+        'Ticket %s: solution time is over (%s %s)!' => 'Ticket %s: Resolução atrasada (%s/%s)',
+        'Ticket %s: solution time will be over in %s %s!' => 'Ticket %s: A resolução estará atrasada em %s/%s',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketHistory.tt
         'History of %s%s%s' => 'Histórico de %s%s%s',

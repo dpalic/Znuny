@@ -2743,12 +2743,12 @@ sub Data {
         'Remove Bcc' => 'Verwijder BCC',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
-        'Ticket %s: first response time is over (%s/%s)!' => 'Ticket %s: eerste antwoord tijd is voorbij (%s/%s)!',
-        'Ticket %s: first response time will be over in %s/%s!' => 'Ticket %s: eerste antwoord tijd zal voorbij zijn binnen %s/%s!',
-        'Ticket %s: update time is over (%s/%s)!' => '',
-        'Ticket %s: update time will be over in %s/%s!' => 'Ticket $s: vervolg tijd zal voorbij zijn binnen %s.',
-        'Ticket %s: solution time is over (%s/%s)!' => 'Ticket %s: oplossing tijd is voorbij (%s/%s)!',
-        'Ticket %s: solution time will be over in %s/%s!' => 'Ticket %s: oplossing tijd zal voorbij zijn binnen %s/%s!',
+        'Ticket %s: first response time is over (%s %s)!' => 'Ticket %s: eerste antwoord tijd is voorbij (%s/%s)!',
+        'Ticket %s: first response time will be over in %s %s!' => 'Ticket %s: eerste antwoord tijd zal voorbij zijn binnen %s/%s!',
+        'Ticket %s: update time is over (%s %s)!' => '',
+        'Ticket %s: update time will be over in %s %s!' => 'Ticket $s: vervolg tijd zal voorbij zijn binnen %s.',
+        'Ticket %s: solution time is over (%s %s)!' => 'Ticket %s: oplossing tijd is voorbij (%s/%s)!',
+        'Ticket %s: solution time will be over in %s %s!' => 'Ticket %s: oplossing tijd zal voorbij zijn binnen %s/%s!',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketHistory.tt
         'History of %s%s%s' => '',

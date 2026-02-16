@@ -2738,12 +2738,12 @@ sub Data {
         'Remove Bcc' => 'Bcc entfernen',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
-        'Ticket %s: first response time is over (%s/%s)!' => 'Ticket %s: erste Reaktionszeit ist abgelaufen (%s/%s)!',
-        'Ticket %s: first response time will be over in %s/%s!' => 'Ticket %s: erste Reaktionszeit wird ablaufen in %s/%s!',
-        'Ticket %s: update time is over (%s/%s)!' => 'Ticket %s: Aktualisierungszeit ist abgelaufen (%s/%s)!',
-        'Ticket %s: update time will be over in %s/%s!' => 'Ticket %s: Aktualisierungszeit wird ablaufen in %s/%s!',
-        'Ticket %s: solution time is over (%s/%s)!' => 'Ticket %s: Lösungszeit ist abgelaufen (%s/%s)!',
-        'Ticket %s: solution time will be over in %s/%s!' => 'Ticket %s: Lösungszeit wird ablaufen in %s/%s!',
+        'Ticket %s: first response time is over (%s %s)!' => 'Ticket %s: erste Reaktionszeit ist abgelaufen (%s/%s)!',
+        'Ticket %s: first response time will be over in %s %s!' => 'Ticket %s: erste Reaktionszeit wird ablaufen in %s/%s!',
+        'Ticket %s: update time is over (%s %s)!' => 'Ticket %s: Aktualisierungszeit ist abgelaufen (%s/%s)!',
+        'Ticket %s: update time will be over in %s %s!' => 'Ticket %s: Aktualisierungszeit wird ablaufen in %s/%s!',
+        'Ticket %s: solution time is over (%s %s)!' => 'Ticket %s: Lösungszeit ist abgelaufen (%s/%s)!',
+        'Ticket %s: solution time will be over in %s %s!' => 'Ticket %s: Lösungszeit wird ablaufen in %s/%s!',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketHistory.tt
         'History of %s%s%s' => 'Verlauf von %s%s%s',

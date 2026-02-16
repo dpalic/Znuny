@@ -10,18 +10,20 @@
 
 [% INCLUDE "Modules/Alert.tt"
     Data = {
-        message = (Data.Data || Translate(Data.Info)),
+        id = Data.ID,
         type = Data.BoxClass ? Data.BoxClass.lower : (Data.Priority ? Data.Priority.lower : 'notice'),
+        message = (Data.Data || Translate(Data.Info)),
         hideAfter = Data.BoxClass.match('Success') ? 5 : 0,
         actionSeparator = Data.ActionSeparator,
-        ID = Data.ID,
-        actions = Data.Actions || "[
+        closePersistent = Data.ClosePersistent || 0,
+        actions = Data.Actions || (Data.Link ? "[
             {
-                \"url\": \"" _ Data.Link _ "\",
+                \"type\": \"" _ (Data.Priority ? Data.Priority.lower : 'notify') _ "\"" _ (Data.LinkClass ? ",\"classes\":\"" _ Data.LinkClass _ "\"" : "") _ "
                 \"text\": \"" _ Translate("Continue") _ "\",
-                \"type\": \"notify\"
+                \"url\": \"" _ Data.Link _ "\",
+                \"class\": \"" _ Data.LinkClass _ "\",
             }
-        ]"
+        ]" : "[]")
     }
 %]
 <!-- end Notify -->

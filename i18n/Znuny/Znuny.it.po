@@ -7855,27 +7855,27 @@ msgid "Undo & close"
 msgstr "Annulla e chiudi"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
-msgid "Ticket %s: first response time is over (%s/%s)!"
+msgid "Ticket %s: first response time is over (%s %s)!"
 msgstr "Ticket %s: il tempo di prima risposta è scaduto (%s/%s)!"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
-msgid "Ticket %s: first response time will be over in %s/%s!"
+msgid "Ticket %s: first response time will be over in %s %s!"
 msgstr "Ticket %s: il tempo di prima risposta scadrà tra %s/%s!"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
-msgid "Ticket %s: update time is over (%s/%s)!"
+msgid "Ticket %s: update time is over (%s %s)!"
 msgstr "Ticket %s : tempo di aggiornamento scaduto (%s/%s)!"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
-msgid "Ticket %s: update time will be over in %s/%s!"
+msgid "Ticket %s: update time will be over in %s %s!"
 msgstr "Ticket %s: il tempo di aggiornamento scadrà tra %s/%s!"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
-msgid "Ticket %s: solution time is over (%s/%s)!"
+msgid "Ticket %s: solution time is over (%s %s)!"
 msgstr "Ticket %s : tempo di soluzione scaduto (%s/%s)!"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
-msgid "Ticket %s: solution time will be over in %s/%s!"
+msgid "Ticket %s: solution time will be over in %s %s!"
 msgstr "Ticket %s: il tempo di soluzione scadrà tra %s/%s!"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketForward.tt

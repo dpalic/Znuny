@@ -11,11 +11,12 @@
     <div class="inner">
         <script type="application/json" class="alertData">
             {
-                "type": "[% Data.type || "notice" | html %]",
                 "id": "[% Data.id | html %]",
-                "message": "[% Data.message | html %]",
+                "type": "[% Data.type || "notice" | html %]",
+                "message": [% (Data.message || '') | JSON %],
                 "hideAfter": [% Data.hideAfter || 0 %],
                 "actionSeparator": "[% Data.actionSeparator || Translate("or") | html %]",
+                "closePersistent": [% Data.closePersistent || 0 %],
                 "actions": [% Data.actions || "[]" %]
             }
         </script>

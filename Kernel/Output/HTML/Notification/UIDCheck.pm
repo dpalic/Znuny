@@ -39,6 +39,7 @@ sub Run {
             'Don\'t use the Superuser account to work with %s! Create new Agents and work with these accounts instead.',
             $ProductName
         ),
+        ClosePersistent => 1,
     );
 }
 

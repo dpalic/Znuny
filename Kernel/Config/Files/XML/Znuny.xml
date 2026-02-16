@@ -4607,7 +4607,7 @@
         <Navigation>Core::AgentSession</Navigation>
         <Value>
             <Array>
-                <Item>\AUserClosedMessages\z</Item>
+                <Item>\AUserClosedNotifications\z</Item>
             </Array>
         </Value>
     </Setting>

@@ -2744,12 +2744,12 @@ sub Data {
         'Remove Bcc' => 'Eliminar "Copia oculta"',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
-        'Ticket %s: first response time is over (%s/%s)!' => 'Ticket %s: tiempo de primera respuesta ha sido excedido (%s%s)!',
-        'Ticket %s: first response time will be over in %s/%s!' => 'Ticket %s: tiempo de primera respuesta será excedido en %s%s!',
-        'Ticket %s: update time is over (%s/%s)!' => 'Ticket %s: el tiempo de actualización ha terminado (%s/%s)!',
-        'Ticket %s: update time will be over in %s/%s!' => 'Ticket %s: tiempo de actualización será excedido en %s%s!',
-        'Ticket %s: solution time is over (%s/%s)!' => 'Ticket %s: tiempo de resolución ha sido excedido (%s%s)!',
-        'Ticket %s: solution time will be over in %s/%s!' => 'Ticket %s: tiempo de resolución será excedido en %s%s!',
+        'Ticket %s: first response time is over (%s %s)!' => 'Ticket %s: tiempo de primera respuesta ha sido excedido (%s%s)!',
+        'Ticket %s: first response time will be over in %s %s!' => 'Ticket %s: tiempo de primera respuesta será excedido en %s%s!',
+        'Ticket %s: update time is over (%s %s)!' => 'Ticket %s: el tiempo de actualización ha terminado (%s/%s)!',
+        'Ticket %s: update time will be over in %s %s!' => 'Ticket %s: tiempo de actualización será excedido en %s%s!',
+        'Ticket %s: solution time is over (%s %s)!' => 'Ticket %s: tiempo de resolución ha sido excedido (%s%s)!',
+        'Ticket %s: solution time will be over in %s %s!' => 'Ticket %s: tiempo de resolución será excedido en %s%s!',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketHistory.tt
         'History of %s%s%s' => 'Histórico de %s%s%s',

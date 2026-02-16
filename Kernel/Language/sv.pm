@@ -2740,12 +2740,12 @@ sub Data {
         'Remove Bcc' => 'Ta bort Bcc',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
-        'Ticket %s: first response time is over (%s/%s)!' => 'Ärende %s: första åtgärdstid har passerats (%s/%s)!',
-        'Ticket %s: first response time will be over in %s/%s!' => 'Ärende %s: första åtgärdstid har passerats om %s/%s!',
-        'Ticket %s: update time is over (%s/%s)!' => '',
-        'Ticket %s: update time will be over in %s/%s!' => 'Ärende %s: uppdateringstid har passerats om %s/%s!',
-        'Ticket %s: solution time is over (%s/%s)!' => 'Ärende %s: lösningstid har passerats (%s/%s)!',
-        'Ticket %s: solution time will be over in %s/%s!' => 'Ärende %s: lösningstid har passerats om %s/%s!',
+        'Ticket %s: first response time is over (%s %s)!' => 'Ärende %s: första åtgärdstid har passerats (%s/%s)!',
+        'Ticket %s: first response time will be over in %s %s!' => 'Ärende %s: första åtgärdstid har passerats om %s/%s!',
+        'Ticket %s: update time is over (%s %s)!' => '',
+        'Ticket %s: update time will be over in %s %s!' => 'Ärende %s: uppdateringstid har passerats om %s/%s!',
+        'Ticket %s: solution time is over (%s %s)!' => 'Ärende %s: lösningstid har passerats (%s/%s)!',
+        'Ticket %s: solution time will be over in %s %s!' => 'Ärende %s: lösningstid har passerats om %s/%s!',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketHistory.tt
         'History of %s%s%s' => '',

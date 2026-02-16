@@ -16,16 +16,17 @@
                 "actionSeparator": "{{ "or" | Translate }}",
                 "actions": [
                     {
-                        "url": "{{ Link }}",
-                        "text": "{{ "Standard Deploy" | Translate }}",
+                        "id": "StandardDeploy",
                         "type": "primary",
+                        "text": "{{ "Standard Deploy" | Translate }}",
+                        "url": "{{ Link }}",
                         "class": "CallForAction btn-main btn-primary"
                     },
                     {
-                        "url": "#",
                         "id": "QuickDeploy",
-                        "text": "{{ "Quick Deploy" | Translate }}",
                         "type": "ghost",
+                        "text": "{{ "Quick Deploy" | Translate }}",
+                        "url": "#",
                         "class": "CallForAction btn-main btn-primary-ghost"
                     }
                 ]

@@ -949,7 +949,8 @@ sub _DisableDefaultSysConfigSettings {
         'Ticket::EventModulePost###Mentions',
         'Frontend::NotifyModule###2000-UID-Check',
         'Frontend::NotifyModule###8000-Daemon-Check',
-        'Frontend::NotifyModule###7000-AgentTimeZone-Check'
+        'Frontend::NotifyModule###7000-AgentTimeZone-Check',
+        'CustomerFrontend::NotifyModule###7-CustomerUserTimeZone-Check'
     );
 
     $Self->DisableSysConfigs(

@@ -2738,12 +2738,12 @@ sub Data {
         'Remove Bcc' => 'Вилучити Прихована Копія',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
-        'Ticket %s: first response time is over (%s/%s)!' => 'Квиток %s: час першого відгуку складає більше (%s/%s)!',
-        'Ticket %s: first response time will be over in %s/%s!' => 'Квиток %s: час першої відповіді буде більшою на %s/%s!',
-        'Ticket %s: update time is over (%s/%s)!' => 'Квиток %s: час оновлення складає більше (',
-        'Ticket %s: update time will be over in %s/%s!' => 'Квиток %s: час оновлення буде більше ніж %s/%s!',
-        'Ticket %s: solution time is over (%s/%s)!' => 'Квиток %s: час розв\'язання більше ніж (%s/%s)!',
-        'Ticket %s: solution time will be over in %s/%s!' => 'Квиток %s: час розв\'язання буде більше ніж %s/%s!',
+        'Ticket %s: first response time is over (%s %s)!' => 'Квиток %s: час першого відгуку складає більше (%s/%s)!',
+        'Ticket %s: first response time will be over in %s %s!' => 'Квиток %s: час першої відповіді буде більшою на %s/%s!',
+        'Ticket %s: update time is over (%s %s)!' => 'Квиток %s: час оновлення складає більше (',
+        'Ticket %s: update time will be over in %s %s!' => 'Квиток %s: час оновлення буде більше ніж %s/%s!',
+        'Ticket %s: solution time is over (%s %s)!' => 'Квиток %s: час розв\'язання більше ніж (%s/%s)!',
+        'Ticket %s: solution time will be over in %s %s!' => 'Квиток %s: час розв\'язання буде більше ніж %s/%s!',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketHistory.tt
         'History of %s%s%s' => 'Історія: %s%s%s',

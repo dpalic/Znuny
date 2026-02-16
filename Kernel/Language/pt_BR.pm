@@ -2741,12 +2741,12 @@ sub Data {
         'Remove Bcc' => 'Remover Bcc',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
-        'Ticket %s: first response time is over (%s/%s)!' => 'Chamado %s: tempo de resposta inicial ultrapassado (%s/%s)!',
-        'Ticket %s: first response time will be over in %s/%s!' => 'Chamado %s: tempo de resposta inicial será ultrapassado em %s/%s!',
-        'Ticket %s: update time is over (%s/%s)!' => 'Chamado %s: tempo de atualização está ultrapassado (%s)!',
-        'Ticket %s: update time will be over in %s/%s!' => 'Chamado %s: tempo de atualização será ultrapassado em %s/%s!',
-        'Ticket %s: solution time is over (%s/%s)!' => 'Chamado %s: tempo de solução ultrapassado (%s/%s)!',
-        'Ticket %s: solution time will be over in %s/%s!' => 'Chamado %s: tempo de solução será ultrapassado em %s/%s!',
+        'Ticket %s: first response time is over (%s %s)!' => 'Chamado %s: tempo de resposta inicial ultrapassado (%s/%s)!',
+        'Ticket %s: first response time will be over in %s %s!' => 'Chamado %s: tempo de resposta inicial será ultrapassado em %s/%s!',
+        'Ticket %s: update time is over (%s %s)!' => 'Chamado %s: tempo de atualização está ultrapassado (%s)!',
+        'Ticket %s: update time will be over in %s %s!' => 'Chamado %s: tempo de atualização será ultrapassado em %s/%s!',
+        'Ticket %s: solution time is over (%s %s)!' => 'Chamado %s: tempo de solução ultrapassado (%s/%s)!',
+        'Ticket %s: solution time will be over in %s %s!' => 'Chamado %s: tempo de solução será ultrapassado em %s/%s!',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketHistory.tt
         'History of %s%s%s' => 'Histórico de %s%s',

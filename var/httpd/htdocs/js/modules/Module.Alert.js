@@ -56,31 +56,31 @@
          * @method onStart
          */
         onStart: function () {
-            var html, messagesModule, messageId;
+            var html, notificationModule, notificationId;
 
             this.bindEvents();
 
             if (this.alertData) {
-                // Find the Messages module first
-                messagesModule = this.findMessagesModule();
-                if (messagesModule) {
-                    // Generate messageId from alert data (use id if provided, otherwise generate from message text using Messages module)
+                // Find the Notification module first
+                notificationModule = this.findNotificationModule();
+                if (notificationModule) {
+                    // Generate notificationId from alert data (use id if provided, otherwise generate from message text using Notification module)
                     if (this.alertData.id) {
-                        messageId = this.alertData.id;
-                    } else if (messagesModule.generateMessageId) {
-                        messageId = messagesModule.generateMessageId(this.alertData.message);
+                        notificationId = this.alertData.id;
+                    } else if (notificationModule.generateNotificationId) {
+                        notificationId = notificationModule.generateNotificationId(this.alertData.message);
                     }
 
-                    // Check if message was already closed before creating it
-                    if (messagesModule.isMessageClosed && messagesModule.isMessageClosed(messageId)) {
-                        // Message was closed, don't display it
+                    // Check if notification was already closed before creating it
+                    if (notificationModule.isNotificationClosed && notificationModule.isNotificationClosed(notificationId)) {
+                        // Notification was closed, don't display it
                         return;
                     }
 
                     html = this.createAlert(this.alertData);
 
-                    // Send the generated HTML to Messages module with messageId
-                    messagesModule.addMessage(html, this.alertData.type || 'notice', this.alertData.hideAfter || 0, messageId);
+                    // Send the generated HTML to Notification module with notificationId and ClosePersistent flag
+                    notificationModule.addMessage(html, this.alertData.type || 'notice', this.alertData.hideAfter || 0, notificationId, this.alertData.closePersistent);
                 }
             }
         },
@@ -94,7 +94,6 @@
             var $alertDataScript, alertData;
 
             $alertDataScript = jQuery('.alertData', this.ctx);
-
             if (!$alertDataScript.length) {
                 return;
             }
@@ -130,20 +129,20 @@
         },
 
         /**
-         * Find the Messages module instance
+         * Find the Notification module instance
          *
-         * @method findMessagesModule
-         * @return {Object|null} The Messages module instance or null if not found
+         * @method findNotificationModule
+         * @return {Object|null} The Notification module instance or null if not found
          */
-        findMessagesModule: function() {
-            var $messagesModule, moduleId;
+        findNotificationModule: function() {
+            var $notificationModule, moduleId;
 
-            // Look for the Messages module in the DOM
-            $messagesModule = jQuery('.mod.modMessages');
+            // Look for the Notification module in the DOM
+            $notificationModule = jQuery('.mod.modNotification');
 
-            if ($messagesModule.length) {
+            if ($notificationModule.length) {
                 // Get the module ID
-                moduleId = $messagesModule.attr('data-moduleid');
+                moduleId = $notificationModule.attr('data-moduleid');
 
                 // Get the module instance from the sandbox
                 if (moduleId) {
@@ -283,6 +282,7 @@
 
                 html += '<div class="alertActions' + (inlineMultipleActions ? ' alertActionsInline' : '') + '">';
                 data.actions.forEach(function (action, index) {
+
                     if (action.url) {
                         actionClasses = 'btn-primary alertButton alertButton' + self.capitalizeFirstLetter(action.type || 'submit'),
                             actionId = '';

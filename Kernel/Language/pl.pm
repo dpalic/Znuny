@@ -2742,12 +2742,12 @@ sub Data {
         'Remove Bcc' => 'Usuń UDW',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
-        'Ticket %s: first response time is over (%s/%s)!' => 'Zgłoszenie %s: przekroczono czas reakcji (%s/%s)!',
-        'Ticket %s: first response time will be over in %s/%s!' => 'Zgłoszenie %s: czas reakcji zostanie przekroczony za %s/%s!',
-        'Ticket %s: update time is over (%s/%s)!' => 'Zgłoszenie %s: przekroczono czas aktualizacji (%s/%s)!',
-        'Ticket %s: update time will be over in %s/%s!' => 'Zgłoszenie %s: czas aktualizacji zostanie przekroczony za %s/%s!',
-        'Ticket %s: solution time is over (%s/%s)!' => 'Zgłoszenie %s: przekroczono czas rozwiązania (%s/%s)!',
-        'Ticket %s: solution time will be over in %s/%s!' => 'Zgłoszenie %s: czas rozwiązania zostanie przekroczony za %s/%s!',
+        'Ticket %s: first response time is over (%s %s)!' => 'Zgłoszenie %s: przekroczono czas reakcji (%s/%s)!',
+        'Ticket %s: first response time will be over in %s %s!' => 'Zgłoszenie %s: czas reakcji zostanie przekroczony za %s/%s!',
+        'Ticket %s: update time is over (%s %s)!' => 'Zgłoszenie %s: przekroczono czas aktualizacji (%s/%s)!',
+        'Ticket %s: update time will be over in %s %s!' => 'Zgłoszenie %s: czas aktualizacji zostanie przekroczony za %s/%s!',
+        'Ticket %s: solution time is over (%s %s)!' => 'Zgłoszenie %s: przekroczono czas rozwiązania (%s/%s)!',
+        'Ticket %s: solution time will be over in %s %s!' => 'Zgłoszenie %s: czas rozwiązania zostanie przekroczony za %s/%s!',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketHistory.tt
         'History of %s%s%s' => 'Historia %s%s%s',

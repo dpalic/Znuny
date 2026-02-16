@@ -89,7 +89,7 @@ my @ExpectedSettingClean = (
     'modules/Module.Form.css',
     'modules/Module.FormSubmitArea.css',
     'modules/Module.MessageInformation.css',
-    'modules/Module.Messages.css',
+    'modules/Module.Notification.css',
     'modules/Module.PageHeadline.css',
     'modules/Module.Sidebar.css',
     'modules/Module.SidebarWidget.css',

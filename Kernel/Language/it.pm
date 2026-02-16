@@ -2746,12 +2746,12 @@ sub Data {
         'Remove Bcc' => 'Rimuovi Ccn',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
-        'Ticket %s: first response time is over (%s/%s)!' => 'Ticket %s: il tempo di prima risposta è scaduto (%s/%s)!',
-        'Ticket %s: first response time will be over in %s/%s!' => 'Ticket %s: il tempo di prima risposta scadrà tra %s/%s!',
-        'Ticket %s: update time is over (%s/%s)!' => 'Ticket %s : tempo di aggiornamento scaduto (%s/%s)!',
-        'Ticket %s: update time will be over in %s/%s!' => 'Ticket %s: il tempo di aggiornamento scadrà tra %s/%s!',
-        'Ticket %s: solution time is over (%s/%s)!' => 'Ticket %s : tempo di soluzione scaduto (%s/%s)!',
-        'Ticket %s: solution time will be over in %s/%s!' => 'Ticket %s: il tempo di soluzione scadrà tra %s/%s!',
+        'Ticket %s: first response time is over (%s %s)!' => 'Ticket %s: il tempo di prima risposta è scaduto (%s/%s)!',
+        'Ticket %s: first response time will be over in %s %s!' => 'Ticket %s: il tempo di prima risposta scadrà tra %s/%s!',
+        'Ticket %s: update time is over (%s %s)!' => 'Ticket %s : tempo di aggiornamento scaduto (%s/%s)!',
+        'Ticket %s: update time will be over in %s %s!' => 'Ticket %s: il tempo di aggiornamento scadrà tra %s/%s!',
+        'Ticket %s: solution time is over (%s %s)!' => 'Ticket %s : tempo di soluzione scaduto (%s/%s)!',
+        'Ticket %s: solution time will be over in %s %s!' => 'Ticket %s: il tempo di soluzione scadrà tra %s/%s!',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketHistory.tt
         'History of %s%s%s' => 'Storia di %s%s%s',

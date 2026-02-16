@@ -2737,12 +2737,12 @@ sub Data {
         'Remove Bcc' => 'Buang Bcc',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
-        'Ticket %s: first response time is over (%s/%s)!' => 'Tiket %s: reaksi masa pertama sudah tamat (%s/%s)!',
-        'Ticket %s: first response time will be over in %s/%s!' => 'Tiket %s: reaksi masa pertama akan tamat dalam %s/%s!',
-        'Ticket %s: update time is over (%s/%s)!' => 'Tiket %s: masa kemaskini telah tamat (%s/%s)!',
-        'Ticket %s: update time will be over in %s/%s!' => 'Tiket %s: masa kemaskini akan tamat dalam %s/%s!',
-        'Ticket %s: solution time is over (%s/%s)!' => 'Tiket %s: masa penyelesaian sudah tamat (%s/%s)!',
-        'Ticket %s: solution time will be over in %s/%s!' => 'Tiket %s: masa penyelesaian akan tamat dalam %s/%s!',
+        'Ticket %s: first response time is over (%s %s)!' => 'Tiket %s: reaksi masa pertama sudah tamat (%s/%s)!',
+        'Ticket %s: first response time will be over in %s %s!' => 'Tiket %s: reaksi masa pertama akan tamat dalam %s/%s!',
+        'Ticket %s: update time is over (%s %s)!' => 'Tiket %s: masa kemaskini telah tamat (%s/%s)!',
+        'Ticket %s: update time will be over in %s %s!' => 'Tiket %s: masa kemaskini akan tamat dalam %s/%s!',
+        'Ticket %s: solution time is over (%s %s)!' => 'Tiket %s: masa penyelesaian sudah tamat (%s/%s)!',
+        'Ticket %s: solution time will be over in %s %s!' => 'Tiket %s: masa penyelesaian akan tamat dalam %s/%s!',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketHistory.tt
         'History of %s%s%s' => 'Sejarah bagi %s%s%s',

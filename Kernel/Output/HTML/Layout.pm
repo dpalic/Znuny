@@ -1153,7 +1153,7 @@ create notify lines
 
     my $Output = $LayoutObject->Notify(
         Priority => 'Warning',
-        Info => 'Some Info Message',
+        Info     => 'Some Info Message',
     );
 
     data with link, the text will be translated
@@ -1161,15 +1161,21 @@ create notify lines
     my $Output = $LayoutObject->Notify(
         Priority  => 'Warning',
         Data      => 'Template content',
-        Link      => 'http://example.com/',
+        Link      => 'http://znuny.com/',
         LinkClass => 'some_CSS_class',              # optional
+    );
+
+    my $Output = $LayoutObject->Notify(
+        Priority        => 'Warning',
+        Info            => 'Some Warning Message',
+        ClosePersistent => 1,                       # optional, default 0; If set to 1, the message remains closed when the page is reloaded for the current session.
     );
 
     errors, the text will be translated
 
     my $Output = $LayoutObject->Notify(
         Priority => 'Error',
-        Info => 'Some Error Message',
+        Info     => 'Some Error Message',
     );
 
     errors from log backend, if no error exists, a '' will be returned
@@ -1178,18 +1184,50 @@ create notify lines
         Priority => 'Error',
     );
 
+    multiple actions
+
+    my $Output = $LayoutObject->Notify(
+        Priority        => 'Warning',
+        Info            => 'Some Info Message',
+        ClosePersistent => 1,
+
+        Actions  => [
+            {
+                type => 'submit',
+                text => 'Continue',
+                url  => 'http://znuny.com/',
+                class => 'some_CSS_class',
+            },
+            {
+                type => 'error',
+                text => 'Error',
+                url  => 'http://znuny.com/',
+                class => 'Error',
+            },
+            {
+                type => 'notify',
+                text => 'Cancel',
+                url  => 'http://znuny.com/',
+                class => 'some_CSS_class',
+            },
+        ],
+    );
+
 =cut
 
 sub Notify {
     my ( $Self, %Param ) = @_;
 
+    my $JSONObject = $Kernel::OM->Get('Kernel::System::JSON');
+    my $LogObject  = $Kernel::OM->Get('Kernel::System::Log');
+
     # create & return output
     if ( !$Param{Info} && !$Param{Data} ) {
-        $Param{BackendMessage} = $Kernel::OM->Get('Kernel::System::Log')->GetLogEntry(
+        $Param{BackendMessage} = $LogObject->GetLogEntry(
             Type => 'Notice',
             What => 'Message',
             )
-            || $Kernel::OM->Get('Kernel::System::Log')->GetLogEntry(
+            || $LogObject->GetLogEntry(
             Type => 'Error',
             What => 'Message',
             ) || '';
@@ -1203,9 +1241,25 @@ sub Notify {
     my $BoxClass  = 'Notice';
     my $IconClass = 'fa fa-bell';
 
-    if ( $Param{Info} ) {
-        $Param{Info} =~ s/\n//g;
+    # Convert newlines to <br/> tags for multiline support
+    # Convert Data.Info to HTML with <br/> tags and store in Data.Data
+    # Data.Data bypasses Translate() and is used directly in the template
+    # For JSON context, we encode the message as JSON string (without quotes)
+    if ( $Param{Info} && !$Param{Data} ) {
+
+        # Use Ascii2Html to properly handle newlines and convert them to <br/> tags
+        my $ConvertedInfo = $Self->Ascii2Html(
+            Text           => $Param{Info},
+            HTMLResultMode => 1,
+            LinkFeature    => 0,
+        );
+
+        # Encode as JSON string for safe use in JSON context
+        # Remove surrounding quotes since we're already in a JSON string value
+        my $JSONEncoded = $JSONObject->Encode( Data => $ConvertedInfo );
+        $Param{Info} = substr( $JSONEncoded, 1, -1 );    # Remove leading and trailing quotes
     }
+
     if ( $Param{Priority} && $Param{Priority} eq 'Error' ) {
         $BoxClass  = 'Error';
         $IconClass = 'fa fa-exclamation-circle';
@@ -1223,33 +1277,34 @@ sub Notify {
         $IconClass = 'fa fa-info-circle';
     }
 
-    if ( $Param{Link} ) {
-        $Self->Block(
-            Name => 'LinkStart',
-            Data => {
-                LinkStart => $Param{Link},
-                LinkClass => $Param{LinkClass} || '',
-            },
+    # Build Actions array from Link/LinkClass or use existing Actions
+    my $Actions;
+    if ( $Param{Link} && !$Param{Actions} ) {
+
+        # Create action from Link and LinkClass
+        my $LinkClass  = $Param{LinkClass}  || '';
+        my $ActionText = $Param{ActionText} || $Param{LinkText} || $Self->{LanguageObject}->Translate('Continue');
+
+        # Build action hash
+        my $ActionHash = {
+            url  => $Param{Link},
+            text => $ActionText,
+            type => 'notify',
+        };
+        if ($LinkClass) {
+            $ActionHash->{class} = $LinkClass;
+        }
+
+        # Encode to JSON
+        $Actions = $JSONObject->Encode(
+            Data => [$ActionHash],
         );
     }
-    if ( $Param{Data} ) {
-        $Self->Block(
-            Name => 'Data',
-            Data => \%Param,
-        );
-    }
-    else {
-        $Self->Block(
-            Name => 'Text',
-            Data => \%Param,
-        );
-    }
-    if ( $Param{Link} ) {
-        $Self->Block(
-            Name => 'LinkStop',
-            Data => {
-                LinkStop => '</a>',
-            },
+    elsif ( $Param{Actions} ) {
+
+        # Use existing Actions (should already be JSON string)
+        $Actions = $JSONObject->Encode(
+            Data => $Param{Actions},
         );
     }
 
@@ -1257,8 +1312,10 @@ sub Notify {
         TemplateFile => 'Notify',
         Data         => {
             %Param,
-            BoxClass  => $BoxClass,
-            IconClass => $IconClass,
+            BoxClass        => $BoxClass,
+            IconClass       => $IconClass,
+            ClosePersistent => $Param{ClosePersistent} || 0,
+            Actions         => $Actions,
         },
     );
 }
@@ -1830,13 +1887,18 @@ sub Footer {
 
     $IncludeRichTextTranslation = 1 if $RichTextSet && -e $LanguageFileWebPath;
 
-    # Get closed messages from session
-    my $SessionObject      = $Kernel::OM->Get('Kernel::System::AuthSession');
-    my $UserClosedMessages = '[]';
+    # Get closed notifications from session
+    my $SessionObject           = $Kernel::OM->Get('Kernel::System::AuthSession');
+    my $UserClosedNotifications = '[]';
     if ( $Self->{SessionID} ) {
         my %SessionData = $SessionObject->GetSessionIDData( SessionID => $Self->{SessionID} );
-        if ( $SessionData{UserClosedMessages} ) {
-            $UserClosedMessages = $SessionData{UserClosedMessages};
+
+        # Check for new key first, fallback to old key for backwards compatibility
+        if ( $SessionData{UserClosedNotifications} ) {
+            $UserClosedNotifications = $SessionData{UserClosedNotifications};
+        }
+        elsif ( $SessionData{UserClosedMessages} ) {
+            $UserClosedNotifications = $SessionData{UserClosedMessages};
         }
     }
 
@@ -1882,7 +1944,7 @@ sub Footer {
         'Mentions::RichTextEditor' => $ConfigObject->Get('Mentions::RichTextEditor') // {},
         Skin                       => $Self->{SkinSelected},
         AutoAttributFieldIDMapping => $ConfigObject->Get('AutoAttributFieldIDMapping') || 1,
-        UserClosedMessages         => $UserClosedMessages,
+        UserClosedNotifications    => $UserClosedNotifications,
     );
 
     for my $Config ( sort keys %JSConfig ) {
@@ -4595,6 +4657,24 @@ sub CustomerFooter {
 
     $IncludeRichTextTranslation = 1 if $RichTextSet && -e $LanguageFileWebPath;
 
+    # UserClosedNotifications is not implemented yet
+
+    # # Get closed notifications from session
+    # my $SessionObject           = $Kernel::OM->Get('Kernel::System::AuthSession');
+    # my $UserClosedNotifications = '[]';
+
+    # if ( $Self->{SessionID} ) {
+    #     my %SessionData = $SessionObject->GetSessionIDData( SessionID => $Self->{SessionID} );
+
+    #     # Check for new key first, fallback to old key for backwards compatibility
+    #     if ( $SessionData{UserClosedNotifications} ) {
+    #         $UserClosedNotifications = $SessionData{UserClosedNotifications};
+    #     }
+    #     elsif ( $SessionData{UserClosedMessages} ) {
+    #         $UserClosedNotifications = $SessionData{UserClosedMessages};
+    #     }
+    # }
+
     # add JS data
     my %JSConfig = (
         Baselink                   => $Self->{Baselink},
@@ -4616,6 +4696,8 @@ sub CustomerFooter {
         InputFieldsActivated       => $ConfigObject->Get('ModernizeCustomerFormFields'),
         Autocomplete               => $AutocompleteConfig,
         WebMaxFileUpload           => $ConfigObject->Get('WebMaxFileUpload'),
+
+        # UserClosedNotifications    => $UserClosedNotifications,
     );
 
     for my $Config ( sort keys %JSConfig ) {

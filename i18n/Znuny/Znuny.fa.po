@@ -7851,27 +7851,27 @@ msgid "Undo & close"
 msgstr "عملیات را برگردان و پنجره را ببند"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
-msgid "Ticket %s: first response time is over (%s/%s)!"
+msgid "Ticket %s: first response time is over (%s %s)!"
 msgstr "بلیط %s : زمان پاسخ برای اولین بار است که بیش از ( %s / %s )!"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
-msgid "Ticket %s: first response time will be over in %s/%s!"
+msgid "Ticket %s: first response time will be over in %s %s!"
 msgstr "بلیط %s : اول زمان پاسخ را در خواهد %s / %s !"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
-msgid "Ticket %s: update time is over (%s/%s)!"
+msgid "Ticket %s: update time is over (%s %s)!"
 msgstr "بلیط %s : زمان به روز رسانی به پایان رسیده است ( %s / %s )!"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
-msgid "Ticket %s: update time will be over in %s/%s!"
+msgid "Ticket %s: update time will be over in %s %s!"
 msgstr "بلیط %s : زمان به روز رسانی بیش از در خواهد %s / %s !"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
-msgid "Ticket %s: solution time is over (%s/%s)!"
+msgid "Ticket %s: solution time is over (%s %s)!"
 msgstr "بلیط %s : زمان حل به پایان رسیده است ( %s / %s )!"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
-msgid "Ticket %s: solution time will be over in %s/%s!"
+msgid "Ticket %s: solution time will be over in %s %s!"
 msgstr "بلیط %s : زمان حل بیش از در خواهد %s / %s !"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketForward.tt

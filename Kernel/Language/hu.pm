@@ -2743,12 +2743,12 @@ sub Data {
         'Remove Bcc' => 'Rejtett másolat eltávolítása',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
-        'Ticket %s: first response time is over (%s/%s)!' => '%s jegy: az első válaszidő lejárt (%s/%s)!',
-        'Ticket %s: first response time will be over in %s/%s!' => '%s jegy: az első válaszidő le fog járni: %s/%s!',
-        'Ticket %s: update time is over (%s/%s)!' => '%s jegy: a frissítés ideje lejárt (%s/%s)!',
-        'Ticket %s: update time will be over in %s/%s!' => '%s jegy: a frissítési idő le fog járni: %s/%s!',
-        'Ticket %s: solution time is over (%s/%s)!' => '%s jegy: a megoldási idő lejárt (%s/%s)!',
-        'Ticket %s: solution time will be over in %s/%s!' => '%s jegy: a megoldási idő le fog járni: %s/%s!',
+        'Ticket %s: first response time is over (%s %s)!' => '%s jegy: az első válaszidő lejárt (%s/%s)!',
+        'Ticket %s: first response time will be over in %s %s!' => '%s jegy: az első válaszidő le fog járni: %s/%s!',
+        'Ticket %s: update time is over (%s %s)!' => '%s jegy: a frissítés ideje lejárt (%s/%s)!',
+        'Ticket %s: update time will be over in %s %s!' => '%s jegy: a frissítési idő le fog járni: %s/%s!',
+        'Ticket %s: solution time is over (%s %s)!' => '%s jegy: a megoldási idő lejárt (%s/%s)!',
+        'Ticket %s: solution time will be over in %s %s!' => '%s jegy: a megoldási idő le fog járni: %s/%s!',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketHistory.tt
         'History of %s%s%s' => '%s%s%s előzményei',

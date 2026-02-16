@@ -2744,12 +2744,12 @@ sub Data {
         'Remove Bcc' => '移除Bcc',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
-        'Ticket %s: first response time is over (%s/%s)!' => '工单%s：首次响应时间已超时(%s/%s)！',
-        'Ticket %s: first response time will be over in %s/%s!' => '工单%s：首次响应时间将在%s/%s内超时！',
-        'Ticket %s: update time is over (%s/%s)!' => '工单%s：更新时间已超时(%s/%s)！',
-        'Ticket %s: update time will be over in %s/%s!' => '工单%s: 更新时间将在%s/%s内超时！',
-        'Ticket %s: solution time is over (%s/%s)!' => '工单%s: 解决时间已超时(%s/%s)！',
-        'Ticket %s: solution time will be over in %s/%s!' => '工单%s：解决时间将在%s/%s内超时！',
+        'Ticket %s: first response time is over (%s %s)!' => '工单%s：首次响应时间已超时(%s/%s)！',
+        'Ticket %s: first response time will be over in %s %s!' => '工单%s：首次响应时间将在%s/%s内超时！',
+        'Ticket %s: update time is over (%s %s)!' => '工单%s：更新时间已超时(%s/%s)！',
+        'Ticket %s: update time will be over in %s %s!' => '工单%s: 更新时间将在%s/%s内超时！',
+        'Ticket %s: solution time is over (%s %s)!' => '工单%s: 解决时间已超时(%s/%s)！',
+        'Ticket %s: solution time will be over in %s %s!' => '工单%s：解决时间将在%s/%s内超时！',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketHistory.tt
         'History of %s%s%s' => '%s%s%s历史',

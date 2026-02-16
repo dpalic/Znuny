@@ -2749,12 +2749,12 @@ sub Data {
         'Remove Bcc' => 'Удалить из скрытой копии',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
-        'Ticket %s: first response time is over (%s/%s)!' => 'Заявка %s: время первого ответа истекло (%s/%s)!',
-        'Ticket %s: first response time will be over in %s/%s!' => 'Заявка %s: время первого ответа истекает через %s/%s!',
-        'Ticket %s: update time is over (%s/%s)!' => 'Заявка %s: время обновления истекло (%s/%s)!',
-        'Ticket %s: update time will be over in %s/%s!' => 'Заявка %s: время обновления истекает через %s/%s!',
-        'Ticket %s: solution time is over (%s/%s)!' => 'Заявка %s: время решения истекло (%s/%s)!',
-        'Ticket %s: solution time will be over in %s/%s!' => 'Заявка %s: время решения истекает через %s/%s!',
+        'Ticket %s: first response time is over (%s %s)!' => 'Заявка %s: время первого ответа истекло (%s/%s)!',
+        'Ticket %s: first response time will be over in %s %s!' => 'Заявка %s: время первого ответа истекает через %s/%s!',
+        'Ticket %s: update time is over (%s %s)!' => 'Заявка %s: время обновления истекло (%s/%s)!',
+        'Ticket %s: update time will be over in %s %s!' => 'Заявка %s: время обновления истекает через %s/%s!',
+        'Ticket %s: solution time is over (%s %s)!' => 'Заявка %s: время решения истекло (%s/%s)!',
+        'Ticket %s: solution time will be over in %s %s!' => 'Заявка %s: время решения истекает через %s/%s!',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketHistory.tt
         'History of %s%s%s' => 'История для %s%s%s',

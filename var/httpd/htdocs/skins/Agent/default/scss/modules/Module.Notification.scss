@@ -8,7 +8,7 @@ did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
 
 @import './../utilities/Utility.MediaQueries';
 
-.modMessages {
+.modNotification {
   > .inner {
     position: fixed;
     top: 90px;
@@ -33,7 +33,7 @@ did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
         transform: translateX(-25px);
       }
 
-      .messageClose {
+      .notificationClose {
         position: absolute;
         top: 15px;
         right: 15px;
@@ -66,6 +66,6 @@ did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
   }
 }
 
-.Popup .modMessages > .inner {
+.Popup .modNotification > .inner {
   top: 15px;
 }

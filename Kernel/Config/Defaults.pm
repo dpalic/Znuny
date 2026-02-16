@@ -1120,7 +1120,7 @@ sub LoadDefaults {
         'modules/Module.Form.css',
         'modules/Module.FormSubmitArea.css',
         'modules/Module.MessageInformation.css',
-        'modules/Module.Messages.css',
+        'modules/Module.Notification.css',
         'modules/Module.PageHeadline.css',
         'modules/Module.Sidebar.css',
         'modules/Module.SidebarWidget.css',
@@ -1146,9 +1146,11 @@ sub LoadDefaults {
         'Core.Print.css',
         'Core.Animations.css',
         'Core.FlexboxModel.css',
-        'Core.Footer.css',,
+        'Core.Footer.css',
         'Core.PageLayout.css',
-        'Core.Components.css'
+        'Core.Components.css',
+        'modules/Module.Alert.css',
+        'modules/Module.Notification.css',
     ];
 
     # --------------------------------------------------- #
@@ -1191,6 +1193,9 @@ sub LoadDefaults {
         'Core.Form.Validate.js',
         'Core.Customer.js',
         'Core.Customer.Responsive.js',
+        'modules/application.js',
+        'modules/Module.Notification.js',
+        'modules/Module.Alert.js',
     ];
 
     # Agent Common JS
@@ -1248,7 +1253,7 @@ sub LoadDefaults {
         'modules/Module.Card.js',
         'modules/Module.CustomerSelector.js',
         'modules/Module.Form.js',
-        'modules/Module.Messages.js',
+        'modules/Module.Notification.js',
         'modules/Module.Alert.js',
         'modules/Module.SidebarWidget.js',
         'Znuny.App.js'

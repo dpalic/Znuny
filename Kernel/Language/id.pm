@@ -2739,12 +2739,12 @@ bin/znuny.Daemon.pl status\').',
         'Remove Bcc' => 'Hapus Bccc',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
-        'Ticket %s: first response time is over (%s/%s)!' => 'Tiket %s: respon pertama berakhir (%s%s)!',
-        'Ticket %s: first response time will be over in %s/%s!' => 'Tiket %s: Waktu respon pertama akan berakhir di %s%s!',
-        'Ticket %s: update time is over (%s/%s)!' => 'Tiket %s: waktu update lebih (%s/%s)!',
-        'Ticket %s: update time will be over in %s/%s!' => 'Tiket %S: Waktu pembaruan akan berakhir di %s%s!',
-        'Ticket %s: solution time is over (%s/%s)!' => 'Tiket %s: Waktu solusi akan berakhir (%s%s)!',
-        'Ticket %s: solution time will be over in %s/%s!' => 'Tiket %s: Waktu solusi akan berakhir di %s%s!',
+        'Ticket %s: first response time is over (%s %s)!' => 'Tiket %s: respon pertama berakhir (%s%s)!',
+        'Ticket %s: first response time will be over in %s %s!' => 'Tiket %s: Waktu respon pertama akan berakhir di %s%s!',
+        'Ticket %s: update time is over (%s %s)!' => 'Tiket %s: waktu update lebih (%s/%s)!',
+        'Ticket %s: update time will be over in %s %s!' => 'Tiket %S: Waktu pembaruan akan berakhir di %s%s!',
+        'Ticket %s: solution time is over (%s %s)!' => 'Tiket %s: Waktu solusi akan berakhir (%s%s)!',
+        'Ticket %s: solution time will be over in %s %s!' => 'Tiket %s: Waktu solusi akan berakhir di %s%s!',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketHistory.tt
         'History of %s%s%s' => 'Sejarah dari %s%s%s',

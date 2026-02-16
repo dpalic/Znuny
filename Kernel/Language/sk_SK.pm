@@ -2737,12 +2737,12 @@ sub Data {
         'Remove Bcc' => 'Vymazať Skrytú kópiu',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
-        'Ticket %s: first response time is over (%s/%s)!' => 'Tiket %s: čas na prvú odozvu bol prekročený o (%s/%s)',
-        'Ticket %s: first response time will be over in %s/%s!' => 'Tiket %s: čas na prvú odozvu bude prekročený za (%s/%s)',
-        'Ticket %s: update time is over (%s/%s)!' => '',
-        'Ticket %s: update time will be over in %s/%s!' => 'Tiket %s: čas na aktualizáciu bude prekročený za %s/%s!',
-        'Ticket %s: solution time is over (%s/%s)!' => 'Tiket %s: čas na vyriešenie bol prekročený o (%s/%s)',
-        'Ticket %s: solution time will be over in %s/%s!' => 'Tiket %s: čas na vyriešenie bude prekročený za (%s/%s)',
+        'Ticket %s: first response time is over (%s %s)!' => 'Tiket %s: čas na prvú odozvu bol prekročený o (%s/%s)',
+        'Ticket %s: first response time will be over in %s %s!' => 'Tiket %s: čas na prvú odozvu bude prekročený za (%s/%s)',
+        'Ticket %s: update time is over (%s %s)!' => '',
+        'Ticket %s: update time will be over in %s %s!' => 'Tiket %s: čas na aktualizáciu bude prekročený za %s/%s!',
+        'Ticket %s: solution time is over (%s %s)!' => 'Tiket %s: čas na vyriešenie bol prekročený o (%s/%s)',
+        'Ticket %s: solution time will be over in %s %s!' => 'Tiket %s: čas na vyriešenie bude prekročený za (%s/%s)',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketHistory.tt
         'History of %s%s%s' => '',

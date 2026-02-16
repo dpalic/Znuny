@@ -7,7 +7,7 @@
 // --
 
 /**
- * Messages Module
+ * Notification Module
  *
  * Handles alert display and management.
  * Provides functionality for displaying alerts with messages and action links.
@@ -16,15 +16,15 @@
 
 /* global Env */
 (function (jQuery) {
-    Env.Application.Messages = function (ctx, sandbox, moduleId) {
+    Env.Application.Notification = function (ctx, sandbox, moduleId) {
         Env.Module.call(this, ctx, sandbox, moduleId);
     };
-    Env.Application.Messages.prototype = new Env.Module();
-    Env.Application.Messages.prototype.constructor = Env.Application.Messages;
-    jQuery.extend(Env.Application.Messages.prototype, {
+    Env.Application.Notification.prototype = new Env.Module();
+    Env.Application.Notification.prototype.constructor = Env.Application.Notification;
+    jQuery.extend(Env.Application.Notification.prototype, {
 
         // Module configuration
-        name: 'modMessages',
+        name: 'modNotification',
 
         /**
          * Hook function to load the module specific dependencies.
@@ -41,15 +41,16 @@
          * @method onInit
          */
         onInit: function () {
-            // Load closed messages from session
-            this.getClosedMessages();
+
+            // Load closed notifications from session
+            this.getClosedNotifications();
 
             // First try to get alert data from JSON
-            this.processMessagesData();
+            this.processNotificationsData();
 
             // If no JSON data found, extract from DOM (legacy mode)
             if (!this.alertData) {
-                this.extractMessagesData();
+                this.extractNotificationsData();
             }
         },
 
@@ -62,24 +63,27 @@
             this.bindEvents();
         },
 
-        addMessage: function (html, type, hideAfter, messageId) {
+        addMessage: function (html, type, hideAfter, notificationId, closePersistent) {
             var that, $messages, closeIconPath, closeTranslation, closeHtml, $message, modules, i, messageText, $tempDiv;
 
             that = this;
             $messages = jQuery('.messages', this.ctx);
             closeIconPath = jQuery('.inner', this.ctx).attr('data-close-icon-path');
             closeTranslation = jQuery('.inner', this.ctx).attr('data-close-translation');
-            closeHtml = '<span class="messageClose"><img src="'+ closeIconPath +'" alt="'+ closeTranslation+'"/></span>';
+            closeHtml = '<span class="notificationClose"><img src="'+ closeIconPath +'" alt="'+ closeTranslation+'"/></span>';
 
-            // Generate messageId if not provided
-            if (!messageId) {
+            // Generate notificationId if not provided
+            if (!notificationId) {
                 // Extract message text from HTML
                 $tempDiv = jQuery('<div>').html(html);
                 messageText = $tempDiv.find('p').first().text().trim() || $tempDiv.text().trim();
-                messageId = this.generateMessageId(messageText);
+                notificationId = this.generateNotificationId(messageText);
             }
 
-            $message = jQuery('<div class="message message' + this.capitalizeFirstLetter(type) + '" data-hide-after="' + hideAfter + '" data-message-id="' + messageId + '">' + html + closeHtml + '</div>');
+            // Set closePersistent to 0 if not provided
+            closePersistent = closePersistent || 0;
+
+            $message = jQuery('<div class="message message' + this.capitalizeFirstLetter(type) + '" data-hide-after="' + hideAfter + '" data-notification-id="' + notificationId + '" data-close-persistent="' + closePersistent + '">' + html + closeHtml + '</div>');
             $messages.append($message);
             hideAfter = hideAfter || 0;
 
@@ -117,13 +121,14 @@
         bindEvents: function () {
             var that = this;
 
-            jQuery('.messageClose', this.ctx).on('click', function () {
+            jQuery('.notificationClose', this.ctx).on('click', function () {
                 var $message = jQuery(this).closest('.message'),
-                    messageId = $message.attr('data-message-id');
+                    notificationId = $message.attr('data-notification-id'),
+                    closePersistent = $message.attr('data-close-persistent');
 
-                if (messageId) {
-                    // Save closed message ID to session
-                    that.addClosedMessage(messageId);
+                if (notificationId && closePersistent === '1') {
+                    // Save closed notification ID to session only if ClosePersistent is set
+                    that.addClosedNotification(notificationId);
                 }
 
                 $message.remove();
@@ -131,13 +136,13 @@
         },
 
         /**
-         * Process messages data from JSON
+         * Process notifications data from JSON
          *
-         * @method processMessagesData
+         * @method processNotificationsData
          * @return {Boolean} Success status
          */
-        processMessagesData: function () {
-            var $alertDataScript, alertData, messageHtml, i, action, messageId;
+        processNotificationsData: function () {
+            var $alertDataScript, alertData, messageHtml, i, action, notificationId;
 
             // Look for alert data in JSON format
             $alertDataScript = jQuery('.alertData', this.ctx);
@@ -148,12 +153,12 @@
                     alertData = JSON.parse($alertDataScript.text());
                     this.alertData = alertData;
 
-                    // Get message ID from alertData or generate from message text
-                    messageId = alertData.id || this.generateMessageId(alertData.message);
+                    // Get notification ID from alertData or generate from message text
+                    notificationId = alertData.id || this.generateNotificationId(alertData.message);
 
-                    // Check if message was already closed
-                    if (this.isMessageClosed(messageId)) {
-                        // Message was closed, don't display it
+                    // Check if notification was already closed
+                    if (this.isNotificationClosed(notificationId)) {
+                        // Notification was closed, don't display it
                         return false;
                     }
 
@@ -167,9 +172,13 @@
                         // Add each action button
                         for (i = 0; i < alertData.actions.length; i++) {
                             action = alertData.actions[i];
+
+                            // Add action button if url contains `Action=`
                             if (action && action.url){
                                 messageHtml += '<a href="' + action.url + '" class="' + (action.classes || '') + '">' + action.text + '</a>';
-                            }else{
+                            }
+                            // Add action text if url does not contain `Action=`
+                            else {
                                 messageHtml += action.text;
                             }
                         }
@@ -180,8 +189,8 @@
                     // Add close button
                     messageHtml += '<a class="close" href="#"><i class="fa fa-times"></i></a>';
 
-                    // Add the message with message ID
-                    this.addMessage(messageHtml, alertData.type || 'notice', alertData.hideAfter || 0, messageId);
+                    // Add the message with notification ID and ClosePersistent flag
+                    this.addMessage(messageHtml, alertData.type || 'notice', alertData.hideAfter || 0, notificationId, alertData.closePersistent);
 
                     return true;
                 } catch (e) {
@@ -193,37 +202,37 @@
         },
 
         /**
-         * Extract messages data from DOM (legacy mode)
+         * Extract notifications data from DOM (legacy mode)
          *
-         * @method extractMessagesData
+         * @method extractNotificationsData
          * @return {Boolean} Success status
          * @description
          *      This method is only called if no JSON alert data was found.
          *      It looks for legacy message elements that are already in the DOM.
          *      If no legacy messages exist, $messages will be empty, which is normal.
          */
-        extractMessagesData: function () {
+        extractNotificationsData: function () {
             var that = this,
                 $messages;
 
             // Look for legacy message elements that are already in the DOM
-            // Note: This will be empty if messages are created via JSON (processMessagesData)
+            // Note: This will be empty if notifications are created via JSON (processNotificationsData)
             // or if there are no legacy messages in the DOM
             $messages = jQuery('.message', this.ctx);
 
             if ($messages.length) {
                 $messages.each(function (index, element) {
-                    var $message, hideAfter, messageText, messageId;
+                    var $message, hideAfter, messageText, notificationId;
 
                     $message = jQuery(element);
 
                     // Get message text and generate ID if not present
                     messageText = $message.text().trim();
-                    messageId = $message.attr('data-message-id') || that.generateMessageId(messageText);
+                    notificationId = $message.attr('data-notification-id') || $message.attr('data-message-id') || that.generateNotificationId(messageText);
 
-                    // Check if message was already closed
-                    if (that.isMessageClosed(messageId)) {
-                        // Message was closed, remove it
+                    // Check if notification was already closed
+                    if (that.isNotificationClosed(notificationId)) {
+                        // Notification was closed, remove it
                         $message.remove();
                         return;
                     }
@@ -248,21 +257,21 @@
         },
 
         /**
-         * Generate a unique message ID from message text
+         * Generate a unique notification ID from message text
          *
-         * @method generateMessageId
+         * @method generateNotificationId
          * @param {String} messageText - The message text
-         * @return {String} Message ID
+         * @return {String} Notification ID
          */
-        generateMessageId: function (messageText) {
+        generateNotificationId: function (messageText) {
             var hash = 0,
                 i,
                 chr,
                 normalizedText;
 
             if (!messageText || messageText.length === 0) {
-                // Use a fixed ID for empty messages so they can be recognized consistently
-                return 'msg_empty';
+                // Use a fixed ID for empty notifications so they can be recognized consistently
+                return 'notification_empty';
             }
 
             // Normalize message text: trim and remove HTML tags for consistent hashing
@@ -270,8 +279,8 @@
             normalizedText = messageText.replace(/<[^>]*>/g, '').trim();
 
             if (normalizedText.length === 0) {
-                // Use a fixed ID for empty messages (after normalization) so they can be recognized consistently
-                return 'msg_empty';
+                // Use a fixed ID for empty notifications (after normalization) so they can be recognized consistently
+                return 'notification_empty';
             }
 
             // Generate hash from normalized message text using djb2-like algorithm
@@ -286,59 +295,59 @@
                 hash = hash & hash; // Convert to 32bit integer
             }
 
-            return 'msg_' + Math.abs(hash).toString(36);
+            return 'notification_' + Math.abs(hash).toString(36);
         },
 
         /**
-         * Get closed messages from session
+         * Get closed notifications from session
          *
-         * @method getClosedMessages
+         * @method getClosedNotifications
          */
-        getClosedMessages: function () {
-            var closedMessagesJson = Core.Config.Get('UserClosedMessages') || '[]';
+        getClosedNotifications: function () {
+            var closedNotificationsJson = Core.Config.Get('UserClosedNotifications') || '[]';
 
             // If it's already an array, use it directly
-            if (jQuery.isArray(closedMessagesJson)) {
-                this.closedMessages = closedMessagesJson;
+            if (jQuery.isArray(closedNotificationsJson)) {
+                this.closedNotifications = closedNotificationsJson;
             } else {
                 try {
-                    this.closedMessages = JSON.parse(closedMessagesJson);
+                    this.closedNotifications = JSON.parse(closedNotificationsJson);
                 } catch (e) {
-                    this.closedMessages = [];
+                    this.closedNotifications = [];
                 }
             }
 
-            if (!jQuery.isArray(this.closedMessages)) {
-                this.closedMessages = [];
+            if (!jQuery.isArray(this.closedNotifications)) {
+                this.closedNotifications = [];
             }
         },
 
         /**
-         * Check if a message is closed
+         * Check if a notification is closed
          *
-         * @method isMessageClosed
-         * @param {String} messageId - The message ID
-         * @return {Boolean} True if message is closed
+         * @method isNotificationClosed
+         * @param {String} notificationId - The notification ID
+         * @return {Boolean} True if notification is closed
          */
-        isMessageClosed: function (messageId) {
+        isNotificationClosed: function (notificationId) {
             var isClosed = false,
                 i;
 
-            if (!this.closedMessages) {
-                this.getClosedMessages();
+            if (!this.closedNotifications) {
+                this.getClosedNotifications();
             }
 
-            if (!messageId) {
+            if (!notificationId) {
                 return false;
             }
 
-            // Trim messageId to avoid whitespace issues
-            messageId = String(messageId).trim();
+            // Trim notificationId to avoid whitespace issues
+            notificationId = String(notificationId).trim();
 
-            // Check if messageId is in closedMessages array
+            // Check if notificationId is in closedNotifications array
             isClosed = false;
-            for (i = 0; i < this.closedMessages.length; i++) {
-                if (String(this.closedMessages[i]).trim() === messageId) {
+            for (i = 0; i < this.closedNotifications.length; i++) {
+                if (String(this.closedNotifications[i]).trim() === notificationId) {
                     isClosed = true;
                     break;
                 }
@@ -348,29 +357,29 @@
         },
 
         /**
-         * Add closed message ID to closedMessages array
+         * Add closed notification ID to closedNotifications array
          *
-         * @method addClosedMessage
-         * @param {String} messageId - The message ID to add
+         * @method addClosedNotification
+         * @param {String} notificationId - The notification ID to add
          */
-        addClosedMessage: function (messageId) {
+        addClosedNotification: function (notificationId) {
 
-            var closedMessagesJson;
+            var closedNotificationsJson;
 
-            if (!this.closedMessages) {
-                this.getClosedMessages();
+            if (!this.closedNotifications) {
+                this.getClosedNotifications();
             }
 
-            // Add message ID if not already in array
-            if (jQuery.inArray(messageId, this.closedMessages) === -1) {
-                this.closedMessages.push(messageId);
+            // Add notification ID if not already in array
+            if (jQuery.inArray(notificationId, this.closedNotifications) === -1) {
+                this.closedNotifications.push(notificationId);
 
                 // Update session via AJAX
                 if (typeof Core !== 'undefined' && Core.Agent && Core.Agent.UpdateSessionID) {
-                    closedMessagesJson = JSON.stringify(this.closedMessages);
-                    Core.Agent.UpdateSessionID('UserClosedMessages', closedMessagesJson,
+                    closedNotificationsJson = JSON.stringify(this.closedNotifications);
+                    Core.Agent.UpdateSessionID('UserClosedNotifications', closedNotificationsJson,
                         function() {
-                            // Success callback - message added to closedMessages array
+                            // Success callback - notification added to closedNotifications array
                         },
                         function() {
                             // Error callback - silently fail

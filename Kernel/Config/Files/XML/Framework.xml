@@ -7928,7 +7928,7 @@ via the Preferences button after logging in.
                 <Item>modules/Module.Form.css</Item>
                 <Item>modules/Module.FormSubmitArea.css</Item>
                 <Item>modules/Module.MessageInformation.css</Item>
-                <Item>modules/Module.Messages.css</Item>
+                <Item>modules/Module.Notification.css</Item>
                 <Item>modules/Module.PageHeadline.css</Item>
                 <Item>modules/Module.Sidebar.css</Item>
                 <Item>modules/Module.SidebarWidget.css</Item>
@@ -8004,7 +8004,7 @@ via the Preferences button after logging in.
                 <Item>modules/Module.Card.js</Item>
                 <Item>modules/Module.CustomerSelector.js</Item>
                 <Item>modules/Module.Form.js</Item>
-                <Item>modules/Module.Messages.js</Item>
+                <Item>modules/Module.Notification.js</Item>
                 <Item>modules/Module.Alert.js</Item>
                 <Item>modules/Module.SidebarWidget.js</Item>
                 <Item>Znuny.App.js</Item>
@@ -8053,6 +8053,8 @@ via the Preferences button after logging in.
                 <Item>Core.Footer.css</Item>
                 <Item>Core.PageLayout.css</Item>
                 <Item>Core.Components.css</Item>
+                <Item>modules/Module.Alert.css</Item>
+                <Item>modules/Module.Notification.css</Item>
             </Array>
         </Value>
     </Setting>
@@ -8104,6 +8106,9 @@ via the Preferences button after logging in.
                 <Item>Core.Form.Validate.js</Item>
                 <Item>Core.Customer.js</Item>
                 <Item>Core.Customer.Responsive.js</Item>
+                <Item>modules/application.js</Item>
+                <Item>modules/Module.Notification.js</Item>
+                <Item>modules/Module.Alert.js</Item>
             </Array>
         </Value>
     </Setting>

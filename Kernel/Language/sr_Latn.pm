@@ -2743,12 +2743,12 @@ sub Data {
         'Remove Bcc' => 'Ukloni Bcc',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
-        'Ticket %s: first response time is over (%s/%s)!' => 'Tiket %s: vreme odziva je isteklo (%s/%s)!',
-        'Ticket %s: first response time will be over in %s/%s!' => 'Tiket %s: vreme odziva će isteći za %s/%s!',
-        'Ticket %s: update time is over (%s/%s)!' => 'Tiket %s: vreme ažuriranja je preko (%s/%s)!',
-        'Ticket %s: update time will be over in %s/%s!' => 'Tiket %s: vreme ažuriranja ističe za %s/%s!',
-        'Ticket %s: solution time is over (%s/%s)!' => 'Tiket %s: vreme rešavanja je isteklo (%s/%s)!',
-        'Ticket %s: solution time will be over in %s/%s!' => 'Tiket %s: vreme rešavanja ističe za %s/%s!',
+        'Ticket %s: first response time is over (%s %s)!' => 'Tiket %s: vreme odziva je isteklo (%s/%s)!',
+        'Ticket %s: first response time will be over in %s %s!' => 'Tiket %s: vreme odziva će isteći za %s/%s!',
+        'Ticket %s: update time is over (%s %s)!' => 'Tiket %s: vreme ažuriranja je preko (%s/%s)!',
+        'Ticket %s: update time will be over in %s %s!' => 'Tiket %s: vreme ažuriranja ističe za %s/%s!',
+        'Ticket %s: solution time is over (%s %s)!' => 'Tiket %s: vreme rešavanja je isteklo (%s/%s)!',
+        'Ticket %s: solution time will be over in %s %s!' => 'Tiket %s: vreme rešavanja ističe za %s/%s!',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketHistory.tt
         'History of %s%s%s' => 'Istorijat od %s%s%s',
