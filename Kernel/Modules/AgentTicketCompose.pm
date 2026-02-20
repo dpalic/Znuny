@@ -1337,11 +1337,6 @@ sub Run {
         );
     }
     else {
-        my $Output = $LayoutObject->Header(
-            Value     => $Ticket{TicketNumber},
-            Type      => 'Small',
-            BodyClass => 'Popup',
-        );
 
         # get std attachment object
         my $StdAttachmentObject = $Kernel::OM->Get('Kernel::System::StdAttachment');
@@ -1631,6 +1626,12 @@ sub Run {
             $Data{Cc}  = '';
             $Data{Bcc} = '';
         }
+
+        my $Output = $LayoutObject->Header(
+            Value     => $Ticket{TicketNumber},
+            Type      => 'Small',
+            BodyClass => 'Popup',
+        );
 
         # use customer database email
         # do not add customer email to cc, if article is visible for customer
@@ -2044,6 +2045,17 @@ sub _Mask {
     $Param{Cc} = ( scalar @{ $Param{MultipleCustomerCc} } ? '' : $Param{Cc} );
     if ( defined $Param{Cc} && $Param{Cc} ne '' ) {
         $Param{CcInvalid} = '';
+    }
+
+    # Set initial values for CustomerSelector when no multiple customer entries exist (e.g. on reply).
+    if ( !scalar @{ $Param{MultipleCustomer} } && $Param{To} ) {
+        $Param{CustomerInitialValue} = $Param{To};
+    }
+    if ( !scalar @{ $Param{MultipleCustomerCc} } && $Param{Cc} ) {
+        $Param{CcCustomerInitialValue} = $Param{Cc};
+    }
+    if ( !scalar @{ $Param{MultipleCustomerBcc} } && $Param{Bcc} ) {
+        $Param{BccCustomerInitialValue} = $Param{Bcc};
     }
 
     # Cc

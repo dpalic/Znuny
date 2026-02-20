@@ -606,8 +606,8 @@
             customerQueueHtml = '';
 
             if (!hasErrors) {
-                // Add input fields for customer data
-                inputFieldsHtml = '<input type="hidden" name="' + params.inputFields.inputName + '" value="' + params.value + '">' + '<input type="hidden" name="' + params.inputFields.textInputName + '" value="' + this.escapeHtmlAttr(params.originalName) + '">';
+                // Add input fields for customer data (escape value for HTML attributes to prevent broken markup with quotes/angle brackets in addresses)
+                inputFieldsHtml = '<input type="hidden" name="' + params.inputFields.inputName + '" value="' + this.escapeHtmlAttr(params.value || '') + '">' + '<input type="hidden" name="' + params.inputFields.textInputName + '" value="' + this.escapeHtmlAttr(params.originalName || '') + '">';
 
                 // Generate customer queue input HTML if the attribute is set
                 if (this.customerQueueAttribute) {
@@ -617,7 +617,7 @@
             }
 
             return '<span class="customerSelectorFieldInputSelectedCustomer ' + params.cssClasses.activeClass + ' ' + params.cssClasses.disabledClass + '"' +
-                ' data-value="' + params.value + '"' +
+                ' data-value="' + this.escapeHtmlAttr(params.value || '') + '"' +
                 ' role="option"' +
                 ' aria-selected="' + params.cssClasses.ariaSelected + '">' + selectHtml +
                 '<span class="customerName">' + params.escapedName + '</span>' +
