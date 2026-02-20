@@ -357,14 +357,11 @@ JAVASCRIPT
         $Selenium->find_element( "#OverwriteExistingNotifications", 'css' )->click();
         $Selenium->find_element("//button[\@value=\'$TranslatedUploadNotification\']")->VerifiedClick();
 
-        $TranslatedMessage = $LanguageObject->Translate(
-            'The following Notifications have been updated successfully: %s',
-            $NotifEventRandomID
-        );
-        $TranslatedMessage = substr( $TranslatedMessage, 0, 30 );
-        $Selenium->find_element(
+        $TranslatedMessage = "Die folgenden Benachrichtigungen wurden erfolgreich aktualisiert" .
+
+            $Selenium->find_element(
             "//div[contains(\@class, 'alertContent') and contains(., '$TranslatedMessage')]"
-        );
+            );
     }
 );
 
