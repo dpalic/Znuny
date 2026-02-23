@@ -81,7 +81,7 @@
 
                                 <span>
                                     <label>[% Translate("Queue") | html %]:[% IF Data.QueueValidID != 1 %] <em class="Error">[% Translate("is invalid") | html %]!</em> [% END %]</label>
-                                    <p class="Value" title="[% Data.Queue | html %]">[% Data.Queue | html | replace('::', '<wbr>::<wbr>') %]</p>
+                                    <p class="Value" title="[% Data.Queue | html %]">[% Data.Queue | html %]</p>
                                 </span>
 
                                 [% RenderBlockStart("Service") %]
@@ -145,7 +145,7 @@
                                     <label>[% Translate("Customer ID") | html %]:</label>
                                     <p class="Value">
                                         [% RenderBlockStart("CustomerIDRW") %]
-                                            <a href="[% Config(" CustomerDBLink") | Interpolate %]" class="[% Config("CustomerDBLinkClass") | html %]" [% Config("CustomerDBLinkTarget") %]>[% Data.CustomerID | html %]</a>
+                                            <a href="[% Config("CustomerDBLink") | Interpolate %]" class="[% Config("CustomerDBLinkClass") | html %]" [% Config("CustomerDBLinkTarget") %]>[% Data.CustomerID | html %]</a>
                                         [% RenderBlockEnd("CustomerIDRW") %]
                                         [% RenderBlockStart("CustomerIDRO") %]
                                             [% Data.CustomerID | html %]
