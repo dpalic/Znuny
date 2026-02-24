@@ -889,6 +889,10 @@ did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.
     * @subsection  WidgetActions
     */
 
+    .WidgetActions {
+        display: flex;
+    }
+
     .WidgetAction {
         /*height: 19px;
         width: 16px;

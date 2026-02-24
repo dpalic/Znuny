@@ -156,11 +156,28 @@
                                             <div class="Actions-close"></div>
                                         </div>
 
-                                        <div class="WidgetAction ArticleView">
-                                            <a class="icon-hover" id="ArticleViewSettings" href="#" title="[% Translate("Settings") | html %]">
-                                            <i class="fa fa-cog"></i>
-                                            <span class="InvisibleText">[% Translate("Settings") | html %]</span>
-                                            </a>
+                                        <div class="WidgetActions">
+                                            [% RenderBlockStart("ArticleFilterDialogLink") %]
+                                            <div class="WidgetAction ArticleFilter">
+                                                <a class="icon-hover" id="SetArticleFilter" href="#" title="[% Translate("Add Filter") | html %]">
+                                                <i class="fa fa-filter"></i>
+                                                <span class="InvisibleText">[% Translate("Set") | html %]</span>
+                                                </a>
+                                                [% RenderBlockStart("ArticleFilterResetLink") %]
+                                                <a class="icon-hover" id="ResetArticleFilter" href="#" title="[% Translate("Reset Filter") | html %]">
+                                                <i class="fa fa-times"></i>
+                                                <span class="InvisibleText">[% Translate("Clear all filters") | html %]</span>
+                                                </a>
+                                                [% RenderBlockEnd("ArticleFilterResetLink") %]
+                                            </div>
+                                            [% RenderBlockEnd("ArticleFilterDialogLink") %]
+
+                                            <div class="WidgetAction ArticleView">
+                                                <a class="icon-hover" id="ArticleViewSettings" href="#" title="[% Translate("Settings") | html %]">
+                                                <i class="fa fa-cog"></i>
+                                                <span class="InvisibleText">[% Translate("Settings") | html %]</span>
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -467,25 +484,6 @@
                     [% END %]
                 </div>
                 [% RenderBlockEnd("ArticlePages") %]
-                [% RenderBlockStart("ArticleFilterDialogLink") %]
-                <div class="ArticleFilter Icons">
-                    <span class="InvisibleText">[% Translate("Article Filter") | html %]:</span>
-                    [% # Only show one: Set or Reset. %]
-                    [% # RenderBlockStart("ArticleFilterSetLink") %]
-                    <a href="#" id="SetArticleFilter" title="[% Translate("Add Filter") | html %]">
-                    <i class="fa fa-filter"></i>
-                    <span>[% Translate("Set") | html %]</span>
-                    </a>
-                    [% # RenderBlockEnd("ArticleFilterSetLink") %]
-                    [% RenderBlockStart("ArticleFilterResetLink") %]
-                    <div class="RemoveFilters">
-                        <a href="#" id="ResetArticleFilter" title="[% Translate("Reset Filter") | html %]">
-                        [% Translate("Clear all filters") | html %]
-                        </a>
-                    </div>
-                    [% RenderBlockEnd("ArticleFilterResetLink") %]
-                </div>
-                [% RenderBlockEnd("ArticleFilterDialogLink") %]
             </div>
             <div class="article-overview-content">
                 [% RenderBlockStart("ArticleList") %]

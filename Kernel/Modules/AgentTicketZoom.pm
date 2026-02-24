@@ -1897,6 +1897,27 @@ sub MaskAgentZoom {
             Name => 'ArticleFilterDialog',
             Data => {%Param},
         );
+
+        # build article filter links in the header
+        my $HighlightStyle = 'menu';
+        if ( $Self->{ArticleFilter} ) {
+            $HighlightStyle = 'PriorityID-5';
+        }
+
+        $LayoutObject->Block(
+            Name => 'ArticleFilterDialogLink',
+            Data => {
+                %Param,
+                HighlightStyle => $HighlightStyle,
+            },
+        );
+
+        if ( IsHashRefWithData( $Self->{ArticleFilter} ) ) {
+            $LayoutObject->Block(
+                Name => 'ArticleFilterResetLink',
+                Data => {%Param},
+            );
+        }
     }
 
     # check if ticket need to be marked as seen
@@ -2023,33 +2044,6 @@ sub _ArticleTree {
         Key   => 'ZoomExpand',
         Value => $Self->{ZoomExpand},
     );
-
-    # article filter is activated in sysconfig
-    if ( $Self->{ArticleFilterActive} ) {
-
-        # define highlight style for links if filter is active
-        my $HighlightStyle = 'menu';
-        if ( $Self->{ArticleFilter} ) {
-            $HighlightStyle = 'PriorityID-5';
-        }
-
-        # build article filter links
-        $LayoutObject->Block(
-            Name => 'ArticleFilterDialogLink',
-            Data => {
-                %Param,
-                HighlightStyle => $HighlightStyle,
-            },
-        );
-
-        # build article filter reset link only if filter is set
-        if ( IsHashRefWithData( $Self->{ArticleFilter} ) ) {
-            $LayoutObject->Block(
-                Name => 'ArticleFilterResetLink',
-                Data => {%Param},
-            );
-        }
-    }
 
     # get needed objects
     my $TicketObject  = $Kernel::OM->Get('Kernel::System::Ticket');
