@@ -33,7 +33,7 @@ Core.Agent.CopyTicketNumber = (function (TargetNS) {
      *     Add copy icon before the ticket number in the headline
      */
     TargetNS.AddCopyIcon = function () {
-        var $Headline = $('.Headline h1'),
+        var $Headline = $('h1.ticketHeaderTitleHeadline'),
             HeadlineText,
             TicketMatch,
             TicketNumber,
@@ -49,7 +49,7 @@ Core.Agent.CopyTicketNumber = (function (TargetNS) {
         }
 
         // Check if copy icon already exists
-        if ($Headline.parent().find('.CopyTicketIcon').length) {
+        if ($Headline.find('.CopyTicketIcon').length) {
             return;
         }
 
@@ -85,8 +85,8 @@ Core.Agent.CopyTicketNumber = (function (TargetNS) {
 
             $CopyIcon.append($HoverMenu);
 
-            // Insert the copy icon before the h1 element
-            $Headline.before($CopyIcon);
+            // Insert the copy icon inside the h1 element to preserve the grid layout
+            $Headline.prepend($CopyIcon);
         }
     };
 
