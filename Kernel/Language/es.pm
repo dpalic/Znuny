@@ -33,7 +33,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d/%m/%Y';
     $Self->{DateInputFormat}     = '%d/%m/%Y';
     $Self->{DateInputFormatLong} = '%d/%m/%Y - %T';
-    $Self->{Completeness}        = 0.572913335465302;
+    $Self->{Completeness}        = 0.572821742605915;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -7464,6 +7464,8 @@ El control del acceso adicional para demostrar o no demostrar éste enlace puede
         'Defines how the From field from the emails (sent from answers and email tickets) should look like.' =>
             'Define como debe lucir el campo From de los correos (enviados desde respuestas y tickets de correos).',
         'Defines the separator between the agents real name and the given queue email address.' =>
+            '',
+        'Defines which article attributes TicketGeneric dashboard widgets are allowed to request when building additional columns.' =>
             '',
         'Parameters for the dashboard backend of the ticket pending reminder overview of the agent interface . "Limit" is the number of entries shown by default. "Group" is used to restrict the access to the plugin (e. g. Group: admin;group1;group2;). "Default" determines if the plugin is enabled by default or if the user needs to enable it manually. "CacheTTLLocal" is the cache time in minutes for the plugin. "Mandatory" determines if the plugin is always shown and can not be removed by agents. Note: Only Ticket attributes and Dynamic Fields (DynamicField_NameX) are allowed for DefaultColumns.' =>
             '',

@@ -25313,3 +25313,7 @@ msgstr "Agent Sitzung."
 msgid "List of session (keys) that are allowed to be updated by UpdateAJAX subaction of frontend module AgentSession. These are regular expressions."
 msgstr "Liste der Sitzungen (Schlüssel), die durch die Unteraktion UpdateAJAX des Frontend-Moduls AgentSession aktualisiert werden dürfen. Dabei handelt es sich um reguläre Ausdrücke."
 
+#. XML Definition: Kernel/Config/Files/XML/Ticket.xml
+msgid "Defines which article attributes TicketGeneric dashboard widgets are allowed to request when building additional columns."
+msgstr "Legt fest, welche Artikelattribute TicketGeneric-Dashboard-Widgets beim Erstellen zusätzlicher Spalten anfordern dürfen."
+

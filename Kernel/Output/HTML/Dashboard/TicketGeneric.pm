@@ -597,11 +597,17 @@ sub FilterContent {
 sub Run {
     my ( $Self, %Param ) = @_;
 
+    my $ConfigObject = $Kernel::OM->Get('Kernel::Config');
+
     my %SearchParams        = $Self->_SearchParamsGet(%Param);
-    my @Columns             = @{ $SearchParams{Columns} };
+    my @Columns             = @{ $SearchParams{Columns} // [] };
     my %TicketSearch        = %{ $SearchParams{TicketSearch} };
     my %TicketSearchSummary = %{ $SearchParams{TicketSearchSummary} };
     my %Filter              = %{ $SearchParams{Filter} };
+
+    my @ArticleAttributes = @{ $ConfigObject->Get('DashboardBackend::TicketGeneric::ArticleAttributes') || [] };
+    my %ArticleAttributes = map { $_ => 1 } @ArticleAttributes;
+    my @ArticleColumns    = keys %ArticleAttributes;
 
     # Add the additional filter to the ticket search param.
     if ( $Self->{AdditionalFilter} ) {
@@ -687,7 +693,10 @@ sub Run {
     my $CacheUsed = 1;
 
     # get ticket object
-    my $TicketObject = $Kernel::OM->Get('Kernel::System::Ticket');
+    my $TicketObject  = $Kernel::OM->Get('Kernel::System::Ticket');
+    my $ArticleObject = @ArticleColumns
+        ? $Kernel::OM->Get('Kernel::System::Ticket::Article')
+        : undef;
 
     if ( !$TicketIDs ) {
 
@@ -951,8 +960,6 @@ sub Run {
             Filter => $Filter{ $Self->{Filter} },
         },
     );
-
-    my $ConfigObject = $Kernel::OM->Get('Kernel::Config');
 
     # show only AssignedToCustomerUser if we have the filter
     if ( $TicketSearchSummary{AssignedToCustomerUser} ) {
@@ -1750,6 +1757,53 @@ sub Run {
             DynamicFields => 0,
             Silent        => 1
         );
+
+        if (@ArticleColumns) {
+            my @Articles = $ArticleObject->ArticleList(
+                TicketID   => $TicketID,
+                SenderType => 'customer',
+                OnlyLast   => 1,
+            );
+
+            if ( !@Articles ) {
+                @Articles = $ArticleObject->ArticleList(
+                    TicketID   => $TicketID,
+                    SenderType => 'agent',
+                    OnlyLast   => 1,
+                );
+            }
+
+            if ( !@Articles ) {
+                @Articles = $ArticleObject->ArticleList(
+                    TicketID => $TicketID,
+                    OnlyLast => 1,
+                );
+            }
+
+            next TICKETID if scalar(@Articles) == 0;
+
+            my $Article = $Articles[0];
+            my %Article = $ArticleObject->BackendForArticle( %{$Article} )->ArticleGet(
+                %{$Article},
+                DynamicFields => 0,
+            );
+
+            if ( $Article{ArticleID} ) {
+                my %ArticleFields = $LayoutObject->ArticleFields(
+                    TicketID  => $TicketID,
+                    ArticleID => $Article{ArticleID},
+                );
+
+                COLUMN:
+                for my $ArticleColumn (@ArticleColumns) {
+                    next COLUMN if !IsHashRefWithData( $ArticleFields{$ArticleColumn} );
+                    next COLUMN if !defined $ArticleFields{$ArticleColumn}->{Value};
+
+                    $Ticket{$ArticleColumn} = $ArticleFields{$ArticleColumn}->{Realname}
+                        // $ArticleFields{$ArticleColumn}->{Value};
+                }
+            }
+        }
 
         %Ticket = ( %Ticket, %{ $CustomColumns->{$TicketID} } ) if $CustomColumns->{$TicketID};
 

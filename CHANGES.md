@@ -1,6 +1,5 @@
-
-
 # 7.3.1 2026-??-??
+ - 2026-02-24 Added Sender column support for dashboard ticket widgets.
  - 2026-02-20 Fixed: problems with leftover UTF-16 surrogates in incoming UTF-8 text.
  - 2026-02-17 Added parameter FormID to AJAX requests of autocompletion modules (needed for inserting FAQ entries with inline images into RTE via autocompletion).
  - 2026-02-11 Fixed: Issue with sorting dropdown elements when setting Ticket::Frontend::AccountTimeType is set to Dropdown.

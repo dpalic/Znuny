@@ -6605,6 +6605,22 @@
             <Item ValueType="String">via</Item>
         </Value>
     </Setting>
+    <Setting Name="DashboardBackend::TicketGeneric::ArticleAttributes" Required="0" Valid="1">
+        <Description Translatable="1">Defines which article attributes TicketGeneric dashboard widgets are allowed to request when building additional columns.</Description>
+        <Navigation>Frontend::Agent::View::Dashboard</Navigation>
+        <Value>
+            <Array>
+                <Item>SenderType</Item>
+                <Item>IsVisibleForCustomer</Item>
+                <Item>From</Item>
+                <Item>To</Item>
+                <Item>Cc</Item>
+                <Item>Bcc</Item>
+                <Item>Sender</Item>
+                <Item>Subject</Item>
+            </Array>
+        </Value>
+    </Setting>
     <Setting Name="DashboardBackend###0100-TicketPendingReminder" Required="0" Valid="1">
         <Description Translatable="1">Parameters for the dashboard backend of the ticket pending reminder overview of the agent interface . "Limit" is the number of entries shown by default. "Group" is used to restrict the access to the plugin (e. g. Group: admin;group1;group2;). "Default" determines if the plugin is enabled by default or if the user needs to enable it manually. "CacheTTLLocal" is the cache time in minutes for the plugin. "Mandatory" determines if the plugin is always shown and can not be removed by agents. Note: Only Ticket attributes and Dynamic Fields (DynamicField_NameX) are allowed for DefaultColumns.</Description>
         <Navigation>Frontend::Agent::View::Dashboard</Navigation>
@@ -6650,6 +6666,7 @@
                         <Item Key="Service" SelectedID="1"></Item>
                         <Item Key="State" SelectedID="1"></Item>
                         <Item Key="SLA" SelectedID="1"></Item>
+                        <Item Key="Sender" SelectedID="1"></Item>
                         <Item Key="Title" SelectedID="2"></Item>
                         <Item Key="Type" SelectedID="1"></Item>
                     </Hash>
@@ -6714,6 +6731,7 @@
                         <Item Key="Service" SelectedID="1"></Item>
                         <Item Key="State" SelectedID="1"></Item>
                         <Item Key="SLA" SelectedID="1"></Item>
+                        <Item Key="Sender" SelectedID="1"></Item>
                         <Item Key="Title" SelectedID="2"></Item>
                         <Item Key="Type" SelectedID="1"></Item>
                     </Hash>
@@ -6778,6 +6796,7 @@
                         <Item Key="Service" SelectedID="1"></Item>
                         <Item Key="State" SelectedID="1"></Item>
                         <Item Key="SLA" SelectedID="1"></Item>
+                        <Item Key="Sender" SelectedID="1"></Item>
                         <Item Key="Title" SelectedID="2"></Item>
                         <Item Key="Type" SelectedID="1"></Item>
                     </Hash>
@@ -6842,6 +6861,7 @@
                         <Item Key="Service" SelectedID="1"></Item>
                         <Item Key="State" SelectedID="1"></Item>
                         <Item Key="SLA" SelectedID="1"></Item>
+                        <Item Key="Sender" SelectedID="1"></Item>
                         <Item Key="Title" SelectedID="2"></Item>
                         <Item Key="Type" SelectedID="1"></Item>
                     </Hash>
@@ -7083,6 +7103,7 @@
                         <Item Key="Service" SelectedID="1"></Item>
                         <Item Key="State" SelectedID="1"></Item>
                         <Item Key="SLA" SelectedID="1"></Item>
+                        <Item Key="Sender" SelectedID="1"></Item>
                         <Item Key="Title" SelectedID="2"></Item>
                         <Item Key="Type" SelectedID="1"></Item>
                     </Hash>
@@ -7146,6 +7167,7 @@
                         <Item Key="Service" SelectedID="1"></Item>
                         <Item Key="State" SelectedID="1"></Item>
                         <Item Key="SLA" SelectedID="1"></Item>
+                        <Item Key="Sender" SelectedID="1"></Item>
                         <Item Key="Title" SelectedID="2"></Item>
                         <Item Key="Type" SelectedID="1"></Item>
                     </Hash>
@@ -7209,6 +7231,7 @@
                         <Item Key="Service" SelectedID="1"></Item>
                         <Item Key="State" SelectedID="1"></Item>
                         <Item Key="SLA" SelectedID="1"></Item>
+                        <Item Key="Sender" SelectedID="1"></Item>
                         <Item Key="Title" SelectedID="2"></Item>
                         <Item Key="Type" SelectedID="1"></Item>
                     </Hash>
@@ -7272,6 +7295,7 @@
                         <Item Key="Service" SelectedID="1"></Item>
                         <Item Key="State" SelectedID="1"></Item>
                         <Item Key="SLA" SelectedID="1"></Item>
+                        <Item Key="Sender" SelectedID="1"></Item>
                         <Item Key="Title" SelectedID="2"></Item>
                         <Item Key="Type" SelectedID="1"></Item>
                     </Hash>
@@ -7370,6 +7394,7 @@
                         <Item Key="Service" SelectedID="1"></Item>
                         <Item Key="State" SelectedID="1"></Item>
                         <Item Key="SLA" SelectedID="1"></Item>
+                        <Item Key="Sender" SelectedID="1"></Item>
                         <Item Key="Title" SelectedID="2"></Item>
                         <Item Key="Type" SelectedID="1"></Item>
                     </Hash>
@@ -7433,6 +7458,7 @@
                         <Item Key="Service" SelectedID="1"></Item>
                         <Item Key="State" SelectedID="1"></Item>
                         <Item Key="SLA" SelectedID="1"></Item>
+                        <Item Key="Sender" SelectedID="1"></Item>
                         <Item Key="Title" SelectedID="2"></Item>
                         <Item Key="Type" SelectedID="1"></Item>
                     </Hash>
@@ -7496,6 +7522,7 @@
                         <Item Key="Service" SelectedID="1"></Item>
                         <Item Key="State" SelectedID="1"></Item>
                         <Item Key="SLA" SelectedID="1"></Item>
+                        <Item Key="Sender" SelectedID="1"></Item>
                         <Item Key="Title" SelectedID="2"></Item>
                         <Item Key="Type" SelectedID="1"></Item>
                     </Hash>
@@ -7559,6 +7586,7 @@
                         <Item Key="Service" SelectedID="1"></Item>
                         <Item Key="State" SelectedID="1"></Item>
                         <Item Key="SLA" SelectedID="1"></Item>
+                        <Item Key="Sender" SelectedID="1"></Item>
                         <Item Key="Title" SelectedID="2"></Item>
                         <Item Key="Type" SelectedID="1"></Item>
                     </Hash>
