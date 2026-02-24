@@ -187,7 +187,7 @@ h2.SearchResults {
     background: var(--main-bg-color);
     color: var(--black);
     font-size: var(--font-size-sm);
-    border-color: transparent;
+    border-color: var(--border-color);
 }
 
 .HashItem > input {
