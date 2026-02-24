@@ -1283,7 +1283,7 @@ did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.
     */
     .ArticleBody {
         /*font-family: Roboto;*/
-        font-size: var(--font-size-sm);
+        font-size: var(--font-size-md);
         font-weight: var(--medium);
         color: var(--black);
         word-wrap: break-word;
