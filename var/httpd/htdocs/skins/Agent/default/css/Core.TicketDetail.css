@@ -876,7 +876,8 @@ tbody td.Sender {
     font-size: var(--font-size-lg);
 }
 
-.WidgetSimple .ProcessInformation p {
+.WidgetSimple .ProcessInformation p,
+#DynamicFieldsWidget .ProcessInformation p {
     padding: 0;
     overflow: hidden;
     text-overflow: ellipsis;
