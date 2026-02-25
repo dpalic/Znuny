@@ -133,6 +133,7 @@
                                             <div class="inner">
                                                 <div class="cardTitle">
                                                     <h2>[% Translate("Communications") | html %]</h2>
+                                                    <span class="cardTitleTrigger"></span>
                                                     <div class="cardTitleAdditionalContent">
                                                         <div class="mod modMessageInformation">
                                                             <div class="inner">

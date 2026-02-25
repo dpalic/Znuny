@@ -28,6 +28,7 @@ did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
   width: 100%;
   border-top-left-radius: var(--border-radius-sm);
   border-top-right-radius: var(--border-radius-sm);
+  cursor: pointer;
 }
 .modCard > .inner .cardTitle h1, .modCard > .inner .cardTitle h2, .modCard > .inner .cardTitle h3, .modCard > .inner .cardTitle h4, .modCard > .inner .cardTitle h5 {
   font-weight: var(--semi-bold);

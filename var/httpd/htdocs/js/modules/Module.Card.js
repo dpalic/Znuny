@@ -24,9 +24,9 @@
     jQuery.extend(Env.Application.Card.prototype, {
 
         // Module configuration
-        name: 'modCard',
-        closeClass : 'Collapsed',
-        openClass : 'Expanded',
+        name:       'modCard',
+        closeClass: 'Collapsed',
+        openClass:  'Expanded',
 
         /**
          * Hook function to load the module specific dependencies.
@@ -47,15 +47,37 @@
 
         bindEvents: function () {
             var that = this;
-            jQuery('.cardTitleTrigger', this.ctx).click(function () {
+
+            // Toggle expand/collapse state
+            function toggleCard() {
                 if (jQuery('.inner:first', that.ctx).hasClass(that.closeClass)) {
                     that.open();
                 } else {
                     that.close();
                 }
+            }
+
+            // Trigger button click
+            jQuery('.cardTitleTrigger', this.ctx).click(function (e) {
+                e.stopPropagation();
+                toggleCard();
+            });
+
+            // Card title click – skip if trigger or interactive element clicked
+            jQuery('.cardTitle', this.ctx).on('click', function (e) {
+                // Skip if trigger clicked
+                if (jQuery(e.target).closest('.cardTitleTrigger').length) {
+                    return;
+                }
+                // Skip if interactive element (link, button, input, select, etc.) clicked
+                if (jQuery(e.target).closest('a, button, input, select, [role="button"]').length) {
+                    return;
+                }
+                toggleCard();
             });
         },
 
+        // Collapse card content
         close: function () {
             var element;
 
@@ -66,11 +88,12 @@
 
         },
 
+        // Expand card content
         open: function () {
             var element, scrollHeight;
 
             element = jQuery('.cardContent', this.ctx)[0];
-            // we have to add the padding value
+            // Add padding for animation
             scrollHeight = element.scrollHeight + 40;
             element.style.maxHeight = scrollHeight + 'px';
             jQuery('.inner:first', this.ctx).removeClass(this.closeClass);
