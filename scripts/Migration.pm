@@ -243,6 +243,10 @@ sub _TasksGet {
 
         # Base
         {
+            Message => 'Rebuild configuration',
+            Module  => 'scripts::Migration::Base::RebuildConfig',
+        },
+        {
             Message => 'Upgrade database structure',
             Module  => 'scripts::Migration::Znuny::UpgradeDatabaseStructure',
         },
@@ -253,10 +257,6 @@ sub _TasksGet {
         {
             Message => 'Check database charset',
             Module  => 'scripts::Migration::Base::DatabaseCharsetCheck',
-        },
-        {
-            Message => 'Rebuild configuration',
-            Module  => 'scripts::Migration::Base::RebuildConfig',
         },
 
         # 7.3 specific tasks after database migration
