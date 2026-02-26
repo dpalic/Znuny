@@ -42,7 +42,7 @@ Core.Agent.TicketCompose = (function (TargetNS) {
 
         // change next ticket state
         $('#StateID').on('change', function () {
-            Core.AJAX.FormUpdate($('#ComposeTicket'), 'AJAXUpdate', 'StateID', Core.Config.Get('DynamicFieldNames'));
+            Core.AJAX.FormUpdate($('#Compose'), 'AJAXUpdate', 'StateID', Core.Config.Get('DynamicFieldNames'));
         });
 
         // check subject
@@ -67,7 +67,7 @@ Core.Agent.TicketCompose = (function (TargetNS) {
         if (typeof ArticleComposeOptions !== 'undefined') {
             $.each(ArticleComposeOptions, function (Key, Value) {
                 $('#'+Value.Name).on('change', function () {
-                    Core.AJAX.FormUpdate($('#ComposeTicket'), 'AJAXUpdate', Value.Name, Value.Fields);
+                    Core.AJAX.FormUpdate($('#Compose'), 'AJAXUpdate', Value.Name, Value.Fields);
                 });
             });
         }

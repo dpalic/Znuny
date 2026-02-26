@@ -74,11 +74,6 @@
                                                                 [% Data.NextStatesStrg %]
                                                             </div>
                                                         </div>
-                                                        [% RenderBlockStart("TimeUnits") %]
-                                                        <div class="col">
-                                                            [% Data.TimeUnitsBlock %]
-                                                        </div>
-                                                        [% RenderBlockEnd("TimeUnits") %]
                                                         <div class="col" style="display: none;">
                                                             <label>[% Translate("Pending date") | html %]:</label>
                                                             <div class="Field">
@@ -92,6 +87,11 @@
                                                                 <p class="FieldExplanation">[% Translate("For all pending* states.") | html %]</p>
                                                             </div>
                                                         </div>
+                                                        [% RenderBlockStart("TimeUnits") %]
+                                                        <div class="col">
+                                                            [% Data.TimeUnitsBlock %]
+                                                        </div>
+                                                        [% RenderBlockEnd("TimeUnits") %]
                                                     </div>
                                                 </div>
                                             </div>
