@@ -15,7 +15,7 @@
         message = (Data.Data || Translate(Data.Info)),
         hideAfter = Data.BoxClass.match('Success') ? 5 : 0,
         actionSeparator = Data.ActionSeparator,
-        closePersistent = Data.ClosePersistent || 0,
+        keepClosedForSession = Data.KeepClosedForSession || 0,
         actions = Data.Actions || (Data.Link ? "[
             {
                 \"type\": \"" _ (Data.Priority ? Data.Priority.lower : 'notify') _ "\"" _ (Data.LinkClass ? ",\"classes\":\"" _ Data.LinkClass _ "\"" : "") _ "

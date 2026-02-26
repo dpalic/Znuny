@@ -11,6 +11,7 @@ package Kernel::Output::HTML::Layout;
 
 use strict;
 use warnings;
+use utf8;
 
 use URI::Escape qw();
 use Digest::MD5 qw(md5_hex);
@@ -1168,7 +1169,7 @@ create notify lines
     my $Output = $LayoutObject->Notify(
         Priority        => 'Warning',
         Info            => 'Some Warning Message',
-        ClosePersistent => 1,                       # optional, default 0; If set to 1, the message remains closed when the page is reloaded for the current session.
+        KeepClosedForSession => 1,                       # optional, default 0; If set to 1, the message remains closed when the page is reloaded for the current session.
     );
 
     errors, the text will be translated
@@ -1189,7 +1190,7 @@ create notify lines
     my $Output = $LayoutObject->Notify(
         Priority        => 'Warning',
         Info            => 'Some Info Message',
-        ClosePersistent => 1,
+        KeepClosedForSession => 1,
 
         Actions  => [
             {
@@ -1312,10 +1313,10 @@ sub Notify {
         TemplateFile => 'Notify',
         Data         => {
             %Param,
-            BoxClass        => $BoxClass,
-            IconClass       => $IconClass,
-            ClosePersistent => $Param{ClosePersistent} || 0,
-            Actions         => $Actions,
+            BoxClass             => $BoxClass,
+            IconClass            => $IconClass,
+            KeepClosedForSession => $Param{KeepClosedForSession} || 0,
+            Actions              => $Actions,
         },
     );
 }

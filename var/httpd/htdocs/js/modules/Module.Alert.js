@@ -79,8 +79,8 @@
 
                     html = this.createAlert(this.alertData);
 
-                    // Send the generated HTML to Notification module with notificationId and ClosePersistent flag
-                    notificationModule.addMessage(html, this.alertData.type || 'notice', this.alertData.hideAfter || 0, notificationId, this.alertData.closePersistent);
+                    // Send the generated HTML to Notification module with notificationId and KeepClosedForSession flag
+                    notificationModule.addMessage(html, this.alertData.type || 'notice', this.alertData.hideAfter || 0, notificationId, this.alertData.keepClosedForSession);
                 }
             }
         },

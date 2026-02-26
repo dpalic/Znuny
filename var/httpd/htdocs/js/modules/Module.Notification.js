@@ -63,7 +63,7 @@
             this.bindEvents();
         },
 
-        addMessage: function (html, type, hideAfter, notificationId, closePersistent) {
+        addMessage: function (html, type, hideAfter, notificationId, keepClosedForSession) {
             var that, $messages, closeIconPath, closeTranslation, closeHtml, $message, modules, i, messageText, $tempDiv;
 
             that = this;
@@ -80,10 +80,10 @@
                 notificationId = this.generateNotificationId(messageText);
             }
 
-            // Set closePersistent to 0 if not provided
-            closePersistent = closePersistent || 0;
+            // Set keepClosedForSession to 0 if not provided
+            keepClosedForSession = keepClosedForSession || 0;
 
-            $message = jQuery('<div class="message message' + this.capitalizeFirstLetter(type) + '" data-hide-after="' + hideAfter + '" data-notification-id="' + notificationId + '" data-close-persistent="' + closePersistent + '">' + html + closeHtml + '</div>');
+            $message = jQuery('<div class="message message' + this.capitalizeFirstLetter(type) + '" data-hide-after="' + hideAfter + '" data-notification-id="' + notificationId + '" data-keep-closed-for-session="' + keepClosedForSession + '">' + html + closeHtml + '</div>');
             $messages.append($message);
             hideAfter = hideAfter || 0;
 
@@ -124,10 +124,10 @@
             jQuery('.notificationClose', this.ctx).on('click', function () {
                 var $message = jQuery(this).closest('.message'),
                     notificationId = $message.attr('data-notification-id'),
-                    closePersistent = $message.attr('data-close-persistent');
+                    keepClosedForSession = $message.attr('data-keep-closed-for-session');
 
-                if (notificationId && closePersistent === '1') {
-                    // Save closed notification ID to session only if ClosePersistent is set
+                if (notificationId && keepClosedForSession === '1') {
+                    // Save closed notification ID to session only if KeepClosedForSession is set
                     that.addClosedNotification(notificationId);
                 }
 
@@ -189,8 +189,8 @@
                     // Add close button
                     messageHtml += '<a class="close" href="#"><i class="fa fa-times"></i></a>';
 
-                    // Add the message with notification ID and ClosePersistent flag
-                    this.addMessage(messageHtml, alertData.type || 'notice', alertData.hideAfter || 0, notificationId, alertData.closePersistent);
+                    // Add the message with notification ID and KeepClosedForSession flag
+                    this.addMessage(messageHtml, alertData.type || 'notice', alertData.hideAfter || 0, notificationId, alertData.keepClosedForSession);
 
                     return true;
                 } catch (e) {

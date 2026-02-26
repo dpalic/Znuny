@@ -16,7 +16,7 @@
                 "message": [% (Data.message || '') | JSON %],
                 "hideAfter": [% Data.hideAfter || 0 %],
                 "actionSeparator": "[% Data.actionSeparator || Translate("or") | html %]",
-                "closePersistent": [% Data.closePersistent || 0 %],
+                "keepClosedForSession": [% Data.keepClosedForSession || 0 %],
                 "actions": [% Data.actions || "[]" %]
             }
         </script>
