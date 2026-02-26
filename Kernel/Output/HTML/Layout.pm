@@ -3685,6 +3685,8 @@ Depending on the SysConfig settings the controls to set the date could be multip
                                                   #   client side with JS
         Disabled => 1,                            # optional (1 or 0), when active select and checkbox controls gets the
                                                   #   disabled attribute and input fields gets the read only attribute
+        ShowYear => 1                             # optional (true or false, default true). If false, the year selector will be
+                                                  #   hidden to result in a locale-sensitive, validating Month/Day picker
     );
 
 =cut
@@ -3698,6 +3700,7 @@ sub BuildDateSelection {
     my $MinuteStep     = $ConfigObject->Get('TimeInputMinutesStep');
     my $Prefix         = $Param{Prefix}   || '';
     my $DiffTime       = $Param{DiffTime} || 0;
+    my $ShowYear       = $Param{ShowYear} // 1;
     my $Format         = defined( $Param{Format} ) ? $Param{Format} : 'DateInputFormatLong';
     my $Area           = $Param{Area}                   || 'Agent';
     my $Optional       = $Param{ $Prefix . 'Optional' } || 0;
@@ -3775,41 +3778,51 @@ sub BuildDateSelection {
         }
     }
 
+    # If ShowYear is false, hide the field with CSS so the date picker JS is happy
+    my $HideYearClass = $ShowYear ? '' : ' Hidden';
+
     # year
     if ( $DateInputStyle eq 'Option' ) {
         my %Year;
-        if ( defined $Param{YearPeriodPast} && defined $Param{YearPeriodFuture} ) {
-            for ( $Y - $Param{YearPeriodPast} .. $Y + $Param{YearPeriodFuture} ) {
-                $Year{$_} = $_;
+        if ($ShowYear) {
+            if ( defined $Param{YearPeriodPast} && defined $Param{YearPeriodFuture} ) {
+                for ( $Y - $Param{YearPeriodPast} .. $Y + $Param{YearPeriodFuture} ) {
+                    $Year{$_} = $_;
+                }
+            }
+            else {
+                for my $Key ( 2001 .. $Y + 1 + ( $Param{YearDiff} || 0 ) ) {
+                    $Year{$Key} = $Key;
+                }
+            }
+
+            # Check if the DiffTime is in a future year. In this case, we add the missing years between
+            # $CY (current year) and $Y (year) to allow the user to manually set back the year if needed.
+            if ( $Y > $CY ) {
+                for my $Key ( $CY .. $Y ) {
+                    $Year{$Key} = $Key;
+                }
             }
         }
         else {
-            for my $Key ( 2001 .. $Y + 1 + ( $Param{YearDiff} || 0 ) ) {
-                $Year{$Key} = $Key;
-            }
-        }
 
-        # Check if the DiffTime is in a future year. In this case, we add the missing years between
-        # $CY (current year) and $Y (year) to allow the user to manually set back the year if needed.
-        if ( $Y > $CY ) {
-            for my $Key ( $CY .. $Y ) {
-                $Year{$Key} = $Key;
-            }
+            # If year is not visible/selectable, use 2020 internally to be able to
+            # select Feb 29 for leap years.
+            $Year{2020} = 2020;
         }
-
         $Param{Year} = $Self->BuildSelection(
             Name        => $Prefix . 'Year',
             Data        => \%Year,
             SelectedID  => int( $Param{ $Prefix . 'Year' } || $Y ),
             Translation => 0,
-            Class       => $Validate ? "Validate_DateYear $Class" : $Class,
+            Class       => $Validate ? "Validate_DateYear$HideYearClass $Class" : $Class,
             Title       => $Self->{LanguageObject}->Translate('Year'),
             Disabled    => $Param{Disabled},
         );
     }
     else {
         $Param{Year} = "<input type=\"text\" "
-            . ( $Validate ? "class=\"Validate_DateYear $Class\" " : "class=\"$Class\" " )
+            . ( $Validate ? "class=\"Validate_DateYear$HideYearClass $Class\" " : "class=\"$Class\" " )
             . "name=\"${Prefix}Year\" id=\"${Prefix}Year\" size=\"4\" maxlength=\"4\" "
             . "title=\""
             . $Self->{LanguageObject}->Translate('Year')
