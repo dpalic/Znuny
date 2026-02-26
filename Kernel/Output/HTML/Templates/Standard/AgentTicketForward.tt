@@ -164,8 +164,7 @@
                                                                     data-selected-customer-field-name="SelectedCustomerUser"
                                                                     data-remove-icon-path="[% Config("Frontend::ImagePath") %]icons/xmark-gray.svg"
                                                                     data-url="[% Env("Baselink") %]Action=AgentCustomerSearch;MaxResults=20"
-                                                                    data-customers="[]"
-                                                                    data-customer-initial-value="[% Data.CustomerInitialValue | html %]">
+                                                                    data-customers="[]">
 
                                                                     <div class="customerSelector" role="form">
                                                                         <div class="customerSelectorField">
@@ -244,8 +243,7 @@
                                                                     data-selected-customer-field-name="CcSelectedCustomerUser"
                                                                     data-remove-icon-path="[% Config("Frontend::ImagePath") %]icons/xmark-gray.svg"
                                                                     data-url="[% Env("Baselink") %]Action=AgentCustomerSearch;MaxResults=20"
-                                                                    data-customers="[]"
-                                                                    data-customer-initial-value="[% Data.CcCustomerInitialValue | html %]">
+                                                                    data-customers="[]">
 
                                                                     <div class="customerSelector" role="form">
                                                                         <div class="customerSelectorField">
@@ -321,8 +319,7 @@
                                                                     data-selected-customer-field-name="BccSelectedCustomerUser"
                                                                     data-remove-icon-path="[% Config("Frontend::ImagePath") %]icons/xmark-gray.svg"
                                                                     data-url="[% Env("Baselink") %]Action=AgentCustomerSearch;MaxResults=20"
-                                                                    data-customers="[]"
-                                                                    data-customer-initial-value="[% Data.BccCustomerInitialValue | html %]">
+                                                                    data-customers="[]">
 
                                                                     <div class="customerSelector" role="form">
                                                                         <div class="customerSelectorField">

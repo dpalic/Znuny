@@ -30,15 +30,7 @@ Core.Agent.TicketCompose = (function (TargetNS) {
      */
     TargetNS.Init = function () {
 
-        var ArticleComposeOptions = Core.Config.Get('ArticleComposeOptions'),
-            EmailAddressesTo = Core.Config.Get('EmailAddressesTo'),
-            EmailAddressesCc = Core.Config.Get('EmailAddressesCc');
-
-        // remove customer user
-        $('.CustomerTicketRemove').on('click', function () {
-            Core.Agent.CustomerSearch.RemoveCustomerTicket($(this));
-            return false;
-        });
+        var ArticleComposeOptions = Core.Config.Get('ArticleComposeOptions');
 
         // change next ticket state
         $('#StateID').on('change', function () {
@@ -48,20 +40,6 @@ Core.Agent.TicketCompose = (function (TargetNS) {
         // check subject
         CheckSubject();
         $('#Subject').on('change', CheckSubject);
-
-        // add 'To' customer users
-        if (typeof EmailAddressesTo !== 'undefined') {
-            EmailAddressesTo.forEach(function(ToCustomer) {
-                Core.Agent.CustomerSearch.AddTicketCustomer('ToCustomer', ToCustomer.CustomerTicketText, ToCustomer.CustomerKey);
-            });
-        }
-
-        // add 'Cc' customer users
-        if (typeof EmailAddressesCc !== 'undefined') {
-            EmailAddressesCc.forEach(function(CcCustomer) {
-                Core.Agent.CustomerSearch.AddTicketCustomer('CcCustomer', CcCustomer.CustomerTicketText, CcCustomer.CustomerKey);
-            });
-        }
 
         // change article compose options
         if (typeof ArticleComposeOptions !== 'undefined') {

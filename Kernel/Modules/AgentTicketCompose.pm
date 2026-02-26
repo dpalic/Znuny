@@ -2047,17 +2047,6 @@ sub _Mask {
         $Param{CcInvalid} = '';
     }
 
-    # Set initial values for CustomerSelector when no multiple customer entries exist (e.g. on reply).
-    if ( !scalar @{ $Param{MultipleCustomer} } && $Param{To} ) {
-        $Param{CustomerInitialValue} = $Param{To};
-    }
-    if ( !scalar @{ $Param{MultipleCustomerCc} } && $Param{Cc} ) {
-        $Param{CcCustomerInitialValue} = $Param{Cc};
-    }
-    if ( !scalar @{ $Param{MultipleCustomerBcc} } && $Param{Bcc} ) {
-        $Param{BccCustomerInitialValue} = $Param{Bcc};
-    }
-
     # Cc
     my $CustomerCounterCc = 0;
     if ( $Param{MultipleCustomerCc} ) {

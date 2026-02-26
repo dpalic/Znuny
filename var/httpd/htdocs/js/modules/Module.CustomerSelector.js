@@ -54,7 +54,6 @@
         addressBookSubscriptionHandle: null,
         lastSearch: '',
         lastAjaxSearch: null,
-        customerInitialValue: '',
 
         /**
          * Hook function to load the module specific dependencies.
@@ -128,7 +127,7 @@
          * @return {Array} Array of customer objects
          */
         extractCustomerData: function() {
-            var customers, customerDataScript, cleanedJson, customerData, extractedCustomers, initialValueExists;
+            var customers, customerDataScript, cleanedJson, customerData, extractedCustomers, configGetKey;
 
             customers = [];
 
@@ -156,24 +155,6 @@
                             };
                         });
 
-                        // Check if we have an initial value defined and it's not already in the extracted data
-                        if (this.customerInitialValue && this.customerInitialValue.length > 0) {
-                            initialValueExists = extractedCustomers.some(function (customer) {
-                                return customer.value === this.customerInitialValue;
-                            }.bind(this));
-
-                            if (!initialValueExists) {
-                                // Add the initial value to the customers array
-                                extractedCustomers.push({
-                                    value: this.customerInitialValue,
-                                    name: this.customerInitialValue,
-                                    selected: false,
-                                    disabled: false,
-                                    errors: {}
-                                });
-                            }
-                        }
-
                         return extractedCustomers;
                     }
                 }
@@ -195,31 +176,13 @@
                             var hasErrors = Boolean(customer.disabled);
 
                             return {
-                            value: customer.customerKey,
-                            name: customer.customerElement,
-                            selected: customer.selected,
-                            disabled: customer.disabled,
-                            errors: hasErrors ? customer.errors : {}
+                                value: customer.customerKey,
+                                name: customer.customerElement,
+                                selected: customer.selected,
+                                disabled: customer.disabled,
+                                errors: hasErrors ? customer.errors : {}
                             };
                         });
-
-                        // Check if we have an initial value defined and it's not already in the extracted data
-                        if (this.customerInitialValue && this.customerInitialValue.length > 0) {
-                            initialValueExists = extractedCustomers.some(function (customer) {
-                                return customer.value === this.customerInitialValue;
-                            }.bind(this));
-
-                            if (!initialValueExists) {
-                                // Add the initial value to the customers array
-                                extractedCustomers.push({
-                                    value: this.customerInitialValue,
-                                    name: this.customerInitialValue,
-                                    selected: false,
-                                    disabled: false,
-                                    errors: {}
-                                });
-                            }
-                        }
 
                         return extractedCustomers;
                     }
@@ -228,19 +191,26 @@
                 }
             }
 
-            // Check if we have an initial value defined
-            if (this.customerInitialValue && this.customerInitialValue.length > 0) {
-                // Add the initial value to the customers array
-                customers.push({
-                    value: this.customerInitialValue,
-                    name: this.customerInitialValue,
-                    selected: false,
-                    disabled: false,
-                    errors: {}
+            // get data-recipient-field
+            configGetKey = jQuery('.inner', this.ctx).attr('data-core-config-get-key');
+            customerData = Core.Config.Get(configGetKey);
+
+            if (Array.isArray(customerData) && customerData.length > 0) {
+                extractedCustomers = customerData.map(function (customer) {
+                    var hasErrors = Boolean(customer.disabled);
+
+                    return {
+                        value: customer.CustomerKey,
+                        name: customer.CustomerTicketText,
+                        selected: customer.selected || false,
+                        disabled: customer.disabled || false,
+                        errors: hasErrors ? customer.errors : {}
+                    };
                 });
+
+                return extractedCustomers;
             }
 
-            // Return customers array (empty or with initial value)
             return customers;
         },
 
@@ -265,7 +235,6 @@
             this.inputTextNameAttribute = $inner.attr('data-input-text-name') || 'CustomerTicketText_';
             this.inputType = $inner.attr('data-input-type') || 'customer';
             this.customerQueueAttribute = $inner.attr('data-input-customer-queue') || $inner.attr('data-customer-queue');
-            this.customerInitialValue = $inner.attr('data-customer-initial-value') || '';
             this.customerCounter = 0;
         },
 

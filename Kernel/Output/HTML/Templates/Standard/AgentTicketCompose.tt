@@ -155,6 +155,8 @@
                                                         <div class="col-12">
                                                             <div class="mod modCustomerSelector" >
                                                                 <div class="inner"
+                                                                    data-recipient-field="ToCustomer"
+                                                                    data-core-config-get-key="EmailAddressesTo"
                                                                     data-input-name="CustomerKey_"
                                                                     data-input-text-name="CustomerTicketText_"
                                                                     data-input-customer-queue="CustomerQueue_"
@@ -165,8 +167,7 @@
                                                                     data-selected-customer-field-name="SelectedCustomerUser"
                                                                     data-remove-icon-path="[% Config("Frontend::ImagePath") %]icons/xmark-gray.svg"
                                                                     data-url="[% Env("Baselink") %]Action=AgentCustomerSearch;MaxResults=20"
-                                                                    data-customers="[]"
-                                                                    data-customer-initial-value="[% Data.CustomerInitialValue | html %]">
+                                                                    data-customers="[]">
 
                                                                     <div class="customerSelector" role="form">
                                                                         <div class="customerSelectorField">
@@ -235,6 +236,8 @@
                                                         <div class="col-12">
                                                             <div class="mod modCustomerSelector">
                                                                 <div class="inner"
+                                                                    data-recipient-field="CcCustomer"
+                                                                    data-core-config-get-key="EmailAddressesCc"
                                                                     data-input-name="CcCustomerKey_"
                                                                     data-input-text-name="CcCustomerTicketText_"
                                                                     data-input-customer-queue="CcCustomerQueue_"
@@ -245,8 +248,7 @@
                                                                     data-selected-customer-field-name="CcSelectedCustomerUser"
                                                                     data-remove-icon-path="[% Config("Frontend::ImagePath") %]icons/xmark-gray.svg"
                                                                     data-url="[% Env("Baselink") %]Action=AgentCustomerSearch;MaxResults=20"
-                                                                    data-customers="[]"
-                                                                    data-customer-initial-value="[% Data.CcCustomerInitialValue | html %]">
+                                                                    data-customers="[]">
 
                                                                     <div class="customerSelector" role="form">
                                                                         <div class="customerSelectorField">
@@ -312,6 +314,8 @@
                                                         <div class="col-12">
                                                             <div class="mod modCustomerSelector">
                                                                 <div class="inner"
+                                                                    data-recipient-field="BccCustomer"
+                                                                    data-core-config-get-key="EmailAddressesBcc"
                                                                     data-input-name="BccCustomerKey_"
                                                                     data-input-text-name="BccCustomerTicketText_"
                                                                     data-input-customer-queue="BccCustomerQueue_"
@@ -322,8 +326,7 @@
                                                                     data-selected-customer-field-name="BccSelectedCustomerUser"
                                                                     data-remove-icon-path="[% Config("Frontend::ImagePath") %]icons/xmark-gray.svg"
                                                                     data-url="[% Env("Baselink") %]Action=AgentCustomerSearch;MaxResults=20"
-                                                                    data-customers="[]"
-                                                                    data-customer-initial-value="[% Data.BccCustomerInitialValue | html %]">
+                                                                    data-customers="[]">
 
                                                                     <div class="customerSelector" role="form">
                                                                         <div class="customerSelectorField">
