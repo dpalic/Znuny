@@ -54,7 +54,7 @@
                                     </div>
 
 [% IF TicketFrontendConfig.CustomerUser %]
-                                    <div class="col-12">
+                                    <div class="cardCustomerData col-12">
                                         <div class="mod modCard">
                                             <div class="inner">
                                                 <div class="cardTitle">
@@ -103,7 +103,7 @@
 
 <!-- add SLA -->
 [% IF Config('Ticket::Service') && TicketFrontendConfig.Service %]
-                                    <div class="col-12">
+                                    <div class="cardServiceData col-12">
                                         <div class="mod modCard">
                                             <div class="inner">
                                                 <div class="cardTitle">
@@ -170,7 +170,7 @@
 [% END %]
 
 [% IF TicketFrontendConfig.Queue || TicketFrontendConfig.Owner || TicketFrontendConfig.Responsible %]
-                                    <div class="col-12">
+                                    <div class="cardTeamData col-12">
                                         <div class="mod modCard">
                                             <div class="inner">
                                                 <div class="cardTitle">
@@ -264,7 +264,7 @@
 <!-- TicketType is missing -->
 [% IF TicketFrontendConfig.Title || TicketFrontendConfig.TicketType || TicketFrontendConfig.State || TicketFrontendConfig.Priority %]
 
-                                    <div class="col-12">
+                                    <div class="cardTicketData col-12">
                                         <div class="mod modCard">
                                             <div class="inner">
                                                 <div class="cardTitle">
@@ -381,7 +381,7 @@
 [% END %]
 [% IF !TicketFrontendConfig.DynamicField.empty %]
 [% RenderBlockStart("TicketTypeDynamicFields") %]
-                                    <div class="col-12">
+                                    <div class="cardDynamicField col-12">
                                         <div class="mod modCard">
                                             <div class="inner">
                                                 <div class="cardTitle">
@@ -416,7 +416,7 @@
 [% RenderBlockEnd("WidgetTicketActions") %]
 
 [% RenderBlockStart("WidgetArticle") %]
-                                    <div class="col-12">
+                                    <div class="cardCommunication col-12">
                                         <div class="mod modCard">
                                             <div class="inner [% Data.CardStatus | html %]">
                                                 <div class="cardTitle">
@@ -607,7 +607,7 @@
                                                             [% Data.TimeUnitsBlock %]
                                                         </div>
 [% RenderBlockEnd("TimeUnits") %]
-                                                        <div class="col-12">
+                                                        <div class="cardArticleDynamicField col-12">
                                                             <div class="mod modCard">
                                                                 <div class="inner">
                                                                     <div class="cardTitle">

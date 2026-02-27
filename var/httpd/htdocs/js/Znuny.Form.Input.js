@@ -1163,10 +1163,10 @@ Znuny.Form.Input = (function (TargetNS) {
         }
 
         if ($('#'+ FieldID).parent().parents('div.Row').length > 0) {
-            $('#'+ FieldID).parent().parents('div.Row').hide();
+            $('#'+ FieldID).parent().parents('div.Row').hide().addClass('Hidden');
         }
         if ($('#'+ FieldID).parent().parents('div.col').length > 0) {
-            $('#'+ FieldID).parent().parents('div.col').hide();
+            $('#'+ FieldID).parent().parents('div.col').hide().addClass('Hidden');
         }
 
         $('#'+ FieldID).parent().hide();
@@ -1184,10 +1184,10 @@ Znuny.Form.Input = (function (TargetNS) {
         }
 
         if ($('#'+ FieldID).parent().parents('div.Row').length > 0) {
-            $('#'+ FieldID).parent().parents('div.Row').show();
+            $('#'+ FieldID).parent().parents('div.Row').show().removeClass('Hidden');
         }
         if ($('#'+ FieldID).parent().parents('div.col').length > 0) {
-            $('#'+ FieldID).parent().parents('div.col').show();
+            $('#'+ FieldID).parent().parents('div.col').show().removeClass('Hidden');
         }
 
         $('#'+ FieldID).parent().show();

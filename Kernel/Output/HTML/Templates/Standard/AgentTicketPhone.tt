@@ -45,7 +45,7 @@
                                 <input type="hidden" name="LinkTicketID" value="[% Data.LinkTicketID | html %]"/>
 
                                 <div class="row">
-                                    <div class="col-12">
+                                    <div class="cardCustomerData col-12">
                                         <div class="mod modCard">
                                             <div class="inner">
                                                 <div class="cardTitle">
@@ -156,7 +156,7 @@
                                         </div>
                                     </div>
                                     [% IF Config('Ticket::Service') %]
-                                    <div class="col-12">
+                                    <div class="cardServiceData col-12">
                                         <div class="mod modCard">
                                             <div class="inner">
                                                 <div class="cardTitle">
@@ -204,7 +204,7 @@
                                     </div>
                                     [% END %]
 
-                                    <div class="col-12">
+                                    <div class="cardTeamData col-12">
                                         <div class="mod modCard">
                                             <div class="inner">
                                                 <div class="cardTitle">
@@ -255,7 +255,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-12">
+                                    <div class="cardTicketData col-12">
                                         <div class="mod modCard">
                                             <div class="inner">
                                                 <div class="cardTitle">
@@ -303,7 +303,7 @@
                                     </div>
 
                                     [% IF !TicketFrontendConfig.DynamicField.empty %]
-                                    <div class="col-12">
+                                    <div class="cardDynamicField col-12">
                                         <div class="mod modCard">
                                             <div class="inner">
                                                 <div class="cardTitle">
@@ -336,7 +336,7 @@
                                     </div>
                                     [% END %]
 
-                                    <div class="col-12">
+                                    <div class="cardCommunication col-12">
                                         <div class="mod modCard">
                                             <div class=inner>
                                                 <div class="cardTitle">

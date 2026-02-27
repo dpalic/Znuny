@@ -60,7 +60,7 @@
                                         [% INCLUDE "FormElements/DraftNotifications.tt" %]
                                     </div>
                                     <div class="col-12">
-                                        <div class="mod modCard" >
+                                        <div class="mod modCard">
                                             <div class="inner">
                                                 <div class="cardTitle">
                                                     <h2>[% Translate("Ticket Data") | html %]</h2>
@@ -99,7 +99,7 @@
                                     </div>
                                     [% IF !TicketFrontendConfig.DynamicField.empty %]
                                     <div class="col-12">
-                                        <div class="mod modCard" >
+                                        <div class="mod modCard">
                                             <div class="inner">
                                                 <div class="cardTitle">
                                                     <h2>[% Translate("Dynamic Fields") | html %]</h2>
@@ -130,7 +130,7 @@
                                     </div>
                                     [% END %]
                                     <div class="col-12">
-                                        <div class="mod modCard" >
+                                        <div class="mod modCard">
                                             <div class="inner">
                                                 <div class="cardTitle">
                                                     <h2>[% Translate("Communications") | html %]</h2>

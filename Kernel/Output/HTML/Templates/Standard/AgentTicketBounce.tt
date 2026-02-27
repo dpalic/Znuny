@@ -82,7 +82,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-12">
+                                    <div class="cardTicketData col-12">
                                         <div class="mod modCard">
                                             <div class="inner">
                                                 <div class="cardTitle">
@@ -103,7 +103,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-12">
+                                    <div class="cardCommunication col-12">
                                         <div class="mod modCard">
                                             <div class="inner">
                                                 <div class="cardTitle">
