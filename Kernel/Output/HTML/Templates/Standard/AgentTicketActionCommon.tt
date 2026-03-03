@@ -574,21 +574,22 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-
-                                                        <div class="col-12">
-                                                            <div class="Field no-background CheckboxContainer">
-                                                                <input type="checkbox" name="IsVisibleForCustomer" id="IsVisibleForCustomer"
-                                                                    [% IF Data.IsVisibleForCustomer %]checked="checked" [% END %]/>
-                                                                <label for="IsVisibleForCustomer">
-                                                                    [% Translate("Is visible for customer") | html %]:
-                                                                </label>
+                                                        <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2 gy-3">
+                                                            <div class="col-12">
+                                                                <div class="Field no-background CheckboxContainer">
+                                                                    <input type="checkbox" name="IsVisibleForCustomer" id="IsVisibleForCustomer"
+                                                                        [% IF Data.IsVisibleForCustomer %]checked="checked" [% END %]/>
+                                                                    <label for="IsVisibleForCustomer">
+                                                                        [% Translate("Is visible for customer") | html %]:
+                                                                    </label>
+                                                                </div>
                                                             </div>
-                                                        </div>
 [% RenderBlockStart("TimeUnits") %]
-                                                        <div class="col-12">
-                                                            [% Data.TimeUnitsBlock %]
-                                                        </div>
+                                                            <div class="col-12">
+                                                                [% Data.TimeUnitsBlock %]
+                                                            </div>
 [% RenderBlockEnd("TimeUnits") %]
+                                                        </div>
 
 [% IF !TicketFrontendConfig.DynamicField.empty %]
 [% RenderBlockStart("ArticleTypeDynamicFields") %]

@@ -314,17 +314,20 @@
                     <div class="Field component-attachment">
                         [% INCLUDE "FormElements/AttachmentList.tt" %]
                     </div>
-                    <div class="Clear"></div>
+
+                    <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2 gy-3">
 [% RenderBlockStart("IsVisibleForCustomer") %]
-                    <label for="IsVisibleForCustomer">[% Translate("Visible for customer") | html %]</label>
-                    <div class="Field">
-                        <input type="checkbox" id="IsVisibleForCustomer" name="IsVisibleForCustomer" value="1" [% IF Data.IsVisibleForCustomer %]checked="checked"[% END %]/>
-                    </div>
-                    <div class="Clear"></div>
+                        <label for="IsVisibleForCustomer">[% Translate("Visible for customer") | html %]</label>
+                        <div class="Field">
+                            <input type="checkbox" id="IsVisibleForCustomer" name="IsVisibleForCustomer" value="1" [% IF Data.IsVisibleForCustomer %]checked="checked"[% END %]/>
+                        </div>
 [% RenderBlockEnd("IsVisibleForCustomer") %]
 [% RenderBlockStart("TimeUnits") %]
-                    [% Data.TimeUnitsBlock %]
+                        <div class="col">
+                            [% Data.TimeUnitsBlock %]
+                        </div>
 [% RenderBlockEnd("TimeUnits") %]
+                    </div>
 
                 </fieldset>
             </div>

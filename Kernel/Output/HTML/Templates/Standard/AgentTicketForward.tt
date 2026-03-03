@@ -73,11 +73,6 @@
                                                                 [% Data.NextStatesStrg %]
                                                             </div>
                                                         </div>
-                                                        [% RenderBlockStart("TimeUnits") %]
-                                                        <div class="col">
-                                                            [% Data.TimeUnitsBlock %]
-                                                        </div>
-                                                        [% RenderBlockEnd("TimeUnits") %]
                                                         <div class="col" style="display: none;">
                                                             <label>[% Translate("Pending date") | html %]:</label>
                                                             <div class="Field">
@@ -438,13 +433,19 @@
                                                                 [% INCLUDE "FormElements/AttachmentList.tt" %]
                                                             </div>
                                                         </div>
-                                                        <div class="col-12">
-                                                            <label for="IsVisibleForCustomer">[% Translate("Visible for customer") | html %]</label>
-                                                            <div class="Field">
-                                                                <input type="checkbox" id="IsVisibleForCustomer" name="IsVisibleForCustomer" value="1" [% IF Data.IsVisibleForCustomer %]checked="checked" [% END %] />
+                                                        <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2 gy-3">
+                                                            <div class="col-12">
+                                                                <label for="IsVisibleForCustomer">[% Translate("Visible for customer") | html %]</label>
+                                                                <div class="Field">
+                                                                    <input type="checkbox" id="IsVisibleForCustomer" name="IsVisibleForCustomer" value="1" [% IF Data.IsVisibleForCustomer %]checked="checked" [% END %] />
+                                                                </div>
                                                             </div>
+                                                            [% RenderBlockStart("TimeUnits") %]
+                                                            <div class="col-12">
+                                                                [% Data.TimeUnitsBlock %]
+                                                            </div>
+                                                            [% RenderBlockEnd("TimeUnits") %]
                                                         </div>
-
                                                     </div>
                                                 </div>
                                             </div>
