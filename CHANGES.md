@@ -1,4 +1,5 @@
 # 7.3.1 2026-??-??
+ - 2026-02-26 Changed: Reply function in agent ticket compose dialog now is not available anymore if the article is internal and was created by an agent or if the article was created by the system.
  - 2026-02-26 Fixed: Missing locale sensitivity in VacationDay config type.
  - 2026-02-24 Added Sender column support for dashboard ticket widgets.
  - 2026-02-20 Fixed: problems with leftover UTF-16 surrogates in incoming UTF-8 text.
