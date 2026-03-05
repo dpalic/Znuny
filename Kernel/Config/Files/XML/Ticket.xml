@@ -5259,6 +5259,41 @@
             <Item ValueType="Checkbox">1</Item>
         </Value>
     </Setting>
+    <Setting Name="Ticket::Frontend::AgentTicketForward###TicketType" Required="0" Valid="1">
+        <Description Translatable="1">Shows the ticket type selection (Ticket::Type needs to be activated).</Description>
+        <Navigation>Frontend::Agent::View::TicketForward</Navigation>
+        <Value>
+            <Item ValueType="Checkbox">1</Item>
+        </Value>
+    </Setting>
+    <Setting Name="Ticket::Frontend::AgentTicketForward###Service" Required="0" Valid="1">
+        <Description Translatable="1">Shows the service selection (Ticket::Service needs to be activated).</Description>
+        <Navigation>Frontend::Agent::View::TicketForward</Navigation>
+        <Value>
+            <Item ValueType="Checkbox">1</Item>
+        </Value>
+    </Setting>
+    <Setting Name="Ticket::Frontend::AgentTicketForward###ServiceMandatory" Required="0" Valid="1">
+        <Description Translatable="1">Enforces that the agent must select a service.</Description>
+        <Navigation>Frontend::Agent::View::TicketForward</Navigation>
+        <Value>
+            <Item ValueType="Checkbox">0</Item>
+        </Value>
+    </Setting>
+    <Setting Name="Ticket::Frontend::AgentTicketForward###SLAMandatory" Required="0" Valid="1">
+        <Description Translatable="1">Enforces that the agent must select an SLA.</Description>
+        <Navigation>Frontend::Agent::View::TicketForward</Navigation>
+        <Value>
+            <Item ValueType="Checkbox">0</Item>
+        </Value>
+    </Setting>
+    <Setting Name="Ticket::Frontend::AgentTicketForward###Priority" Required="0" Valid="1">
+        <Description Translatable="1">Shows the ticket priority selection.</Description>
+        <Navigation>Frontend::Agent::View::TicketForward</Navigation>
+        <Value>
+            <Item ValueType="Checkbox">0</Item>
+        </Value>
+    </Setting>
     <Setting Name="Ticket::Frontend::AgentTicketEmailOutbound###Permission" Required="1" Valid="1">
         <Description Translatable="1">Required permissions to use the email outbound screen in the agent interface.</Description>
         <Navigation>Frontend::Agent::View::TicketEmailOutbound</Navigation>
@@ -13024,6 +13059,41 @@ Thanks for your help!
             </Hash>
         </Value>
     </Setting>
+    <Setting Name="Ticket::Frontend::AgentTicketCompose###TicketType" Required="0" Valid="1">
+        <Description Translatable="1">Shows the ticket type selection (Ticket::Type needs to be activated).</Description>
+        <Navigation>Frontend::Agent::View::TicketCompose</Navigation>
+        <Value>
+            <Item ValueType="Checkbox">1</Item>
+        </Value>
+    </Setting>
+    <Setting Name="Ticket::Frontend::AgentTicketCompose###Service" Required="0" Valid="1">
+        <Description Translatable="1">Shows the service selection (Ticket::Service needs to be activated).</Description>
+        <Navigation>Frontend::Agent::View::TicketCompose</Navigation>
+        <Value>
+            <Item ValueType="Checkbox">1</Item>
+        </Value>
+    </Setting>
+    <Setting Name="Ticket::Frontend::AgentTicketCompose###ServiceMandatory" Required="0" Valid="1">
+        <Description Translatable="1">Enforces that the agent must select a service.</Description>
+        <Navigation>Frontend::Agent::View::TicketCompose</Navigation>
+        <Value>
+            <Item ValueType="Checkbox">0</Item>
+        </Value>
+    </Setting>
+    <Setting Name="Ticket::Frontend::AgentTicketCompose###SLAMandatory" Required="0" Valid="1">
+        <Description Translatable="1">Enforces that the agent must select an SLA.</Description>
+        <Navigation>Frontend::Agent::View::TicketCompose</Navigation>
+        <Value>
+            <Item ValueType="Checkbox">0</Item>
+        </Value>
+    </Setting>
+    <Setting Name="Ticket::Frontend::AgentTicketCompose###Priority" Required="0" Valid="1">
+        <Description Translatable="1">Shows the ticket priority selection.</Description>
+        <Navigation>Frontend::Agent::View::TicketCompose</Navigation>
+        <Value>
+            <Item ValueType="Checkbox">0</Item>
+        </Value>
+    </Setting>
     <Setting Name="Ticket::Frontend::AgentTicketEmail###DynamicField" Required="0" Valid="1">
         <Description Translatable="1">Dynamic fields shown in the ticket email screen of the agent interface.</Description>
         <Navigation>Frontend::Agent::View::TicketEmailNew</Navigation>
@@ -13673,6 +13743,41 @@ Thanks for your help!
             <Item ValueType="String" ValueRegex="^\d+(%|px)?$">200px</Item>
         </Value>
     </Setting>
+    <Setting Name="Ticket::Frontend::AgentTicketPhoneInbound###TicketType" Required="0" Valid="1">
+        <Description Translatable="1">Shows the ticket type selection (Ticket::Type needs to be activated).</Description>
+        <Navigation>Frontend::Agent::View::TicketPhoneInbound</Navigation>
+        <Value>
+            <Item ValueType="Checkbox">1</Item>
+        </Value>
+    </Setting>
+    <Setting Name="Ticket::Frontend::AgentTicketPhoneInbound###Service" Required="0" Valid="1">
+        <Description Translatable="1">Shows the service selection (Ticket::Service needs to be activated).</Description>
+        <Navigation>Frontend::Agent::View::TicketPhoneInbound</Navigation>
+        <Value>
+            <Item ValueType="Checkbox">1</Item>
+        </Value>
+    </Setting>
+    <Setting Name="Ticket::Frontend::AgentTicketPhoneInbound###ServiceMandatory" Required="0" Valid="1">
+        <Description Translatable="1">Enforces that the agent must select a service.</Description>
+        <Navigation>Frontend::Agent::View::TicketPhoneInbound</Navigation>
+        <Value>
+            <Item ValueType="Checkbox">0</Item>
+        </Value>
+    </Setting>
+    <Setting Name="Ticket::Frontend::AgentTicketPhoneInbound###SLAMandatory" Required="0" Valid="1">
+        <Description Translatable="1">Enforces that the agent must select an SLA.</Description>
+        <Navigation>Frontend::Agent::View::TicketPhoneInbound</Navigation>
+        <Value>
+            <Item ValueType="Checkbox">0</Item>
+        </Value>
+    </Setting>
+    <Setting Name="Ticket::Frontend::AgentTicketPhoneInbound###Priority" Required="0" Valid="1">
+        <Description Translatable="1">Shows the ticket priority selection.</Description>
+        <Navigation>Frontend::Agent::View::TicketPhoneInbound</Navigation>
+        <Value>
+            <Item ValueType="Checkbox">0</Item>
+        </Value>
+    </Setting>
     <Setting Name="Ticket::Frontend::AgentTicketPhoneOutbound###RichTextWidth" Required="0" Valid="1">
         <Description Translatable="1">Defines the width for the rich text editor component for this screen. Enter number (pixels) or percent value (relative).</Description>
         <Navigation>Frontend::Agent::View::TicketPhoneOutbound</Navigation>
@@ -13685,6 +13790,41 @@ Thanks for your help!
         <Navigation>Frontend::Agent::View::TicketPhoneOutbound</Navigation>
         <Value>
             <Item ValueType="String" ValueRegex="^\d+(%|px)?$">200px</Item>
+        </Value>
+    </Setting>
+    <Setting Name="Ticket::Frontend::AgentTicketPhoneOutbound###TicketType" Required="0" Valid="1">
+        <Description Translatable="1">Shows the ticket type selection (Ticket::Type needs to be activated).</Description>
+        <Navigation>Frontend::Agent::View::TicketPhoneOutbound</Navigation>
+        <Value>
+            <Item ValueType="Checkbox">1</Item>
+        </Value>
+    </Setting>
+    <Setting Name="Ticket::Frontend::AgentTicketPhoneOutbound###Service" Required="0" Valid="1">
+        <Description Translatable="1">Shows the service selection (Ticket::Service needs to be activated).</Description>
+        <Navigation>Frontend::Agent::View::TicketPhoneOutbound</Navigation>
+        <Value>
+            <Item ValueType="Checkbox">1</Item>
+        </Value>
+    </Setting>
+    <Setting Name="Ticket::Frontend::AgentTicketPhoneOutbound###ServiceMandatory" Required="0" Valid="1">
+        <Description Translatable="1">Enforces that the agent must select a service.</Description>
+        <Navigation>Frontend::Agent::View::TicketPhoneOutbound</Navigation>
+        <Value>
+            <Item ValueType="Checkbox">0</Item>
+        </Value>
+    </Setting>
+    <Setting Name="Ticket::Frontend::AgentTicketPhoneOutbound###SLAMandatory" Required="0" Valid="1">
+        <Description Translatable="1">Enforces that the agent must select an SLA.</Description>
+        <Navigation>Frontend::Agent::View::TicketPhoneOutbound</Navigation>
+        <Value>
+            <Item ValueType="Checkbox">0</Item>
+        </Value>
+    </Setting>
+    <Setting Name="Ticket::Frontend::AgentTicketPhoneOutbound###Priority" Required="0" Valid="1">
+        <Description Translatable="1">Shows the ticket priority selection.</Description>
+        <Navigation>Frontend::Agent::View::TicketPhoneOutbound</Navigation>
+        <Value>
+            <Item ValueType="Checkbox">0</Item>
         </Value>
     </Setting>
     <Setting Name="Ticket::Frontend::AgentTicketClose###Description" Required="1" Valid="1">
@@ -13776,6 +13916,41 @@ Thanks for your help!
         <Navigation>Frontend::Agent::View::TicketEmailOutbound</Navigation>
         <Value>
             <Item ValueType="String" ValueRegex="^\d+(%|px)?$">300px</Item>
+        </Value>
+    </Setting>
+    <Setting Name="Ticket::Frontend::AgentTicketEmailOutbound###TicketType" Required="0" Valid="1">
+        <Description Translatable="1">Shows the ticket type selection (Ticket::Type needs to be activated).</Description>
+        <Navigation>Frontend::Agent::View::TicketEmailOutbound</Navigation>
+        <Value>
+            <Item ValueType="Checkbox">1</Item>
+        </Value>
+    </Setting>
+    <Setting Name="Ticket::Frontend::AgentTicketEmailOutbound###Service" Required="0" Valid="1">
+        <Description Translatable="1">Shows the service selection (Ticket::Service needs to be activated).</Description>
+        <Navigation>Frontend::Agent::View::TicketEmailOutbound</Navigation>
+        <Value>
+            <Item ValueType="Checkbox">1</Item>
+        </Value>
+    </Setting>
+    <Setting Name="Ticket::Frontend::AgentTicketEmailOutbound###ServiceMandatory" Required="0" Valid="1">
+        <Description Translatable="1">Enforces that the agent must select a service.</Description>
+        <Navigation>Frontend::Agent::View::TicketEmailOutbound</Navigation>
+        <Value>
+            <Item ValueType="Checkbox">0</Item>
+        </Value>
+    </Setting>
+    <Setting Name="Ticket::Frontend::AgentTicketEmailOutbound###SLAMandatory" Required="0" Valid="1">
+        <Description Translatable="1">Enforces that the agent must select an SLA.</Description>
+        <Navigation>Frontend::Agent::View::TicketEmailOutbound</Navigation>
+        <Value>
+            <Item ValueType="Checkbox">0</Item>
+        </Value>
+    </Setting>
+    <Setting Name="Ticket::Frontend::AgentTicketEmailOutbound###Priority" Required="0" Valid="1">
+        <Description Translatable="1">Shows the ticket priority selection.</Description>
+        <Navigation>Frontend::Agent::View::TicketEmailOutbound</Navigation>
+        <Value>
+            <Item ValueType="Checkbox">0</Item>
         </Value>
     </Setting>
     <Setting Name="Ticket::Frontend::AgentTicketMerge###RichTextWidth" UserPreferencesGroup="Advanced" UserModificationPossible="1" Required="0" Valid="1">

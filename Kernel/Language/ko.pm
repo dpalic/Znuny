@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%m-%d';
     $Self->{DateInputFormat}     = '%Y-%m-%d';
     $Self->{DateInputFormatLong} = '%Y-%m-%d %T';
-    $Self->{Completeness}        = 0.836450839328537;
+    $Self->{Completeness}        = 0.835782747603834;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -7266,6 +7266,13 @@ sub Data {
             '에이전트 인터페이스의 티켓 전달 화면에 있는 메시지가 기본적으로 고객에게 표시되는지 여부를 정의합니다.',
         'Allows to save current work as draft in the ticket forward screen of the agent interface.' =>
             '에이전트 인터페이스의 티켓 전달 화면에서 현재 작업을 초안으로 저장할 수 있습니다.',
+        'Shows the ticket type selection (Ticket::Type needs to be activated).' =>
+            '',
+        'Shows the service selection (Ticket::Service needs to be activated).' =>
+            '',
+        'Enforces that the agent must select a service.' => '',
+        'Enforces that the agent must select an SLA.' => '',
+        'Shows the ticket priority selection.' => '',
         'Required permissions to use the email outbound screen in the agent interface.' =>
             '에이전트 인터페이스에서 전자 메일 아웃 바운드 화면을 사용하는데 필요한 권한입니다.',
         'Defines if a ticket lock is required in the email outbound screen of the agent interface (if the ticket isn\'t locked yet, the ticket gets locked and the current agent will be set automatically as its owner).' =>

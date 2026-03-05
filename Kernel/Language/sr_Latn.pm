@@ -32,7 +32,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d.%m.%Y';
     $Self->{DateInputFormat}     = '%d.%m.%Y';
     $Self->{DateInputFormatLong} = '%d.%m.%Y - %T';
-    $Self->{Completeness}        = 0.860591526778577;
+    $Self->{Completeness}        = 0.859904153354633;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -7272,6 +7272,13 @@ sub Data {
             'Definiše da li je poruka u ekranu prosleđivanja tiketa u interfejsu operatera podrazumevano vidljiva za klijenta.',
         'Allows to save current work as draft in the ticket forward screen of the agent interface.' =>
             'Dozvoljava čuvanje trenutne forme kao nacrta u ekranu prosleđivanja tiketa u interfejsu operatera.',
+        'Shows the ticket type selection (Ticket::Type needs to be activated).' =>
+            '',
+        'Shows the service selection (Ticket::Service needs to be activated).' =>
+            '',
+        'Enforces that the agent must select a service.' => '',
+        'Enforces that the agent must select an SLA.' => '',
+        'Shows the ticket priority selection.' => '',
         'Required permissions to use the email outbound screen in the agent interface.' =>
             'Neophodne dozvole za upotrebu ekrana odlaznih imejlova u interfejsu operatera.',
         'Defines if a ticket lock is required in the email outbound screen of the agent interface (if the ticket isn\'t locked yet, the ticket gets locked and the current agent will be set automatically as its owner).' =>

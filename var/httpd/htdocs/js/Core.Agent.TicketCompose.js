@@ -9,7 +9,8 @@
 
 "use strict";
 
-var Core = Core || {};
+var Core = Core || {},
+    Znuny = Znuny || {};
 Core.Agent = Core.Agent || {};
 
 /**
@@ -30,11 +31,41 @@ Core.Agent.TicketCompose = (function (TargetNS) {
      */
     TargetNS.Init = function () {
 
-        var ArticleComposeOptions = Core.Config.Get('ArticleComposeOptions');
+        var ArticleComposeOptions = Core.Config.Get('ArticleComposeOptions'),
+            UpdateFields = Core.Config.Get('DynamicFieldNames') || [];
+
+        Znuny.Form.Input.FieldIDMapping('AgentTicketCompose',
+            {
+                Body:           'RichText',
+                Customer:       'ToCustomer',
+                CustomerUserID: 'ToCustomer',
+                ServiceID:      'ServiceID',
+                SLAID:          'SLAID',
+                TypeID:         'TypeID',
+                PriorityID:     'NewPriorityID'
+            }
+        );
+
+
+        UpdateFields.push('TypeID');
+        UpdateFields.push('ServiceID');
+        UpdateFields.push('SLAID');
+
+        $('#TypeID').on('change', function () {
+            Core.AJAX.FormUpdate($(this).parents('form'), 'AJAXUpdate', 'TypeID', UpdateFields);
+        });
+
+        $('#ServiceID').on('change', function () {
+            Core.AJAX.FormUpdate($(this).parents('form'), 'AJAXUpdate', 'ServiceID', UpdateFields);
+        });
+
+        $('#SLAID').on('change', function () {
+            Core.AJAX.FormUpdate($(this).parents('form'), 'AJAXUpdate', 'SLAID', UpdateFields);
+        });
 
         // change next ticket state
         $('#StateID').on('change', function () {
-            Core.AJAX.FormUpdate($('#Compose'), 'AJAXUpdate', 'StateID', Core.Config.Get('DynamicFieldNames'));
+            Core.AJAX.FormUpdate($(this).parents('form'), 'AJAXUpdate', 'StateID', UpdateFields);
         });
 
         // check subject

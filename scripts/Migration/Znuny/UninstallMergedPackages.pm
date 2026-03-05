@@ -36,6 +36,8 @@ sub Run {
         'Znuny-MultiSendmail',
         'Znuny-CopyTicketNumber',
         'Znuny-AgentTicketActionCommonCustomer',
+        'Znuny4OTRS-AdditionalTicketAttributeSelection',
+        'Znuny-AdditionalTicketAttributeSelection',
     );
 
     my $CacheObject   = $Kernel::OM->Get('Kernel::System::Cache');

@@ -25317,3 +25317,23 @@ msgstr "Liste der Sitzungen (Schlüssel), die durch die Unteraktion UpdateAJAX d
 msgid "Defines which article attributes TicketGeneric dashboard widgets are allowed to request when building additional columns."
 msgstr "Legt fest, welche Artikelattribute TicketGeneric-Dashboard-Widgets beim Erstellen zusätzlicher Spalten anfordern dürfen."
 
+#. XML Definition: Kernel/Config/Files/XML/Ticket.xml
+msgid "Shows the ticket type selection (Ticket::Type needs to be activated)."
+msgstr "Zeigt die Auswahl des Ticket-Typs an (Ticket::Type muss aktiviert sein)."
+
+#. XML Definition: Kernel/Config/Files/XML/Ticket.xml
+msgid "Shows the service selection (Ticket::Service needs to be activated)."
+msgstr "Zeigt die Serviceauswahl an (Ticket::Service muss aktiviert sein)."
+
+#. XML Definition: Kernel/Config/Files/XML/Ticket.xml
+msgid "Enforces that the agent must select a service."
+msgstr "Erzwingt, dass der Agent einen Dienst auswählen muss."
+
+#. XML Definition: Kernel/Config/Files/XML/Ticket.xml
+msgid "Enforces that the agent must select an SLA."
+msgstr "Erzwingt, dass der Agent ein SLA auswählen muss."
+
+#. XML Definition: Kernel/Config/Files/XML/Ticket.xml
+msgid "Shows the ticket priority selection."
+msgstr "Zeigt die Auswahl der Ticketpriorität an."
+

@@ -32,7 +32,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%m-%d';
     $Self->{DateInputFormat}     = '%Y-%m-%d';
     $Self->{DateInputFormatLong} = '%Y-%m-%d - %T';
-    $Self->{Completeness}        = 0.989128697042366;
+    $Self->{Completeness}        = 0.988338658146965;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -7272,6 +7272,13 @@ sub Data {
             'Meghatározza, hogy az ügyintézői felület jegytovábbítás képernyőjén lévő üzenet alapértelmezetten látható-e az ügyfélnek.',
         'Allows to save current work as draft in the ticket forward screen of the agent interface.' =>
             'Lehetővé teszi az aktuális munka elmentését piszkozatként az ügyintézői felület jegytovábbítás képernyőjén.',
+        'Shows the ticket type selection (Ticket::Type needs to be activated).' =>
+            '',
+        'Shows the service selection (Ticket::Service needs to be activated).' =>
+            '',
+        'Enforces that the agent must select a service.' => '',
+        'Enforces that the agent must select an SLA.' => '',
+        'Shows the ticket priority selection.' => '',
         'Required permissions to use the email outbound screen in the agent interface.' =>
             'A kimenő e-mail képernyő használatához szükséges jogosultságok az ügyintézői felületen.',
         'Defines if a ticket lock is required in the email outbound screen of the agent interface (if the ticket isn\'t locked yet, the ticket gets locked and the current agent will be set automatically as its owner).' =>

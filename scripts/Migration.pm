@@ -261,6 +261,10 @@ sub _TasksGet {
 
         # 7.3 specific tasks after database migration
         # ...to be added here...
+        {
+            Message => 'Additional ticket attribute selection settings migration',
+            Module  => 'scripts::Migration::Znuny::MigrateAdditionalTicketAttributeSelectionSettings',
+        },
 
         # Base tasks after database migration
         {

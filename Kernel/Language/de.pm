@@ -7267,6 +7267,13 @@ sub Data {
             'Gibt an, ob die Nachricht im Weiterleiten-Bildschirm des Agentenbereichs standardmäßig für den Kunden sichtbar sein soll.',
         'Allows to save current work as draft in the ticket forward screen of the agent interface.' =>
             'Erlaubt das Speichern des aktuellen Stands als Entwurf im Weiterleiten-Bildschirm des Agentenbereichs.',
+        'Shows the ticket type selection (Ticket::Type needs to be activated).' =>
+            'Zeigt die Auswahl des Ticket-Typs an (Ticket::Type muss aktiviert sein).',
+        'Shows the service selection (Ticket::Service needs to be activated).' =>
+            'Zeigt die Serviceauswahl an (Ticket::Service muss aktiviert sein).',
+        'Enforces that the agent must select a service.' => 'Erzwingt, dass der Agent einen Dienst auswählen muss.',
+        'Enforces that the agent must select an SLA.' => 'Erzwingt, dass der Agent ein SLA auswählen muss.',
+        'Shows the ticket priority selection.' => 'Zeigt die Auswahl der Ticketpriorität an.',
         'Required permissions to use the email outbound screen in the agent interface.' =>
             'Benötigte Rechte, um den Dialog für ausgehende Emails im Agenten-Interface aufzurufen.',
         'Defines if a ticket lock is required in the email outbound screen of the agent interface (if the ticket isn\'t locked yet, the ticket gets locked and the current agent will be set automatically as its owner).' =>

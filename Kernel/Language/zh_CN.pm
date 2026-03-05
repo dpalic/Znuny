@@ -33,7 +33,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y.%m.%d';
     $Self->{DateInputFormat}     = '%Y.%m.%d';
     $Self->{DateInputFormatLong} = '%Y.%m.%d - %T';
-    $Self->{Completeness}        = 0.863948840927258;
+    $Self->{Completeness}        = 0.863258785942492;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -7273,6 +7273,13 @@ sub Data {
             '定义默认情况下客户是否可以看到服务人员界面工单转发屏幕中的消息。',
         'Allows to save current work as draft in the ticket forward screen of the agent interface.' =>
             '允许在服务人员界面工单转发屏幕将当前工作保存为草稿。',
+        'Shows the ticket type selection (Ticket::Type needs to be activated).' =>
+            '',
+        'Shows the service selection (Ticket::Service needs to be activated).' =>
+            '',
+        'Enforces that the agent must select a service.' => '',
+        'Enforces that the agent must select an SLA.' => '',
+        'Shows the ticket priority selection.' => '',
         'Required permissions to use the email outbound screen in the agent interface.' =>
             '服务人员界面使用外发邮件屏幕必需的权限。',
         'Defines if a ticket lock is required in the email outbound screen of the agent interface (if the ticket isn\'t locked yet, the ticket gets locked and the current agent will be set automatically as its owner).' =>

@@ -35,7 +35,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d/%m/%Y';
     $Self->{DateInputFormat}     = '%d/%m/%Y';
     $Self->{DateInputFormatLong} = '%d/%m/%Y - %T';
-    $Self->{Completeness}        = 0.578737010391687;
+    $Self->{Completeness}        = 0.578274760383387;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -7279,6 +7279,13 @@ NOTA: i sistemi di terze parti richiedono una configurazione a se.',
             '',
         'Allows to save current work as draft in the ticket forward screen of the agent interface.' =>
             '',
+        'Shows the ticket type selection (Ticket::Type needs to be activated).' =>
+            '',
+        'Shows the service selection (Ticket::Service needs to be activated).' =>
+            '',
+        'Enforces that the agent must select a service.' => '',
+        'Enforces that the agent must select an SLA.' => '',
+        'Shows the ticket priority selection.' => '',
         'Required permissions to use the email outbound screen in the agent interface.' =>
             'Permessi richiesti per utilizzare la schermata della posta in uscita nell\'interfaccia agente.',
         'Defines if a ticket lock is required in the email outbound screen of the agent interface (if the ticket isn\'t locked yet, the ticket gets locked and the current agent will be set automatically as its owner).' =>

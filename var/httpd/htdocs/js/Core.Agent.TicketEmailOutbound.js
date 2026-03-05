@@ -9,7 +9,8 @@
 
 "use strict";
 
-var Core = Core || {};
+var Core = Core || {},
+    Znuny = Znuny || {};
 Core.Agent = Core.Agent || {};
 
 /**
@@ -31,7 +32,23 @@ Core.Agent.TicketEmailOutbound = (function (TargetNS) {
     TargetNS.Init = function () {
 
         var ArticleComposeOptions = Core.Config.Get('ArticleComposeOptions'),
-            DynamicFieldNames = Core.Config.Get('DynamicFieldNames');
+            UpdateFields = Core.Config.Get('DynamicFieldNames') || [];
+
+        UpdateFields.push('TypeID');
+        UpdateFields.push('ServiceID');
+        UpdateFields.push('SLAID');
+
+        $('#TypeID').on('change', function () {
+            Core.AJAX.FormUpdate($(this).parents('form'), 'AJAXUpdate', 'TypeID', UpdateFields);
+        });
+
+        $('#ServiceID').on('change', function () {
+            Core.AJAX.FormUpdate($(this).parents('form'), 'AJAXUpdate', 'ServiceID', UpdateFields);
+        });
+
+        $('#SLAID').on('change', function () {
+            Core.AJAX.FormUpdate($(this).parents('form'), 'AJAXUpdate', 'SLAID', UpdateFields);
+        });
 
         // remove customers
         $('.CustomerTicketRemove').on('click', function () {
@@ -42,21 +59,21 @@ Core.Agent.TicketEmailOutbound = (function (TargetNS) {
         // set a template
         $('#StandardTemplateID').on('change', function () {
             Core.Agent.TicketAction.ConfirmTemplateOverwrite('RichText', $(this), function () {
-                Core.AJAX.FormUpdate($('#Compose'), 'AJAXUpdate', 'StandardTemplateID', ['RichTextField']);
+                Core.AJAX.FormUpdate($(this).parents('form'), 'AJAXUpdate', 'StandardTemplateID', ['RichTextField']);
             });
             return false;
         });
 
         // update dynamic fields in form
         $('#ComposeStateID').on('change', function () {
-            Core.AJAX.FormUpdate($('#Compose'), 'AJAXUpdate', 'ComposeStateID', DynamicFieldNames);
+            Core.AJAX.FormUpdate($(this).parents('form'), 'AJAXUpdate', 'ComposeStateID', UpdateFields);
         });
 
         // change article compose options
         if (typeof ArticleComposeOptions !== 'undefined') {
             $.each(ArticleComposeOptions, function (Key, Value) {
                 $('#'+Value.Name).on('change', function () {
-                    Core.AJAX.FormUpdate($('#Compose'), 'AJAXUpdate', Value.Name, Value.Fields);
+                    Core.AJAX.FormUpdate($(this).parents('form'), 'AJAXUpdate', Value.Name, Value.Fields);
                 });
             });
         }
