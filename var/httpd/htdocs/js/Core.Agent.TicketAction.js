@@ -223,14 +223,18 @@ Core.Agent.TicketAction = (function (TargetNS) {
 
         // Subscribe to ToggleWidget event to handle special behaviour in ticket action screens
         Core.App.Subscribe('Event.UI.ToggleWidget', function ($WidgetElement) {
+
             if ($WidgetElement.attr('id') !== 'WidgetArticle') {
                 return;
             }
-
             // If widget is being expanded, activate checkbox to create article.
             if ($WidgetElement.hasClass('Expanded')) {
                 $('#CreateArticle').prop('checked', true);
             }
+            else {
+                $('#CreateArticle').prop('checked', false);
+            }
+
         });
     };
 

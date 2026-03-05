@@ -418,24 +418,12 @@
 [% RenderBlockStart("WidgetArticle") %]
                                     <div class="cardCommunication col-12">
                                         <div class="mod modCard">
-                                            <div class="inner [% Data.CardStatus | html %]">
+                                            <div id="WidgetArticle" class="inner [% Data.CardStatus | html %]">
                                                 <div class="cardTitle">
                                                     <h2>[% Translate("Communications") | html %]</h2>
                                                     <span class="cardTitleTrigger"></span>
                                                 </div>
                                                 <div class="cardContent">
-
-                                                    <!-- <fieldset class="TableLike FixedLabel">
-                            [% IF Data.WidgetStatus == 'Expanded' %]
-                                                        <input type="hidden" id="CreateArticle" name="CreateArticle" value="1" />
-                            [% ELSE %]
-                                                        <label for="CreateArticle">[% Translate("Create an Article") | html %]:</label>
-                                                        <div class="Field">
-                                                            <input type="checkbox" id="CreateArticle" name="CreateArticle" value="1" [% IF Data.CreateArticle %] checked="checked"[% END %] />
-                                                        </div>
-
-                            [% END %]
-                                                    </fieldset> -->
 [% RenderBlockStart("InformAgentsWithoutSelection") %]
                                                     <h2 class="card-title">[% Translate("Inform") | html %]</h2>
                                                     <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2 gy-3">
@@ -593,7 +581,7 @@
                                                             </div>
                                                         </div>
 
-                                                        <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2 gy-3"></div>
+                                                        <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2 gy-3">
                                                             <div class="col-12">
                                                                 <div class="Field no-background CheckboxContainer">
                                                                     <input type="checkbox" name="IsVisibleForCustomer" id="IsVisibleForCustomer"

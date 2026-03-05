@@ -763,6 +763,15 @@ handheld {
         display: none;
     }
 
+    /* Hide Article Dynamic Fields card when cardContent has no visible fields.
+    :has() is supported by current browsers (Chrome 105+, Firefox 121+, Safari 15.4+).
+    Excludes: .Hidden (DynamicFieldGroups) and inline display:none.
+    */
+    .cardArticleDynamicField:not(:has(.cardContent .Row:not(.Hidden))),
+    .cardArticleDynamicField:not(:has(.cardContent .Row:not([style*="display: none"]))) {
+        display: none;
+    }
+
     .AttachmentListContainer {
         position: relative;
         /*max-width: 622px;*/

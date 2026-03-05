@@ -50,11 +50,14 @@
 
             // Toggle expand/collapse state
             function toggleCard() {
-                if (jQuery('.inner:first', that.ctx).hasClass(that.closeClass)) {
+                var $Inner = jQuery('.inner:first', that.ctx);
+                if ($Inner.hasClass(that.closeClass)) {
                     that.open();
                 } else {
                     that.close();
                 }
+
+                Core.App.Publish('Event.UI.ToggleWidget', [$Inner]);
             }
 
             // Trigger button click
