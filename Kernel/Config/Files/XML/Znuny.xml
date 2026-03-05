@@ -3818,7 +3818,7 @@
             </Hash>
         </Value>
     </Setting>
-    <Setting Name="Ticket::Frontend::MenuModule###001-MarkTicketSeen" Required="0" Valid="1">
+    <Setting Name="Ticket::Frontend::MenuModule###002-MarkTicketSeen" Required="0" Valid="1">
         <Description Translatable="1">Registers a link in the ticket menu to mark a ticket as seen.</Description>
         <Navigation>Frontend::Agent::View::TicketZoom::MenuModule</Navigation>
         <Value>
@@ -3830,7 +3830,7 @@
                 <Item Key="Link">Action=AgentTicketMarkSeenUnseen;Subaction=Seen;TicketID=[% Data.TicketID | html %]</Item>
                 <Item Key="Target"></Item>
                 <Item Key="PopupType"></Item>
-                <Item Key="Prio">001</Item>
+                <Item Key="Prio">002</Item>
             </Hash>
         </Value>
     </Setting>
