@@ -278,7 +278,8 @@
                         <div id="SubjectServerError" class="TooltipErrorMessage"><p>[% Translate("This field is required.") | html %]</p></div>
                     </div>
                     <div class="Clear"></div>
-[% RenderBlockStart("Option") %]
+                <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3 gy-3"></div>
+                    [% RenderBlockStart("Option") %]
                     <label for="[% Data.Name | html %]">[% Translate(Data.Key) | html %]:</label>
                     <div class="Field">
                         [% Data.Value %]
@@ -289,6 +290,7 @@
                     </div>
                     <div class="Clear"></div>
 [% RenderBlockEnd("Option") %]
+                </div>
 [% RenderBlockStart("TicketOptions") %]
                     <label>[% Translate("Options") | html %]:</label>
                     <div class="Field">

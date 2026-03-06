@@ -19,8 +19,8 @@ did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
 .modCard > .inner .cardTitle {
   font-size: var(--font-size-md);
   letter-spacing: 0.1px;
-  line-height: 36px;
-  padding: 15px 20px;
+  line-height: 24px;
+  padding: 8px 15px;
   border-bottom: var(--border-width) var(--border-solid) var(--border-color);
   background-color: var(--background-tertiary-color);
   position: relative;
