@@ -423,7 +423,7 @@ $Selenium->RunTest(
             "#UserLastname updated value",
         );
 
-        # Create a test case for bug#13782 (https://bugs.otrs.org/show_bug.cgi?id=13782).
+        # Create a test case for .
         # Creating CustomerUser with according DynamicField when AutoLoginCreation is enabled.
         my $RandomID4        = $HelperObject->GetRandomID();
         my $DynamicFieldName = 'Text' . $RandomID4;

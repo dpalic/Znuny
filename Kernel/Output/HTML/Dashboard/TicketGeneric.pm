@@ -760,7 +760,6 @@ sub Run {
             }
 
             # Filter is used and is not in user prefered values, show no results.
-            # See bug#12808 ( https://bugs.otrs.org/show_bug.cgi?id=12808 ).
             if (
                 $Filter
                 && IsArrayRefWithData( $TicketSearchSummary{ $Self->{Filter} }->{$Filter} )
@@ -877,7 +876,6 @@ sub Run {
                 }
 
                 # Filter is used and is not in user prefered values, show no results.
-                # See bug#12808 ( https://bugs.otrs.org/show_bug.cgi?id=12808 ).
                 if (
                     $Filter
                     && IsArrayRefWithData( $TicketSearchSummary{$Type}->{$Filter} )

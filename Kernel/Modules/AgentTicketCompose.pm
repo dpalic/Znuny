@@ -204,7 +204,7 @@ sub Run {
         $GetParam{$Needed} = $ParamObject->GetParam( Param => $Needed );
     }
 
-    # Make sure sender is correct one. See bug#14872 ( https://bugs.otrs.org/show_bug.cgi?id=14872 ).
+    # Make sure sender is correct one.
     $GetParam{From} = $Kernel::OM->Get('Kernel::System::TemplateGenerator')->Sender(
         QueueID => $Ticket{QueueID},
         UserID  => $Self->{UserID},
@@ -1564,7 +1564,7 @@ sub Run {
             last ARTICLEMETADATA;
         }
 
-        # Merge ticket data with article data, see bug#13995 (https://bugs.otrs.org/show_bug.cgi?id=13995).
+        # Merge ticket data with article data.
         %Data = ( %Ticket, %Data );
 
         # If article is not a MIMEBase article, get customer recipients from the backend.

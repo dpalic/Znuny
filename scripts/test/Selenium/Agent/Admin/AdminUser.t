@@ -221,7 +221,6 @@ $Selenium->RunTest(
             "There is a class 'Invalid' for test Agent",
         );
 
-        # Testing bug#13463 (https://bugs.otrs.org/show_bug.cgi?id=13463),
         #   updating Agent data, removes it's 'My Queue' and 'My Services' preferences.
         my $QueueName = 'TestQueue' . $RandomID;
         my $QueueID   = $QueueObject->QueueAdd(

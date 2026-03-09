@@ -226,7 +226,6 @@ Perl modules provide a range of features to help you avoid reinventing the wheel
     );
 
     # use full text search on ticket with Cyrillic characters
-    # see bug #11791 ( http://bugs.otrs.org/show_bug.cgi?id=11791 )
     $ArticleID = $ArticleBackendObject->ArticleCreate(
         TicketID             => $TicketID,
         SenderType           => 'agent',

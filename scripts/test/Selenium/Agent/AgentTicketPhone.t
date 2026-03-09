@@ -517,7 +517,7 @@ $Selenium->RunTest(
         );
 
         # Select SubQueue on loading screen.
-        # Bug#12819 ( https://bugs.otrs.org/show_bug.cgi?id=12819 ) - queue contains spaces in the name.
+        # queue contains spaces in the name.
         # Navigate to AgentTicketPhone screen again to check selecting a queue after loading screen.
         $QueueValue    = "Junk::SubQueue $RandomID  $RandomID";
         $QueueValueSet = $QueueID2 . "||" . $QueueValue;
@@ -543,8 +543,8 @@ $Selenium->RunTest(
 
         if ($IsITSMIncidentProblemManagementInstalled) {
 
-   # Verify Service Incident State is not available when config 'Ticket::Frontend::AgentTicketPhone###ShowIncidentState'
-   #   is disabled. See bug#14150 (https://bugs.otrs.org/show_bug.cgi?id=14150)
+            # Verify Service Incident State is not available when config
+            # 'Ticket::Frontend::AgentTicketPhone###ShowIncidentState' is disabled.
             $HelperObject->ConfigSettingChange(
                 Key   => 'Ticket::Frontend::AgentTicketPhone###ShowIncidentState',
                 Value => 0,

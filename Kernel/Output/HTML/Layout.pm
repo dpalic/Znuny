@@ -627,9 +627,6 @@ sub Redirect {
     }
 
     # check if IIS 6 is used, add absolute url for IIS workaround
-    # see also:
-    #  o http://bugs.otrs.org/show_bug.cgi?id=2230
-    #  o http://bugs.otrs.org/show_bug.cgi?id=9835
     #  o http://support.microsoft.com/default.aspx?scid=kb;en-us;221154
     if ( $ENV{SERVER_SOFTWARE} =~ /^microsoft\-iis\/6/i ) {
         my $Host     = $ENV{HTTP_HOST} || $ConfigObject->Get('FQDN');
@@ -1740,7 +1737,6 @@ sub ToolbarModules {
         $Modules{$Key}->{Block} //= 'ToolBarPersonalViews';
 
         # For ToolBarSearchFulltext module take into consideration SearchInArchive settings.
-        # See bug#13790 (https://bugs.otrs.org/show_bug.cgi?id=13790).
         if (
             $ConfigObject->Get('Ticket::ArchiveSystem')
             && $Modules{$Key}->{Block} eq 'ToolBarSearch'
@@ -2026,8 +2022,6 @@ sub Print {
 
     # There seems to be a bug in FastCGI that it cannot handle unicode output properly.
     #   Work around this by converting to an utf8 byte stream instead.
-    #   See also http://bugs.otrs.org/show_bug.cgi?id=6284 and
-    #   http://bugs.otrs.org/show_bug.cgi?id=9802.
     if ( $INC{'CGI/Fast.pm'} || $ENV{FCGI_ROLE} || $ENV{FCGI_SOCKET_PATH} ) {    # are we on FCGI?
         $Kernel::OM->Get('Kernel::System::Encode')->EncodeOutput( $Param{Output} );
         binmode STDOUT, ':bytes';
@@ -2212,7 +2206,7 @@ sub Ascii2Html {
         ${$Text} =~ s/\n/<br\/>\n/g;
         ${$Text} =~ s/  /&nbsp;&nbsp;/g;
 
-        # Convert the space at the beginning of the line (see bug#14346 - https://bugs.otrs.org/show_bug.cgi?id=14346).
+        # Convert the space at the beginning of the line.
         ${$Text} =~ s/\n /\n&nbsp;/g;
     }
 

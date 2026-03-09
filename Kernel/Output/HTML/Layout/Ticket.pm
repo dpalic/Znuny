@@ -320,7 +320,6 @@ sub AgentQueueListOption {
 
         # transform data from Hash in Array because of ordering in frontend by Queue name
         # it was a problem with name like '(some_queue)'
-        # see bug#10621 http://bugs.otrs.org/show_bug.cgi?id=10621
         my %QueueDataHash  = %{ $Param{Data} || {} };
         my @QueueDataArray = map {
             {

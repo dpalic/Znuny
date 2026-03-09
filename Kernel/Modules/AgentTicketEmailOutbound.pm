@@ -1016,7 +1016,7 @@ sub SendEmail {
         }
     }
 
-    # Make sure sender is correct one. See bug#14872 ( https://bugs.otrs.org/show_bug.cgi?id=14872 ).
+    # Make sure sender is correct one.
     $GetParam{From} = $Kernel::OM->Get('Kernel::System::TemplateGenerator')->Sender(
         QueueID => $Ticket{QueueID},
         UserID  => $Self->{UserID},
@@ -1738,7 +1738,7 @@ sub AjaxUpdate {
 
     my %Ticket = $Kernel::OM->Get('Kernel::System::Ticket')->TicketGet( TicketID => $Self->{TicketID} );
 
-    # Make sure sender is correct one. See bug#14872 ( https://bugs.otrs.org/show_bug.cgi?id=14872 ).
+    # Make sure sender is correct one.
     $GetParam{From} = $Kernel::OM->Get('Kernel::System::TemplateGenerator')->Sender(
         QueueID => $Ticket{QueueID},
         UserID  => $Self->{UserID},

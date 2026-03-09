@@ -175,7 +175,6 @@ $Selenium->RunTest(
         $Selenium->execute_script("\$('#StopDateMinute').val('$DTEnd->{Minute}')");
 
         # Try to create System Maintenance with Login and Notify message longer then 250 characters.
-        #   See bug#13366 (https://bugs.otrs.org/show_bug.cgi?id=13366).
         #   Verify there is no Error class initially.
         $Self->False(
             $Selenium->execute_script("return \$('#LoginMessage').hasClass('Error')"),
@@ -312,7 +311,6 @@ $Selenium->RunTest(
         $CheckBredcrumb->( BreadcrumbText => 'Edit System Maintenance' );
 
         # Try to edit System Maintenance with Login and Notify message longer then 250 characters.
-        #   See bug#13366 (https://bugs.otrs.org/show_bug.cgi?id=13366).
         #   Verify there is no Error class initially.
         $Self->False(
             $Selenium->execute_script("return \$('#LoginMessage').hasClass('Error')"),

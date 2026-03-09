@@ -345,7 +345,6 @@ $Selenium->RunTest(
         }
 
         # Select both tickets and click on "bulk".
-        # Test case for the bug #11805 - http://bugs.otrs.org/show_bug.cgi?id=11805.
         $Selenium->find_element("//input[\@value='$Tickets[0]->{TicketID}']")->click();
         $Selenium->find_element("//input[\@value='$Tickets[1]->{TicketID}']")->click();
         $Selenium->find_element("//input[\@value='$Tickets[2]->{TicketID}']")->click();
