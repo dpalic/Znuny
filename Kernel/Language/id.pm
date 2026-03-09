@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d/%m/%Y';
     $Self->{DateInputFormat}     = '%d/%m/%Y';
     $Self->{DateInputFormatLong} = '%d/%m/%Y - %T';
-    $Self->{Completeness}        = 0.583226837060703;
+    $Self->{Completeness}        = 0.583133684714902;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -2868,6 +2868,7 @@ bin/znuny.Daemon.pl status\').',
         'There are no dialogs available at this point in the process.' =>
             'Tidak ada dialog yang terseedia di dalam proses ',
         'This item has no articles yet.' => 'Item ini belum mempunyai artikel',
+        'Toggle sidebar' => '',
         'Drafts' => '',
         'by' => 'Oleh',
         'Article Overview - %s Article(s)' => '',

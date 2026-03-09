@@ -32,7 +32,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d-%m-%Y';
     $Self->{DateInputFormat}     = '%d-%m-%Y';
     $Self->{DateInputFormatLong} = '%d-%m-%Y - %T';
-    $Self->{Completeness}        = 0.478274760383387;
+    $Self->{Completeness}        = 0.478198370867274;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2872,6 +2872,7 @@ sub Data {
         'There are no dialogs available at this point in the process.' =>
             'Op dit moment zijn er geen dialogen beschikbaar.',
         'This item has no articles yet.' => 'Dit item heeft nog geen interacties.',
+        'Toggle sidebar' => '',
         'Drafts' => 'Concepten',
         'by' => 'door',
         'Article Overview - %s Article(s)' => '',

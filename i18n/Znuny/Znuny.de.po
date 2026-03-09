@@ -25337,3 +25337,7 @@ msgstr "Erzwingt, dass der Agent ein SLA auswählen muss."
 msgid "Shows the ticket priority selection."
 msgstr "Zeigt die Auswahl der Ticketpriorität an."
 
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom.tt
+msgid "Toggle sidebar"
+msgstr "Sidebar ein-/ausblenden"
+

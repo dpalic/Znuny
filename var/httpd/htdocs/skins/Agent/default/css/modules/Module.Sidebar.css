@@ -5,6 +5,10 @@ This software comes with ABSOLUTELY NO WARRANTY. For details, see
 the enclosed file COPYING for license information (AGPL). If you
 did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
 */
+.sectionSidebar {
+  position: relative;
+}
+
 .modSidebar {
   height: 100%;
 }
@@ -18,18 +22,24 @@ did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
 }
 .modSidebar > .inner.sidebarActive {
   width: 310px;
+  height: 100%;
+  margin-bottom: 5px;
+  background-color: var(--background-tertiary-color);
+  border: var(--border-width) var(--border-solid) var(--border-color);
+  border-top: none;
+  border-bottom: none;
+  padding: var(--padding-sm);
 }
 @media (max-width: 1199px) {
   .modSidebar > .inner.sidebarActive {
-    position: fixed;
-    top: 0;
     right: 0;
-    height: 100vh;
     width: 310px;
     z-index: 1000;
     background-color: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     box-shadow: -2px 0 20px rgba(0, 0, 0, 0.1);
+    margin-top: 0;
+    margin-bottom: 0;
   }
 }
 @media (min-width: 1200px) {
@@ -113,6 +123,51 @@ did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
 .modSidebar > .inner .sidebarTitle:hover {
   cursor: pointer;
   background-color: rgba(234, 234, 238, 0.8);
+}
+
+/* Override .btn-toggle (bottom: -14px) so toggle stays at top, not stretched/centered */
+.sectionSidebar #TicketSidebar-toggle {
+  position: absolute;
+  right: 100%;
+  top: 78px;
+  bottom: auto;
+  align-self: flex-start;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15px;
+  height: 42px;
+  background: var(--white);
+  border: var(--border-width) var(--border-solid) var(--border-color);
+  border-right: none;
+  border-radius: var(--border-radius-xxs) 0 0 var(--border-radius-xxs);
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.sectionSidebar #TicketSidebar-toggle.sidebar-animating {
+  display: none;
+}
+
+.sectionSidebar #TicketSidebar-toggle i.fa {
+  font-size: var(--font-size-md);
+  color: var(--gray-dark-semi);
+  text-shadow: none;
+  margin: 0;
+}
+
+/* caret points right when collapsed, left when open */
+.sectionSidebar #TicketSidebar-toggle i.fa-caret-left {
+  transform: rotate(0deg);
+}
+
+.sectionSidebar.sidebarOpen #TicketSidebar-toggle i.fa-caret-left {
+  transform: rotate(180deg);
+}
+
+.sectionSidebar #TicketSidebar-toggle:hover {
+  opacity: 0.9;
 }
 
 /*# sourceMappingURL=Module.Sidebar.css.map */

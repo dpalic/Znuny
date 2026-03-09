@@ -316,12 +316,12 @@
         </div>
     </main>
     <aside class="sectionSidebar">
+        <a id="TicketSidebar-toggle" class="btn-toggle icon-hover" href="#" title="[% Translate("Toggle sidebar") | html %]" aria-label="[% Translate("Toggle sidebar") | html %]">
+            <i class="fa fa-caret-left"></i>
+        </a>
         <div class="mod modSidebar">
             <div class="inner sidebarActive">
                 <div class="sidebar">
-                    <div class="sidebarTitle">
-                        <h2>[% Translate("Information") | html %]</h2>
-                    </div>
                     <div class="sidebarContent">
                         [% RenderBlockStart("FormDraftTable") %]
                         <div class="mod modSidebarWidget">

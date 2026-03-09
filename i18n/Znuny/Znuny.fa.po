@@ -25324,3 +25324,7 @@ msgstr ""
 msgid "Shows the ticket priority selection."
 msgstr ""
 
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom.tt
+msgid "Toggle sidebar"
+msgstr ""
+

@@ -29,7 +29,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%m/%d/%Y';
     $Self->{DateInputFormat}     = '%m/%d/%Y';
     $Self->{DateInputFormatLong} = '%m/%d/%Y - %T';
-    $Self->{Completeness}        = 0.42220447284345;
+    $Self->{Completeness}        = 0.422137038811691;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -2869,6 +2869,7 @@ sub Data {
         'There are no dialogs available at this point in the process.' =>
             'Hakuna mazungumzo yaliyopo katika hatua hii ya mchakato.',
         'This item has no articles yet.' => 'Kipengee hakina makala bado.',
+        'Toggle sidebar' => '',
         'Drafts' => '',
         'by' => 'Kwa',
         'Article Overview - %s Article(s)' => '',

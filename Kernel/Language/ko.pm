@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%m-%d';
     $Self->{DateInputFormat}     = '%Y-%m-%d';
     $Self->{DateInputFormatLong} = '%Y-%m-%d %T';
-    $Self->{Completeness}        = 0.835782747603834;
+    $Self->{Completeness}        = 0.835649257307139;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -2866,6 +2866,7 @@ sub Data {
         'There are no dialogs available at this point in the process.' =>
             '현재 이 과정에서 사용할 수 있는 대화 상자가 없습니다.',
         'This item has no articles yet.' => '이 항목에는 아직 기사가 없습니다.',
+        'Toggle sidebar' => '',
         'Drafts' => '체커',
         'by' => '으로',
         'Article Overview - %s Article(s)' => '기사 개관 - %s건의 기사',

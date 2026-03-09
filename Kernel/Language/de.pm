@@ -2867,6 +2867,7 @@ sub Data {
         'There are no dialogs available at this point in the process.' =>
             'Für diesen Prozess stehen derzeit keine Dialoge zur Verfügung.',
         'This item has no articles yet.' => 'Dieser Eintrag hat noch keine Artikel.',
+        'Toggle sidebar' => 'Sidebar ein-/ausblenden',
         'Drafts' => 'Entwürfe',
         'by' => 'von',
         'Article Overview - %s Article(s)' => 'Artikelübersicht - %s Artikel',

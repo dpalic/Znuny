@@ -41,23 +41,37 @@
          */
         onStart: function () {
             this.bindEvents();
+            this.syncSidebarOpenClass();
             this.checkWidth();
         },
 
         bindEvents: function () {
             var that = this;
-            jQuery('.sidebarTitle', this.ctx).click(function () {
-                that.close();
+            jQuery(this.ctx).closest('.sectionSidebar').find('#TicketSidebar-toggle').on('click', function (e) {
+                e.preventDefault();
+                if (jQuery('.inner:first', that.ctx).hasClass('sidebarActive')) {
+                    that.close();
+                } else {
+                    that.open();
+                }
             });
             jQuery('.sidebarTrigger', this.ctx).click(function () {
                 that.open();
             });
 
             // close sidebar if window is smaller than x pixel
-            jQuery(window).resize(function () {
+            jQuery(window).on('resize', function () {
                 that.checkWidth();
             });
+        },
 
+        syncSidebarOpenClass: function () {
+            var $aside = jQuery(this.ctx).closest('.sectionSidebar');
+            if (jQuery('.inner:first', this.ctx).hasClass('sidebarActive')) {
+                $aside.addClass('sidebarOpen');
+            } else {
+                $aside.removeClass('sidebarOpen');
+            }
         },
 
         checkWidth: function () {
@@ -69,11 +83,23 @@
         },
 
         close: function () {
+            var $toggle = jQuery(this.ctx).closest('.sectionSidebar').find('#TicketSidebar-toggle');
+            $toggle.addClass('sidebar-animating');
             jQuery('.inner:first', this.ctx).removeClass('sidebarActive');
+            this.syncSidebarOpenClass();
+            setTimeout(function () {
+                $toggle.removeClass('sidebar-animating');
+            }, 310);
         },
 
         open: function () {
+            var $toggle = jQuery(this.ctx).closest('.sectionSidebar').find('#TicketSidebar-toggle');
+            $toggle.addClass('sidebar-animating');
             jQuery('.inner:first', this.ctx).addClass('sidebarActive');
+            this.syncSidebarOpenClass();
+            setTimeout(function () {
+                $toggle.removeClass('sidebar-animating');
+            }, 310);
         },
 
 

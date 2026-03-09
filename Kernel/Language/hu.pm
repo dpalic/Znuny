@@ -32,7 +32,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%m-%d';
     $Self->{DateInputFormat}     = '%Y-%m-%d';
     $Self->{DateInputFormatLong} = '%Y-%m-%d - %T';
-    $Self->{Completeness}        = 0.988338658146965;
+    $Self->{Completeness}        = 0.988180801788852;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2872,6 +2872,7 @@ sub Data {
         'There are no dialogs available at this point in the process.' =>
             'Nem érhetők el párbeszédablakok a folyamat ezen pontján.',
         'This item has no articles yet.' => 'Ennek az elemnek még nincsenek bejegyzései.',
+        'Toggle sidebar' => '',
         'Drafts' => 'Piszkozatok',
         'by' => '–',
         'Article Overview - %s Article(s)' => 'Bejegyzés áttekintő – %s bejegyzés',
