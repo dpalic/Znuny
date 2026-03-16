@@ -613,37 +613,37 @@ tbody td.Sender {
 
 .UseArticleColors tr.Active > td,
 .UseArticleColors tr.Active:hover > td {
-    background-color: var(--mail-outgoing-color) !important;
-    border-color: var(--mail-outgoing-color) !important;
+    background-color: var(--mail-outgoing-color);
+    border-color: var(--mail-outgoing-color);
 }
 
 .UseArticleColors tr:hover > td {
-    background-color: var(--primary-color-rgb) !important;
+    background-color: var(--primary-color-rgb);
     border-color: var(--primary-color-rgb);
-    border-right-color: var(--primary-color-rgb) !important;
+    border-right-color: var(--primary-color-rgb);
 }
 
 .UseArticleColors tr.NotVisibleForCustomer > td {
-    background: #FFCCCC !important;
+    background: #FFCCCC;
     border-bottom-color: #e7abab;
     border-color: #e7abab;
 }
 
 .UseArticleColors tr.NotVisibleForCustomer.Active > td,
 .UseArticleColors tr.NotVisibleForCustomer:hover > td {
-    background-color: #e7abab !important;
+    background-color: #e7abab;
     border-color: #e7abab;
 }
 
 .UseArticleColors tr.system > td {
-    background: #fff7be !important;
+    background: #fff7be;
     border-bottom-color: #ffef80;
     border-color: #ffef80;
 }
 
 .UseArticleColors tr.system.Active > td,
 .UseArticleColors tr.system:hover > td {
-    background-color: #ffef80 !important;
+    background-color: #ffef80;
     border-color: #ffef80;
 }
 
@@ -714,23 +714,23 @@ tbody td.Sender {
 */
 .UseArticleColors .agent-phone > td,
 .UseArticleColors .agent-phone .Header {
-    background: #d1e8d1 !important;
+    background: #d1e8d1;
 }
 .UseArticleColors .agent-email-external > td,
 .UseArticleColors .agent-email-external .Header {
-    background: #D3E5B5 !important;
+    background: #D3E5B5;
 }
 .UseArticleColors .agent-email-internal > td,
 .UseArticleColors .agent-email-internal .Header {
-    background: #ffd1d1 !important;
+    background: #ffd1d1;
 }
 .UseArticleColors .agent-note-external > td,
 .UseArticleColors .agent-note-external .Header {
-    background: #d1d1d1 !important;
+    background: #d1d1d1;
 }
 .UseArticleColors .agent-note-internal > td,
 .UseArticleColors .agent-note-internal .Header {
-    background: #FFCCCC !important;
+    background: #FFCCCC;
 }
 
 /*
@@ -750,7 +750,7 @@ tbody td.Sender {
 .UseArticleColors .system-email-notification-int .Header,
 .UseArticleColors .system-email-notification-ext > td,
 .UseArticleColors .system-email-notification-ext .Header {
-    background: #ffffd1 !important;
+    background: #ffffd1;
 }
 
 /*
@@ -765,7 +765,7 @@ tbody td.Sender {
 .UseArticleColors .customer-note-external .Header,
 .UseArticleColors .customer-phone > td,
 .UseArticleColors .customer-phone .Header {
-    background: #D4DEFC !important;
+    background: #D4DEFC;
 }
 
 .UseArticleColors .agent-phone:hover > td,
@@ -782,7 +782,7 @@ tbody td.Sender {
 .UseArticleColors .customer-email-external:hover > td,
 .UseArticleColors .customer-note-external:hover > td,
 .UseArticleColors .customer-phone:hover > td {
-    background: #FCB24B !important;
+    background: #FCB24B;
 }
 
 .ItemRow i.Unsupported,
