@@ -52,6 +52,19 @@ sub _GetMigrateSysConfigSettings {
                     'thirdparty/jscolor-2.5.2/jscolor.js',
             },
         },
+
+        "Ticket::Frontend::AgentTicketProcess::CustomerIDReadOnly" => {
+            UpdateName => "Ticket::Frontend::AgentTicketProcess###CustomerIDReadOnly",
+        },
+        "Ticket::Frontend::AgentTicketPhone::CustomerIDReadOnly" => {
+            UpdateName => "Ticket::Frontend::AgentTicketPhone###CustomerIDReadOnly",
+        },
+        "Ticket::Frontend::AgentTicketEmail::CustomerIDReadOnly" => {
+            UpdateName => "Ticket::Frontend::AgentTicketEmail###CustomerIDReadOnly",
+        },
+        "Ticket::Frontend::AgentTicketCustomer::CustomerIDReadOnly" => {
+            UpdateName => "Ticket::Frontend::AgentTicketCustomer###CustomerIDReadOnly",
+        },
     );
 
     return %MigrateSysConfigSettings;
