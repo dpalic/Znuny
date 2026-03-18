@@ -52,7 +52,26 @@ sub _GetMigrateSysConfigSettings {
                     'thirdparty/jscolor-2.5.2/jscolor.js',
             },
         },
-
+        "Frontend::ToolBarModule###210-Ticket::TicketSearchProfile" => {
+            AddEffectiveValue => {
+                Block => 'ToolBarSearchProfile',
+            },
+        },
+        "Frontend::ToolBarModule###220-Ticket::TicketSearchFulltext" => {
+            AddEffectiveValue => {
+                Block => 'ToolBarSearchFulltext',
+            },
+        },
+        "Frontend::ToolBarModule###230-CICSearchCustomerID" => {
+            AddEffectiveValue => {
+                Block => 'ToolBarCICSearchCustomerID',
+            },
+        },
+        "Frontend::ToolBarModule###240-CICSearchCustomerUser" => {
+            AddEffectiveValue => {
+                Block => 'ToolBarCICSearchCustomerUser',
+            },
+        },
         "Ticket::Frontend::AgentTicketProcess::CustomerIDReadOnly" => {
             UpdateName => "Ticket::Frontend::AgentTicketProcess###CustomerIDReadOnly",
         },
