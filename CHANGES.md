@@ -1,5 +1,5 @@
-
 # 7.3.1 2026-??-??
+ - 2026-03-18 Fixed: Issue with invisible ticket pagination count when there is only one page.
  - 2026-03-09 Added Znuny XSLT helper and update mappings to use it.
  - 2026-03-06 Fixed: Text in the dropdown menu of the dashboard is overlaid by other text in mobile mode.
  - 2026-03-05 Integrated package Znuny-AdditionalTicketAttributeSelection.
