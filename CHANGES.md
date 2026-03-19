@@ -1,4 +1,5 @@
 # 7.3.1 2026-??-??
+ - 2026-03-18 Fixed: Misleading popup message when opening more than one ticket from overviews by using a shortcut to open it in a new tab/window.
  - 2026-03-18 Fixed: Issue with invisible ticket pagination count when there is only one page.
  - 2026-03-17 Changed mentions feature to work only if symbol before trigger symbol does not exist or is a space character - mostly to prevent displaying selection options while typing e-mail address. Thanks for reporting to @Dherlou. [#738](https://github.com/znuny/Znuny/issues/738).
  - 2026-03-09 Added Znuny XSLT helper and update mappings to use it.
