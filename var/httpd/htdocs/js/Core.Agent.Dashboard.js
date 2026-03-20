@@ -1412,24 +1412,6 @@ Core.Agent.Dashboard = (function (TargetNS) {
 
                         $TriggerObj.addClass('Active');
 
-                        // only show and use the delete filter icon in case of autocomplete fields
-                        // because in regular dropdowns we have a different way to delete the filter
-                        if ($TriggerObj.closest('th').hasClass('FilterActive') && $ColumnSettingsContainer.find('select.ColumnFilter').hasClass('Hidden')) {
-                            $ColumnSettingsContainer
-                                .find('.DeleteFilter')
-                                .removeClass('Hidden')
-                                .off()
-                                .on('click', function() {
-                                    $(this)
-                                        .closest('.ColumnSettingsContainer')
-                                        .find('select')
-                                        .val('DeleteFilter')
-                                        .trigger('change');
-
-                                    return false;
-                                });
-                        }
-
                         if ($TriggerObj.closest('th').hasClass('CustomerID') || $TriggerObj.closest('th').hasClass('CustomerUserID') || $TriggerObj.closest('th').hasClass('Responsible') || $TriggerObj.closest('th').hasClass('Owner')) {
 
                             if (!$TriggerObj.parent().find('.SelectedValue').length) {

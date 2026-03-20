@@ -239,22 +239,7 @@ Core.Agent.Overview = (function (TargetNS) {
                                         $TriggerObj
                                             .next('.ColumnSettingsContainer')
                                             .find('select')
-                                            .after('<span class="SelectedValue Hidden">' + AutoCompleteText + ' (' + AutoCompleteValue + ')</span>')
-                                            .parent()
-                                            .find('input[type=text]')
-                                            .after('<a href="#" class="DeleteFilter"><i class="fa fa-trash-o"></i></a>')
-                                            .parent()
-                                            .find('a.DeleteFilter')
-                                            .off()
-                                            .on('click', function() {
-                                                $(this)
-                                                    .closest('.ColumnSettingsContainer')
-                                                    .find('select')
-                                                    .val('DeleteFilter')
-                                                    .trigger('change');
-
-                                                return false;
-                                            });
+                                            .after('<span class="SelectedValue Hidden">' + AutoCompleteText + ' (' + AutoCompleteValue + ')</span>');
                                     }
                                 });
                             }

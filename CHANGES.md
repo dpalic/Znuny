@@ -1,4 +1,5 @@
 # 7.3.1 2026-??-??
+ - 2026-03-20 Fixed: Misaligned column filter dropdowns in TableSmall views.
  - 2026-03-20 Fixed: Replaced EncodeInput() method in KS:Encode with safe version.
  - 2026-03-20 Fixed: Activities are not marked as seen after clicking an activity entry.
  - 2026-03-19 Fixed: Form submit not being triggered when pressing Enter after entering the new draft's title.

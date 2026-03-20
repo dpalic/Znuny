@@ -462,7 +462,7 @@ Core.UI.TreeSelection = (function (TargetNS) {
      *      To bind click event no tree selection icons next to select boxes.
      */
     TargetNS.InitTreeSelection = function() {
-        $('.Field, fieldset').off('click.ShowTreeSelection').on('click.ShowTreeSelection', '.ShowTreeSelection', function () {
+        $(document).off('click.ShowTreeSelection').on('click.ShowTreeSelection', '.ShowTreeSelection', function () {
             Core.UI.TreeSelection.ShowTreeSelection($(this));
             return false;
         });
