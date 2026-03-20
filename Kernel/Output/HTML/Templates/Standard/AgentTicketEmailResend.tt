@@ -335,7 +335,24 @@
             </div>
         </div>
         <div class="Footer">
-            <button class="CallForAction Primary" id="submitRichText" accesskey="g" title="[% Translate("Send mail") | html %] (g)" type="submit" value="[% Translate("Send mail") | html %]" ><span><i class="fa fa-envelope-o"></i> [% Translate("Send mail") | html %]</span></button>
+            <div class="row">
+                <div class="col-12">
+                    <div class="col-12">
+                        <div class="mod modFormSubmitArea">
+                            <div class="inner">
+                                <div class="formSubmitArea">
+                                    <div class="formSubmitAreaCancel">
+                                    </div>
+                                    <div class="formSubmitAreaSubmit">
+                                        [% INCLUDE "FormElements/DraftButtons.tt" %]
+                                        <button class="CallForAction Primary btn-main btn-width-xxl btn-primary" id="submitRichText" accesskey="g" title="[% Translate("Send mail") | html %] (g)" type="submit" value="[% Translate("Send mail") | html %]" ><span><i class="fa fa-envelope-o"></i> [% Translate("Send mail") | html %]</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </form>
