@@ -86,6 +86,8 @@ Core.Activity = (function (TargetNS) {
      * @description
      *      Loads a number of activities via AJAX
      * @param {Object} $Container JQuery collection for the container elemnt to load the resulting list into.
+     * @example
+     *      Core.Activity.LoadActivities($('#UserActivity .ActivityList'));
      */
     TargetNS.LoadActivities = function ($Container) {
         var URL = Core.Config.Get('Baselink'),
@@ -116,20 +118,19 @@ Core.Activity = (function (TargetNS) {
      *      Binds click event to all activity links.
      */
     TargetNS.BindActivityLink = function () {
+        var ActivityID, href;
 
-        // remove all click activity link events
-        $(document).off('click.activity-link');
+        $(document).off('click.activity-link').on('click.activity-link', '.activity-link', function (Event) {
+            Event.preventDefault();
 
-        // add all click activity link events again to make sure all new events exists
-        $('.activity-link').unshiftOn('click.activity-link', function () {
-            var ActivityID = $(this).parent().data('activity-id');
+            ActivityID = $(this).parent().data('activity-id');
+            href = $(this).attr('href');
 
-            Core.Activity.MarkAsSeen(ActivityID);
-
-            window.location.href = $(this).attr('href');
+            TargetNS.MarkAsSeen(ActivityID, function () {
+                window.location.href = href;
+            });
         });
     };
-
 
     /**
      * @name Add
@@ -240,11 +241,11 @@ Core.Activity = (function (TargetNS) {
             $Activity = Core.Template.Render('Activity/Activity', Response);
             $('li.Activity[data-activity-id="' + ActivityID + '"]').replaceWith($Activity);
 
+            TargetNS.UpdateActivityList();
+
             if (typeof Callback !== 'undefined') {
                 Callback(Response);
             }
-
-            TargetNS.UpdateActivityList();
         });
     };
 
@@ -254,6 +255,8 @@ Core.Activity = (function (TargetNS) {
      * @function
      * @description
      *      Updates the activity list.
+     * @example
+     *      Core.Activity.UpdateActivityList();
      */
     TargetNS.UpdateActivityList = function () {
 
@@ -276,6 +279,10 @@ Core.Activity = (function (TargetNS) {
      * @param {Function} Callback - function which should be executed at the end
      * @description
      *      Deletes the given activity.
+     * @example
+     *      Core.Activity.Delete(1, function (Response) {
+     *          console.error(Response);
+     *      });
      */
     TargetNS.Delete = function (ActivityID, Callback) {
         var URL = Core.Config.Get('Baselink'),
@@ -294,11 +301,11 @@ Core.Activity = (function (TargetNS) {
                 return;
             }
 
+            TargetNS.UpdateActivityList();
+
             if (typeof Callback !== 'undefined') {
                 Callback(Response);
             }
-
-            TargetNS.UpdateActivityList();
         });
     };
 
@@ -309,6 +316,10 @@ Core.Activity = (function (TargetNS) {
      * @param {Function} Callback - function which should be executed at the end
      * @description
      *      Deletes all activities of the current user.
+     * @example
+     *      Core.Activity.DeleteAll(function (Response) {
+     *          console.error(Response);
+     *      });
      */
     TargetNS.DeleteAll = function (Callback) {
         var URL = Core.Config.Get('Baselink'),
@@ -326,11 +337,11 @@ Core.Activity = (function (TargetNS) {
                 return;
             }
 
+            TargetNS.UpdateActivityList();
+
             if (typeof Callback !== 'undefined') {
                 Callback(Response);
             }
-
-            TargetNS.UpdateActivityList();
         });
     };
 
@@ -342,6 +353,10 @@ Core.Activity = (function (TargetNS) {
      * @param {Function} Callback - function which should be executed at the end
      * @description
      *      Marks the given activity as new.
+     * @example
+     *      Core.Activity.MarkAsNew(1, function (Response) {
+     *          console.error(Response);
+     *      });
      */
     TargetNS.MarkAsNew = function (ActivityID, Callback) {
         var Data = {
@@ -357,11 +372,11 @@ Core.Activity = (function (TargetNS) {
                 return;
             }
 
+            TargetNS.UpdateActivityList();
+
             if (typeof Callback !== 'undefined') {
                 Callback(Response);
             }
-
-            TargetNS.UpdateActivityList();
         });
     };
 
@@ -373,6 +388,10 @@ Core.Activity = (function (TargetNS) {
      * @param {Function} Callback - function which should be executed at the end
      * @description
      *      Marks the given activity as seen.
+     * @example
+     *      Core.Activity.MarkAsSeen(1, function (Response) {
+     *          console.error(Response);
+     *      });
      */
     TargetNS.MarkAsSeen = function (ActivityID, Callback) {
         var Data = {
@@ -388,11 +407,11 @@ Core.Activity = (function (TargetNS) {
                 return;
             }
 
+            TargetNS.UpdateActivityList();
+
             if (typeof Callback !== 'undefined') {
                 Callback(Response);
             }
-
-            TargetNS.UpdateActivityList();
         });
     };
 
@@ -403,6 +422,10 @@ Core.Activity = (function (TargetNS) {
      * @param {Function} Callback - function which should be executed at the end
      * @description
      *      Marks all activities of the user as seen.
+     * @example
+     *      Core.Activity.MarkAsSeenAll(function (Response) {
+     *          console.error(Response);
+     *      });
      */
     TargetNS.MarkAsSeenAll = function (Callback) {
         var URL = Core.Config.Get('Baselink'),
@@ -423,11 +446,11 @@ Core.Activity = (function (TargetNS) {
             $('.ActivityState').removeClass('activity-new');
             $('li.Activity').attr('data-activity-state', 'seen');
 
+            TargetNS.UpdateActivityList();
+
             if (typeof Callback !== 'undefined') {
                 Callback(Response);
             }
-
-            TargetNS.UpdateActivityList();
         });
     };
 

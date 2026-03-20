@@ -1,4 +1,5 @@
 # 7.3.1 2026-??-??
+ - 2026-03-20 Fixed: Activities are not marked as seen after clicking an activity entry.
  - 2026-03-19 Fixed: Form submit not being triggered when pressing Enter after entering the new draft's title.
  - 2026-03-18 Fixed: Misleading popup message when opening more than one ticket from overviews by using a shortcut to open it in a new tab/window.
  - 2026-03-18 Fixed: Issue with invisible ticket pagination count when there is only one page.
