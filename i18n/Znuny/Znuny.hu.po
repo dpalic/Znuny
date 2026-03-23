@@ -4,8 +4,7 @@ msgstr ""
 "POT-Creation-Date: 2023-03-23 09:27+0000\n"
 "PO-Revision-Date: 2026-03-18 04:19+0000\n"
 "Last-Translator: Balázs Úr <balazs@urbalazs.hu>\n"
-"Language-Team: Hungarian <https://translations.znuny.org/projects/znuny/"
-"znuny/hu/>\n"
+"Language-Team: Hungarian <https://translations.znuny.org/projects/znuny/znuny/hu/>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -4367,9 +4366,7 @@ msgstr "A PGP támogatás le van tiltva"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminPGP.tt
 msgid "To be able to use PGP in Znuny, you have to enable it first."
-msgstr ""
-"Hogy képes legyen PGP-t használni a Znunyban, ahhoz először engedélyeznie "
-"kell azt."
+msgstr "Hogy képes legyen PGP-t használni a Znunyban, ahhoz először engedélyeznie kell azt."
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminPGP.tt
 msgid "Enable PGP support"
@@ -4481,8 +4478,7 @@ msgstr "Ne feledje, hogy a telepített Znuny verziója %s."
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminPackageManager.tt
 msgid "To install this package, you need to update Znuny to version %s or newer."
-msgstr ""
-"A csomag telepítéséhez frissítenie kell a Znunyt %s vagy újabb verzióra."
+msgstr "A csomag telepítéséhez frissítenie kell a Znunyt %s vagy újabb verzióra."
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminPackageManager.tt
 msgid "This package can only be installed on Znuny version %s or older."
@@ -5734,9 +5730,7 @@ msgstr "Az S/MIME támogatás le van tiltva"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminSMIME.tt
 msgid "To be able to use SMIME in Znuny, you have to enable it first."
-msgstr ""
-"Hogy képes legyen S/MIME-t használni a Znunyban, ahhoz először engedélyeznie "
-"kell azt."
+msgstr "Hogy képes legyen S/MIME-t használni a Znunyban, ahhoz először engedélyeznie kell azt."
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminSMIME.tt
 msgid "Enable SMIME support"
@@ -9060,9 +9054,7 @@ msgstr "Port"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/InstallerFinish.tt
 msgid "To be able to use Znuny you have to enter the following line in your command line (Terminal/Shell) as root."
-msgstr ""
-"Ahhoz, hogy a Znunyt használni tudja, a következő parancsot kell begépelnie "
-"a parancssorban (terminálban/parancsértelmezőben) rendszergazdaként."
+msgstr "Ahhoz, hogy a Znunyt használni tudja, a következő parancsot kell begépelnie a parancssorban (terminálban/parancsértelmezőben) rendszergazdaként."
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/InstallerFinish.tt
 msgid "Restart your webserver"
@@ -25124,10 +25116,7 @@ msgstr "SSL-ellenőrzés kihagyása"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminSendmailConfig.tt
 msgid "Select to make this the fallback/default config for any email address not configured in other outbound email profiles. Only one outbound email profile can be the fallback."
-msgstr ""
-"Válassza ki, hogy ez legyen a tartalék vagy alapértelmezett beállítás minden "
-"olyan e-mail-címnél, amely nincs beállítva más kimenő e-mail-profilban. Csak "
-"egy kimenő e-mail-profil lehet a tartalék."
+msgstr "Válassza ki, hogy ez legyen a tartalék vagy alapértelmezett beállítás minden olyan e-mail-címnél, amely nincs beállítva más kimenő e-mail-profilban. Csak egy kimenő e-mail-profil lehet a tartalék."
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminSendmailConfig.tt
 msgid "Edit current fallback outbound email profile (host %s)."
@@ -25139,16 +25128,11 @@ msgstr "Kimenő e-mail-profil frissítve!"
 
 #. Perl Module: Kernel/Modules/AdminSendmailConfig.pm
 msgid "Configuration option 'SendmailModule' has to be set to 'Kernel::System::Email::MultiSendmail' to be able to use the outbound email profiles managed here."
-msgstr ""
-"A „SendmailModule” beállítási lehetőséget „"
-"Kernel::System::Email::MultiSendmail” értékre kell állítani, hogy használni "
-"tudja az itt kezelt kimenő e-mail-profilokat."
+msgstr "A „SendmailModule” beállítási lehetőséget „Kernel::System::Email::MultiSendmail” értékre kell állítani, hogy használni tudja az itt kezelt kimenő e-mail-profilokat."
 
 #. XML Definition: Kernel/Config/Files/XML/Znuny.xml
 msgid "Names of system config options with email addresses to also be selectable for an outbound email profile (besides system addresses)."
-msgstr ""
-"E-mail-címekkel rendelkező rendszerbeállítási lehetőségek nevei, amelyek "
-"szintén kiválaszthatók egy kimenő e-mail-profilhoz (a rendszercímeken kívül)."
+msgstr "E-mail-címekkel rendelkező rendszerbeállítási lehetőségek nevei, amelyek szintén kiválaszthatók egy kimenő e-mail-profilhoz (a rendszercímeken kívül)."
 
 #. JS File: var/httpd/htdocs/js/Core.Agent.Admin.SendmailConfig.js
 msgid "Do you really want to delete this outbound email profile?"
@@ -25168,9 +25152,7 @@ msgstr "Nincs jogosultsága, vagy a jegy nem létezik."
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminGenericAgent.tt
 msgid "Upload a file in YAML format (as provided by the export) to import generic agent jobs."
-msgstr ""
-"Töltsön fel egy YAML formátumú fájlt (az exportálás által megadott formában) "
-"az általános ügyintéző feladatok importálásához."
+msgstr "Töltsön fel egy YAML formátumú fájlt (az exportálás által megadott formában) az általános ügyintéző feladatok importálásához."
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminGenericAgent.tt
 msgid "Overwrite existing generic agents?"
@@ -25178,9 +25160,7 @@ msgstr "Felülírja a meglévő általános ügyintézőket?"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminPostMasterFilter.tt
 msgid "Upload a file in YAML format (as provided by the export) to import postmaster filters."
-msgstr ""
-"Töltsön fel egy YAML formátumú fájlt (az exportálás által megadott formában) "
-"a levelezési szűrők importálásához."
+msgstr "Töltsön fel egy YAML formátumú fájlt (az exportálás által megadott formában) a levelezési szűrők importálásához."
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminPostMasterFilter.tt
 msgid "Overwrite existing postmaster filters?"
@@ -25196,19 +25176,15 @@ msgstr "Hiba az általános ügyintéző feladat létrehozásakor."
 
 #. Perl Module: Kernel/Modules/AdminGenericAgent.pm
 msgid "Jobs could not be imported due to an unknown error. Please check logs for more information."
-msgstr ""
-"A feladatokat nem sikerült importálni egy ismeretlen hiba miatt. További "
-"információkért nézze meg a naplókat."
+msgstr "A feladatokat nem sikerült importálni egy ismeretlen hiba miatt. További információkért nézze meg a naplókat."
 
 #. Perl Module: Kernel/Modules/AdminGenericAgent.pm
 msgid "The following generic agent jobs have been added successfully: %s."
-msgstr ""
-"A következő általános ügyintéző feladatok sikeresen hozzá lettek adva: %s."
+msgstr "A következő általános ügyintéző feladatok sikeresen hozzá lettek adva: %s."
 
 #. Perl Module: Kernel/Modules/AdminGenericAgent.pm
 msgid "The following generic agent jobs have been updated successfully: %s."
-msgstr ""
-"A következő általános ügyintéző feladatok sikeresen frissítve lettek: %s."
+msgstr "A következő általános ügyintéző feladatok sikeresen frissítve lettek: %s."
 
 #. Perl Module: Kernel/Modules/AdminGenericAgent.pm
 msgid "The following generic agent jobs were not updated: %s."
@@ -25216,9 +25192,7 @@ msgstr "A következő általános ügyintéző feladatok nem lettek frissítve: 
 
 #. Perl Module: Kernel/Modules/AdminGenericAgent.pm
 msgid "Errors adding/updating the following generic agent jobs: %s. Please check logs for more information."
-msgstr ""
-"Hibák történtek a következő általános ügyintéző feladatok hozzáadásakor vagy "
-"frissítésekor: %s. További információkért nézze meg a naplókat."
+msgstr "Hibák történtek a következő általános ügyintéző feladatok hozzáadásakor vagy frissítésekor: %s. További információkért nézze meg a naplókat."
 
 #. Perl Module: Kernel/Modules/AdminPostMasterFilter.pm
 msgid "Error exporting postmaster filter with Name %s!"
@@ -25230,9 +25204,7 @@ msgstr "Hiba a levelezési szűrő létrehozásakor."
 
 #. Perl Module: Kernel/Modules/AdminPostMasterFilter.pm
 msgid "Filters could not be imported due to an unknown error. Please check logs for more information."
-msgstr ""
-"A szűrőket nem sikerült importálni egy ismeretlen hiba miatt. További "
-"információkért nézze meg a naplókat."
+msgstr "A szűrőket nem sikerült importálni egy ismeretlen hiba miatt. További információkért nézze meg a naplókat."
 
 #. Perl Module: Kernel/Modules/AdminPostMasterFilter.pm
 msgid "The following postmaster filters have been added successfully: %s."
@@ -25248,21 +25220,15 @@ msgstr "A következő levelezési szűrők nem lettek frissítve: %s."
 
 #. Perl Module: Kernel/Modules/AdminPostMasterFilter.pm
 msgid "Errors adding/updating the following postmaster filters: %s. Please check logs for more information."
-msgstr ""
-"Hibák történtek a következő levelezési szűrők hozzáadásakor vagy "
-"frissítésekor: %s. További információkért nézze meg a naplókat."
+msgstr "Hibák történtek a következő levelezési szűrők hozzáadásakor vagy frissítésekor: %s. További információkért nézze meg a naplókat."
 
 #. Perl Module: Kernel/System/GenericAgent.pm
 msgid "Couldn't read Job configuration YAML file. Please make sure the file is valid."
-msgstr ""
-"Nem sikerült beolvasni a feladat beállítási YAML-fájlját. Győződjön meg "
-"arról, hogy a fájl érvényes-e."
+msgstr "Nem sikerült beolvasni a feladat beállítási YAML-fájlját. Győződjön meg arról, hogy a fájl érvényes-e."
 
 #. Perl Module: Kernel/System/PostMaster/Filter.pm
 msgid "Couldn't read Filter configuration YAML file. Please make sure the file is valid."
-msgstr ""
-"Nem sikerült beolvasni a szűrő beállítási YAML-fájlját. Győződjön meg arról, "
-"hogy a fájl érvényes-e."
+msgstr "Nem sikerült beolvasni a szűrő beállítási YAML-fájlját. Győződjön meg arról, hogy a fájl érvényes-e."
 
 #. XML Definition: Kernel/Config/Files/XML/Ticket.xml
 msgid "Sets the customer user field in the agent interface."
@@ -25274,9 +25240,7 @@ msgstr "Beállítja az ügyfél-felhasználó mezőt kötelezőként."
 
 #. XML Definition: Kernel/Config/Files/XML/Znuny.xml
 msgid "Maximum number of activities to keep per user. Older ones will be deleted."
-msgstr ""
-"Felhasználónként megtartandó tevékenységek legnagyobb száma. A régebbiek "
-"törlésre kerülnek."
+msgstr "Felhasználónként megtartandó tevékenységek legnagyobb száma. A régebbiek törlésre kerülnek."
 
 #. JS File: var/httpd/htdocs/js/Core.Activity.js
 msgid "Could not load activities."
@@ -25284,10 +25248,7 @@ msgstr "Nem sikerült betölteni a tevékenységeket."
 
 #. XML Definition: Kernel/Config/Files/XML/Framework.xml
 msgid "Default template for notification e-mails (see Kernel/Output/HTML/Templates/Standard/NotificationEvent/Email directory for available templates)."
-msgstr ""
-"Alapértelmezett sablon az értesítési e-mailekhez (nézze meg a „Kernel/Output/"
-"HTML/Templates/Standard/NotificationEvent/Email” könyvtárat az elérhető "
-"sablonokért)."
+msgstr "Alapértelmezett sablon az értesítési e-mailekhez (nézze meg a „Kernel/Output/HTML/Templates/Standard/NotificationEvent/Email” könyvtárat az elérhető sablonokért)."
 
 #. Perl Module: Kernel/Modules/AJAXAttachment.pm
 msgid "%s is missing. The file could not be deleted properly."
@@ -25303,9 +25264,7 @@ msgstr "További információként megjelenítve az oldalsávon."
 
 #. XML Definition: Kernel/Config/Files/XML/Ticket.xml
 msgid "TicketActionCommon widget that displays the current action description."
-msgstr ""
-"Közös jegyművelet felületi elem, amely megjeleníti az aktuális művelet "
-"leírását."
+msgstr "Közös jegyművelet felületi elem, amely megjeleníti az aktuális művelet leírását."
 
 #. XML Definition: Kernel/Config/Files/XML/Ticket.xml
 msgid "TicketActionCommon widget that displays ticket information."
@@ -25313,8 +25272,7 @@ msgstr "Közös jegyművelet felületi elem, amely megjeleníti a jegyinformáci
 
 #. XML Definition: Kernel/Config/Files/XML/Ticket.xml
 msgid "TicketActionCommon widget that displays customer information."
-msgstr ""
-"Közös jegyművelet felületi elem, amely megjeleníti az ügyfél-információkat."
+msgstr "Közös jegyművelet felületi elem, amely megjeleníti az ügyfél-információkat."
 
 #. XML Definition: Kernel/Config/Files/XML/Ticket.xml
 msgid "Sets the state of a ticket in screen of the agent interface."
@@ -25342,39 +25300,27 @@ msgstr "Ügyintézői munkamenet."
 
 #. XML Definition: Kernel/Config/Files/XML/Znuny.xml
 msgid "List of session (keys) that are allowed to be updated by UpdateAJAX subaction of frontend module AgentSession. These are regular expressions."
-msgstr ""
-"Azon munkamenetek (kulcsok) listája, amelyeknél engedélyezett, hogy az "
-"ügyintéző munkamenetei előtétprogram-modul UpdateAJAX alművelete frissítse "
-"azokat. Ezek reguláris kifejezések."
+msgstr "Azon munkamenetek (kulcsok) listája, amelyeknél engedélyezett, hogy az ügyintéző munkamenetei előtétprogram-modul UpdateAJAX alművelete frissítse azokat. Ezek reguláris kifejezések."
 
 #. XML Definition: Kernel/Config/Files/XML/Ticket.xml
 msgid "Defines which article attributes TicketGeneric dashboard widgets are allowed to request when building additional columns."
-msgstr ""
-"Meghatározza, hogy a jegy általános vezérlőpult felületi elemei milyen "
-"bejegyzésattribútumokat kérhetnek a további oszlopok összeállításakor."
+msgstr "Meghatározza, hogy a jegy általános vezérlőpult felületi elemei milyen bejegyzésattribútumokat kérhetnek a további oszlopok összeállításakor."
 
 #. XML Definition: Kernel/Config/Files/XML/Ticket.xml
 msgid "Shows the ticket type selection (Ticket::Type needs to be activated)."
-msgstr ""
-"Megjeleníti a jegy típusának kiválasztását (a „Ticket::Type” beállításnak "
-"aktiválva kell lennie)."
+msgstr "Megjeleníti a jegy típusának kiválasztását (a „Ticket::Type” beállításnak aktiválva kell lennie)."
 
 #. XML Definition: Kernel/Config/Files/XML/Ticket.xml
 msgid "Shows the service selection (Ticket::Service needs to be activated)."
-msgstr ""
-"Megjeleníti a szolgáltatás kiválasztását (a „Ticket::Service” beállításnak "
-"aktiválva kell lennie)."
+msgstr "Megjeleníti a szolgáltatás kiválasztását (a „Ticket::Service” beállításnak aktiválva kell lennie)."
 
 #. XML Definition: Kernel/Config/Files/XML/Ticket.xml
 msgid "Enforces that the agent must select a service."
-msgstr ""
-"Kikényszeríti, hogy az ügyintézőnek ki kell választania egy szolgáltatást."
+msgstr "Kikényszeríti, hogy az ügyintézőnek ki kell választania egy szolgáltatást."
 
 #. XML Definition: Kernel/Config/Files/XML/Ticket.xml
 msgid "Enforces that the agent must select an SLA."
-msgstr ""
-"Kikényszeríti, hogy az ügyintézőnek ki kell választania egy szolgáltatási "
-"szintet."
+msgstr "Kikényszeríti, hogy az ügyintézőnek ki kell választania egy szolgáltatási szintet."
 
 #. XML Definition: Kernel/Config/Files/XML/Ticket.xml
 msgid "Shows the ticket priority selection."
@@ -25383,3 +25329,4 @@ msgstr "Megjeleníti a jegy prioritásának kiválasztását."
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketZoom.tt
 msgid "Toggle sidebar"
 msgstr "Oldalsáv ki- és bekapcsolása"
+

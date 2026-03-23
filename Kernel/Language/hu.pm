@@ -32,7 +32,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%m-%d';
     $Self->{DateInputFormat}     = '%Y-%m-%d';
     $Self->{DateInputFormatLong} = '%Y-%m-%d - %T';
-    $Self->{Completeness}        = 0.988180801788852;
+    $Self->{Completeness}        = 1;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -712,8 +712,8 @@ sub Data {
         'Filter for Jobs' => 'Szűrő a feladatokhoz',
         'Filter for jobs' => 'Szűrő a feladatokhoz',
         'Upload a file in YAML format (as provided by the export) to import generic agent jobs.' =>
-            '',
-        'Overwrite existing generic agents?' => '',
+            'Töltsön fel egy YAML formátumú fájlt (az exportálás által megadott formában) az általános ügyintéző feladatok importálásához.',
+        'Overwrite existing generic agents?' => 'Felülírja a meglévő általános ügyintézőket?',
         'Generic Agent Job Management' => 'Általános ügyintéző feladat kezelés',
         'Edit Job' => 'Feladat szerkesztése',
         'Run Job' => 'Feladat futtatása',
@@ -1504,7 +1504,7 @@ sub Data {
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminPGP.tt
         'PGP support is disabled' => 'A PGP támogatás le van tiltva',
         'To be able to use PGP in Znuny, you have to enable it first.' =>
-            'Hogy képes legyen PGP-t használni a Znuny-ban, ahhoz először engedélyeznie kell azt.',
+            'Hogy képes legyen PGP-t használni a Znunyban, ahhoz először engedélyeznie kell azt.',
         'Enable PGP support' => 'PGP támogatás engedélyezése',
         'Faulty PGP configuration' => 'Hibás PGP beállítás',
         'PGP support is enabled, but the relevant configuration contains errors. Please check the configuration using the button below.' =>
@@ -1539,11 +1539,11 @@ sub Data {
         'Package update requires a patch level update of Znuny.' => 'A csomagfrissítés a Znuny hibajavító szintű frissítését igényli.',
         'Please note that your installed Znuny version is %s.' => 'Ne feledje, hogy a telepített Znuny verziója %s.',
         'To install this package, you need to update Znuny to version %s or newer.' =>
-            'A csomag telepítéséhez frissítenie kell a Znuny-t %s vagy újabb verzióra.',
+            'A csomag telepítéséhez frissítenie kell a Znunyt %s vagy újabb verzióra.',
         'This package can only be installed on Znuny version %s or older.' =>
             'Ez a csomag csak a Znuny %s vagy régebbi verziójára telepíthető.',
         'This package can only be installed on Znuny version %s.' => 'Ez a csomag csak a Znuny %s verziójára telepíthető.',
-        'Why should I keep Znuny up to date?' => 'Miért kell naprakészen tartanom a Znuny-t?',
+        'Why should I keep Znuny up to date?' => 'Miért kell naprakészen tartanom a Znunyt?',
         'You will receive updates about relevant security issues.' => 'Frissítéseket fog kapni a fontos biztonsági problémákról.',
         'You will receive updates for all other relevant Znuny issues.' =>
             'Frissítéseket fog kapni minden egyéb fontos Znuny problémáról.',
@@ -1624,8 +1624,8 @@ sub Data {
         'Filter for PostMaster Filters' => 'Szűrő a levelezési szűrőkhöz',
         'Filter for PostMaster filters' => 'Szűrő a levelezési szűrőkhöz',
         'Upload a file in YAML format (as provided by the export) to import postmaster filters.' =>
-            '',
-        'Overwrite existing postmaster filters?' => '',
+            'Töltsön fel egy YAML formátumú fájlt (az exportálás által megadott formában) a levelezési szűrők importálásához.',
+        'Overwrite existing postmaster filters?' => 'Felülírja a meglévő levelezési szűrőket?',
         'To dispatch or filter incoming emails based on email headers. Matching using Regular Expressions is also possible.' =>
             'Az e-mail fejléceken alapuló bejövő e-mailek kézbesítéséhez vagy szűréséhez. A reguláris kifejezések használatával való illesztés szintén lehetséges.',
         'If you want to match only the email address, use EMAILADDRESS:info@example.com in From, To or Cc.' =>
@@ -1947,7 +1947,7 @@ sub Data {
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminSMIME.tt
         'SMIME support is disabled' => 'Az S/MIME támogatás le van tiltva',
         'To be able to use SMIME in Znuny, you have to enable it first.' =>
-            'Hogy képes legyen S/MIME-t használni a Znuny-ban, ahhoz először engedélyeznie kell azt.',
+            'Hogy képes legyen S/MIME-t használni a Znunyban, ahhoz először engedélyeznie kell azt.',
         'Enable SMIME support' => 'S/MIME támogatás engedélyezése',
         'Faulty SMIME configuration' => 'Hibás S/MIME beállítás',
         'SMIME support is enabled, but the relevant configuration contains errors. Please check the configuration using the button below.' =>
@@ -2023,26 +2023,26 @@ sub Data {
         'Query is executed.' => 'Lekérdezés végrehajtva.',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminSendmailConfig.tt
-        'Add Outbound Email Profile' => '',
-        'Filter for outbound email profiles' => '',
-        'Manage Outbound Email Profiles' => '',
-        'Update Outbound Email Profile' => '',
-        'Email addresses' => '',
-        'Fallback' => '',
-        'Email addresses have to be configured!' => '',
+        'Add Outbound Email Profile' => 'Kimenő e-mail-profil hozzáadása',
+        'Filter for outbound email profiles' => 'Szűrő a kimenő e-mail-profilokhoz',
+        'Manage Outbound Email Profiles' => 'Kimenő e-mail-profilok kezelése',
+        'Update Outbound Email Profile' => 'Kimenő e-mail-profil frissítése',
+        'Email addresses' => 'E-mail-címek',
+        'Fallback' => 'Tartalék',
+        'Email addresses have to be configured!' => 'Az e-mail-címeket be kell állítani!',
         'yes' => 'igen',
         'no' => 'nem',
-        'Delete outbound email profile' => '',
-        'Command' => '',
+        'Delete outbound email profile' => 'Kimenő e-mail-profil törlése',
+        'Command' => 'Parancs',
         'Port' => 'Port',
-        'Enter a number between 1 and 65535.' => '',
-        'Port to use for given host (if non-standard port).' => '',
-        'Enter a number between 1 and 999.' => '',
-        'Timeout (in seconds) for connection to host.' => '',
-        'Skip SSL verification' => '',
+        'Enter a number between 1 and 65535.' => 'Adjon meg egy 1 és 65535 közötti számot.',
+        'Port to use for given host (if non-standard port).' => 'A megadott géphez használandó port (ha nem szabványos port).',
+        'Enter a number between 1 and 999.' => 'Adjon meg egy 1 és 999 közötti számot.',
+        'Timeout (in seconds) for connection to host.' => 'Időkorlát (másodpercben) a géphez való kapcsolódáshoz.',
+        'Skip SSL verification' => 'SSL-ellenőrzés kihagyása',
         'Select to make this the fallback/default config for any email address not configured in other outbound email profiles. Only one outbound email profile can be the fallback.' =>
-            '',
-        'Edit current fallback outbound email profile (host %s).' => '',
+            'Válassza ki, hogy ez legyen a tartalék vagy alapértelmezett beállítás minden olyan e-mail-címnél, amely nincs beállítva más kimenő e-mail-profilban. Csak egy kimenő e-mail-profil lehet a tartalék.',
+        'Edit current fallback outbound email profile (host %s).' => 'A jelenlegi tartalék kimenő e-mail-profil szerkesztése (gazdagép: %s).',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminService.tt
         'Add Service' => 'Szolgáltatás hozzáadása',
@@ -2648,7 +2648,7 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketActionCommon.tt
         'The ticket has been locked' => 'A jegy zárolva lett',
-        'Unlock and close popup' => '',
+        'Unlock and close popup' => 'Feloldás és felugró ablak bezárása',
         'Customer user' => 'Ügyfél-felhasználó',
         'Service invalid.' => 'Érvénytelen szolgáltatás.',
         'Team Data' => 'Csapatadatok',
@@ -2710,10 +2710,10 @@ sub Data {
         'Please remove this entry and enter a new one with the correct value.' =>
             'Távolítsa el ezt a bejegyzést, és adjon meg egy újat a helyes értékkel.',
         'This address already exists on the address list.' => 'Ez a cím már létezik a címlistában.',
-        'Search for customer' => '',
-        'Open address book' => '',
-        'Address book' => '',
-        'Customer suggestions' => '',
+        'Search for customer' => 'Ügyfél keresése',
+        'Open address book' => 'Címjegyzék megnyitása',
+        'Address book' => 'Címjegyzék',
+        'Customer suggestions' => 'Ügyféljavaslatok',
         'Please include at least one recipient' => 'Vegyen fel legalább egy címzettet',
         'This address is registered as system address and cannot be used: %s' =>
             'Ez a cím rendszercímként van regisztrálva és nem használható: %s',
@@ -2743,12 +2743,12 @@ sub Data {
         'Remove Bcc' => 'Rejtett másolat eltávolítása',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
-        'Ticket %s: first response time is over (%s %s)!' => '%s jegy: az első válaszidő lejárt (%s/%s)!',
-        'Ticket %s: first response time will be over in %s %s!' => '%s jegy: az első válaszidő le fog járni: %s/%s!',
-        'Ticket %s: update time is over (%s %s)!' => '%s jegy: a frissítés ideje lejárt (%s/%s)!',
-        'Ticket %s: update time will be over in %s %s!' => '%s jegy: a frissítési idő le fog járni: %s/%s!',
-        'Ticket %s: solution time is over (%s %s)!' => '%s jegy: a megoldási idő lejárt (%s/%s)!',
-        'Ticket %s: solution time will be over in %s %s!' => '%s jegy: a megoldási idő le fog járni: %s/%s!',
+        'Ticket %s: first response time is over (%s %s)!' => '%s jegy: az első válaszidő lejárt (%s %s)!',
+        'Ticket %s: first response time will be over in %s %s!' => '%s jegy: az első válaszidő le fog járni: %s %s!',
+        'Ticket %s: update time is over (%s %s)!' => '%s jegy: a frissítés ideje lejárt (%s %s)!',
+        'Ticket %s: update time will be over in %s %s!' => '%s jegy: a frissítési idő le fog járni: %s %s!',
+        'Ticket %s: solution time is over (%s %s)!' => '%s jegy: a megoldási idő lejárt (%s %s)!',
+        'Ticket %s: solution time will be over in %s %s!' => '%s jegy: a megoldási idő le fog járni: %s %s!',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketHistory.tt
         'History of %s%s%s' => '%s%s%s előzményei',
@@ -2872,7 +2872,7 @@ sub Data {
         'There are no dialogs available at this point in the process.' =>
             'Nem érhetők el párbeszédablakok a folyamat ezen pontján.',
         'This item has no articles yet.' => 'Ennek az elemnek még nincsenek bejegyzései.',
-        'Toggle sidebar' => '',
+        'Toggle sidebar' => 'Oldalsáv ki- és bekapcsolása',
         'Drafts' => 'Piszkozatok',
         'by' => '–',
         'Article Overview - %s Article(s)' => 'Bejegyzés áttekintő – %s bejegyzés',
@@ -3138,8 +3138,8 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/InstallerDBStart.tt
         'Install Type' => 'Telepítés típusa',
-        'Create a new database for Znuny' => 'Új adatbázis létrehozása a Znuny-hoz',
-        'Use an existing database for Znuny' => 'Meglévő adatbázis használata a Znuny-hoz',
+        'Create a new database for Znuny' => 'Új adatbázis létrehozása a Znunyhoz',
+        'Use an existing database for Znuny' => 'Meglévő adatbázis használata a Znunyhoz',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/InstallerDBmssql.tt
         'If you have set a root password for your database, it must be entered here. If not, leave this field empty.' =>
@@ -3164,7 +3164,7 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/InstallerFinish.tt
         'To be able to use Znuny you have to enter the following line in your command line (Terminal/Shell) as root.' =>
-            'Ahhoz, hogy a Znuny-t használni tudja, a következő parancsot kell begépelnie a parancssorban (terminálban/parancsértelmezőben) rendszergazdaként.',
+            'Ahhoz, hogy a Znunyt használni tudja, a következő parancsot kell begépelnie a parancssorban (terminálban/parancsértelmezőben) rendszergazdaként.',
         'Restart your webserver' => 'Indítsa újra a webkiszolgálót',
         'After doing so your Znuny is up and running.' => 'Miután ezt megtette, a Znuny készen áll és fut.',
         'Start page' => 'Kezdőoldal',
@@ -3503,9 +3503,9 @@ sub Data {
             'Valóban vissza szeretné állítani ezt a beállítást az alapértelmezett értékére?',
 
         # JS Template: Kernel/Output/JavaScript/Templates/Standard/SysConfig/DirtyCheck.html.tmpl
-        'You have undeployed settings:' => '',
-        'Standard Deploy' => '',
-        'Quick Deploy' => '',
+        'You have undeployed settings:' => 'Üzembe nem állított beállításai vannak:',
+        'Standard Deploy' => 'Szabványos üzembe állítás',
+        'Quick Deploy' => 'Gyors üzembe állítás',
 
         # JS Template: Kernel/Output/JavaScript/Templates/Standard/SysConfig/HelpDialog.html.tmpl
         'You can use the category selection to limit the navigation tree below to entries from the selected category. As soon as you select the category, the tree will be re-built.' =>
@@ -3530,7 +3530,7 @@ sub Data {
         '%s is missing. The file could not be downloaded properly.' => 'A(z) %s hiányzik. A fájlt nem sikerült megfelelően letölteni.',
         'Please contact the administrator.' => 'Vegye fel a kapcsolatot a rendszergazdával.',
         '%s is missing. The file could not be previewed properly.' => 'A(z) %s hiányzik. A fájl előnézetét nem sikerült megfelelően megjeleníteni.',
-        '%s is missing. The file could not be deleted properly.' => '',
+        '%s is missing. The file could not be deleted properly.' => 'A(z) %s hiányzik. A fájlt nem sikerült megfelelően törölni.',
 
         # Perl Module: Kernel/Modules/AdminACL.pm
         'ACL information from database is not in sync with the system configuration, please deploy all ACLs.' =>
@@ -3732,17 +3732,17 @@ sub Data {
         'Select at least one recipient.' => 'Válasszon legalább egy címzettet.',
 
         # Perl Module: Kernel/Modules/AdminGenericAgent.pm
-        'Error exporting generic agent job with Name %s!' => '',
-        'Error creating the generic agent job.' => '',
+        'Error exporting generic agent job with Name %s!' => 'Hiba a(z) %s nevű általános ügyintéző feladat exportálásakor!',
+        'Error creating the generic agent job.' => 'Hiba az általános ügyintéző feladat létrehozásakor.',
         'Jobs could not be imported due to an unknown error. Please check logs for more information.' =>
-            '',
+            'A feladatokat nem sikerült importálni egy ismeretlen hiba miatt. További információkért nézze meg a naplókat.',
         'The following generic agent jobs have been added successfully: %s.' =>
-            '',
+            'A következő általános ügyintéző feladatok sikeresen hozzá lettek adva: %s.',
         'The following generic agent jobs have been updated successfully: %s.' =>
-            '',
-        'The following generic agent jobs were not updated: %s.' => '',
+            'A következő általános ügyintéző feladatok sikeresen frissítve lettek: %s.',
+        'The following generic agent jobs were not updated: %s.' => 'A következő általános ügyintéző feladatok nem lettek frissítve: %s.',
         'Errors adding/updating the following generic agent jobs: %s. Please check logs for more information.' =>
-            '',
+            'Hibák történtek a következő általános ügyintéző feladatok hozzáadásakor vagy frissítésekor: %s. További információkért nézze meg a naplókat.',
         'minute(s)' => 'perc',
         'hour(s)' => 'óra',
         'Time unit' => 'Időegység',
@@ -3974,17 +3974,17 @@ sub Data {
 
         # Perl Module: Kernel/Modules/AdminPostMasterFilter.pm
         'No such filter: %s' => 'Nincs ilyen szűrő: %s',
-        'Error exporting postmaster filter with Name %s!' => '',
-        'Error creating the postmaster filter.' => '',
+        'Error exporting postmaster filter with Name %s!' => 'Hiba a(z) %s nevű levelezési szűrő exportálásakor!',
+        'Error creating the postmaster filter.' => 'Hiba a levelezési szűrő létrehozásakor.',
         'Filters could not be imported due to an unknown error. Please check logs for more information.' =>
-            '',
+            'A szűrőket nem sikerült importálni egy ismeretlen hiba miatt. További információkért nézze meg a naplókat.',
         'The following postmaster filters have been added successfully: %s.' =>
-            '',
+            'A következő levelezési szűrők sikeresen hozzá lettek adva: %s.',
         'The following postmaster filters have been updated successfully: %s.' =>
-            '',
-        'The following postmaster filters were not updated: %s.' => '',
+            'A következő levelezési szűrők sikeresen frissítve lettek: %s.',
+        'The following postmaster filters were not updated: %s.' => 'A következő levelezési szűrők nem lettek frissítve: %s.',
         'Errors adding/updating the following postmaster filters: %s. Please check logs for more information.' =>
-            '',
+            'Hibák történtek a következő levelezési szűrők hozzáadásakor vagy frissítésekor: %s. További információkért nézze meg a naplókat.',
 
         # Perl Module: Kernel/Modules/AdminPriority.pm
         'Priority added!' => 'Prioritás hozzáadva!',
@@ -4136,9 +4136,9 @@ sub Data {
             'Hibák történtek a következő megszólítások hozzáadásakor vagy frissítésekor: %s. További információkért nézze meg a naplókat.',
 
         # Perl Module: Kernel/Modules/AdminSendmailConfig.pm
-        'Outbound email profile updated!' => '',
+        'Outbound email profile updated!' => 'Kimenő e-mail-profil frissítve!',
         'Configuration option \'SendmailModule\' has to be set to \'Kernel::System::Email::MultiSendmail\' to be able to use the outbound email profiles managed here.' =>
-            '',
+            'A „SendmailModule” beállítási lehetőséget „Kernel::System::Email::MultiSendmail” értékre kell állítani, hogy használni tudja az itt kezelt kimenő e-mail-profilokat.',
 
         # Perl Module: Kernel/Modules/AdminSignature.pm
         'Signature updated!' => 'Aláírás frissítve!',
@@ -4174,7 +4174,7 @@ sub Data {
         'Category Search' => 'Kategóriakeresés',
 
         # Perl Module: Kernel/Modules/AdminSystemConfigurationDeployment.pm
-        'Quick Deploy by' => '',
+        'Quick Deploy by' => 'A gyors üzembe állítás elvégzője',
         'Some imported settings are not present in the current state of the configuration or it was not possible to update them. Please check the Znuny log for more information.' =>
             'Néhány importált beállítás nincs jelen a konfiguráció jelenlegi állapotában, vagy nem volt lehetséges frissíteni azokat. További információkért nézze meg a Znuny naplóját.',
 
@@ -4566,7 +4566,7 @@ sub Data {
         'Need CustomerID!' => 'Ügyfél-azonosító szükséges!',
         'My Tickets' => 'Saját jegyek',
         'Company Tickets' => 'Vállalati jegyek',
-        'You have no permission or the ticket does not exist.' => '',
+        'You have no permission or the ticket does not exist.' => 'Nincs jogosultsága, vagy a jegy nem létezik.',
         'Untitled!' => 'Névtelen!',
 
         # Perl Module: Kernel/Modules/CustomerTicketSearch.pm
@@ -5052,7 +5052,7 @@ sub Data {
 
         # Perl Module: Kernel/System/GenericAgent.pm
         'Couldn\'t read Job configuration YAML file. Please make sure the file is valid.' =>
-            '',
+            'Nem sikerült beolvasni a feladat beállítási YAML-fájlját. Győződjön meg arról, hogy a fájl érvényes-e.',
 
         # Perl Module: Kernel/System/MailQueue.pm
         'Error while validating Message data.' => 'Hiba az üzenet adatainak ellenőrzésekor.',
@@ -5080,7 +5080,7 @@ sub Data {
 
         # Perl Module: Kernel/System/PostMaster/Filter.pm
         'Couldn\'t read Filter configuration YAML file. Please make sure the file is valid.' =>
-            '',
+            'Nem sikerült beolvasni a szűrő beállítási YAML-fájlját. Győződjön meg arról, hogy a fájl érvényes-e.',
 
         # Perl Module: Kernel/System/ProcessManagement/DB/Process.pm
         'The process "%s" and all of its data has been imported successfully.' =>
@@ -5268,9 +5268,9 @@ sub Data {
 
         # Perl Module: Kernel/System/SupportDataCollector/Plugin/OS/DiskSpace.pm
         'Disk Usage' => 'Lemezhasználat',
-        'The partition where Znuny is located is almost full.' => 'A Znuny-t tartalmazó partíció majdnem betelt.',
+        'The partition where Znuny is located is almost full.' => 'A Znunyt tartalmazó partíció majdnem betelt.',
         'The partition where Znuny is located has no disk space problems.' =>
-            'A Znuny-t tartalmazó partíciónak nincs tárhely problémája.',
+            'A Znunyt tartalmazó partíciónak nincs tárhely problémája.',
 
         # Perl Module: Kernel/System/SupportDataCollector/Plugin/OS/DiskSpacePartitions.pm
         'Disk Partitions Usage' => 'Lemezpartíciók használata',
@@ -6308,7 +6308,7 @@ sub Data {
         'If enabled, the Znuny version tag will be removed from the Webinterface, the HTTP headers and the X-Headers of outgoing mails. NOTE: If you change this option, please make sure to delete the cache.' =>
             'Ha engedélyezve van, akkor a Znuny verziócímke el lesz távolítva a webes felületről, a HTTP fejlécekből és a kimenő levelek X-Headers bejegyzéseiből. Megjegyzés: ha megváltoztatja ezt a beállítást, akkor gondoskodjon a gyorsítótár törléséről is.',
         'Default template for notification e-mails (see Kernel/Output/HTML/Templates/Standard/NotificationEvent/Email directory for available templates).' =>
-            '',
+            'Alapértelmezett sablon az értesítési e-mailekhez (nézze meg a „Kernel/Output/HTML/Templates/Standard/NotificationEvent/Email” könyvtárat az elérhető sablonokért).',
         'If enabled, Znuny will deliver all CSS files in minified form.' =>
             'Ha engedélyezve van, akkor a Znuny minden CSS-fájlt minimalizált formában fog szállítani.',
         'If enabled, Znuny will deliver all JavaScript files in minified form.' =>
@@ -6777,7 +6777,7 @@ sub Data {
             'Meghatározza az alapértelmezett jegyattribútumot a jegyrendezéshez az ügyintézői felület megfigyelés nézetében.',
         'Defines the default ticket order in the watch view of the agent interface. Up: oldest on top. Down: latest on top.' =>
             'Meghatározza az alapértelmezett jegysorrendet az ügyintézői felület megfigyelés nézetében. Fel: legrégebbi felülre. Le: legutolsó felülre.',
-        'Displayed in the sidebar as additional information.' => '',
+        'Displayed in the sidebar as additional information.' => 'További információként megjelenítve az oldalsávon.',
         'Required permissions to use the ticket free text screen in the agent interface.' =>
             'A jegy szabad szöveg képernyő használatához szükséges jogosultságok az ügyintézői felületen.',
         'Defines if a ticket lock is required in the ticket free text screen of the agent interface (if the ticket isn\'t locked yet, the ticket gets locked and the current agent will be set automatically as its owner).' =>
@@ -6791,8 +6791,8 @@ sub Data {
         'Sets the queue in the ticket free text screen of a zoomed ticket in the agent interface.' =>
             'Beállítja a várólistát egy nagyított jegynek a jegy szabad szöveg képernyőjén az ügyintézői felületen.',
         'Sets if queue must be selected by the agent.' => 'Beállítja, hogy az ügyintézőnek ki kell választania a várólistát.',
-        'Sets the customer user field in the agent interface.' => '',
-        'Sets the customer user field as mandatory.' => '',
+        'Sets the customer user field in the agent interface.' => 'Beállítja az ügyfél-felhasználó mezőt az ügyintézői felületen.',
+        'Sets the customer user field as mandatory.' => 'Beállítja az ügyfél-felhasználó mezőt kötelezőként.',
         'Sets the ticket owner in the ticket free text screen of the agent interface.' =>
             'Beállítja a jegy tulajdonosát az ügyintézői felület jegy szabad szöveg képernyőjén.',
         'Sets if ticket owner must be selected by the agent.' => 'Beállítja, hogy az ügyintézőnek ki kell választania a jegy tulajdonosát.',
@@ -6833,10 +6833,10 @@ sub Data {
         'Defines the history comment for the ticket free text screen action, which gets used for ticket history.' =>
             'Meghatározza az előzmények megjegyzést a jegy szabad szöveg képernyő művelethez, amelyet a jegy előzményeinél szoktak használni.',
         'TicketActionCommon widget that displays the current action description.' =>
-            '',
-        'TicketActionCommon widget that displays ticket information.' => '',
+            'Közös jegyművelet felületi elem, amely megjeleníti az aktuális művelet leírását.',
+        'TicketActionCommon widget that displays ticket information.' => 'Közös jegyművelet felületi elem, amely megjeleníti a jegyinformációkat.',
         'TicketActionCommon widget that displays customer information.' =>
-            '',
+            'Közös jegyművelet felületi elem, amely megjeleníti az ügyfél-információkat.',
         'Required permissions to use the ticket phone outbound screen in the agent interface.' =>
             'A kimenő telefonhívás képernyő használatához szükséges jogosultságok az ügyintézői felületen.',
         'Defines if a ticket lock is required in the ticket phone outbound screen of the agent interface (if the ticket isn\'t locked yet, the ticket gets locked and the current agent will be set automatically as its owner).' =>
@@ -6848,7 +6848,7 @@ sub Data {
         'Defines the default note body text for phone tickets in the ticket phone outbound screen of the agent interface.' =>
             'Meghatározza a telefonos jegyek alapértelmezett jegyzet törzsét az ügyintézői felület kimenő telefonhívás képernyőjén.',
         'Sets the state of a ticket in screen of the agent interface.' =>
-            '',
+            'Beállítja egy jegy állapotát az ügyintézői felület képernyőjén.',
         'Defines the default ticket next state after adding a phone note in the ticket phone outbound screen of the agent interface.' =>
             'Meghatározza egy jegy alapértelmezett következő állapotát egy telefonos jegyzet hozzáadása után az ügyintézői felület kimenő telefonhívás képernyőjén.',
         'Next possible ticket states after adding a phone note in the ticket phone outbound screen of the agent interface.' =>
@@ -7274,12 +7274,12 @@ sub Data {
         'Allows to save current work as draft in the ticket forward screen of the agent interface.' =>
             'Lehetővé teszi az aktuális munka elmentését piszkozatként az ügyintézői felület jegytovábbítás képernyőjén.',
         'Shows the ticket type selection (Ticket::Type needs to be activated).' =>
-            '',
+            'Megjeleníti a jegy típusának kiválasztását (a „Ticket::Type” beállításnak aktiválva kell lennie).',
         'Shows the service selection (Ticket::Service needs to be activated).' =>
-            '',
-        'Enforces that the agent must select a service.' => '',
-        'Enforces that the agent must select an SLA.' => '',
-        'Shows the ticket priority selection.' => '',
+            'Megjeleníti a szolgáltatás kiválasztását (a „Ticket::Service” beállításnak aktiválva kell lennie).',
+        'Enforces that the agent must select a service.' => 'Kikényszeríti, hogy az ügyintézőnek ki kell választania egy szolgáltatást.',
+        'Enforces that the agent must select an SLA.' => 'Kikényszeríti, hogy az ügyintézőnek ki kell választania egy szolgáltatási szintet.',
+        'Shows the ticket priority selection.' => 'Megjeleníti a jegy prioritásának kiválasztását.',
         'Required permissions to use the email outbound screen in the agent interface.' =>
             'A kimenő e-mail képernyő használatához szükséges jogosultságok az ügyintézői felületen.',
         'Defines if a ticket lock is required in the email outbound screen of the agent interface (if the ticket isn\'t locked yet, the ticket gets locked and the current agent will be set automatically as its owner).' =>
@@ -7466,7 +7466,7 @@ sub Data {
         'Defines the separator between the agents real name and the given queue email address.' =>
             'Egy elválasztót határoz meg az ügyintézők valódi neve és a megadott várólista e-mail-címek között.',
         'Defines which article attributes TicketGeneric dashboard widgets are allowed to request when building additional columns.' =>
-            '',
+            'Meghatározza, hogy a jegy általános vezérlőpult felületi elemei milyen bejegyzésattribútumokat kérhetnek a további oszlopok összeállításakor.',
         'Parameters for the dashboard backend of the ticket pending reminder overview of the agent interface . "Limit" is the number of entries shown by default. "Group" is used to restrict the access to the plugin (e. g. Group: admin;group1;group2;). "Default" determines if the plugin is enabled by default or if the user needs to enable it manually. "CacheTTLLocal" is the cache time in minutes for the plugin. "Mandatory" determines if the plugin is always shown and can not be removed by agents. Note: Only Ticket attributes and Dynamic Fields (DynamicField_NameX) are allowed for DefaultColumns.' =>
             'Paraméterek az ügyintézői felület jegy emlékeztető függőben áttekintésének vezérlőpult háttérprogramjához. A „Limit” az alapértelmezetten megjelenített bejegyzések száma. A „Group” használható a hozzáférés korlátozásához a bővítményre (például Group: admin;csoport1;csoport2;). A „Default” azt határozza meg, hogy a bővítmény alapértelmezetten engedélyezve van, vagy hogy a felhasználónak kézzel kell engedélyeznie azt. A „CacheTTLLocal” a bővítmény gyorsítótár ideje percben. A „Mandatory” határozza meg, hogy a bővítmény mindig megjelenjen, és az ügyintézők ne tudják eltávolítani. Megjegyzés: csak jegyattribútumok és dinamikus mezők (DynamicField_NévX) engedélyezettek DefaultColumns értékeinél.',
         'Parameters for the dashboard backend of the ticket escalation overview of the agent interface . "Limit" is the number of entries shown by default. "Group" is used to restrict the access to the plugin (e. g. Group: admin;group1;group2;). "Default" determines if the plugin is enabled by default or if the user needs to enable it manually. "CacheTTLLocal" is the cache time in minutes for the plugin. "Mandatory" determines if the plugin is always shown and can not be removed by agents. Note: Only Ticket attributes and Dynamic Fields (DynamicField_NameX) are allowed for DefaultColumns.' =>
@@ -8046,7 +8046,7 @@ sub Data {
         'Defines the default ticket order in the ticket mention view of the agent interface. Up: oldest on top. Down: latest on top.' =>
             'Meghatározza az alapértelmezett jegysorrendet az ügyintézői felület jegyemlítés nézetében. Fel: legrégebbi felülre. Le: legutolsó felülre.',
         'Maximum number of activities to keep per user. Older ones will be deleted.' =>
-            '',
+            'Felhasználónként megtartandó tevékenységek legnagyobb száma. A régebbiek törlésre kerülnek.',
         'Assignment between event and type.' => 'Esemény és típus közötti hozzárendelés.',
         'Defines the link type for each activity.' => 'Meghatározza a hivatkozás típusát minden egyes tevékenységhez.',
         'List of colors in hexadecimal RGB which will be available for selection. Make sure the colors are dark enough so white text can be overlayed on them.' =>
@@ -8153,9 +8153,9 @@ sub Data {
         'Defines which ContentTypes are permitted for the attachment preview.' =>
             'Meghatározza, hogy mely tartalomtípusok engedélyezettek a melléklet előnézetéhez.',
         'Names of system config options with email addresses to also be selectable for an outbound email profile (besides system addresses).' =>
-            '',
+            'E-mail-címekkel rendelkező rendszerbeállítási lehetőségek nevei, amelyek szintén kiválaszthatók egy kimenő e-mail-profilhoz (a rendszercímeken kívül).',
         'List of session (keys) that are allowed to be updated by UpdateAJAX subaction of frontend module AgentSession. These are regular expressions.' =>
-            '',
+            'Azon munkamenetek (kulcsok) listája, amelyeknél engedélyezett, hogy az ügyintéző munkamenetei előtétprogram-modul UpdateAJAX alművelete frissítse azokat. Ezek reguláris kifejezések.',
 
         # XML Definition: scripts/database/initial_insert.xml
         'invalid-temporarily' => 'átmenetileg érvénytelen',
@@ -8277,7 +8277,7 @@ sub Data {
 
         # JS File: var/httpd/htdocs/js/Core.Activity.js
         'An error occurred' => 'Hiba történt',
-        'Could not load activities.' => '',
+        'Could not load activities.' => 'Nem sikerült betölteni a tevékenységeket.',
         'The activity could not be created. %s is needed.' => 'A tevékenységet nem sikerült létrehozni. %s szükséges.',
         'The activity could not be created.' => 'A tevékenységet nem sikerült létrehozni.',
         'The activity could not be updated.' => 'A tevékenységet nem sikerült frissíteni.',
@@ -8432,7 +8432,7 @@ sub Data {
         'Do you really want to delete this certificate?' => 'Valóban törölni szeretné ezt a tanúsítványt?',
 
         # JS File: var/httpd/htdocs/js/Core.Agent.Admin.SendmailConfig.js
-        'Do you really want to delete this outbound email profile?' => '',
+        'Do you really want to delete this outbound email profile?' => 'Valóban törölni szeretné ezt a kimenő e-mail-profilt?',
 
         # JS File: var/httpd/htdocs/js/Core.Agent.Admin.SupportDataCollector.js
         'Generating...' => 'Előállítás…',
@@ -8769,7 +8769,7 @@ Az Ön ügyfélszolgálati csapata
         'Agent Name' => 'Ügyintézőnév',
         'Agent Name + FromSeparator + System Address Display Name' => 'Ügyintézőnév + feladóelválasztó + rendszercím megjelenített neve',
         'Agent Preferences.' => 'Ügyintézői beállítások.',
-        'Agent Session.' => '',
+        'Agent Session.' => 'Ügyintézői munkamenet.',
         'Agent Statistics.' => 'Ügyintézői statisztikák.',
         'Agent User Search' => 'Ügyintézői felhasználó-keresés',
         'Agent User Search.' => 'Ügyintézői felhasználó-keresés.',
@@ -8908,10 +8908,10 @@ Az Ön ügyfélszolgálati csapata
         'Created ticket [%s] in "%s" with priority "%s" and state "%s".' =>
             'Egy jegy [%s] létrejött a(z) „%s” várólistában „%s” prioritással és „%s” állapottal.',
         'Creates a unit test file for this ticket and sends it to Znuny.' =>
-            'Létrehoz egy egységtesztfájlt ehhez a jegyhez, és elküldi a Znuny-nak.',
+            'Létrehoz egy egységtesztfájlt ehhez a jegyhez, és elküldi a Znunynak.',
         'Creates a unit test file for this ticket.' => 'Létrehoz egy egységtesztfájlt ehhez a jegyhez.',
         'Croatian' => 'Horvát',
-        'Current action description.' => '',
+        'Current action description.' => 'Jelenlegi művelet leírása.',
         'Customer Administration' => 'Ügyfél adminisztráció',
         'Customer Companies' => 'Ügyfél-vállalatok',
         'Customer IDs' => 'Ügyfél-azonosítók',
@@ -9115,7 +9115,7 @@ Az Ön ügyfélszolgálati csapata
         'Manage System Configuration Deployments.' => 'Rendszer-konfigurációs üzembe állítások kezelése.',
         'Manage different calendars.' => 'Különböző naptárak kezelése.',
         'Manage existing sessions.' => 'Meglévő munkamenetek kezelése.',
-        'Manage outbound email profiles.' => '',
+        'Manage outbound email profiles.' => 'Kimenő e-mail-profilok kezelése.',
         'Manage support data.' => 'Támogatási adatok kezelése.',
         'Manage system files.' => 'Rendszerfájlok kezelése.',
         'Manage tasks triggered by event or time based execution.' => 'Esemény vagy időalapú végrehajtás által aktivált feladatok kezelése.',
@@ -9171,7 +9171,7 @@ Az Ön ügyfélszolgálati csapata
         'Out Of Office' => 'Irodán kívül',
         'Out Of Office Time' => 'Irodán kívüli idő',
         'Out of Office users.' => 'Irodán kívüli felhasználók.',
-        'Outbound Email Profiles' => '',
+        'Outbound Email Profiles' => 'Kimenő e-mail-profilok',
         'Overview Escalated Tickets.' => 'Eszkalált jegyek áttekintője.',
         'Overview Refresh Time' => 'Áttekintő frissítési ideje',
         'Overview of all Tickets per assigned Queue.' => 'Az összes jegy áttekintője a hozzárendelt várólistánként.',
@@ -9376,7 +9376,7 @@ Az Ön ügyfélszolgálati csapata
         'Ticket Zoom.' => 'Jegynagyítás.',
         'Ticket bulk module.' => 'Jegy tömeges modul.',
         'Ticket creation' => 'Jegylétrehozás',
-        'Ticket information' => '',
+        'Ticket information' => 'Jegyinformációk',
         'Ticket limit per page for Ticket Overview "Medium".' => 'Oldalankénti jegykorlát a „Közepes” jegyáttekintéshez.',
         'Ticket limit per page for Ticket Overview "Preview".' => 'Oldalankénti jegykorlát az „Előnézet” jegyáttekintéshez.',
         'Ticket limit per page for Ticket Overview "Small".' => 'Oldalankénti jegykorlát a „Kis” jegyáttekintéshez.',
