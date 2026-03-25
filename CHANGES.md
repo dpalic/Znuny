@@ -80,6 +80,7 @@
  - 2025-10-02 Sector Nord AG: Fixed: Web Channel Actions. Thanks to @ArthurRitscher (Arthur Ritscher Sector Nord AG) [PR#717](https://github.com/znuny/Znuny/pull/717). Thanks for reporting to @MadsDane [#729](https://github.com/znuny/Znuny/issues/729).
  - 2025-10-01 Fixed: Improved error logging when fetching emails.
  - 2025-10-01 Fixed: RichTextEditor uses wrong Instance in Core.Agent.TicketAction.js.
+ - 2025-09-29 CVE-2025-59490: Fixed: XSS issue with unfiltered URL parameters given to backend.
  - 2025-09-29 Fixed: Source view for richtext editor has been deactivated in customer frontend due to possibility to inject arbitrary code.
  - 2025-09-25 Fixed: For security reasons, detailed error messages are now not shown anymore in the GUI.
  - 2025-09-25 Fixed: Queue selection in customer ticket dialog now cannot be set empty anymore.
