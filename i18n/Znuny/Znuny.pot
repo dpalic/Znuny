@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2026-03-06 20:49+0000\n"
+"POT-Creation-Date: 2026-03-17 13:41+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -8706,10 +8706,6 @@ msgstr ""
 msgid "An Error Occurred"
 msgstr ""
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/CustomerError.tt
-msgid "Traceback"
-msgstr ""
-
 #. TT Template: Kernel/Output/HTML/Templates/Standard/CustomerFooter.tt
 msgid "Powered by %s"
 msgstr ""
@@ -8980,14 +8976,6 @@ msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/DashboardEventsTicketCalendar.tt
 msgid "Ticket fields"
-msgstr ""
-
-#. TT Template: Kernel/Output/HTML/Templates/Standard/Error.tt
-msgid "Error Details"
-msgstr ""
-
-#. TT Template: Kernel/Output/HTML/Templates/Standard/Error.tt
-msgid "Expand"
 msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/FormElements/AttachmentList.tt

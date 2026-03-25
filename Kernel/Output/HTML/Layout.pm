@@ -1101,21 +1101,9 @@ sub Error {
         }
     }
 
-    if ( !$Param{Message} ) {
-        $Param{Message} = $Param{BackendMessage};
-    }
-
-    if ( $Param{BackendTraceback} ) {
-        $Self->Block(
-            Name => 'ShowBackendTraceback',
-            Data => \%Param,
-        );
-    }
-
     # create & return output
     return $Self->Output(
         TemplateFile => 'Error',
-        Data         => \%Param
     );
 }
 

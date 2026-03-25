@@ -81,6 +81,7 @@
  - 2025-10-01 Fixed: Improved error logging when fetching emails.
  - 2025-10-01 Fixed: RichTextEditor uses wrong Instance in Core.Agent.TicketAction.js.
  - 2025-09-29 Fixed: Source view for richtext editor has been deactivated in customer frontend due to possibility to inject arbitrary code.
+ - 2025-09-25 Fixed: For security reasons, detailed error messages are now not shown anymore in the GUI.
  - 2025-09-25 Fixed: Queue selection in customer ticket dialog now cannot be set empty anymore.
  - 2025-09-25 Sector Nord AG: Fixed misplaced attachment tooltip. Thanks to @LuBroering (Lukas Bröring Sector Nord AG) [PR#692](https://github.com/znuny/Znuny/pull/692).
  - 2025-09-25 SectorNord AG: Fixed: Problem filtering by Owner in the ticket view. Thanks for reporting to @giovanna-bolsoni [#698](https://github.com/znuny/Znuny/issues/698). Thanks to @LuBroering (Lukas Bröring Sector Nord AG) [PR#703](https://github.com/znuny/Znuny/pull/703).

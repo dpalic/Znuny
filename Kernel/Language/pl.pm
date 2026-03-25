@@ -30,7 +30,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%m-%d';
     $Self->{DateInputFormat}     = '%Y-%m-%d';
     $Self->{DateInputFormatLong} = '%Y-%m-%d - %T';
-    $Self->{Completeness}        = 0.635840919980834;
+    $Self->{Completeness}        = 0.635666347075743;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2950,7 +2950,6 @@ sub Data {
         # TT Template: Kernel/Output/HTML/Templates/Standard/CustomerError.tt
         'Error' => 'Błąd',
         'An Error Occurred' => 'Wystąpił błąd',
-        'Traceback' => 'Śledź wstecz',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/CustomerFooter.tt
         'Powered by %s' => '',
@@ -3050,10 +3049,6 @@ sub Data {
         # TT Template: Kernel/Output/HTML/Templates/Standard/DashboardEventsTicketCalendar.tt
         'Event Information' => 'Informacje o zdarzeniach',
         'Ticket fields' => 'Pola zgłoszenia',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/Error.tt
-        'Error Details' => 'Szczegóły błędu',
-        'Expand' => 'Rozwiń',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/FormElements/AttachmentList.tt
         'Preview' => '',
