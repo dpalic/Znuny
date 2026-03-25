@@ -2,6 +2,7 @@
  - 2026-03-20 Fixed: Misaligned column filter dropdowns in TableSmall views.
  - 2026-03-20 Fixed: Replaced EncodeInput() method in KS:Encode with safe version.
  - 2026-03-20 Fixed: Activities are not marked as seen after clicking an activity entry.
+ - 2026-03-19 Fixed: Kernel::System::HTMLUtils::Safety can be bypassed by using leading zeroes in entities.
  - 2026-03-19 Fixed: Form submit not being triggered when pressing Enter after entering the new draft's title.
  - 2026-03-18 Fixed: Misleading popup message when opening more than one ticket from overviews by using a shortcut to open it in a new tab/window.
  - 2026-03-18 Fixed: Issue with invisible ticket pagination count when there is only one page.
