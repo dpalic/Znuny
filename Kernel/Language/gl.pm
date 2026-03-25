@@ -27,7 +27,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d/%m/%Y';
     $Self->{DateInputFormat}     = '%d/%m/%Y';
     $Self->{DateInputFormatLong} = '%d/%m/%Y - %T';
-    $Self->{Completeness}        = 0.446788111217641;
+    $Self->{Completeness}        = 0.446716727911807;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -5720,6 +5720,8 @@ sub Data {
         'Defines the HTTP hostname for the support data collection with the public module \'PublicSupportDataCollector\' (e.g. used from the Znuny Daemon).' =>
             '',
         'Defines the timeout (in seconds, minimum is 20 seconds) for the support data collection with the public module \'PublicSupportDataCollector\' (e.g. used from the Znuny Daemon).' =>
+            '',
+        'When support data is collected via SupportDataCollector, certain SysConfig values marked with ValueType="Password" are automatically masked. This prevents passwords from appearing in plain text in the support data. This setting defines the settings that contain complex configuration hashes that should not be masked when generating the support data.' =>
             '',
         'Defines the type of protocol, used by the web server, to serve the application. If https protocol will be used instead of plain http, it must be specified here. Since this has no affect on the web server\'s settings or behavior, it will not change the method of access to the application and, if it is wrong, it will not prevent you from logging into the application. This setting is only used as a variable, OTRS_CONFIG_HttpType which is found in all forms of messaging used by the application, to build links to the tickets within your system.' =>
             'Define o tipo de protocolo, utilizado polo servidor web, para servir a aplicación. Se o protocolo de https é utilizado en lugar de http sinxelo, debe ser especificado aquí. Debido a  que isto non ten ningún efecto nos axustes ou comportamento do servidor web, non cambiará o método de acceso na aplicación e, se está equivocado, non lle impedirá que rexistrarse na aplicación. Este axuste é soamente utilizado como unha variable, OTRS_CONFIG_HttpType que é atopado en todas as formas de mensaxería utilizada pola aplicación, para construír enlaces aos tickets dentro do seu sistema.',

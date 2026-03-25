@@ -41,6 +41,7 @@
  - 2025-12-12 Fixed typo in '--regenerate' command option 'Dev/Tools/TranslationsUpdate'. Thanks to @urbalazs (Balázs Úr) [PR#751](https://github.com/znuny/Znuny/pull/751).
  - 2025-12-12 Sector Nord AG: ArticleRender - Added title to ArticleFields for MIMEBase. Thanks to @LuBroering (Lukas Bröring Sector Nord AG) [PR#577](https://github.com/znuny/Znuny/pull/577).
  - 2025-12-11 Added support for SAML authentication.
+ - 2025-12-10 CVE-2025-59393: Support bundle generator: Improved password masking in configuration dumps using ValueType metadata.
  - 2025-12-09 Fixed: Issue with cache being applied incorrectly to "My last changed tickets" widget.
  - 2025-12-09 Migration refactoring: Added new Component 'FollowUp'. Migration order: CheckPreviousRequirement, Run and FollowUp. Improved Steps for CheckPreviousRequirement. Removed empty CheckPreviousRequirement and Run functions.
  - 2025-12-09 Integrated package Znuny-AgentTicketActionCommonCustomer.

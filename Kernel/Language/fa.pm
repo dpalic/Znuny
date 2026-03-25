@@ -29,7 +29,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d.%m.%Y';
     $Self->{DateInputFormat}     = '%d.%m.%Y';
     $Self->{DateInputFormatLong} = '%d.%m.%Y - %T';
-    $Self->{Completeness}        = 0.593480345158197;
+    $Self->{Completeness}        = 0.593385524844224;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -5725,6 +5725,8 @@ sub Data {
         'Defines the HTTP hostname for the support data collection with the public module \'PublicSupportDataCollector\' (e.g. used from the Znuny Daemon).' =>
             'تعریف می کند نام میزبان HTTP برای جمع آوری داده ها پشتیبانی با ماژول عمومی PublicSupportDataCollector، (به عنوان مثال استفاده از Znuny شبح).',
         'Defines the timeout (in seconds, minimum is 20 seconds) for the support data collection with the public module \'PublicSupportDataCollector\' (e.g. used from the Znuny Daemon).' =>
+            '',
+        'When support data is collected via SupportDataCollector, certain SysConfig values marked with ValueType="Password" are automatically masked. This prevents passwords from appearing in plain text in the support data. This setting defines the settings that contain complex configuration hashes that should not be masked when generating the support data.' =>
             '',
         'Defines the type of protocol, used by the web server, to serve the application. If https protocol will be used instead of plain http, it must be specified here. Since this has no affect on the web server\'s settings or behavior, it will not change the method of access to the application and, if it is wrong, it will not prevent you from logging into the application. This setting is only used as a variable, OTRS_CONFIG_HttpType which is found in all forms of messaging used by the application, to build links to the tickets within your system.' =>
             'تعریف می کند نوع پروتکل مورد استفاده توسط وب سرور، برای خدمت به نرم افزار است. اگر پروتکل HTTPS به جای HTTP ساده استفاده می شود، در اینجا باید مشخص شود. از آنجا که این هیچ در تنظیمات و یا رفتار وب سرور تاثیر می گذارد، آن را به روش دسترسی به برنامه را تغییر دهید، و اگر آن اشتباه است، آن را به شما از ورود به نرم افزار جلوگیری نمی کند. این تنظیم فقط به عنوان یک متغیر، OTRS_CONFIG_HttpType است که در تمام اشکال پیام استفاده شده توسط برنامه پیدا شده است استفاده می شود، برای ساخت لینک به بلیط در سیستم خود را.',
