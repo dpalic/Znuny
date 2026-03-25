@@ -6599,8 +6599,8 @@ sub SetRichTextParameters {
             '-',
             'insertImage',         'horizontalLine', 'blockQuote',
             '|',                   'findAndReplace', 'fontColor',
-            'fontBackgroundColor', 'removeFormat',   '|',          'showBlocks', 'sourceEditing', 'specialCharacters',
-            '|',                   'heading',        'fontFamily', 'fontSize',   '|',             'fullscreen',
+            'fontBackgroundColor', 'removeFormat',   '|', 'showBlocks', 'specialCharacters',
+            '|',                   'heading',        'fontFamily', 'fontSize', '|', 'fullscreen',
         );
 
         @ToolbarWithoutImage = (
@@ -6611,8 +6611,8 @@ sub SetRichTextParameters {
             '-',
             'horizontalLine', 'blockQuote',
             '|',                   'findAndReplace', 'fontColor',
-            'fontBackgroundColor', 'removeFormat',   '|',          'showBlocks', 'sourceEditing', 'specialCharacters',
-            '|',                   'heading',        'fontFamily', 'fontSize',   '|',             'fullscreen',
+            'fontBackgroundColor', 'removeFormat',   '|', 'showBlocks', 'specialCharacters',
+            '|',                   'heading',        'fontFamily', 'fontSize', '|', 'fullscreen',
         );
     }
     else {
@@ -6625,10 +6625,10 @@ sub SetRichTextParameters {
             '|',               'undo',             'redo',              '|',
             'selectAll',
             '-',
-            'blockQuote',    '|',
-            'heading',       'fontFamily',          'fontSize',     '|',
-            'fontColor',     'fontBackgroundColor', 'removeFormat', '|',
-            'sourceEditing', 'specialCharacters',   '|',            'fullscreen',
+            'blockQuote',        '|',
+            'heading',           'fontFamily',          'fontSize',     '|',
+            'fontColor',         'fontBackgroundColor', 'removeFormat', '|',
+            'specialCharacters', '|',                   'fullscreen',
         );
         @ToolbarWithoutImage = (
             'bold',            'italic',           'underline',         'strikethrough',
@@ -6639,10 +6639,10 @@ sub SetRichTextParameters {
             '|',               'undo',             'redo', '|',
             'selectAll',
             '-',
-            'blockQuote',    '|',
-            'heading',       'fontFamily',          'fontSize',     '|',
-            'fontColor',     'fontBackgroundColor', 'removeFormat', '|',
-            'sourceEditing', 'specialCharacters',   '|',            'fullscreen',
+            'blockQuote',        '|',
+            'heading',           'fontFamily',          'fontSize',     '|',
+            'fontColor',         'fontBackgroundColor', 'removeFormat', '|',
+            'specialCharacters', '|',                   'fullscreen',
         );
     }
 
@@ -6761,8 +6761,8 @@ sub CustomerSetRichTextParameters {
             '-',
             'insertImage',         'horizontalLine', 'blockQuote',
             '|',                   'findAndReplace', 'fontColor',
-            'fontBackgroundColor', 'removeFormat',   '|',          'showBlocks', 'sourceEditing', 'specialCharacters',
-            '|',                   'heading',        'fontFamily', 'fontSize',   '|',             'fullscreen',
+            'fontBackgroundColor', 'removeFormat',   '|', 'showBlocks', 'specialCharacters',
+            '|',                   'heading',        'fontFamily', 'fontSize', '|', 'fullscreen',
         );
 
         @ToolbarWithoutImage = (
@@ -6773,8 +6773,8 @@ sub CustomerSetRichTextParameters {
             '-',
             'horizontalLine', 'blockQuote',
             '|',                   'findAndReplace', 'fontColor',
-            'fontBackgroundColor', 'removeFormat',   '|',          'showBlocks', 'sourceEditing', 'specialCharacters',
-            '|',                   'heading',        'fontFamily', 'fontSize',   '|',             'fullscreen',
+            'fontBackgroundColor', 'removeFormat',   '|', 'showBlocks', 'specialCharacters',
+            '|',                   'heading',        'fontFamily', 'fontSize', '|', 'fullscreen',
         );
     }
     else {
@@ -6787,10 +6787,10 @@ sub CustomerSetRichTextParameters {
             '|',               'undo',             'redo',              '|',
             'selectAll',
             '-',
-            'blockQuote',    '|',
-            'heading',       'fontFamily',          'fontSize',     '|',
-            'fontColor',     'fontBackgroundColor', 'removeFormat', '|',
-            'sourceEditing', 'specialCharacters',   '|',            'fullscreen',
+            'blockQuote',        '|',
+            'heading',           'fontFamily',          'fontSize',     '|',
+            'fontColor',         'fontBackgroundColor', 'removeFormat', '|',
+            'specialCharacters', '|',                   'fullscreen',
         );
         @ToolbarWithoutImage = (
             'bold',            'italic',           'underline',         'strikethrough',
@@ -6801,10 +6801,10 @@ sub CustomerSetRichTextParameters {
             '|',               'undo',             'redo', '|',
             'selectAll',
             '-',
-            'blockQuote',    '|',
-            'heading',       'fontFamily',          'fontSize',     '|',
-            'fontColor',     'fontBackgroundColor', 'removeFormat', '|',
-            'sourceEditing', 'specialCharacters',   '|',            'fullscreen',
+            'blockQuote',        '|',
+            'heading',           'fontFamily',          'fontSize',     '|',
+            'fontColor',         'fontBackgroundColor', 'removeFormat', '|',
+            'specialCharacters', '|',                   'fullscreen',
         );
     }
 
