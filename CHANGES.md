@@ -49,6 +49,7 @@
  - 2025-12-01 Integrated package Znuny-MultiSendmail.
  - 2025-11-28 Added new GUI-Redesign. Thanks to Tim Binder stbt.de.
  - 2025-11-26 Fixed: MariaDB/MySQL throwing error regarding foreign keys when converting character set of tables to UTF8MB4.
+ - 2025-11-25 CVE-2025-52204: Fixed XSS issue with session ID in URL parameter. Thanks to Miguel P. for reporting this issue.
  - 2025-11-25 AdminSystemConfiguration: Added "Quick Deploy" in SysConfig to apply pending changes faster.
  - 2025-11-21 Fixed: Wrong description text in personal preference. Thanks for reporting to @BuilderNSV. [#712](https://github.com/znuny/Znuny/issues/712).
  - 2025-11-21 Fixed: Resource module displays deactivated Agents.
