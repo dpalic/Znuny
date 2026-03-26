@@ -17,6 +17,7 @@ apt-get install -y libapache2-mod-perl2 \
   libmail-imapclient-perl libtemplate-perl libdatetime-perl \
   libmoo-perl liblocale-po-perl libhash-merge-perl \
   libxml2-utils libical-parser-perl libexpat1-dev \
+  libssl-dev libxml2-dev zlib1g-dev \
   apache2 gnupg2 mariadb-client cpanminus make gcc git npm gettext gnupg
 
 # Net::SAML2 (no Debian/Ubuntu package, install via CPAN)
