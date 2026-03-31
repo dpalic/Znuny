@@ -149,6 +149,9 @@ Core.Agent.TicketMerge = (function (TargetNS) {
             if ($WidgetElement.hasClass('Expanded') && !$('#InformSender').prop('checked')) {
                 $('#InformSender').trigger('click');
             }
+            else {
+                $('#InformSender').prop('checked', false);
+            }
         });
     };
 

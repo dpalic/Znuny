@@ -226,6 +226,7 @@ Core.Agent.TicketAction = (function (TargetNS) {
             if ($WidgetElement.attr('id') !== 'WidgetArticle') {
                 return;
             }
+
             // If widget is being expanded, activate checkbox to create article.
             if ($WidgetElement.hasClass('Expanded')) {
                 $('#CreateArticle').prop('checked', true);

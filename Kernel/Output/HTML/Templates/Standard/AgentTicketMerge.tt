@@ -74,7 +74,7 @@
                                     </div>
                                     <div class="cardCommunication col-12">
                                         <div class="mod modCard">
-                                            <div class="inner">
+                                            <div id="WidgetInformSender" class="inner Collapsed">
                                                 <div class="cardTitle">
                                                     <h2>[% Translate("Inform Sender") | html %]</h2>
                                                     <span class="cardTitleTrigger"></span>
