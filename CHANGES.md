@@ -1,4 +1,5 @@
 # 7.3.2 2026-??-??
+ - 2026-03-31 Fixed: Template selection in agent ticket details view (AgentTicketZoom) does not open when clicking "Reply" or "Reply All".
  - 2026-03-31 Changed: AgentTicketMerge: Card "Inform Sender" will initially be shown collapsed and disabled. Will be enabled automatically when user expands the card.
  - 2026-03-25 Fixed: AgentTicketOwnerView missing in dynamic field screen selection.
  - 2026-03-24 Fixed: iFrame elements reuse the same ID in CustomerTicketZoom.

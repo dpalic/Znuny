@@ -233,7 +233,11 @@ div.Headline .Flag {
     background-color: var(--background-tertiary-color);
 }
 
-
+/* Article Reply/Forward labels must receive clicks; Core.WidgetMenu.css sets
+   #ticketDetails .Actions > li > form > label { pointer-events: none } for the ticket header. */
+#ArticleItems .ItemActions .Actions > li > form > label {
+    pointer-events: auto;
+}
 
 @media only screen and (min-width: 0px) and (max-width: 1024px) {
 

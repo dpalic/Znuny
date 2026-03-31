@@ -1297,6 +1297,7 @@ Core.UI.InputFields = (function (TargetNS) {
                     $LabelObj = $('label[for="' + Core.App.EscapeSelector($SelectObj.attr('id')) + '"]');
                     if ($LabelObj.length > 0) {
                         $SearchObj.attr('aria-label', $LabelObj.text());
+                        $LabelObj.attr('for', SearchID);
                     }
                 }
 
