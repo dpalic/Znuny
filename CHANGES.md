@@ -1,4 +1,5 @@
 # 7.3.2 2026-??-??
+ - 2026-04-01 Fixed: Broken File list for non-installed packages. Thanks for reporting to @urbalazs (Balázs Úr) [#771](https://github.com/znuny/Znuny/issues/771).
  - 2026-03-31 Fixed: Template selection in agent ticket details view (AgentTicketZoom) does not open when clicking "Reply" or "Reply All".
  - 2026-03-31 Changed: AgentTicketMerge: Card "Inform Sender" will initially be shown collapsed and disabled. Will be enabled automatically when user expands the card.
  - 2026-03-25 Fixed: AgentTicketOwnerView missing in dynamic field screen selection.
