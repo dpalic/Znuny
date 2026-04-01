@@ -2,15 +2,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2023-03-23 09:27+0000\n"
-"PO-Revision-Date: 2025-12-10 12:00+0000\n"
-"Last-Translator: Denny Korsukéwitz <dennykorsukewitz@gmail.com>\n"
-"Language-Team: German <https://translations.znuny.org/projects/znuny/znuny/de/>\n"
+"PO-Revision-Date: 2026-04-01 21:51+0000\n"
+"Last-Translator: Weblate Admin <operations@znuny.com>\n"
+"Language-Team: German <https://translations.znuny.org/projects/znuny/znuny/"
+"de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.14.2\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminACL.tt
 msgid "Actions"
@@ -14286,7 +14287,7 @@ msgstr "Umgebungsvariablen"
 
 #. Perl Module: Kernel/System/SupportDataCollector/Plugin/Webserver/InternalWebRequest.pm
 msgid "Support Data Collection"
-msgstr "Supportdate-Sammlung"
+msgstr "Supportdaten-Sammlung"
 
 #. Perl Module: Kernel/System/SupportDataCollector/Plugin/Webserver/InternalWebRequest.pm
 msgid "Support data could not be collected from the web server."
@@ -24399,7 +24400,7 @@ msgstr "Für dieses dynamische Feld gibt es keine Konfiguration."
 
 #. SysConfig
 msgid "Dynamic fields administration"
-msgstr "Verwaltung dynamischer Felder"
+msgstr "dynamische Felder Administration"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminTranslation.tt
 msgid "Translation"
@@ -25344,4 +25345,3 @@ msgstr "Sidebar ein-/ausblenden"
 #. XML Definition: Kernel/Config/Files/XML/Framework.xml
 msgid "When support data is collected via SupportDataCollector, certain SysConfig values marked with ValueType=\"Password\" are automatically masked. This prevents passwords from appearing in plain text in the support data. This setting defines the settings that contain complex configuration hashes that should not be masked when generating the support data."
 msgstr "Wenn Support-Daten über den SupportDataCollector gesammelt werden, werden bestimmte SysConfig-Werte, die mit ValueType=\"Password\" gekennzeichnet sind, automatisch maskiert. Dadurch wird verhindert, dass Passwörter im Klartext in den Support-Daten erscheinen. Diese Einstellung definiert die Einstellungen, die komplexe Konfigurations-Hashes enthalten, die bei der Generierung der Support-Daten nicht maskiert werden sollten."
-
