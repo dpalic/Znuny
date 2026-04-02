@@ -1,4 +1,5 @@
 # 7.3.2 2026-??-??
+ - 2026-04-02 Fixed: StandardTemplates are not usable in AgentTicketEmailOutbound, AgentTicketPhoneOutbound and AgentTicketPhoneInbound (TicketPhoneCommon). Thanks for reporting to @AVONON-DST (Dennis) [#776](https://github.com/znuny/Znuny/issues/776).
  - 2026-04-02 Changed: Log level of "missing user" message in HTTP basic auth.
  - 2026-04-02 Added: A link to CUIC to edit customer user `AgentCustomerUserInformationCenter::MainMenu###010-EditCustomerUser`.
  - 2026-04-02 Fixed: Visibility of dynamic fields in some views.

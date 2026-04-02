@@ -312,7 +312,7 @@ Core.Agent.TicketAction = (function (TargetNS) {
             Callback();
             $TemplateSelect.data('LastValue', $TemplateSelect.val());
         }
-    }
+    };
 
     /**
      * @name SetTimeUnits
