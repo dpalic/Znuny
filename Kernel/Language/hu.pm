@@ -32,7 +32,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%m-%d';
     $Self->{DateInputFormat}     = '%Y-%m-%d';
     $Self->{DateInputFormatLong} = '%Y-%m-%d - %T';
-    $Self->{Completeness}        = 1;
+    $Self->{Completeness}        = 0.999840255591054;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -8969,6 +8969,7 @@ Az Ön ügyfélszolgálati csapata
         'Edit Customer Users.' => 'Ügyfél-felhasználók szerkesztése.',
         'Edit appointment' => 'Időpont szerkesztése',
         'Edit customer company' => 'Ügyfél-vállalat szerkesztése',
+        'Edit customer user' => '',
         'Email Outbound' => 'Kimenő e-mail',
         'Email Resend' => 'E-mail újraküldés',
         'Email communication channel.' => 'E-mail kommunikációs csatorna.',

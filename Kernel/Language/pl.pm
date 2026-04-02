@@ -30,7 +30,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%m-%d';
     $Self->{DateInputFormat}     = '%Y-%m-%d';
     $Self->{DateInputFormatLong} = '%Y-%m-%d - %T';
-    $Self->{Completeness}        = 0.635564786707142;
+    $Self->{Completeness}        = 0.635463258785942;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -8967,6 +8967,7 @@ Twój Zespół Helpdesk.
         'Edit Customer Users.' => 'Edytuj użytkowników klienta.',
         'Edit appointment' => 'Edytuj wydarzenie',
         'Edit customer company' => 'Edytuj firmę klienta',
+        'Edit customer user' => '',
         'Email Outbound' => 'Email Zewnętrzny',
         'Email Resend' => '',
         'Email communication channel.' => '',

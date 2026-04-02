@@ -33,7 +33,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d/%m/%Y';
     $Self->{DateInputFormat}     = '%d/%m/%Y';
     $Self->{DateInputFormatLong} = '%d/%m/%Y - %T';
-    $Self->{Completeness}        = 0.571976354050168;
+    $Self->{Completeness}        = 0.571884984025559;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -8977,6 +8977,7 @@ Tu Equipo de Soporte
         'Edit Customer Users.' => '',
         'Edit appointment' => 'Editar cita',
         'Edit customer company' => 'Editar la Empresa del cliente',
+        'Edit customer user' => '',
         'Email Outbound' => 'Email Saliente',
         'Email Resend' => '',
         'Email communication channel.' => '',

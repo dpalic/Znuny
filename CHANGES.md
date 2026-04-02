@@ -1,4 +1,5 @@
 # 7.3.2 2026-??-??
+ - 2026-04-02 Added: A link to CUIC to edit customer user `AgentCustomerUserInformationCenter::MainMenu###010-EditCustomerUser`.
  - 2026-04-02 Fixed: Visibility of dynamic fields in some views.
  - 2026-04-01 Fixed: Broken File list for non-installed packages. Thanks for reporting to @urbalazs (Balázs Úr) [#771](https://github.com/znuny/Znuny/issues/771).
  - 2026-03-31 Fixed: Template selection in agent ticket details view (AgentTicketZoom) does not open when clicking "Reply" or "Reply All".
