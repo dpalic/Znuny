@@ -460,22 +460,24 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3 gy-3">
+
+                                                        <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3">
                                                         [% RenderBlockStart("Option") %]
-                                                        <div class="col-12">
-                                                            <label for="[% Data.Name | html %]">[% Translate(Data.Key) | html %]:</label>
-                                                            <div class="Field">
-                                                                [% Data.Value %]
-                                                                <div id="[% Data.Name | html %]ServerError" class="TooltipErrorMessage">
-                                                                    <p>[% Data.Invalid | html %]</p>
+                                                            <div class="col-12 gy-3">
+                                                                <label for="[% Data.Name | html %]">[% Translate(Data.Key) | html %]:</label>
+                                                                <div class="Field">
+                                                                    [% Data.Value %]
+                                                                    <div id="[% Data.Name | html %]ServerError" class="TooltipErrorMessage">
+                                                                        <p>[% Data.Invalid | html %]</p>
+                                                                    </div>
+                                                                    [% IF Data.FieldExplanation.length %]
+                                                                    <p class="FieldExplanation">[% Translate(Data.FieldExplanation) | html %]</p>
+                                                                    [% END %]
                                                                 </div>
-                                                                [% IF Data.FieldExplanation.length %]
-                                                                <p class="FieldExplanation">[% Translate(Data.FieldExplanation) | html %]</p>
-                                                                [% END %]
                                                             </div>
-                                                        </div>
                                                         [% RenderBlockEnd("Option") %]
                                                         </div>
+
                                                         [% RenderBlockStart("TicketOptions") %]
                                                         <div class="col-12">
                                                             <label>[% Translate("Options") | html %]:</label>

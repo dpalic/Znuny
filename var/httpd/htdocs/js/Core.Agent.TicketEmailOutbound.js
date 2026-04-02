@@ -34,6 +34,16 @@ Core.Agent.TicketEmailOutbound = (function (TargetNS) {
         var ArticleComposeOptions = Core.Config.Get('ArticleComposeOptions'),
             UpdateFields = Core.Config.Get('DynamicFieldNames') || [];
 
+        // Move FieldExplanation elements next to their labels, store text as tooltip
+        // used for Tooltips on labels (email security elements)
+        $('.Field p.FieldExplanation').each(function() {
+            var $Label = $(this).closest('.col-12').find('> label');
+            if ($Label.length) {
+                $(this).attr('data-tooltip', $(this).text().trim());
+                $(this).detach().insertAfter($Label);
+            }
+        });
+
         UpdateFields.push('TypeID');
         UpdateFields.push('ServiceID');
         UpdateFields.push('SLAID');

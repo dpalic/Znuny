@@ -13,18 +13,22 @@ did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
 }
 
 /* FieldExplanation: moved by JS next to label, shown as icon with tooltip */
-.layoutPopUp .col-12:has(> p.FieldExplanation) {
+.layoutPopUp .col-12:has(> p.FieldExplanation),
+.layoutContentSidebar .col-12:has(> p.FieldExplanation) {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
-.layoutPopUp .col-12:has(> p.FieldExplanation) > label {
+.layoutPopUp .col-12:has(> p.FieldExplanation) > label,
+.layoutContentSidebar .col-12:has(> p.FieldExplanation) > label {
   margin-bottom: 0;
 }
-.layoutPopUp .col-12:has(> p.FieldExplanation) > .Field {
+.layoutPopUp .col-12:has(> p.FieldExplanation) > .Field,
+.layoutContentSidebar .col-12:has(> p.FieldExplanation) > .Field {
   flex: 0 0 100%;
 }
-.layoutPopUp .col-12 > p.FieldExplanation {
+.layoutPopUp .col-12 > p.FieldExplanation,
+.layoutContentSidebar .col-12 > p.FieldExplanation {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -37,7 +41,8 @@ did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
   position: relative;
   margin: 0 0 0 6px;
 }
-.layoutPopUp .col-12 > p.FieldExplanation::before {
+.layoutPopUp .col-12 > p.FieldExplanation::before,
+.layoutContentSidebar .col-12 > p.FieldExplanation::before {
   font-family: "FontAwesome";
   content: "\f05a";
   font-size: 14px;
@@ -47,7 +52,8 @@ did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
   line-height: 16px;
   text-align: center;
 }
-.layoutPopUp .col-12 > p.FieldExplanation::after {
+.layoutPopUp .col-12 > p.FieldExplanation::after,
+.layoutContentSidebar .col-12 > p.FieldExplanation::after {
   content: attr(data-tooltip);
   display: none;
   position: absolute;
@@ -65,7 +71,8 @@ did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
   white-space: normal;
 }
-.layoutPopUp .col-12 > p.FieldExplanation:hover::after {
+.layoutPopUp .col-12 > p.FieldExplanation:hover::after,
+.layoutContentSidebar .col-12 > p.FieldExplanation:hover::after {
   display: block;
 }
 
