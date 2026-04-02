@@ -754,21 +754,19 @@ handheld {
         margin-top: var(--margin-sm);
     }
 
-    /* Hide Dynamic Fields card when cardContent has no visible fields.
+    /* Hide Dynamic Fields card only when .cardContent contains .Row but none are visible.
     :has() is supported by current browsers (Chrome 105+, Firefox 121+, Safari 15.4+).
-    Excludes: .Hidden (DynamicFieldGroups) and inline display:none.
+    If there is no .Row at all, do not hide (other markup may still be shown).
     */
-    .cardDynamicField:not(:has(.cardContent .Row:not(.Hidden))),
-    .cardDynamicField:not(:has(.cardContent .Row:not([style*="display: none"]))) {
+    .cardDynamicField:has(.cardContent .Row):not(:has(.cardContent .Row:not(.Hidden):not([style*="display: none"]))) {
         display: none;
     }
 
-    /* Hide Article Dynamic Fields card when cardContent has no visible fields.
+    /* Hide Article Dynamic Fields card only when .cardContent contains .Row but none are visible.
     :has() is supported by current browsers (Chrome 105+, Firefox 121+, Safari 15.4+).
-    Excludes: .Hidden (DynamicFieldGroups) and inline display:none.
+    If there is no .Row at all, do not hide (other markup may still be shown).
     */
-    .cardArticleDynamicField:not(:has(.cardContent .Row:not(.Hidden))),
-    .cardArticleDynamicField:not(:has(.cardContent .Row:not([style*="display: none"]))) {
+    .cardArticleDynamicField:has(.cardContent .Row):not(:has(.cardContent .Row:not(.Hidden):not([style*="display: none"]))) {
         display: none;
     }
 

@@ -164,7 +164,7 @@
                                                     <span class="cardTitleTrigger"></span>
                                                 </div>
                                                 <div class="cardContent">
-                                                    <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3  gy-3">
+                                                    <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3 gy-3">
                                                         [% RenderBlockStart("TicketService") %]
                                                         <div class="col">
                                                             [% IF Data.ServiceMandatory %]
@@ -212,7 +212,7 @@
                                                     <span class="cardTitleTrigger"></span>
                                                 </div>
                                                 <div class="cardContent">
-                                                    <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3  gy-3">
+                                                    <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3 gy-3">
                                                         <div class="col">
                                                             <label class="Mandatory" for="Dest"><span class="Marker">*</span> [% Translate("To queue") | html %]:</label>
                                                             <div class="Field">
@@ -263,7 +263,7 @@
                                                     <span class="cardTitleTrigger"></span>
                                                 </div>
                                                 <div class="cardContent">
-                                                    <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3  gy-3">
+                                                    <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3 gy-3">
                                                         [% RenderBlockStart("TicketType") %]
                                                         <div class="col">
                                                             <label class="Mandatory" for="TypeID"><span class="Marker">*</span> [% Translate("Type") | html %]:</label>
@@ -311,13 +311,12 @@
                                                     <span class="cardTitleTrigger"></span>
                                                 </div>
                                                 <div class="cardContent">
-                                                    <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3  gy-3">
+                                                    <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3 gy-3">
                                                         [% RenderBlockStart("DynamicField") %]
-
-                                                        <div class="col">
-                                                            <div class="mod modDynamicField">
-                                                                <div class="inner">
-                                                                    <div class="dynamicField dynamicField[% Data.Name | html %] ">
+                                                        <div class="Row Row_DynamicField_[% Data.Name | html %] dynamicField dynamicField[% Data.Name | html %]">
+                                                            <div class="col-12">
+                                                                <div class="mod modDynamicField">
+                                                                    <div class="inner">
                                                                         <div class="dynamicFieldLabel">
                                                                             [% Data.Label %]
                                                                         </div>

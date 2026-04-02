@@ -38,6 +38,7 @@ sub Run {
         'Znuny-AgentTicketActionCommonCustomer',
         'Znuny4OTRS-AdditionalTicketAttributeSelection',
         'Znuny-AdditionalTicketAttributeSelection',
+        'Znuny-Bugfix1463',
     );
 
     my $CacheObject   = $Kernel::OM->Get('Kernel::System::Cache');

@@ -66,7 +66,7 @@
                                                         <span class="cardTitleTrigger"></span>
                                                     </div>
                                                     <div class="cardContent">
-                                                        <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3  gy-3">
+                                                        <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3 gy-3">
 [% RenderBlockStart("Service") %]
                                                             <div class="col">
                                                                 <label for="ServiceID">[% Translate("Service") | html %]:</label>
