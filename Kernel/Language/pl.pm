@@ -30,7 +30,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%m-%d';
     $Self->{DateInputFormat}     = '%Y-%m-%d';
     $Self->{DateInputFormatLong} = '%Y-%m-%d - %T';
-    $Self->{Completeness}        = 0.635564786707142;
+    $Self->{Completeness}        = 0.635724556638441;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -3456,7 +3456,7 @@ sub Data {
 
         # JS Template: Kernel/Output/JavaScript/Templates/Standard/Agent/TicketZoom/CopyTicketNumber/Menu.html.tmpl
         'Copy Ticket Number' => '',
-        'Copy Ticket Number + Title' => '',
+        'Copy Ticket Number + Title' => 'Skopiuj tytuł i numer zgłoszenia',
 
         # JS Template: Kernel/Output/JavaScript/Templates/Standard/Agent/TicketZoom/FormDraftDeleteDialog.html.tmpl
         'Do you really want to delete "%s"?' => 'Czy na pewno chcesz usunąć "%s"?',
