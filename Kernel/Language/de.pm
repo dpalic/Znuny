@@ -8963,6 +8963,7 @@ Ihr Helpdesk-Team
         'Edit Customer Users.' => 'Kundenbenutzer bearbeiten.',
         'Edit appointment' => 'Termin bearbeiten',
         'Edit customer company' => 'Kundenunternehmen bearbeiten',
+        'Edit customer user' => 'Kundenbenutzer bearbeiten',
         'Email Outbound' => 'Ausgehende E-Mail',
         'Email Resend' => 'E-Mail erneut senden',
         'Email communication channel.' => 'Kommunikationskanal E-Mail.',

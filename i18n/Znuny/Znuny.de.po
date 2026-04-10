@@ -25345,3 +25345,7 @@ msgstr "Sidebar ein-/ausblenden"
 msgid "When support data is collected via SupportDataCollector, certain SysConfig values marked with ValueType=\"Password\" are automatically masked. This prevents passwords from appearing in plain text in the support data. This setting defines the settings that contain complex configuration hashes that should not be masked when generating the support data."
 msgstr "Wenn Support-Daten über den SupportDataCollector gesammelt werden, werden bestimmte SysConfig-Werte, die mit ValueType=\"Password\" gekennzeichnet sind, automatisch maskiert. Dadurch wird verhindert, dass Passwörter im Klartext in den Support-Daten erscheinen. Diese Einstellung definiert die Einstellungen, die komplexe Konfigurations-Hashes enthalten, die bei der Generierung der Support-Daten nicht maskiert werden sollten."
 
+#. SysConfig
+msgid "Edit customer user"
+msgstr "Kundenbenutzer bearbeiten"
+

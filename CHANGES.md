@@ -1,8 +1,14 @@
 # 7.3.2 2026-??-??
+ - 2026-04-10 PostMaster/Filter/ExternalTicketNumberRecognition: Added support of the SysConfig setting “Ticket::SubjectFormat”.
+ - 2026-04-08 Fixed: Dashboard queue column filter offers inaccessible queues. Thanks to @BuilderNSV for reporting the issue. [#603](https://github.com/znuny/Znuny/issues/603)
+ - 2026-04-02 Fixed: StandardTemplates are not usable in AgentTicketEmailOutbound, AgentTicketPhoneOutbound and AgentTicketPhoneInbound (TicketPhoneCommon). Thanks for reporting to @AVONON-DST (Dennis) [#776](https://github.com/znuny/Znuny/issues/776).
+ - 2026-04-02 Changed: Log level of "missing user" message in HTTP basic auth.
+ - 2026-04-02 Added: A link to CUIC to edit customer user `AgentCustomerUserInformationCenter::MainMenu###010-EditCustomerUser`.
  - 2026-04-02 Fixed: Visibility of dynamic fields in some views.
  - 2026-04-01 Fixed: Broken File list for non-installed packages. Thanks for reporting to @urbalazs (Balázs Úr) [#771](https://github.com/znuny/Znuny/issues/771).
  - 2026-03-31 Fixed: Template selection in agent ticket details view (AgentTicketZoom) does not open when clicking "Reply" or "Reply All".
  - 2026-03-31 Changed: AgentTicketMerge: Card "Inform Sender" will initially be shown collapsed and disabled. Will be enabled automatically when user expands the card.
+ - 2026-03-31 Fixed: Missing email security options in dialog for new email ticket (AgentTicketEmail).
  - 2026-03-25 Fixed: AgentTicketOwnerView missing in dynamic field screen selection.
  - 2026-03-24 Fixed: iFrame elements reuse the same ID in CustomerTicketZoom.
 

@@ -188,6 +188,7 @@ sub new {
             $Self->{ColumnFilter}->{$Field} = $PreferencesColumnFiltersRealKeys->{$Field};
         }
     }
+    $Self->_SanitizeTreeViewColumnFilters();
 
     # get current filter
     my $Name                     = $ParamObject->GetParam( Param => 'Name' ) || '';
@@ -2394,6 +2395,75 @@ sub _ColumnFilterJSON {
     );
 
     return $JSON;
+}
+
+sub _SanitizeTreeViewColumnFilters {
+    my ($Self) = @_;
+
+    # Queue, Service and SLA use TreeView rendering and may submit "null" for parent node
+    # selections, which must be removed before passing values to the ticket search.
+    my %TreeColumns = (
+        Queue   => 'QueueIDs',
+        Service => 'ServiceIDs',
+        SLA     => 'SLAIDs',
+    );
+
+    my $IsNullValue = sub {
+        my ($Value) = @_;
+        return if !defined $Value;
+        return $Value =~ /\A null \z/i;
+    };
+
+    COLUMN:
+    for my $Column ( sort keys %TreeColumns ) {
+
+        if (
+            IsHashRefWithData( $Self->{GetColumnFilterSelect} )
+            && defined $Self->{GetColumnFilterSelect}->{$Column}
+            && $IsNullValue->( $Self->{GetColumnFilterSelect}->{$Column} )
+            )
+        {
+            delete $Self->{GetColumnFilterSelect}->{$Column};
+        }
+
+        if ( IsHashRefWithData( $Self->{GetColumnFilter} ) ) {
+            my $GetKey = $Column . ( $Self->{Name} // '' );
+            if (
+                defined $Self->{GetColumnFilter}->{$GetKey}
+                && $IsNullValue->( $Self->{GetColumnFilter}->{$GetKey} )
+                )
+            {
+                delete $Self->{GetColumnFilter}->{$GetKey};
+            }
+        }
+
+        next COLUMN if !IsHashRefWithData( $Self->{ColumnFilter} );
+        my $FilterKey  = $TreeColumns{$Column};
+        my $ColumnData = $Self->{ColumnFilter}->{$FilterKey};
+        next COLUMN if !$ColumnData;
+
+        if ( IsArrayRefWithData($ColumnData) ) {
+            my @ValidValues = grep { !$IsNullValue->($_) } @{$ColumnData};
+            if (@ValidValues) {
+                $Self->{ColumnFilter}->{$FilterKey} = \@ValidValues;
+            }
+            else {
+                delete $Self->{ColumnFilter}->{$FilterKey};
+            }
+        }
+        elsif ( IsHashRefWithData($ColumnData) ) {
+            for my $Operator ( sort keys %{$ColumnData} ) {
+                if ( $IsNullValue->( $ColumnData->{$Operator} ) ) {
+                    delete $ColumnData->{$Operator};
+                }
+            }
+            if ( !keys %{$ColumnData} ) {
+                delete $Self->{ColumnFilter}->{$FilterKey};
+            }
+        }
+    }
+
+    return 1;
 }
 
 sub _SearchParamsGet {

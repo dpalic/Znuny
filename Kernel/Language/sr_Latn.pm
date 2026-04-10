@@ -32,7 +32,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d.%m.%Y';
     $Self->{DateInputFormat}     = '%d.%m.%Y';
     $Self->{DateInputFormatLong} = '%d.%m.%Y - %T';
-    $Self->{Completeness}        = 0.859562230388241;
+    $Self->{Completeness}        = 0.859424920127795;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -8969,6 +8969,7 @@ Vaša tehnička podrška
         'Edit Customer Users.' => 'Uredi klijente korisnike.',
         'Edit appointment' => 'Izmena termina',
         'Edit customer company' => 'Izmeni firmu klijenta',
+        'Edit customer user' => '',
         'Email Outbound' => 'Odlazni imejl',
         'Email Resend' => 'Pošalji ponovo imejl',
         'Email communication channel.' => 'Komunikacioni kanal imejla.',

@@ -25334,3 +25334,7 @@ msgstr "Oldalsáv ki- és bekapcsolása"
 msgid "When support data is collected via SupportDataCollector, certain SysConfig values marked with ValueType=\"Password\" are automatically masked. This prevents passwords from appearing in plain text in the support data. This setting defines the settings that contain complex configuration hashes that should not be masked when generating the support data."
 msgstr "Ha támogatási adatok kerülnek begyűjtésre a támogatási adatgyűjtőn keresztül, akkor a ValueType=\"Password\" jelöléssel ellátott bizonyos rendszerbeállítási értékek automatikusan el lesznek takarva. Ez megakadályozza, hogy a jelszavak egyszerű szövegként jelenjenek meg a támogatási adatokban. Ez a beállítás határozza meg azokat a beállításokat, amelyek olyan összetett beállítási kivonatokat tartalmaznak, amelyeket nem szabad eltakarni a támogatási adatok előállításakor."
 
+#. SysConfig
+msgid "Edit customer user"
+msgstr ""
+

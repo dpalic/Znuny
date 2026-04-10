@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d.%m.%Y';
     $Self->{DateInputFormat}     = '%d.%m.%Y';
     $Self->{DateInputFormatLong} = '%d.%m.%Y - %T';
-    $Self->{Completeness}        = 0.516855727752037;
+    $Self->{Completeness}        = 0.516773162939297;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -8966,6 +8966,7 @@ Kumpulan MejaBantuan Anda
         'Edit Customer Users.' => '',
         'Edit appointment' => '',
         'Edit customer company' => 'Edit syarikat pelanggan',
+        'Edit customer user' => '',
         'Email Outbound' => '',
         'Email Resend' => '',
         'Email communication channel.' => '',

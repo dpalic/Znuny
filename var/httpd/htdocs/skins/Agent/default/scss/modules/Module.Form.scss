@@ -21,7 +21,8 @@ did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
 }
 
 /* FieldExplanation: moved by JS next to label, shown as icon with tooltip */
-.layoutPopUp {
+.layoutPopUp,
+.layoutContentSidebar {
   .col-12:has(> p.FieldExplanation) {
     display: flex;
     flex-wrap: wrap;

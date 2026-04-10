@@ -34,6 +34,16 @@ Core.Agent.TicketEmailOutbound = (function (TargetNS) {
         var ArticleComposeOptions = Core.Config.Get('ArticleComposeOptions'),
             UpdateFields = Core.Config.Get('DynamicFieldNames') || [];
 
+        // Move FieldExplanation elements next to their labels, store text as tooltip
+        // used for Tooltips on labels (email security elements)
+        $('.Field p.FieldExplanation').each(function() {
+            var $Label = $(this).closest('.col-12').find('> label');
+            if ($Label.length) {
+                $(this).attr('data-tooltip', $(this).text().trim());
+                $(this).detach().insertAfter($Label);
+            }
+        });
+
         UpdateFields.push('TypeID');
         UpdateFields.push('ServiceID');
         UpdateFields.push('SLAID');
@@ -58,8 +68,10 @@ Core.Agent.TicketEmailOutbound = (function (TargetNS) {
 
         // set a template
         $('#StandardTemplateID').on('change', function () {
+            var $Form = $(this).closest('form');
+
             Core.Agent.TicketAction.ConfirmTemplateOverwrite('RichText', $(this), function () {
-                Core.AJAX.FormUpdate($(this).parents('form'), 'AJAXUpdate', 'StandardTemplateID', ['RichTextField']);
+                Core.AJAX.FormUpdate($Form, 'AJAXUpdate', 'StandardTemplateID', ['RichTextField']);
             });
             return false;
         });
