@@ -289,9 +289,14 @@ did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
         height: var(--btn-icon-sm);
         min-height: unset;
         min-width: unset;
-      }
+    }
 
     /* btn width */
+    .btn-width-max {
+        max-width: max-content;
+        min-width: max-content;
+    }
+
     .btn-width-xxl {
         max-width: var(--btn-max-width-xxl);
         min-width: var(--btn-max-width-xxl);

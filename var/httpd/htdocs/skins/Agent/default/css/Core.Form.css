@@ -263,8 +263,12 @@ did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.
         min-height: unset;
         min-width: unset;
     }
-
     /* btn width */
+    .btn-width-max {
+        max-width: max-content;
+        min-width: max-content;
+    }
+
     .btn-width-xxl {
         min-width: var(--btn-max-width-xxl);
         max-width: var(--btn-max-width-xxl);
