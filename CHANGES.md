@@ -1,4 +1,5 @@
 # 7.3.2 2026-??-??
+ - 2026-04-10 Fixed: Sorting in ticket overview modes "Medium" and "Preview" throws an error. Thanks for reporting to @przemekrzyzanski-cmyk. [#779](https://github.com/znuny/Znuny/issues/779)
  - 2026-04-13 Fixed: Link text does not fit button size in dialog AdminGenericInterfaceTransportHTTPREST.
  - 2026-04-10 PostMaster/Filter/ExternalTicketNumberRecognition: Added support of the SysConfig setting “Ticket::SubjectFormat”.
  - 2026-04-08 Fixed: Dashboard queue column filter offers inaccessible queues. Thanks to @BuilderNSV for reporting the issue. [#603](https://github.com/znuny/Znuny/issues/603)
