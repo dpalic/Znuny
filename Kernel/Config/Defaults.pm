@@ -1399,8 +1399,8 @@ sub LoadDefaults {
     # --------------------------------------------------- #
 
     # notification sender
-    $Self->{NotificationSenderName}  = 'OTRS Notifications';
-    $Self->{NotificationSenderEmail} = 'otrs@<OTRS_CONFIG_FQDN>';
+    $Self->{NotificationSenderName}  = 'Znuny Notifications';
+    $Self->{NotificationSenderEmail} = 'znuny@<OTRS_CONFIG_FQDN>';
 
     # notification email for new password
     $Self->{NotificationSubjectLostPassword} = 'New OTRS password';
