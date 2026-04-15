@@ -25349,3 +25349,7 @@ msgstr "Wenn Support-Daten über den SupportDataCollector gesammelt werden, werd
 msgid "Edit customer user"
 msgstr "Kundenbenutzer bearbeiten"
 
+#. XML Definition: Kernel/Config/Files/XML/Znuny.xml
+msgid "Enables ticket search with admin user (ID 1) instead of the logged in user. Only affects this view."
+msgstr ""
+

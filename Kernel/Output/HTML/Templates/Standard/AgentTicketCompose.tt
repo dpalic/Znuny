@@ -126,12 +126,7 @@
                                                 </div>
                                                 <div class="cardContent">
                                                     <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3 gy-3">
-                                                        <div class="col">
-                                                            <label for="StateID">[% Translate("State") | html %]:</label>
-                                                            <div class="Field">
-                                                                [% Data.NextStatesStrg %]
-                                                            </div>
-                                                        </div>
+
 [% RenderBlockStart("Type") %]
                                                         <div class="col">
                                                             <label class="Mandatory" for="TypeID"><span class="Marker">*</span>[% Translate("Type") | html %]:</label>
@@ -142,14 +137,14 @@
                                                             </div>
                                                         </div>
 [% RenderBlockEnd("Type") %]
-[% RenderBlockStart("Priority") %]
+
                                                         <div class="col">
-                                                            <label for="NewPriorityID">[% Translate("Priority") | html %]:</label>
+                                                            <label for="StateID">[% Translate("State") | html %]:</label>
                                                             <div class="Field">
-                                                                [% Data.PriorityStrg %]
+                                                                [% Data.NextStatesStrg %]
                                                             </div>
                                                         </div>
-[% RenderBlockEnd("Priority") %]
+
                                                         <div class="col" style="display: none;">
                                                             <label>[% Translate("Pending date") | html %]:</label>
                                                             <div class="Field">
@@ -163,6 +158,15 @@
                                                                 <p class="FieldExplanation">[% Translate("For all pending* states.") | html %]</p>
                                                             </div>
                                                         </div>
+
+[% RenderBlockStart("Priority") %]
+                                                        <div class="col">
+                                                            <label for="NewPriorityID">[% Translate("Priority") | html %]:</label>
+                                                            <div class="Field">
+                                                                [% Data.PriorityStrg %]
+                                                            </div>
+                                                        </div>
+[% RenderBlockEnd("Priority") %]
                                                     </div>
                                                 </div>
                                             </div>

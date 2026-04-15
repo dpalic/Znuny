@@ -32,7 +32,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%m-%d';
     $Self->{DateInputFormat}     = '%Y-%m-%d';
     $Self->{DateInputFormatLong} = '%Y-%m-%d - %T';
-    $Self->{Completeness}        = 0.999840255591054;
+    $Self->{Completeness}        = 0.999680562210509;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -8130,6 +8130,8 @@ sub Data {
             'Hozzáadja az AgentTicketActionCommon mezőleképezését egy ismeretlen művelethez. A Znuny.Form.Input használja.',
         'Once limit of watched tickets per user is reached, the oldest entries will be removed from the watch list. Disable this setting or set it to 0 to disable the limit (default).' =>
             'Ha a felhasználónkénti megfigyelt jegyek korlátja elérésre kerül, a legrégebbi bejegyzések el lesznek távolítva a megfigyelési listából. Tiltsa le ezt a beállítást vagy állítsa 0 értékre a korlát letiltásához (alapértelmezett).',
+        'Enables ticket search with admin user (ID 1) instead of the logged in user. Only affects this view.' =>
+            '',
         'List of user preferences (keys) that are allowed to be updated by UpdateAJAX subaction of frontend module AgentPreferences. These are regular expressions.' =>
             'Azon felhasználói beállítások (kulcsok) listája, amelyeknél engedélyezett, hogy az ügyintéző beállításai előtétprogram-modul UpdateAJAX alművelete frissítse azokat. Ezek reguláris kifejezések.',
         'List of user preferences (keys) that are allowed to be updated by UpdateAJAX subaction of frontend module CustomerPreferences. These are regular expressions.' =>
