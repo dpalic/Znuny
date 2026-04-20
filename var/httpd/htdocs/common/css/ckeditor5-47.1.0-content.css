@@ -136,6 +136,7 @@
 	caption-side:bottom;
 	word-break:normal;
 	overflow-wrap:anywhere;
+	break-before:avoid;
 	color:var(--ck-content-color-image-caption-text);
 	background-color:var(--ck-content-color-image-caption-background);
 	padding:.6em;
@@ -285,7 +286,7 @@
 		margin-top:0;
 	}
 
-.ck.ck-content li > p:only-child{
+.ck.ck-content li > p:only-of-type{
 		margin-top:0;
 		margin-bottom:0;
 	}
@@ -549,8 +550,9 @@
 					}
 
 @media print{
-		.ck.ck-content figure.table:not(.layout-table):has(> table){
+		.ck.ck-content figure.table:not(.layout-table):not(:has(> figcaption)){
 			display:block;
+			width:fit-content;
 		}
 		.ck.ck-content figure.table:not(.layout-table) > table{
 			height:initial;
@@ -572,7 +574,8 @@
 	--ck-content-color-table-caption-background:hsl(0, 0%, 97%);
 	--ck-content-color-table-caption-text:hsl(0, 0%, 20%);
 }
-.ck.ck-content .table > figcaption{
+.ck.ck-content .table > figcaption,
+.ck.ck-content figure.table > table > caption{
 	display:table-caption;
 	caption-side:top;
 	word-break:normal;
@@ -585,7 +588,7 @@
 	outline-offset:-1px;
 }
 @media (forced-colors: active){
-		.ck.ck-content .table > figcaption{
+		.ck.ck-content .table > figcaption, .ck.ck-content figure.table > table > caption{
 		background-color:unset;
 		color:unset;
 		}
