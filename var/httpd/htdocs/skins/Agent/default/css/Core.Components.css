@@ -190,8 +190,6 @@ handheld {
         flex-flow: column;
         gap: var(--gap-xs);
         background: var(--main-bg-color);
-        /* needed so its ::after element does not cause horizontal overflow in parent containers */
-        overflow: hidden;
     }
 
     .card-item-wrapper .card-item {

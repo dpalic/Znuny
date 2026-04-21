@@ -1,4 +1,5 @@
 # 7.3.2 2026-??-??
+ - 2026-04-21 Fixed: Process management: Field help tooltip not fully visible for long descriptions.
  - 2026-04-21 Changed: Renamed system configuration definition for Daemon::Log::RotationType to Znuny.
  - 2026-04-15 Fixed: Field order in "ticket data" card.
  - 2026-04-13 Changed: Ticket list views for "escalation", "locked", "mention", "owner", "responsible", "status" and "watch" now each have a config option TicketSearchWithAdminUser to decide if the tickets will be searched with admin user or the logged in user.

@@ -192,6 +192,7 @@ did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.
     }
 
     .FieldHelpContainer span {
+        white-space: pre-line;
         display: none;
         opacity: 0;
         position: absolute;
@@ -201,7 +202,8 @@ did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.
         padding: var(--padding-sm) var(--padding-md);
         top: 26px;
         left: -9px;
-        max-width: 200px;
+        width: max-content;
+        max-width: min(40rem, calc(100vw - 2rem));
         min-width: 130px;
         z-index: 100;
         font-size: var(--font-size-xs);
@@ -387,6 +389,7 @@ did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.
         flex-flow: column;
         border: 0;
         gap: var(--gap-md-sm);
+        overflow: visible;
     }
 
     @media only screen and (max-width: 1024px) {
