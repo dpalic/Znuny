@@ -14947,7 +14947,7 @@ msgid "List of JS files to always be loaded for the agent interface."
 msgstr "Orodha ya mafaili ya JS yapelekwe mara zote katika kiolesura cha wakala."
 
 #. XML Definition: Kernel/Config/Files/XML/Daemon.xml
-msgid "Type of daemon log rotation to use: Choose 'OTRS' to let Znuny system to handle the file rotation, or choose 'External' to use a 3rd party rotation mechanism (i.e. logrotate). Note: External rotation mechanism requires its own and independent configuration."
+msgid "Type of daemon log rotation to use: Choose 'Znuny' to let Znuny system to handle the file rotation, or choose 'External' to use a 3rd party rotation mechanism (i.e. logrotate). Note: External rotation mechanism requires its own and independent configuration."
 msgstr ""
 
 #. XML Definition: Kernel/Config/Files/XML/Daemon.xml

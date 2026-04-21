@@ -14955,7 +14955,7 @@ msgid "List of JS files to always be loaded for the agent interface."
 msgstr "服务人员界面始终载入的JS文件列表。"
 
 #. XML Definition: Kernel/Config/Files/XML/Daemon.xml
-msgid "Type of daemon log rotation to use: Choose 'OTRS' to let Znuny system to handle the file rotation, or choose 'External' to use a 3rd party rotation mechanism (i.e. logrotate). Note: External rotation mechanism requires its own and independent configuration."
+msgid "Type of daemon log rotation to use: Choose 'Znuny' to let Znuny system to handle the file rotation, or choose 'External' to use a 3rd party rotation mechanism (i.e. logrotate). Note: External rotation mechanism requires its own and independent configuration."
 msgstr "要使用的守护程序日志循环类型：选择“Znuny”以使Znuny系统处理文件循环，或选择“外部”以使用第三方循环机制（如logrotate）。 注意：外部循环机制需要使用其自身的配置。"
 
 #. XML Definition: Kernel/Config/Files/XML/Daemon.xml

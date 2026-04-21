@@ -29,7 +29,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%m/%d/%Y';
     $Self->{DateInputFormat}     = '%m/%d/%Y';
     $Self->{DateInputFormatLong} = '%m/%d/%Y - %T';
-    $Self->{Completeness}        = 0.421657882127456;
+    $Self->{Completeness}        = 0.421565495207668;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -5638,7 +5638,7 @@ sub Data {
             'Orodha ya mafaili ya CSS yapelekwe mara zote katika kiolesura cha wakala.',
         'List of JS files to always be loaded for the agent interface.' =>
             'Orodha ya mafaili ya JS yapelekwe mara zote katika kiolesura cha wakala.',
-        'Type of daemon log rotation to use: Choose \'OTRS\' to let Znuny system to handle the file rotation, or choose \'External\' to use a 3rd party rotation mechanism (i.e. logrotate). Note: External rotation mechanism requires its own and independent configuration.' =>
+        'Type of daemon log rotation to use: Choose \'Znuny\' to let Znuny system to handle the file rotation, or choose \'External\' to use a 3rd party rotation mechanism (i.e. logrotate). Note: External rotation mechanism requires its own and independent configuration.' =>
             '',
         'If enabled the daemon will use this directory to create its PID files. Note: Please stop the daemon before any change and use this setting only if &lt;$OTRSHome&gt;/var/run/ can not be used.' =>
             '',
@@ -9151,7 +9151,6 @@ Thanks for your help!
         'Number of displayed tickets' => 'Namba ya tiketi zilizoonyeshwa',
         'OAuth2' => '',
         'OAuth2 token' => '',
-        'OTRS' => 'OTRS',
         'Open an external link!' => '',
         'Open tickets (customer user)' => 'Fungua tiketi (Mtumiaji wa mteja)',
         'Open tickets (customer)' => 'Fungua tiketi (Mteja)',

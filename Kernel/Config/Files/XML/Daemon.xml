@@ -51,11 +51,11 @@
         </Value>
     </Setting>
     <Setting Name="Daemon::Log::RotationType" Required="1" Valid="1">
-        <Description Translatable="1">Type of daemon log rotation to use: Choose 'OTRS' to let Znuny system to handle the file rotation, or choose 'External' to use a 3rd party rotation mechanism (i.e. logrotate). Note: External rotation mechanism requires its own and independent configuration.</Description>
+        <Description Translatable="1">Type of daemon log rotation to use: Choose 'Znuny' to let Znuny system to handle the file rotation, or choose 'External' to use a 3rd party rotation mechanism (i.e. logrotate). Note: External rotation mechanism requires its own and independent configuration.</Description>
         <Navigation>Daemon::Log</Navigation>
         <Value>
-            <Item ValueType="Select" SelectedID="otrs"><!-- default OTRS -->
-                <Item ValueType="Option" Value="otrs" Translatable="1">OTRS</Item>
+            <Item ValueType="Select" SelectedID="znuny"><!-- default Znuny -->
+                <Item ValueType="Option" Value="znuny" Translatable="1">Znuny</Item>
                 <Item ValueType="Option" Value="external" Translatable="1">External</Item>
             </Item>
         </Value>
