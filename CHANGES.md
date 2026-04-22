@@ -1,4 +1,5 @@
 # 7.3.2 2026-??-??
+ - 2026-04-22 Added: EmailSecurity section from Article to GenericInterface. Thanks to @DonMarlowne. [PR#612](https://github.com/znuny/Znuny/pull/612)
  - 2026-04-21 Fixed: Process management: Field help tooltip not fully visible for long descriptions.
  - 2026-04-21 Changed: Renamed system configuration definition for Daemon::Log::RotationType to Znuny.
  - 2026-04-15 Fixed: Field order in "ticket data" card.
