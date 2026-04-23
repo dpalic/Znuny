@@ -1490,7 +1490,7 @@ You can log in via the following URL:
     # --------------------------------------------------- #
     # notification email about new password               #
     # --------------------------------------------------- #
-    $Self->{CustomerPanelSubjectLostPassword} = 'New OTRS password';
+    $Self->{CustomerPanelSubjectLostPassword} = 'New Znuny password';
     $Self->{CustomerPanelBodyLostPassword}    = 'Hi <OTRS_USERFIRSTNAME>,
 
 
@@ -1502,10 +1502,10 @@ New password: <OTRS_NEWPW>
     # --------------------------------------------------- #
     # notification email about new account                #
     # --------------------------------------------------- #
-    $Self->{CustomerPanelSubjectNewAccount} = 'New OTRS Account!';
+    $Self->{CustomerPanelSubjectNewAccount} = 'New Znuny Account!';
     $Self->{CustomerPanelBodyNewAccount}    = 'Hi <OTRS_USERFIRSTNAME>,
 
-You or someone impersonating you has created a new OTRS account for
+You or someone impersonating you has created a new Znuny account for
 you.
 
 Full name: <OTRS_USERFIRSTNAME> <OTRS_USERLASTNAME>

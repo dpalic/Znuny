@@ -940,7 +940,7 @@ sub Run {
         my $Body        = $ConfigObject->Get('CustomerPanelBodyNewAccount')
             || 'No Config Option found!';
         my $Subject = $ConfigObject->Get('CustomerPanelSubjectNewAccount')
-            || 'New OTRS Account!';
+            || 'New Znuny Account!';
         for my $Key ( sort keys %GetParams ) {
             $Body =~ s/<OTRS_$Key>/$GetParams{$Key}/gi;
         }
