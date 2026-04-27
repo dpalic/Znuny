@@ -31,7 +31,7 @@ Core.Agent.TicketPhoneCommon = (function (TargetNS) {
      */
     TargetNS.Init = function () {
 
-        var UpdateFields = Core.Config.Get('DynamicFieldNames');
+        var UpdateFields = Core.Config.Get('DynamicFieldNames') || [];
 
         Znuny.Form.Input.FieldIDMapping('AgentTicketPhoneOutbound',
             {
