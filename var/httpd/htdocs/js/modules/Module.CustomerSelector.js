@@ -409,6 +409,8 @@
          * @param {Object} options - Additional options for the customer
          * @param {Boolean} options.isSelected - Whether the customer should be selected
          * @param {Boolean} options.isDisabled - Whether the customer should be disabled
+         * @param {Boolean} options.skipDefaultCustomerActivation - Whether the customer default
+         * value should be skipped during field activation
          * @param {Object} options.errors - Error information for the customer
          *
          */
@@ -428,7 +430,7 @@
 
             // Determine if this customer should be active
             isFirstCustomer = this.getCustomerCount() === 0;
-            shouldBeActive = this.shouldCustomerBeActive(options.isSelected, isFirstCustomer, options.isDisabled, hasErrors);
+            shouldBeActive = this.shouldCustomerBeActive(options.isSelected, isFirstCustomer, options.isDisabled, hasErrors, options.skipDefaultCustomerActivation);
 
             // Generate CSS classes based on customer state
             cssClasses = this.getCustomerCssClasses(shouldBeActive, options.isDisabled);
@@ -457,6 +459,57 @@
             if (shouldBeActive) {
                 this.activateNewCustomer(value);
             }
+        },
+
+        /**
+         * Replaces all customers with the provided list
+         *
+         * @method setCustomers
+         * @param {Array} customers - Array of customer objects
+         * @param {String} customers[].CustomerKey - The customer user login
+         * @param {String} customers[].CustomerTicketText - The customer user full text, usually displayed with an email value
+         * @param {Boolean} [customers[].CustomerIsSelected] - Whether the customer should be selected
+         */
+        setCustomers: function (customers) {
+            var activeIndex, customer, i;
+
+            customers = customers || [];
+
+            // Determine which customer should be active
+            activeIndex = -1;
+
+            // Set active field only for input type "customer"
+            if(this.inputType === 'customer'){
+                for (i = customers.length - 1; i >= 0; i--) {
+                    if (customers[i].CustomerIsSelected) {
+                        activeIndex = i;
+                        break;
+                    }
+                }
+            }
+
+            // Remove all customers
+            this.removeAllCustomers();
+
+            // Add customers making sure only one will be activated (for input type "customer")
+            for (i = 0; i < customers.length; i++) {
+                customer = customers[i];
+                this.addCustomer(customer.CustomerKey, customer.CustomerTicketText, {
+                    isSelected: i === activeIndex,
+                    skipDefaultCustomerActivation: true
+                });
+            }
+        },
+
+        /**
+        * Removes all customer elements and resets the counter
+        *
+        * @method removeAllCustomers
+        */
+        removeAllCustomers: function () {
+            jQuery('.customerSelectorFieldInputSelectedCustomer', this.ctx).remove();
+            this.customerCounter = 0;
+            this.updateCustomerCounterInput();
         },
 
         /**
@@ -499,11 +552,13 @@
          * @param {Boolean} isFirstCustomer - Whether this is the first customer in the list
          * @param {Boolean} isDisabled - Whether the customer is disabled
          * @param {Boolean} hasErrors - Whether the customer has validation errors
+         * @param {Boolean} skipDefaultCustomerActivation - Whether the customer default
+         * value should be skipped during field activation
          * @return {Boolean} Whether the customer should be active
          */
-        shouldCustomerBeActive: function(isSelected, isFirstCustomer, isDisabled, hasErrors) {
+        shouldCustomerBeActive: function(isSelected, isFirstCustomer, isDisabled, hasErrors, skipDefaultCustomerActivation) {
             // A customer should not be active if it has errors or is disabled
-            return (isSelected || (this.selectedCustomerAllow && isFirstCustomer)) && !isDisabled && !hasErrors;
+            return (isSelected || (this.selectedCustomerAllow && isFirstCustomer && !skipDefaultCustomerActivation)) && !isDisabled && !hasErrors;
         },
 
         /**
