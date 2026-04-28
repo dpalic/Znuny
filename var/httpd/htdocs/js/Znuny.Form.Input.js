@@ -358,28 +358,27 @@ Znuny.Form.Input = (function (TargetNS) {
             ) {
                 var $customerSelector = $('#'+ FieldID).closest('.modCustomerSelector');
                 if ($customerSelector.length > 0) {
-                    // Get the selected customer field name from the CustomerSelector data attribute
-                    var selectedFieldName = $customerSelector.find('.inner').attr('data-selected-customer-field-name');
+                    Result = [];
 
-                    if (KeyOrValue == 'Key') {
-                        if (selectedFieldName && $('#' + selectedFieldName).length > 0) {
-                            return $('#' + selectedFieldName).val() || '';
-                        }
-                        // Fallback: try to get from active customer element
-                        var activeCustomer = $customerSelector.find('.customerSelectorFieldInputSelectedCustomerActive');
-                        if (activeCustomer.length > 0) {
-                            return activeCustomer.attr('data-value') || '';
-                        }
-                        return '';
+                    var Selector = '.customerSelectorFieldInputSelectedCustomer';
+                    if (Options.Selected) {
+                        Selector = '.customerSelectorFieldInputSelectedCustomerActive';
                     }
-                    else {
-                        // Get the text value from the active customer in CustomerSelector
-                        var activeCustomer = $customerSelector.find('.customerSelectorFieldInputSelectedCustomerActive');
-                        if (activeCustomer.length > 0) {
-                            return activeCustomer.find('.customerName').text() || $('#'+ FieldID).val() || '';
+
+                    $customerSelector.find(Selector).each(function(Index, Element) {
+                        if (KeyOrValue == 'Key') {
+                            Value = $.trim($(Element).attr('data-value') || '');
                         }
-                        return $('#'+ FieldID).val() || '';
-                    }
+                        else {
+                            Value = $.trim($(Element).find('.customerName').text() || '');
+                        }
+
+                        if (Value.length === 0) return true;
+
+                        Result.push(Value);
+                    });
+
+                    return Result;
                 }
             }
             // DynamicField CustomerUserID
