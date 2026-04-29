@@ -1,11 +1,11 @@
-# 7.3.2 2026-??-??
+# 7.3.2 2026-04-29
  - 2026-04-22 Added: EmailSecurity section from Article to GenericInterface. Thanks to @DonMarlowne. [PR#612](https://github.com/znuny/Znuny/pull/612)
  - 2026-04-21 Fixed: Process management: Field help tooltip not fully visible for long descriptions.
  - 2026-04-21 Changed: Renamed system configuration definition for Daemon::Log::RotationType to Znuny.
  - 2026-04-15 Fixed: Field order in "ticket data" card.
  - 2026-04-13 Changed: Ticket list views for "escalation", "locked", "mention", "owner", "responsible", "status" and "watch" now each have a config option TicketSearchWithAdminUser to decide if the tickets will be searched with admin user or the logged in user.
- - 2026-04-10 Fixed: Sorting in ticket overview modes "Medium" and "Preview" throws an error. Thanks for reporting to @przemekrzyzanski-cmyk. [#779](https://github.com/znuny/Znuny/issues/779)
  - 2026-04-13 Fixed: Link text does not fit button size in dialog AdminGenericInterfaceTransportHTTPREST.
+ - 2026-04-10 Fixed: Sorting in ticket overview modes "Medium" and "Preview" throws an error. Thanks for reporting to @przemekrzyzanski-cmyk. [#779](https://github.com/znuny/Znuny/issues/779)
  - 2026-04-10 PostMaster/Filter/ExternalTicketNumberRecognition: Added support of the SysConfig setting “Ticket::SubjectFormat”.
  - 2026-04-08 Fixed: Dashboard queue column filter offers inaccessible queues. Thanks to @BuilderNSV for reporting the issue. [#603](https://github.com/znuny/Znuny/issues/603)
  - 2026-04-02 Fixed: StandardTemplates are not usable in AgentTicketEmailOutbound, AgentTicketPhoneOutbound and AgentTicketPhoneInbound (TicketPhoneCommon). Thanks for reporting to @AVONON-DST (Dennis) [#776](https://github.com/znuny/Znuny/issues/776).
@@ -594,6 +594,15 @@
  - 2022-08-22 Core.UI.InputFields.js - Changed the behaviour of the Core.UI.InputFields.js. Now no fields are automatically enlarged or reduced.
  - 2022-08-08 Admin - Added counter of AdminSettingPages per widget and additional focus by filter.
  - 2022-07-15 Frontend::ToolBarModule - Refactored the Toolbar registration, position and view.
+
+# 6.5.20 2026-04-29
+ - 2026-04-22 Added: EmailSecurity section from Article to GenericInterface. Thanks to @DonMarlowne. [PR#612](https://github.com/znuny/Znuny/pull/612)
+ - 2026-04-13 Changed: Ticket list views for "escalation", "locked", "mention", "owner", "responsible", "status" and "watch" now each have a config option TicketSearchWithAdminUser to decide if the tickets will be searched with admin user or the logged in user.
+ - 2026-04-10 Fixed: Sorting in ticket overview modes "Medium" and "Preview" throws an error. Thanks for reporting to @przemekrzyzanski-cmyk. [#779](https://github.com/znuny/Znuny/issues/779)
+ - 2026-04-10 PostMaster/Filter/ExternalTicketNumberRecognition: Added support of the SysConfig setting “Ticket::SubjectFormat”.
+ - 2026-04-02 Changed: Log level of "missing user" message in HTTP basic auth.
+ - 2026-03-25 Fixed: AgentTicketOwnerView missing in dynamic field screen selection.
+ - 2026-02-24 Fixed: iFrame elements reuse the same ID in CustomerTicketZoom.
 
 # 6.5.19 2026-03-25
  - 2026-03-23 CVE-2025-59393: Support bundle generator: Improved password masking in configuration dumps using ValueType metadata.
