@@ -1,3 +1,6 @@
+# 7.3.3 2026-xx-xx
+ - 2026-04-30 Removed IIS 6. Znuny does not officially support IIS 6.0.
+
 # 7.3.2 2026-04-29
  - 2026-04-22 Added: EmailSecurity section from Article to GenericInterface. Thanks to @DonMarlowne. [PR#612](https://github.com/znuny/Znuny/pull/612)
  - 2026-04-21 Fixed: Process management: Field help tooltip not fully visible for long descriptions.
