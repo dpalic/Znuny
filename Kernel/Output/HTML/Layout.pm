@@ -5300,50 +5300,6 @@ sub RichTextDocumentComplete {
     return $Param{String};
 }
 
-=begin Internal:
-
-=cut
-
-=head2 _RichTextReplaceLinkOfInlineContent()
-
-replace links of inline content e. g. images
-
-    $HTMLBodyStringRef = $LayoutObject->_RichTextReplaceLinkOfInlineContent(
-        String => $HTMLBodyStringRef,
-    );
-
-=cut
-
-sub _RichTextReplaceLinkOfInlineContent {
-    my ( $Self, %Param ) = @_;
-
-    # check needed stuff
-    for my $Needed (qw(String)) {
-        if ( !$Param{$Needed} ) {
-            $Kernel::OM->Get('Kernel::System::Log')->Log(
-                Priority => 'error',
-                Message  => "Need $Needed!"
-            );
-            return;
-        }
-    }
-
-    # replace image link with content id for uploaded images
-    ${ $Param{String} } =~ s{
-        (<img.+?src=("|'))[^"'>]+?ContentID=(.+?)("|')([^>]*>)
-    }
-    {
-        my ($Start, $CID, $Close, $End) = ($1, $3, $4, $5);
-        # Make sure we only get the CID and not extra stuff like session information
-        $CID =~ s{^([^;&]+).*}{$1}smx;
-        $Start . 'cid:' . $CID . $Close . $End;
-    }esgxi;
-
-    return $Param{String};
-}
-
-=end Internal:
-
 =head2 RichTextDocumentServe()
 
 Serve a rich text (HTML) document for local view inside of an C<iframe> in correct charset and with correct links for
@@ -5604,7 +5560,47 @@ sub RichTextDocumentCleanup {
 
 =begin Internal:
 
+Private functions used by this package (not part of the documented public API).
+
+=end Internal:
+
+=head2 _RichTextReplaceLinkOfInlineContent()
+
+replace links of inline content e. g. images
+
+    $HTMLBodyStringRef = $LayoutObject->_RichTextReplaceLinkOfInlineContent(
+        String => $HTMLBodyStringRef,
+    );
+
 =cut
+
+sub _RichTextReplaceLinkOfInlineContent {
+    my ( $Self, %Param ) = @_;
+
+    # check needed stuff
+    for my $Needed (qw(String)) {
+        if ( !$Param{$Needed} ) {
+            $Kernel::OM->Get('Kernel::System::Log')->Log(
+                Priority => 'error',
+                Message  => "Need $Needed!"
+            );
+            return;
+        }
+    }
+
+    # replace image link with content id for uploaded images
+    ${ $Param{String} } =~ s{
+        (<img.+?src=("|'))[^"'>]+?ContentID=(.+?)("|')([^>]*>)
+    }
+    {
+        my ($Start, $CID, $Close, $End) = ($1, $3, $4, $5);
+        # Make sure we only get the CID and not extra stuff like session information
+        $CID =~ s{^([^;&]+).*}{$1}smx;
+        $Start . 'cid:' . $CID . $Close . $End;
+    }esgxi;
+
+    return $Param{String};
+}
 
 =head2 _BuildSelectionOptionRefCreate()
 
@@ -7061,8 +7057,6 @@ sub _GetShortcutIconsForInterface {
 }
 
 1;
-
-=end Internal:
 
 =head1 TERMS AND CONDITIONS
 

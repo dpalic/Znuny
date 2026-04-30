@@ -25,6 +25,7 @@ our @ObjectDependencies = (
     'Kernel::System::Encode',
     'Kernel::System::Log',
     'Kernel::System::Main',
+    'Kernel::System::Package',
     'Kernel::System::Storable',
     'Kernel::System::XML',
 );
@@ -2027,6 +2028,20 @@ sub Ping {
 
 =begin Internal:
 
+Private functions used by this package (not part of the documented public API).
+
+=end Internal:
+
+=head2 _Decrypt()
+
+decrypt a password
+
+    my $Password = $DBObject->_Decrypt(
+        Pw => $Password,
+    );
+
+Returns the decrypted password.
+
 =cut
 
 sub _Decrypt {
@@ -2122,8 +2137,6 @@ sub DESTROY {
 }
 
 1;
-
-=end Internal:
 
 =head1 TERMS AND CONDITIONS
 

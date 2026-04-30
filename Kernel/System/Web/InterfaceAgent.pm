@@ -1185,6 +1185,10 @@ sub Run {
 
 =begin Internal:
 
+Private functions used by this package (not part of the documented public API).
+
+=end Internal:
+
 =head2 _UserTimeZoneGet()
 
 Get time zone for the current user. This function will validate passed time zone parameter and return default user time
@@ -1216,10 +1220,6 @@ sub _UserTimeZoneGet {
 
     return $UserTimeZone;
 }
-
-=end Internal:
-
-=cut
 
 sub DESTROY {
     my $Self = shift;

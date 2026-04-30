@@ -2001,6 +2001,10 @@ sub GetTextColor {
 
 =begin Internal:
 
+Private functions used by this package (not part of the documented public API).
+
+=end Internal:
+
 =head2 _TicketAppointmentGet()
 
 get ticket appointment id if exists.
@@ -2231,8 +2235,6 @@ sub _TicketAppointmentUpdate {
 }
 
 1;
-
-=end Internal:
 
 =head1 TERMS AND CONDITIONS
 

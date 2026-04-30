@@ -985,6 +985,19 @@ sub Bounce {
 
 =begin Internal:
 
+Private functions used by this package (not part of the documented public API).
+
+=end Internal:
+
+=head2 _EncodeMIMEWords()
+
+encode MIME words
+
+    my $EncodedWords = $Self->_EncodeMIMEWords(
+        Field => 'Subject',
+        Line  => 'Hello, World!',
+    );
+
 =cut
 
 sub _EncodeMIMEWords {
@@ -1371,8 +1384,6 @@ sub _CreateMimeEntity {
 }
 
 1;
-
-=end Internal:
 
 =head1 TERMS AND CONDITIONS
 

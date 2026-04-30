@@ -17,6 +17,7 @@ use Kernel::System::VariableCheck qw(:all);
 our @ObjectDependencies = (
     'Kernel::Config',
     'Kernel::Output::HTML::Layout',
+    'Kernel::System::JSON',
     'Kernel::System::Log',
 );
 

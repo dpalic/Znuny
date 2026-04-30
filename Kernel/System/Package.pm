@@ -1325,8 +1325,7 @@ Returns:
 sub GetRequiredPackages {
     my ( $Self, %Param ) = @_;
 
-    my $LogObject     = $Kernel::OM->Get('Kernel::System::Log');
-    my $PackageObject = $Kernel::OM->Get('Kernel::System::Package');
+    my $LogObject = $Kernel::OM->Get('Kernel::System::Log');
 
     NEEDED:
     for my $Needed (qw(Structure)) {
@@ -1352,12 +1351,12 @@ sub GetRequiredPackages {
         return;
     }
 
-    my @RepositoryList = $PackageObject->RepositoryList();
+    my @RepositoryList = $Self->RepositoryList();
     my @Requirements;
 
     for my $Element ( sort @{ $Param{Structure}->{PackageRequired} } ) {
 
-        my $PackageIsInstalled = $PackageObject->PackageIsInstalled(
+        my $PackageIsInstalled = $Self->PackageIsInstalled(
             Name => $Element->{Content}
         );
 
@@ -1382,7 +1381,7 @@ sub GetRequiredPackages {
                 last LOCAL;
             }
 
-            my $CheckVersion = $PackageObject->CheckVersion(
+            my $CheckVersion = $Self->CheckVersion(
                 VersionNew       => $Version,
                 VersionInstalled => $InstalledVersion,
                 Type             => 'Min',
@@ -3494,6 +3493,14 @@ sub GetRequiredModules {
 
 =begin Internal:
 
+Private functions used by this package (not part of the documented public API).
+
+=end Internal:
+
+=head2 _Download()
+
+download a file
+
 =cut
 
 sub _Download {
@@ -4999,8 +5006,6 @@ sub DESTROY {
 }
 
 1;
-
-=end Internal:
 
 =head1 TERMS AND CONDITIONS
 

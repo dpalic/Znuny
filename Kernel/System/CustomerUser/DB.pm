@@ -29,6 +29,7 @@ our @ObjectDependencies = (
     'Kernel::System::Encode',
     'Kernel::System::Log',
     'Kernel::System::Main',
+    'Kernel::System::Time',
     'Kernel::System::Valid',
 );
 

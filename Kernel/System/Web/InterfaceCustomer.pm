@@ -1403,6 +1403,10 @@ sub Run {
 
 =begin Internal:
 
+Private functions used by this package (not part of the documented public API).
+
+=end Internal:
+
 =head2 _CheckModulePermission()
 
 module permission check
@@ -1496,10 +1500,6 @@ sub _UserTimeZoneGet {
 
     return $UserTimeZone;
 }
-
-=end Internal:
-
-=cut
 
 sub DESTROY {
     my $Self = shift;

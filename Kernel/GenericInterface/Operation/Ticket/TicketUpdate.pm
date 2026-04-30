@@ -649,6 +649,10 @@ sub Run {
 
 =begin Internal:
 
+Private functions used by this package (not part of the documented public API).
+
+=end Internal:
+
 =head2 _CheckTicket()
 
 checks if the given ticket parameters are valid.
@@ -2578,8 +2582,6 @@ sub _ReturnSuccess {
 }
 
 1;
-
-=end Internal:
 
 =head1 TERMS AND CONDITIONS
 

@@ -1367,6 +1367,10 @@ sub AutoResponseQueueLinkByAutoResponse {
 
 =begin Internal:
 
+Private functions used by this package (not part of the documented public API).
+
+=end Internal:
+
 =head2 _NameExistsCheck()
 
 return if another auto-response with this name already exits
@@ -1407,10 +1411,6 @@ sub _NameExistsCheck {
 
     return 1;
 }
-
-=end Internal:
-
-=cut
 
 1;
 

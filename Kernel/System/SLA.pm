@@ -19,6 +19,7 @@ our @ObjectDependencies = (
     'Kernel::System::DB',
     'Kernel::System::GeneralCatalog',
     'Kernel::System::Log',
+    'Kernel::System::Util',
     'Kernel::System::Valid',
 );
 

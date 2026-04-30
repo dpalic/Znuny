@@ -14,6 +14,7 @@ package Kernel::System::XML;
 
 use strict;
 use warnings;
+use utf8;
 
 use Digest::MD5;
 
@@ -865,7 +866,11 @@ sub XMLParse {
 
 =begin Internal:
 
-=head2  _XMLHashAddAutoIncrement()
+Private functions used by this package (not part of the documented public API).
+
+=end Internal:
+
+=head2 _XMLHashAddAutoIncrement()
 
 Generate a new integer key.
 All keys for that type must be integers.
@@ -1580,8 +1585,6 @@ sub _ES {
 }
 
 1;
-
-=end Internal:
 
 =head1 TERMS AND CONDITIONS
 

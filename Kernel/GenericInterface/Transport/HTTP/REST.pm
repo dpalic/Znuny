@@ -1269,6 +1269,10 @@ sub RequesterPerformRequest {
 
 =begin Internal:
 
+Private functions used by this package (not part of the documented public API).
+
+=end Internal:
+
 =head2 _Output()
 
 Generate http response for provider and send it back to remote system.
@@ -1546,8 +1550,6 @@ sub _FlattenDataStructure {
 }
 
 1;
-
-=end Internal:
 
 =head1 TERMS AND CONDITIONS
 
