@@ -12398,7 +12398,7 @@ msgstr "termasuk subjujukan"
 msgid "excluding subqueues"
 msgstr "tidak termasuk subjujukan"
 
-#. Perl Module: Kernel/Modules/AgentTicketQueue.pm
+#. SysConfig
 msgid "QueueView"
 msgstr "Lihat-Barisan"
 
@@ -25341,5 +25341,9 @@ msgstr ""
 
 #. XML Definition: Kernel/Config/Files/XML/Znuny.xml
 msgid "Enables ticket search with admin user (ID 1) instead of the logged in user. Only affects this view."
+msgstr ""
+
+#. Perl Module: Kernel/Modules/AgentTicketQueue.pm
+msgid "Queue View"
 msgstr ""
 

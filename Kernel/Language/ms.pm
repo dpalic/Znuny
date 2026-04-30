@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d.%m.%Y';
     $Self->{DateInputFormat}     = '%d.%m.%Y';
     $Self->{DateInputFormatLong} = '%d.%m.%Y - %T';
-    $Self->{Completeness}        = 0.516613418530351;
+    $Self->{Completeness}        = 0.516530905606133;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -4484,7 +4484,7 @@ sub Data {
         'Available tickets' => 'Tiket disediakan',
         'including subqueues' => 'termasuk subjujukan',
         'excluding subqueues' => 'tidak termasuk subjujukan',
-        'QueueView' => 'Lihat-Barisan',
+        'Queue View' => '',
 
         # Perl Module: Kernel/Modules/AgentTicketResponsibleView.pm
         'My Responsible Tickets' => 'Tiket Tanggungjawab saya',
@@ -9221,6 +9221,7 @@ Kumpulan MejaBantuan Anda
         'Public Calendar' => '',
         'Public calendar.' => '',
         'Queue view' => 'Paparan Aturan',
+        'QueueView' => 'Lihat-Barisan',
         'Refresh interval' => 'Tempoh selang refresh',
         'Reminder Tickets' => 'Peringatan Tiket',
         'Removed subscription for user "%s".' => 'Langgan Pengguna "%s" yang diadakan.',

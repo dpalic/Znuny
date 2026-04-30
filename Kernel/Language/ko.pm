@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%m-%d';
     $Self->{DateInputFormat}     = '%Y-%m-%d';
     $Self->{DateInputFormatLong} = '%Y-%m-%d %T';
-    $Self->{Completeness}        = 0.835143769968051;
+    $Self->{Completeness}        = 0.835010381728158;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -4484,7 +4484,7 @@ sub Data {
         'Available tickets' => '가능한 티켓',
         'including subqueues' => '하위대기열 포함',
         'excluding subqueues' => '하위대기열 제외',
-        'QueueView' => '대기열보기',
+        'Queue View' => '',
 
         # Perl Module: Kernel/Modules/AgentTicketResponsibleView.pm
         'My Responsible Tickets' => '내 책임있는 티켓',
@@ -9218,6 +9218,7 @@ Thanks for your help!
         'Public Calendar' => '공개 캘린더',
         'Public calendar.' => '공개 캘린더',
         'Queue view' => '대기열 보기',
+        'QueueView' => '대기열보기',
         'Refresh interval' => '리프레쉬 간격',
         'Reminder Tickets' => '잊지 말아야 할 티켓',
         'Removed subscription for user "%s".' => '"%s" 사용자에 대한 가입이 삭제되었습니다.',

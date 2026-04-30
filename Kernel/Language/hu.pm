@@ -32,7 +32,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%m-%d';
     $Self->{DateInputFormat}     = '%Y-%m-%d';
     $Self->{DateInputFormatLong} = '%Y-%m-%d - %T';
-    $Self->{Completeness}        = 0.999680511182109;
+    $Self->{Completeness}        = 0.999520843315764;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -4490,7 +4490,7 @@ sub Data {
         'Available tickets' => 'Elérhető jegyek',
         'including subqueues' => 'alvárólisták felvétele',
         'excluding subqueues' => 'alvárólisták kizárása',
-        'QueueView' => 'Várólista nézet',
+        'Queue View' => '',
 
         # Perl Module: Kernel/Modules/AgentTicketResponsibleView.pm
         'My Responsible Tickets' => 'Saját felelős jegyek',
@@ -9224,6 +9224,7 @@ Az Ön ügyfélszolgálati csapata
         'Public Calendar' => 'Nyilvános naptár',
         'Public calendar.' => 'Nyilvános naptár.',
         'Queue view' => 'Várólista nézet',
+        'QueueView' => 'Várólista nézet',
         'Refresh interval' => 'Frissítési időköz',
         'Reminder Tickets' => 'Emlékeztető jegyek',
         'Removed subscription for user "%s".' => 'Feliratkozás eltávolítva a következő felhasználónál: „%s”.',

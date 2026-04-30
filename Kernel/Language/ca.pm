@@ -27,7 +27,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d.%m.%Y';
     $Self->{DateInputFormat}     = '%d.%m.%Y';
     $Self->{DateInputFormatLong} = '%d.%m.%Y - %T';
-    $Self->{Completeness}        = 0.199041533546326;
+    $Self->{Completeness}        = 0.199009742852579;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -4485,7 +4485,7 @@ sub Data {
         'Available tickets' => 'Tiquets disponibles',
         'including subqueues' => '',
         'excluding subqueues' => '',
-        'QueueView' => 'Veure la cua',
+        'Queue View' => '',
 
         # Perl Module: Kernel/Modules/AgentTicketResponsibleView.pm
         'My Responsible Tickets' => 'Els meus tiquets responsables',
@@ -9208,6 +9208,7 @@ Thanks for your help!
         'Public Calendar' => '',
         'Public calendar.' => '',
         'Queue view' => '',
+        'QueueView' => 'Veure la cua',
         'Refresh interval' => '',
         'Reminder Tickets' => 'Tiquets de recordatoris',
         'Removed subscription for user "%s".' => 'Cancel·lar subscripció',

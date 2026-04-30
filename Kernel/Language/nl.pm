@@ -32,7 +32,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d-%m-%Y';
     $Self->{DateInputFormat}     = '%d-%m-%Y';
     $Self->{DateInputFormatLong} = '%d-%m-%Y - %T';
-    $Self->{Completeness}        = 0.477635782747604;
+    $Self->{Completeness}        = 0.477559495288293;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -4490,7 +4490,7 @@ sub Data {
         'Available tickets' => 'Beschikbare tickets',
         'including subqueues' => 'Inclusief sub-wachtrijen',
         'excluding subqueues' => 'Exclusief sub-wachtrijen',
-        'QueueView' => 'Wachtrijoverzicht',
+        'Queue View' => '',
 
         # Perl Module: Kernel/Modules/AgentTicketResponsibleView.pm
         'My Responsible Tickets' => 'Mijn verantwoordelijke tickets',
@@ -9224,6 +9224,7 @@ Het Helpdesk Team
         'Public Calendar' => 'Publieke Kalender',
         'Public calendar.' => 'Publieke kalender.',
         'Queue view' => 'Wachtrijoverzicht',
+        'QueueView' => 'Wachtrijoverzicht',
         'Refresh interval' => 'Interval',
         'Reminder Tickets' => 'Tickets met herinnering',
         'Removed subscription for user "%s".' => 'Removed subscription for user "%s".',

@@ -29,7 +29,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%m/%d/%Y';
     $Self->{DateInputFormat}     = '%m/%d/%Y';
     $Self->{DateInputFormatLong} = '%m/%d/%Y - %T';
-    $Self->{Completeness}        = 0.421565495207668;
+    $Self->{Completeness}        = 0.42149816323271;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -4487,7 +4487,7 @@ sub Data {
         'Available tickets' => 'Tiketi zinazopatikana',
         'including subqueues' => '',
         'excluding subqueues' => '',
-        'QueueView' => 'Angalia foleni',
+        'Queue View' => '',
 
         # Perl Module: Kernel/Modules/AgentTicketResponsibleView.pm
         'My Responsible Tickets' => 'Tiketi zangu zinazowajibika',
@@ -9213,6 +9213,7 @@ Thanks for your help!
         'Public Calendar' => '',
         'Public calendar.' => '',
         'Queue view' => 'Mandhari ya foleni',
+        'QueueView' => 'Angalia foleni',
         'Refresh interval' => 'muda wa kuonyesha',
         'Reminder Tickets' => 'Tiketi za kumbukumbu',
         'Removed subscription for user "%s".' => 'Toa kujiunga kwa mtumiaji "%s".',

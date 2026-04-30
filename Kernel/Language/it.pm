@@ -35,7 +35,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d/%m/%Y';
     $Self->{DateInputFormat}     = '%d/%m/%Y';
     $Self->{DateInputFormatLong} = '%d/%m/%Y - %T';
-    $Self->{Completeness}        = 0.577635782747604;
+    $Self->{Completeness}        = 0.577543523398818;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -4493,7 +4493,7 @@ sub Data {
         'Available tickets' => 'Ticket disponibili',
         'including subqueues' => 'incluse le sottocode',
         'excluding subqueues' => 'escluse le sottocode',
-        'QueueView' => 'Vista della coda',
+        'Queue View' => '',
 
         # Perl Module: Kernel/Modules/AgentTicketResponsibleView.pm
         'My Responsible Tickets' => 'Miei ticket di cui sono il responsabile',
@@ -9231,6 +9231,7 @@ Il tuo helpdesk.
         'Public Calendar' => '',
         'Public calendar.' => '',
         'Queue view' => 'Vista per Coda',
+        'QueueView' => 'Vista della coda',
         'Refresh interval' => 'Intervallo di aggiornamento',
         'Reminder Tickets' => 'Tickets di promemoria',
         'Removed subscription for user "%s".' => 'Rimossa sottoscrizione per l\'utente "%s".',

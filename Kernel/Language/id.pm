@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d/%m/%Y';
     $Self->{DateInputFormat}     = '%d/%m/%Y';
     $Self->{DateInputFormatLong} = '%d/%m/%Y - %T';
-    $Self->{Completeness}        = 0.58258785942492;
+    $Self->{Completeness}        = 0.582494809135921;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -4486,7 +4486,7 @@ bin/znuny.Daemon.pl status\').',
         'Available tickets' => 'Tiket yang tersedia',
         'including subqueues' => 'Termasuk sub-antrian',
         'excluding subqueues' => 'Tidak termasuk sub-antrian',
-        'QueueView' => 'TampilanAntrian',
+        'Queue View' => '',
 
         # Perl Module: Kernel/Modules/AgentTicketResponsibleView.pm
         'My Responsible Tickets' => 'Tiket yang saya pertanggung jawabkan',
@@ -9221,6 +9221,7 @@ Helpdesk Team Anda
         'Public Calendar' => '',
         'Public calendar.' => '',
         'Queue view' => 'lihat antrian',
+        'QueueView' => 'TampilanAntrian',
         'Refresh interval' => 'refresh interval',
         'Reminder Tickets' => 'Tiket pengingat',
         'Removed subscription for user "%s".' => 'Hapus berlangganan untuk pengguna "%s".',

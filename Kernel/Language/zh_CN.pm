@@ -33,7 +33,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y.%m.%d';
     $Self->{DateInputFormat}     = '%Y.%m.%d';
     $Self->{DateInputFormatLong} = '%Y.%m.%d - %T';
-    $Self->{Completeness}        = 0.862619808306709;
+    $Self->{Completeness}        = 0.862482031624341;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -4491,7 +4491,7 @@ sub Data {
         'Available tickets' => '未锁定的工单',
         'including subqueues' => '包含子队列',
         'excluding subqueues' => '排除子队列',
-        'QueueView' => '队列视图',
+        'Queue View' => '',
 
         # Perl Module: Kernel/Modules/AgentTicketResponsibleView.pm
         'My Responsible Tickets' => '我负责的工单',
@@ -9224,6 +9224,7 @@ Thanks for your help!
         'Public Calendar' => '公共日历',
         'Public calendar.' => '公共日历。',
         'Queue view' => '队列视图',
+        'QueueView' => '队列视图',
         'Refresh interval' => '刷新间隔',
         'Reminder Tickets' => '提醒的工单',
         'Removed subscription for user "%s".' => '用户“%s”已移除的关注。',

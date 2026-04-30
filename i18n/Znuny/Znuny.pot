@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2026-04-21 08:48+0000\n"
+"POT-Creation-Date: 2026-04-29 19:25+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12859,7 +12859,7 @@ msgid "excluding subqueues"
 msgstr ""
 
 #. Perl Module: Kernel/Modules/AgentTicketQueue.pm
-msgid "QueueView"
+msgid "Queue View"
 msgstr ""
 
 #. Perl Module: Kernel/Modules/AgentTicketResponsibleView.pm
@@ -24207,6 +24207,10 @@ msgstr ""
 
 #. SysConfig
 msgid "Queue view"
+msgstr ""
+
+#. SysConfig
+msgid "QueueView"
 msgstr ""
 
 #. SysConfig

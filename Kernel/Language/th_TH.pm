@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d/%m/%Y';
     $Self->{DateInputFormat}     = '%d/%m/%Y';
     $Self->{DateInputFormatLong} = '%d/%m/%Y - %T';
-    $Self->{Completeness}        = 0.504632587859425;
+    $Self->{Completeness}        = 0.50455198850024;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -4487,7 +4487,7 @@ sub Data {
         'Available tickets' => 'ตั๋วที่สามารถใช้ได้',
         'including subqueues' => 'รวมถึงคิวย่อย',
         'excluding subqueues' => 'ไม่รวมคิวย่อย',
-        'QueueView' => 'มุมมองของคิว',
+        'Queue View' => '',
 
         # Perl Module: Kernel/Modules/AgentTicketResponsibleView.pm
         'My Responsible Tickets' => 'ตั๋วที่ฉันมีความรับผิดชอบ',
@@ -9224,6 +9224,7 @@ Thanks for your help!
         'Public Calendar' => '',
         'Public calendar.' => '',
         'Queue view' => 'มุมมองคิว',
+        'QueueView' => 'มุมมองของคิว',
         'Refresh interval' => 'ช่วงเวลาการฟื้นฟู',
         'Reminder Tickets' => 'ตั๋วการแจ้งเตือน',
         'Removed subscription for user "%s".' => '',

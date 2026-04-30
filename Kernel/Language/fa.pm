@@ -29,7 +29,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d.%m.%Y';
     $Self->{DateInputFormat}     = '%d.%m.%Y';
     $Self->{DateInputFormatLong} = '%d.%m.%Y - %T';
-    $Self->{Completeness}        = 0.593130990415335;
+    $Self->{Completeness}        = 0.593036256189107;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -4490,7 +4490,7 @@ sub Data {
         'Available tickets' => 'درخواست موجود',
         'including subqueues' => 'از جمله subqueues',
         'excluding subqueues' => 'به استثنای subqueues',
-        'QueueView' => 'نمای صف درخواست',
+        'Queue View' => '',
 
         # Perl Module: Kernel/Modules/AgentTicketResponsibleView.pm
         'My Responsible Tickets' => 'درخواست‌های وظیفه من',
@@ -9224,6 +9224,7 @@ Thanks for your help!
         'Public Calendar' => '',
         'Public calendar.' => '',
         'Queue view' => 'نمای صف درخواست',
+        'QueueView' => 'نمای صف درخواست',
         'Refresh interval' => 'بارگذاری مجدد ورودی',
         'Reminder Tickets' => 'درخواست‌های یادآوری شده',
         'Removed subscription for user "%s".' => 'عضویت حذف شده برای کاربر"%s".',

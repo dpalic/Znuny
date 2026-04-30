@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d.%m.%Y';
     $Self->{DateInputFormat}     = '%d.%m.%Y';
     $Self->{DateInputFormatLong} = '%d.%m.%Y - %T';
-    $Self->{Completeness}        = 0.145207667731629;
+    $Self->{Completeness}        = 0.145184475323431;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -4484,7 +4484,7 @@ sub Data {
         'Available tickets' => 'Vé có sẵn',
         'including subqueues' => '',
         'excluding subqueues' => '',
-        'QueueView' => 'Xem hàng đợi',
+        'Queue View' => '',
 
         # Perl Module: Kernel/Modules/AgentTicketResponsibleView.pm
         'My Responsible Tickets' => 'Vé trách nhiệm của tôi',
@@ -9219,6 +9219,7 @@ Cảm ơn sự giúp đỡ của bạn!
         'Public Calendar' => '',
         'Public calendar.' => '',
         'Queue view' => '',
+        'QueueView' => 'Xem hàng đợi',
         'Refresh interval' => '',
         'Reminder Tickets' => 'Nhắc nhở Vé',
         'Removed subscription for user "%s".' => 'Removed subscription for user "%s".',

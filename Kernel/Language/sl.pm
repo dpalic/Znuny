@@ -31,7 +31,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d.%m.%Y';
     $Self->{DateInputFormat}     = '%d.%m.%Y';
     $Self->{DateInputFormatLong} = '%d.%m.%Y - %T';
-    $Self->{Completeness}        = 0.204952076677316;
+    $Self->{Completeness}        = 0.204919341958154;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -4489,7 +4489,7 @@ sub Data {
         'Available tickets' => 'Na voljo zahtevkov',
         'including subqueues' => '',
         'excluding subqueues' => '',
-        'QueueView' => 'Pregled vrst',
+        'Queue View' => '',
 
         # Perl Module: Kernel/Modules/AgentTicketResponsibleView.pm
         'My Responsible Tickets' => 'Zahtevki za katere sem odgovoren',
@@ -9212,6 +9212,7 @@ Thanks for your help!
         'Public Calendar' => '',
         'Public calendar.' => '',
         'Queue view' => 'Pregled po vrstah',
+        'QueueView' => 'Pregled vrst',
         'Refresh interval' => 'Interval osveževanja',
         'Reminder Tickets' => 'Opomnik na zahtevek',
         'Removed subscription for user "%s".' => 'Naročnina za uporabnika "%s" izključena.',
