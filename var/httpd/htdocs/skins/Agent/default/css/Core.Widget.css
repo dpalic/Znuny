@@ -1984,7 +1984,7 @@ did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.
     .ActionsSideBar.LayoutFixedSidebar .ContentGrid .WidgetSimple.GridGroups .Header::after {
         content: '';
         position: absolute;
-        top: 10px;
+        top: 20px;
         left: 0;
         height: 1px;
         width: calc(100% - 23px);
