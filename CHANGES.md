@@ -1,4 +1,4 @@
-# 7.3.3 2026-xx-xx
+# 7.3.3 2026-??-??
  - 2026-04-30 Removed IIS 6. Znuny does not officially support IIS 6.0.
 
 # 7.3.2 2026-04-29
