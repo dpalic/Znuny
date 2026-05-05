@@ -59,7 +59,7 @@
                     <a class="ActivityIcon icon-hover-md">
                         <span class="btn-wrapper">
                             <i class="fa fa-bell"></i>
-                            <span id='ActivityBellState'class="[% Data.ActivityBellClass | html %]"></span>
+                            <span id='ActivityBellState' class="[% Data.ActivityBellClass | html %]"></span>
                         </span>
                     </a>
                     <div class="dropdown-menu activity-dropdown right">

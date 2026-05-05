@@ -1,4 +1,5 @@
 # 7.3.3 2026-??-??
+ - 2026-05-05 Fixed: Missing whitespace between HTML attributes results in invalid markup. Thanks to @LuBroering (Lukas Bröring Sector Nord AG) for reporting the issue. [#792](https://github.com/znuny/Znuny/issues/792)
  - 2026-05-04 Changed Name of User with ID 1.
  - 2026-04-30 Fixed: Security option for sending mails cannot be removed manually in compose dialog when queue has a default signing key configured. Thanks for reporting to @LSI-BassdScho. [#766](https://github.com/znuny/Znuny/issues/766).
  - 2026-04-30 Added: Extend Calendar::GetTextColor for RGBA hex and fix #RGB blue parsing. Thanks to @LuBroering (Lukas Bröring Sector Nord AG) for reporting the issue. [#786](https://github.com/znuny/Znuny/issues/786)
