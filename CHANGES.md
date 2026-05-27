@@ -12,6 +12,7 @@
  - 2026-04-30 Added: Extend Calendar::GetTextColor for RGBA hex and fix #RGB blue parsing. Thanks to @LuBroering (Lukas Bröring Sector Nord AG) for reporting the issue. [#786](https://github.com/znuny/Znuny/issues/786)
  - 2026-04-30 Removed IIS 6. Znuny does not officially support IIS 6.0.
  - 2026-04-30 Fixed: Archiving tickets removes flags for mentions and "seen".
+ - 2026-04-21 Security: Fixed: XSS via JavaScript in URL parameters in communication log admin view.
 
 # 7.3.2 2026-04-29
  - 2026-04-22 Added: EmailSecurity section from Article to GenericInterface. Thanks to @DonMarlowne. [PR#612](https://github.com/znuny/Znuny/pull/612)
