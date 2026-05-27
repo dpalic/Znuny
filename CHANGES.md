@@ -1,5 +1,6 @@
 # 7.3.3 2026-??-??
  - 2026-05-26 Fixed: Package manager does not use the user ID for package operations.
+ - 2026-05-20 CVE-2025-26843: Fixed: Infinite loop on replacing tags in template generator.
  - 2026-05-20 Changed: Updated CKEditor 5 to version 48.0.0.
  - 2026-05-19 Fixed: Deployment of custom translations during migration.
  - 2026-05-19 Fixed: Default RTE label "Rich Text Editor" is shown in some dialogs additionally to the intended field label.
