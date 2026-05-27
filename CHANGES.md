@@ -1,4 +1,4 @@
-# 7.3.3 2026-??-??
+# 7.3.3 2026-05-27
  - 2026-05-26 Fixed: Package manager does not use the user ID for package operations.
  - 2026-05-20 CVE-2025-26843: Fixed: Infinite loop on replacing tags in template generator.
  - 2026-05-20 Changed: Updated CKEditor 5 to version 48.0.0.
@@ -612,6 +612,14 @@
  - 2022-08-22 Core.UI.InputFields.js - Changed the behaviour of the Core.UI.InputFields.js. Now no fields are automatically enlarged or reduced.
  - 2022-08-08 Admin - Added counter of AdminSettingPages per widget and additional focus by filter.
  - 2022-07-15 Frontend::ToolBarModule - Refactored the Toolbar registration, position and view.
+
+# 6.5.21 2026-05-27
+ - 2026-05-26 Fixed: Package manager does not use the user ID for package operations.
+ - 2026-05-20 CVE-2025-26843: Fixed: Infinite loop on replacing tags in template generator.
+ - 2026-05-04 Changed Name of User with ID 1.
+ - 2026-05-01 CVE-2025-59490: Follow-up fix for scrambled script tags.
+ - 2026-04-21 Security: Fixed: XSS via JavaScript in URL parameters in communication log admin view.
+ - 2026-03-25 Security: Fixed: XSS in user preferences DB.
 
 # 6.5.20 2026-04-29
  - 2026-04-22 Added: EmailSecurity section from Article to GenericInterface. Thanks to @DonMarlowne. [PR#612](https://github.com/znuny/Znuny/pull/612)
