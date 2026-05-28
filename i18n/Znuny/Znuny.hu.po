@@ -6928,7 +6928,7 @@ msgstr "Ügyfél-felhasználó"
 msgid "Note: Customer is invalid!"
 msgstr "Megjegyzés: Az ügyfél érvénytelen!"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentCustomerUserAddressBook.tt
+#. Perl Module: Kernel/Modules/AgentCustomerUserAddressBook.pm
 msgid "Customer User Address Book"
 msgstr "Ügyfél-felhasználó címjegyzék"
 
