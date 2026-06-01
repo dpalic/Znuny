@@ -1,4 +1,5 @@
 # 7.3.4 2026-??-??
+ - 2026-06-01 Fixed: Copy ticket number icon missing when Ticket::Hook is customized. Thanks to @mamojdick for reporting the issue. [#805](https://github.com/znuny/Znuny/issues/805)
  - 2026-05-08 Fixed: Configured limit for activities is not applied correctly.
 
 # 7.3.3 2026-05-27
