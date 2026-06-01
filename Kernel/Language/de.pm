@@ -2945,6 +2945,7 @@ sub Data {
         # TT Template: Kernel/Output/HTML/Templates/Standard/CustomerError.tt
         'Error' => 'Fehler',
         'An Error Occurred' => 'Ein Fehler ist aufgetreten',
+        'Back to the previous page' => 'Zurück zur vorhergehenden Seite',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/CustomerFooter.tt
         'Powered by %s' => 'Powered by %s',
@@ -3210,7 +3211,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/NoPermission.tt
         'Insufficient Rights' => 'Nicht ausreichende Rechte',
-        'Back to the previous page' => 'Zurück zur vorhergehenden Seite',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/NotificationEvent/Email/Alert.tt
         'Alert' => 'Warnung',

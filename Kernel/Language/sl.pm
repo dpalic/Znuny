@@ -2949,6 +2949,7 @@ sub Data {
         # TT Template: Kernel/Output/HTML/Templates/Standard/CustomerError.tt
         'Error' => 'Napaka',
         'An Error Occurred' => '',
+        'Back to the previous page' => 'Nazaj na prejšnjo stran',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/CustomerFooter.tt
         'Powered by %s' => '',
@@ -3214,7 +3215,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/NoPermission.tt
         'Insufficient Rights' => 'Nezadostne pravice',
-        'Back to the previous page' => 'Nazaj na prejšnjo stran',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/NotificationEvent/Email/Alert.tt
         'Alert' => '',
