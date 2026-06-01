@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%m-%d';
     $Self->{DateInputFormat}     = '%Y-%m-%d';
     $Self->{DateInputFormatLong} = '%Y-%m-%d %T';
-    $Self->{Completeness}        = 0.834877036090706;
+    $Self->{Completeness}        = 0.834743733035287;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -2407,8 +2407,8 @@ sub Data {
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentCustomerUserAddressBook.tt
         'Search for recipients and add the results as \'%s\'.' => '수신자를 검색하고 결과를 \'%s\'로 추가하세요.',
         'Search template' => '템플릿 검색',
-        'Create Template' => '템플릿 생성',
         'Create New' => '새로 생성',
+        'Create Template' => '템플릿 생성',
         'Save changes in template' => '템플릿의 변경 저장',
         'Filters in use' => '사용중인 필터',
         'Additional filters' => '추가 필터',
@@ -4210,6 +4210,7 @@ sub Data {
             '',
 
         # Perl Module: Kernel/Modules/AdminTemplateAttachment.pm
+        'The selected template type does not support attachments.' => '',
         'Change Attachment Relations for Template' => '템플릿에 대한 첨부 파일 관계 변경',
         'Change Template Relations for Attachment' => '첨부 파일에 대한 템플릿 관계 변경',
 

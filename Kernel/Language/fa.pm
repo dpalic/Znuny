@@ -29,7 +29,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d.%m.%Y';
     $Self->{DateInputFormat}     = '%d.%m.%Y';
     $Self->{DateInputFormatLong} = '%d.%m.%Y - %T';
-    $Self->{Completeness}        = 0.592941552219738;
+    $Self->{Completeness}        = 0.592846878492735;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -2413,8 +2413,8 @@ sub Data {
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentCustomerUserAddressBook.tt
         'Search for recipients and add the results as \'%s\'.' => '',
         'Search template' => 'الگوی جستجو',
-        'Create Template' => 'ساخت قالب',
         'Create New' => 'ساخت مورد جدید',
+        'Create Template' => 'ساخت قالب',
         'Save changes in template' => 'ذخیره تغییرات در قالب',
         'Filters in use' => 'فیلترها برای استفاده',
         'Additional filters' => 'فیلتر های اضافی',
@@ -4216,6 +4216,7 @@ sub Data {
             '',
 
         # Perl Module: Kernel/Modules/AdminTemplateAttachment.pm
+        'The selected template type does not support attachments.' => '',
         'Change Attachment Relations for Template' => 'روابط تغییر فایل پیوست برای الگو',
         'Change Template Relations for Attachment' => 'تغییر روابط الگو برای پیوست',
 

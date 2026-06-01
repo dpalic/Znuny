@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d/%m/%Y';
     $Self->{DateInputFormat}     = '%d/%m/%Y';
     $Self->{DateInputFormatLong} = '%d/%m/%Y - %T';
-    $Self->{Completeness}        = 0.582401788565953;
+    $Self->{Completeness}        = 0.582308797700782;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -2408,8 +2408,8 @@ EMAILADDRESS:info@example.com dari, kepada atau Cc.',
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentCustomerUserAddressBook.tt
         'Search for recipients and add the results as \'%s\'.' => '',
         'Search template' => 'Pencarian template',
-        'Create Template' => 'Membuat template',
         'Create New' => 'Membuat baru',
+        'Create Template' => 'Membuat template',
         'Save changes in template' => 'Simpan pengubahan di dalam template',
         'Filters in use' => 'Filter digunakan',
         'Additional filters' => 'Filter tambahan',
@@ -4212,6 +4212,7 @@ bin/znuny.Daemon.pl status\').',
             '',
 
         # Perl Module: Kernel/Modules/AdminTemplateAttachment.pm
+        'The selected template type does not support attachments.' => '',
         'Change Attachment Relations for Template' => 'Ubah lampiran hubungan untuk template',
         'Change Template Relations for Attachment' => 'Ubah template relations untuk lampiran',
 

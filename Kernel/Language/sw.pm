@@ -29,7 +29,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%m/%d/%Y';
     $Self->{DateInputFormat}     = '%m/%d/%Y';
     $Self->{DateInputFormatLong} = '%m/%d/%Y - %T';
-    $Self->{Completeness}        = 0.421430852762696;
+    $Self->{Completeness}        = 0.421363563787322;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -2410,8 +2410,8 @@ sub Data {
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentCustomerUserAddressBook.tt
         'Search for recipients and add the results as \'%s\'.' => '',
         'Search template' => 'Tafuta kielezo',
-        'Create Template' => 'Tengeneza kielezo',
         'Create New' => 'Tenngeneza mpya',
+        'Create Template' => 'Tengeneza kielezo',
         'Save changes in template' => 'Hifadhi mabadiliko kwenye kielezo',
         'Filters in use' => 'Chuja katika kutumia',
         'Additional filters' => 'Vichuja vilivyoongezwa',
@@ -4213,6 +4213,7 @@ sub Data {
             '',
 
         # Perl Module: Kernel/Modules/AdminTemplateAttachment.pm
+        'The selected template type does not support attachments.' => '',
         'Change Attachment Relations for Template' => 'Badili mahusiano ya kiambatanisho kwa kielezo',
         'Change Template Relations for Attachment' => 'Badili mahusiano ya kielezo kwa kielezo',
 

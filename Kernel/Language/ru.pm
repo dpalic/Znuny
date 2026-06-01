@@ -38,7 +38,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d.%m.%Y';
     $Self->{DateInputFormat}     = '%d.%m.%Y';
     $Self->{DateInputFormatLong} = '%d.%m.%Y - %T';
-    $Self->{Completeness}        = 0.83934845097413;
+    $Self->{Completeness}        = 0.839214433977327;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2419,8 +2419,8 @@ sub Data {
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentCustomerUserAddressBook.tt
         'Search for recipients and add the results as \'%s\'.' => 'Найти получателей и добавить результаты как \'%s\'.',
         'Search template' => 'Шаблон поиска',
-        'Create Template' => 'Создать шаблон',
         'Create New' => 'Создать новый',
+        'Create Template' => 'Создать шаблон',
         'Save changes in template' => 'Сохранить изменения в шаблоне',
         'Filters in use' => 'Используемые атрибуты фильтра',
         'Additional filters' => 'Дополнительные атрибуты фильтра',
@@ -4222,6 +4222,7 @@ sub Data {
             '',
 
         # Perl Module: Kernel/Modules/AdminTemplateAttachment.pm
+        'The selected template type does not support attachments.' => '',
         'Change Attachment Relations for Template' => 'Изменить связи Вложений с Шаблоном',
         'Change Template Relations for Attachment' => 'Изменить связи Шаблонов с Вложением',
 

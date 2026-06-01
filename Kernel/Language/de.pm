@@ -27,7 +27,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d.%m.%Y';
     $Self->{DateInputFormat}     = '%d.%m.%Y';
     $Self->{DateInputFormatLong} = '%d.%m.%Y - %T';
-    $Self->{Completeness}        = 0.999840306611306;
+    $Self->{Completeness}        = 0.999840332109213;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2408,8 +2408,8 @@ sub Data {
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentCustomerUserAddressBook.tt
         'Search for recipients and add the results as \'%s\'.' => 'Suchen Sie nach Empfängern und fügen Sie die Ergebnisse als \'%s\' hinzu.',
         'Search template' => 'Suchvorlage',
-        'Create Template' => 'Vorlage anlegen',
         'Create New' => 'Neue anlegen',
+        'Create Template' => 'Vorlage anlegen',
         'Save changes in template' => 'Änderungen in der Vorlage speichern',
         'Filters in use' => 'Verwendete Filter',
         'Additional filters' => 'Zusätzliche Filter',
@@ -4211,6 +4211,7 @@ sub Data {
             'Fehler beim Hinzufügen/Aktualisieren der folgenden Standardvorlagen: %s. Bitte Logs für weitere Informationen prüfen.',
 
         # Perl Module: Kernel/Modules/AdminTemplateAttachment.pm
+        'The selected template type does not support attachments.' => 'Der ausgewählte Vorlagentyp unterstützt keine Anhänge',
         'Change Attachment Relations for Template' => 'Anhangs-Zuordnungen für Vorlage verändern',
         'Change Template Relations for Attachment' => 'Vorlagen-Zuordnungen für Anhang verändern',
 
