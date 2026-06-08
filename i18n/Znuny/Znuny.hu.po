@@ -2,15 +2,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2023-03-23 09:27+0000\n"
-"PO-Revision-Date: 2026-05-04 21:08+0000\n"
+"PO-Revision-Date: 2026-06-08 12:50+0000\n"
 "Last-Translator: Balázs Úr <balazs@urbalazs.hu>\n"
-"Language-Team: Hungarian <https://translations.znuny.org/projects/znuny/znuny/hu/>\n"
+"Language-Team: Hungarian <https://translations.znuny.org/projects/znuny/"
+"znuny/hu/>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 5.17.1\n"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminACL.tt
 msgid "Actions"
@@ -14007,6 +14008,8 @@ msgstr "Kiszolgáló adatbázis karakterkészlete"
 #. Perl Module: Kernel/System/SupportDataCollector/Plugin/Database/mysql/Charset.pm
 msgid "This character set is not yet supported. Please convert your database to the character set 'utf8'."
 msgstr ""
+"Ez a karakterkészlet még nem támogatott. Alakítsa át az adatbázisát „utf8” "
+"karakterkészletűre."
 
 #. Perl Module: Kernel/System/SupportDataCollector/Plugin/Database/mysql/Charset.pm
 msgid "The setting character_set_database needs to be 'utf8'."
@@ -15274,15 +15277,19 @@ msgstr "Meghatározza a Rich Text szerkesztőben kiválasztható betűkészletek
 
 #. XML Definition: Kernel/Config/Files/XML/Framework.xml
 msgid "Defines the selectable format tags in the rich text editor."
-msgstr ""
+msgstr "Meghatározza a Rich Text szerkesztőben kiválasztható formátumcímkéket."
 
 #. XML Definition: Kernel/Config/Files/XML/Framework.xml
 msgid "Defines additional plugins for use in the rich text editor."
 msgstr ""
+"Meghatározza a további bővítményeket a Rich Text szerkesztőben való "
+"használathoz."
 
 #. XML Definition: Kernel/Config/Files/XML/Framework.xml
 msgid "Defines extra content that is allowed for use in the rich text editor."
 msgstr ""
+"Meghatározza azt a további tartalmat, amely használata megengedett a Rich "
+"Text szerkesztőben."
 
 #. XML Definition: Kernel/Config/Files/XML/Framework.xml
 msgid "Global settings for all popup profiles."
@@ -20015,6 +20022,8 @@ msgstr "A megjelenített mellékletfájlnevek legnagyobb hossza a jegynagyítás
 #. XML Definition: Kernel/Config/Files/XML/Znuny.xml
 msgid "General settings for autocompletion in rich text editor."
 msgstr ""
+"Általános beállítások a Rich Text szerkesztőben lévő automatikus "
+"kiegészítéshez."
 
 #. XML Definition: Kernel/Config/Files/XML/Znuny.xml
 msgid "Rich text editor configuration for autocompletion module."
@@ -24168,11 +24177,11 @@ msgstr "Az Apple érintésikon az ügyintézői felülethez az „alapértelmeze
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBulk.tt
 msgid "Mark tickets as seen"
-msgstr ""
+msgstr "Jegyek megjelölése olvasottként"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketBulk.tt
 msgid "Mark tickets as unseen"
-msgstr ""
+msgstr "Jegyek megjelölése olvasatlanként"
 
 #. Perl Module: Kernel/Output/HTML/ArticleAction/MarkArticleSeenUnseen.pm
 msgid "Mark article as unseen"
@@ -24429,10 +24438,13 @@ msgstr "Az adatbázisban lévő fordítások nincsenek szinkronizálva. Szinkron
 #. XML Definition: Kernel/Config/Files/XML/Znuny.xml
 msgid "Frontend module registration for the agent admin interface."
 msgstr ""
+"Előtétprogram-modul regisztráció az ügyintéző adminisztrátori felületéhez."
 
 #. XML Definition: Kernel/Config/Files/XML/Znuny.xml
 msgid "This configuration defines the cache settings for the Znuny-DatabasBackend (default: 1 day)."
 msgstr ""
+"Ez a beállítás határozza meg a Znuny adatbázis-háttérprogramjának "
+"gyorsítótár-beállításait (alapértelmezett: 1 nap)."
 
 #. XML Definition: Kernel/Config/Files/XML/Znuny.xml
 msgid "Defines a module to display a notification if translation deployment is needed."
@@ -24848,7 +24860,7 @@ msgstr "Hivatkozás célja"
 
 #. SysConfig
 msgid "Process Ticket Catalog"
-msgstr ""
+msgstr "Folyamatjegy-katalógus"
 
 #. SysConfig
 msgid "Process Ticket Category: Define a process category."
@@ -24864,7 +24876,7 @@ msgstr "Folyamatjegy kategóriája: folyamat hivatkozáscéljának meghatározá
 
 #. SysConfig
 msgid "Process Ticket Catalog."
-msgstr ""
+msgstr "Folyamatjegy-katalógus."
 
 #. XML Definition: Kernel/Config/Files/XML/Znuny.xml
 msgid "Limits the amount of emails which are sent within one batch. Disable this setting to have no limit."
@@ -25056,7 +25068,7 @@ msgstr "Ügyféljavaslatok"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailOutbound.tt
 msgid "Undo & Close"
-msgstr ""
+msgstr "Visszavonás és bezárás"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminSendmailConfig.tt
 msgid "Add Outbound Email Profile"
@@ -25288,11 +25300,13 @@ msgstr "Jegyinformációk"
 
 #. Perl Module: Kernel/Modules/AgentSession.pm
 msgid "Invalid subaction!"
-msgstr ""
+msgstr "Érvénytelen alművelet!"
 
 #. XML Definition: Kernel/Config/Files/XML/Znuny.xml
 msgid "List of session keys that are allowed to be updated by UpdateAJAX subaction of frontend module AgentSession."
 msgstr ""
+"Azon munkamenetkulcsok listája, amelyeknél engedélyezett, hogy az ügyintéző-"
+"munkameneti előtétprogram-modul UpdateAJAX alművelete frissítse azokat."
 
 #. SysConfig
 msgid "Agent Session."
@@ -25349,8 +25363,9 @@ msgstr "Várólista nézet"
 #. XML Definition: Kernel/Config/Files/XML/Ticket.xml
 msgid "Controls if the ticket mention entries are removed when a ticket is archived."
 msgstr ""
+"Azt szabályozza, hogy a jegy említésbejegyzései el legyenek-e távolítva a "
+"jegy archiválásakor."
 
 #. Perl Module: Kernel/Modules/AdminTemplateAttachment.pm
 msgid "The selected template type does not support attachments."
-msgstr ""
-
+msgstr "A kiválasztott sablontípus nem támogat mellékleteket."
