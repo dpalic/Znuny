@@ -33,7 +33,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y.%m.%d';
     $Self->{DateInputFormat}     = '%Y.%m.%d';
     $Self->{DateInputFormatLong} = '%Y.%m.%d - %T';
-    $Self->{Completeness}        = 0.862206610250679;
+    $Self->{Completeness}        = 0.861106681549992;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -2274,7 +2274,8 @@ sub Data {
             '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminTranslation.tt
-        'Translation' => '',
+        'Import Translation' => '',
+        'Export Translation' => '',
         'Translation Management' => '',
         'Add Translation' => '',
         'Edit Translation' => '',
@@ -4220,6 +4221,15 @@ sub Data {
         'The selected template type does not support attachments.' => '',
         'Change Attachment Relations for Template' => '为模板指定附件',
         'Change Template Relations for Attachment' => '为附件指定模板',
+
+        # Perl Module: Kernel/Modules/AdminTranslation.pm
+        'Import / Export' => '',
+        'Here you can upload a configuration file to import translations to your system. The file needs to be in .yml | .csv | .xlsx format.' =>
+            '',
+        'Could not find translation for ID %s.' => '',
+        'Translation stored.' => '',
+        'Storing translation failed.' => '',
+        'Translations synchronized.' => '',
 
         # Perl Module: Kernel/Modules/AdminType.pm
         'Need Type!' => '需要类型！',
@@ -9394,6 +9404,7 @@ Thanks for your help!
         'To accept login information, such as an EULA or license.' => '接受登录信息，如EULA（最终用户许可协议）或许可。',
         'To download attachments.' => '下载附件。',
         'To view HTML attachments.' => '查看HTML附件。',
+        'Translation' => '',
         'Tree view' => '树形视图',
         'Turkish' => '土耳其语',
         'Tweak the system as you wish.' => '根据需要调整系统。',

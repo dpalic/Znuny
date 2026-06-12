@@ -27,7 +27,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d.%m.%Y';
     $Self->{DateInputFormat}     = '%d.%m.%Y';
     $Self->{DateInputFormatLong} = '%d.%m.%Y - %T';
-    $Self->{Completeness}        = 0.858853584544148;
+    $Self->{Completeness}        = 0.857757933343964;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2268,7 +2268,8 @@ sub Data {
             '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminTranslation.tt
-        'Translation' => '',
+        'Import Translation' => '',
+        'Export Translation' => '',
         'Translation Management' => '',
         'Add Translation' => '',
         'Edit Translation' => '',
@@ -4214,6 +4215,15 @@ sub Data {
         'The selected template type does not support attachments.' => '',
         'Change Attachment Relations for Template' => 'Промени релације са прилозима за шаблон',
         'Change Template Relations for Attachment' => 'Промени релације са шаблонима за прилог',
+
+        # Perl Module: Kernel/Modules/AdminTranslation.pm
+        'Import / Export' => '',
+        'Here you can upload a configuration file to import translations to your system. The file needs to be in .yml | .csv | .xlsx format.' =>
+            '',
+        'Could not find translation for ID %s.' => '',
+        'Translation stored.' => '',
+        'Storing translation failed.' => '',
+        'Translations synchronized.' => '',
 
         # Perl Module: Kernel/Modules/AdminType.pm
         'Need Type!' => 'Неопходан Type!',
@@ -9389,6 +9399,7 @@ Thanks for your help!
         'To accept login information, such as an EULA or license.' => 'Прихватање информација приликом пријављивања, нпр. EULA изјава или лиценца.',
         'To download attachments.' => 'За преузимање прилога.',
         'To view HTML attachments.' => 'За преглед HTML прилога.',
+        'Translation' => '',
         'Tree view' => 'Приказ у облику стабла',
         'Turkish' => 'Турски',
         'Tweak the system as you wish.' => 'Прилагодите систем својим потребама.',

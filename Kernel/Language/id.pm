@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d/%m/%Y';
     $Self->{DateInputFormat}     = '%d/%m/%Y';
     $Self->{DateInputFormatLong} = '%d/%m/%Y - %T';
-    $Self->{Completeness}        = 0.582308797700782;
+    $Self->{Completeness}        = 0.581565938446819;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -2268,7 +2268,8 @@ EMAILADDRESS:info@example.com dari, kepada atau Cc.',
             '',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminTranslation.tt
-        'Translation' => '',
+        'Import Translation' => '',
+        'Export Translation' => '',
         'Translation Management' => '',
         'Add Translation' => '',
         'Edit Translation' => '',
@@ -4215,6 +4216,15 @@ bin/znuny.Daemon.pl status\').',
         'The selected template type does not support attachments.' => '',
         'Change Attachment Relations for Template' => 'Ubah lampiran hubungan untuk template',
         'Change Template Relations for Attachment' => 'Ubah template relations untuk lampiran',
+
+        # Perl Module: Kernel/Modules/AdminTranslation.pm
+        'Import / Export' => '',
+        'Here you can upload a configuration file to import translations to your system. The file needs to be in .yml | .csv | .xlsx format.' =>
+            '',
+        'Could not find translation for ID %s.' => '',
+        'Translation stored.' => '',
+        'Storing translation failed.' => '',
+        'Translations synchronized.' => '',
 
         # Perl Module: Kernel/Modules/AdminType.pm
         'Need Type!' => 'Perlu diketik!',
@@ -9391,6 +9401,7 @@ Helpdesk Team Anda
         'To accept login information, such as an EULA or license.' => 'Untuk menerima masuk nya informasi, seperti EULA atau surat izin.',
         'To download attachments.' => 'Untuk unduh lampiran',
         'To view HTML attachments.' => '',
+        'Translation' => '',
         'Tree view' => 'Tampilan struktur pohon',
         'Turkish' => 'Turkish',
         'Tweak the system as you wish.' => '',
