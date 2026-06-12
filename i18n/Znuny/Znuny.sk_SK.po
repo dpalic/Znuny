@@ -7754,7 +7754,7 @@ msgstr ""
 msgid "Date Invalid!"
 msgstr "Chybný dátum"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
+#. JS File: var/httpd/htdocs/js/Core.Agent.TicketAction.js
 msgid "Customer user address book"
 msgstr ""
 

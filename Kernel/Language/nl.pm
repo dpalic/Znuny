@@ -32,7 +32,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d-%m-%Y';
     $Self->{DateInputFormat}     = '%d-%m-%Y';
     $Self->{DateInputFormatLong} = '%d-%m-%Y - %T';
-    $Self->{Completeness}        = 0.476797958858236;
+    $Self->{Completeness}        = 0.476456504389465;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2733,14 +2733,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
         'Resend Email for %s%s%s' => '',
-        'All fields marked with an asterisk (*) are mandatory.' => 'Alle velden met een asterisk (*) zijn verplicht.',
-        'Cancel & close' => 'Annuleren & sluiten',
-        'Select one or more recipients from the customer user address book.' =>
-            '',
-        'Customer user address book' => 'Klantgebruiker adresboek',
-        'Remove Ticket Customer' => 'Verwijder ',
-        'Remove Cc' => 'Verwijder CC',
-        'Remove Bcc' => 'Verwijder BCC',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
         'Ticket %s: first response time is over (%s %s)!' => 'Ticket %s: eerste antwoord tijd is voorbij (%s/%s)!',
@@ -8574,6 +8566,7 @@ sub Data {
             '',
 
         # JS File: var/httpd/htdocs/js/Core.Agent.TicketAction.js
+        'Customer user address book' => 'Klantgebruiker adresboek',
         'Select a customer ID to assign to this ticket' => '',
         'Do you really want to continue?' => 'Weet je zeker dat je door wil gaan?',
 

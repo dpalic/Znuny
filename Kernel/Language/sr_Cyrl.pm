@@ -27,7 +27,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d.%m.%Y';
     $Self->{DateInputFormat}     = '%d.%m.%Y';
     $Self->{DateInputFormatLong} = '%d.%m.%Y - %T';
-    $Self->{Completeness}        = 0.857757933343964;
+    $Self->{Completeness}        = 0.857621707901038;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2728,14 +2728,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
         'Resend Email for %s%s%s' => 'Пошаљи поново имејл за %s %s %s',
-        'All fields marked with an asterisk (*) are mandatory.' => 'Сва поља означена звездицом (*) су обавезна.',
-        'Cancel & close' => 'Поништи & затвори',
-        'Select one or more recipients from the customer user address book.' =>
-            'Одаберите једног или више примаоца из адресара клијент корисника.',
-        'Customer user address book' => 'Адресар клијент корисника',
-        'Remove Ticket Customer' => 'Уклони клијент са тикета **',
-        'Remove Cc' => 'Уклони Cc',
-        'Remove Bcc' => 'Уклони Bcc',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
         'Ticket %s: first response time is over (%s %s)!' => 'Тикет %s: време одзива је истекло (%s/%s)!',
@@ -8569,6 +8561,7 @@ sub Data {
             'Овај елемент има децу и тренутно не може бити уклоњен.',
 
         # JS File: var/httpd/htdocs/js/Core.Agent.TicketAction.js
+        'Customer user address book' => 'Адресар клијент корисника',
         'Select a customer ID to assign to this ticket' => 'Одаберите ID клијента за доделу овом тикету',
         'Do you really want to continue?' => 'Да ли стварно желите да наставите?',
 

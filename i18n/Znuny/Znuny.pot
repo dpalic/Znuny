@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2026-06-10 20:09+0000\n"
+"POT-Creation-Date: 2026-06-12 20:54+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -8096,34 +8096,6 @@ msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
 msgid "Resend Email for %s%s%s"
-msgstr ""
-
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
-msgid "All fields marked with an asterisk (*) are mandatory."
-msgstr ""
-
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
-msgid "Cancel & close"
-msgstr ""
-
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
-msgid "Select one or more recipients from the customer user address book."
-msgstr ""
-
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
-msgid "Customer user address book"
-msgstr ""
-
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
-msgid "Remove Ticket Customer"
-msgstr ""
-
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
-msgid "Remove Cc"
-msgstr ""
-
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
-msgid "Remove Bcc"
 msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
@@ -22020,6 +21992,10 @@ msgstr ""
 
 #. JS File: var/httpd/htdocs/js/Core.Agent.SortedTree.js
 msgid "This element has children elements and can currently not be removed."
+msgstr ""
+
+#. JS File: var/httpd/htdocs/js/Core.Agent.TicketAction.js
+msgid "Customer user address book"
 msgstr ""
 
 #. JS File: var/httpd/htdocs/js/Core.Agent.TicketAction.js

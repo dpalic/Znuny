@@ -29,7 +29,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y.%m.%d';
     $Self->{DateInputFormat}     = '%Y.%m.%d';
     $Self->{DateInputFormatLong} = '%Y.%m.%d - %T';
-    $Self->{Completeness}        = 0.297241269335034;
+    $Self->{Completeness}        = 0.296887470071828;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -2731,14 +2731,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
         'Resend Email for %s%s%s' => '',
-        'All fields marked with an asterisk (*) are mandatory.' => '所有带 * 的字段都是強制要求輸入的字段.',
-        'Cancel & close' => '',
-        'Select one or more recipients from the customer user address book.' =>
-            '',
-        'Customer user address book' => '',
-        'Remove Ticket Customer' => '刪除工單用戶',
-        'Remove Cc' => '刪除Cc',
-        'Remove Bcc' => '刪除Bcc',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
         'Ticket %s: first response time is over (%s %s)!' => '',
@@ -8572,6 +8564,7 @@ sub Data {
             '',
 
         # JS File: var/httpd/htdocs/js/Core.Agent.TicketAction.js
+        'Customer user address book' => '',
         'Select a customer ID to assign to this ticket' => '',
         'Do you really want to continue?' => '您確定繼續?',
 

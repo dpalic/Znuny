@@ -27,7 +27,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d/%m/%Y';
     $Self->{DateInputFormat}     = '%d/%m/%Y';
     $Self->{DateInputFormatLong} = '%d/%m/%Y - %T';
-    $Self->{Completeness}        = 0.703715515866688;
+    $Self->{Completeness}        = 0.703431763766959;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2728,14 +2728,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
         'Resend Email for %s%s%s' => '',
-        'All fields marked with an asterisk (*) are mandatory.' => 'Todos los campos marcados con un asterisco (*) son obligatorios.',
-        'Cancel & close' => 'Cancelar y cerrar',
-        'Select one or more recipients from the customer user address book.' =>
-            'Seleccione uno o mas destinatarios de la libreta de direcciones del usuario del cliente.',
-        'Customer user address book' => 'Libreta de direcciones del usuario del cliente',
-        'Remove Ticket Customer' => 'Eliminar al cliente del ticket',
-        'Remove Cc' => 'Eliminar Copia para',
-        'Remove Bcc' => 'Eliminar Copia oculta',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
         'Ticket %s: first response time is over (%s %s)!' => '',
@@ -8569,6 +8561,7 @@ sub Data {
             'Este elemento tiene elementos secundarios y actualmente no se puede eliminar.',
 
         # JS File: var/httpd/htdocs/js/Core.Agent.TicketAction.js
+        'Customer user address book' => 'Libreta de direcciones del usuario del cliente',
         'Select a customer ID to assign to this ticket' => '',
         'Do you really want to continue?' => '¿Desea continuar?',
 

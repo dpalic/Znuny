@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%m-%d';
     $Self->{DateInputFormat}     = '%Y-%m-%d';
     $Self->{DateInputFormatLong} = '%Y-%m-%d %T';
-    $Self->{Completeness}        = 0.833678839100622;
+    $Self->{Completeness}        = 0.833519553072626;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -2727,14 +2727,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
         'Resend Email for %s%s%s' => '%s%s%s에게 이메일 다시 보내기',
-        'All fields marked with an asterisk (*) are mandatory.' => '별표 (*)로 표시된 모든 필드는 필수 항목입니다.',
-        'Cancel & close' => '취소 및 닫기',
-        'Select one or more recipients from the customer user address book.' =>
-            '고객 사용자 주소록에서 하나 이상의 수신자를 선택하십시오.',
-        'Customer user address book' => '고객 사용자 주소록',
-        'Remove Ticket Customer' => '티켓 고객 제거',
-        'Remove Cc' => '참조 삭제',
-        'Remove Bcc' => '숨은 참조 제거',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
         'Ticket %s: first response time is over (%s %s)!' => '티켓 %s: 첫 번째 응답 시간이 끝났습니다 (%s/ %s)!',
@@ -8568,6 +8560,7 @@ sub Data {
             '이 요소는 하위 요소를 가지며 현재 제거할 수 없습니다.',
 
         # JS File: var/httpd/htdocs/js/Core.Agent.TicketAction.js
+        'Customer user address book' => '고객 사용자 주소록',
         'Select a customer ID to assign to this ticket' => '이 티켓에 지정할 고객 ID를 선택하십시오.',
         'Do you really want to continue?' => '계속하시겠습니까?',
 

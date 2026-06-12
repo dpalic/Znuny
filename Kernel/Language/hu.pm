@@ -32,7 +32,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%m-%d';
     $Self->{DateInputFormat}     = '%Y-%m-%d';
     $Self->{DateInputFormatLong} = '%Y-%m-%d - %T';
-    $Self->{Completeness}        = 0.99840535799713;
+    $Self->{Completeness}        = 0.998403830806065;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2733,14 +2733,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
         'Resend Email for %s%s%s' => 'E-mail újraküldése ennél: %s%s%s',
-        'All fields marked with an asterisk (*) are mandatory.' => 'A csillaggal (*) megjelölt összes mező kötelező.',
-        'Cancel & close' => 'Megszakítás és bezárás',
-        'Select one or more recipients from the customer user address book.' =>
-            'Egy vagy több címzett kiválasztása az ügyfél-felhasználó címjegyzékből.',
-        'Customer user address book' => 'Ügyfél-felhasználó címjegyzék',
-        'Remove Ticket Customer' => 'Jegy ügyfél eltávolítása',
-        'Remove Cc' => 'Másolat eltávolítása',
-        'Remove Bcc' => 'Rejtett másolat eltávolítása',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
         'Ticket %s: first response time is over (%s %s)!' => '%s jegy: az első válaszidő lejárt (%s %s)!',
@@ -8574,6 +8566,7 @@ sub Data {
             'Ennek az elemnek gyermekelemei vannak, és jelenleg nem lehet eltávolítani.',
 
         # JS File: var/httpd/htdocs/js/Core.Agent.TicketAction.js
+        'Customer user address book' => 'Ügyfél-felhasználó címjegyzék',
         'Select a customer ID to assign to this ticket' => 'Ügyfél-azonosító kiválasztása, hogy hozzárendelje ehhez a jegyhez',
         'Do you really want to continue?' => 'Valóban folytatni akarja?',
 

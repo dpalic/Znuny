@@ -2728,14 +2728,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
         'Resend Email for %s%s%s' => 'E-Mail erneut versenden für %s%s%s',
-        'All fields marked with an asterisk (*) are mandatory.' => 'Alle mit * gekennzeichneten Felder sind Pflichtfelder.',
-        'Cancel & close' => 'Abbrechen und Schließen',
-        'Select one or more recipients from the customer user address book.' =>
-            'Wählen Sie einen oder mehrere Empfänger aus dem Kundenbenutzer-Adressbuch.',
-        'Customer user address book' => 'Kundenbenutzer-Adressbuch',
-        'Remove Ticket Customer' => 'Ticket-Kunden entfernen',
-        'Remove Cc' => 'Cc entfernen',
-        'Remove Bcc' => 'Bcc entfernen',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
         'Ticket %s: first response time is over (%s %s)!' => 'Ticket %s: erste Reaktionszeit ist abgelaufen (%s/%s)!',
@@ -8569,6 +8561,7 @@ sub Data {
             'Dieses Element besitzt Kindelemente und kann derzeit nicht entfernt werden.',
 
         # JS File: var/httpd/htdocs/js/Core.Agent.TicketAction.js
+        'Customer user address book' => 'Kundenbenutzer-Adressbuch',
         'Select a customer ID to assign to this ticket' => 'Wählen Sie eine Kundennummer aus, die Sie diesem Ticket zuordnen möchten',
         'Do you really want to continue?' => 'Möchten Sie wirklich fortfahren?',
 

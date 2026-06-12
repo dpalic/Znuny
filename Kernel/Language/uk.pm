@@ -27,7 +27,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%m/%d/%Y';
     $Self->{DateInputFormat}     = '%m/%d/%Y';
     $Self->{DateInputFormatLong} = '%m/%d/%Y - %T';
-    $Self->{Completeness}        = 0.417317812151172;
+    $Self->{Completeness}        = 0.416919393455706;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -2728,14 +2728,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
         'Resend Email for %s%s%s' => '',
-        'All fields marked with an asterisk (*) are mandatory.' => 'Всі поля, позначені (*) є обов\'язковими.',
-        'Cancel & close' => 'Скасувати & закрити',
-        'Select one or more recipients from the customer user address book.' =>
-            '',
-        'Customer user address book' => '',
-        'Remove Ticket Customer' => 'Вилучити Квиток Клієнта',
-        'Remove Cc' => 'Вилучити Копія',
-        'Remove Bcc' => 'Вилучити Прихована Копія',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
         'Ticket %s: first response time is over (%s %s)!' => 'Квиток %s: час першого відгуку складає більше (%s/%s)!',
@@ -8569,6 +8561,7 @@ sub Data {
             '',
 
         # JS File: var/httpd/htdocs/js/Core.Agent.TicketAction.js
+        'Customer user address book' => '',
         'Select a customer ID to assign to this ticket' => '',
         'Do you really want to continue?' => 'Ви справді маєте намір продовжити?',
 

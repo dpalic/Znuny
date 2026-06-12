@@ -7756,7 +7756,7 @@ msgstr "%s%s%sの返信を作成"
 msgid "Date Invalid!"
 msgstr "日時が無効です。"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
+#. JS File: var/httpd/htdocs/js/Core.Agent.TicketAction.js
 msgid "Customer user address book"
 msgstr "顧客ユーザーのアドレス帳"
 

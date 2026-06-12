@@ -7761,7 +7761,7 @@ msgstr "วันที่ไม่ถูกต้อง!"
 msgid "Select one or more recipients from the customer user address book."
 msgstr ""
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
+#. JS File: var/httpd/htdocs/js/Core.Agent.TicketAction.js
 msgid "Customer user address book"
 msgstr ""
 

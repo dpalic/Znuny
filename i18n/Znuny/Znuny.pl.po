@@ -7785,7 +7785,7 @@ msgstr "Niepoprawna data!"
 msgid "Select one or more recipients from the customer user address book."
 msgstr "Wybierz jednego lub więcej odbiorców z książki adresowej użytkowników klientów"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
+#. JS File: var/httpd/htdocs/js/Core.Agent.TicketAction.js
 msgid "Customer user address book"
 msgstr ""
 

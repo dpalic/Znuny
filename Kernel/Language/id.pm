@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d/%m/%Y';
     $Self->{DateInputFormat}     = '%d/%m/%Y';
     $Self->{DateInputFormatLong} = '%d/%m/%Y - %T';
-    $Self->{Completeness}        = 0.581565938446819;
+    $Self->{Completeness}        = 0.581324820430966;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -2729,14 +2729,6 @@ bin/znuny.Daemon.pl status\').',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
         'Resend Email for %s%s%s' => '',
-        'All fields marked with an asterisk (*) are mandatory.' => 'Semua bidang yang ditandai dengan tanda bintang (*) wajib diisi.',
-        'Cancel & close' => 'Batalkan dan tutup',
-        'Select one or more recipients from the customer user address book.' =>
-            '',
-        'Customer user address book' => '',
-        'Remove Ticket Customer' => 'Hapus tiket pelanggan',
-        'Remove Cc' => 'Hapus Cc',
-        'Remove Bcc' => 'Hapus Bccc',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
         'Ticket %s: first response time is over (%s %s)!' => 'Tiket %s: respon pertama berakhir (%s%s)!',
@@ -8571,6 +8563,7 @@ bin/znuny.Daemon.pl status\').',
             '',
 
         # JS File: var/httpd/htdocs/js/Core.Agent.TicketAction.js
+        'Customer user address book' => '',
         'Select a customer ID to assign to this ticket' => '',
         'Do you really want to continue?' => 'Apakah anda ingin meneruskannya?',
 

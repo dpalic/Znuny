@@ -38,7 +38,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d.%m.%Y';
     $Self->{DateInputFormat}     = '%d.%m.%Y';
     $Self->{DateInputFormatLong} = '%d.%m.%Y - %T';
-    $Self->{Completeness}        = 0.838143836708659;
+    $Self->{Completeness}        = 0.837988826815642;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2739,14 +2739,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
         'Resend Email for %s%s%s' => 'Отправить личное сообщение для %s%s%s',
-        'All fields marked with an asterisk (*) are mandatory.' => 'Все поля отмеченные (*) являются обязательными',
-        'Cancel & close' => 'Отменить и закрыть',
-        'Select one or more recipients from the customer user address book.' =>
-            'Выберите одного или более получателей из адресной книги клиентов.',
-        'Customer user address book' => 'Адресная книга клиентов',
-        'Remove Ticket Customer' => 'Удалить клиента-инициатора заявки',
-        'Remove Cc' => 'Удалить из копии',
-        'Remove Bcc' => 'Удалить из скрытой копии',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
         'Ticket %s: first response time is over (%s %s)!' => 'Заявка %s: время первого ответа истекло (%s/%s)!',
@@ -8580,6 +8572,7 @@ sub Data {
             'Этот параметр имеет подчиненные элементы и не может быть удален в настоящее время.',
 
         # JS File: var/httpd/htdocs/js/Core.Agent.TicketAction.js
+        'Customer user address book' => 'Адресная книга клиентов',
         'Select a customer ID to assign to this ticket' => 'Выберите компанию для назначения этой заявке',
         'Do you really want to continue?' => 'Действительно продолжить?',
 

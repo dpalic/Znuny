@@ -30,7 +30,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d/%m/%Y';
     $Self->{DateInputFormat}     = '%d/%m/%Y';
     $Self->{DateInputFormatLong} = '%d/%m/%Y - %T';
-    $Self->{Completeness}        = 0.828257056290863;
+    $Self->{Completeness}        = 0.828092577813248;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -2731,14 +2731,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
         'Resend Email for %s%s%s' => 'Reenvie E-mail para %s%s%s',
-        'All fields marked with an asterisk (*) are mandatory.' => 'Todos os campos marcados com um asterisco (*) são obrigatórios.',
-        'Cancel & close' => 'Cancelar e fechar',
-        'Select one or more recipients from the customer user address book.' =>
-            'Selecione um ou mais destinatários do caderno de endereço do usuário cliente.',
-        'Customer user address book' => 'Caderno de endereços do Usuário Cliente',
-        'Remove Ticket Customer' => 'Remover Cliente do Chamado',
-        'Remove Cc' => 'Remover Cc',
-        'Remove Bcc' => 'Remover Bcc',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
         'Ticket %s: first response time is over (%s %s)!' => 'Chamado %s: tempo de resposta inicial ultrapassado (%s/%s)!',
@@ -8572,6 +8564,7 @@ sub Data {
             'Este elemento contém elementos filhos e não pode ser removido no momento.',
 
         # JS File: var/httpd/htdocs/js/Core.Agent.TicketAction.js
+        'Customer user address book' => 'Caderno de endereços do Usuário Cliente',
         'Select a customer ID to assign to this ticket' => 'Selecione uma ID de cliente para atribuir a este ticket',
         'Do you really want to continue?' => 'Você realmente quer continuar?',
 

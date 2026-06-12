@@ -7754,7 +7754,7 @@ msgstr "%s%s%s에 대한 답변 작성"
 msgid "Date Invalid!"
 msgstr "잘못된 날짜!"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
+#. JS File: var/httpd/htdocs/js/Core.Agent.TicketAction.js
 msgid "Customer user address book"
 msgstr "고객 사용자 주소록"
 

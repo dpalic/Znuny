@@ -30,7 +30,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y/%m/%d';
     $Self->{DateInputFormat}     = '%Y/%m/%d';
     $Self->{DateInputFormatLong} = '%Y/%m/%d - %T';
-    $Self->{Completeness}        = 0.656514112581725;
+    $Self->{Completeness}        = 0.656185155626496;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2733,14 +2733,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
         'Resend Email for %s%s%s' => '%s%s%sのメールを再送信',
-        'All fields marked with an asterisk (*) are mandatory.' => 'アスタリスク（*）が付いている全ての領域は必須入力です。',
-        'Cancel & close' => '中止して閉じる',
-        'Select one or more recipients from the customer user address book.' =>
-            '顧客ユーザーのアドレス帳から1人以上の受信者を選択します。',
-        'Customer user address book' => '顧客ユーザーのアドレス帳',
-        'Remove Ticket Customer' => 'チケットの顧客を削除',
-        'Remove Cc' => 'Ccを削除',
-        'Remove Bcc' => 'Bccを削除',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEscalation.tt
         'Ticket %s: first response time is over (%s %s)!' => '',
@@ -8584,6 +8576,7 @@ Contentはダイナミック・フィールドの形式によって設定内容�
             'この要素は子供が存在するため削除できません。',
 
         # JS File: var/httpd/htdocs/js/Core.Agent.TicketAction.js
+        'Customer user address book' => '顧客ユーザーのアドレス帳',
         'Select a customer ID to assign to this ticket' => 'チケットに割り当てる顧客IDを選択してください',
         'Do you really want to continue?' => '本当にこの操作を継続してよろしいですか？',
 

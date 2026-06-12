@@ -7760,7 +7760,7 @@ msgstr "Antwort für %s%s%s verfassen"
 msgid "Date Invalid!"
 msgstr "Ungültiges Datum!"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
+#. JS File: var/httpd/htdocs/js/Core.Agent.TicketAction.js
 msgid "Customer user address book"
 msgstr "Kundenbenutzer-Adressbuch"
 

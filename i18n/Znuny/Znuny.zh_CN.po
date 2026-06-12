@@ -7754,7 +7754,7 @@ msgstr "撰写工单%s%s%s的回复邮件"
 msgid "Date Invalid!"
 msgstr "日期无效！"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AgentTicketEmailResend.tt
+#. JS File: var/httpd/htdocs/js/Core.Agent.TicketAction.js
 msgid "Customer user address book"
 msgstr "客户用户通讯录"
 
