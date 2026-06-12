@@ -79,9 +79,6 @@ sub Run {
         %GetParams,
     );
 
-    my %NotifiyParam = (
-        Priority => $Param{NotificationPriority} || 'Info',
-        Info     => Translatable( $Param{Notification} ),
     my $LayoutObject = $Kernel::OM->Get('Kernel::Output::HTML::Layout');
 
     my $NotificationTranslated = $LayoutObject->{LanguageObject}->Translate( $Param{Notification} );
@@ -267,7 +264,9 @@ sub _OverviewActionList {
             %Param,
             Label       => Translatable('Import / Export'),
             Explanation =>
-                Translatable('Here you can upload a configuration file to import translations to your system. The file needs to be in .yml | .csv | .xlsx format.'),
+                Translatable(
+                'Here you can upload a configuration file to import translations to your system. The file needs to be in .yml | .csv | .xlsx format.'
+                ),
             Action => $Param{Action} || $LayoutObject->{Action},
         }
     );
@@ -392,7 +391,8 @@ sub _Form {
         );
         if ( !%BackendData ) {
             return $LayoutObject->ErrorScreen(
-                Message => $LayoutObject->{LanguageObject}->Translate( "Could not find translation for ID %s.", $Param{ID} ),
+                Message =>
+                    $LayoutObject->{LanguageObject}->Translate( "Could not find translation for ID %s.", $Param{ID} ),
             );
         }
 

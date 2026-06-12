@@ -1,4 +1,5 @@
 # 7.3.4 2026-??-??
+ - 2026-06-12 Fixed: Column filter dropdowns in ticket overviews showed entries for ticket attributes marked as invalid.
  - 2026-06-12 Fixed: Missing translation in AdminTranslation screen. Thanks to @urbalazs (Balázs Úr) [PR#800](https://github.com/znuny/Znuny/pull/800).
  - 2026-06-01 Fixed: Notification about changed system configuration in dialog AdminSystemConfiguration.
  - 2026-06-01 Fixed: Attachments can no longer be assigned to Snippet templates in AdminTemplateAttachment.
