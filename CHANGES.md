@@ -1,6 +1,7 @@
 # 7.3.4 2026-??-??
  - 2026-06-12 Fixed: Column filter dropdowns in ticket overviews showed entries for ticket attributes marked as invalid.
  - 2026-06-12 Fixed: Missing translation in AdminTranslation screen. Thanks to @urbalazs (Balázs Úr) [PR#800](https://github.com/znuny/Znuny/pull/800).
+ - 2026-06-03 Added: Extended generic interface invoker configuration by configurable fields (per invoker) that will be omitted and/or encoded as Base64.
  - 2026-06-01 Fixed: Notification about changed system configuration in dialog AdminSystemConfiguration.
  - 2026-06-01 Fixed: Attachments can no longer be assigned to Snippet templates in AdminTemplateAttachment.
  - 2026-06-01 Fixed: Copy ticket number icon missing when Ticket::Hook is customized. Thanks to @mamojdick for reporting the issue. [#805](https://github.com/znuny/Znuny/issues/805)
