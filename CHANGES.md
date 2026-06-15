@@ -1,5 +1,6 @@
 # 7.3.4 2026-??-??
  - 2026-06-13 Added: Multiselect column filters for agent ticket overview screens and dashboard ticket widgets.
+ - 2026-06-12 Fixed: Issue with mentioning out of office users via group mention.
  - 2026-06-12 Fixed: Column filter dropdowns in ticket overviews showed entries for ticket attributes marked as invalid.
  - 2026-06-12 Fixed: Missing translation in AdminTranslation screen. Thanks to @urbalazs (Balázs Úr) [PR#800](https://github.com/znuny/Znuny/pull/800).
  - 2026-06-03 Added: Extended generic interface invoker configuration by configurable fields (per invoker) that will be omitted and/or encoded as Base64.
