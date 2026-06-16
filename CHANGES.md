@@ -1,4 +1,5 @@
 # 7.3.4 2026-??-??
+ - 2026-06-16 Fixed: Missing translation in date picker week header. Thanks to @urbalazs (Balázs Úr) for reporting the issue.
  - 2026-06-13 Added: Multiselect column filters for agent ticket overview screens and dashboard ticket widgets.
  - 2026-06-12 Fixed: Issue with mentioning out of office users via group mention.
  - 2026-06-12 Fixed: Column filter dropdowns in ticket overviews showed entries for ticket attributes marked as invalid.
