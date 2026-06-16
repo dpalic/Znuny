@@ -8,6 +8,7 @@
  - 2026-06-01 Fixed: Notification about changed system configuration in dialog AdminSystemConfiguration.
  - 2026-06-01 Fixed: Attachments can no longer be assigned to Snippet templates in AdminTemplateAttachment.
  - 2026-06-01 Fixed: Copy ticket number icon missing when Ticket::Hook is customized. Thanks to @mamojdick for reporting the issue. [#805](https://github.com/znuny/Znuny/issues/805)
+ - 2026-05-30 Added: Confirmation if database entries of packages are to be deleted on uninstallation.
  - 2026-05-28 Added: Agent and customer error pages now show configurable link for next action.
  - 2026-05-08 Fixed: Configured limit for activities is not applied correctly.
  - 2026-05-08 Changed: Updated bundled CPAN module Devel::StackTrace to 2.05.

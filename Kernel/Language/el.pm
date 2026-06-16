@@ -28,7 +28,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d.%m.%Y';
     $Self->{DateInputFormat}     = '%d.%m.%Y';
     $Self->{DateInputFormatLong} = '%d.%m.%Y - %T';
-    $Self->{Completeness}        = 0.13195219123506;
+    $Self->{Completeness}        = 0.131910148159949;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -1538,6 +1538,9 @@ sub Data {
         'Uninstall Package' => '',
         'Uninstall package' => '',
         'Do you really want to uninstall this package?' => 'Είστε σίγουροι οτι θέλετε να απεγκαταστήσετε αυτό το πακέτο;',
+        'Uninstall package and data' => '',
+        'Uninstall package only' => '',
+        'Uninstall' => 'Απεγκατάσταση',
         'Reinstall package' => '',
         'Do you really want to reinstall this package? Any manual changes will be lost.' =>
             '',
@@ -1584,7 +1587,6 @@ sub Data {
         'Action' => 'Ενέργεια',
         'Module documentation' => '',
         'Local Repository' => 'Τοπικός αποθηκευτικός χώρος',
-        'Uninstall' => 'Απεγκατάσταση',
         'Package not correctly deployed! Please reinstall the package.' =>
             'Το πακέτο δεν εγκαταστάθηκε. Παρακαλούμε επαναλάβατε εγκατάσταση.',
         'Reinstall' => 'Επανεγκατάσταση',

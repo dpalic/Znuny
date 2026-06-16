@@ -27,7 +27,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d.%m.%Y';
     $Self->{DateInputFormat}     = '%d.%m.%Y';
     $Self->{DateInputFormatLong} = '%d.%m.%Y - %T';
-    $Self->{Completeness}        = 0.150119521912351;
+    $Self->{Completeness}        = 0.150071690297913;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -1535,6 +1535,9 @@ sub Data {
         'Uninstall Package' => '',
         'Uninstall package' => '',
         'Do you really want to uninstall this package?' => 'Vai tiešām vēlaties noņemt šo pakotni?',
+        'Uninstall package and data' => '',
+        'Uninstall package only' => '',
+        'Uninstall' => 'Noņemt',
         'Reinstall package' => '',
         'Do you really want to reinstall this package? Any manual changes will be lost.' =>
             '',
@@ -1581,7 +1584,6 @@ sub Data {
         'Action' => 'Darbība',
         'Module documentation' => 'Moduļa dokumentācija',
         'Local Repository' => 'Lokālais repozitorijs',
-        'Uninstall' => 'Noņemt',
         'Package not correctly deployed! Please reinstall the package.' =>
             '',
         'Reinstall' => 'Pārinstalēt',

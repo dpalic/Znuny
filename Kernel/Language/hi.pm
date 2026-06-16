@@ -29,7 +29,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d/%m/%Y';
     $Self->{DateInputFormat}     = '%d/%m/%Y';
     $Self->{DateInputFormatLong} = '%d/%m/%Y - %T';
-    $Self->{Completeness}        = 0.248286852589641;
+    $Self->{Completeness}        = 0.248207742552175;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -1537,6 +1537,9 @@ sub Data {
         'Uninstall Package' => '',
         'Uninstall package' => 'संकुल जिनकी स्थापना रद्द हॊ गयी है',
         'Do you really want to uninstall this package?' => 'क्या आप वास्तव में इस संकुल की स्थापना रद्द करना चाहते हैं?',
+        'Uninstall package and data' => '',
+        'Uninstall package only' => '',
+        'Uninstall' => 'स्थापना रद्द',
         'Reinstall package' => 'संकुल की पुनर्स्थापना',
         'Do you really want to reinstall this package? Any manual changes will be lost.' =>
             'क्या आप वास्तव में इस संकुल की पुनर्स्थापना करना चाहते हैं?सभी हस्तचालित परिवर्तन लुप्त हो जाएंगे।',
@@ -1583,7 +1586,6 @@ sub Data {
         'Action' => 'कार्रवाई',
         'Module documentation' => 'मॉड्यूल दस्तावेज',
         'Local Repository' => 'स्थानीय कोष',
-        'Uninstall' => 'स्थापना रद्द',
         'Package not correctly deployed! Please reinstall the package.' =>
             '',
         'Reinstall' => 'पुनर्स्थापना',

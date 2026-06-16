@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d.%m.%Y';
     $Self->{DateInputFormat}     = '%d.%m.%Y';
     $Self->{DateInputFormatLong} = '%d.%m.%Y - %T';
-    $Self->{Completeness}        = 0.276812749003984;
+    $Self->{Completeness}        = 0.276724549944241;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -1534,6 +1534,9 @@ sub Data {
         'Uninstall Package' => 'Dezinstalare pachet',
         'Uninstall package' => 'Dezinstalare pachet',
         'Do you really want to uninstall this package?' => 'Sunteți sigur că doriți să dezinstalați acest pachet?',
+        'Uninstall package and data' => '',
+        'Uninstall package only' => '',
+        'Uninstall' => 'Dezinstalare',
         'Reinstall package' => 'Reinstalare pachet',
         'Do you really want to reinstall this package? Any manual changes will be lost.' =>
             'Sunteți sigur că doriți să reinstalați acest pachet? Modificările făcute manual se vor pierde.',
@@ -1580,7 +1583,6 @@ sub Data {
         'Action' => 'Acțiune',
         'Module documentation' => 'Documentația modulului',
         'Local Repository' => 'Depozitul local',
-        'Uninstall' => 'Dezinstalare',
         'Package not correctly deployed! Please reinstall the package.' =>
             'Pachetul nu a fost instalat corect! Vă rog, instalați pachetul din nou.',
         'Reinstall' => 'Reinstalare',

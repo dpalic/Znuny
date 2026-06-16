@@ -27,7 +27,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d.%m.%Y';
     $Self->{DateInputFormat}     = '%d.%m.%Y - %T';
     $Self->{DateInputFormatLong} = '%d.%m.%Y - %T';
-    $Self->{Completeness}        = 0.189482071713147;
+    $Self->{Completeness}        = 0.189421698263502;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -1535,6 +1535,9 @@ sub Data {
         'Uninstall Package' => '',
         'Uninstall package' => '',
         'Do you really want to uninstall this package?' => 'Сигурни ли сте че искате да деинсталирате този софтуерен пакет?',
+        'Uninstall package and data' => '',
+        'Uninstall package only' => '',
+        'Uninstall' => 'Деинсталиране',
         'Reinstall package' => '',
         'Do you really want to reinstall this package? Any manual changes will be lost.' =>
             '',
@@ -1581,7 +1584,6 @@ sub Data {
         'Action' => 'Действие',
         'Module documentation' => '',
         'Local Repository' => 'Локално Repository',
-        'Uninstall' => 'Деинсталиране',
         'Package not correctly deployed! Please reinstall the package.' =>
             'Пакетът на се разпакитирал изцяло! Моля преисталирайте пакетът.',
         'Reinstall' => 'Реинсталиране',

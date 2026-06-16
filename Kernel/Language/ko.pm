@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%m-%d';
     $Self->{DateInputFormat}     = '%Y-%m-%d';
     $Self->{DateInputFormatLong} = '%Y-%m-%d %T';
-    $Self->{Completeness}        = 0.832191235059761;
+    $Self->{Completeness}        = 0.831926079337263;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -1534,6 +1534,9 @@ sub Data {
         'Uninstall Package' => '패키지 제거',
         'Uninstall package' => '패키지 제거',
         'Do you really want to uninstall this package?' => '이 패키지를 정말로 제거 하시곘습니까?',
+        'Uninstall package and data' => '',
+        'Uninstall package only' => '',
+        'Uninstall' => '제거',
         'Reinstall package' => '패키지 다시 설치',
         'Do you really want to reinstall this package? Any manual changes will be lost.' =>
             '이 패키지를 정말로 다시 설치 하시겠습니까? 수동으로 변경하면 손실됩니다.',
@@ -1580,7 +1583,6 @@ sub Data {
         'Action' => '동작',
         'Module documentation' => '모듈 문서',
         'Local Repository' => '로컬 저장소',
-        'Uninstall' => '제거',
         'Package not correctly deployed! Please reinstall the package.' =>
             '패키지가 올바르게 배치되지 않았습니다! 패키지를 다시 설치하십시오.',
         'Reinstall' => '재설치',

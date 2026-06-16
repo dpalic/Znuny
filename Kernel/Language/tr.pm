@@ -27,7 +27,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d.%m.%Y';
     $Self->{DateInputFormat}     = '%d.%m.%Y';
     $Self->{DateInputFormatLong} = '%d.%m.%Y - %T';
-    $Self->{Completeness}        = 0.175617529880478;
+    $Self->{Completeness}        = 0.175561574000319;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -1535,6 +1535,9 @@ sub Data {
         'Uninstall Package' => '',
         'Uninstall package' => 'Paketi kaldır',
         'Do you really want to uninstall this package?' => 'Gerçekten bu paketi kaldırmak istiyor musunuz?',
+        'Uninstall package and data' => '',
+        'Uninstall package only' => '',
+        'Uninstall' => 'Kaldır',
         'Reinstall package' => 'Paketi yeniden kur',
         'Do you really want to reinstall this package? Any manual changes will be lost.' =>
             'Gerçekten bu paketi yeniden kurmak istiyormusunuz? El ile yaptığınız tüm değişiklikler kaybolacak.',
@@ -1581,7 +1584,6 @@ sub Data {
         'Action' => 'Eylem',
         'Module documentation' => 'Modül belgeleri',
         'Local Repository' => 'Yerel Depo',
-        'Uninstall' => 'Kaldır',
         'Package not correctly deployed! Please reinstall the package.' =>
             'Paket doğru yüklenmedi! Lütfen yeniden yükleyin.',
         'Reinstall' => 'Yeniden yükle',

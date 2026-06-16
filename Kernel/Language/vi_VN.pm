@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d.%m.%Y';
     $Self->{DateInputFormat}     = '%d.%m.%Y';
     $Self->{DateInputFormatLong} = '%d.%m.%Y - %T';
-    $Self->{Completeness}        = 0.144701195219124;
+    $Self->{Completeness}        = 0.144655090011152;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -1534,6 +1534,9 @@ sub Data {
         'Uninstall Package' => '',
         'Uninstall package' => '',
         'Do you really want to uninstall this package?' => 'Bạn có thực sự muốn gỡ cài đặt gói này?',
+        'Uninstall package and data' => '',
+        'Uninstall package only' => '',
+        'Uninstall' => 'Gỡ cài đặt',
         'Reinstall package' => '',
         'Do you really want to reinstall this package? Any manual changes will be lost.' =>
             '',
@@ -1580,7 +1583,6 @@ sub Data {
         'Action' => 'Hành động',
         'Module documentation' => '',
         'Local Repository' => 'Kho cục bộ',
-        'Uninstall' => 'Gỡ cài đặt',
         'Package not correctly deployed! Please reinstall the package.' =>
             'Đóng gói không được triển khai một cách chính xác! Hãy cài đặt lại gói',
         'Reinstall' => 'Cài lại',

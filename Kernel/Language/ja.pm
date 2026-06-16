@@ -30,7 +30,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y/%m/%d';
     $Self->{DateInputFormat}     = '%Y/%m/%d';
     $Self->{DateInputFormatLong} = '%Y/%m/%d - %T';
-    $Self->{Completeness}        = 0.655139442231076;
+    $Self->{Completeness}        = 0.654930699378684;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -1540,6 +1540,9 @@ sub Data {
         'Uninstall Package' => 'パッケージをアンインストール',
         'Uninstall package' => 'パッケージをアンインストール',
         'Do you really want to uninstall this package?' => 'このパッケージを本当にアンインストールしますか？',
+        'Uninstall package and data' => '',
+        'Uninstall package only' => '',
+        'Uninstall' => 'アンインストール',
         'Reinstall package' => 'パッケージを再インストール',
         'Do you really want to reinstall this package? Any manual changes will be lost.' =>
             'このパッケージを本当に再インストールしますか？ 全ての手動変更点は失われます。',
@@ -1586,7 +1589,6 @@ sub Data {
         'Action' => '操作',
         'Module documentation' => 'モジュールの書類',
         'Local Repository' => 'ローカルリポジトリ',
-        'Uninstall' => 'アンインストール',
         'Package not correctly deployed! Please reinstall the package.' =>
             'パッケージが正しくデプロイされません。再インストールしてください。',
         'Reinstall' => '再インストール',

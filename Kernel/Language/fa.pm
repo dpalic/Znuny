@@ -29,7 +29,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d.%m.%Y';
     $Self->{DateInputFormat}     = '%d.%m.%Y';
     $Self->{DateInputFormatLong} = '%d.%m.%Y - %T';
-    $Self->{Completeness}        = 0.590916334661355;
+    $Self->{Completeness}        = 0.59072805480325;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -1540,6 +1540,9 @@ sub Data {
         'Uninstall Package' => '',
         'Uninstall package' => 'حذف بسته',
         'Do you really want to uninstall this package?' => 'از حذف این بسته اطمینان دارید؟',
+        'Uninstall package and data' => '',
+        'Uninstall package only' => '',
+        'Uninstall' => 'حذف بسته',
         'Reinstall package' => 'نصب مجدد بسته',
         'Do you really want to reinstall this package? Any manual changes will be lost.' =>
             'آیا واقعا می‌خواهید این بسته را مجددا نصب نمایید؟ تمام تغییرات دستی از بین خواهد رفت.',
@@ -1586,7 +1589,6 @@ sub Data {
         'Action' => 'فعالیت',
         'Module documentation' => 'مستندات ماژول',
         'Local Repository' => 'مخزن محلی بسته‌ها',
-        'Uninstall' => 'حذف بسته',
         'Package not correctly deployed! Please reinstall the package.' =>
             'بسته به درستی قرار نگرفته! لطفا بسته رامجدد نصب کنید .',
         'Reinstall' => 'نصب مجدد',

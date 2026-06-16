@@ -29,7 +29,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%m/%d/%Y';
     $Self->{DateInputFormat}     = '%m/%d/%Y';
     $Self->{DateInputFormatLong} = '%m/%d/%Y - %T';
-    $Self->{Completeness}        = 0.4199203187251;
+    $Self->{Completeness}        = 0.419786522223992;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -1537,6 +1537,9 @@ sub Data {
         'Uninstall Package' => '',
         'Uninstall package' => 'Futa kifurushi',
         'Do you really want to uninstall this package?' => 'Je unataka kufuta kifurushi hiki?',
+        'Uninstall package and data' => '',
+        'Uninstall package only' => '',
+        'Uninstall' => 'Sakinusha',
         'Reinstall package' => 'Sakinisha kifurushi',
         'Do you really want to reinstall this package? Any manual changes will be lost.' =>
             'Je unahitaji kusakinisha kifurushi hiki? Mabaidliko yoyote ya mkono yatapotea.',
@@ -1583,7 +1586,6 @@ sub Data {
         'Action' => 'Kitendo',
         'Module documentation' => 'Moduli za nyaraka',
         'Local Repository' => 'Hifadhi ya ndani',
-        'Uninstall' => 'Sakinusha',
         'Package not correctly deployed! Please reinstall the package.' =>
             'KIfurushi hakijatumiwa kwa usahihi. Tafadhali Sakini kifurushi tena.',
         'Reinstall' => 'Sakinisha',

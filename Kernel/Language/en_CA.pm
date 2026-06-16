@@ -32,7 +32,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%m-%d';
     $Self->{DateInputFormat}     = '%Y-%m-%d';
     $Self->{DateInputFormatLong} = '%Y-%m-%d - %T';
-    $Self->{Completeness}        = 0.00254980079681275;
+    $Self->{Completeness}        = 0.00254898837024056;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -1540,6 +1540,9 @@ sub Data {
         'Uninstall Package' => '',
         'Uninstall package' => '',
         'Do you really want to uninstall this package?' => '',
+        'Uninstall package and data' => '',
+        'Uninstall package only' => '',
+        'Uninstall' => '',
         'Reinstall package' => '',
         'Do you really want to reinstall this package? Any manual changes will be lost.' =>
             '',
@@ -1586,7 +1589,6 @@ sub Data {
         'Action' => '',
         'Module documentation' => '',
         'Local Repository' => '',
-        'Uninstall' => '',
         'Package not correctly deployed! Please reinstall the package.' =>
             '',
         'Reinstall' => '',

@@ -27,7 +27,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%m-%d';
     $Self->{DateInputFormat}     = '%Y-%m-%d';
     $Self->{DateInputFormatLong} = '%Y-%m-%d - %T';
-    $Self->{Completeness}        = 0.185019920318725;
+    $Self->{Completeness}        = 0.184960968615581;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -1535,6 +1535,9 @@ sub Data {
         'Uninstall Package' => '',
         'Uninstall package' => 'Pašalinti paketą',
         'Do you really want to uninstall this package?' => 'Ar tikrai norite pašalinti š paketą?',
+        'Uninstall package and data' => '',
+        'Uninstall package only' => '',
+        'Uninstall' => 'Pašalinti',
         'Reinstall package' => 'Iš naujo įdiegti paketą',
         'Do you really want to reinstall this package? Any manual changes will be lost.' =>
             'Ar tikrai norite iš naujo įdiegti šį paketą? Bet kokie atlikti rankiniai pakeitimai bus prarasti.',
@@ -1581,7 +1584,6 @@ sub Data {
         'Action' => 'Veiksmas',
         'Module documentation' => 'Modulio dokumentacija',
         'Local Repository' => 'Vietinė saugykla',
-        'Uninstall' => 'Pašalinti',
         'Package not correctly deployed! Please reinstall the package.' =>
             '',
         'Reinstall' => 'Įdiegti iš naujo',

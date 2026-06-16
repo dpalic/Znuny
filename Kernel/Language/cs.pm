@@ -33,7 +33,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d/%m/%Y';
     $Self->{DateInputFormat}     = '%d/%m/%Y';
     $Self->{DateInputFormatLong} = '%d/%m/%Y - %T';
-    $Self->{Completeness}        = 0.233147410358566;
+    $Self->{Completeness}        = 0.233073124103871;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -1541,6 +1541,9 @@ sub Data {
         'Uninstall Package' => 'Odinstalovat balíček',
         'Uninstall package' => 'Odinstaluj balíček',
         'Do you really want to uninstall this package?' => 'Opravdu chcete odinstalovat tento Balíček?',
+        'Uninstall package and data' => '',
+        'Uninstall package only' => '',
+        'Uninstall' => 'Odinstalovat',
         'Reinstall package' => 'Reinstaluj balíček',
         'Do you really want to reinstall this package? Any manual changes will be lost.' =>
             '',
@@ -1587,7 +1590,6 @@ sub Data {
         'Action' => 'Akce',
         'Module documentation' => 'Dokumentace Modulu',
         'Local Repository' => 'Lokální Schránka',
-        'Uninstall' => 'Odinstalovat',
         'Package not correctly deployed! Please reinstall the package.' =>
             'Balíček nebyl korektně nainstalován! Prosím, přeinstalujte balíček.',
         'Reinstall' => 'Reinstalovat',
