@@ -12,6 +12,7 @@
  - 2026-05-28 Added: Agent and customer error pages now show configurable link for next action.
  - 2026-05-08 Fixed: Configured limit for activities is not applied correctly.
  - 2026-05-08 Changed: Updated bundled CPAN module Devel::StackTrace to 2.05.
+ - 2026-04-07 Fixed: Context menu for editing tables in RTE not visible in fullscreen mode.
 
 # 7.3.3 2026-05-27
  - 2026-05-26 Fixed: Package manager does not use the user ID for package operations.
