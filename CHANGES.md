@@ -4,6 +4,7 @@
  - 2026-06-16 Fixed: System configuration hash key duplication for keys containing ###. Thanks to @FloFaber (Flo Faber) for reporting the issue. [#789](https://github.com/znuny/Znuny/issues/789).
  - 2026-06-16 Fixed: Missing translation in date picker week header. Thanks to @urbalazs (Balázs Úr) for reporting the issue.
  - 2026-06-13 Added: Multiselect column filters for agent ticket overview screens and dashboard ticket widgets.
+ - 2026-06-12 Fixed: Applied GUI design changes to dialog AgentTicketEmailResend.
  - 2026-06-12 Fixed: Issue with mentioning out of office users via group mention.
  - 2026-06-12 Fixed: Column filter dropdowns in ticket overviews showed entries for ticket attributes marked as invalid.
  - 2026-06-12 Fixed: Missing translation in AdminTranslation screen. Thanks to @urbalazs (Balázs Úr) [PR#800](https://github.com/znuny/Znuny/pull/800).
