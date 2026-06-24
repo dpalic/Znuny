@@ -1,3 +1,6 @@
+# 7.3.5 2026-??-??
+ - 2026-06-24 Fixed: Command Maint::Ticket::ArchiveCleanup not deleting article flags correctly. Thanks to @parkingups69-netizen for reporting the issue. [#780](https://github.com/znuny/Znuny/issues/780)
+
 # 7.3.4 2026-06-24
  - 2026-06-22 Fixed: Sorting by dynamic field columns in dashboard ticket widgets could fall back to age and process tickets without articles could be hidden. Thanks to @sergiykhan for reporting the issue. [#811](https://github.com/znuny/Znuny/issues/811)
  - 2026-06-16 Fixed: Process tickets without articles are not displayed in dashboard widget Running Process Tickets.
