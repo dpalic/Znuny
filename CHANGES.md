@@ -1,4 +1,4 @@
-# 7.3.4 2026-??-??
+# 7.3.4 2026-06-24
  - 2026-06-22 Fixed: Sorting by dynamic field columns in dashboard ticket widgets could fall back to age and process tickets without articles could be hidden. Thanks to @sergiykhan for reporting the issue. [#811](https://github.com/znuny/Znuny/issues/811)
  - 2026-06-16 Fixed: Process tickets without articles are not displayed in dashboard widget Running Process Tickets.
  - 2026-06-16 Fixed: System configuration hash key duplication for keys containing ###. Thanks to @FloFaber (Flo Faber) for reporting the issue. [#789](https://github.com/znuny/Znuny/issues/789).
@@ -634,6 +634,17 @@
  - 2022-08-22 Core.UI.InputFields.js - Changed the behaviour of the Core.UI.InputFields.js. Now no fields are automatically enlarged or reduced.
  - 2022-08-08 Admin - Added counter of AdminSettingPages per widget and additional focus by filter.
  - 2022-07-15 Frontend::ToolBarModule - Refactored the Toolbar registration, position and view.
+
+# 6.5.22 2026-06-24
+ - 2026-06-22 Fixed: Sorting by dynamic field columns in dashboard ticket widgets could fall back to age and process tickets without articles could be hidden. Thanks to @sergiykhan for reporting the issue. [#811](https://github.com/znuny/Znuny/issues/811)
+ - 2026-06-17 Security: Added missing HTML filters to template AgentTicketEmailResend.tt. Thanks to Jan Kahmen (turingpoint.de) for reporting the issue.
+ - 2026-06-17 Fixed: AgentTicketEmailResend throwing JavaScript error for missing Bcc input field values.
+ - 2026-06-16 Fixed: Process tickets without articles are not displayed in dashboard widget Running Process Tickets.
+ - 2026-06-16 Fixed: System configuration hash key duplication for keys containing ###. Thanks to @FloFaber (Flo Faber) for reporting the issue. [#789](https://github.com/znuny/Znuny/issues/789).
+ - 2026-06-12 Fixed: Issue with mentioning out of office users via group mention.
+ - 2026-06-01 Added: Agent and customer error pages now show configurable link for next action.
+ - 2026-06-01 Fixed: Attachments can no longer be assigned to Snippet templates in AdminTemplateAttachment.
+ - 2026-05-27 Fixed: Web service notification recipient payloads could include sensitive password fields.
 
 # 6.5.21 2026-05-27
  - 2026-05-26 Fixed: Package manager does not use the user ID for package operations.
