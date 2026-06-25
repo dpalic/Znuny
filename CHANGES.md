@@ -1,6 +1,7 @@
 # 7.3.5 2026-??-??
  - 2026-06-25 Fixed: Errors executing ticket search in AgentTicketService if user has no queues or services assigned. Thanks to Paweł Bogusławski for reporting the issue. [#803](https://github.com/znuny/Znuny/issues/803)
  - 2026-06-24 Fixed: Command Maint::Ticket::ArchiveCleanup not deleting article flags correctly. Thanks to @parkingups69-netizen for reporting the issue. [#780](https://github.com/znuny/Znuny/issues/780)
+ - 2026-06-19 Changed: "Out-of-office enabled" notification can be dismissed now for the time of the current session without being shown again.
 
 # 7.3.4 2026-06-24
  - 2026-06-22 Fixed: Sorting by dynamic field columns in dashboard ticket widgets could fall back to age and process tickets without articles could be hidden. Thanks to @sergiykhan for reporting the issue. [#811](https://github.com/znuny/Znuny/issues/811)
