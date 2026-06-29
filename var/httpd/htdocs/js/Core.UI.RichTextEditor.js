@@ -923,7 +923,8 @@ Core.UI.RichTextEditor = (function (TargetNS) {
 
             // Apply rich text additional styles
             if(Core.Config.Get('RichText.Width')){
-                editor.editing.view.change(function(writer) { writer.setStyle('width', Core.Config.Get('RichText.Width'), editor.editing.view.document.getRoot()); });
+                editor.ui.view.element.style.maxWidth = Core.Config.Get('RichText.Width');
+                editor.ui.view.element.style.width = '100%';
             }
             if(Core.Config.Get('RichText.Height')){
                 editor.editing.view.change(function(writer) { writer.setStyle('height', Core.Config.Get('RichText.Height'), editor.editing.view.document.getRoot()); });
