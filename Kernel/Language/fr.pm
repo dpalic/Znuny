@@ -35,7 +35,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d.%m.%Y';
     $Self->{DateInputFormat}     = '%d.%m.%Y';
     $Self->{DateInputFormatLong} = '%d.%m.%Y - %T';
-    $Self->{Completeness}        = 0.36593914290266;
+    $Self->{Completeness}        = 0.367583903292508;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2991,14 +2991,18 @@ sub Data {
         'User name' => 'Identifiant',
         'Your user name' => 'Votre Identifiant',
         'Your password' => 'Votre mot de passe',
-        'Forgot password?' => 'Mot de passe oublié?',
+        'Lost your password?' => 'Mot de passe oublié ?',
         '2 Factor Token' => '',
         'Your 2 Factor Token' => '',
         'Log In' => 'Connexion',
         'Request New Password' => 'Demander un nouveau mot de passe',
         'Your User Name' => 'Votre nom',
-        'A new password will be sent to your email address.' => 'Un nouveau mot de passe sera envoyé à votre adresse e-mail',
+        'A link to set a new password will be sent to your email address.' =>
+            'Un lien pour définir un nouveau mot de passe sera envoyé à votre adresse e-mail.',
         'Back to login' => 'Retour à la page de connexion',
+        'Set New Password' => 'Définir un nouveau mot de passe',
+        'New password' => 'Nouveau mot de passe',
+        'Confirm password' => 'Confirmer le mot de passe',
         'Create Account' => 'Créer un compte',
         'Please fill out this form to receive login credentials.' => 'Veuillez remplir ce formulaire pour recevoir vos identifiants de connexion',
         'How we should address you' => 'Comment devons-nous nous adresser à vous',
@@ -3204,9 +3208,6 @@ sub Data {
         'Object#' => 'N° Objet',
         'Add links' => 'Ajouter des liens',
         'Delete links' => 'Supprimer les liens',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/Login.tt
-        'Lost your password?' => 'Mot de passe oublié ?',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/MetaFloater.tt
         'Scale preview content' => '',
@@ -4894,7 +4895,6 @@ sub Data {
 
         # Perl Module: Kernel/Output/HTML/Preferences/Password.pm
         'Current password' => 'Mot de passe actuel',
-        'New password' => 'Nouveau mot de passe',
         'Verify password' => 'Vérification du mot de passe',
         'The current password is not correct. Please try again!' => 'Le mot de passe actuel n\'est pas correct. Merci d\'essayer à nouveau!',
         'Please supply your new password!' => '',
@@ -5575,9 +5575,17 @@ sub Data {
         'Can`t remove SessionID.' => '',
         'Logout successful.' => '',
         'Feature not active!' => 'Cette fonctionnalité n\'est pas activée !',
+        'Your password reset link is invalid or has expired. Please request a new one.' =>
+            'Votre lien de réinitialisation de mot de passe est invalide ou a expiré. Veuillez en demander un nouveau.',
         'Sent password reset instructions. Please check your email.' => 'Instructions d\'initialisation du mot de passe envoyées. Veuillez consulter votre e-mail.',
-        'Invalid Token!' => 'Jeton non valide !',
-        'Sent new password to %s. Please check your email.' => 'Nouveau mot de passe envoyé à %s. Veuillez consulter votre e-mail.',
+        'Passwords do not match!' => 'Les mots de passe ne correspondent pas !',
+        'Password does not match the requirements!' => 'Le mot de passe ne respecte pas les exigences !',
+        'Password must be at least %s characters long!' => 'Le mot de passe doit contenir au moins %s caractères !',
+        'Password must contain at least 2 lowercase and 2 uppercase letter characters!' =>
+            'Le mot de passe doit contenir au moins 2 lettres minuscules et 2 majuscules !',
+        'Password must contain at least 1 digit!' => 'Le mot de passe doit contenir au moins 1 chiffre !',
+        'Password must contain at least 2 letter characters!' => 'Le mot de passe doit contenir au moins 2 lettres !',
+        'Password changed. Please log in with your new password.' => 'Mot de passe modifié. Veuillez vous connecter avec votre nouveau mot de passe.',
         'Error: invalid session.' => '',
         'No Permission to use this frontend module!' => '',
 
@@ -6090,14 +6098,20 @@ sub Data {
             '',
         'Specifies the email address that should be used by the application when sending notifications. The email address is used to build the complete display name for the notification master (i.e. "Znuny Notifications" znuny@your.example.com). You can use the OTRS_CONFIG_FQDN variable as set in your configuation, or choose another email address.' =>
             '',
+        'Defines the validity period in seconds for password reset tokens. After this time the token expires and a new reset request is required. Default: 3600 (1 hour).' =>
+            'Définit la durée de validité en secondes des jetons de réinitialisation de mot de passe. Après ce délai, le jeton expire et une nouvelle demande est requise. Par défaut : 3600 (1 heure).',
+        'Maximum number of password reset requests allowed per IP address or username within the rate limit window. Set to 0 to disable rate limiting. Default: 5.' =>
+            'Nombre maximal de demandes de réinitialisation de mot de passe autorisées par adresse IP ou nom d\'utilisateur dans la fenêtre de rate limiting. Mettre 0 pour désactiver. Par défaut : 5.',
+        'Time window in seconds for password reset rate limiting. Attempts within this window are counted against the maximum. Default: 600 (10 minutes).' =>
+            'Fenêtre temporelle en secondes pour le rate limiting de réinitialisation de mot de passe. Les tentatives dans cette fenêtre sont comptées par rapport au maximum. Par défaut : 600 (10 minutes).',
         'Defines the subject for notification mails sent to agents, with token about new requested password.' =>
             '',
         'Defines the body text for notification mails sent to agents, with token about new requested password.' =>
             '',
-        'Defines the subject for notification mails sent to agents, about new password.' =>
-            '',
-        'Defines the body text for notification mails sent to agents, about new password.' =>
-            '',
+        'Defines the subject for notification mails sent to agents, confirming that the password has been reset.' =>
+            'Définit l\'objet des e-mails de notification envoyés aux agents confirmant la réinitialisation du mot de passe.',
+        'Defines the body text for notification mails sent to agents, confirming that the password has been reset.' =>
+            'Définit le corps des e-mails de notification envoyés aux agents confirmant la réinitialisation du mot de passe.',
         'Standard available permissions for agents within the application. If more permissions are needed, they can be entered here. Permissions must be defined to be effective. Some other good permissions have also been provided built-in: note, close, pending, customer, freetext, move, compose, responsible, forward, and bounce. Make sure that "rw" is always the last registered permission.' =>
             '',
         'Defines the standard permissions available for customers within the application. If more permissions are needed, you can enter them here. Permissions must be hard coded to be effective. Please ensure, when adding any of the afore mentioned permissions, that the "rw" permission remains the last entry.' =>
@@ -6173,10 +6187,10 @@ sub Data {
             '',
         'Defines the body text for notification mails sent to customers, with token about new requested password.' =>
             '',
-        'Defines the subject for notification mails sent to customers, about new password.' =>
-            '',
-        'Defines the body text for notification mails sent to customers, about new password.' =>
-            '',
+        'Defines the subject for notification mails sent to customers, confirming that the password has been reset.' =>
+            'Définit l\'objet des e-mails de notification envoyés aux clients confirmant la réinitialisation du mot de passe.',
+        'Defines the body text for notification mails sent to customers, confirming that the password has been reset.' =>
+            'Définit le corps des e-mails de notification envoyés aux clients confirmant la réinitialisation du mot de passe.',
         'Defines the subject for notification mails sent to customers, about new account.' =>
             '',
         'Defines the body text for notification mails sent to customers, about new account.' =>

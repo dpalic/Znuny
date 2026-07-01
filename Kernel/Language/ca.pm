@@ -27,7 +27,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d.%m.%Y';
     $Self->{DateInputFormat}     = '%d.%m.%Y';
     $Self->{DateInputFormatLong} = '%d.%m.%Y - %T';
-    $Self->{Completeness}        = 0.198502469332484;
+    $Self->{Completeness}        = 0.200413551773501;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -2983,14 +2983,18 @@ sub Data {
         'User name' => 'Nom d\'usuari',
         'Your user name' => 'El seu nom d\'usuari',
         'Your password' => 'La seva contrasenya',
-        'Forgot password?' => 'Va oblidar la seva contrasenya?',
+        'Lost your password?' => 'Va oblidar la seva contrasenya?',
         '2 Factor Token' => '',
         'Your 2 Factor Token' => '',
         'Log In' => 'Entrar',
         'Request New Password' => 'Sol·licitar una nova contrasenya',
         'Your User Name' => 'El seu nom d\'usuari',
-        'A new password will be sent to your email address.' => 'Una nova contrasenya li serà enviada a la seva adreça de correu electrònic.',
+        'A link to set a new password will be sent to your email address.' =>
+            'S\'enviarà un enllaç per establir una nova contrasenya a la seva adreça de correu electrònic.',
         'Back to login' => 'Tornar a identificar-se',
+        'Set New Password' => 'Establir una nova contrasenya',
+        'New password' => 'Nova contrasenya',
+        'Confirm password' => 'Confirmar la contrasenya',
         'Create Account' => 'Crear Compte',
         'Please fill out this form to receive login credentials.' => 'Per favor, empleni aquest formulari per rebre les credencials d\'accés.',
         'How we should address you' => 'Com li hauríem d\'adreçar',
@@ -3196,9 +3200,6 @@ sub Data {
         'Object#' => 'Objecte#',
         'Add links' => 'Afegir enllaços',
         'Delete links' => 'Eliminar enllaços',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/Login.tt
-        'Lost your password?' => 'Va oblidar la seva contrasenya?',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/MetaFloater.tt
         'Scale preview content' => '',
@@ -4886,7 +4887,6 @@ sub Data {
 
         # Perl Module: Kernel/Output/HTML/Preferences/Password.pm
         'Current password' => 'Contrasenya actual',
-        'New password' => 'Nova contrasenya',
         'Verify password' => 'Verificar la contrasenya',
         'The current password is not correct. Please try again!' => 'La contrasenya actual no és correcta. Per favor, intenti-ho de nou!',
         'Please supply your new password!' => '',
@@ -5567,9 +5567,17 @@ sub Data {
         'Can`t remove SessionID.' => '',
         'Logout successful.' => '',
         'Feature not active!' => 'Característica no activa',
+        'Your password reset link is invalid or has expired. Please request a new one.' =>
+            'L\'enllaç per restablir la contrasenya no és vàlid o ha caducat. Sol·liciteu-ne un de nou.',
         'Sent password reset instructions. Please check your email.' => 'Enviades les instruccions per restablir la contrasenya. Per favor, consulti el seu correu electrònic.',
-        'Invalid Token!' => '\'Token\' invàlid!',
-        'Sent new password to %s. Please check your email.' => 'Enviada nova contrasenya per a %s. Per favor, consulti el seu correu electrònic.',
+        'Passwords do not match!' => 'Les contrasenyes no coincideixen!',
+        'Password does not match the requirements!' => 'La contrasenya no compleix els requisits!',
+        'Password must be at least %s characters long!' => 'La contrasenya ha de tenir almenys %s caràcters!',
+        'Password must contain at least 2 lowercase and 2 uppercase letter characters!' =>
+            'La contrasenya ha de contenir almenys 2 lletres minúscules i 2 majúscules!',
+        'Password must contain at least 1 digit!' => 'La contrasenya ha de contenir almenys 1 dígit!',
+        'Password must contain at least 2 letter characters!' => 'La contrasenya ha de contenir almenys 2 lletres!',
+        'Password changed. Please log in with your new password.' => 'Contrasenya canviada. Inicieu sessió amb la nova contrasenya.',
         'Error: invalid session.' => '',
         'No Permission to use this frontend module!' => '',
 
@@ -6082,14 +6090,20 @@ sub Data {
             '',
         'Specifies the email address that should be used by the application when sending notifications. The email address is used to build the complete display name for the notification master (i.e. "Znuny Notifications" znuny@your.example.com). You can use the OTRS_CONFIG_FQDN variable as set in your configuation, or choose another email address.' =>
             '',
+        'Defines the validity period in seconds for password reset tokens. After this time the token expires and a new reset request is required. Default: 3600 (1 hour).' =>
+            'Defineix el període de validesa en segons dels tokens de restabliment de contrasenya. Després d\'aquest temps el token caduca i cal una nova sol·licitud. Per defecte: 3600 (1 hora).',
+        'Maximum number of password reset requests allowed per IP address or username within the rate limit window. Set to 0 to disable rate limiting. Default: 5.' =>
+            'Nombre màxim de sol·licituds de restabliment de contrasenya permeses per adreça IP o nom d\'usuari dins la finestra de rate limiting. Establiu 0 per desactivar el rate limiting. Per defecte: 5.',
+        'Time window in seconds for password reset rate limiting. Attempts within this window are counted against the maximum. Default: 600 (10 minutes).' =>
+            'Finestra temporal en segons per al rate limiting del restabliment de contrasenya. Els intents dins d\'aquesta finestra es compten contra el màxim. Per defecte: 600 (10 minuts).',
         'Defines the subject for notification mails sent to agents, with token about new requested password.' =>
             '',
         'Defines the body text for notification mails sent to agents, with token about new requested password.' =>
             '',
-        'Defines the subject for notification mails sent to agents, about new password.' =>
-            '',
-        'Defines the body text for notification mails sent to agents, about new password.' =>
-            '',
+        'Defines the subject for notification mails sent to agents, confirming that the password has been reset.' =>
+            'Defineix l\'assumpte dels correus de notificació enviats als agents confirmant el restabliment de la contrasenya.',
+        'Defines the body text for notification mails sent to agents, confirming that the password has been reset.' =>
+            'Defineix el cos dels correus de notificació enviats als agents confirmant el restabliment de la contrasenya.',
         'Standard available permissions for agents within the application. If more permissions are needed, they can be entered here. Permissions must be defined to be effective. Some other good permissions have also been provided built-in: note, close, pending, customer, freetext, move, compose, responsible, forward, and bounce. Make sure that "rw" is always the last registered permission.' =>
             '',
         'Defines the standard permissions available for customers within the application. If more permissions are needed, you can enter them here. Permissions must be hard coded to be effective. Please ensure, when adding any of the afore mentioned permissions, that the "rw" permission remains the last entry.' =>
@@ -6165,10 +6179,10 @@ sub Data {
             '',
         'Defines the body text for notification mails sent to customers, with token about new requested password.' =>
             '',
-        'Defines the subject for notification mails sent to customers, about new password.' =>
-            '',
-        'Defines the body text for notification mails sent to customers, about new password.' =>
-            '',
+        'Defines the subject for notification mails sent to customers, confirming that the password has been reset.' =>
+            'Defineix l\'assumpte dels correus de notificació enviats als clients confirmant el restabliment de la contrasenya.',
+        'Defines the body text for notification mails sent to customers, confirming that the password has been reset.' =>
+            'Defineix el cos dels correus de notificació enviats als clients confirmant el restabliment de la contrasenya.',
         'Defines the subject for notification mails sent to customers, about new account.' =>
             '',
         'Defines the body text for notification mails sent to customers, about new account.' =>

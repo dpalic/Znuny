@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d.%m.%Y';
     $Self->{DateInputFormat}     = '%d.%m.%Y';
     $Self->{DateInputFormatLong} = '%d.%m.%Y - %T';
-    $Self->{Completeness}        = 0.144655090011152;
+    $Self->{Completeness}        = 0.147128996341657;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2982,14 +2982,18 @@ sub Data {
         'User name' => '',
         'Your user name' => '',
         'Your password' => '',
-        'Forgot password?' => '',
+        'Lost your password?' => 'Mất mật khẩu?',
         '2 Factor Token' => '',
         'Your 2 Factor Token' => '',
         'Log In' => 'Đăng nhập',
         'Request New Password' => '',
         'Your User Name' => '',
-        'A new password will be sent to your email address.' => '',
+        'A link to set a new password will be sent to your email address.' =>
+            'Một liên kết để đặt mật khẩu mới sẽ được gửi đến địa chỉ email của bạn.',
         'Back to login' => '',
+        'Set New Password' => 'Đặt mật khẩu mới',
+        'New password' => 'Mật khẩu mới',
+        'Confirm password' => 'Xác nhận mật khẩu',
         'Create Account' => 'Tạo tài khoản',
         'Please fill out this form to receive login credentials.' => '',
         'How we should address you' => '',
@@ -3195,9 +3199,6 @@ sub Data {
         'Object#' => '',
         'Add links' => '',
         'Delete links' => '',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/Login.tt
-        'Lost your password?' => 'Mất mật khẩu?',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/MetaFloater.tt
         'Scale preview content' => '',
@@ -4885,7 +4886,6 @@ sub Data {
 
         # Perl Module: Kernel/Output/HTML/Preferences/Password.pm
         'Current password' => 'Mật khẩu hiện tại',
-        'New password' => 'Mật khẩu mới',
         'Verify password' => 'Xác minh mật khẩu',
         'The current password is not correct. Please try again!' => 'Mật khẩu hiện tại là không đúng. Vui lòng thử lại!',
         'Please supply your new password!' => '',
@@ -5566,9 +5566,17 @@ sub Data {
         'Can`t remove SessionID.' => '',
         'Logout successful.' => '',
         'Feature not active!' => 'Tính năng không hoạt động!',
+        'Your password reset link is invalid or has expired. Please request a new one.' =>
+            'Liên kết đặt lại mật khẩu của bạn không hợp lệ hoặc đã hết hạn. Vui lòng yêu cầu liên kết mới.',
         'Sent password reset instructions. Please check your email.' => 'Gửi hướng dẫn thiết lập lại mật khẩu. Hãy kiểm tra email của bạn.',
-        'Invalid Token!' => '',
-        'Sent new password to %s. Please check your email.' => 'Gửi mật khẩu mới tới% s. Hãy kiểm tra email của bạn.',
+        'Passwords do not match!' => 'Mật khẩu không khớp!',
+        'Password does not match the requirements!' => 'Mật khẩu không đáp ứng yêu cầu!',
+        'Password must be at least %s characters long!' => 'Mật khẩu phải dài ít nhất %s ký tự!',
+        'Password must contain at least 2 lowercase and 2 uppercase letter characters!' =>
+            'Mật khẩu phải chứa ít nhất 2 chữ thường và 2 chữ hoa!',
+        'Password must contain at least 1 digit!' => 'Mật khẩu phải chứa ít nhất 1 chữ số!',
+        'Password must contain at least 2 letter characters!' => 'Mật khẩu phải chứa ít nhất 2 chữ cái!',
+        'Password changed. Please log in with your new password.' => 'Mật khẩu đã được thay đổi. Vui lòng đăng nhập bằng mật khẩu mới.',
         'Error: invalid session.' => '',
         'No Permission to use this frontend module!' => '',
 
@@ -6081,14 +6089,20 @@ sub Data {
             '',
         'Specifies the email address that should be used by the application when sending notifications. The email address is used to build the complete display name for the notification master (i.e. "Znuny Notifications" znuny@your.example.com). You can use the OTRS_CONFIG_FQDN variable as set in your configuation, or choose another email address.' =>
             '',
+        'Defines the validity period in seconds for password reset tokens. After this time the token expires and a new reset request is required. Default: 3600 (1 hour).' =>
+            'Xác định thời gian hiệu lực tính bằng giây cho token đặt lại mật khẩu. Sau thời gian này token hết hạn và cần yêu cầu mới. Mặc định: 3600 (1 giờ).',
+        'Maximum number of password reset requests allowed per IP address or username within the rate limit window. Set to 0 to disable rate limiting. Default: 5.' =>
+            'Số lượng tối đa yêu cầu đặt lại mật khẩu được phép cho mỗi địa chỉ IP hoặc tên người dùng trong cửa sổ rate limiting. Đặt 0 để tắt rate limiting. Mặc định: 5.',
+        'Time window in seconds for password reset rate limiting. Attempts within this window are counted against the maximum. Default: 600 (10 minutes).' =>
+            'Cửa sổ thời gian tính bằng giây cho rate limiting đặt lại mật khẩu. Các lần thử trong cửa sổ này được tính so với mức tối đa. Mặc định: 600 (10 phút).',
         'Defines the subject for notification mails sent to agents, with token about new requested password.' =>
             '',
         'Defines the body text for notification mails sent to agents, with token about new requested password.' =>
             '',
-        'Defines the subject for notification mails sent to agents, about new password.' =>
-            '',
-        'Defines the body text for notification mails sent to agents, about new password.' =>
-            '',
+        'Defines the subject for notification mails sent to agents, confirming that the password has been reset.' =>
+            'Xác định chủ đề email thông báo gửi cho agent xác nhận đặt lại mật khẩu.',
+        'Defines the body text for notification mails sent to agents, confirming that the password has been reset.' =>
+            'Xác định nội dung email thông báo gửi cho agent xác nhận đặt lại mật khẩu.',
         'Standard available permissions for agents within the application. If more permissions are needed, they can be entered here. Permissions must be defined to be effective. Some other good permissions have also been provided built-in: note, close, pending, customer, freetext, move, compose, responsible, forward, and bounce. Make sure that "rw" is always the last registered permission.' =>
             '',
         'Defines the standard permissions available for customers within the application. If more permissions are needed, you can enter them here. Permissions must be hard coded to be effective. Please ensure, when adding any of the afore mentioned permissions, that the "rw" permission remains the last entry.' =>
@@ -6164,10 +6178,10 @@ sub Data {
             '',
         'Defines the body text for notification mails sent to customers, with token about new requested password.' =>
             '',
-        'Defines the subject for notification mails sent to customers, about new password.' =>
-            '',
-        'Defines the body text for notification mails sent to customers, about new password.' =>
-            '',
+        'Defines the subject for notification mails sent to customers, confirming that the password has been reset.' =>
+            'Xác định chủ đề email thông báo gửi cho khách hàng xác nhận đặt lại mật khẩu.',
+        'Defines the body text for notification mails sent to customers, confirming that the password has been reset.' =>
+            'Xác định nội dung email thông báo gửi cho khách hàng xác nhận đặt lại mật khẩu.',
         'Defines the subject for notification mails sent to customers, about new account.' =>
             '',
         'Defines the body text for notification mails sent to customers, about new account.' =>

@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d/%m/%Y';
     $Self->{DateInputFormat}     = '%d/%m/%Y';
     $Self->{DateInputFormatLong} = '%d/%m/%Y - %T';
-    $Self->{Completeness}        = 0.580213477776008;
+    $Self->{Completeness}        = 0.581199300143153;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -2984,14 +2984,18 @@ bin/znuny.Daemon.pl status\').',
         'User name' => 'Nama pengguna',
         'Your user name' => 'Nama pengguna anda',
         'Your password' => 'Kata sandi anda',
-        'Forgot password?' => 'Lupa kata sandi?',
+        'Lost your password?' => 'Kehilangan kata sandi anda?',
         '2 Factor Token' => '2 faktor bukti',
         'Your 2 Factor Token' => '2 faktor bukti anda',
         'Log In' => 'Masukkan',
         'Request New Password' => 'Meminta kata sandi baru',
         'Your User Name' => 'Nama pengguna anda',
-        'A new password will be sent to your email address.' => 'Kata sandi baru anda akan dihantar ke email anda',
+        'A link to set a new password will be sent to your email address.' =>
+            'Tautan untuk menetapkan kata sandi baru akan dikirim ke email Anda.',
         'Back to login' => 'Kembali ke dalam login',
+        'Set New Password' => 'Atur kata sandi baru',
+        'New password' => 'Kata sandi baru',
+        'Confirm password' => 'Konfirmasi kata sandi',
         'Create Account' => 'Menciptakan akun',
         'Please fill out this form to receive login credentials.' => 'Silahkan isi formulir ini untuk menerima surat kepercayaan',
         'How we should address you' => 'Bagaimana kami mengalamatkan anda',
@@ -3197,9 +3201,6 @@ bin/znuny.Daemon.pl status\').',
         'Object#' => 'Objek#',
         'Add links' => 'Tambahkan penghubung',
         'Delete links' => 'Hapus penghubung',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/Login.tt
-        'Lost your password?' => 'Kehilangan kata sandi anda?',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/MetaFloater.tt
         'Scale preview content' => 'konten skala pratinjau ',
@@ -4887,7 +4888,6 @@ bin/znuny.Daemon.pl status\').',
 
         # Perl Module: Kernel/Output/HTML/Preferences/Password.pm
         'Current password' => 'Kata sandi saat ini',
-        'New password' => 'Kata sandi baru',
         'Verify password' => 'verifikasi kata sandi',
         'The current password is not correct. Please try again!' => 'Kata sandi saat ini tidak benar. Silahkan coba lagi!',
         'Please supply your new password!' => 'Harap menyertakan password baru Anda!',
@@ -5568,9 +5568,17 @@ bin/znuny.Daemon.pl status\').',
         'Can`t remove SessionID.' => '',
         'Logout successful.' => 'Logout sukses.',
         'Feature not active!' => 'Fitur tidak aktif!',
+        'Your password reset link is invalid or has expired. Please request a new one.' =>
+            'Tautan reset kata sandi Anda tidak valid atau sudah kedaluwarsa. Silakan minta yang baru.',
         'Sent password reset instructions. Please check your email.' => 'Instruksi untuk mereset kode sandi telah dikirimkan. Silahkan untuk memeriksa email anda.',
-        'Invalid Token!' => 'Token tidak sah!',
-        'Sent new password to %s. Please check your email.' => 'Kode sandi baru telah dikirimkan kepada %s. Silahkan untuk memeriksa email anda.',
+        'Passwords do not match!' => 'Kata sandi tidak cocok!',
+        'Password does not match the requirements!' => 'Kata sandi tidak memenuhi persyaratan!',
+        'Password must be at least %s characters long!' => 'Kata sandi harus minimal %s karakter!',
+        'Password must contain at least 2 lowercase and 2 uppercase letter characters!' =>
+            'Kata sandi harus mengandung minimal 2 huruf kecil dan 2 huruf besar!',
+        'Password must contain at least 1 digit!' => 'Kata sandi harus mengandung minimal 1 angka!',
+        'Password must contain at least 2 letter characters!' => 'Kata sandi harus mengandung minimal 2 huruf!',
+        'Password changed. Please log in with your new password.' => 'Kata sandi diubah. Silakan masuk dengan kata sandi baru Anda.',
         'Error: invalid session.' => '',
         'No Permission to use this frontend module!' => 'Tidak ada Izin untuk menggunakan modul antarmuka ini!',
 
@@ -6083,14 +6091,20 @@ bin/znuny.Daemon.pl status\').',
             'Menentukan nama yang harus digunakan oleh aplikasi saat mengirim pemberitahuan. Nama pengirim digunakan untuk membangun nama lengkap tampilan untuk master pemberitahuan (yaitu "Znuny Pemberitahuan" znuny@your.example.com).',
         'Specifies the email address that should be used by the application when sending notifications. The email address is used to build the complete display name for the notification master (i.e. "Znuny Notifications" znuny@your.example.com). You can use the OTRS_CONFIG_FQDN variable as set in your configuation, or choose another email address.' =>
             'Menentukan alamat email yang harus digunakan oleh aplikasi saat mengirim pemberitahuan. Alamat email digunakan untuk membangun nama lengkap tampilan untuk master pemberitahuan (yaitu "Znuny Pemberitahuan" znuny@your.example.com). Anda dapat menggunakan variabel OTRS_CONFIG_FQDN sebagai set di configuation Anda, atau memilih alamat email lain.',
+        'Defines the validity period in seconds for password reset tokens. After this time the token expires and a new reset request is required. Default: 3600 (1 hour).' =>
+            'Menentukan masa berlaku token reset kata sandi dalam detik. Setelah itu token kedaluwarsa dan diperlukan permintaan baru. Default: 3600 (1 jam).',
+        'Maximum number of password reset requests allowed per IP address or username within the rate limit window. Set to 0 to disable rate limiting. Default: 5.' =>
+            'Jumlah maksimum permintaan reset kata sandi per alamat IP atau nama pengguna dalam jendela rate limiting. Atur ke 0 untuk menonaktifkan. Default: 5.',
+        'Time window in seconds for password reset rate limiting. Attempts within this window are counted against the maximum. Default: 600 (10 minutes).' =>
+            'Jendela waktu dalam detik untuk rate limiting reset kata sandi. Percobaan dalam jendela ini dihitung terhadap maksimum. Default: 600 (10 menit).',
         'Defines the subject for notification mails sent to agents, with token about new requested password.' =>
             'Mendefinisikan subjek untuk kiriman notifikasi dikirim ke agen, dengan katasandi baru yang diminta.',
         'Defines the body text for notification mails sent to agents, with token about new requested password.' =>
             '',
-        'Defines the subject for notification mails sent to agents, about new password.' =>
-            'Mendefinisikan subjek untuk kiriman notifikasi dikirim ke agen, tentang katasandi baru.',
-        'Defines the body text for notification mails sent to agents, about new password.' =>
-            '',
+        'Defines the subject for notification mails sent to agents, confirming that the password has been reset.' =>
+            'Menentukan subjek email notifikasi yang dikirim ke agen yang mengonfirmasi reset kata sandi.',
+        'Defines the body text for notification mails sent to agents, confirming that the password has been reset.' =>
+            'Menentukan teks email notifikasi yang dikirim ke agen yang mengonfirmasi reset kata sandi.',
         'Standard available permissions for agents within the application. If more permissions are needed, they can be entered here. Permissions must be defined to be effective. Some other good permissions have also been provided built-in: note, close, pending, customer, freetext, move, compose, responsible, forward, and bounce. Make sure that "rw" is always the last registered permission.' =>
             'izin tersedia standar untuk agen dalam aplikasi. Jika lebih banyak izin yang diperlukan, mereka dapat dimasukkan di sini. Izin harus didefinisikan untuk menjadi efektif. Beberapa izin yang baik lainnya juga telah tersedia built-in: dicatat, dekat, tertunda, pelanggan, FREETEXT, bergerak, menulis, bertanggung jawab, maju, dan mental. Pastikan bahwa "rw" selalu izin terdaftar terakhir.',
         'Defines the standard permissions available for customers within the application. If more permissions are needed, you can enter them here. Permissions must be hard coded to be effective. Please ensure, when adding any of the afore mentioned permissions, that the "rw" permission remains the last entry.' =>
@@ -6166,10 +6180,10 @@ bin/znuny.Daemon.pl status\').',
             'Mendefinisikan subjek untuk kiriman notifikasi dikirim ke pelanggan, dengan tanda tentang kata sandi baru yang diminta.',
         'Defines the body text for notification mails sent to customers, with token about new requested password.' =>
             '',
-        'Defines the subject for notification mails sent to customers, about new password.' =>
-            'Mendefinisikan subjek untuk kiriman notifikasi dikirim ke pelanggan, tentang katasandi baru.',
-        'Defines the body text for notification mails sent to customers, about new password.' =>
-            '',
+        'Defines the subject for notification mails sent to customers, confirming that the password has been reset.' =>
+            'Menentukan subjek email notifikasi yang dikirim ke pelanggan yang mengonfirmasi reset kata sandi.',
+        'Defines the body text for notification mails sent to customers, confirming that the password has been reset.' =>
+            'Menentukan teks email notifikasi yang dikirim ke pelanggan yang mengonfirmasi reset kata sandi.',
         'Defines the subject for notification mails sent to customers, about new account.' =>
             'Mendefinisikan subjek untuk kiriman notifikasi dikirim ke pelanggan, tentang akun baru.',
         'Defines the body text for notification mails sent to customers, about new account.' =>

@@ -29,7 +29,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d.%m.%Y';
     $Self->{DateInputFormat}     = '%d.%m.%Y';
     $Self->{DateInputFormatLong} = '%d.%m.%Y - %T';
-    $Self->{Completeness}        = 0.59072805480325;
+    $Self->{Completeness}        = 0.591697152855098;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -2988,14 +2988,18 @@ sub Data {
         'User name' => 'نام کاربری',
         'Your user name' => 'نام کاربری شما',
         'Your password' => 'رمز عبور شما',
-        'Forgot password?' => 'رمز عبور را فراموش کردید؟',
+        'Lost your password?' => 'رمز عبور خود را فراموش کرده اید؟',
         '2 Factor Token' => '2 فاکتور رمز',
         'Your 2 Factor Token' => ' 2 فاکتور رمزشما',
         'Log In' => 'ورود',
         'Request New Password' => 'درخواست رمز عبور جدید',
         'Your User Name' => 'نام کاربری شما',
-        'A new password will be sent to your email address.' => 'رمز عبور جدید برای آدرس ایمیل شما ارسال خواهد شد.',
+        'A link to set a new password will be sent to your email address.' =>
+            'پیوندی برای تنظیم رمز عبور جدید به آدرس ایمیل شما ارسال خواهد شد.',
         'Back to login' => 'بازگشت به صفحه ورود',
+        'Set New Password' => 'تنظیم رمز عبور جدید',
+        'New password' => 'رمز عبور جدید',
+        'Confirm password' => 'تأیید رمز عبور',
         'Create Account' => 'ثبت نام',
         'Please fill out this form to receive login credentials.' => 'لطفا این فرم را  برای دریافت اعتبار ورود پر کنید . ',
         'How we should address you' => 'ما چگونه شما را خطاب کنیم',
@@ -3201,9 +3205,6 @@ sub Data {
         'Object#' => 'شماره آبجکت',
         'Add links' => 'افزودن رابطه‌ها',
         'Delete links' => 'حذف رابطه‌ها',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/Login.tt
-        'Lost your password?' => 'رمز عبور خود را فراموش کرده اید؟',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/MetaFloater.tt
         'Scale preview content' => 'محتوای پیش نمایش مقیاس',
@@ -4891,7 +4892,6 @@ sub Data {
 
         # Perl Module: Kernel/Output/HTML/Preferences/Password.pm
         'Current password' => 'رمز عبور کنونی',
-        'New password' => 'رمز عبور جدید',
         'Verify password' => 'تکرار رمز عبور',
         'The current password is not correct. Please try again!' => 'رمز عبور کنونی صحیح نمی‌باشد. لطفا مجددا تلاش نمایید!',
         'Please supply your new password!' => 'لطفا رمز عبور جدید خود را عرضه کنید!',
@@ -5572,9 +5572,17 @@ sub Data {
         'Can`t remove SessionID.' => 'نمیتواند SESSIONID را حذف کنید.',
         'Logout successful.' => 'خروج موفقیت آمیز.',
         'Feature not active!' => 'این ویژگی فعال نیست.',
+        'Your password reset link is invalid or has expired. Please request a new one.' =>
+            'پیوند بازنشانی رمز عبور شما نامعتبر است یا منقضی شده است. لطفاً یک پیوند جدید درخواست کنید.',
         'Sent password reset instructions. Please check your email.' => 'دستورالعمل تنظیم مجدد کلمه عبور ارسال شد. لطفا ایمیل خود را چک نمایید.',
-        'Invalid Token!' => 'کد بازیابی معتبر نیست',
-        'Sent new password to %s. Please check your email.' => 'کلمه عبور جدید به %s ارسال شد. لطفا ایمیل خود را چک نمایید.',
+        'Passwords do not match!' => 'رمزهای عبور مطابقت ندارند!',
+        'Password does not match the requirements!' => 'رمز عبور با الزامات مطابقت ندارد!',
+        'Password must be at least %s characters long!' => 'رمز عبور باید حداقل %s کاراکتر باشد!',
+        'Password must contain at least 2 lowercase and 2 uppercase letter characters!' =>
+            'رمز عبور باید حداقل 2 حرف کوچک و 2 حرف بزرگ داشته باشد!',
+        'Password must contain at least 1 digit!' => 'رمز عبور باید حداقل 1 رقم داشته باشد!',
+        'Password must contain at least 2 letter characters!' => 'رمز عبور باید حداقل 2 حرف داشته باشد!',
+        'Password changed. Please log in with your new password.' => 'رمز عبور تغییر کرد. لطفاً با رمز عبور جدید وارد شوید.',
         'Error: invalid session.' => '',
         'No Permission to use this frontend module!' => 'بدون اجازه به استفاده از این ماژول ظاهر!',
 
@@ -6087,14 +6095,20 @@ sub Data {
             'نامی است که باید توسط نرم افزار در هنگام ارسال اطلاعیه استفاده می شود مشخص می کند. نام فرستنده استفاده می شود برای ساخت نام صفحه نمایش کامل برای کارشناسی ارشد اطلاع رسانی (یعنی \ "Znuny اطلاعیه " znuny@your.example.com).',
         'Specifies the email address that should be used by the application when sending notifications. The email address is used to build the complete display name for the notification master (i.e. "Znuny Notifications" znuny@your.example.com). You can use the OTRS_CONFIG_FQDN variable as set in your configuation, or choose another email address.' =>
             'آدرس ایمیل که باید توسط نرم افزار در هنگام ارسال اطلاعیه استفاده می شود مشخص می کند. آدرس ایمیل استفاده می شود برای ساخت نام صفحه نمایش کامل برای کارشناسی ارشد اطلاع رسانی (یعنی \ "Znuny اطلاعیه " znuny@your.example.com). شما می توانید متغیر OTRS_CONFIG_FQDN به عنوان مجموعه ای در configuation خود استفاده کنید، یا آدرس ایمیل دیگر را انتخاب کنید.',
+        'Defines the validity period in seconds for password reset tokens. After this time the token expires and a new reset request is required. Default: 3600 (1 hour).' =>
+            'مدت اعتبار توکن‌های بازنشانی رمز عبور را بر حسب ثانیه تعیین می‌کند. پس از این زمان توکن منقضی می‌شود و درخواست جدید لازم است. پیش‌فرض: 3600 (1 ساعت).',
+        'Maximum number of password reset requests allowed per IP address or username within the rate limit window. Set to 0 to disable rate limiting. Default: 5.' =>
+            'حداکثر تعداد درخواست‌های بازنشانی رمز عبور مجاز برای هر IP یا نام کاربری در بازه rate limiting. 0 برای غیرفعال کردن. پیش‌فرض: 5.',
+        'Time window in seconds for password reset rate limiting. Attempts within this window are counted against the maximum. Default: 600 (10 minutes).' =>
+            'بازه زمانی rate limiting برای بازنشانی رمز عبور بر حسب ثانیه. تلاش‌ها در این بازه در برابر حداکثر شمارش می‌شوند. پیش‌فرض: 600 (10 دقیقه).',
         'Defines the subject for notification mails sent to agents, with token about new requested password.' =>
             'تعریف می کند این موضوع برای ایمیل های آگاه سازی فرستاده شده به عوامل، با رمز در مورد کلمه عبور جدید درخواست شده است.',
         'Defines the body text for notification mails sent to agents, with token about new requested password.' =>
             '',
-        'Defines the subject for notification mails sent to agents, about new password.' =>
-            'تعریف می کند این موضوع برای ایمیل های آگاه سازی فرستاده شده به عوامل، در مورد رمز عبور جدید.',
-        'Defines the body text for notification mails sent to agents, about new password.' =>
-            '',
+        'Defines the subject for notification mails sent to agents, confirming that the password has been reset.' =>
+            'موضوع ایمیل‌های اطلاع‌رسانی ارسالی به agents برای تأیید بازنشانی رمز عبور را تعیین می‌کند.',
+        'Defines the body text for notification mails sent to agents, confirming that the password has been reset.' =>
+            'متن ایمیل‌های اطلاع‌رسانی ارسالی به agents برای تأیید بازنشانی رمز عبور را تعیین می‌کند.',
         'Standard available permissions for agents within the application. If more permissions are needed, they can be entered here. Permissions must be defined to be effective. Some other good permissions have also been provided built-in: note, close, pending, customer, freetext, move, compose, responsible, forward, and bounce. Make sure that "rw" is always the last registered permission.' =>
             'مجوز دسترس استاندارد برای عوامل داخل نرم افزار. اگر مجوزهای بیشتری مورد نیاز است، می توان آنها را در اینجا وارد شده است. مجوز باید تعریف شود، موثر باشد. برخی از مجوز خوب دیگر نیز ارائه ساخته شده در: توجه داشته باشید، نزدیک، در انتظار، مشتری، گه از FREETEXT، حرکت، آهنگسازی، مسئول، به جلو، و گزاف گویی. مطمئن شوید که \ "RW " همیشه آخرین اجازه ثبت شده است.',
         'Defines the standard permissions available for customers within the application. If more permissions are needed, you can enter them here. Permissions must be hard coded to be effective. Please ensure, when adding any of the afore mentioned permissions, that the "rw" permission remains the last entry.' =>
@@ -6170,10 +6184,10 @@ sub Data {
             'تعریف می کند این موضوع برای ایمیل های آگاه سازی فرستاده شده به مشتریان، با رمز در مورد کلمه عبور جدید درخواست شده است.',
         'Defines the body text for notification mails sent to customers, with token about new requested password.' =>
             '',
-        'Defines the subject for notification mails sent to customers, about new password.' =>
-            'تعریف می کند این موضوع برای ایمیل های آگاه سازی فرستاده شده به مشتریان، در مورد رمز عبور جدید.',
-        'Defines the body text for notification mails sent to customers, about new password.' =>
-            '',
+        'Defines the subject for notification mails sent to customers, confirming that the password has been reset.' =>
+            'موضوع ایمیل‌های اطلاع‌رسانی ارسالی به مشتریان برای تأیید بازنشانی رمز عبور را تعیین می‌کند.',
+        'Defines the body text for notification mails sent to customers, confirming that the password has been reset.' =>
+            'متن ایمیل‌های اطلاع‌رسانی ارسالی به مشتریان برای تأیید بازنشانی رمز عبور را تعیین می‌کند.',
         'Defines the subject for notification mails sent to customers, about new account.' =>
             'تعریف می کند این موضوع برای ایمیل های آگاه سازی فرستاده شده به مشتریان، در مورد حساب کاربری جدید.',
         'Defines the body text for notification mails sent to customers, about new account.' =>

@@ -9154,7 +9154,7 @@ msgstr "Додати посилання"
 msgid "Delete links"
 msgstr "Вилучити посилання"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/Login.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/CustomerLogin.tt
 msgid "Lost your password?"
 msgstr "Забули свій пароль"
 
@@ -13270,7 +13270,7 @@ msgstr "Будь ласка виберіть кінцеву дату, що йд�
 msgid "Current password"
 msgstr "Поточний пароль"
 
-#. Perl Module: Kernel/Output/HTML/Preferences/Password.pm
+#. TT Template: Kernel/Output/HTML/Templates/Standard/CustomerLogin.tt
 msgid "New password"
 msgstr "Новий пароль"
 
@@ -25432,4 +25432,76 @@ msgstr ""
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminNavigationBar.tt
 msgid "View the admin manual"
 msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/CustomerLogin.tt
+msgid "Set New Password"
+msgstr "Встановити новий пароль"
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/CustomerLogin.tt
+msgid "Confirm password"
+msgstr "Підтвердити пароль"
+
+#. Perl Module: Kernel/System/Web/InterfaceAgent.pm
+msgid "Your password reset link is invalid or has expired. Please request a new one."
+msgstr "Ваше посилання для скидання пароля недійсне або прострочене. Будь ласка, запросіть нове."
+
+#. Perl Module: Kernel/System/Web/InterfaceAgent.pm
+msgid "Passwords do not match!"
+msgstr "Паролі не збігаються!"
+
+#. Perl Module: Kernel/System/Web/InterfaceAgent.pm
+msgid "Password does not match the requirements!"
+msgstr "Пароль не відповідає вимогам!"
+
+#. Perl Module: Kernel/System/Web/InterfaceAgent.pm
+msgid "Password must be at least %s characters long!"
+msgstr "Пароль має містити щонайменше %s символів!"
+
+#. Perl Module: Kernel/System/Web/InterfaceAgent.pm
+msgid "Password must contain at least 2 lowercase and 2 uppercase letter characters!"
+msgstr "Пароль має містити щонайменше 2 малі та 2 великі літери!"
+
+#. Perl Module: Kernel/System/Web/InterfaceAgent.pm
+msgid "Password must contain at least 1 digit!"
+msgstr "Пароль має містити щонайменше 1 цифру!"
+
+#. Perl Module: Kernel/System/Web/InterfaceAgent.pm
+msgid "Password must contain at least 2 letter characters!"
+msgstr "Пароль має містити щонайменше 2 літери!"
+
+#. Perl Module: Kernel/System/Web/InterfaceAgent.pm
+msgid "Password changed. Please log in with your new password."
+msgstr "Пароль змінено. Увійдіть з новим паролем."
+
+#. XML Definition: Kernel/Config/Files/XML/Framework.xml
+msgid "Defines the validity period in seconds for password reset tokens. After this time the token expires and a new reset request is required. Default: 3600 (1 hour)."
+msgstr "Визначає строк дії токенів скидання пароля в секундах. Після цього токен закінчується і потрібен новий запит. За замовчуванням: 3600 (1 година)."
+
+#. XML Definition: Kernel/Config/Files/XML/Framework.xml
+msgid "Maximum number of password reset requests allowed per IP address or username within the rate limit window. Set to 0 to disable rate limiting. Default: 5."
+msgstr "Максимальна кількість запитів на скидання пароля на IP-адресу або ім'я користувача в межах вікна rate limiting. 0 вимикає rate limiting. За замовчуванням: 5."
+
+#. XML Definition: Kernel/Config/Files/XML/Framework.xml
+msgid "Time window in seconds for password reset rate limiting. Attempts within this window are counted against the maximum. Default: 600 (10 minutes)."
+msgstr "Часове вікно в секундах для rate limiting скидання пароля. Спроби в цьому вікні враховуються щодо максимуму. За замовчуванням: 600 (10 хвилин)."
+
+#. XML Definition: Kernel/Config/Files/XML/Framework.xml
+msgid "Defines the subject for notification mails sent to agents, confirming that the password has been reset."
+msgstr "Визначає тему сповіщень електронною поштою агентам, що підтверджують скидання пароля."
+
+#. XML Definition: Kernel/Config/Files/XML/Framework.xml
+msgid "Defines the body text for notification mails sent to agents, confirming that the password has been reset."
+msgstr "Визначає текст сповіщень електронною поштою агентам, що підтверджують скидання пароля."
+
+#. XML Definition: Kernel/Config/Files/XML/Framework.xml
+msgid "Defines the subject for notification mails sent to customers, confirming that the password has been reset."
+msgstr "Визначає тему сповіщень електронною поштою клієнтам, що підтверджують скидання пароля."
+
+#. XML Definition: Kernel/Config/Files/XML/Framework.xml
+msgid "Defines the body text for notification mails sent to customers, confirming that the password has been reset."
+msgstr "Визначає текст сповіщень електронною поштою клієнтам, що підтверджують скидання пароля."
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/CustomerLogin.tt
+msgid "A link to set a new password will be sent to your email address."
+msgstr "Посилання для встановлення нового пароля буде надіслано на вашу електронну скриньку."
 

@@ -9158,7 +9158,7 @@ msgstr "添加链接"
 msgid "Delete links"
 msgstr "删除链接"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/Login.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/CustomerLogin.tt
 msgid "Lost your password?"
 msgstr "忘记密码?"
 
@@ -13274,7 +13274,7 @@ msgstr "请指定在开始时间之后的结束时间。"
 msgid "Current password"
 msgstr "当前密码"
 
-#. Perl Module: Kernel/Output/HTML/Preferences/Password.pm
+#. TT Template: Kernel/Output/HTML/Templates/Standard/CustomerLogin.tt
 msgid "New password"
 msgstr "新密码"
 
@@ -25442,4 +25442,76 @@ msgstr ""
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminNavigationBar.tt
 msgid "View the admin manual"
 msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/CustomerLogin.tt
+msgid "Set New Password"
+msgstr "设置新密码"
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/CustomerLogin.tt
+msgid "Confirm password"
+msgstr "确认密码"
+
+#. Perl Module: Kernel/System/Web/InterfaceAgent.pm
+msgid "Your password reset link is invalid or has expired. Please request a new one."
+msgstr "您的密码重置链接无效或已过期。请重新申请。"
+
+#. Perl Module: Kernel/System/Web/InterfaceAgent.pm
+msgid "Passwords do not match!"
+msgstr "密码不匹配！"
+
+#. Perl Module: Kernel/System/Web/InterfaceAgent.pm
+msgid "Password does not match the requirements!"
+msgstr "密码不符合要求！"
+
+#. Perl Module: Kernel/System/Web/InterfaceAgent.pm
+msgid "Password must be at least %s characters long!"
+msgstr "密码长度至少为 %s 个字符！"
+
+#. Perl Module: Kernel/System/Web/InterfaceAgent.pm
+msgid "Password must contain at least 2 lowercase and 2 uppercase letter characters!"
+msgstr "密码必须至少包含 2 个小写字母和 2 个大写字母！"
+
+#. Perl Module: Kernel/System/Web/InterfaceAgent.pm
+msgid "Password must contain at least 1 digit!"
+msgstr "密码必须至少包含 1 个数字！"
+
+#. Perl Module: Kernel/System/Web/InterfaceAgent.pm
+msgid "Password must contain at least 2 letter characters!"
+msgstr "密码必须至少包含 2 个字母！"
+
+#. Perl Module: Kernel/System/Web/InterfaceAgent.pm
+msgid "Password changed. Please log in with your new password."
+msgstr "密码已更改。请使用新密码登录。"
+
+#. XML Definition: Kernel/Config/Files/XML/Framework.xml
+msgid "Defines the validity period in seconds for password reset tokens. After this time the token expires and a new reset request is required. Default: 3600 (1 hour)."
+msgstr "定义密码重置令牌的有效期（秒）。超过此时间后令牌失效，需要重新请求。默认值：3600（1 小时）。"
+
+#. XML Definition: Kernel/Config/Files/XML/Framework.xml
+msgid "Maximum number of password reset requests allowed per IP address or username within the rate limit window. Set to 0 to disable rate limiting. Default: 5."
+msgstr "在 rate limiting 窗口内每个 IP 地址或用户名允许的最大密码重置请求数。设置为 0 可禁用 rate limiting。默认值：5。"
+
+#. XML Definition: Kernel/Config/Files/XML/Framework.xml
+msgid "Time window in seconds for password reset rate limiting. Attempts within this window are counted against the maximum. Default: 600 (10 minutes)."
+msgstr "密码重置 rate limiting 的时间窗口（秒）。此窗口内的尝试次数计入最大值。默认值：600（10 分钟）。"
+
+#. XML Definition: Kernel/Config/Files/XML/Framework.xml
+msgid "Defines the subject for notification mails sent to agents, confirming that the password has been reset."
+msgstr "定义发送给客服、确认密码已重置的通知邮件主题。"
+
+#. XML Definition: Kernel/Config/Files/XML/Framework.xml
+msgid "Defines the body text for notification mails sent to agents, confirming that the password has been reset."
+msgstr "定义发送给客服、确认密码已重置的通知邮件正文。"
+
+#. XML Definition: Kernel/Config/Files/XML/Framework.xml
+msgid "Defines the subject for notification mails sent to customers, confirming that the password has been reset."
+msgstr "定义发送给客户、确认密码已重置的通知邮件主题。"
+
+#. XML Definition: Kernel/Config/Files/XML/Framework.xml
+msgid "Defines the body text for notification mails sent to customers, confirming that the password has been reset."
+msgstr "定义发送给客户、确认密码已重置的通知邮件正文。"
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/CustomerLogin.tt
+msgid "A link to set a new password will be sent to your email address."
+msgstr "设置新密码的链接将会发送到您的邮箱中。"
 

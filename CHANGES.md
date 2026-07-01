@@ -1,5 +1,6 @@
 # 7.3.5 2026-??-??
  - 2026-06-29 Fixed: Applying CKEditor width via system configuration option Frontend::RichText::Settings###Width or module specific options, e.g. Ticket::Frontend::AgentTicketEmail###RichTextWidth.
+ - 2026-06-25 Changed: Password reset: Replaced sending of random password via email with sending a one-time link to change the password. Thanks to @besendorf for suggesting this feature. [#56](https://github.com/znuny/znuny-feature-requests/issues/56)
  - 2026-06-25 Fixed: Errors executing ticket search in AgentTicketService if user has no queues or services assigned. Thanks to Paweł Bogusławski for reporting the issue. [#803](https://github.com/znuny/Znuny/issues/803)
  - 2026-06-24 Fixed: Command Maint::Ticket::ArchiveCleanup not deleting article flags correctly. Thanks to @parkingups69-netizen for reporting the issue. [#780](https://github.com/znuny/Znuny/issues/780)
  - 2026-06-19 Changed: "Out-of-office enabled" notification can be dismissed now for the time of the current session without being shown again.

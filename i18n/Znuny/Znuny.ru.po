@@ -9160,7 +9160,7 @@ msgstr "Добавить связи"
 msgid "Delete links"
 msgstr "Удалить связи"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/Login.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/CustomerLogin.tt
 msgid "Lost your password?"
 msgstr "Забыли свой пароль?"
 
@@ -13276,7 +13276,7 @@ msgstr "Пожалуйста, укажите Дату окончания ран�
 msgid "Current password"
 msgstr "Текущий пароль"
 
-#. Perl Module: Kernel/Output/HTML/Preferences/Password.pm
+#. TT Template: Kernel/Output/HTML/Templates/Standard/CustomerLogin.tt
 msgid "New password"
 msgstr "Новый пароль"
 
@@ -25449,4 +25449,76 @@ msgstr ""
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminNavigationBar.tt
 msgid "View the admin manual"
 msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/CustomerLogin.tt
+msgid "Set New Password"
+msgstr "Установить новый пароль"
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/CustomerLogin.tt
+msgid "Confirm password"
+msgstr "Подтвердите пароль"
+
+#. Perl Module: Kernel/System/Web/InterfaceAgent.pm
+msgid "Your password reset link is invalid or has expired. Please request a new one."
+msgstr "Ссылка для сброса пароля недействительна или истекла. Запросите новую."
+
+#. Perl Module: Kernel/System/Web/InterfaceAgent.pm
+msgid "Passwords do not match!"
+msgstr "Пароли не совпадают!"
+
+#. Perl Module: Kernel/System/Web/InterfaceAgent.pm
+msgid "Password does not match the requirements!"
+msgstr "Пароль не соответствует требованиям!"
+
+#. Perl Module: Kernel/System/Web/InterfaceAgent.pm
+msgid "Password must be at least %s characters long!"
+msgstr "Пароль должен содержать не менее %s символов!"
+
+#. Perl Module: Kernel/System/Web/InterfaceAgent.pm
+msgid "Password must contain at least 2 lowercase and 2 uppercase letter characters!"
+msgstr "Пароль должен содержать не менее 2 строчных и 2 заглавных букв!"
+
+#. Perl Module: Kernel/System/Web/InterfaceAgent.pm
+msgid "Password must contain at least 1 digit!"
+msgstr "Пароль должен содержать не менее 1 цифры!"
+
+#. Perl Module: Kernel/System/Web/InterfaceAgent.pm
+msgid "Password must contain at least 2 letter characters!"
+msgstr "Пароль должен содержать не менее 2 букв!"
+
+#. Perl Module: Kernel/System/Web/InterfaceAgent.pm
+msgid "Password changed. Please log in with your new password."
+msgstr "Пароль изменён. Войдите с новым паролем."
+
+#. XML Definition: Kernel/Config/Files/XML/Framework.xml
+msgid "Defines the validity period in seconds for password reset tokens. After this time the token expires and a new reset request is required. Default: 3600 (1 hour)."
+msgstr "Определяет срок действия токенов сброса пароля в секундах. По истечении этого времени токен становится недействительным и требуется новый запрос. По умолчанию: 3600 (1 час)."
+
+#. XML Definition: Kernel/Config/Files/XML/Framework.xml
+msgid "Maximum number of password reset requests allowed per IP address or username within the rate limit window. Set to 0 to disable rate limiting. Default: 5."
+msgstr "Максимальное число запросов сброса пароля на IP-адрес или имя пользователя в окне rate limiting. 0 отключает rate limiting. По умолчанию: 5."
+
+#. XML Definition: Kernel/Config/Files/XML/Framework.xml
+msgid "Time window in seconds for password reset rate limiting. Attempts within this window are counted against the maximum. Default: 600 (10 minutes)."
+msgstr "Временное окно в секундах для rate limiting сброса пароля. Попытки в этом окне учитываются относительно максимума. По умолчанию: 600 (10 минут)."
+
+#. XML Definition: Kernel/Config/Files/XML/Framework.xml
+msgid "Defines the subject for notification mails sent to agents, confirming that the password has been reset."
+msgstr "Определяет тему уведомительных писем агентам, подтверждающих сброс пароля."
+
+#. XML Definition: Kernel/Config/Files/XML/Framework.xml
+msgid "Defines the body text for notification mails sent to agents, confirming that the password has been reset."
+msgstr "Определяет текст уведомительных писем агентам, подтверждающих сброс пароля."
+
+#. XML Definition: Kernel/Config/Files/XML/Framework.xml
+msgid "Defines the subject for notification mails sent to customers, confirming that the password has been reset."
+msgstr "Определяет тему уведомительных писем клиентам, подтверждающих сброс пароля."
+
+#. XML Definition: Kernel/Config/Files/XML/Framework.xml
+msgid "Defines the body text for notification mails sent to customers, confirming that the password has been reset."
+msgstr "Определяет текст уведомительных писем клиентам, подтверждающих сброс пароля."
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/CustomerLogin.tt
+msgid "A link to set a new password will be sent to your email address."
+msgstr "Ссылка для установки нового пароля будет отправлена на адрес Вашей электронной почты."
 

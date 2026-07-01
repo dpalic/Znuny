@@ -32,7 +32,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%m-%d';
     $Self->{DateInputFormat}     = '%Y-%m-%d';
     $Self->{DateInputFormatLong} = '%Y-%m-%d - %T';
-    $Self->{Completeness}        = 0.996017205671499;
+    $Self->{Completeness}        = 0.996023540639415;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2988,14 +2988,18 @@ sub Data {
         'User name' => 'Felhasználónév',
         'Your user name' => 'A felhasználóneve',
         'Your password' => 'A jelszava',
-        'Forgot password?' => 'Elfelejtette a jelszót?',
+        'Lost your password?' => 'Elfelejtette a jelszavát?',
         '2 Factor Token' => 'Kétlépcsős token',
         'Your 2 Factor Token' => 'Az Ön kétlépcsős tokenje',
         'Log In' => 'Bejelentkezés',
         'Request New Password' => 'Új jelszó kérése',
         'Your User Name' => 'A felhasználóneve',
-        'A new password will be sent to your email address.' => 'Az új jelszó el lesz küldve az e-mail-címére.',
+        'A link to set a new password will be sent to your email address.' =>
+            'Egy link az új jelszó beállításához el lesz küldve az e-mail-címére.',
         'Back to login' => 'Vissza a bejelentkezéshez',
+        'Set New Password' => 'Új jelszó beállítása',
+        'New password' => 'Új jelszó',
+        'Confirm password' => 'Jelszó megerősítése',
         'Create Account' => 'Fiók létrehozása',
         'Please fill out this form to receive login credentials.' => 'Töltse ki ezt az űrlapot a bejelentkezési adatok fogadásához.',
         'How we should address you' => 'Hogyan szólítsuk meg',
@@ -3201,9 +3205,6 @@ sub Data {
         'Object#' => 'Objektum#',
         'Add links' => 'Kapcsolatok hozzáadása',
         'Delete links' => 'Kapcsolatok törlése',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/Login.tt
-        'Lost your password?' => 'Elfelejtette a jelszavát?',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/MetaFloater.tt
         'Scale preview content' => 'Előnézet tartalmának méretezése',
@@ -4891,7 +4892,6 @@ sub Data {
 
         # Perl Module: Kernel/Output/HTML/Preferences/Password.pm
         'Current password' => 'Jelenlegi jelszó',
-        'New password' => 'Új jelszó',
         'Verify password' => 'Jelszó ellenőrzése',
         'The current password is not correct. Please try again!' => 'A jelenlegi jelszó nem helyes. Próbálja újra.',
         'Please supply your new password!' => 'Adja meg az új jelszavát!',
@@ -5572,9 +5572,17 @@ sub Data {
         'Can`t remove SessionID.' => 'Nem lehet eltávolítani a munkamenet-azonosítót.',
         'Logout successful.' => 'Sikeres kilépés.',
         'Feature not active!' => 'A funkció nem aktív!',
+        'Your password reset link is invalid or has expired. Please request a new one.' =>
+            'A jelszó-visszaállítási hivatkozás érvénytelen vagy lejárt. Kérjen újat.',
         'Sent password reset instructions. Please check your email.' => 'A jelszó visszaállítási utasítások elküldve. Nézze meg a leveleit.',
-        'Invalid Token!' => 'Érvénytelen token!',
-        'Sent new password to %s. Please check your email.' => 'Az új jelszó elküldve erre a címre: %s. Nézze meg a leveleit.',
+        'Passwords do not match!' => 'A jelszavak nem egyeznek!',
+        'Password does not match the requirements!' => 'A jelszó nem felel meg a követelményeknek!',
+        'Password must be at least %s characters long!' => 'A jelszónak legalább %s karakter hosszúnak kell lennie!',
+        'Password must contain at least 2 lowercase and 2 uppercase letter characters!' =>
+            'A jelszónak legalább 2 kisbetűt és 2 nagybetűt kell tartalmaznia!',
+        'Password must contain at least 1 digit!' => 'A jelszónak legalább 1 számjegyet kell tartalmaznia!',
+        'Password must contain at least 2 letter characters!' => 'A jelszónak legalább 2 betűt kell tartalmaznia!',
+        'Password changed. Please log in with your new password.' => 'A jelszó megváltozott. Jelentkezzen be az új jelszavával.',
         'Error: invalid session.' => 'Hiba: érvénytelen munkamenet.',
         'No Permission to use this frontend module!' => 'Nincs jogosultsága ezen előtétprogram-modul használatához!',
 
@@ -6087,14 +6095,20 @@ sub Data {
             'Azt a nevet adja meg, amelyet az alkalmazás az értesítések elküldésekor használjon. A küldő neve a teljes megjelenítési név összeállításához lesz használva az értesítési mesternél (azaz "Znuny értesítések" <znuny@your.example.com>).',
         'Specifies the email address that should be used by the application when sending notifications. The email address is used to build the complete display name for the notification master (i.e. "Znuny Notifications" znuny@your.example.com). You can use the OTRS_CONFIG_FQDN variable as set in your configuation, or choose another email address.' =>
             'Azt az e-mail-címet adja meg, amelyet az alkalmazás az értesítések elküldésekor használjon. Az e-mail-cím a teljes megjelenítési név összeállításához lesz használva az értesítési mesternél (azaz "Znuny értesítések" <znuny@your.example.com>). Használhatja az OTRS_CONFIG_FQDN változót, ahogy a konfigurációban be van állítva, vagy válasszon egy másik e-mail-címet.',
+        'Defines the validity period in seconds for password reset tokens. After this time the token expires and a new reset request is required. Default: 3600 (1 hour).' =>
+            'Meghatározza a jelszó-visszaállítási tokenek érvényességi idejét másodpercben. Ezután a token lejár és új kérés szükséges. Alapértelmezett: 3600 (1 óra).',
+        'Maximum number of password reset requests allowed per IP address or username within the rate limit window. Set to 0 to disable rate limiting. Default: 5.' =>
+            'A jelszó-visszaállítási kérések maximális száma IP-címenként vagy felhasználónévenként a rate limiting ablakban. 0 érték kikapcsolja. Alapértelmezett: 5.',
+        'Time window in seconds for password reset rate limiting. Attempts within this window are counted against the maximum. Default: 600 (10 minutes).' =>
+            'Időablak másodpercben a jelszó-visszaállítás rate limitingjéhez. Az ablakon belüli kísérletek a maximumhoz számítódnak. Alapértelmezett: 600 (10 perc).',
         'Defines the subject for notification mails sent to agents, with token about new requested password.' =>
             'Meghatározza a kért új jelszóval kapcsolatosan a tokennel rendelkező ügyintézőknek küldött értesítési levelek tárgyát.',
         'Defines the body text for notification mails sent to agents, with token about new requested password.' =>
             'Meghatározza a kért új jelszóval kapcsolatosan a tokennel rendelkező ügyintézőknek küldött értesítési levelek törzsének szövegét.',
-        'Defines the subject for notification mails sent to agents, about new password.' =>
-            'Meghatározza az új jelszóval kapcsolatosan az ügyintézőknek küldött értesítési levelek tárgyát.',
-        'Defines the body text for notification mails sent to agents, about new password.' =>
-            'Meghatározza az új jelszóval kapcsolatosan az ügyintézőknek küldött értesítési levelek törzsének szövegét.',
+        'Defines the subject for notification mails sent to agents, confirming that the password has been reset.' =>
+            'Meghatározza az ügynököknek küldött értesítő e-mailek tárgyát, amelyek megerősítik a jelszó visszaállítását.',
+        'Defines the body text for notification mails sent to agents, confirming that the password has been reset.' =>
+            'Meghatározza az ügynököknek küldött értesítő e-mailek szövegét, amelyek megerősítik a jelszó visszaállítását.',
         'Standard available permissions for agents within the application. If more permissions are needed, they can be entered here. Permissions must be defined to be effective. Some other good permissions have also been provided built-in: note, close, pending, customer, freetext, move, compose, responsible, forward, and bounce. Make sure that "rw" is always the last registered permission.' =>
             'Szabványos elérhető jogosultságok az alkalmazáson belüli ügyintézőknél. Ha több jogosultság szükséges, akkor azok itt adhatók meg. A jogosultságokat meg kell határozni, hogy hatályban lévők legyenek. Néhány egyéb jó jogosultság beépítetten is biztosítva van: jegyzet, lezárás, függőben, ügyfél, szabad szöveg, áthelyezés, válasz írása, felelős, továbbítás és átirányítás. Győződjön meg arról, hogy az „rw” mindig az utolsó regisztrált jogosultság legyen.',
         'Defines the standard permissions available for customers within the application. If more permissions are needed, you can enter them here. Permissions must be hard coded to be effective. Please ensure, when adding any of the afore mentioned permissions, that the "rw" permission remains the last entry.' =>
@@ -6170,10 +6184,10 @@ sub Data {
             'Meghatározza a kért új jelszóval kapcsolatosan a tokennel rendelkező ügyfeleknek küldött értesítési levelek tárgyát.',
         'Defines the body text for notification mails sent to customers, with token about new requested password.' =>
             'Meghatározza a kért új jelszóval kapcsolatosan a tokennel rendelkező ügyfeleknek küldött értesítési levelek törzsének szövegét.',
-        'Defines the subject for notification mails sent to customers, about new password.' =>
-            'Meghatározza az új jelszóval kapcsolatosan az ügyfeleknek küldött értesítési levelek tárgyát.',
-        'Defines the body text for notification mails sent to customers, about new password.' =>
-            'Meghatározza az új jelszóval kapcsolatosan az ügyfeleknek küldött értesítési levelek törzsének szövegét.',
+        'Defines the subject for notification mails sent to customers, confirming that the password has been reset.' =>
+            'Meghatározza az ügyfeleknek küldött értesítő e-mailek tárgyát, amelyek megerősítik a jelszó visszaállítását.',
+        'Defines the body text for notification mails sent to customers, confirming that the password has been reset.' =>
+            'Meghatározza az ügyfeleknek küldött értesítő e-mailek szövegét, amelyek megerősítik a jelszó visszaállítását.',
         'Defines the subject for notification mails sent to customers, about new account.' =>
             'Meghatározza az új fiókkal kapcsolatosan az ügyfeleknek küldött értesítési levelek tárgyát.',
         'Defines the body text for notification mails sent to customers, about new account.' =>

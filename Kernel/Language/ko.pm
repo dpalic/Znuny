@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%m-%d';
     $Self->{DateInputFormat}     = '%Y-%m-%d';
     $Self->{DateInputFormatLong} = '%Y-%m-%d %T';
-    $Self->{Completeness}        = 0.831766767564123;
+    $Self->{Completeness}        = 0.832034356608875;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -2982,14 +2982,18 @@ sub Data {
         'User name' => '사용자 이름',
         'Your user name' => '사용자 이름',
         'Your password' => '너의 비밀번호',
-        'Forgot password?' => '비밀번호를 잊으셨나요?',
+        'Lost your password?' => '비밀번호를 잊어 버렸습니까?',
         '2 Factor Token' => '2 요소 토큰',
         'Your 2 Factor Token' => '당신의 2 팩터 토큰',
         'Log In' => '로그인',
         'Request New Password' => '새 비밀번호 요청',
         'Your User Name' => '사용자 이름',
-        'A new password will be sent to your email address.' => '새 비밀번호가 이메일 주소로 전송됩니다.',
+        'A link to set a new password will be sent to your email address.' =>
+            '새 비밀번호를 설정할 수 있는 링크가 이메일 주소로 전송됩니다.',
         'Back to login' => '로그인으로 돌아 가기',
+        'Set New Password' => '새 비밀번호 설정',
+        'New password' => '새로운 비밀번호',
+        'Confirm password' => '비밀번호 확인',
         'Create Account' => '계정 만들기',
         'Please fill out this form to receive login credentials.' => '로그인 자격 증명을 받으려면 이 양식을 작성하십시오.',
         'How we should address you' => '우리가 너를 어떻게 대해야하는지',
@@ -3195,9 +3199,6 @@ sub Data {
         'Object#' => '목적#',
         'Add links' => '링크 추가',
         'Delete links' => '링크 삭제',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/Login.tt
-        'Lost your password?' => '비밀번호를 잊어 버렸습니까?',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/MetaFloater.tt
         'Scale preview content' => '미리보기 콘텐츠 크기 조정',
@@ -4885,7 +4886,6 @@ sub Data {
 
         # Perl Module: Kernel/Output/HTML/Preferences/Password.pm
         'Current password' => '현재 비밀번호',
-        'New password' => '새로운 비밀번호',
         'Verify password' => '비밀번호 확인',
         'The current password is not correct. Please try again!' => '현재 암호가 올바르지 않습니다. 다시 시도하십시오!',
         'Please supply your new password!' => '새 암호를 입력하십시오!',
@@ -5566,9 +5566,17 @@ sub Data {
         'Can`t remove SessionID.' => 'SessionID를 제거 할 수 없습니다.',
         'Logout successful.' => '로그아웃에 성공했습니다.',
         'Feature not active!' => '기능이 활성화되지 않았습니다!',
+        'Your password reset link is invalid or has expired. Please request a new one.' =>
+            '비밀번호 재설정 링크가 유효하지 않거나 만료되었습니다. 새 링크를 요청하세요.',
         'Sent password reset instructions. Please check your email.' => '보낸 암호 재설정 지침. 이메일을 확인하십시오.',
-        'Invalid Token!' => '잘못된 토큰!',
-        'Sent new password to %s. Please check your email.' => '새 암호를 %s로 보냈습니다. 이메일을 확인하십시오.',
+        'Passwords do not match!' => '비밀번호가 일치하지 않습니다!',
+        'Password does not match the requirements!' => '비밀번호가 요구 사항을 충족하지 않습니다!',
+        'Password must be at least %s characters long!' => '비밀번호는 최소 %s자 이상이어야 합니다!',
+        'Password must contain at least 2 lowercase and 2 uppercase letter characters!' =>
+            '비밀번호는 소문자 2개와 대문자 2개 이상을 포함해야 합니다!',
+        'Password must contain at least 1 digit!' => '비밀번호는 숫자 1개 이상을 포함해야 합니다!',
+        'Password must contain at least 2 letter characters!' => '비밀번호는 문자 2개 이상을 포함해야 합니다!',
+        'Password changed. Please log in with your new password.' => '비밀번호가 변경되었습니다. 새 비밀번호로 로그인하세요.',
         'Error: invalid session.' => '오류 : 세션이 잘못되었습니다.',
         'No Permission to use this frontend module!' => '이 프론트 엔드 모듈을 사용할 권한이 없습니다!',
 
@@ -6081,14 +6089,20 @@ sub Data {
             '알림을 보낼 때 응용 프로그램에서 사용해야하는 이름을 지정합니다. 발신자 이름은 알림 마스터의 전체 표시 이름 (예 : "Znuny Notifications"znuny@your.example.com)을 작성하는 데 사용됩니다.',
         'Specifies the email address that should be used by the application when sending notifications. The email address is used to build the complete display name for the notification master (i.e. "Znuny Notifications" znuny@your.example.com). You can use the OTRS_CONFIG_FQDN variable as set in your configuation, or choose another email address.' =>
             '알림을 보낼 때 응용 프로그램에서 사용해야하는 전자 메일 주소를 지정합니다. 이메일 주소는 알림 마스터의 전체 표시 이름 (예 : "Znuny Notifications"znuny@your.example.com)을 작성하는 데 사용됩니다. OTRS_CONFIG_FQDN 변수를 설정에 사용하거나 다른 이메일 주소를 선택할 수 있습니다.',
+        'Defines the validity period in seconds for password reset tokens. After this time the token expires and a new reset request is required. Default: 3600 (1 hour).' =>
+            '비밀번호 재설정 토큰의 유효 기간(초)을 정의합니다. 이 시간이 지나면 토큰이 만료되며 새 요청이 필요합니다. 기본값: 3600(1시간).',
+        'Maximum number of password reset requests allowed per IP address or username within the rate limit window. Set to 0 to disable rate limiting. Default: 5.' =>
+            'rate limiting 창 내 IP 주소 또는 사용자 이름당 허용되는 비밀번호 재설정 요청 최대 수. 0으로 설정하면 rate limiting을 비활성화합니다. 기본값: 5.',
+        'Time window in seconds for password reset rate limiting. Attempts within this window are counted against the maximum. Default: 600 (10 minutes).' =>
+            '비밀번호 재설정 rate limiting을 위한 시간 창(초). 이 창 내 시도는 최대값에 대해 집계됩니다. 기본값: 600(10분).',
         'Defines the subject for notification mails sent to agents, with token about new requested password.' =>
             '에이전트에게 보낸 알림 메일의 제목을 정의하고 요청 된 새 비밀번호에 대한 토큰을 사용합니다.',
         'Defines the body text for notification mails sent to agents, with token about new requested password.' =>
             '에이전트에게 보낸 알림 메일의 본문 텍스트를 정의하고 요청된 새 비밀번호에 대한 토큰을 지정합니다.',
-        'Defines the subject for notification mails sent to agents, about new password.' =>
-            '에이전트에 보내는 알림 메일의 제목과 새 암호를 정의합니다.',
-        'Defines the body text for notification mails sent to agents, about new password.' =>
-            '에이전트에 보내는 알림 메일의 본문 텍스트를 새 암호로 정의합니다.',
+        'Defines the subject for notification mails sent to agents, confirming that the password has been reset.' =>
+            '비밀번호 재설정을 확인하는 에이전트에게 보내는 알림 메일의 제목을 정의합니다.',
+        'Defines the body text for notification mails sent to agents, confirming that the password has been reset.' =>
+            '비밀번호 재설정을 확인하는 에이전트에게 보내는 알림 메일의 본문을 정의합니다.',
         'Standard available permissions for agents within the application. If more permissions are needed, they can be entered here. Permissions must be defined to be effective. Some other good permissions have also been provided built-in: note, close, pending, customer, freetext, move, compose, responsible, forward, and bounce. Make sure that "rw" is always the last registered permission.' =>
             '응용 프로그램 내의 에이전트에 대한 표준 사용 권한. 더 많은 권한이 필요하면 여기에 입력 할 수 있습니다. 권한은 효과가 있도록 정의되어야합니다. 메모, 닫기, 보류 중, 고객, 프리 텍스트, 이동, 작성, 책임, 전달 및 반송과 같은 기타 훌륭한 사용 권한도 내장되어 있습니다. "rw"가 항상 마지막으로 등록 된 권한인지 확인하십시오.',
         'Defines the standard permissions available for customers within the application. If more permissions are needed, you can enter them here. Permissions must be hard coded to be effective. Please ensure, when adding any of the afore mentioned permissions, that the "rw" permission remains the last entry.' =>
@@ -6164,10 +6178,10 @@ sub Data {
             '새로운 요청된 비밀번호에 대한 토큰과 함께 고객에게 발송된 통지 메일의 제목을 정의합니다.',
         'Defines the body text for notification mails sent to customers, with token about new requested password.' =>
             '새로운 요청된 비밀번호에 대한 토큰과 함께 고객에게 발송된 통지 메일의 본문 텍스트를 정의합니다.',
-        'Defines the subject for notification mails sent to customers, about new password.' =>
-            '고객에게 보낸 알림 메일 제목과 새 비밀번호를 정의합니다.',
-        'Defines the body text for notification mails sent to customers, about new password.' =>
-            '새 비밀번호에 대한 알림 메일의 본문 텍스트를 고객에게 전달합니다.',
+        'Defines the subject for notification mails sent to customers, confirming that the password has been reset.' =>
+            '비밀번호 재설정을 확인하는 고객에게 보내는 알림 메일의 제목을 정의합니다.',
+        'Defines the body text for notification mails sent to customers, confirming that the password has been reset.' =>
+            '비밀번호 재설정을 확인하는 고객에게 보내는 알림 메일의 본문을 정의합니다.',
         'Defines the subject for notification mails sent to customers, about new account.' =>
             '새 계정에 대한 고객에게 발송된 알림 메일 제목을 정의합니다.',
         'Defines the body text for notification mails sent to customers, about new account.' =>

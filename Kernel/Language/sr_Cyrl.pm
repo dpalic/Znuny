@@ -27,7 +27,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d.%m.%Y';
     $Self->{DateInputFormat}     = '%d.%m.%Y';
     $Self->{DateInputFormatLong} = '%d.%m.%Y - %T';
-    $Self->{Completeness}        = 0.855822845308268;
+    $Self->{Completeness}        = 0.856052171146811;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2983,14 +2983,18 @@ sub Data {
         'User name' => 'Корисничко име',
         'Your user name' => 'Ваше корисничко име',
         'Your password' => 'Ваша лозинка',
-        'Forgot password?' => 'Заборавили сте лозинку?',
+        'Lost your password?' => 'Изгубили сте лозинку?',
         '2 Factor Token' => 'Двофакторски токен',
         'Your 2 Factor Token' => 'Ваш двофакторски токен',
         'Log In' => 'Пријављивање',
         'Request New Password' => 'Захтев за нову лозинку',
         'Your User Name' => 'Ваше корисничко име',
-        'A new password will be sent to your email address.' => 'Нова лозинка ће бити послата на вашу имејл адресу.',
+        'A link to set a new password will be sent to your email address.' =>
+            'Линк за постављање нове лозинке биће послат на вашу имејл адресу.',
         'Back to login' => 'Назад на пријављивање',
+        'Set New Password' => 'Постави нову лозинку',
+        'New password' => 'Нова лозинка',
+        'Confirm password' => 'Потврди лозинку',
         'Create Account' => 'Креирајте налог',
         'Please fill out this form to receive login credentials.' => 'Молимо да попуните овај образац да би сте добили податке за пријаву.',
         'How we should address you' => 'Како да вас ословљавамо',
@@ -3196,9 +3200,6 @@ sub Data {
         'Object#' => 'Објекат#',
         'Add links' => 'Додај везе',
         'Delete links' => 'Обриши везе',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/Login.tt
-        'Lost your password?' => 'Изгубили сте лозинку?',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/MetaFloater.tt
         'Scale preview content' => 'Скалирај садржај за приказ',
@@ -4886,7 +4887,6 @@ sub Data {
 
         # Perl Module: Kernel/Output/HTML/Preferences/Password.pm
         'Current password' => 'Садашња лозинка',
-        'New password' => 'Нова лозинка',
         'Verify password' => 'Потврди лозинку',
         'The current password is not correct. Please try again!' => 'Актуелна лозинка је нетачна. Молимо покушајте поново!',
         'Please supply your new password!' => 'Молимо да обезбедите нову лозинку!',
@@ -5567,9 +5567,17 @@ sub Data {
         'Can`t remove SessionID.' => 'SessionID се не може уклонити.',
         'Logout successful.' => 'Успешна одјава.',
         'Feature not active!' => 'Функција није активна!',
+        'Your password reset link is invalid or has expired. Please request a new one.' =>
+            'Ваша веза за ресетовање лозинке је неважећа или је истекла. Затражите нову.',
         'Sent password reset instructions. Please check your email.' => 'Упутство за ресет лозинке је послато. Молимо проверите ваше имејлове.',
-        'Invalid Token!' => 'Неважећи Токен!',
-        'Sent new password to %s. Please check your email.' => 'Послата нова лозинка за %s. Молимо проверите ваше имејлове.',
+        'Passwords do not match!' => 'Лозинке се не поклапају!',
+        'Password does not match the requirements!' => 'Лозинка не испуњава захтеве!',
+        'Password must be at least %s characters long!' => 'Лозинка мора имати најмање %s знакова!',
+        'Password must contain at least 2 lowercase and 2 uppercase letter characters!' =>
+            'Лозинка мора садржати најмање 2 мала и 2 велика слова!',
+        'Password must contain at least 1 digit!' => 'Лозинка мора садржати најмање 1 цифру!',
+        'Password must contain at least 2 letter characters!' => 'Лозинка мора садржати најмање 2 слова!',
+        'Password changed. Please log in with your new password.' => 'Лозинка је промењена. Пријавите се новом лозинком.',
         'Error: invalid session.' => 'Грешка: неважећа сесија.',
         'No Permission to use this frontend module!' => 'Немате дозволу за  употребу овог корисничког модула!',
 
@@ -6082,14 +6090,20 @@ sub Data {
             'Дефинише назив које ће апликација користити приликом слања обавештења. Назив се користи у називу пошиљаоца обавештења (нпр. "Znuny Notifications" znuny@your.example.com).',
         'Specifies the email address that should be used by the application when sending notifications. The email address is used to build the complete display name for the notification master (i.e. "Znuny Notifications" znuny@your.example.com). You can use the OTRS_CONFIG_FQDN variable as set in your configuation, or choose another email address.' =>
             'Дефинише имејл адресу коју ће апликација користити приликом слања обавештења. Имејл адреса се користи у називу пошиљаоца обавештења (нпр. "Znuny Notifications" znuny@your.example.com). Можете користити променљиву OTRS_CONFIG_FQDN из ваше конфигурације, или одредите другу имејл адресу.',
+        'Defines the validity period in seconds for password reset tokens. After this time the token expires and a new reset request is required. Default: 3600 (1 hour).' =>
+            'Дефинише период важења у секундама за токене ресетовања лозинке. После тога токен истиче и потребан је нови захтев. Подразумевано: 3600 (1 сат).',
+        'Maximum number of password reset requests allowed per IP address or username within the rate limit window. Set to 0 to disable rate limiting. Default: 5.' =>
+            'Максималан број захтева за ресетовање лозинке по IP адреси или корисничком имену у прозору rate limiting. Поставите 0 за онемогућавање. Подразумевано: 5.',
+        'Time window in seconds for password reset rate limiting. Attempts within this window are counted against the maximum. Default: 600 (10 minutes).' =>
+            'Временски прозор у секундама за rate limiting ресетовања лозинке. Покушаји у овом прозору се броје према максимуму. Подразумевано: 600 (10 минута).',
         'Defines the subject for notification mails sent to agents, with token about new requested password.' =>
             'Дефинише предмет за имејл поруке обавештења послата оператерима, са токеном о новој захтеваној лозинки.',
         'Defines the body text for notification mails sent to agents, with token about new requested password.' =>
             'Дефинише садржај текста обавештења за слање оператерима са токеном за нову захтевану лозинку.',
-        'Defines the subject for notification mails sent to agents, about new password.' =>
-            'Дефинише предмет за имејл поруке обавештења послата оператерима, о новој лозинки.',
-        'Defines the body text for notification mails sent to agents, about new password.' =>
-            'Дефинише садржај текста обавештења за слање оператерима о новој лозинки.',
+        'Defines the subject for notification mails sent to agents, confirming that the password has been reset.' =>
+            'Дефинише тему обавештења e-поште агентима која потврђују ресетовање лозинке.',
+        'Defines the body text for notification mails sent to agents, confirming that the password has been reset.' =>
+            'Дефинише текст обавештења e-поште агентима која потврђују ресетовање лозинке.',
         'Standard available permissions for agents within the application. If more permissions are needed, they can be entered here. Permissions must be defined to be effective. Some other good permissions have also been provided built-in: note, close, pending, customer, freetext, move, compose, responsible, forward, and bounce. Make sure that "rw" is always the last registered permission.' =>
             'Стандардне расположиве дозволе за оператере унутар апликације. Уколико је потребно више дозвола они могу унети овде. Дозволе морају бити дефинисане да буду ефективне. Неке друге дозволе су такође обезбеђене уграђивањем у: напомену, затвори, на чекању, клијент, слободан текст, помери, отвори, одговоран, проследи и поврати. Обезбедите да "rw" увек буде последња регистрована дозвола.',
         'Defines the standard permissions available for customers within the application. If more permissions are needed, you can enter them here. Permissions must be hard coded to be effective. Please ensure, when adding any of the afore mentioned permissions, that the "rw" permission remains the last entry.' =>
@@ -6165,10 +6179,10 @@ sub Data {
             'Одређује предмет за имејл поруке обавештења послата клијентима, са токеном о новој захтеваној лозинки.',
         'Defines the body text for notification mails sent to customers, with token about new requested password.' =>
             'Дефинише садржај текста обавештења за слање клијентима са токеном за нову захтевану лозинку.',
-        'Defines the subject for notification mails sent to customers, about new password.' =>
-            'Одређује предмет за имејл поруке обавештења послата клијентима, о новој лозинки.',
-        'Defines the body text for notification mails sent to customers, about new password.' =>
-            'Одређује садржај текста обавештења за слање клијентима о новој лозинки.',
+        'Defines the subject for notification mails sent to customers, confirming that the password has been reset.' =>
+            'Дефинише тему обавештења e-поште клијентима која потврђују ресетовање лозинке.',
+        'Defines the body text for notification mails sent to customers, confirming that the password has been reset.' =>
+            'Дефинише текст обавештења e-поште клијентима која потврђују ресетовање лозинке.',
         'Defines the subject for notification mails sent to customers, about new account.' =>
             'Одређује предмет за имејл поруке обавештења послата клијентима, о новом налогу.',
         'Defines the body text for notification mails sent to customers, about new account.' =>

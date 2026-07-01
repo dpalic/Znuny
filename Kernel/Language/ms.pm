@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d.%m.%Y';
     $Self->{DateInputFormat}     = '%d.%m.%Y';
     $Self->{DateInputFormatLong} = '%d.%m.%Y - %T';
-    $Self->{Completeness}        = 0.514417715469173;
+    $Self->{Completeness}        = 0.515508191506283;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2982,14 +2982,18 @@ sub Data {
         'User name' => 'Nama pengguna',
         'Your user name' => 'Nama pengguna anda',
         'Your password' => 'Kata kunci anda',
-        'Forgot password?' => 'Lupa kata kunci?',
+        'Lost your password?' => 'Hilang kata kunci anda?',
         '2 Factor Token' => 'Token 2 Faktor',
         'Your 2 Factor Token' => 'Token 2 Faktor Anda',
         'Log In' => 'Log masuk',
         'Request New Password' => 'Mohon Kata Kunci Baru',
         'Your User Name' => 'Nama pengguna anda',
-        'A new password will be sent to your email address.' => 'Kata kunci yang baru akan dihantar ke alamat emel anda.',
+        'A link to set a new password will be sent to your email address.' =>
+            'Pautan untuk menetapkan kata kunci baharu akan dihantar ke alamat emel anda.',
         'Back to login' => 'Kembali ke log masuk',
+        'Set New Password' => 'Tetapkan kata laluan baharu',
+        'New password' => 'Kata laluan baru',
+        'Confirm password' => 'Sahkan kata laluan',
         'Create Account' => 'Buat akaun',
         'Please fill out this form to receive login credentials.' => 'Sila isi borang ini untuk menerima butiran log masuk.',
         'How we should address you' => 'Bagaimana harus kami memanggil anda?',
@@ -3195,9 +3199,6 @@ sub Data {
         'Object#' => 'Objek#',
         'Add links' => 'Tambah pautan',
         'Delete links' => 'Padam pautan',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/Login.tt
-        'Lost your password?' => 'Hilang kata kunci anda?',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/MetaFloater.tt
         'Scale preview content' => 'Skala pandangan kandungan',
@@ -4885,7 +4886,6 @@ sub Data {
 
         # Perl Module: Kernel/Output/HTML/Preferences/Password.pm
         'Current password' => 'Kata laluan asal',
-        'New password' => 'Kata laluan baru',
         'Verify password' => 'Mengesahkan kata laluan',
         'The current password is not correct. Please try again!' => 'Kata laluan asal tidak tepat. Sila cuba lagi!',
         'Please supply your new password!' => 'Sila berikan kata laluan baru anda!',
@@ -5566,9 +5566,17 @@ sub Data {
         'Can`t remove SessionID.' => '',
         'Logout successful.' => '',
         'Feature not active!' => 'Ciri-ciri tidak aktif!',
+        'Your password reset link is invalid or has expired. Please request a new one.' =>
+            'Pautan set semula kata laluan anda tidak sah atau telah tamat tempoh. Sila minta yang baharu.',
         'Sent password reset instructions. Please check your email.' => 'Hantar arahan set semula kata laluan. Sila periksa emel anda.',
-        'Invalid Token!' => 'Tanda tidak sah!',
-        'Sent new password to %s. Please check your email.' => 'Menghantar kata laluan baru untuk %s. Sila semak emel anda.',
+        'Passwords do not match!' => 'Kata laluan tidak sepadan!',
+        'Password does not match the requirements!' => 'Kata laluan tidak memenuhi keperluan!',
+        'Password must be at least %s characters long!' => 'Kata laluan mesti sekurang-kurangnya %s aksara!',
+        'Password must contain at least 2 lowercase and 2 uppercase letter characters!' =>
+            'Kata laluan mesti mengandungi sekurang-kurangnya 2 huruf kecil dan 2 huruf besar!',
+        'Password must contain at least 1 digit!' => 'Kata laluan mesti mengandungi sekurang-kurangnya 1 digit!',
+        'Password must contain at least 2 letter characters!' => 'Kata laluan mesti mengandungi sekurang-kurangnya 2 huruf!',
+        'Password changed. Please log in with your new password.' => 'Kata laluan ditukar. Sila log masuk dengan kata laluan baharu anda.',
         'Error: invalid session.' => '',
         'No Permission to use this frontend module!' => '',
 
@@ -6081,14 +6089,20 @@ sub Data {
             'Menentukan nama yang harus digunakan oleh permohonan apabila menghantar pemberitahuan. Nama penghantar digunakan untuk membina nama paparan lengkap untuk pemberitahuan master (contoh: "Znuny Notifications" znuny@your.example.com).',
         'Specifies the email address that should be used by the application when sending notifications. The email address is used to build the complete display name for the notification master (i.e. "Znuny Notifications" znuny@your.example.com). You can use the OTRS_CONFIG_FQDN variable as set in your configuation, or choose another email address.' =>
             'Menentukan alamat emel yang harus digunakan oleh permohonan penghantaran pemberitahuan. Alamat emel digunakan untuk membina nama paparan lengkap untuk pemberitahuan master (contoh: "Znuny Notifications" znuny@your.example.com). Anda boleh menggunakan pemboleh ubah OTRS_CONFIG_FQDN seperti diset dalam konfigurasi anda, atau memilih alamt emel yang lain.',
+        'Defines the validity period in seconds for password reset tokens. After this time the token expires and a new reset request is required. Default: 3600 (1 hour).' =>
+            'Menentukan tempoh sah token set semula kata laluan dalam saat. Selepas itu token tamat tempoh dan permintaan baharu diperlukan. Lalai: 3600 (1 jam).',
+        'Maximum number of password reset requests allowed per IP address or username within the rate limit window. Set to 0 to disable rate limiting. Default: 5.' =>
+            'Bilangan maksimum permintaan set semula kata laluan dibenarkan setiap alamat IP atau nama pengguna dalam tetingkap rate limiting. Tetapkan 0 untuk melumpuhkan. Lalai: 5.',
+        'Time window in seconds for password reset rate limiting. Attempts within this window are counted against the maximum. Default: 600 (10 minutes).' =>
+            'Tetingkap masa dalam saat untuk rate limiting set semula kata laluan. Percubaan dalam tetingkap ini dikira berbanding maksimum. Lalai: 600 (10 minit).',
         'Defines the subject for notification mails sent to agents, with token about new requested password.' =>
             'Mentakrifkan subjek mel notifikasi dihantar kepada ejen, dengan token mengenai katalaluan baru yang diminta.',
         'Defines the body text for notification mails sent to agents, with token about new requested password.' =>
             '',
-        'Defines the subject for notification mails sent to agents, about new password.' =>
-            'Mentakrifkan subjek untuk mel notifikasi dihantar kepada ejen, mengenai katalauan baru.',
-        'Defines the body text for notification mails sent to agents, about new password.' =>
-            '',
+        'Defines the subject for notification mails sent to agents, confirming that the password has been reset.' =>
+            'Menentukan subjek e-mel pemberitahuan kepada ejen yang mengesahkan set semula kata laluan.',
+        'Defines the body text for notification mails sent to agents, confirming that the password has been reset.' =>
+            'Menentukan teks e-mel pemberitahuan kepada ejen yang mengesahkan set semula kata laluan.',
         'Standard available permissions for agents within the application. If more permissions are needed, they can be entered here. Permissions must be defined to be effective. Some other good permissions have also been provided built-in: note, close, pending, customer, freetext, move, compose, responsible, forward, and bounce. Make sure that "rw" is always the last registered permission.' =>
             'Standard kebenaran disediakan untuk ejen dalam aplikasi. Jika lebih banyak kebenaran yang diperlukan, mereka boleh dimasukkan di sini. Kebenaran mesti ditakrifkan untuk menjadi berkesan. Beberapa kebenaran lain yang baik juga telah disediakan terbina dalam: Note, close pending, customer, freetext, move, compose, responsible, forward, dan bounce. Pastikan bahawa "rw" sentiasa kebenaran berdaftar terakhir.',
         'Defines the standard permissions available for customers within the application. If more permissions are needed, you can enter them here. Permissions must be hard coded to be effective. Please ensure, when adding any of the afore mentioned permissions, that the "rw" permission remains the last entry.' =>
@@ -6164,10 +6178,10 @@ sub Data {
             'Mentakrifkan subjek untuk mel notfikasi dihantar kepada pelanggan, dengan token mengenai katalaluan baru yang diminta.',
         'Defines the body text for notification mails sent to customers, with token about new requested password.' =>
             '',
-        'Defines the subject for notification mails sent to customers, about new password.' =>
-            'Mentakrifkan subjek untuk mel notfikasi dihantar kepada pelanggan, mengenai katalaluan baru.',
-        'Defines the body text for notification mails sent to customers, about new password.' =>
-            '',
+        'Defines the subject for notification mails sent to customers, confirming that the password has been reset.' =>
+            'Menentukan subjek e-mel pemberitahuan kepada pelanggan yang mengesahkan set semula kata laluan.',
+        'Defines the body text for notification mails sent to customers, confirming that the password has been reset.' =>
+            'Menentukan teks e-mel pemberitahuan kepada pelanggan yang mengesahkan set semula kata laluan.',
         'Defines the subject for notification mails sent to customers, about new account.' =>
             'Mentakrifkan subjek untuk mel notfikasi dihantar kepada pelanggan, mengenai akaun baru.',
         'Defines the body text for notification mails sent to customers, about new account.' =>

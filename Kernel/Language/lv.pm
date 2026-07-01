@@ -27,7 +27,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d.%m.%Y';
     $Self->{DateInputFormat}     = '%d.%m.%Y';
     $Self->{DateInputFormatLong} = '%d.%m.%Y - %T';
-    $Self->{Completeness}        = 0.150071690297913;
+    $Self->{Completeness}        = 0.15237792269763;
 
     # csv separator
     $Self->{Separator}         = '';
@@ -2983,14 +2983,18 @@ sub Data {
         'User name' => '',
         'Your user name' => '',
         'Your password' => '',
-        'Forgot password?' => '',
+        'Lost your password?' => 'Aizmirsta parole?',
         '2 Factor Token' => '',
         'Your 2 Factor Token' => '',
         'Log In' => 'Pieteikties',
         'Request New Password' => '',
         'Your User Name' => '',
-        'A new password will be sent to your email address.' => '',
+        'A link to set a new password will be sent to your email address.' =>
+            'Saite jaunas paroles iestatīšanai tiks nosūtīta uz jūsu e-pasta adresi.',
         'Back to login' => '',
+        'Set New Password' => 'Iestatīt jaunu paroli',
+        'New password' => 'Jaunā parole',
+        'Confirm password' => 'Apstiprināt paroli',
         'Create Account' => 'Izveidot lietotāja kontu',
         'Please fill out this form to receive login credentials.' => '',
         'How we should address you' => '',
@@ -3196,9 +3200,6 @@ sub Data {
         'Object#' => '',
         'Add links' => '',
         'Delete links' => '',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/Login.tt
-        'Lost your password?' => 'Aizmirsta parole?',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/MetaFloater.tt
         'Scale preview content' => '',
@@ -4886,7 +4887,6 @@ sub Data {
 
         # Perl Module: Kernel/Output/HTML/Preferences/Password.pm
         'Current password' => 'Pašreizējā parole',
-        'New password' => 'Jaunā parole',
         'Verify password' => 'Apstipriniet paroli',
         'The current password is not correct. Please try again!' => 'Pašreizējā parole nav pareiza. Lūdzu, mēģiniet vēlreiz!',
         'Please supply your new password!' => '',
@@ -5567,9 +5567,17 @@ sub Data {
         'Can`t remove SessionID.' => '',
         'Logout successful.' => '',
         'Feature not active!' => 'Papildiespēja nav aktivizēta!',
+        'Your password reset link is invalid or has expired. Please request a new one.' =>
+            'Jūsu paroles atiestatīšanas saite nav derīga vai ir beigusies. Lūdzu, pieprasiet jaunu.',
         'Sent password reset instructions. Please check your email.' => '',
-        'Invalid Token!' => 'Nederīga piekļuves pilnvara!',
-        'Sent new password to %s. Please check your email.' => 'Nosūtīta jauna paroli uz %s. Lūdzu, pārbaudiet savu e-pastu.',
+        'Passwords do not match!' => 'Paroles nesakrīt!',
+        'Password does not match the requirements!' => 'Parole neatbilst prasībām!',
+        'Password must be at least %s characters long!' => 'Parolei jābūt vismaz %s rakstzīmēm garai!',
+        'Password must contain at least 2 lowercase and 2 uppercase letter characters!' =>
+            'Parolei jāsatur vismaz 2 mazie un 2 lielie burti!',
+        'Password must contain at least 1 digit!' => 'Parolei jāsatur vismaz 1 cipars!',
+        'Password must contain at least 2 letter characters!' => 'Parolei jāsatur vismaz 2 burti!',
+        'Password changed. Please log in with your new password.' => 'Parole mainīta. Lūdzu, piesakieties ar jauno paroli.',
         'Error: invalid session.' => '',
         'No Permission to use this frontend module!' => '',
 
@@ -6082,14 +6090,20 @@ sub Data {
             '',
         'Specifies the email address that should be used by the application when sending notifications. The email address is used to build the complete display name for the notification master (i.e. "Znuny Notifications" znuny@your.example.com). You can use the OTRS_CONFIG_FQDN variable as set in your configuation, or choose another email address.' =>
             '',
+        'Defines the validity period in seconds for password reset tokens. After this time the token expires and a new reset request is required. Default: 3600 (1 hour).' =>
+            'Nosaka paroles atiestatīšanas tokenu derīguma periodu sekundēs. Pēc tam tokens beidzas un nepieciešams jauns pieprasījums. Noklusējums: 3600 (1 stunda).',
+        'Maximum number of password reset requests allowed per IP address or username within the rate limit window. Set to 0 to disable rate limiting. Default: 5.' =>
+            'Maksimālais paroles atiestatīšanas pieprasījumu skaits IP adresei vai lietotājvārdam rate limiting logā. 0 atslēdz rate limiting. Noklusējums: 5.',
+        'Time window in seconds for password reset rate limiting. Attempts within this window are counted against the maximum. Default: 600 (10 minutes).' =>
+            'Laika logs sekundēs paroles atiestatīšanas rate limiting. Mēģinājumi šajā logā tiek skaitīti pret maksimumu. Noklusējums: 600 (10 minūtes).',
         'Defines the subject for notification mails sent to agents, with token about new requested password.' =>
             '',
         'Defines the body text for notification mails sent to agents, with token about new requested password.' =>
             '',
-        'Defines the subject for notification mails sent to agents, about new password.' =>
-            '',
-        'Defines the body text for notification mails sent to agents, about new password.' =>
-            '',
+        'Defines the subject for notification mails sent to agents, confirming that the password has been reset.' =>
+            'Nosaka paziņojumu e-pastu tēmu aģentiem, kas apstiprina paroles atiestatīšanu.',
+        'Defines the body text for notification mails sent to agents, confirming that the password has been reset.' =>
+            'Nosaka paziņojumu e-pastu tekstu aģentiem, kas apstiprina paroles atiestatīšanu.',
         'Standard available permissions for agents within the application. If more permissions are needed, they can be entered here. Permissions must be defined to be effective. Some other good permissions have also been provided built-in: note, close, pending, customer, freetext, move, compose, responsible, forward, and bounce. Make sure that "rw" is always the last registered permission.' =>
             '',
         'Defines the standard permissions available for customers within the application. If more permissions are needed, you can enter them here. Permissions must be hard coded to be effective. Please ensure, when adding any of the afore mentioned permissions, that the "rw" permission remains the last entry.' =>
@@ -6165,10 +6179,10 @@ sub Data {
             '',
         'Defines the body text for notification mails sent to customers, with token about new requested password.' =>
             '',
-        'Defines the subject for notification mails sent to customers, about new password.' =>
-            '',
-        'Defines the body text for notification mails sent to customers, about new password.' =>
-            '',
+        'Defines the subject for notification mails sent to customers, confirming that the password has been reset.' =>
+            'Nosaka paziņojumu e-pastu tēmu klientiem, kas apstiprina paroles atiestatīšanu.',
+        'Defines the body text for notification mails sent to customers, confirming that the password has been reset.' =>
+            'Nosaka paziņojumu e-pastu tekstu klientiem, kas apstiprina paroles atiestatīšanu.',
         'Defines the subject for notification mails sent to customers, about new account.' =>
             '',
         'Defines the body text for notification mails sent to customers, about new account.' =>

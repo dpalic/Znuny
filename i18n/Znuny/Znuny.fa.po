@@ -9154,7 +9154,7 @@ msgstr "افزودن رابطه‌ها"
 msgid "Delete links"
 msgstr "حذف رابطه‌ها"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/Login.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/CustomerLogin.tt
 msgid "Lost your password?"
 msgstr "رمز عبور خود را فراموش کرده اید؟"
 
@@ -13270,7 +13270,7 @@ msgstr "لطفا تاریخ پایان است که بعد از تاریخ شرو
 msgid "Current password"
 msgstr "رمز عبور کنونی"
 
-#. Perl Module: Kernel/Output/HTML/Preferences/Password.pm
+#. TT Template: Kernel/Output/HTML/Templates/Standard/CustomerLogin.tt
 msgid "New password"
 msgstr "رمز عبور جدید"
 
@@ -25443,4 +25443,76 @@ msgstr ""
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminNavigationBar.tt
 msgid "View the admin manual"
 msgstr ""
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/CustomerLogin.tt
+msgid "Set New Password"
+msgstr "تنظیم رمز عبور جدید"
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/CustomerLogin.tt
+msgid "Confirm password"
+msgstr "تأیید رمز عبور"
+
+#. Perl Module: Kernel/System/Web/InterfaceAgent.pm
+msgid "Your password reset link is invalid or has expired. Please request a new one."
+msgstr "پیوند بازنشانی رمز عبور شما نامعتبر است یا منقضی شده است. لطفاً یک پیوند جدید درخواست کنید."
+
+#. Perl Module: Kernel/System/Web/InterfaceAgent.pm
+msgid "Passwords do not match!"
+msgstr "رمزهای عبور مطابقت ندارند!"
+
+#. Perl Module: Kernel/System/Web/InterfaceAgent.pm
+msgid "Password does not match the requirements!"
+msgstr "رمز عبور با الزامات مطابقت ندارد!"
+
+#. Perl Module: Kernel/System/Web/InterfaceAgent.pm
+msgid "Password must be at least %s characters long!"
+msgstr "رمز عبور باید حداقل %s کاراکتر باشد!"
+
+#. Perl Module: Kernel/System/Web/InterfaceAgent.pm
+msgid "Password must contain at least 2 lowercase and 2 uppercase letter characters!"
+msgstr "رمز عبور باید حداقل 2 حرف کوچک و 2 حرف بزرگ داشته باشد!"
+
+#. Perl Module: Kernel/System/Web/InterfaceAgent.pm
+msgid "Password must contain at least 1 digit!"
+msgstr "رمز عبور باید حداقل 1 رقم داشته باشد!"
+
+#. Perl Module: Kernel/System/Web/InterfaceAgent.pm
+msgid "Password must contain at least 2 letter characters!"
+msgstr "رمز عبور باید حداقل 2 حرف داشته باشد!"
+
+#. Perl Module: Kernel/System/Web/InterfaceAgent.pm
+msgid "Password changed. Please log in with your new password."
+msgstr "رمز عبور تغییر کرد. لطفاً با رمز عبور جدید وارد شوید."
+
+#. XML Definition: Kernel/Config/Files/XML/Framework.xml
+msgid "Defines the validity period in seconds for password reset tokens. After this time the token expires and a new reset request is required. Default: 3600 (1 hour)."
+msgstr "مدت اعتبار توکن‌های بازنشانی رمز عبور را بر حسب ثانیه تعیین می‌کند. پس از این زمان توکن منقضی می‌شود و درخواست جدید لازم است. پیش‌فرض: 3600 (1 ساعت)."
+
+#. XML Definition: Kernel/Config/Files/XML/Framework.xml
+msgid "Maximum number of password reset requests allowed per IP address or username within the rate limit window. Set to 0 to disable rate limiting. Default: 5."
+msgstr "حداکثر تعداد درخواست‌های بازنشانی رمز عبور مجاز برای هر IP یا نام کاربری در بازه rate limiting. 0 برای غیرفعال کردن. پیش‌فرض: 5."
+
+#. XML Definition: Kernel/Config/Files/XML/Framework.xml
+msgid "Time window in seconds for password reset rate limiting. Attempts within this window are counted against the maximum. Default: 600 (10 minutes)."
+msgstr "بازه زمانی rate limiting برای بازنشانی رمز عبور بر حسب ثانیه. تلاش‌ها در این بازه در برابر حداکثر شمارش می‌شوند. پیش‌فرض: 600 (10 دقیقه)."
+
+#. XML Definition: Kernel/Config/Files/XML/Framework.xml
+msgid "Defines the subject for notification mails sent to agents, confirming that the password has been reset."
+msgstr "موضوع ایمیل‌های اطلاع‌رسانی ارسالی به agents برای تأیید بازنشانی رمز عبور را تعیین می‌کند."
+
+#. XML Definition: Kernel/Config/Files/XML/Framework.xml
+msgid "Defines the body text for notification mails sent to agents, confirming that the password has been reset."
+msgstr "متن ایمیل‌های اطلاع‌رسانی ارسالی به agents برای تأیید بازنشانی رمز عبور را تعیین می‌کند."
+
+#. XML Definition: Kernel/Config/Files/XML/Framework.xml
+msgid "Defines the subject for notification mails sent to customers, confirming that the password has been reset."
+msgstr "موضوع ایمیل‌های اطلاع‌رسانی ارسالی به مشتریان برای تأیید بازنشانی رمز عبور را تعیین می‌کند."
+
+#. XML Definition: Kernel/Config/Files/XML/Framework.xml
+msgid "Defines the body text for notification mails sent to customers, confirming that the password has been reset."
+msgstr "متن ایمیل‌های اطلاع‌رسانی ارسالی به مشتریان برای تأیید بازنشانی رمز عبور را تعیین می‌کند."
+
+#. TT Template: Kernel/Output/HTML/Templates/Standard/CustomerLogin.tt
+msgid "A link to set a new password will be sent to your email address."
+msgstr "پیوندی برای تنظیم رمز عبور جدید به آدرس ایمیل شما ارسال خواهد شد."
 

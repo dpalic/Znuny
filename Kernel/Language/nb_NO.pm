@@ -35,7 +35,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d.%m.%Y';
     $Self->{DateInputFormat}     = '%d.%m.%Y';
     $Self->{DateInputFormatLong} = '%d.%m.%Y - %T';
-    $Self->{Completeness}        = 0.36546120758324;
+    $Self->{Completeness}        = 0.367106728169238;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2991,14 +2991,18 @@ sub Data {
         'User name' => 'Brukernavn',
         'Your user name' => 'Ditt brukernavn',
         'Your password' => 'Ditt passord',
-        'Forgot password?' => 'Glemt passordet?',
+        'Lost your password?' => 'Mistet passord?',
         '2 Factor Token' => '',
         'Your 2 Factor Token' => '',
         'Log In' => 'Logg inn',
         'Request New Password' => 'Be om nytt passord',
         'Your User Name' => 'Ditt brukernavn',
-        'A new password will be sent to your email address.' => 'Nytt passord vil bli sendt til din e-postadresse',
+        'A link to set a new password will be sent to your email address.' =>
+            'En lenke for å sette et nytt passord vil bli sendt til din e-postadresse.',
         'Back to login' => 'Tilbake til innlogging',
+        'Set New Password' => 'Angi nytt passord',
+        'New password' => 'Nytt passord',
+        'Confirm password' => 'Bekreft passord',
         'Create Account' => 'Opprett konto',
         'Please fill out this form to receive login credentials.' => '',
         'How we should address you' => 'Hvordan skal vi tiltale deg',
@@ -3204,9 +3208,6 @@ sub Data {
         'Object#' => 'Objekt#',
         'Add links' => 'Legg til lenker',
         'Delete links' => 'Slett lenker',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/Login.tt
-        'Lost your password?' => 'Mistet passord?',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/MetaFloater.tt
         'Scale preview content' => '',
@@ -4894,7 +4895,6 @@ sub Data {
 
         # Perl Module: Kernel/Output/HTML/Preferences/Password.pm
         'Current password' => 'Nåværende passord',
-        'New password' => 'Nytt passord',
         'Verify password' => 'Gjenta passord',
         'The current password is not correct. Please try again!' => 'Nåværende passord er ikke korrekt. Prøv igjen.',
         'Please supply your new password!' => '',
@@ -5575,9 +5575,17 @@ sub Data {
         'Can`t remove SessionID.' => '',
         'Logout successful.' => '',
         'Feature not active!' => 'Funksjon ikke aktivert!',
+        'Your password reset link is invalid or has expired. Please request a new one.' =>
+            'Lenken for tilbakestilling av passord er ugyldig eller utløpt. Be om en ny.',
         'Sent password reset instructions. Please check your email.' => 'Instrukser for nullstilling av passord har blitt sendt til din e-postadresse.',
-        'Invalid Token!' => 'Ugyldig bevis!',
-        'Sent new password to %s. Please check your email.' => 'Nytt passord ble sendt til %s. Sjekk e-posten din.',
+        'Passwords do not match!' => 'Passordene stemmer ikke!',
+        'Password does not match the requirements!' => 'Passordet oppfyller ikke kravene!',
+        'Password must be at least %s characters long!' => 'Passordet må være minst %s tegn langt!',
+        'Password must contain at least 2 lowercase and 2 uppercase letter characters!' =>
+            'Passordet må inneholde minst 2 små og 2 store bokstaver!',
+        'Password must contain at least 1 digit!' => 'Passordet må inneholde minst 1 siffer!',
+        'Password must contain at least 2 letter characters!' => 'Passordet må inneholde minst 2 bokstaver!',
+        'Password changed. Please log in with your new password.' => 'Passord endret. Logg inn med ditt nye passord.',
         'Error: invalid session.' => '',
         'No Permission to use this frontend module!' => '',
 
@@ -6090,14 +6098,20 @@ sub Data {
             '',
         'Specifies the email address that should be used by the application when sending notifications. The email address is used to build the complete display name for the notification master (i.e. "Znuny Notifications" znuny@your.example.com). You can use the OTRS_CONFIG_FQDN variable as set in your configuation, or choose another email address.' =>
             '',
+        'Defines the validity period in seconds for password reset tokens. After this time the token expires and a new reset request is required. Default: 3600 (1 hour).' =>
+            'Definerer gyldighetsperioden i sekunder for tokens ved tilbakestilling av passord. Etter dette utløper tokenet og en ny forespørsel kreves. Standard: 3600 (1 time).',
+        'Maximum number of password reset requests allowed per IP address or username within the rate limit window. Set to 0 to disable rate limiting. Default: 5.' =>
+            'Maksimalt antall forespørsler om tilbakestilling av passord per IP-adresse eller brukernavn innen rate limit-vinduet. Sett til 0 for å deaktivere rate limiting. Standard: 5.',
+        'Time window in seconds for password reset rate limiting. Attempts within this window are counted against the maximum. Default: 600 (10 minutes).' =>
+            'Tidsvindu i sekunder for rate limiting ved tilbakestilling av passord. Forsøk innenfor dette vinduet telles mot maksimum. Standard: 600 (10 minutter).',
         'Defines the subject for notification mails sent to agents, with token about new requested password.' =>
             '',
         'Defines the body text for notification mails sent to agents, with token about new requested password.' =>
             '',
-        'Defines the subject for notification mails sent to agents, about new password.' =>
-            '',
-        'Defines the body text for notification mails sent to agents, about new password.' =>
-            '',
+        'Defines the subject for notification mails sent to agents, confirming that the password has been reset.' =>
+            'Definerer emnet for varslings-e-poster sendt til agenter som bekrefter tilbakestilling av passord.',
+        'Defines the body text for notification mails sent to agents, confirming that the password has been reset.' =>
+            'Definerer brødteksten for varslings-e-poster sendt til agenter som bekrefter tilbakestilling av passord.',
         'Standard available permissions for agents within the application. If more permissions are needed, they can be entered here. Permissions must be defined to be effective. Some other good permissions have also been provided built-in: note, close, pending, customer, freetext, move, compose, responsible, forward, and bounce. Make sure that "rw" is always the last registered permission.' =>
             'Standard tilgjengelige rettigheter for saksbehandlere i systemet. Hvis flere rettigheter trengs kan de skrives inn her. Noen andre fine rettigheter finnes også innebygde: note, close, pending, customer, freetext, move, compose, responsible, forward og bounce. Pass på at "rw" alltid er den siste i listen.',
         'Defines the standard permissions available for customers within the application. If more permissions are needed, you can enter them here. Permissions must be hard coded to be effective. Please ensure, when adding any of the afore mentioned permissions, that the "rw" permission remains the last entry.' =>
@@ -6173,10 +6187,10 @@ sub Data {
             '',
         'Defines the body text for notification mails sent to customers, with token about new requested password.' =>
             '',
-        'Defines the subject for notification mails sent to customers, about new password.' =>
-            '',
-        'Defines the body text for notification mails sent to customers, about new password.' =>
-            '',
+        'Defines the subject for notification mails sent to customers, confirming that the password has been reset.' =>
+            'Definerer emnet for varslings-e-poster sendt til kunder som bekrefter tilbakestilling av passord.',
+        'Defines the body text for notification mails sent to customers, confirming that the password has been reset.' =>
+            'Definerer brødteksten for varslings-e-poster sendt til kunder som bekrefter tilbakestilling av passord.',
         'Defines the subject for notification mails sent to customers, about new account.' =>
             '',
         'Defines the body text for notification mails sent to customers, about new account.' =>

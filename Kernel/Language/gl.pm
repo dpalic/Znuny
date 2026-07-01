@@ -27,7 +27,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d/%m/%Y';
     $Self->{DateInputFormat}     = '%d/%m/%Y';
     $Self->{DateInputFormatLong} = '%d/%m/%Y - %T';
-    $Self->{Completeness}        = 0.444479847060698;
+    $Self->{Completeness}        = 0.445681565134404;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2983,14 +2983,18 @@ sub Data {
         'User name' => 'Nome do usuario',
         'Your user name' => 'O seu nome de usuario',
         'Your password' => 'O seu contrasinal',
-        'Forgot password?' => 'Esqueceu o contrasinal?',
+        'Lost your password?' => 'Perdeu o seu contrasinal?',
         '2 Factor Token' => '2 Factor Token',
         'Your 2 Factor Token' => 'Teus 2 Factor Token',
         'Log In' => 'Acceso',
         'Request New Password' => 'Solicitar un contrasinal novo',
         'Your User Name' => 'O Seu Nome de Usuario',
-        'A new password will be sent to your email address.' => 'Un novo contrasinal será enviado ao seu enderezo de correo electrónico.',
+        'A link to set a new password will be sent to your email address.' =>
+            'Enviarase un enlace para establecer un novo contrasinal ao seu enderezo de correo electrónico.',
         'Back to login' => 'Retornar á pantalla de acceso',
+        'Set New Password' => 'Establecer un novo contrasinal',
+        'New password' => 'Novo contrasinal',
+        'Confirm password' => 'Confirmar o contrasinal',
         'Create Account' => 'Crear unha conta',
         'Please fill out this form to receive login credentials.' => 'Por favor encha este formulario para recibir credenciais de login.',
         'How we should address you' => 'Como nos deberíamos dirixir a vostede',
@@ -3196,9 +3200,6 @@ sub Data {
         'Object#' => 'Obxecto nº',
         'Add links' => 'Engadir ligazóns',
         'Delete links' => 'Elimine enlaces',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/Login.tt
-        'Lost your password?' => 'Perdeu o seu contrasinal?',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/MetaFloater.tt
         'Scale preview content' => '',
@@ -4886,7 +4887,6 @@ sub Data {
 
         # Perl Module: Kernel/Output/HTML/Preferences/Password.pm
         'Current password' => 'Contrasinal actual',
-        'New password' => 'Novo contrasinal',
         'Verify password' => 'Verificar contrasinal',
         'The current password is not correct. Please try again!' => 'O contrasinal actual non é correcto. Por favor, probe de novo!',
         'Please supply your new password!' => 'Por favor proporcione o seu novo contrasinal!',
@@ -5567,9 +5567,17 @@ sub Data {
         'Can`t remove SessionID.' => '',
         'Logout successful.' => '',
         'Feature not active!' => 'Esta funcionalidade non está activa!',
+        'Your password reset link is invalid or has expired. Please request a new one.' =>
+            'A súa ligazón para restablecer o contrasinal non é válida ou caducou. Solicite unha nova.',
         'Sent password reset instructions. Please check your email.' => 'Enviadas as instruccións para resetea-la contrasinal. Por favor comprobe o seu email.',
-        'Invalid Token!' => 'Ficha incorrecta!',
-        'Sent new password to %s. Please check your email.' => 'Enviada a nova contrasinal a %s. Por favor comprobe o seu email.',
+        'Passwords do not match!' => 'Os contrasinais non coinciden!',
+        'Password does not match the requirements!' => 'O contrasinal non cumpre os requisitos!',
+        'Password must be at least %s characters long!' => 'O contrasinal debe ter polo menos %s caracteres!',
+        'Password must contain at least 2 lowercase and 2 uppercase letter characters!' =>
+            'O contrasinal debe conter polo menos 2 letras minúsculas e 2 maiúsculas!',
+        'Password must contain at least 1 digit!' => 'O contrasinal debe conter polo menos 1 díxito!',
+        'Password must contain at least 2 letter characters!' => 'O contrasinal debe conter polo menos 2 letras!',
+        'Password changed. Please log in with your new password.' => 'Contrasinal modificado. Inicie sesión co seu novo contrasinal.',
         'Error: invalid session.' => '',
         'No Permission to use this frontend module!' => '',
 
@@ -6082,14 +6090,20 @@ sub Data {
             '',
         'Specifies the email address that should be used by the application when sending notifications. The email address is used to build the complete display name for the notification master (i.e. "Znuny Notifications" znuny@your.example.com). You can use the OTRS_CONFIG_FQDN variable as set in your configuation, or choose another email address.' =>
             '',
+        'Defines the validity period in seconds for password reset tokens. After this time the token expires and a new reset request is required. Default: 3600 (1 hour).' =>
+            'Define o período de validez en segundos dos tokens de restablecemento de contrasinal. Despois deste tempo o token caduca e é necesaria unha nova solicitude. Por defecto: 3600 (1 hora).',
+        'Maximum number of password reset requests allowed per IP address or username within the rate limit window. Set to 0 to disable rate limiting. Default: 5.' =>
+            'Número máximo de solicitudes de restablecemento de contrasinal permitidas por enderezo IP ou nome de usuario dentro da fiestra de rate limiting. Estabeleza 0 para desactivar o rate limiting. Por defecto: 5.',
+        'Time window in seconds for password reset rate limiting. Attempts within this window are counted against the maximum. Default: 600 (10 minutes).' =>
+            'Fiestra temporal en segundos para o rate limiting do restablecemento de contrasinal. Os intentos dentro desta fiestra contánse fronte ao máximo. Por defecto: 600 (10 minutos).',
         'Defines the subject for notification mails sent to agents, with token about new requested password.' =>
             'Define o tema para correos de notificación enviados a axentes, con sinal sobre novo contrasinal pedido.',
         'Defines the body text for notification mails sent to agents, with token about new requested password.' =>
             '',
-        'Defines the subject for notification mails sent to agents, about new password.' =>
-            'Define o tema para correos de notificación enviados a axentes, sobre novo contrasinal.',
-        'Defines the body text for notification mails sent to agents, about new password.' =>
-            '',
+        'Defines the subject for notification mails sent to agents, confirming that the password has been reset.' =>
+            'Define o asunto dos correos de notificación enviados aos agents confirmando o restablecemento do contrasinal.',
+        'Defines the body text for notification mails sent to agents, confirming that the password has been reset.' =>
+            'Define o corpo dos correos de notificación enviados aos agents confirmando o restablecemento do contrasinal.',
         'Standard available permissions for agents within the application. If more permissions are needed, they can be entered here. Permissions must be defined to be effective. Some other good permissions have also been provided built-in: note, close, pending, customer, freetext, move, compose, responsible, forward, and bounce. Make sure that "rw" is always the last registered permission.' =>
             'Permisos normais dispoñíbeis para os axentes desde dentro do aplicativo. Se se precisaren máis precisos, é posíbel engadilos aquí. Os permisos teñen que ser definidos para seren efectivos. Outros permisos bos tamén se fornecen incorporados: nota, pechar, pendente, cliente, texto libre, mover, redactar, responsábel, encamiñar e rebotar. Asegúrese de que «rw» é sempre o último permiso rexistrado.',
         'Defines the standard permissions available for customers within the application. If more permissions are needed, you can enter them here. Permissions must be hard coded to be effective. Please ensure, when adding any of the afore mentioned permissions, that the "rw" permission remains the last entry.' =>
@@ -6165,10 +6179,10 @@ sub Data {
             'Define o tema para correos de notificación enviados a clientes, con sinal sobre novo contrasinal pedido.',
         'Defines the body text for notification mails sent to customers, with token about new requested password.' =>
             '',
-        'Defines the subject for notification mails sent to customers, about new password.' =>
-            'Define o tema para correos de notificación enviados a clientes, sobre novo contrasinal.',
-        'Defines the body text for notification mails sent to customers, about new password.' =>
-            '',
+        'Defines the subject for notification mails sent to customers, confirming that the password has been reset.' =>
+            'Define o asunto dos correos de notificación enviados aos clientes confirmando o restablecemento do contrasinal.',
+        'Defines the body text for notification mails sent to customers, confirming that the password has been reset.' =>
+            'Define o corpo dos correos de notificación enviados aos clientes confirmando o restablecemento do contrasinal.',
         'Defines the subject for notification mails sent to customers, about new account.' =>
             'Define o tema para correos de notificación enviados a clientes, sobre nova conta.',
         'Defines the body text for notification mails sent to customers, about new account.' =>

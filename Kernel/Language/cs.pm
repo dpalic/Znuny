@@ -33,7 +33,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d/%m/%Y';
     $Self->{DateInputFormat}     = '%d/%m/%Y';
     $Self->{DateInputFormatLong} = '%d/%m/%Y - %T';
-    $Self->{Completeness}        = 0.233073124103871;
+    $Self->{Completeness}        = 0.234929219023382;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2989,14 +2989,18 @@ sub Data {
         'User name' => 'Uživatelské jméno',
         'Your user name' => 'Vaše uživatelské jméno',
         'Your password' => 'Vaše heslo',
-        'Forgot password?' => 'Zapomněli jste heslo?',
+        'Lost your password?' => 'Ztratil/a jste heslo?',
         '2 Factor Token' => '',
         'Your 2 Factor Token' => '',
         'Log In' => 'Přihlásit',
         'Request New Password' => '',
         'Your User Name' => 'Vaše uživatelské jméno',
-        'A new password will be sent to your email address.' => 'Nové heslo bude zasláno na váš e-mail.',
+        'A link to set a new password will be sent to your email address.' =>
+            'Odkaz pro nastavení nového hesla bude zaslán na váš e-mail.',
         'Back to login' => '',
+        'Set New Password' => 'Nastavit nové heslo',
+        'New password' => 'Nové Heslo',
+        'Confirm password' => 'Potvrdit heslo',
         'Create Account' => 'Vytvořit účet',
         'Please fill out this form to receive login credentials.' => '',
         'How we should address you' => '',
@@ -3202,9 +3206,6 @@ sub Data {
         'Object#' => '',
         'Add links' => '',
         'Delete links' => '',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/Login.tt
-        'Lost your password?' => 'Ztratil/a jste heslo?',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/MetaFloater.tt
         'Scale preview content' => '',
@@ -4892,7 +4893,6 @@ sub Data {
 
         # Perl Module: Kernel/Output/HTML/Preferences/Password.pm
         'Current password' => 'Stávající heslo',
-        'New password' => 'Nové Heslo',
         'Verify password' => 'Kontrola hesla',
         'The current password is not correct. Please try again!' => 'Současné heslo nesouhlasí. Zkuste to prosím znovu!',
         'Please supply your new password!' => '',
@@ -5573,9 +5573,17 @@ sub Data {
         'Can`t remove SessionID.' => '',
         'Logout successful.' => '',
         'Feature not active!' => 'Funkce je neaktivní!',
+        'Your password reset link is invalid or has expired. Please request a new one.' =>
+            'Váš odkaz pro obnovení hesla je neplatný nebo vypršel. Požádejte o nový.',
         'Sent password reset instructions. Please check your email.' => 'Odeslány instrukce pro obnovu hesla, Prosím zkontrolujte svojí emailovou schránku.',
-        'Invalid Token!' => 'Neplatný Token',
-        'Sent new password to %s. Please check your email.' => 'Odesláno nové heslo na %s. Prosím zkontrolujte svojí emailovou schránku.',
+        'Passwords do not match!' => 'Hesla se neshodují!',
+        'Password does not match the requirements!' => 'Heslo nesplňuje požadavky!',
+        'Password must be at least %s characters long!' => 'Heslo musí mít alespoň %s znaků!',
+        'Password must contain at least 2 lowercase and 2 uppercase letter characters!' =>
+            'Heslo musí obsahovat alespoň 2 malá a 2 velká písmena!',
+        'Password must contain at least 1 digit!' => 'Heslo musí obsahovat alespoň 1 číslici!',
+        'Password must contain at least 2 letter characters!' => 'Heslo musí obsahovat alespoň 2 písmena!',
+        'Password changed. Please log in with your new password.' => 'Heslo bylo změněno. Přihlaste se prosím novým heslem.',
         'Error: invalid session.' => '',
         'No Permission to use this frontend module!' => '',
 
@@ -6088,14 +6096,20 @@ sub Data {
             '',
         'Specifies the email address that should be used by the application when sending notifications. The email address is used to build the complete display name for the notification master (i.e. "Znuny Notifications" znuny@your.example.com). You can use the OTRS_CONFIG_FQDN variable as set in your configuation, or choose another email address.' =>
             '',
+        'Defines the validity period in seconds for password reset tokens. After this time the token expires and a new reset request is required. Default: 3600 (1 hour).' =>
+            'Definuje dobu platnosti tokenů pro obnovu hesla v sekundách. Po uplynutí této doby token vyprší a je nutné požádat o nový. Výchozí: 3600 (1 hodina).',
+        'Maximum number of password reset requests allowed per IP address or username within the rate limit window. Set to 0 to disable rate limiting. Default: 5.' =>
+            'Maximální počet požadavků na obnovu hesla na IP adresu nebo uživatelské jméno v rámci okna rate limitu. Nastavte 0 pro vypnutí rate limitu. Výchozí: 5.',
+        'Time window in seconds for password reset rate limiting. Attempts within this window are counted against the maximum. Default: 600 (10 minutes).' =>
+            'Časové okno v sekundách pro rate limiting obnovy hesla. Pokusy v tomto okně se počítají proti maximu. Výchozí: 600 (10 minut).',
         'Defines the subject for notification mails sent to agents, with token about new requested password.' =>
             '',
         'Defines the body text for notification mails sent to agents, with token about new requested password.' =>
             '',
-        'Defines the subject for notification mails sent to agents, about new password.' =>
-            '',
-        'Defines the body text for notification mails sent to agents, about new password.' =>
-            '',
+        'Defines the subject for notification mails sent to agents, confirming that the password has been reset.' =>
+            'Definuje předmět notifikačních e-mailů agentům potvrzujících obnovu hesla.',
+        'Defines the body text for notification mails sent to agents, confirming that the password has been reset.' =>
+            'Definuje text notifikačních e-mailů agentům potvrzujících obnovu hesla.',
         'Standard available permissions for agents within the application. If more permissions are needed, they can be entered here. Permissions must be defined to be effective. Some other good permissions have also been provided built-in: note, close, pending, customer, freetext, move, compose, responsible, forward, and bounce. Make sure that "rw" is always the last registered permission.' =>
             '',
         'Defines the standard permissions available for customers within the application. If more permissions are needed, you can enter them here. Permissions must be hard coded to be effective. Please ensure, when adding any of the afore mentioned permissions, that the "rw" permission remains the last entry.' =>
@@ -6171,10 +6185,10 @@ sub Data {
             '',
         'Defines the body text for notification mails sent to customers, with token about new requested password.' =>
             '',
-        'Defines the subject for notification mails sent to customers, about new password.' =>
-            '',
-        'Defines the body text for notification mails sent to customers, about new password.' =>
-            '',
+        'Defines the subject for notification mails sent to customers, confirming that the password has been reset.' =>
+            'Definuje předmět notifikačních e-mailů zákazníkům potvrzujících obnovu hesla.',
+        'Defines the body text for notification mails sent to customers, confirming that the password has been reset.' =>
+            'Definuje text notifikačních e-mailů zákazníkům potvrzujících obnovu hesla.',
         'Defines the subject for notification mails sent to customers, about new account.' =>
             '',
         'Defines the body text for notification mails sent to customers, about new account.' =>

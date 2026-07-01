@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d/%m/%Y';
     $Self->{DateInputFormat}     = '%d/%m/%Y';
     $Self->{DateInputFormatLong} = '%d/%m/%Y - %T';
-    $Self->{Completeness}        = 0.502469332483671;
+    $Self->{Completeness}        = 0.503578813424527;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -2985,14 +2985,18 @@ sub Data {
         'User name' => 'ชื่อผู้ใช้',
         'Your user name' => 'ชื่อผู้ใช้ของคุณ',
         'Your password' => 'รหัสผ่านของคุณ',
-        'Forgot password?' => 'ลืมรหัสผ่าน?',
+        'Lost your password?' => 'ลืมรหัสผ่านของคุณ?',
         '2 Factor Token' => '2 ปัจจัยโทเคน',
         'Your 2 Factor Token' => '2 ปัจจัยโทเคนของคุณ',
         'Log In' => 'เข้าสู่ระบบ',
         'Request New Password' => 'การร้องขอรหัสผ่านใหม่',
         'Your User Name' => 'ชื่อผู้ใช้ของคุณ',
-        'A new password will be sent to your email address.' => 'รหัสผ่านใหม่จะถูกส่งไปยังที่อยู่อีเมลของคุณ',
+        'A link to set a new password will be sent to your email address.' =>
+            'ลิงก์สำหรับตั้งรหัสผ่านใหม่จะถูกส่งไปยังที่อยู่อีเมลของคุณ',
         'Back to login' => 'กลับไปเข้าสู่ระบบ',
+        'Set New Password' => 'ตั้งรหัสผ่านใหม่',
+        'New password' => 'รหัสผ่านใหม่',
+        'Confirm password' => 'ยืนยันรหัสผ่าน',
         'Create Account' => 'สร้างบัญชี',
         'Please fill out this form to receive login credentials.' => 'กรุณากรอกแบบฟอร์มนี้เพื่อจะได้รับสิทธิเข้าสู่ระบบ',
         'How we should address you' => 'เราควรทำอย่างไรเพื่อตามหาคุณ',
@@ -3198,9 +3202,6 @@ sub Data {
         'Object#' => 'ออบเจค#',
         'Add links' => 'เพิ่มลิงค์',
         'Delete links' => 'ลบการเชื่อมโยง',
-
-        # TT Template: Kernel/Output/HTML/Templates/Standard/Login.tt
-        'Lost your password?' => 'ลืมรหัสผ่านของคุณ?',
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/MetaFloater.tt
         'Scale preview content' => 'ตัวอย่างสเกลเนื้อหา',
@@ -4888,7 +4889,6 @@ sub Data {
 
         # Perl Module: Kernel/Output/HTML/Preferences/Password.pm
         'Current password' => 'รหัสผ่านปัจจุบัน',
-        'New password' => 'รหัสผ่านใหม่',
         'Verify password' => 'ยืนยันรหัสผ่าน',
         'The current password is not correct. Please try again!' => 'รหัสผ่านปัจจุบันไม่ถูกต้อง กรุณาลองอีกครั้ง!',
         'Please supply your new password!' => 'กรุณาใส่รหัสผ่านใหม่ของคุณ!',
@@ -5569,9 +5569,17 @@ sub Data {
         'Can`t remove SessionID.' => '',
         'Logout successful.' => 'ออกจากระบบประสบความสำเร็จ',
         'Feature not active!' => 'ฟีเจอร์ใช้งานไม่ได้!',
+        'Your password reset link is invalid or has expired. Please request a new one.' =>
+            'ลิงก์รีเซ็ตรหัสผ่านของคุณไม่ถูกต้องหรือหมดอายุแล้ว โปรดขอลิงก์ใหม่',
         'Sent password reset instructions. Please check your email.' => 'ได้ส่งคำแนะนำสำหรับการรีเซ็ตรหัสผ่านแล้ว กรุณาตรวจสอบอีเมลของคุณ',
-        'Invalid Token!' => 'Token ไม่ถูกต้อง!',
-        'Sent new password to %s. Please check your email.' => 'รหัสผ่านใหม่ถูกส่งไปยัง% s กรุณาตรวจสอบอีเมลของคุณ',
+        'Passwords do not match!' => 'รหัสผ่านไม่ตรงกัน!',
+        'Password does not match the requirements!' => 'รหัสผ่านไม่ตรงตามข้อกำหนด!',
+        'Password must be at least %s characters long!' => 'รหัสผ่านต้องมีความยาวอย่างน้อย %s ตัวอักษร!',
+        'Password must contain at least 2 lowercase and 2 uppercase letter characters!' =>
+            'รหัสผ่านต้องมีตัวพิมพ์เล็กอย่างน้อย 2 ตัวและตัวพิมพ์ใหญ่อย่างน้อย 2 ตัว!',
+        'Password must contain at least 1 digit!' => 'รหัสผ่านต้องมีตัวเลขอย่างน้อย 1 ตัว!',
+        'Password must contain at least 2 letter characters!' => 'รหัสผ่านต้องมีตัวอักษรอย่างน้อย 2 ตัว!',
+        'Password changed. Please log in with your new password.' => 'เปลี่ยนรหัสผ่านแล้ว โปรดเข้าสู่ระบบด้วยรหัสผ่านใหม่ของคุณ',
         'Error: invalid session.' => '',
         'No Permission to use this frontend module!' => 'ไม่มีการอนุญาตให้ใช้โมดูลส่วนหน้านี้!',
 
@@ -6085,14 +6093,20 @@ sub Data {
             '',
         'Specifies the email address that should be used by the application when sending notifications. The email address is used to build the complete display name for the notification master (i.e. "Znuny Notifications" znuny@your.example.com). You can use the OTRS_CONFIG_FQDN variable as set in your configuation, or choose another email address.' =>
             '',
+        'Defines the validity period in seconds for password reset tokens. After this time the token expires and a new reset request is required. Default: 3600 (1 hour).' =>
+            'กำหนดระยะเวลาที่ใช้ได้เป็นวินาทีสำหรับโทเค็นรีเซ็ตรหัสผ่าน หลังจากนั้นโทเค็นจะหมดอายุและต้องมีการร้องขอใหม่ ค่าเริ่มต้น: 3600 (1 ชั่วโมง)',
+        'Maximum number of password reset requests allowed per IP address or username within the rate limit window. Set to 0 to disable rate limiting. Default: 5.' =>
+            'จำนวนคำขอรีเซ็ตรหัสผ่านสูงสุดต่อที่อยู่ IP หรือชื่อผู้ใช้ภายในหน้าต่าง rate limiting ตั้งเป็น 0 เพื่อปิดใช้งาน rate limiting ค่าเริ่มต้น: 5',
+        'Time window in seconds for password reset rate limiting. Attempts within this window are counted against the maximum. Default: 600 (10 minutes).' =>
+            'หน้าต่างเวลาเป็นวินาทีสำหรับ rate limiting การรีเซ็ตรหัสผ่าน ความพยายามภายในหน้าต่างนี้จะนับเทียบกับค่าสูงสุด ค่าเริ่มต้น: 600 (10 นาที)',
         'Defines the subject for notification mails sent to agents, with token about new requested password.' =>
             'กำหนดหัวข้อสำหรับอีเมล์การแจ้งเตือนที่ส่งถึงเอเย่นต์พร้อมกับสัญลักษณ์เกี่ยวกับรหัสผ่านใหม่ที่ถูกร้องขอ',
         'Defines the body text for notification mails sent to agents, with token about new requested password.' =>
             '',
-        'Defines the subject for notification mails sent to agents, about new password.' =>
-            'กำหนดหัวข้อสำหรับอีเมล์การแจ้งเตือนที่ส่งถึงเอเย่นต์เกี่ยวกับรหัสผ่านใหม่',
-        'Defines the body text for notification mails sent to agents, about new password.' =>
-            '',
+        'Defines the subject for notification mails sent to agents, confirming that the password has been reset.' =>
+            'กำหนดหัวเรื่องของอีเมลแจ้งเตือนที่ส่งถึงเอเจนต์เพื่อยืนยันการรีเซ็ตรหัสผ่าน',
+        'Defines the body text for notification mails sent to agents, confirming that the password has been reset.' =>
+            'กำหนดเนื้อหาของอีเมลแจ้งเตือนที่ส่งถึงเอเจนต์เพื่อยืนยันการรีเซ็ตรหัสผ่าน',
         'Standard available permissions for agents within the application. If more permissions are needed, they can be entered here. Permissions must be defined to be effective. Some other good permissions have also been provided built-in: note, close, pending, customer, freetext, move, compose, responsible, forward, and bounce. Make sure that "rw" is always the last registered permission.' =>
             '',
         'Defines the standard permissions available for customers within the application. If more permissions are needed, you can enter them here. Permissions must be hard coded to be effective. Please ensure, when adding any of the afore mentioned permissions, that the "rw" permission remains the last entry.' =>
@@ -6168,10 +6182,10 @@ sub Data {
             'กำหนดหัวข้อสำหรับอีเมล์การแจ้งเตือนที่ส่งถึงลูกค้าพร้อมกับสัญลักษณ์เกี่ยวกับรหัสผ่านใหม่ที่ถูกร้องขอ',
         'Defines the body text for notification mails sent to customers, with token about new requested password.' =>
             '',
-        'Defines the subject for notification mails sent to customers, about new password.' =>
-            'กำหนดหัวข้อสำหรับอีเมล์การแจ้งเตือนที่ส่งถึงลูกค้าเกี่ยวกับรหัสผ่านใหม่',
-        'Defines the body text for notification mails sent to customers, about new password.' =>
-            '',
+        'Defines the subject for notification mails sent to customers, confirming that the password has been reset.' =>
+            'กำหนดหัวเรื่องของอีเมลแจ้งเตือนที่ส่งถึงลูกค้าเพื่อยืนยันการรีเซ็ตรหัสผ่าน',
+        'Defines the body text for notification mails sent to customers, confirming that the password has been reset.' =>
+            'กำหนดเนื้อหาของอีเมลแจ้งเตือนที่ส่งถึงลูกค้าเพื่อยืนยันการรีเซ็ตรหัสผ่าน',
         'Defines the subject for notification mails sent to customers, about new account.' =>
             'กำหนดหัวข้อสำหรับอีเมล์การแจ้งเตือนที่ส่งถึงลูกค้าเกี่ยวกับบัญชีใหม่',
         'Defines the body text for notification mails sent to customers, about new account.' =>
