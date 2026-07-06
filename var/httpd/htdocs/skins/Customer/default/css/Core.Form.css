@@ -482,7 +482,7 @@ fieldset .field-wrapper {
 }
 
 
-fieldset .Field > div:not(.TooltipErrorMessage) {
+fieldset .Field > div:not(.TooltipErrorMessage, .ck.ck-editor) {
     display: flex;
     gap: var(--gap-sm);
     /*align-items: center;*/
