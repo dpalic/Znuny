@@ -25518,3 +25518,7 @@ msgstr "Meghatározza az ügyfeleknek küldött értesítő e-mailek szövegét,
 msgid "A link to set a new password will be sent to your email address."
 msgstr "Egy link az új jelszó beállításához el lesz küldve az e-mail-címére."
 
+#. Perl Module: Kernel/Modules/AgentTicketEmailResend.pm
+msgid "Resend is not possible for this article!"
+msgstr "Ennek a bejegyzésnek az újraküldése nem lehetséges!"
+

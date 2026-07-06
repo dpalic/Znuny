@@ -25516,3 +25516,7 @@ msgstr "متن ایمیل‌های اطلاع‌رسانی ارسالی به م�
 msgid "A link to set a new password will be sent to your email address."
 msgstr "پیوندی برای تنظیم رمز عبور جدید به آدرس ایمیل شما ارسال خواهد شد."
 
+#. Perl Module: Kernel/Modules/AgentTicketEmailResend.pm
+msgid "Resend is not possible for this article!"
+msgstr "ارسال مجدد برای این مقاله ممکن نیست!"
+

@@ -25509,3 +25509,7 @@ msgstr "Ορίζει το κείμενο ειδοποιητικών email προ
 msgid "A link to set a new password will be sent to your email address."
 msgstr "Ένας σύνδεσμος για τον ορισμό νέου κωδικού πρόσβασης θα σταλεί στη διεύθυνση email σας."
 
+#. Perl Module: Kernel/Modules/AgentTicketEmailResend.pm
+msgid "Resend is not possible for this article!"
+msgstr "Η επαναποστολή δεν είναι δυνατή για αυτό το άρθρο!"
+

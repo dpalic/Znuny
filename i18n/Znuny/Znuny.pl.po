@@ -25542,3 +25542,7 @@ msgstr "Określa treść wiadomości e-mail z powiadomieniem wysyłanych do klie
 msgid "A link to set a new password will be sent to your email address."
 msgstr "Link do ustawienia nowego hasła zostanie wysłany na twój adres e-mail."
 
+#. Perl Module: Kernel/Modules/AgentTicketEmailResend.pm
+msgid "Resend is not possible for this article!"
+msgstr "Ponowne wysłanie tego artykułu nie jest możliwe!"
+

@@ -25515,3 +25515,7 @@ msgstr "定义发送给客户、确认密码已重置的通知邮件正文。"
 msgid "A link to set a new password will be sent to your email address."
 msgstr "设置新密码的链接将会发送到您的邮箱中。"
 
+#. Perl Module: Kernel/Modules/AgentTicketEmailResend.pm
+msgid "Resend is not possible for this article!"
+msgstr "无法重发此信件！"
+

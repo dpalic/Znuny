@@ -25518,3 +25518,7 @@ msgstr "Bepaalt de tekst van notificatiemails aan klanten die de wachtwoordreset
 msgid "A link to set a new password will be sent to your email address."
 msgstr "Een link om een nieuw wachtwoord in te stellen wordt naar uw e-mailadres verzonden."
 
+#. Perl Module: Kernel/Modules/AgentTicketEmailResend.pm
+msgid "Resend is not possible for this article!"
+msgstr "Opnieuw verzenden is niet mogelijk voor dit artikel!"
+

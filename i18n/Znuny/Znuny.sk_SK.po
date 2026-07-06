@@ -25505,3 +25505,7 @@ msgstr "Definuje text notifikačných e-mailov zákazníkom potvrdzujúcich obno
 msgid "A link to set a new password will be sent to your email address."
 msgstr "Odkaz na nastavenie nového hesla Vám bude poslaný emailom."
 
+#. Perl Module: Kernel/Modules/AgentTicketEmailResend.pm
+msgid "Resend is not possible for this article!"
+msgstr "Opätovné odoslanie tohto článku nie je možné!"
+

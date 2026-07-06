@@ -25519,3 +25519,7 @@ msgstr "Definerer brødteksten for varslings-e-poster sendt til kunder som bekre
 msgid "A link to set a new password will be sent to your email address."
 msgstr "En lenke for å sette et nytt passord vil bli sendt til din e-postadresse."
 
+#. Perl Module: Kernel/Modules/AgentTicketEmailResend.pm
+msgid "Resend is not possible for this article!"
+msgstr "Nyutsending er ikke mulig for denne artikkelen!"
+

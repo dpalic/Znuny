@@ -25529,3 +25529,7 @@ msgstr "Legt den Fließtext der Benachrichtigungs-E-Mails fest, die Kunden den e
 msgid "A link to set a new password will be sent to your email address."
 msgstr "Ein Link zum Setzen eines neuen Passworts wird an Ihre E-Mail-Adresse gesendet."
 
+#. Perl Module: Kernel/Modules/AgentTicketEmailResend.pm
+msgid "Resend is not possible for this article!"
+msgstr "Erneutes Senden für diesen Artikel nicht möglich!"
+

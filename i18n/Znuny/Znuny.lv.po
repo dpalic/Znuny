@@ -25505,3 +25505,7 @@ msgstr "Nosaka paziņojumu e-pastu tekstu klientiem, kas apstiprina paroles atie
 msgid "A link to set a new password will be sent to your email address."
 msgstr "Saite jaunas paroles iestatīšanai tiks nosūtīta uz jūsu e-pasta adresi."
 
+#. Perl Module: Kernel/Modules/AgentTicketEmailResend.pm
+msgid "Resend is not possible for this article!"
+msgstr "Šī raksta atkārtota sūtīšana nav iespējama!"
+

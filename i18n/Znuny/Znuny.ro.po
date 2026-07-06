@@ -25505,3 +25505,7 @@ msgstr "Definește textul e-mailurilor de notificare trimise clienților care co
 msgid "A link to set a new password will be sent to your email address."
 msgstr "Un link pentru a seta o nouă parolă va fi trimis pe adresa dvs. de email."
 
+#. Perl Module: Kernel/Modules/AgentTicketEmailResend.pm
+msgid "Resend is not possible for this article!"
+msgstr "Retrimiterea nu este posibilă pentru acest articol!"
+

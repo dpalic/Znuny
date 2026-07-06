@@ -25505,3 +25505,7 @@ msgstr "ग्राहकों को भेजे गए सूचना ई�
 msgid "A link to set a new password will be sent to your email address."
 msgstr "एक नया कूटशब्द सेट करने के लिए लिंक आपके ईमेल पते पर भेजा जाएगा।"
 
+#. Perl Module: Kernel/Modules/AgentTicketEmailResend.pm
+msgid "Resend is not possible for this article!"
+msgstr "इस लेख के लिए पुनः भेजना संभव नहीं है!"
+

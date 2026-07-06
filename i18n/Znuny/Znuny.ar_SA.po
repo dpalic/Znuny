@@ -25505,3 +25505,7 @@ msgstr "يحدد نص رسائل البريد الإلكتروني للإشعا�
 msgid "A link to set a new password will be sent to your email address."
 msgstr "سيتم إرسال رابط لتعيين كلمة مرور جديدة إلى عنوان بريدك الإلكتروني."
 
+#. Perl Module: Kernel/Modules/AgentTicketEmailResend.pm
+msgid "Resend is not possible for this article!"
+msgstr "إعادة الإرسال غير ممكنة لهذا المقال!"
+

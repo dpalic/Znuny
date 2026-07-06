@@ -25505,3 +25505,7 @@ msgstr "Definerer brødteksten for notifikationsmails sendt til kunder, der bekr
 msgid "A link to set a new password will be sent to your email address."
 msgstr "Et link til at angive et nyt password bliver sendt til din mail-adresse."
 
+#. Perl Module: Kernel/Modules/AgentTicketEmailResend.pm
+msgid "Resend is not possible for this article!"
+msgstr "Genafsendelse er ikke muligt for denne artikel!"
+

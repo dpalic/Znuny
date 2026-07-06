@@ -25505,3 +25505,7 @@ msgstr "M채채rab teavituskirjade teksti klientidele, mis kinnitavad salas천na l�
 msgid "A link to set a new password will be sent to your email address."
 msgstr "Link uue salas천na seadistamiseks saadetakse Teie e-posti aadressile."
 
+#. Perl Module: Kernel/Modules/AgentTicketEmailResend.pm
+msgid "Resend is not possible for this article!"
+msgstr "Selle artikli uuesti saatmine pole v천imalik!"
+

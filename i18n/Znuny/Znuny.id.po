@@ -25519,3 +25519,7 @@ msgstr "Menentukan teks email notifikasi yang dikirim ke pelanggan yang mengonfi
 msgid "A link to set a new password will be sent to your email address."
 msgstr "Tautan untuk menetapkan kata sandi baru akan dikirim ke email Anda."
 
+#. Perl Module: Kernel/Modules/AgentTicketEmailResend.pm
+msgid "Resend is not possible for this article!"
+msgstr "Pengiriman ulang tidak dimungkinkan untuk artikel ini!"
+

@@ -32,7 +32,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%m-%d';
     $Self->{DateInputFormat}     = '%Y-%m-%d';
     $Self->{DateInputFormatLong} = '%Y-%m-%d - %T';
-    $Self->{Completeness}        = 0.996023540639415;
+    $Self->{Completeness}        = 0.99602417302799;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -4395,6 +4395,7 @@ sub Data {
 
         # Perl Module: Kernel/Modules/AgentTicketEmailResend.pm
         'No ArticleID is given!' => 'Nincs bejegyzés-azonosító megadva!',
+        'Resend is not possible for this article!' => 'Ennek a bejegyzésnek az újraküldése nem lehetséges!',
 
         # Perl Module: Kernel/Modules/AgentTicketEscalationView.pm
         'Next week' => 'Következő hét',

@@ -4390,6 +4390,7 @@ sub Data {
 
         # Perl Module: Kernel/Modules/AgentTicketEmailResend.pm
         'No ArticleID is given!' => 'Keine ArticleID vorhanden!',
+        'Resend is not possible for this article!' => 'Erneutes Senden für diesen Artikel nicht möglich!',
 
         # Perl Module: Kernel/Modules/AgentTicketEscalationView.pm
         'Next week' => 'Nächste Woche',

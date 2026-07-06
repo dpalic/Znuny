@@ -25505,3 +25505,7 @@ msgstr ""
 msgid "A link to set a new password will be sent to your email address."
 msgstr "A link to set a new password will be sent to your email address."
 
+#. Perl Module: Kernel/Modules/AgentTicketEmailResend.pm
+msgid "Resend is not possible for this article!"
+msgstr "Resend is not possible for this article!"
+

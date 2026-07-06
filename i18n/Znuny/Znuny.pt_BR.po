@@ -25518,3 +25518,7 @@ msgstr "Define o corpo dos e-mails de notificação enviados aos clientes confir
 msgid "A link to set a new password will be sent to your email address."
 msgstr "Um link para definir uma nova senha será enviado para o seu e-mail."
 
+#. Perl Module: Kernel/Modules/AgentTicketEmailResend.pm
+msgid "Resend is not possible for this article!"
+msgstr "Não é possível reenviar este artigo!"
+

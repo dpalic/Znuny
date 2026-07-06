@@ -25505,3 +25505,7 @@ msgstr "Parola sıfırlamayı onaylayan müşterilere gönderilen bildirim e-pos
 msgid "A link to set a new password will be sent to your email address."
 msgstr "Yeni bir parola belirlemek için bir bağlantı e-posta adresinize gönderilecektir."
 
+#. Perl Module: Kernel/Modules/AgentTicketEmailResend.pm
+msgid "Resend is not possible for this article!"
+msgstr "Bu makale için yeniden gönderim mümkün değil!"
+

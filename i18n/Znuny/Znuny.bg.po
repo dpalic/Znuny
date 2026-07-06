@@ -25505,3 +25505,7 @@ msgstr "Определя текста на имейл известията, из
 msgid "A link to set a new password will be sent to your email address."
 msgstr "Връзка за задаване на нова парола ще бъде изпратена на вашия имейл адрес."
 
+#. Perl Module: Kernel/Modules/AgentTicketEmailResend.pm
+msgid "Resend is not possible for this article!"
+msgstr "Повторното изпращане не е възможно за тази статия!"
+

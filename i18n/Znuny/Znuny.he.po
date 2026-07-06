@@ -25506,3 +25506,7 @@ msgstr "מגדיר את תוכן הודעות הדוא\"ל ללקוחות המא
 msgid "A link to set a new password will be sent to your email address."
 msgstr "קישור להגדרת סיסמה חדשה יישלח לכתובת הדוא\\\\\"ל שלך."
 
+#. Perl Module: Kernel/Modules/AgentTicketEmailResend.pm
+msgid "Resend is not possible for this article!"
+msgstr "שליחה מחדש אינה אפשרית עבור מאמר זה!"
+

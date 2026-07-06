@@ -25522,3 +25522,7 @@ msgstr "กำหนดเนื้อหาของอีเมลแจ้ง
 msgid "A link to set a new password will be sent to your email address."
 msgstr "ลิงก์สำหรับตั้งรหัสผ่านใหม่จะถูกส่งไปยังที่อยู่อีเมลของคุณ"
 
+#. Perl Module: Kernel/Modules/AgentTicketEmailResend.pm
+msgid "Resend is not possible for this article!"
+msgstr "ไม่สามารถส่งบทความนี้อีกครั้งได้!"
+

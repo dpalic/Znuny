@@ -25519,3 +25519,7 @@ msgstr "Xác định nội dung email thông báo gửi cho khách hàng xác nh
 msgid "A link to set a new password will be sent to your email address."
 msgstr "Một liên kết để đặt mật khẩu mới sẽ được gửi đến địa chỉ email của bạn."
 
+#. Perl Module: Kernel/Modules/AgentTicketEmailResend.pm
+msgid "Resend is not possible for this article!"
+msgstr "Không thể gửi lại bài viết này!"
+

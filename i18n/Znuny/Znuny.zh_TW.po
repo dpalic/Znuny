@@ -25507,3 +25507,7 @@ msgstr "定義傳送給客戶、確認密碼已重設的通知郵件內文。"
 msgid "A link to set a new password will be sent to your email address."
 msgstr "設定新密碼的連結將會發送到您的郵箱中。"
 
+#. Perl Module: Kernel/Modules/AgentTicketEmailResend.pm
+msgid "Resend is not possible for this article!"
+msgstr "無法重送此文章！"
+

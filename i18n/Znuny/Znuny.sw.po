@@ -25509,3 +25509,7 @@ msgstr "Inafafanua maandishi ya barua pepe za arifa zinazotumwa kwa wateja zinaz
 msgid "A link to set a new password will be sent to your email address."
 msgstr "Kiungo cha kuweka neno jipya la siri kitatumwa kwenye anwani yako ya barua pepe."
 
+#. Perl Module: Kernel/Modules/AgentTicketEmailResend.pm
+msgid "Resend is not possible for this article!"
+msgstr "Kutuma tena haiwezekani kwa makala haya!"
+

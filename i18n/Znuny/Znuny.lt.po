@@ -25505,3 +25505,7 @@ msgstr "Nustato pranešimų el. laiškų tekstą klientams, patvirtinantiems sla
 msgid "A link to set a new password will be sent to your email address."
 msgstr "Nuoroda naujam slaptažodžiui nustatyti bus nusiųsta į Jūsų el. pašto dėžutę."
 
+#. Perl Module: Kernel/Modules/AgentTicketEmailResend.pm
+msgid "Resend is not possible for this article!"
+msgstr "Pakartotinis šio straipsnio siuntimas negalimas!"
+
