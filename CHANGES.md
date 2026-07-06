@@ -1,4 +1,5 @@
 # 7.3.5 2026-??-??
+ - 2026-07-02 Changed: Margin around paragraphs is now smaller in RTE content and ticket details article preview.
  - 2026-07-02 Fixed: Ticket is unnecessarily locked again when the owner stays the same in dialogs based on AgentTicketActionCommon module.
  - 2026-06-29 Fixed: Applying CKEditor width via system configuration option Frontend::RichText::Settings###Width or module specific options, e.g. Ticket::Frontend::AgentTicketEmail###RichTextWidth.
  - 2026-06-25 Changed: Password reset: Replaced sending of random password via email with sending a one-time link to change the password. Thanks to @besendorf for suggesting this feature. [#56](https://github.com/znuny/znuny-feature-requests/issues/56)
