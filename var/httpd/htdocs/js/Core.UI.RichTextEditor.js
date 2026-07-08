@@ -681,7 +681,7 @@ Core.UI.RichTextEditor = (function (TargetNS) {
                     isVisible: true,
                 },
                 toolbar: {
-                    shouldNotGroupWhenFull: false,
+                    shouldNotGroupWhenFull: true,
                 },
                 onEnterCallback: function(container){
                     $(container).siblings('.ck-body-wrapper').
