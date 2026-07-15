@@ -1,6 +1,7 @@
 # 7.3.5 2026-??-??
  - 2026-07-09 Fixed: Console root execution hint now suggests the detected application user instead of a hard-coded user.
  - 2026-07-08 Fixed: Issue with CKEditor full-screen not able to work after switching view to full-screen 3 times. Thanks to @LuBroering (Lukas Bröring, Sector Nord AG) for reporting the issue. [#747](https://github.com/znuny/Znuny/issues/747)
+ - 2026-07-06 Added: delete-by-status option for Maint::Log::CommunicationLog console command.
  - 2026-07-02 Changed: Margin around paragraphs is now smaller in RTE content and ticket details article preview.
  - 2026-07-02 Fixed: Ticket is unnecessarily locked again when the owner stays the same in dialogs based on AgentTicketActionCommon module.
  - 2026-06-29 Fixed: Applying CKEditor width via system configuration option Frontend::RichText::Settings###Width or module specific options, e.g. Ticket::Frontend::AgentTicketEmail###RichTextWidth.
