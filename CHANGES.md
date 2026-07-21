@@ -2,6 +2,7 @@
  - 2026-07-13 Fixed: Submenus not visible in customer interface.
  - 2026-07-09 Fixed: Console root execution hint now suggests the detected application user instead of a hard-coded user.
  - 2026-07-08 Fixed: Issue with CKEditor full-screen not able to work after switching view to full-screen 3 times. Thanks to @LuBroering (Lukas Bröring, Sector Nord AG) for reporting the issue. [#747](https://github.com/znuny/Znuny/issues/747)
+ - 2026-07-07 Fixed: Swapped sn and givenName default mapping in znuny.SyncLDAP2DB.pl. Thanks to @LuBroering (Lukas Bröring Sector Nord AG) [PR#825](https://github.com/znuny/Znuny/pull/825).
  - 2026-07-07 Fixed: Main form width expands over boundaries when RTE line width is greater than width of RTE.
  - 2026-07-06 Added: delete-by-status option for Maint::Log::CommunicationLog console command.
  - 2026-07-04 Fixed: Agent ticket move dialog: The "create article" checkbox is not automatically enabled when the communication section is expanded.
