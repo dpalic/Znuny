@@ -948,6 +948,10 @@ div.TooltipErrorMessage {
     max-width: 300px;
 }
 
+.ui-datepicker.ui-widget-content {
+    width: auto;
+}
+
 .ui-widget-header {
     background: none !important;
     display: flex;

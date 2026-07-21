@@ -7,6 +7,7 @@
  - 2026-07-07 Fixed: Main form width expands over boundaries when RTE line width is greater than width of RTE.
  - 2026-07-06 Added: delete-by-status option for Maint::Log::CommunicationLog console command.
  - 2026-07-04 Fixed: Agent ticket move dialog: The "create article" checkbox is not automatically enabled when the communication section is expanded.
+ - 2026-07-03 Fixed: Content overflow in date picker when week numbers are shown.
  - 2026-07-02 Changed: Margin around paragraphs is now smaller in RTE content and ticket details article preview.
  - 2026-07-02 Fixed: Ticket is unnecessarily locked again when the owner stays the same in dialogs based on AgentTicketActionCommon module.
  - 2026-06-29 Fixed: Applying CKEditor width via system configuration option Frontend::RichText::Settings###Width or module specific options, e.g. Ticket::Frontend::AgentTicketEmail###RichTextWidth.
