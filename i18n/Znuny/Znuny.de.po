@@ -15201,8 +15201,8 @@ msgid "Defines all the languages that are available to the application. Specify 
 msgstr "Definiert alle Sprachen, die der Applikation zur Verfügung stehen. Geben Sie nur die einheimischen Sprachnamen an."
 
 #. XML Definition: Kernel/Config/Files/XML/Framework.xml
-msgid "Defines the default front-end (HTML) theme to be used by the agents and customers. If you like, you can add your own theme. Please refer the administrator manual located at https://doc.znuny.org/manual/developer/."
-msgstr "Definiert das Standard (HTML)-Theme für das Frontend, das von Agenten und Kunden genutzt wird. Wenn Sie möchten, können Sie Ihr eigenes Theme hinzufügen. Schauen Sie dazu bitte im Administration-Handbuch auf https://doc.znuny.org/manual/developer/."
+msgid "Defines the default front-end (HTML) theme to be used by the agents and customers. If you like, you can add your own theme. Please refer the administrator manual located at https://doc.znuny.org/developer/general_information/themes.html."
+msgstr "Definiert das Standard (HTML)-Theme für das Frontend, das von Agenten und Kunden genutzt wird. Wenn Sie möchten, können Sie Ihr eigenes Theme hinzufügen. Schauen Sie dazu bitte im Administration-Handbuch auf https://doc.znuny.org/developer/general_information/themes.html."
 
 #. XML Definition: Kernel/Config/Files/XML/Framework.xml
 msgid "It is possible to configure different themes, for example to distinguish between agents and customers, to be used on a per-domain basis within the application. Using a regular expression (regex), you can configure a Key/Content pair to match a domain. The value in \"Key\" should match the domain, and the value in \"Content\" should be a valid theme on your system. Please see the example entries for the proper form of the regex."
@@ -19569,8 +19569,8 @@ msgid "Event module registration. For more performance you can define a trigger 
 msgstr "Ereignis-Modulregistrierung. Für mehr Performance können Sie ein Trigger-Ereignis definieren (z. B. Event => TicketCreate). Dies ist nur möglich, wenn alle dynamischen Ticketfelder das gleiche Ereignis benötigen."
 
 #. XML Definition: Kernel/Config/Files/XML/Ticket.xml
-msgid "Configures a default TicketDynamicField setting. \"Name\" defines the dynamic field which should be used, \"Value\" is the data that will be set, and \"Event\" defines the trigger event. Please check the developer manual (https://doc.znuny.org/manual/developer/), chapter \"Ticket Event Module\"."
-msgstr "Konfiguriert eine Standardeinstellung für TicketDynamicField. \"Name\" definiert das Dynamische Feld, das verwendet werden soll, \"Wert\" sind die Daten, die gesetzt werden sollen, und \"Ereignis\" definiert das Auslöseereignis. Bitte beachten Sie das Entwicklerhandbuch (https://doc.znuny.org/manual/developer/), Kapitel \"Ticket Event Module\"."
+msgid "Configures a default TicketDynamicField setting. \"Name\" defines the dynamic field which should be used, \"Value\" is the data that will be set, and \"Event\" defines the trigger event."
+msgstr "Konfiguriert eine Standardeinstellung für TicketDynamicField. \"Name\" definiert das Dynamische Feld, das verwendet werden soll, \"Wert\" sind die Daten, die gesetzt werden sollen, und \"Ereignis\" definiert das Auslöseereignis."
 
 #. XML Definition: Kernel/Config/Files/XML/Ticket.xml
 msgid "Defines the list of types for templates."

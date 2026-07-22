@@ -15191,8 +15191,8 @@ msgid "Defines all the languages that are available to the application. Specify 
 msgstr "응용 프로그램에서 사용할 수있는 모든 언어를 정의합니다. 여기에는 언어의 고유이름만 지정하십시오."
 
 #. XML Definition: Kernel/Config/Files/XML/Framework.xml
-msgid "Defines the default front-end (HTML) theme to be used by the agents and customers. If you like, you can add your own theme. Please refer the administrator manual located at https://doc.znuny.org/manual/developer/."
-msgstr "에이전트 및 고객이 사용할 기본 프런트 엔드 (HTML) 테마를 정의합니다. 원한다면 자신 만의 테마를 추가 할 수 있습니다. https://doc.znuny.org/manual/developer/ 에있는 관리자 설명서를 참조하십시오."
+msgid "Defines the default front-end (HTML) theme to be used by the agents and customers. If you like, you can add your own theme. Please refer the administrator manual located at https://doc.znuny.org/developer/general_information/themes.html."
+msgstr "에이전트 및 고객이 사용할 기본 프런트 엔드 (HTML) 테마를 정의합니다. 원한다면 자신 만의 테마를 추가 할 수 있습니다. https://doc.znuny.org/developer/general_information/themes.html 에있는 관리자 설명서를 참조하십시오."
 
 #. XML Definition: Kernel/Config/Files/XML/Framework.xml
 msgid "It is possible to configure different themes, for example to distinguish between agents and customers, to be used on a per-domain basis within the application. Using a regular expression (regex), you can configure a Key/Content pair to match a domain. The value in \"Key\" should match the domain, and the value in \"Content\" should be a valid theme on your system. Please see the example entries for the proper form of the regex."
@@ -19559,8 +19559,8 @@ msgid "Event module registration. For more performance you can define a trigger 
 msgstr ""
 
 #. XML Definition: Kernel/Config/Files/XML/Ticket.xml
-msgid "Configures a default TicketDynamicField setting. \"Name\" defines the dynamic field which should be used, \"Value\" is the data that will be set, and \"Event\" defines the trigger event. Please check the developer manual (https://doc.znuny.org/manual/developer/), chapter \"Ticket Event Module\"."
-msgstr "기본 TicketDynamicField 설정을 구성합니다. \"Name\"은 사용할 동적 필드를 정의하고, \"Value\"는 설정할 데이터이고 \"Event\"는 트리거 이벤트를 정의합니다. 개발자 설명서 (https://doc.znuny.org/manual/developer/), \"Ticket Event Module\"장을 확인하십시오."
+msgid "Configures a default TicketDynamicField setting. \"Name\" defines the dynamic field which should be used, \"Value\" is the data that will be set, and \"Event\" defines the trigger event."
+msgstr "기본 TicketDynamicField 설정을 구성합니다. \"Name\"은 사용할 동적 필드를 정의하고, \"Value\"는 설정할 데이터이고 \"Event\"는 트리거 이벤트를 정의합니다."
 
 #. XML Definition: Kernel/Config/Files/XML/Ticket.xml
 msgid "Defines the list of types for templates."

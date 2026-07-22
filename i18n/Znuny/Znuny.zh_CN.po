@@ -15191,8 +15191,8 @@ msgid "Defines all the languages that are available to the application. Specify 
 msgstr "定义本系统可用的所有语言。在这里只指定语言的本地化名称。"
 
 #. XML Definition: Kernel/Config/Files/XML/Framework.xml
-msgid "Defines the default front-end (HTML) theme to be used by the agents and customers. If you like, you can add your own theme. Please refer the administrator manual located at https://doc.znuny.org/manual/developer/."
-msgstr "定义服务人员和客户使用的默认前端主题（HTML）。如果您喜欢，您可以添加您自己的主题。请参考管理员手册https://doc.znuny.org/manual/developer/ 。"
+msgid "Defines the default front-end (HTML) theme to be used by the agents and customers. If you like, you can add your own theme. Please refer the administrator manual located at https://doc.znuny.org/developer/general_information/themes.html."
+msgstr "定义服务人员和客户使用的默认前端主题（HTML）。如果您喜欢，您可以添加您自己的主题。请参考管理员手册https://doc.znuny.org/developer/general_information/themes.html 。"
 
 #. XML Definition: Kernel/Config/Files/XML/Framework.xml
 msgid "It is possible to configure different themes, for example to distinguish between agents and customers, to be used on a per-domain basis within the application. Using a regular expression (regex), you can configure a Key/Content pair to match a domain. The value in \"Key\" should match the domain, and the value in \"Content\" should be a valid theme on your system. Please see the example entries for the proper form of the regex."
@@ -19559,8 +19559,8 @@ msgid "Event module registration. For more performance you can define a trigger 
 msgstr ""
 
 #. XML Definition: Kernel/Config/Files/XML/Ticket.xml
-msgid "Configures a default TicketDynamicField setting. \"Name\" defines the dynamic field which should be used, \"Value\" is the data that will be set, and \"Event\" defines the trigger event. Please check the developer manual (https://doc.znuny.org/manual/developer/), chapter \"Ticket Event Module\"."
-msgstr "配置默认的TicketDynamicField（工单动态字段）设置，“Name（名称）”定义要使用的动态字段，“Value（值）”是要设置的数值，“Event（事件）”定义触发的事件。请检查开发手册 (https://doc.znuny.org/manual/developer/) 的“Ticket Event Module（工单事件模块）”章节。"
+msgid "Configures a default TicketDynamicField setting. \"Name\" defines the dynamic field which should be used, \"Value\" is the data that will be set, and \"Event\" defines the trigger event."
+msgstr "配置默认的TicketDynamicField（工单动态字段）设置，“Name（名称）”定义要使用的动态字段，“Value（值）”是要设置的数值，“Event（事件）”定义触发的事件。"
 
 #. XML Definition: Kernel/Config/Files/XML/Ticket.xml
 msgid "Defines the list of types for templates."

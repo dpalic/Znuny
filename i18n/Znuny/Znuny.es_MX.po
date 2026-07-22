@@ -15191,7 +15191,7 @@ msgid "Defines all the languages that are available to the application. Specify 
 msgstr "Define todos los idiomas que están disponibles para la aplicación. Especifique solo nombres nativos de idiomas aquí."
 
 #. XML Definition: Kernel/Config/Files/XML/Framework.xml
-msgid "Defines the default front-end (HTML) theme to be used by the agents and customers. If you like, you can add your own theme. Please refer the administrator manual located at https://doc.znuny.org/manual/developer/."
+msgid "Defines the default front-end (HTML) theme to be used by the agents and customers. If you like, you can add your own theme. Please refer the administrator manual located at https://doc.znuny.org/developer/general_information/themes.html."
 msgstr ""
 
 #. XML Definition: Kernel/Config/Files/XML/Framework.xml
@@ -19559,8 +19559,8 @@ msgid "Event module registration. For more performance you can define a trigger 
 msgstr ""
 
 #. XML Definition: Kernel/Config/Files/XML/Ticket.xml
-msgid "Configures a default TicketDynamicField setting. \"Name\" defines the dynamic field which should be used, \"Value\" is the data that will be set, and \"Event\" defines the trigger event. Please check the developer manual (https://doc.znuny.org/manual/developer/), chapter \"Ticket Event Module\"."
-msgstr "Configura un ajuste predeterminado de TicketDynamicField. \"Nombre\" define el campo dinámico que debe utilizarse, \"Valor\" es el dato que se configurará y \"Evento\" define el evento de disparo. Consulte el manual del desarrollador (https://doc.znuny.org/manual/developer/), capítulo \"Ticket Event Module\"."
+msgid "Configures a default TicketDynamicField setting. \"Name\" defines the dynamic field which should be used, \"Value\" is the data that will be set, and \"Event\" defines the trigger event."
+msgstr "Configura un ajuste predeterminado de TicketDynamicField. \"Nombre\" define el campo dinámico que debe utilizarse, \"Valor\" es el dato que se configurará y \"Evento\" define el evento de disparo."
 
 #. XML Definition: Kernel/Config/Files/XML/Ticket.xml
 msgid "Defines the list of types for templates."

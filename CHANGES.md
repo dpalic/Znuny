@@ -1,4 +1,5 @@
 # 7.3.5 2026-??-??
+ - 2026-07-17 Fixed: Documentation links in config options. Thanks to @bjinthahouse for reporting the issue. [#763](https://github.com/znuny/Znuny/issues/763)
  - 2026-07-13 Fixed: Submenus not visible in customer interface.
  - 2026-07-09 Fixed: Console root execution hint now suggests the detected application user instead of a hard-coded user.
  - 2026-07-08 Fixed: Issue with CKEditor full-screen not able to work after switching view to full-screen 3 times. Thanks to @LuBroering (Lukas Bröring, Sector Nord AG) for reporting the issue. [#747](https://github.com/znuny/Znuny/issues/747)
