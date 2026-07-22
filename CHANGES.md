@@ -1,4 +1,4 @@
-# 7.3.5 2026-??-??
+# 7.3.5 2026-07-22
  - 2026-07-17 Fixed: Documentation links in config options. Thanks to @bjinthahouse for reporting the issue. [#763](https://github.com/znuny/Znuny/issues/763)
  - 2026-07-13 Fixed: Submenus not visible in customer interface.
  - 2026-07-09 Fixed: Console root execution hint now suggests the detected application user instead of a hard-coded user.
@@ -11,6 +11,8 @@
  - 2026-07-03 Fixed: Content overflow in date picker when week numbers are shown.
  - 2026-07-02 Changed: Margin around paragraphs is now smaller in RTE content and ticket details article preview.
  - 2026-07-02 Fixed: Ticket is unnecessarily locked again when the owner stays the same in dialogs based on AgentTicketActionCommon module.
+ - 2026-07-01 CVE-2026-6659: Updated CPAN module Crypt::PasswdMD5 (1.40 to 1.44).
+ - 2026-07-01 CVE-2026-8368: Updated CPAN module LWP (6.53 to 6.83).
  - 2026-06-29 Fixed: Applying CKEditor width via system configuration option Frontend::RichText::Settings###Width or module specific options, e.g. Ticket::Frontend::AgentTicketEmail###RichTextWidth.
  - 2026-06-25 Changed: Password reset: Replaced sending of random password via email with sending a one-time link to change the password. Thanks to @besendorf for suggesting this feature. [#56](https://github.com/znuny/znuny-feature-requests/issues/56)
  - 2026-06-25 Fixed: Errors executing ticket search in AgentTicketService if user has no queues or services assigned. Thanks to Paweł Bogusławski for reporting the issue. [#803](https://github.com/znuny/Znuny/issues/803)
@@ -654,6 +656,15 @@
  - 2022-08-22 Core.UI.InputFields.js - Changed the behaviour of the Core.UI.InputFields.js. Now no fields are automatically enlarged or reduced.
  - 2022-08-08 Admin - Added counter of AdminSettingPages per widget and additional focus by filter.
  - 2022-07-15 Frontend::ToolBarModule - Refactored the Toolbar registration, position and view.
+
+# 6.5.23 2026-07-22
+ - 2026-07-17 Fixed: Documentation links in config options. Thanks to @bjinthahouse for reporting the issue. [#763](https://github.com/znuny/Znuny/issues/763)
+ - 2026-07-07 Fixed: Swapped sn and givenName default mapping in znuny.SyncLDAP2DB.pl. Thanks to @LuBroering (Lukas Bröring Sector Nord AG) [PR#825](https://github.com/znuny/Znuny/pull/825).
+ - 2026-07-01 CVE-2026-6659: Updated CPAN module Crypt::PasswdMD5 (1.40 to 1.44).
+ - 2026-07-01 CVE-2026-8368: Updated CPAN module LWP (6.53 to 6.83).
+ - 2026-06-25 Fixed: Errors executing ticket search in AgentTicketService if user has no queues or services assigned. Thanks to Paweł Bogusławski for reporting the issue. [#803](https://github.com/znuny/Znuny/issues/803)
+ - 2026-06-24 Fixed: Command Maint::Ticket::ArchiveCleanup not deleting article flags correctly. Thanks to @parkingups69-netizen for reporting the issue. [#780](https://github.com/znuny/Znuny/issues/780)
+ - 2026-06-19 Fixed: Dialog to resend an email (AgentTicketEmailResend) is now only usable for articles in channel Email with previous transmission failure.
 
 # 6.5.22 2026-06-24
  - 2026-06-22 Fixed: Sorting by dynamic field columns in dashboard ticket widgets could fall back to age and process tickets without articles could be hidden. Thanks to @sergiykhan for reporting the issue. [#811](https://github.com/znuny/Znuny/issues/811)
