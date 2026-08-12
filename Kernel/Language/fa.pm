@@ -365,6 +365,7 @@ sub Data {
         'Search' => 'جستجو',
         'Wildcards like \'*\' are allowed.' => 'نویسه عام مانند "*" مجاز است.',
         'Add Customer' => 'افزودن مشترک',
+        'Add Customer User' => 'اضافه کردن کاربر مشترک',
         'Select' => 'انتخاب',
         'Customer Users' => 'مشترکین',
         'Customers ↔ Groups' => '',
@@ -410,7 +411,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminCustomerUser.tt
         'Back to search results' => 'بازگشت به نتایج جستجو',
-        'Add Customer User' => 'اضافه کردن کاربر مشترک',
         'Customer user are needed to have a customer history and to login via customer panel.' =>
             'کاربران و ضوابط مورد نیاز برای یک سابقه مشتری و برای ورود به سایت از طریق پنل مشتری می باشد.',
         'Customer Users ↔ Customers' => '',

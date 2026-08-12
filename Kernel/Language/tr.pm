@@ -360,6 +360,7 @@ sub Data {
         'Search' => 'Ara',
         'Wildcards like \'*\' are allowed.' => '\'*\' gibi joker karakterlere izin verilir.',
         'Add Customer' => 'Müşteri Ekle',
+        'Add Customer User' => 'Müşteri Kullanıcı Ekle',
         'Select' => 'Seç',
         'Customer Users' => 'Müşteri Kullanıcılar',
         'Customers ↔ Groups' => '',
@@ -405,7 +406,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminCustomerUser.tt
         'Back to search results' => '',
-        'Add Customer User' => 'Müşteri Kullanıcı Ekle',
         'Customer user are needed to have a customer history and to login via customer panel.' =>
             '',
         'Customer Users ↔ Customers' => '',

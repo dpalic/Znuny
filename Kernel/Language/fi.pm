@@ -361,6 +361,7 @@ sub Data {
         'Search' => 'Etsi',
         'Wildcards like \'*\' are allowed.' => 'Korvausmerkit kuten \'*\' ovat sallittuja.',
         'Add Customer' => 'Lisää asiakas',
+        'Add Customer User' => '',
         'Select' => 'Valitse',
         'Customer Users' => 'Asiakaskäyttäjät',
         'Customers ↔ Groups' => '',
@@ -406,7 +407,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminCustomerUser.tt
         'Back to search results' => '',
-        'Add Customer User' => '',
         'Customer user are needed to have a customer history and to login via customer panel.' =>
             '',
         'Customer Users ↔ Customers' => '',

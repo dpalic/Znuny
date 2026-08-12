@@ -359,6 +359,7 @@ sub Data {
         'Search' => 'Барај',
         'Wildcards like \'*\' are allowed.' => 'Дозволени се глобални знаци како "*".',
         'Add Customer' => 'Додај потрошувач',
+        'Add Customer User' => 'Додади Корисник',
         'Select' => 'Избери',
         'Customer Users' => '',
         'Customers ↔ Groups' => '',
@@ -404,7 +405,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminCustomerUser.tt
         'Back to search results' => 'Назад до резултатите од барањето',
-        'Add Customer User' => 'Додади Корисник',
         'Customer user are needed to have a customer history and to login via customer panel.' =>
             'Корисник-клиент е потребен за да имаат историјата на корисник и да се најавите преку кориснички панел.',
         'Customer Users ↔ Customers' => '',

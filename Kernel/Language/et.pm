@@ -360,6 +360,7 @@ sub Data {
         'Search' => 'Otsi',
         'Wildcards like \'*\' are allowed.' => 'Metasümbolid nagu \'*\' on lubatud.',
         'Add Customer' => 'Kliendi lisamine',
+        'Add Customer User' => 'Lisa klientkasutaja',
         'Select' => 'Vali',
         'Customer Users' => 'Klientkasutajad',
         'Customers ↔ Groups' => '',
@@ -405,7 +406,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminCustomerUser.tt
         'Back to search results' => '',
-        'Add Customer User' => 'Lisa klientkasutaja',
         'Customer user are needed to have a customer history and to login via customer panel.' =>
             '',
         'Customer Users ↔ Customers' => '',

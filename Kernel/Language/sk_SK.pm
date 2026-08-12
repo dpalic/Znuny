@@ -359,6 +359,7 @@ sub Data {
         'Search' => 'Hľadať',
         'Wildcards like \'*\' are allowed.' => '',
         'Add Customer' => 'Pridať zákazníka',
+        'Add Customer User' => 'Pridať používateľa',
         'Select' => 'Vybrať',
         'Customer Users' => 'Klientskí užívatelia.',
         'Customers ↔ Groups' => '',
@@ -404,7 +405,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminCustomerUser.tt
         'Back to search results' => 'Späť do výsledkov vyhľadávania',
-        'Add Customer User' => 'Pridať používateľa',
         'Customer user are needed to have a customer history and to login via customer panel.' =>
             '',
         'Customer Users ↔ Customers' => '',

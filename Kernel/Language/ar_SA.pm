@@ -363,6 +363,7 @@ sub Data {
         'Search' => 'بحث',
         'Wildcards like \'*\' are allowed.' => '',
         'Add Customer' => '',
+        'Add Customer User' => '',
         'Select' => 'أختر',
         'Customer Users' => 'العملاء',
         'Customers ↔ Groups' => '',
@@ -408,7 +409,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminCustomerUser.tt
         'Back to search results' => '',
-        'Add Customer User' => '',
         'Customer user are needed to have a customer history and to login via customer panel.' =>
             '',
         'Customer Users ↔ Customers' => '',

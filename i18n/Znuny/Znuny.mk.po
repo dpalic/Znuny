@@ -1142,7 +1142,7 @@ msgstr "Целосен пристап за читање и запишување 
 msgid "Back to search results"
 msgstr "Назад до резултатите од барањето"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminCustomerUser.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminCustomerCompany.tt
 msgid "Add Customer User"
 msgstr "Додади Корисник"
 

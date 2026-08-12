@@ -360,6 +360,7 @@ sub Data {
         'Search' => 'Meklēt',
         'Wildcards like \'*\' are allowed.' => 'Aizstājējzīmes kā \'*\' ir atļautas.',
         'Add Customer' => 'Pievienot klientu',
+        'Add Customer User' => 'Pievienot klientu',
         'Select' => 'Paņemt',
         'Customer Users' => 'Klienti',
         'Customers ↔ Groups' => '',
@@ -405,7 +406,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminCustomerUser.tt
         'Back to search results' => 'Atpakaļ pie meklēšanas rezultātiem',
-        'Add Customer User' => 'Pievienot klientu',
         'Customer user are needed to have a customer history and to login via customer panel.' =>
             '',
         'Customer Users ↔ Customers' => '',

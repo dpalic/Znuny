@@ -360,6 +360,7 @@ sub Data {
         'Search' => 'Ieškoti',
         'Wildcards like \'*\' are allowed.' => '',
         'Add Customer' => 'Pridėti klientą',
+        'Add Customer User' => '',
         'Select' => 'Pasirinkti',
         'Customer Users' => '',
         'Customers ↔ Groups' => '',
@@ -405,7 +406,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminCustomerUser.tt
         'Back to search results' => '',
-        'Add Customer User' => '',
         'Customer user are needed to have a customer history and to login via customer panel.' =>
             '',
         'Customer Users ↔ Customers' => '',

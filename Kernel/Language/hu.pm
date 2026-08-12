@@ -365,6 +365,7 @@ sub Data {
         'Search' => 'Keresés',
         'Wildcards like \'*\' are allowed.' => 'Helyettesítő karakterek (például „*”) engedélyezettek.',
         'Add Customer' => 'Ügyfél hozzáadása',
+        'Add Customer User' => 'Ügyfél-felhasználó hozzáadása',
         'Select' => 'Kiválasztás',
         'Customer Users' => 'Ügyfél-felhasználók',
         'Customers ↔ Groups' => 'Ügyfelek ↔ Csoportok',
@@ -410,7 +411,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminCustomerUser.tt
         'Back to search results' => 'Vissza a keresési eredményekhez',
-        'Add Customer User' => 'Ügyfél-felhasználó hozzáadása',
         'Customer user are needed to have a customer history and to login via customer panel.' =>
             'Az ügyfél-felhasználó az ügyfél-előzményekhez és az ügyfélpanelen keresztüli bejelentkezéshez szükséges.',
         'Customer Users ↔ Customers' => 'Ügyfél-felhasználók ↔ Ügyfelek',

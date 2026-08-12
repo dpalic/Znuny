@@ -365,6 +365,7 @@ sub Data {
         'Search' => 'Zoeken',
         'Wildcards like \'*\' are allowed.' => 'Wildcards zijn toegestaan.',
         'Add Customer' => 'Klant toevoegen',
+        'Add Customer User' => 'Nieuwe klant',
         'Select' => 'Selecteer',
         'Customer Users' => 'Klanten',
         'Customers ↔ Groups' => 'Bedrijven ↔ Groepen',
@@ -410,7 +411,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminCustomerUser.tt
         'Back to search results' => 'Terug naar zoekresultaat',
-        'Add Customer User' => 'Nieuwe klant',
         'Customer user are needed to have a customer history and to login via customer panel.' =>
             'Klanten zijn nodig om een historie te kunnen inzien en om in te loggen via het klantenscherm.',
         'Customer Users ↔ Customers' => 'Klanten ↔ Bedrijven',

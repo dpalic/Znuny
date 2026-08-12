@@ -368,6 +368,7 @@ sub Data {
         'Search' => 'Søk',
         'Wildcards like \'*\' are allowed.' => 'Jokertegn som \'*\ er tillatt',
         'Add Customer' => 'Legg til kunde',
+        'Add Customer User' => 'Legg til kunde-bruker',
         'Select' => 'Velg',
         'Customer Users' => 'Kunder',
         'Customers ↔ Groups' => '',
@@ -413,7 +414,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminCustomerUser.tt
         'Back to search results' => 'Tilbake til søkeresultatet',
-        'Add Customer User' => 'Legg til kunde-bruker',
         'Customer user are needed to have a customer history and to login via customer panel.' =>
             'Kundebrukere trengs for å kunne ha kundehistorikk og mulighet til å logge inn via brukerpanelet.',
         'Customer Users ↔ Customers' => '',

@@ -365,6 +365,7 @@ sub Data {
         'Search' => 'Traži',
         'Wildcards like \'*\' are allowed.' => 'Džokerski znaci kao \'*\' su dozvoljeni.',
         'Add Customer' => 'Dodaj klijenta',
+        'Add Customer User' => 'Dodaj klijenta korisnika',
         'Select' => 'Izaberi',
         'Customer Users' => 'Klijenti korisnici',
         'Customers ↔ Groups' => 'Klijenti ↔ grupe',
@@ -410,7 +411,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminCustomerUser.tt
         'Back to search results' => 'Vrati se na rezultate pretrage',
-        'Add Customer User' => 'Dodaj klijenta korisnika',
         'Customer user are needed to have a customer history and to login via customer panel.' =>
             'Klijent klijent treba da ima klijentski istorijat i da se prijavi preko klijentskog panela.',
         'Customer Users ↔ Customers' => 'Klijent korisnici ↔ klijenti',

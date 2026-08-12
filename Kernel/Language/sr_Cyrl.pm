@@ -360,6 +360,7 @@ sub Data {
         'Search' => 'Тражи',
         'Wildcards like \'*\' are allowed.' => 'Џокерски знаци као \'*\' су дозвољени.',
         'Add Customer' => 'Додај клијента',
+        'Add Customer User' => 'Додај клијента корисника',
         'Select' => 'Изабери',
         'Customer Users' => 'Клијенти корисници',
         'Customers ↔ Groups' => 'Клијенти ↔ групе',
@@ -405,7 +406,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminCustomerUser.tt
         'Back to search results' => 'Врати се на резултате претраге',
-        'Add Customer User' => 'Додај клијента корисника',
         'Customer user are needed to have a customer history and to login via customer panel.' =>
             'Клијент клијент треба да има клијентски историјат и да се пријави преко клијентског панела.',
         'Customer Users ↔ Customers' => 'Клијент корисници ↔ клијенти',

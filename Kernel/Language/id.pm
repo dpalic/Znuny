@@ -359,6 +359,7 @@ sub Data {
         'Search' => 'Cari',
         'Wildcards like \'*\' are allowed.' => 'Karakter bebas seperti \'*\' di bolehkan.',
         'Add Customer' => 'Tambahkan Pelanggan',
+        'Add Customer User' => 'Tambah Pelanggan pengguna',
         'Select' => 'Pilih',
         'Customer Users' => 'Pengguna pelanggan',
         'Customers ↔ Groups' => '',
@@ -404,7 +405,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminCustomerUser.tt
         'Back to search results' => 'Kembali ke hasilpencarian',
-        'Add Customer User' => 'Tambah Pelanggan pengguna',
         'Customer user are needed to have a customer history and to login via customer panel.' =>
             'Pelanggan pengguna diperlukan untuk memiliki riwayat pelanggan dan untuk login melalui panel pelanggan',
         'Customer Users ↔ Customers' => '',

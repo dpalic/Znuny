@@ -362,6 +362,7 @@ sub Data {
         'Search' => 'Sök',
         'Wildcards like \'*\' are allowed.' => 'Jokertecken som \'*\' är tillåtna.',
         'Add Customer' => 'Lägg till kund',
+        'Add Customer User' => 'Lägg till kundanvändare',
         'Select' => 'Välj',
         'Customer Users' => 'Kundanvändare',
         'Customers ↔ Groups' => '',
@@ -407,7 +408,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminCustomerUser.tt
         'Back to search results' => 'Tillbaka till sökresultat',
-        'Add Customer User' => 'Lägg till kundanvändare',
         'Customer user are needed to have a customer history and to login via customer panel.' =>
             'Kundanvändare krävs för kundhistorik och inloggning via kundsidan.',
         'Customer Users ↔ Customers' => '',

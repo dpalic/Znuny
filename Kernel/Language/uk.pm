@@ -360,6 +360,7 @@ sub Data {
         'Search' => 'Пошук',
         'Wildcards like \'*\' are allowed.' => 'Підстановочні символи як-то «*» є дозволеними.',
         'Add Customer' => 'Додати Клієнта',
+        'Add Customer User' => 'Додати користувача-клієнта',
         'Select' => 'Вибір',
         'Customer Users' => 'Клієнти',
         'Customers ↔ Groups' => '',
@@ -405,7 +406,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminCustomerUser.tt
         'Back to search results' => 'Повернутись до результатів пошуку',
-        'Add Customer User' => 'Додати користувача-клієнта',
         'Customer user are needed to have a customer history and to login via customer panel.' =>
             'Користувачі-клієнти необхідні для того, щоб мати історію клієнта, а також для входу через панель клієнта.',
         'Customer Users ↔ Customers' => '',

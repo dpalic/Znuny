@@ -1142,7 +1142,7 @@ msgstr "دسترسی کامل به درخواست‌ها در این لیست / 
 msgid "Back to search results"
 msgstr "بازگشت به نتایج جستجو"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminCustomerUser.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminCustomerCompany.tt
 msgid "Add Customer User"
 msgstr "اضافه کردن کاربر مشترک"
 

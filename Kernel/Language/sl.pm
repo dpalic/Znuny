@@ -364,6 +364,7 @@ sub Data {
         'Search' => 'Išči',
         'Wildcards like \'*\' are allowed.' => 'Nadomestni znaki kot "*" so dovoljeni.',
         'Add Customer' => 'Dodaj uporabnika',
+        'Add Customer User' => '',
         'Select' => 'Izberi',
         'Customer Users' => 'Stranke',
         'Customers ↔ Groups' => '',
@@ -409,7 +410,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminCustomerUser.tt
         'Back to search results' => '',
-        'Add Customer User' => '',
         'Customer user are needed to have a customer history and to login via customer panel.' =>
             '',
         'Customer Users ↔ Customers' => '',

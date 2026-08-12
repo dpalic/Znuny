@@ -1144,7 +1144,7 @@ msgstr "Acesso de leitura e escrita de chamados neste grupo/fila."
 msgid "Back to search results"
 msgstr "Voltar ao resultado da busca"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminCustomerUser.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminCustomerCompany.tt
 msgid "Add Customer User"
 msgstr "Adicionar Usuário Cliente"
 

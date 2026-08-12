@@ -362,6 +362,7 @@ sub Data {
         'Search' => 'Tafuta',
         'Wildcards like \'*\' are allowed.' => 'Wildkadi kama \'*\' zinaruhusiwa.',
         'Add Customer' => 'Ongeza wateja',
+        'Add Customer User' => 'Ongeza mtumiaji wa mteja',
         'Select' => 'chagua',
         'Customer Users' => 'Wateja watumiaji',
         'Customers ↔ Groups' => '',
@@ -407,7 +408,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminCustomerUser.tt
         'Back to search results' => 'Rudi kwenye majibu ya utafutaji',
-        'Add Customer User' => 'Ongeza mtumiaji wa mteja',
         'Customer user are needed to have a customer history and to login via customer panel.' =>
             'Mtumiaji wa mteja anahitaji kuwa na historia ya mteja na kuingia kupitia paneli ya mteja.',
         'Customer Users ↔ Customers' => '',

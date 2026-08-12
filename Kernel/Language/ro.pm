@@ -359,6 +359,7 @@ sub Data {
         'Search' => 'Căutare',
         'Wildcards like \'*\' are allowed.' => 'Sunt permise semne nedefinite ca „*”.',
         'Add Customer' => 'Adăugare client',
+        'Add Customer User' => 'Adăugați un utilizator client',
         'Select' => 'Selectare',
         'Customer Users' => 'Clienți utilizatori',
         'Customers ↔ Groups' => '',
@@ -404,7 +405,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminCustomerUser.tt
         'Back to search results' => 'Înapoi la rezultatele căutării',
-        'Add Customer User' => 'Adăugați un utilizator client',
         'Customer user are needed to have a customer history and to login via customer panel.' =>
             'Utilizatorul client este necesar ca să aibă istoric client și să se conecteze prin intermediul panoului client.',
         'Customer Users ↔ Customers' => '',

@@ -1143,7 +1143,7 @@ msgstr "הרשאות קריאה וכתיבה מלאות לפניות בקבוצ�
 msgid "Back to search results"
 msgstr "חזרה לתוצאות חיפוש"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminCustomerUser.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminCustomerCompany.tt
 msgid "Add Customer User"
 msgstr "הוסף משתמש לקוח"
 

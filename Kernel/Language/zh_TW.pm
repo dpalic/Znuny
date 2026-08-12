@@ -362,6 +362,7 @@ sub Data {
         'Search' => '搜索',
         'Wildcards like \'*\' are allowed.' => '允許使用通配置符，例如\'*\'。',
         'Add Customer' => '添加用戶單位',
+        'Add Customer User' => '添加用戶',
         'Select' => '選擇',
         'Customer Users' => '用戶',
         'Customers ↔ Groups' => '',
@@ -407,7 +408,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminCustomerUser.tt
         'Back to search results' => '返回至搜索結果',
-        'Add Customer User' => '添加用戶',
         'Customer user are needed to have a customer history and to login via customer panel.' =>
             '用戶資料用於記錄工單歷史並允許用戶訪問服務台門戶網站。',
         'Customer Users ↔ Customers' => '',

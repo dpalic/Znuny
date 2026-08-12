@@ -1142,7 +1142,7 @@ msgstr "Пълен достъп за билетите в тази група/о�
 msgid "Back to search results"
 msgstr "Обратно към резултатите от търсенето"
 
-#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminCustomerUser.tt
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminCustomerCompany.tt
 msgid "Add Customer User"
 msgstr "Добавяне на клиент"
 

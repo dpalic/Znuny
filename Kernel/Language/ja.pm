@@ -363,6 +363,7 @@ sub Data {
         'Search' => '検索',
         'Wildcards like \'*\' are allowed.' => 'ワイルドカード（*）が使用できます。',
         'Add Customer' => '顧客を追加',
+        'Add Customer User' => '顧客ユーザーを追加',
         'Select' => '選択',
         'Customer Users' => '顧客ユーザー',
         'Customers ↔ Groups' => '顧客 ↔ グループ',
@@ -408,7 +409,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminCustomerUser.tt
         'Back to search results' => '検索結果に戻る',
-        'Add Customer User' => '顧客ユーザーを追加',
         'Customer user are needed to have a customer history and to login via customer panel.' =>
             '顧客ユーザーは顧客履歴の使用と顧客パネルからログインするために必要です。',
         'Customer Users ↔ Customers' => '顧客ユーザー ↔ 顧客',

@@ -359,6 +359,7 @@ sub Data {
         'Search' => 'ค้นหา',
         'Wildcards like \'*\' are allowed.' => 'สัญลักษณ์เช่น \'*\' ได้รับอนุญาต',
         'Add Customer' => 'เพิ่มลูกค้า',
+        'Add Customer User' => 'เพิ่มลูกค้าผู้ใช้',
         'Select' => 'เลือก',
         'Customer Users' => 'ลูกค้าผู้ใช้',
         'Customers ↔ Groups' => '',
@@ -404,7 +405,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminCustomerUser.tt
         'Back to search results' => 'กลับไปยังผลการค้นหา',
-        'Add Customer User' => 'เพิ่มลูกค้าผู้ใช้',
         'Customer user are needed to have a customer history and to login via customer panel.' =>
             'ลูกค้าผู้ใช้จำเป็นต้องมีประวัติลูกค้าและเข้าสู่ระบบผ่านทางแผงของลูกค้า',
         'Customer Users ↔ Customers' => '',

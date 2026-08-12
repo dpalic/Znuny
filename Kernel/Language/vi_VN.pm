@@ -359,6 +359,7 @@ sub Data {
         'Search' => 'Tìm kiếm',
         'Wildcards like \'*\' are allowed.' => 'Ký hiệu đại diện như \'*\' được cho phép.',
         'Add Customer' => 'Thêm khách hàng',
+        'Add Customer User' => 'Thêm khách hàng ',
         'Select' => 'Chọn',
         'Customer Users' => 'Người dùng khách hàng',
         'Customers ↔ Groups' => '',
@@ -404,7 +405,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminCustomerUser.tt
         'Back to search results' => 'Trở lại kết quả tìm kiếm',
-        'Add Customer User' => 'Thêm khách hàng ',
         'Customer user are needed to have a customer history and to login via customer panel.' =>
             'Người sử dụng của khách hàng là cần thiết để có một lịch sử khách hàng và đăng nhập thông qua bảng điều khiển của khách hàng.',
         'Customer Users ↔ Customers' => '',

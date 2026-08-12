@@ -361,6 +361,7 @@ sub Data {
         'Search' => 'Αναζήτηση',
         'Wildcards like \'*\' are allowed.' => '',
         'Add Customer' => 'Προσθηκη πελάτη',
+        'Add Customer User' => '',
         'Select' => 'Επιλογή',
         'Customer Users' => 'Χρήστες-Πελάτες',
         'Customers ↔ Groups' => '',
@@ -406,7 +407,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminCustomerUser.tt
         'Back to search results' => '',
-        'Add Customer User' => '',
         'Customer user are needed to have a customer history and to login via customer panel.' =>
             '',
         'Customer Users ↔ Customers' => '',

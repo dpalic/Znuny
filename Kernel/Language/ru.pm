@@ -371,6 +371,7 @@ sub Data {
         'Search' => 'Поиск',
         'Wildcards like \'*\' are allowed.' => 'Разрешены шаблоны типа \'*\'.',
         'Add Customer' => 'Добавить компанию',
+        'Add Customer User' => 'Добавить учётную запись клиента',
         'Select' => 'Выбор',
         'Customer Users' => 'Клиенты',
         'Customers ↔ Groups' => 'Компании ↔ Группы',
@@ -416,7 +417,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminCustomerUser.tt
         'Back to search results' => 'Назад к результатам поиска',
-        'Add Customer User' => 'Добавить учётную запись клиента',
         'Customer user are needed to have a customer history and to login via customer panel.' =>
             'Необходимо для наличия данных о клиенте и подключения к системе через интерфейс клиента.',
         'Customer Users ↔ Customers' => 'Клиенты ↔ Компании',

@@ -368,6 +368,7 @@ sub Data {
         'Search' => 'Cerca',
         'Wildcards like \'*\' are allowed.' => 'Sono permessi i caratteri jolly come \'*\'.',
         'Add Customer' => 'Aggiungi cliente',
+        'Add Customer User' => 'Aggiungi utenza cliente',
         'Select' => 'Seleziona',
         'Customer Users' => 'Utenze clienti',
         'Customers ↔ Groups' => '',
@@ -413,7 +414,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminCustomerUser.tt
         'Back to search results' => 'Torna ai risultati della ricerca',
-        'Add Customer User' => 'Aggiungi utenza cliente',
         'Customer user are needed to have a customer history and to login via customer panel.' =>
             'Le utenze cliente sono necessarie per avere una cronologia del cliente e per effettuare l\'accesso dal pannello clienti.',
         'Customer Users ↔ Customers' => 'Utenze clienti ↔ Clienti',

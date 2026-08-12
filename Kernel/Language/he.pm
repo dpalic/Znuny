@@ -366,6 +366,7 @@ sub Data {
         'Search' => 'חיפוש',
         'Wildcards like \'*\' are allowed.' => 'תווי חיפוש מיוחדים כגון \'*\' מותרים.',
         'Add Customer' => 'הוסף לקוח',
+        'Add Customer User' => 'הוסף משתמש לקוח',
         'Select' => 'בחר',
         'Customer Users' => 'משתמשי לקוח',
         'Customers ↔ Groups' => '',
@@ -411,7 +412,6 @@ sub Data {
 
         # TT Template: Kernel/Output/HTML/Templates/Standard/AdminCustomerUser.tt
         'Back to search results' => 'חזרה לתוצאות חיפוש',
-        'Add Customer User' => 'הוסף משתמש לקוח',
         'Customer user are needed to have a customer history and to login via customer panel.' =>
             'משתמשי לקוח נדרשים כדי שתהיה היסטוריית לקוח והתחברות דרך כניסת הלקוחות.',
         'Customer Users ↔ Customers' => '',
