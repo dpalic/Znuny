@@ -27,7 +27,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d/%m/%Y';
     $Self->{DateInputFormat}     = '%d/%m/%Y';
     $Self->{DateInputFormatLong} = '%d/%m/%Y - %T';
-    $Self->{Completeness}        = 0.702702702702703;
+    $Self->{Completeness}        = 0.702814437907457;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2877,7 +2877,6 @@ sub Data {
         'Drafts' => 'Borradores',
         'by' => 'por',
         'Article Overview - %s Article(s)' => 'Resumen del Artículo - %s Artículo(s)',
-        'Page %s' => '',
         'No.' => 'Núm.',
         'Unread articles' => 'Artículos no leídos',
         'Via' => '',

@@ -32,7 +32,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%m-%d';
     $Self->{DateInputFormat}     = '%Y-%m-%d';
     $Self->{DateInputFormatLong} = '%Y-%m-%d - %T';
-    $Self->{Completeness}        = 0.999523052464229;
+    $Self->{Completeness}        = 0.999522976625855;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2882,7 +2882,6 @@ sub Data {
         'Drafts' => 'Piszkozatok',
         'by' => '–',
         'Article Overview - %s Article(s)' => 'Bejegyzés áttekintő – %s bejegyzés',
-        'Page %s' => '%s. oldal',
         'No.' => 'Szám',
         'Unread articles' => 'Olvasatlan bejegyzések',
         'Via' => 'Ezen keresztül',

@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d/%m/%Y';
     $Self->{DateInputFormat}     = '%d/%m/%Y';
     $Self->{DateInputFormatLong} = '%d/%m/%Y - %T';
-    $Self->{Completeness}        = 0.581081081081081;
+    $Self->{Completeness}        = 0.581173477500397;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -2878,7 +2878,6 @@ bin/znuny.Daemon.pl status\').',
         'Drafts' => '',
         'by' => 'Oleh',
         'Article Overview - %s Article(s)' => '',
-        'Page %s' => '',
         'No.' => 'Tidak.',
         'Unread articles' => 'Artikel tidak terbaca',
         'Via' => '',

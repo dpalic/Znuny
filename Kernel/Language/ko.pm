@@ -26,7 +26,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%Y-%m-%d';
     $Self->{DateInputFormat}     = '%Y-%m-%d';
     $Self->{DateInputFormatLong} = '%Y-%m-%d %T';
-    $Self->{Completeness}        = 0.831796502384738;
+    $Self->{Completeness}        = 0.831769756718079;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -2876,7 +2876,6 @@ sub Data {
         'Drafts' => '체커',
         'by' => '으로',
         'Article Overview - %s Article(s)' => '기사 개관 - %s건의 기사',
-        'Page %s' => '페이지 %s',
         'No.' => '아니오.',
         'Unread articles' => '읽지 않은 기사',
         'Via' => '~를 이용해',

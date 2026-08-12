@@ -29,7 +29,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%m/%d/%Y';
     $Self->{DateInputFormat}     = '%m/%d/%Y';
     $Self->{DateInputFormatLong} = '%m/%d/%Y - %T';
-    $Self->{Completeness}        = 0.420985691573927;
+    $Self->{Completeness}        = 0.421052631578947;
 
     # csv separator
     $Self->{Separator}         = ',';
@@ -2879,7 +2879,6 @@ sub Data {
         'Drafts' => '',
         'by' => 'Kwa',
         'Article Overview - %s Article(s)' => '',
-        'Page %s' => '',
         'No.' => 'Hapana.',
         'Unread articles' => 'Makala ambazo hazijasomwa',
         'Via' => '',

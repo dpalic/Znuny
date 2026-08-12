@@ -38,7 +38,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d.%m.%Y';
     $Self->{DateInputFormat}     = '%d.%m.%Y';
     $Self->{DateInputFormatLong} = '%d.%m.%Y - %T';
-    $Self->{Completeness}        = 0.836406995230525;
+    $Self->{Completeness}        = 0.836380982668151;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -2888,7 +2888,6 @@ sub Data {
         'Drafts' => 'Черновики',
         'by' => 'кем',
         'Article Overview - %s Article(s)' => 'Обзор заметок/сообщений - %s заметка(ок)',
-        'Page %s' => 'Страница %s',
         'No.' => '№',
         'Unread articles' => 'Непрочитанные сообщения',
         'Via' => 'Через',
