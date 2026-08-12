@@ -25526,3 +25526,15 @@ msgstr "Ссылка для установки нового пароля буд�
 msgid "Resend is not possible for this article!"
 msgstr "Повторная отправка этой заметки невозможна!"
 
+#. SysConfig
+msgid "As Popup"
+msgstr ""
+
+#. SysConfig
+msgid "Blank"
+msgstr ""
+
+#. SysConfig
+msgid "Self"
+msgstr ""
+

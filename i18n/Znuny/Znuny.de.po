@@ -25533,3 +25533,15 @@ msgstr "Ein Link zum Setzen eines neuen Passworts wird an Ihre E-Mail-Adresse ge
 msgid "Resend is not possible for this article!"
 msgstr "Erneutes Senden für diesen Artikel nicht möglich!"
 
+#. SysConfig
+msgid "As Popup"
+msgstr ""
+
+#. SysConfig
+msgid "Blank"
+msgstr ""
+
+#. SysConfig
+msgid "Self"
+msgstr ""
+

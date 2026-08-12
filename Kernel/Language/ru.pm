@@ -38,7 +38,7 @@ sub Data {
     $Self->{DateFormatShort}     = '%d.%m.%Y';
     $Self->{DateInputFormat}     = '%d.%m.%Y';
     $Self->{DateInputFormatLong} = '%d.%m.%Y - %T';
-    $Self->{Completeness}        = 0.836673027989822;
+    $Self->{Completeness}        = 0.836406995230525;
 
     # csv separator
     $Self->{Separator}         = ';';
@@ -8843,10 +8843,11 @@ Thanks for your help!
         'Arabic (Saudi Arabia)' => 'Арабский (Саудовская Аравия)',
         'Article Color' => '',
         'ArticleTree' => 'Дерево сообщений',
-        'AsPopup' => '',
+        'As Popup' => '',
         'Attachment Name' => 'Имя вложения',
         'Avatar' => 'Аватар',
         'Based on global RichText setting' => 'Основано на глобальной настройке RichText',
+        'Blank' => '',
         'Bounced to "%s".' => 'Перенаправлено "%s".',
         'Bulgarian' => 'Болгарский',
         'Bulk Action' => 'Массовое действие',
@@ -9308,6 +9309,7 @@ Thanks for your help!
             'Выберите свой часовой пояс. Все даты и время будут отображаться относительно этого часового пояса.',
         'Select your preferred layout for the software.' => 'Выберите предпочитаемый вами стиль.',
         'Select your preferred theme for OTRS.' => '',
+        'Self' => '',
         'Send a unit test file' => '',
         'Send new outgoing mail from this ticket' => 'Отправить новое исходящее письмо от этой заявки',
         'Send notifications to users.' => 'Отправить уведомление пользователям.',
