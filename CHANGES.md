@@ -1,4 +1,5 @@
 # 7.3.6 2026-??-??
+ - 2026-08-12 Fixed: CustomerSelector losing the customer key for numeric customer user logins. Added a new function to completely set new customer users in field for component "CustomerSelector".
  - 2026-08-10 Fixed: Marked LinkTarget options as translatable. Thanks to @urbalazs (Balázs Úr) [PR#814](https://github.com/znuny/Znuny/pull/814).
  - 2026-07-27 Fixed: Migration follow-up step for removing mention flags from archived tickets was shown even when Ticket::ArchiveSystem is disabled.
  - 2026-07-24 Changed: Cc and Bcc will now also be set when article will only be created instead of sent in generic interface operation TicketCreate.
