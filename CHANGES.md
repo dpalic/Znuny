@@ -1,4 +1,5 @@
 # 7.3.6 2026-??-??
+ - 2026-08-14 Fixed: Removed unused leftover thirdparty directories jquery-ui-1.13.2 and momentjs-2.29.4.
  - 2026-08-14 Added: Split Quote and Remove Quote buttons for CKEditor 5.
  - 2026-08-12 Fixed: Article pagination was displayed incorrectly.
  - 2026-08-12 Fixed: CustomerSelector losing the customer key for numeric customer user logins. Added a new function to completely set new customer users in field for component "CustomerSelector".
