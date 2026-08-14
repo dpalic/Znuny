@@ -589,6 +589,7 @@
                 <Item>SourceEditing</Item>
                 <Item>SpecialCharacters</Item>
                 <Item>SpecialCharactersMathematical</Item>
+                <Item>SplitQuote</Item>
                 <Item>Style</Item>
                 <Item>Table</Item>
                 <Item>TableCaption</Item>
