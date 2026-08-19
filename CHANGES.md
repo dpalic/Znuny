@@ -8,6 +8,7 @@
  - 2026-08-05 Changed: REST transport module now keeps query parameters that don't contain placeholders.
  - 2026-07-27 Fixed: Migration follow-up step for removing mention flags from archived tickets was shown even when Ticket::ArchiveSystem is disabled.
  - 2026-07-24 Changed: Cc and Bcc will now also be set when article will only be created instead of sent in generic interface operation TicketCreate.
+ - 2026-07-01 CVE-2025-25977: Updated JavaScript library canvg to version 4.0.3.
 
 # 7.3.5 2026-07-22
  - 2026-07-17 Fixed: Documentation links in config options. Thanks to @bjinthahouse for reporting the issue. [#763](https://github.com/znuny/Znuny/issues/763)
