@@ -1,4 +1,4 @@
-# 7.3.6 2026-??-??
+# 7.3.6 2026-08-19
  - 2026-08-17 Fixed: Removed unnecessary whitespace in Baselink URLs in TicketInformation templates for AgentTicketActionCommon and AgentTicketZoom.
  - 2026-08-14 Fixed: Removed unused leftover thirdparty directories jquery-ui-1.13.2 and momentjs-2.29.4.
  - 2026-08-14 Added: Split Quote and Remove Quote buttons for CKEditor 5.
