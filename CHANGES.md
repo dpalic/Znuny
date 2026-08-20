@@ -1,4 +1,5 @@
 # 7.3.7 2026-??-??
+ - 2026-08-20 Fixed: Multiselect dynamic field values rendered without proper spacing in customer interface. Thanks to @LuBroering (Lukas Bröring Sector Nord AG) [PR#836](https://github.com/znuny/Znuny/pull/836).
  - 2026-08-20 Fixed: agent/customer re-direction after accepting initial information dialog (AgentInfo/CustomerAccept).
 
 # 7.3.6 2026-08-19
